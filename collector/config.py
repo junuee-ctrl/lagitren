@@ -34,6 +34,8 @@ TELEGRAM_CHAT_ID = _get("TELEGRAM_CHAT_ID")
 GEO = _get("GEO", "ID")
 LANG = _get("LANG", "id")
 DRY_RUN = _get("DRY_RUN", "0") in ("1", "true", "True", "yes")
+# Ambil grafik minat pencarian via pytrends (best-effort; bisa diblokir Google).
+FETCH_INTEREST = _get("FETCH_INTEREST", "1") in ("1", "true", "True", "yes")
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "

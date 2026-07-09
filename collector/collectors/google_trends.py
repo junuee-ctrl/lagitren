@@ -62,6 +62,52 @@ def _parse_traffic(text: str | None) -> int | None:
         return None
 
 
+def _downsample(vals: list[int], target: int = 30) -> list[int]:
+    """Kurangi jumlah titik agar grafik ringkas."""
+    if len(vals) <= target:
+        return vals
+    step = len(vals) / target
+    return [vals[int(i * step)] for i in range(target)]
+
+
+def _fetch_interest(keywords: list[str], max_kw: int = 8) -> dict[str, list[int]]:
+    """Ambil deret minat pencarian (interest over time) per kata kunci.
+
+    Best-effort: butuh pytrends + pandas, dan bisa diblokir/rate-limit oleh
+    Google (429) terutama dari IP datacenter. Kegagalan tidak menghentikan
+    pengumpulan — kata kunci tanpa data hanya tidak punya grafik.
+    """
+    out: dict[str, list[int]] = {}
+    try:
+        from pytrends.request import TrendReq  # type: ignore
+    except Exception as exc:
+        log.info("pytrends tidak tersedia: %s", exc)
+        return out
+
+    import time
+
+    try:
+        py = TrendReq(hl="id-ID", tz=420, timeout=(10, 25), retries=1, backoff_factor=0.6)
+    except Exception as exc:
+        log.info("pytrends init gagal: %s", exc)
+        return out
+
+    for kw in keywords[:max_kw]:
+        try:
+            py.build_payload([kw], geo=config.GEO, timeframe="now 7-d")
+            df = py.interest_over_time()
+            if df is not None and not df.empty and kw in df.columns:
+                vals = [int(v) for v in df[kw].tolist()]
+                if any(v > 0 for v in vals):
+                    out[kw] = _downsample(vals, 30)
+        except Exception as exc:
+            log.info("pytrends gagal untuk '%s': %s", kw, exc)
+        time.sleep(1.0)
+
+    log.info("pytrends: %d/%d kata kunci dapat grafik.", len(out), min(len(keywords), max_kw))
+    return out
+
+
 def collect() -> list[Trend]:
     xml = _fetch_rss()
     if not xml:
@@ -121,5 +167,14 @@ def collect() -> list[Trend]:
         # Simpan konteks berita di atribut sementara (tidak masuk DB).
         trends[-1].__dict__["_context"] = context
 
+    trends = trends[:20]
+
+    # Lengkapi grafik minat pencarian (best-effort).
+    if config.FETCH_INTEREST and trends:
+        kw_map = _fetch_interest([t.title for t in trends])
+        for t in trends:
+            if t.title in kw_map:
+                t.interest = kw_map[t.title]
+
     log.info("Google Trends: %d item.", len(trends))
-    return trends[:20]
+    return trends
