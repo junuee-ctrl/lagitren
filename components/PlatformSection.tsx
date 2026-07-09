@@ -1,8 +1,12 @@
 import Link from "next/link";
 import type { Platform, Trend } from "@/lib/types";
 import { PLATFORMS } from "@/lib/platforms";
-import TrendCard from "./TrendCard";
+import TrendListItem from "./TrendListItem";
 
+/**
+ * Section satu platform: judul + daftar ringkas.
+ * Setiap item menautkan ke halaman detail internal (bukan keluar situs).
+ */
 export default function PlatformSection({
   platform,
   trends,
@@ -10,7 +14,7 @@ export default function PlatformSection({
 }: {
   platform: Platform;
   trends: Trend[];
-  /** true di halaman detail (sembunyikan tombol "lihat semua"). */
+  /** true di halaman detail platform (sembunyikan tombol "lihat semua"). */
   showAll?: boolean;
 }) {
   const meta = PLATFORMS[platform];
@@ -18,7 +22,7 @@ export default function PlatformSection({
 
   return (
     <section id={platform} className="scroll-mt-20 py-4">
-      <div className="mb-4 flex items-end justify-between gap-3">
+      <div className="mb-3 flex items-end justify-between gap-3">
         <div>
           <h2 className="flex items-center gap-2 text-lg font-extrabold text-ink sm:text-xl">
             <span
@@ -43,9 +47,9 @@ export default function PlatformSection({
         )}
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-2 sm:grid-cols-2">
         {trends.map((t) => (
-          <TrendCard key={t.id} trend={t} />
+          <TrendListItem key={t.id} trend={t} />
         ))}
       </div>
     </section>

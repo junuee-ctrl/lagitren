@@ -132,6 +132,39 @@ export async function getAllTrends(): Promise<Trend[]> {
   }
 }
 
+const BY_ID = `SELECT * FROM trends WHERE id = ? LIMIT 1`;
+
+/** Ambil satu trend berdasarkan platform + slug (untuk halaman detail). */
+export async function getTrendById(
+  platform: Platform,
+  slug: string
+): Promise<Trend | null> {
+  const id = `${platform}:${slug}`;
+  const db = await getDB();
+  if (!db) {
+    return (
+      MOCK_TRENDS.find((t) => t.id === id && t.platform === platform) ?? null
+    );
+  }
+  try {
+    const { results } = await db.prepare(BY_ID).bind(id).all<TrendRow>();
+    if (results && results.length > 0) return rowToTrend(results[0]);
+  } catch {
+    /* fallthrough ke mock */
+  }
+  return MOCK_TRENDS.find((t) => t.id === id) ?? null;
+}
+
+/** Trend lain dari platform yang sama (untuk navigasi internal). */
+export async function getRelatedTrends(
+  platform: Platform,
+  excludeId: string,
+  limit = 6
+): Promise<Trend[]> {
+  const all = await getTrendsByPlatform(platform, 20);
+  return all.filter((t) => t.id !== excludeId).slice(0, limit);
+}
+
 /** Preview homepage: N teratas per platform. */
 export async function getHomepageTrends(perPlatform = 4): Promise<Trend[]> {
   const all = await getAllTrends();

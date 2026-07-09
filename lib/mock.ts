@@ -75,7 +75,9 @@ export const MOCK_TRENDS: Trend[] = [
 
   // ── YouTube Trending ───────────────────────────────────────────
   {
-    id: "youtube:demo-video-1",
+    // Catatan: ID video contoh memakai video publik nyata agar embed berfungsi
+    // di demo. Collector akan menggantinya dengan video trending asli.
+    id: "youtube:9bZkp7q19f0",
     platform: "youtube",
     rank: 1,
     title: "Konser Amal Musisi Indonesia — Full Performance",
@@ -84,14 +86,14 @@ export const MOCK_TRENDS: Trend[] = [
     metricLabel: "views",
     aiSummary:
       "Video konser amal yang menampilkan sederet musisi papan atas Indonesia ini viral karena momen kolaborasi tak terduga di panggung. Penonton ramai membagikan potongan penampilannya.",
-    url: "https://www.youtube.com/feed/trending",
-    thumbnail: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=480&q=70",
+    url: "https://www.youtube.com/watch?v=9bZkp7q19f0",
+    thumbnail: "https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg",
     source: "Channel Musik ID",
     hashtags: ["musik", "konser", "viral"],
     collectedAt: now
   },
   {
-    id: "youtube:demo-video-2",
+    id: "youtube:dQw4w9WgXcQ",
     platform: "youtube",
     rank: 2,
     title: "Review Jujur HP Flagship Terbaru 2026",
@@ -100,14 +102,14 @@ export const MOCK_TRENDS: Trend[] = [
     metricLabel: "views",
     aiSummary:
       "Reviewer teknologi membedah performa dan kamera HP flagship terbaru. Video ini ramai karena kesimpulannya cukup mengejutkan soal daya tahan baterai.",
-    url: "https://www.youtube.com/feed/trending",
-    thumbnail: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=480&q=70",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    thumbnail: "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg",
     source: "Tech Review ID",
     hashtags: ["gadget", "review", "smartphone"],
     collectedAt: now
   },
   {
-    id: "youtube:demo-video-3",
+    id: "youtube:jNQXAC9IVRw",
     platform: "youtube",
     rank: 3,
     title: "Resep Rendang Autentik ala Rumah Makan Padang",
@@ -116,8 +118,8 @@ export const MOCK_TRENDS: Trend[] = [
     metricLabel: "views",
     aiSummary:
       "Video tutorial memasak rendang dengan teknik tradisional ini populer menjelang akhir pekan. Banyak penonton menyimpannya untuk dicoba di rumah.",
-    url: "https://www.youtube.com/feed/trending",
-    thumbnail: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=480&q=70",
+    url: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
+    thumbnail: "https://i.ytimg.com/vi/jNQXAC9IVRw/mqdefault.jpg",
     source: "Dapur Nusantara",
     hashtags: ["masak", "kuliner", "resep"],
     collectedAt: now
