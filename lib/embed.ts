@@ -11,25 +11,27 @@ export function idFromSlug(platform: Platform, slug: string): string {
   return `${platform}:${slug}`;
 }
 
-/** Ekstrak ID video YouTube dari berbagai bentuk URL / slug. */
+const YT_ID = /^[a-zA-Z0-9_-]{11}$/;
+
+/** Ekstrak ID video YouTube. Prioritas URL (v=) karena paling akurat. */
 export function youtubeId(trend: Trend): string | null {
-  const slug = slugFromId(trend.id);
-  // Bila slug sudah berupa ID video 11 karakter, pakai langsung.
-  if (/^[a-zA-Z0-9_-]{11}$/.test(slug)) return slug;
+  // 1) Dari URL — sumber paling andal (tidak terpengaruh slugify).
   try {
     const u = new URL(trend.url);
     const v = u.searchParams.get("v");
-    if (v && /^[a-zA-Z0-9_-]{11}$/.test(v)) return v;
-    // youtu.be/<id> atau /embed/<id> atau /shorts/<id>
+    if (v && YT_ID.test(v)) return v;
     const m = u.pathname.match(/\/(embed|shorts)\/([a-zA-Z0-9_-]{11})/);
     if (m) return m[2];
     if (u.hostname.includes("youtu.be")) {
       const id = u.pathname.replace("/", "");
-      if (/^[a-zA-Z0-9_-]{11}$/.test(id)) return id;
+      if (YT_ID.test(id)) return id;
     }
   } catch {
     /* abaikan */
   }
+  // 2) Fallback: slug (bila memang ID video mentah 11 karakter).
+  const slug = slugFromId(trend.id);
+  if (YT_ID.test(slug)) return slug;
   return null;
 }
 

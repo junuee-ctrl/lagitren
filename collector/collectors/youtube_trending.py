@@ -66,7 +66,10 @@ def collect(max_results: int = 15) -> list[Trend]:
         tags = sn.get("tags", []) or []
 
         t = Trend(
-            id=make_id("youtube", vid),  # id video stabil
+            # JANGAN slugify: ID video YouTube case-sensitive & bisa mengandung
+            # '_' / '-'. Slugify akan merusaknya → embed gagal. Pakai apa adanya
+            # (aman untuk URL path).
+            id=f"youtube:{vid}",
             platform="youtube",
             rank=rank,
             title=title,
