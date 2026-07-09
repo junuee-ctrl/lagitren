@@ -11,7 +11,7 @@ import AdSlot from "@/components/AdSlot";
 import AffiliateBox from "@/components/AffiliateBox";
 import SearchVolumeChart from "@/components/SearchVolumeChart";
 
-export const revalidate = 1800;
+export const revalidate = 300;
 
 export async function generateMetadata({
   params

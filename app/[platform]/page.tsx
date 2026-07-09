@@ -6,7 +6,7 @@ import PlatformSection from "@/components/PlatformSection";
 import AdSlot from "@/components/AdSlot";
 import type { Platform } from "@/lib/types";
 
-export const revalidate = 1800; // 30 menit
+export const revalidate = 300; // 5 menit
 
 export function generateStaticParams() {
   return PLATFORM_ORDER.map((platform) => ({ platform }));

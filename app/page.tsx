@@ -5,7 +5,7 @@ import AdSlot from "@/components/AdSlot";
 import type { Platform, Trend } from "@/lib/types";
 
 // ISR: halaman diregenerasi berkala agar tren selalu segar.
-export const revalidate = 1800; // 30 menit
+export const revalidate = 300; // 5 menit
 
 // Sisipkan iklan setelah platform ke-2 dan ke-4.
 const AD_AFTER = new Set<number>([1, 3]);
