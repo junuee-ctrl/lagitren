@@ -1,0 +1,61 @@
+name: Deploy ke Cloudflare
+
+# Deploy otomatis setiap push ke main, atau manual dari tab Actions.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Pastikan database D1 ada & ambil ID
+        # Buat lagitren-db bila belum ada, lalu tulis database_id-nya
+        # ke wrangler.toml secara otomatis (tidak perlu isi manual).
+        run: |
+          set -e
+          get_id() {
+            npx --yes wrangler@4 d1 list --json 2>/dev/null \
+              | jq -r '.[] | select(.name=="lagitren-db") | .uuid' | head -n1
+          }
+          DB_ID="$(get_id || true)"
+          if [ -z "$DB_ID" ] || [ "$DB_ID" = "null" ]; then
+            echo "Membuat database D1 lagitren-db..."
+            npx --yes wrangler@4 d1 create lagitren-db || true
+            DB_ID="$(get_id || true)"
+          fi
+          if [ -z "$DB_ID" ] || [ "$DB_ID" = "null" ]; then
+            echo "::error::Gagal mendapatkan database_id D1. Cek CLOUDFLARE_API_TOKEN (butuh izin D1 Edit)."
+            exit 1
+          fi
+          echo "database_id = $DB_ID"
+          sed -i "s/REPLACE_WITH_D1_DATABASE_ID/$DB_ID/" wrangler.toml
+          echo "DB_ID=$DB_ID" >> "$GITHUB_ENV"
+
+      - name: Terapkan skema D1 (idempotent)
+        run: npx --yes wrangler@4 d1 execute lagitren-db --remote --file=./db/schema.sql --yes
+
+      - name: Build (OpenNext) & Deploy
+        run: |
+          npx --yes opennextjs-cloudflare@1.6.5 build
+          npx --yes wrangler@4 deploy
