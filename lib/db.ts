@@ -111,22 +111,41 @@ const LATEST_ALL = `
   ORDER BY platform ASC, rank ASC
 `;
 
+const COUNT_ALL = `SELECT COUNT(*) AS c FROM trends`;
+
+/**
+ * Jumlah total baris di D1. Dipakai untuk memutuskan apakah situs sudah
+ * punya data nyata. Bila > 0, kita TIDAK memakai data mock lagi (agar tidak
+ * mencampur data nyata dengan contoh).
+ */
+async function totalCount(db: D1Like): Promise<number> {
+  try {
+    const { results } = await db.prepare(COUNT_ALL).all<{ c: number }>();
+    return Number(results?.[0]?.c ?? 0);
+  } catch {
+    return 0;
+  }
+}
+
 /** Ambil tren teratas untuk satu platform. */
 export async function getTrendsByPlatform(
   platform: Platform,
   limit = 20
 ): Promise<Trend[]> {
   const db = await getDB();
+  // Tanpa D1 (dev lokal) → pakai contoh.
   if (!db) return mockTrendsByPlatform(platform).slice(0, limit);
   try {
     const { results } = await db
       .prepare(LATEST_BY_PLATFORM)
       .bind(platform, limit)
       .all<TrendRow>();
-    if (!results || results.length === 0) {
-      return mockTrendsByPlatform(platform).slice(0, limit);
-    }
-    return results.map(rowToTrend);
+    if (results && results.length > 0) return results.map(rowToTrend);
+    // Kosong: bila DB sudah punya data nyata (platform lain), jangan palsukan.
+    const total = await totalCount(db);
+    if (total > 0) return [];
+    // DB benar-benar kosong (baru deploy) → contoh sebagai bootstrap.
+    return mockTrendsByPlatform(platform).slice(0, limit);
   } catch {
     return mockTrendsByPlatform(platform).slice(0, limit);
   }

@@ -75,7 +75,22 @@ export default async function PlatformPage({
 
       <AdSlot slot={`${platform}-top`} />
 
-      <PlatformSection platform={platform} trends={trends} showAll />
+      {trends.length > 0 ? (
+        <PlatformSection platform={platform} trends={trends} showAll />
+      ) : (
+        <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center">
+          <p className="text-3xl" aria-hidden>
+            ⏳
+          </p>
+          <p className="mt-2 font-semibold text-ink">
+            Data {meta.name} sedang dikumpulkan
+          </p>
+          <p className="mt-1 text-sm text-gray-500">
+            Tren untuk platform ini akan segera muncul di sini. Coba lagi
+            beberapa saat lagi.
+          </p>
+        </div>
+      )}
 
       {/* Navigasi ke platform lain */}
       <section className="mt-10 border-t border-gray-200 pt-6">

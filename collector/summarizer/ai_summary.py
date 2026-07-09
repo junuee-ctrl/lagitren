@@ -77,21 +77,48 @@ def _summarize_claude(platform: str, title: str, context: str) -> str:
     return _clean(text)
 
 
+def _heuristic(platform: str, title: str, context: str) -> str:
+    """Ringkasan darurat tanpa LLM, dari konteks berita/desk yang ada.
+
+    Dipakai saat Ollama & Claude tidak tersedia (mis. berjalan di cloud
+    tanpa GPU). Tetap memberi 'kenapa tren' yang faktual dari data nyata.
+    """
+    first = ""
+    if context:
+        first = context.split("|")[0].strip()
+    if platform == "google":
+        if first:
+            return (
+                f'Kata kunci "{title}" sedang banyak dicari di Indonesia. '
+                f"Terkait dengan pemberitaan: {first}."
+            )
+        return f'Kata kunci "{title}" sedang naik daun dalam pencarian di Indonesia saat ini.'
+    if platform == "youtube":
+        return "Video ini sedang populer dan naik daun di YouTube Indonesia."
+    if platform == "tiktok":
+        return "Konten ini sedang ramai dan viral di TikTok."
+    if platform == "instagram":
+        return "Unggahan ini sedang populer di Instagram."
+    if platform == "twitter":
+        return f'"{title}" sedang menjadi perbincangan hangat di X (Twitter) Indonesia.'
+    return ""
+
+
 def summarize(platform: str, title: str, context: str = "") -> str:
-    """Coba Ollama dulu, lalu Claude, lalu kembalikan '' bila gagal."""
+    """Coba Ollama → Claude → heuristik (selalu mengembalikan sesuatu)."""
     try:
         out = _summarize_ollama(platform, title, context)
         if out:
             return out
         log.warning("Ollama mengembalikan kosong untuk: %s", title)
     except Exception as exc:
-        log.warning("Ollama gagal (%s), coba fallback Claude...", exc)
+        log.info("Ollama tidak tersedia (%s), coba fallback...", exc)
 
     try:
         out = _summarize_claude(platform, title, context)
         if out:
             return out
     except Exception as exc:
-        log.warning("Claude fallback gagal: %s", exc)
+        log.info("Claude fallback tidak tersedia: %s", exc)
 
-    return ""
+    return _heuristic(platform, title, context)
