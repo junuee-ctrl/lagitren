@@ -29,26 +29,48 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Diagnostik auth (whoami)
+        run: |
+          echo "== wrangler whoami (memperlihatkan izin token) =="
+          npx --yes wrangler@4 whoami || true
+
       - name: Pastikan database D1 ada & ambil ID
         # Buat lagitren-db bila belum ada, lalu tulis database_id-nya
         # ke wrangler.toml secara otomatis (tidak perlu isi manual).
         run: |
           set -e
-          get_id() {
-            npx --yes wrangler@4 d1 list --json 2>/dev/null \
-              | jq -r '.[] | select(.name=="lagitren-db") | .uuid' | head -n1
+          UUID_RE='[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'
+          extract_id() {
+            # coba beberapa nama field dari output JSON d1 list
+            echo "$1" | jq -r '.[]? | select(.name=="lagitren-db") | (.uuid // .database_id // .id // empty)' 2>/dev/null | head -n1
           }
-          DB_ID="$(get_id || true)"
+
+          echo "== d1 list (stdout) =="
+          RAW="$(npx --yes wrangler@4 d1 list --json 2>d1list.err || true)"
+          echo "$RAW"
+          echo "== d1 list (stderr) =="
+          cat d1list.err || true
+
+          DB_ID="$(extract_id "$RAW")"
+
           if [ -z "$DB_ID" ] || [ "$DB_ID" = "null" ]; then
-            echo "Membuat database D1 lagitren-db..."
-            npx --yes wrangler@4 d1 create lagitren-db || true
-            DB_ID="$(get_id || true)"
+            echo "== membuat D1 lagitren-db =="
+            CREATE="$(npx --yes wrangler@4 d1 create lagitren-db 2>&1 || true)"
+            echo "$CREATE"
+            # ambil UUID langsung dari output 'wrangler d1 create'
+            DB_ID="$(echo "$CREATE" | grep -oE "$UUID_RE" | head -n1)"
+            if [ -z "$DB_ID" ]; then
+              RAW2="$(npx --yes wrangler@4 d1 list --json 2>/dev/null || true)"
+              DB_ID="$(extract_id "$RAW2")"
+            fi
           fi
+
           if [ -z "$DB_ID" ] || [ "$DB_ID" = "null" ]; then
-            echo "::error::Gagal mendapatkan database_id D1. Cek CLOUDFLARE_API_TOKEN (butuh izin D1 Edit)."
+            echo "::error::Gagal mendapatkan database_id D1. Lihat output 'whoami' & 'd1 list stderr' di atas — pastikan token punya izin: D1 Edit, Workers Scripts Edit, Account Settings Read."
             exit 1
           fi
-          echo "database_id = $DB_ID"
+
+          echo "database_id terpakai = $DB_ID"
           sed -i "s/REPLACE_WITH_D1_DATABASE_ID/$DB_ID/" wrangler.toml
           echo "DB_ID=$DB_ID" >> "$GITHUB_ENV"
 
