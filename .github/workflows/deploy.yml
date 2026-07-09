@@ -78,6 +78,8 @@ jobs:
         run: npx --yes wrangler@4 d1 execute lagitren-db --remote --file=./db/schema.sql --yes
 
       - name: Build (OpenNext) & Deploy
+        # Pakai biner yang sudah terpasang via `npm ci`
+        # (paket npm bernama @opennextjs/cloudflare, biner-nya opennextjs-cloudflare).
         run: |
-          npx --yes opennextjs-cloudflare@1.6.5 build
-          npx --yes wrangler@4 deploy
+          npx opennextjs-cloudflare build
+          npx wrangler deploy
