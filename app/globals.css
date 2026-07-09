@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #ff6b00;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-surface text-ink antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+/* Utilitas kecil */
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-4 sm:px-6;
+  }
+
+  .card {
+    @apply rounded-2xl border border-gray-200 bg-white shadow-sm transition
+           hover:shadow-md;
+  }
+
+  .btn-brand {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-full
+           bg-brand px-4 py-2 text-sm font-semibold text-white transition
+           hover:bg-brand-dark focus:outline-none focus:ring-2
+           focus:ring-brand/40;
+  }
+
+  .link-quiet {
+    @apply text-gray-500 transition hover:text-brand;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5
+           text-xs font-medium text-gray-600;
+  }
+}

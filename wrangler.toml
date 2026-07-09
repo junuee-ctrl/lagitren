@@ -1,0 +1,27 @@
+#:schema node_modules/wrangler/config-schema.json
+# Konfigurasi Cloudflare untuk Lagi Tren (Next.js via @opennextjs/cloudflare).
+# Deploy dijalankan dengan: npm run cf:deploy
+#   (opennextjs-cloudflare build && opennextjs-cloudflare deploy)
+# atau otomatis via Cloudflare Workers Builds saat push ke GitHub.
+
+name = "lagitren"
+main = ".open-next/worker.js"
+compatibility_date = "2025-03-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Aset statis hasil build (dilayani langsung dari edge).
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# ── Cloudflare D1 (database tren) ────────────────────────────────
+# Buat database sekali dengan: wrangler d1 create lagitren-db
+# lalu tempel `database_id` yang dikembalikan di bawah ini.
+[[d1_databases]]
+binding = "DB"                       # diakses via env.DB di lib/db.ts
+database_name = "lagitren-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# ── Variabel publik ──────────────────────────────────────────────
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://lagitren.id"
