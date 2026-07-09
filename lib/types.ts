@@ -34,6 +34,11 @@ export interface Trend {
   affiliateUrl?: string;
   /** Rentang harga produk, mis. "Rp 15 juta". */
   price?: string;
+  /**
+   * Deret minat pencarian (khusus Google Trends) untuk grafik volume.
+   * Nilai relatif 0–100 seperti Google Trends "interest over time".
+   */
+  interest?: number[];
   /** Waktu pengumpulan (ISO string / epoch). */
   collectedAt: string;
 }

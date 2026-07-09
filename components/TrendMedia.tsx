@@ -98,7 +98,7 @@ function TwitterEmbed({ url }: { url: string }) {
   return (
     <div ref={ref} className="flex justify-center">
       <blockquote className="twitter-tweet" data-lang="id">
-        <a href={url}>{url}</a>
+        <a href={url}>Memuat postingan dari X…</a>
       </blockquote>
     </div>
   );

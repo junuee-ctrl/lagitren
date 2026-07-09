@@ -9,6 +9,7 @@ import TrendMedia from "@/components/TrendMedia";
 import TrendListItem from "@/components/TrendListItem";
 import AdSlot from "@/components/AdSlot";
 import AffiliateBox from "@/components/AffiliateBox";
+import SearchVolumeChart from "@/components/SearchVolumeChart";
 
 export const revalidate = 1800;
 
@@ -86,6 +87,19 @@ export default async function TrendDetailPage({
           {trend.source ? ` · ${trend.source}` : ""}
         </p>
       </header>
+
+      {/* Grafik minat pencarian (khusus Google Trends) */}
+      {trend.interest && trend.interest.length > 1 && (
+        <section className="mb-5 rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
+          <h2 className="mb-2 text-sm font-semibold text-gray-500">
+            📈 Minat pencarian dari waktu ke waktu
+          </h2>
+          <SearchVolumeChart data={trend.interest} color={meta.color} />
+          <p className="mt-1 text-xs text-gray-400">
+            Nilai relatif (0–100) berdasarkan data Google Trends.
+          </p>
+        </section>
+      )}
 
       {/* Media utama — diputar/ditampilkan DI SITUS kita */}
       {(embeddable || trend.thumbnail) && (

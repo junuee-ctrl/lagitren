@@ -24,8 +24,8 @@ _API_BASE = "https://api.cloudflare.com/client/v4"
 UPSERT_SQL = """
 INSERT INTO trends
   (id, platform, rank, title, subtitle, metric, metric_label, ai_summary,
-   url, thumbnail, source, hashtags, affiliate_url, price, collected_at, updated_at)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+   url, thumbnail, source, hashtags, affiliate_url, price, interest, collected_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
 ON CONFLICT(id) DO UPDATE SET
   platform=excluded.platform,
   rank=excluded.rank,
@@ -40,6 +40,7 @@ ON CONFLICT(id) DO UPDATE SET
   hashtags=excluded.hashtags,
   affiliate_url=excluded.affiliate_url,
   price=excluded.price,
+  interest=excluded.interest,
   collected_at=excluded.collected_at,
   updated_at=datetime('now');
 """
@@ -103,7 +104,7 @@ class D1Client:
                 r["id"], r["platform"], r["rank"], r["title"], r["subtitle"],
                 r["metric"], r["metric_label"], r["ai_summary"], r["url"],
                 r["thumbnail"], r["source"], r["hashtags"], r["affiliate_url"],
-                r["price"], r["collected_at"],
+                r["price"], r["interest"], r["collected_at"],
             ],
         )
 

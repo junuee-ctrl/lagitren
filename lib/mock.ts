@@ -25,6 +25,7 @@ export const MOCK_TRENDS: Trend[] = [
     hashtags: ["apple", "smartphone", "gadget"],
     affiliateUrl: "https://lagitren.id/go/shopee/iphone-16",
     price: "Mulai Rp 15 juta",
+    interest: [8, 10, 9, 12, 15, 22, 40, 70, 100],
     collectedAt: now
   },
   {
@@ -40,6 +41,7 @@ export const MOCK_TRENDS: Trend[] = [
     url: "https://trends.google.co.id/trends/explore?q=hasil%20liga%201&geo=ID",
     source: "Google Trends ID",
     hashtags: ["liga1", "sepakbola", "bola"],
+    interest: [20, 18, 22, 25, 30, 45, 80, 100],
     collectedAt: now
   },
   {
@@ -55,6 +57,7 @@ export const MOCK_TRENDS: Trend[] = [
     url: "https://trends.google.co.id/trends/explore?q=harga%20emas%20hari%20ini&geo=ID",
     source: "Google Trends ID",
     hashtags: ["emas", "investasi", "antam"],
+    interest: [30, 35, 32, 40, 45, 55, 70, 100],
     collectedAt: now
   },
   {
@@ -70,74 +73,76 @@ export const MOCK_TRENDS: Trend[] = [
     url: "https://trends.google.co.id/trends/explore?q=cuaca%20jakarta&geo=ID",
     source: "Google Trends ID",
     hashtags: ["cuaca", "bmkg", "jakarta"],
+    interest: [40, 42, 38, 45, 50, 60, 80, 100],
     collectedAt: now
   },
 
   // ── YouTube Trending ───────────────────────────────────────────
   {
-    // Catatan: ID video contoh memakai video publik nyata agar embed berfungsi
-    // di demo. Collector akan menggantinya dengan video trending asli.
+    // CATATAN DEMO: memakai video publik nyata agar embed & judul cocok.
+    // Collector akan menggantinya dengan video trending Indonesia asli.
     id: "youtube:9bZkp7q19f0",
     platform: "youtube",
     rank: 1,
-    title: "Konser Amal Musisi Indonesia — Full Performance",
+    title: "PSY - GANGNAM STYLE (강남스타일) M/V",
     subtitle: "2.5M views",
     metric: 2500000,
     metricLabel: "views",
     aiSummary:
-      "Video konser amal yang menampilkan sederet musisi papan atas Indonesia ini viral karena momen kolaborasi tak terduga di panggung. Penonton ramai membagikan potongan penampilannya.",
+      "Video musik legendaris PSY ini kembali ramai diputar setelah dipakai dalam sebuah tren tarian di media sosial. Nostalgia membuat penonton lama ikut menonton ulang.",
     url: "https://www.youtube.com/watch?v=9bZkp7q19f0",
     thumbnail: "https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg",
-    source: "Channel Musik ID",
-    hashtags: ["musik", "konser", "viral"],
+    source: "officialpsy",
+    hashtags: ["kpop", "psy", "musik"],
     collectedAt: now
   },
   {
     id: "youtube:dQw4w9WgXcQ",
     platform: "youtube",
     rank: 2,
-    title: "Review Jujur HP Flagship Terbaru 2026",
+    title: "Rick Astley - Never Gonna Give You Up (Official Video)",
     subtitle: "1.2M views",
     metric: 1200000,
     metricLabel: "views",
     aiSummary:
-      "Reviewer teknologi membedah performa dan kamera HP flagship terbaru. Video ini ramai karena kesimpulannya cukup mengejutkan soal daya tahan baterai.",
+      "Fenomena 'rickroll' membuat video klasik ini terus kedatangan penonton baru. Banyak kreator memakainya untuk lelucon di media sosial.",
     url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     thumbnail: "https://i.ytimg.com/vi/dQw4w9WgXcQ/mqdefault.jpg",
-    source: "Tech Review ID",
-    hashtags: ["gadget", "review", "smartphone"],
+    source: "Rick Astley",
+    hashtags: ["musik", "rickroll", "viral"],
     collectedAt: now
   },
   {
     id: "youtube:jNQXAC9IVRw",
     platform: "youtube",
     rank: 3,
-    title: "Resep Rendang Autentik ala Rumah Makan Padang",
+    title: "Me at the zoo",
     subtitle: "890K views",
     metric: 890000,
     metricLabel: "views",
     aiSummary:
-      "Video tutorial memasak rendang dengan teknik tradisional ini populer menjelang akhir pekan. Banyak penonton menyimpannya untuk dicoba di rumah.",
+      "Video pertama yang pernah diunggah ke YouTube ini kembali dibicarakan karena nilai sejarahnya. Banyak yang penasaran menonton awal mula platform video terbesar dunia.",
     url: "https://www.youtube.com/watch?v=jNQXAC9IVRw",
     thumbnail: "https://i.ytimg.com/vi/jNQXAC9IVRw/mqdefault.jpg",
-    source: "Dapur Nusantara",
-    hashtags: ["masak", "kuliner", "resep"],
+    source: "jawed",
+    hashtags: ["sejarah", "youtube", "viral"],
     collectedAt: now
   },
 
   // ── TikTok Viral ───────────────────────────────────────────────
   {
-    id: "tiktok:hashtag-jajananviral",
+    // CATATAN DEMO: memakai video publik nyata agar embed tampil.
+    id: "tiktok:doggface-cranberry",
     platform: "tiktok",
     rank: 1,
-    title: "#JajananViral",
-    subtitle: "15M views",
-    metric: 15000000,
+    title: "Naik skateboard sambil minum jus cranberry",
+    subtitle: "80M views",
+    metric: 80000000,
     metricLabel: "views",
     aiSummary:
-      "Tren ini bermula dari kreator yang mereview jajanan kaki lima dengan gaya kocak. Kini banyak pengguna ikut membuat konten serupa di kota masing-masing.",
-    url: "https://www.tiktok.com/tag/jajananviral",
-    hashtags: ["jajananviral", "kuliner", "fyp"],
+      "Video santai seorang pria meluncur dengan skateboard sambil menikmati jus ini menjadi salah satu tren TikTok paling ikonik. Banyak yang meniru gaya santainya.",
+    url: "https://www.tiktok.com/@420doggface208/video/6876424179084709126",
+    hashtags: ["dreams", "vibes", "fyp"],
     collectedAt: now
   },
   {
@@ -171,17 +176,18 @@ export const MOCK_TRENDS: Trend[] = [
 
   // ── Instagram Hits ─────────────────────────────────────────────
   {
+    // CATATAN DEMO: memakai postingan publik nyata agar embed tampil.
     id: "instagram:reels-1",
     platform: "instagram",
     rank: 1,
-    title: "Reels wisata tersembunyi di Yogyakarta",
-    subtitle: "3.4M plays",
-    metric: 3400000,
-    metricLabel: "plays",
+    title: "Foto telur pemecah rekor dunia (world_record_egg)",
+    subtitle: "56 jt suka",
+    metric: 56000000,
+    metricLabel: "suka",
     aiSummary:
-      "Reels yang menampilkan destinasi wisata alam yang belum ramai di Yogyakarta ini banyak dibagikan. Penonton tertarik dengan lokasi dan tips perjalanannya.",
-    url: "https://www.instagram.com/explore/",
-    hashtags: ["wisata", "jogja", "traveling"],
+      "Foto sebutir telur ini memecahkan rekor jumlah suka terbanyak di Instagram dan menjadi fenomena global. Netizen ramai ikut menyukai dan membagikannya.",
+    url: "https://www.instagram.com/p/BsOGulcndj-/",
+    hashtags: ["worldrecordegg", "viral", "instagram"],
     collectedAt: now
   },
   {
@@ -254,17 +260,18 @@ export const MOCK_TRENDS: Trend[] = [
 
   // ── X (Twitter) Trending ───────────────────────────────────────
   {
-    id: "twitter:timnas",
+    // CATATAN DEMO: memakai tweet publik nyata (tweet pertama di Twitter) agar embed tampil.
+    id: "twitter:first-tweet",
     platform: "twitter",
     rank: 1,
-    title: "#Timnas",
+    title: "\"just setting up my twttr\"",
     subtitle: "125rb tweet",
     metric: 125000,
-    metricLabel: "tweet",
+    metricLabel: "kutipan",
     aiSummary:
-      "Warganet ramai membahas performa Timnas Indonesia menjelang laga penting. Tagar ini dipenuhi dukungan dan analisis pertandingan.",
-    url: "https://twitter.com/search?q=%23Timnas",
-    hashtags: ["timnas", "sepakbola", "indonesia"],
+      "Tweet pertama dalam sejarah Twitter ini kembali ramai dibicarakan warganet. Banyak yang menautkannya sebagai bagian dari nostalgia media sosial.",
+    url: "https://twitter.com/jack/status/20",
+    hashtags: ["twitter", "sejarah", "viral"],
     collectedAt: now
   },
   {

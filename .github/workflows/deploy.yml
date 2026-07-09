@@ -75,7 +75,11 @@ jobs:
           echo "DB_ID=$DB_ID" >> "$GITHUB_ENV"
 
       - name: Terapkan skema D1 (idempotent)
-        run: npx --yes wrangler@4 d1 execute lagitren-db --remote --file=./db/schema.sql --yes
+        run: |
+          npx --yes wrangler@4 d1 execute lagitren-db --remote --file=./db/schema.sql --yes
+          # Tambah kolom yang mungkin belum ada di DB lama (abaikan error 'duplicate column').
+          npx --yes wrangler@4 d1 execute lagitren-db --remote \
+            --command "ALTER TABLE trends ADD COLUMN interest TEXT;" --yes || true
 
       - name: Build (OpenNext) & Deploy
         # Pakai biner yang sudah terpasang via `npm ci`

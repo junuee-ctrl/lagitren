@@ -27,6 +27,7 @@ interface TrendRow {
   hashtags: string | null; // JSON array string
   affiliate_url: string | null;
   price: string | null;
+  interest: string | null; // JSON array string, mis. "[10,20,100]"
   collected_at: string;
 }
 
@@ -58,8 +59,20 @@ function rowToTrend(row: TrendRow): Trend {
     hashtags,
     affiliateUrl: row.affiliate_url ?? undefined,
     price: row.price ?? undefined,
+    interest: parseInterest(row.interest),
     collectedAt: row.collected_at
   };
+}
+
+function parseInterest(raw: string | null): number[] | undefined {
+  if (!raw) return undefined;
+  try {
+    const arr = JSON.parse(raw);
+    if (Array.isArray(arr) && arr.length > 0) return arr.map(Number);
+  } catch {
+    /* abaikan */
+  }
+  return undefined;
 }
 
 // D1Database bertipe longgar agar tidak wajib bergantung pada @cloudflare/workers-types.
