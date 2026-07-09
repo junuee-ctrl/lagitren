@@ -106,13 +106,13 @@ def _heuristic(platform: str, title: str, context: str) -> str:
 
 def summarize(platform: str, title: str, context: str = "") -> str:
     """Coba Ollama → Claude → heuristik (selalu mengembalikan sesuatu)."""
-    try:
-        out = _summarize_ollama(platform, title, context)
-        if out:
-            return out
-        log.warning("Ollama mengembalikan kosong untuk: %s", title)
-    except Exception as exc:
-        log.info("Ollama tidak tersedia (%s), coba fallback...", exc)
+    if config.USE_OLLAMA:
+        try:
+            out = _summarize_ollama(platform, title, context)
+            if out:
+                return out
+        except Exception as exc:
+            log.info("Ollama tidak tersedia (%s), pakai fallback.", exc)
 
     try:
         out = _summarize_claude(platform, title, context)

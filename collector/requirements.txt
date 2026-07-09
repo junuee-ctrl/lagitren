@@ -4,3 +4,5 @@ python-dotenv>=1.0.1
 APScheduler>=3.10.4
 # Opsional: grafik minat pencarian Google Trends (best-effort).
 pytrends>=4.9.2
+# pytrends memakai API urllib3 lama (method_whitelist) → butuh urllib3 < 2.
+urllib3<2
