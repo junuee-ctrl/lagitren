@@ -91,9 +91,16 @@ def collect(limit: int = 20) -> list[Trend]:
             ctx = _browser.get_context(p)
             page = ctx.new_page()
 
+            all_hosts: dict[str, int] = {}
+
             def on_response(resp):
                 url = resp.url
-                # Tangkap SEMUA respons Creative Center API (diagnostik luas).
+                # Diagnostik: hitung host semua respons.
+                try:
+                    host = url.split("/")[2]
+                    all_hosts[host] = all_hosts.get(host, 0) + 1
+                except Exception:
+                    pass
                 if API_MARK in url:
                     seen_urls.append(url.split("?")[0])
                     try:
@@ -104,6 +111,7 @@ def collect(limit: int = 20) -> list[Trend]:
             page.on("response", on_response)
             page.goto(PAGE_URL, wait_until="load", timeout=60000)
             _browser.accept_cookies(page)
+            log.info("URL akhir halaman: %s", page.url)
 
             # Poll sampai ~30 dtk: SPA butuh waktu memanggil API; scroll berkala.
             for _ in range(10):
@@ -133,6 +141,8 @@ def collect(limit: int = 20) -> list[Trend]:
     # Log endpoint yang benar-benar terpanggil (untuk debugging).
     uniq = sorted(set(seen_urls))
     log.info("TikTok endpoint terpanggil (%d): %s", len(uniq), uniq[:8])
+    top_hosts = sorted(all_hosts.items(), key=lambda x: -x[1])[:8]
+    log.info("Host respons (total %d): %s", sum(all_hosts.values()), top_hosts)
 
     for payload in captured:
         trends = _parse(payload, limit)
