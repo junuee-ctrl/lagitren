@@ -28,6 +28,7 @@ interface TrendRow {
   affiliate_url: string | null;
   price: string | null;
   interest: string | null; // JSON array string, mis. "[10,20,100]"
+  is_current: number | null; // 1 = sedang tren, 0 = arsip
   collected_at: string;
 }
 
@@ -101,14 +102,23 @@ async function getDB(): Promise<D1Like | null> {
 
 const LATEST_BY_PLATFORM = `
   SELECT * FROM trends
-  WHERE platform = ?
+  WHERE platform = ? AND is_current = 1
   ORDER BY rank ASC
   LIMIT ?
 `;
 
 const LATEST_ALL = `
   SELECT * FROM trends
+  WHERE is_current = 1
   ORDER BY platform ASC, rank ASC
+`;
+
+// Untuk sitemap: semua halaman (termasuk arsip) yang terbaru diperbarui.
+const SITEMAP_TRENDS = `
+  SELECT id, platform, collected_at, updated_at
+  FROM trends
+  ORDER BY updated_at DESC
+  LIMIT ?
 `;
 
 const COUNT_ALL = `SELECT COUNT(*) AS c FROM trends`;
@@ -195,6 +205,47 @@ export async function getRelatedTrends(
 ): Promise<Trend[]> {
   const all = await getTrendsByPlatform(platform, 20);
   return all.filter((t) => t.id !== excludeId).slice(0, limit);
+}
+
+interface SitemapRow {
+  id: string;
+  platform: string;
+  collected_at: string;
+  updated_at: string;
+}
+
+/** Semua halaman tren (termasuk arsip) untuk sitemap SEO. */
+export async function getSitemapTrends(
+  limit = 5000
+): Promise<{ id: string; platform: Platform; collectedAt: string }[]> {
+  const db = await getDB();
+  if (!db) {
+    return MOCK_TRENDS.map((t) => ({
+      id: t.id,
+      platform: t.platform,
+      collectedAt: t.collectedAt
+    }));
+  }
+  try {
+    const { results } = await db
+      .prepare(SITEMAP_TRENDS)
+      .bind(limit)
+      .all<SitemapRow>();
+    if (results && results.length > 0) {
+      return results.map((r) => ({
+        id: r.id,
+        platform: r.platform as Platform,
+        collectedAt: r.updated_at || r.collected_at
+      }));
+    }
+  } catch {
+    /* fallthrough */
+  }
+  return MOCK_TRENDS.map((t) => ({
+    id: t.id,
+    platform: t.platform,
+    collectedAt: t.collectedAt
+  }));
 }
 
 /** Riwayat pengumpulan terbaru (untuk debug/monitoring). */

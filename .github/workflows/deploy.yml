@@ -82,6 +82,8 @@ jobs:
           # Tambah kolom yang mungkin belum ada di DB lama (abaikan error 'duplicate column').
           npx --yes wrangler@4 d1 execute lagitren-db --remote \
             --command "ALTER TABLE trends ADD COLUMN interest TEXT;" --yes || true
+          npx --yes wrangler@4 d1 execute lagitren-db --remote \
+            --command "ALTER TABLE trends ADD COLUMN is_current INTEGER NOT NULL DEFAULT 1;" --yes || true
 
       - name: Build (OpenNext) & Deploy
         # Pakai biner yang sudah terpasang via `npm ci`

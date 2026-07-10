@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS trends (
   affiliate_url TEXT,                      -- tautan afiliasi (khusus produk)
   price         TEXT,                      -- rentang harga produk (opsional)
   interest      TEXT,                      -- JSON array minat pencarian (khusus Google), mis. '[10,20,100]'
+  is_current    INTEGER NOT NULL DEFAULT 1, -- 1 = sedang tren; 0 = arsip (tetap disimpan utk SEO)
   collected_at  TEXT NOT NULL,             -- ISO 8601 waktu pengumpulan
   updated_at    TEXT NOT NULL DEFAULT (datetime('now'))
 );
@@ -28,6 +29,12 @@ CREATE TABLE IF NOT EXISTS trends (
 -- Indeks untuk query homepage & halaman detail.
 CREATE INDEX IF NOT EXISTS idx_trends_platform_rank
   ON trends (platform, rank);
+
+CREATE INDEX IF NOT EXISTS idx_trends_current
+  ON trends (platform, is_current, rank);
+
+CREATE INDEX IF NOT EXISTS idx_trends_updated
+  ON trends (updated_at);
 
 CREATE INDEX IF NOT EXISTS idx_trends_collected_at
   ON trends (collected_at);

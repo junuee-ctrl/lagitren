@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PLATFORM_ORDER } from "@/lib/platforms";
-import { getAllTrends } from "@/lib/db";
+import { getSitemapTrends } from "@/lib/db";
 import { slugFromId } from "@/lib/embed";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Halaman detail per tren — INI yang menarik trafik pencarian.
   let detailPages: MetadataRoute.Sitemap = [];
   try {
-    const trends = await getAllTrends();
+    const trends = await getSitemapTrends(5000);
     const seen = new Set<string>();
     detailPages = trends
       .map((t) => {

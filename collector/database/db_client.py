@@ -24,8 +24,8 @@ _API_BASE = "https://api.cloudflare.com/client/v4"
 UPSERT_SQL = """
 INSERT INTO trends
   (id, platform, rank, title, subtitle, metric, metric_label, ai_summary,
-   url, thumbnail, source, hashtags, affiliate_url, price, interest, collected_at, updated_at)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+   url, thumbnail, source, hashtags, affiliate_url, price, interest, is_current, collected_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, datetime('now'))
 ON CONFLICT(id) DO UPDATE SET
   platform=excluded.platform,
   rank=excluded.rank,
@@ -41,6 +41,7 @@ ON CONFLICT(id) DO UPDATE SET
   affiliate_url=excluded.affiliate_url,
   price=excluded.price,
   interest=excluded.interest,
+  is_current=1,
   collected_at=excluded.collected_at,
   updated_at=datetime('now');
 """
@@ -50,9 +51,13 @@ INSERT INTO collection_runs (platform, status, item_count, message, started_at)
 VALUES (?, ?, ?, ?, ?);
 """
 
-# Hapus item lama satu platform yang TIDAK ada di kumpulan id terbaru.
-# (dipanggil setelah upsert agar tabel hanya berisi snapshot terkini)
-PRUNE_SQL_TMPL = "DELETE FROM trends WHERE platform = ? AND id NOT IN ({placeholders});"
+# ARSIP (bukan hapus) item lama satu platform yang tidak ada di kumpulan terbaru:
+# is_current=0. Halaman detailnya TETAP ada (penting untuk akumulasi SEO);
+# hanya tidak muncul di daftar "sedang tren".
+ARCHIVE_SQL_TMPL = (
+    "UPDATE trends SET is_current = 0 "
+    "WHERE platform = ? AND is_current = 1 AND id NOT IN ({placeholders});"
+)
 
 
 class D1Client:
@@ -130,17 +135,35 @@ class D1Client:
             ],
         )
 
+    def _ensure_schema(self) -> None:
+        """Pastikan kolom baru ada (aman dijalankan berkali-kali)."""
+        if getattr(self, "_schema_ready", False):
+            return
+        for stmt in (
+            "ALTER TABLE trends ADD COLUMN interest TEXT",
+            "ALTER TABLE trends ADD COLUMN is_current INTEGER NOT NULL DEFAULT 1",
+        ):
+            try:
+                self.query(stmt)
+            except Exception:
+                pass  # kolom sudah ada
+        self._schema_ready = True
+
     def save_trends(self, platform: str, trends: list[Trend], prune: bool = True) -> int:
-        """Upsert semua tren satu platform, lalu (opsional) buang yang usang."""
+        """Upsert tren satu platform, lalu ARSIPKAN (bukan hapus) yang usang."""
+        live = not (self.dry_run or not self._configured())
+        if live:
+            self._ensure_schema()
         count = 0
         for t in trends:
             self.upsert_trend(t)
             count += 1
-        if prune and trends and not (self.dry_run or not self._configured()):
+        # Tandai item yang tidak lagi tren sebagai arsip (is_current=0).
+        if prune and trends and live:
             ids = [t.id for t in trends]
             placeholders = ",".join(["?"] * len(ids))
             self.query(
-                PRUNE_SQL_TMPL.format(placeholders=placeholders),
+                ARCHIVE_SQL_TMPL.format(placeholders=placeholders),
                 [platform, *ids],
             )
         return count
