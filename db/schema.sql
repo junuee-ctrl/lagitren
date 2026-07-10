@@ -30,11 +30,11 @@ CREATE TABLE IF NOT EXISTS trends (
 CREATE INDEX IF NOT EXISTS idx_trends_platform_rank
   ON trends (platform, rank);
 
-CREATE INDEX IF NOT EXISTS idx_trends_current
-  ON trends (platform, is_current, rank);
-
 CREATE INDEX IF NOT EXISTS idx_trends_updated
   ON trends (updated_at);
+
+-- Catatan: indeks yang memakai kolom is_current dibuat SETELAH ALTER
+-- (di workflow deploy), karena pada DB lama kolomnya baru ditambahkan via ALTER.
 
 CREATE INDEX IF NOT EXISTS idx_trends_collected_at
   ON trends (collected_at);
