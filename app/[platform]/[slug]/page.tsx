@@ -10,6 +10,7 @@ import TrendListItem from "@/components/TrendListItem";
 import AdSlot from "@/components/AdSlot";
 import AffiliateBox from "@/components/AffiliateBox";
 import SearchVolumeChart from "@/components/SearchVolumeChart";
+import GoogleTrendsWidget from "@/components/GoogleTrendsWidget";
 
 export const revalidate = 300;
 
@@ -89,15 +90,21 @@ export default async function TrendDetailPage({
       </header>
 
       {/* Grafik minat pencarian (khusus Google Trends) */}
-      {trend.interest && trend.interest.length > 1 && (
+      {platform === "google" && (
         <section className="mb-5 rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
           <h2 className="mb-2 text-sm font-semibold text-gray-500">
             📈 Minat pencarian dari waktu ke waktu
           </h2>
-          <SearchVolumeChart data={trend.interest} color={meta.color} />
-          <p className="mt-1 text-xs text-gray-400">
-            Nilai relatif (0–100) berdasarkan data Google Trends.
-          </p>
+          {trend.interest && trend.interest.length > 1 ? (
+            <>
+              <SearchVolumeChart data={trend.interest} color={meta.color} />
+              <p className="mt-1 text-xs text-gray-400">
+                Nilai relatif (0–100) berdasarkan data Google Trends.
+              </p>
+            </>
+          ) : (
+            <GoogleTrendsWidget keyword={trend.title} />
+          )}
         </section>
       )}
 
