@@ -39,6 +39,18 @@ FETCH_INTEREST = _get("FETCH_INTEREST", "1") in ("1", "true", "True", "yes")
 # Coba Ollama untuk ringkasan (matikan di cloud tanpa GPU untuk hindari log spam).
 USE_OLLAMA = _get("USE_OLLAMA", "1") in ("1", "true", "True", "yes")
 
+# ── Instagram (collector browser lokal) ─────────────────────────
+# Hashtag yang dipantau (dipisah koma). Diambil post teratasnya.
+IG_HASHTAGS = [
+    h.strip()
+    for h in _get("IG_HASHTAGS", "viral,fyp,indonesia,beritaterkini,tiktok").split(",")
+    if h.strip()
+]
+# Folder profil browser persisten (agar login IG tersimpan sekali).
+IG_USER_DATA_DIR = _get("IG_USER_DATA_DIR", "./.ig_profile")
+# Jalankan browser tampak (headful) untuk login pertama kali.
+BROWSER_HEADFUL = _get("BROWSER_HEADFUL", "0") in ("1", "true", "True", "yes")
+
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36 LagiTrenBot/1.0"
