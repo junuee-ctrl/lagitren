@@ -66,16 +66,37 @@ def _find_hashtag_list(payload) -> list[dict]:
     return found[0] if found else []
 
 
+def _num(item: dict, *keys) -> int:
+    for k in keys:
+        v = item.get(k)
+        if isinstance(v, (int, float)):
+            return int(v)
+        if isinstance(v, str) and v.replace(".", "").isdigit():
+            return int(float(v))
+    return 0
+
+
 def _parse(payload: dict, limit: int) -> list[Trend]:
-    lst = (payload.get("data") or {}).get("list") or _find_hashtag_list(payload)
+    lst = (
+        (payload.get("data") or {}).get("list")
+        or (payload.get("items") if isinstance(payload.get("items"), list) else None)
+        or _find_hashtag_list(payload)
+    )
     out: list[Trend] = []
-    for i, item in enumerate(lst, start=1):
-        name = item.get("hashtag_name")
+    for i, item in enumerate(lst or [], start=1):
+        if not isinstance(item, dict):
+            continue
+        name = (
+            item.get("hashtag_name")
+            or item.get("hashtag")
+            or item.get("name")
+            or item.get("title")
+        )
         if not name:
             continue
-        views = int(item.get("video_views") or 0)
-        publish = int(item.get("publish_cnt") or 0)
-        rank = int(item.get("rank") or i)
+        views = _num(item, "video_views", "views", "play_count", "view_count")
+        publish = _num(item, "publish_cnt", "video_count", "post_count")
+        rank = _num(item, "rank") or i
         subtitle = metric = label = None
         if views:
             subtitle, metric, label = f"{_fmt(views)} views", views, "views"
@@ -183,6 +204,16 @@ def collect(limit: int = 20) -> list[Trend]:
     log.info("Kandidat endpoint JSON (%d):", len(candidates))
     for path, keys in candidates[:12]:
         log.info("   %s  keys=%s", path, keys)
+    # Log contoh 1 item mentah agar tahu nama field sebenarnya.
+    import json as _json
+    for payload in captured:
+        items = payload.get("items") if isinstance(payload, dict) else None
+        if not items:
+            lst = _find_hashtag_list(payload)
+            items = lst if lst else None
+        if items:
+            log.info("Contoh item: %s", _json.dumps(items[0], ensure_ascii=False)[:600])
+            break
 
     for payload in captured:
         trends = _parse(payload, limit)
