@@ -17,17 +17,26 @@ UA = (
 
 
 def persistent_context(p, headful: bool | None = None):
-    """Buka context browser persisten (menyimpan cookie/login antar-run)."""
+    """Buka context browser persisten (menyimpan cookie/login antar-run).
+
+    Pakai Google Chrome asli (channel="chrome") bila terpasang — jauh lebih
+    kecil kemungkinan dideteksi sebagai bot dibanding Chromium bawaan.
+    """
     if headful is None:
         headful = config.BROWSER_HEADFUL
-    return p.chromium.launch_persistent_context(
-        config.BROWSER_PROFILE_DIR,
+    common = dict(
+        user_data_dir=config.BROWSER_PROFILE_DIR,
         headless=not headful,
-        user_agent=UA,
         locale="id-ID",
         viewport={"width": 1360, "height": 900},
         args=["--disable-blink-features=AutomationControlled"],
     )
+    # UA hanya di-set untuk Chromium; dgn channel chrome biarkan UA asli.
+    try:
+        return p.chromium.launch_persistent_context(channel="chrome", **common)
+    except Exception as exc:
+        log.info("Chrome asli tidak tersedia (%s), pakai Chromium.", exc)
+        return p.chromium.launch_persistent_context(user_agent=UA, **common)
 
 
 def accept_cookies(page) -> None:
