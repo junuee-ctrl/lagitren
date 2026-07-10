@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { ADSENSE_CLIENT } from "@/lib/adsense";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
-const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

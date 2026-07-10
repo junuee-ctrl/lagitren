@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { ADSENSE_CLIENT } from "@/lib/adsense";
 
 /**
  * Slot iklan Google AdSense.
@@ -13,8 +14,6 @@ import { useEffect, useRef } from "react";
  * Slot id per-unit bisa diberikan lewat prop `adSlot` (angka dari AdSense).
  * Tanpa slot id, Auto Ads AdSense tetap dapat menempatkan iklan sendiri.
  */
-
-const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
 declare global {
   interface Window {

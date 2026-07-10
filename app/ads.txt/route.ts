@@ -2,10 +2,12 @@
 // Dibuat otomatis dari NEXT_PUBLIC_ADSENSE_CLIENT (mis. "ca-pub-123..").
 // AdSense butuh baris ini agar iklan bisa tayang & pendapatan terverifikasi.
 
+import { ADSENSE_CLIENT } from "@/lib/adsense";
+
 export const dynamic = "force-static";
 
 export function GET() {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_CLIENT ?? "";
+  const client = ADSENSE_CLIENT ?? "";
   // "ca-pub-XXX" -> "pub-XXX"
   const pub = client.replace(/^ca-/, "");
   const body = pub
