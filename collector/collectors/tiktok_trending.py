@@ -153,6 +153,7 @@ def collect(limit: int = 20) -> list[Trend]:
 
             all_hosts: dict[str, int] = {}
             candidates: list[tuple[str, list[str]]] = []  # (path, top-level keys)
+            captured_id: list[dict] = []  # respons khusus countryCode=ID
 
             def on_response(resp):
                 url = resp.url
@@ -175,6 +176,13 @@ def collect(limit: int = 20) -> list[Trend]:
                         captured.append(j)
                         keys = list(j.keys())[:6] if isinstance(j, dict) else ["<non-dict>"]
                         candidates.append((path, keys))
+                        # Utamakan respons untuk Indonesia (countryCode=ID).
+                        try:
+                            body = (resp.request.post_data or "").replace(" ", "")
+                        except Exception:
+                            body = ""
+                        if '"countryCode":"ID"' in body:
+                            captured_id.append(j)
                     except Exception:
                         pass
 
@@ -243,11 +251,13 @@ def collect(limit: int = 20) -> list[Trend]:
     for ru in req_urls[:6]:
         log.info("REQ: %s", ru[:400])
 
-    for payload in captured:
+    # Prioritas: respons Indonesia dulu, baru sisanya.
+    for payload in captured_id + captured:
         trends = _parse(payload, limit)
         if trends:
-            LAST_DEBUG = f"ok: {len(trends)} hashtag"
-            log.info("TikTok: %d hashtag.", len(trends))
+            src = "ID" if payload in captured_id else "non-ID"
+            LAST_DEBUG = f"ok: {len(trends)} hashtag ({src})"
+            log.info("TikTok: %d hashtag (%s).", len(trends), src)
             return trends
 
     LAST_DEBUG = f"0 data. endpoints={uniq[:6]}"

@@ -17,6 +17,10 @@ log = logging.getLogger("ai")
 
 _BANNED = ["100% terbukti", "pasti berhasil", "dijamin aman"]
 
+# Bila Ollama tidak dapat dihubungi sekali, hentikan percobaan berikutnya
+# dalam proses ini (hindari spam & lambat saat Ollama tidak berjalan).
+_ollama_down = False
+
 
 def _clean(text: str) -> str:
     text = (text or "").strip()
@@ -41,7 +45,7 @@ def _summarize_ollama(platform: str, title: str, context: str) -> str:
         "stream": False,
         "options": {"temperature": 0.4, "num_predict": 200},
     }
-    resp = requests.post(url, json=payload, timeout=120)
+    resp = requests.post(url, json=payload, timeout=(3, 120))
     resp.raise_for_status()
     data = resp.json()
     return _clean(data.get("message", {}).get("content", ""))
@@ -106,13 +110,15 @@ def _heuristic(platform: str, title: str, context: str) -> str:
 
 def summarize(platform: str, title: str, context: str = "") -> str:
     """Coba Ollama → Claude → heuristik (selalu mengembalikan sesuatu)."""
-    if config.USE_OLLAMA:
+    global _ollama_down
+    if config.USE_OLLAMA and not _ollama_down:
         try:
             out = _summarize_ollama(platform, title, context)
             if out:
                 return out
         except Exception as exc:
-            log.info("Ollama tidak tersedia (%s), pakai fallback.", exc)
+            _ollama_down = True
+            log.info("Ollama tidak tersedia (%s). Lewati Ollama untuk sisa run ini.", exc)
 
     try:
         out = _summarize_claude(platform, title, context)
