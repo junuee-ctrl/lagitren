@@ -29,6 +29,8 @@ PAGE_URL = (
 )
 API_MARK = "creative_radar_api"
 LIST_MARK = "hashtag/list"
+# Kata kunci untuk mengenali endpoint data trending (struktur situs bisa berubah).
+CAND_KEYS = ("trend", "hashtag", "popular", "radar", "rank")
 
 
 def _fmt(n: int) -> str:
@@ -39,8 +41,33 @@ def _fmt(n: int) -> str:
     return str(n)
 
 
+def _find_hashtag_list(payload) -> list[dict]:
+    """Cari list item hashtag di mana pun dalam JSON (struktur bisa berubah)."""
+    found: list[dict] = []
+
+    def walk(obj):
+        if isinstance(obj, list):
+            if (
+                obj
+                and isinstance(obj[0], dict)
+                and (
+                    "hashtag_name" in obj[0]
+                    or ("hashtag" in obj[0] and "video_views" in obj[0])
+                )
+            ):
+                found.append(obj)  # type: ignore
+            for v in obj:
+                walk(v)
+        elif isinstance(obj, dict):
+            for v in obj.values():
+                walk(v)
+
+    walk(payload)
+    return found[0] if found else []
+
+
 def _parse(payload: dict, limit: int) -> list[Trend]:
-    lst = (payload.get("data") or {}).get("list") or []
+    lst = (payload.get("data") or {}).get("list") or _find_hashtag_list(payload)
     out: list[Trend] = []
     for i, item in enumerate(lst, start=1):
         name = item.get("hashtag_name")
@@ -92,19 +119,29 @@ def collect(limit: int = 20) -> list[Trend]:
             page = ctx.new_page()
 
             all_hosts: dict[str, int] = {}
+            candidates: list[tuple[str, list[str]]] = []  # (path, top-level keys)
 
             def on_response(resp):
                 url = resp.url
-                # Diagnostik: hitung host semua respons.
                 try:
                     host = url.split("/")[2]
                     all_hosts[host] = all_hosts.get(host, 0) + 1
                 except Exception:
                     pass
-                if API_MARK in url:
-                    seen_urls.append(url.split("?")[0])
+                low = url.lower()
+                # Endpoint kandidat: JSON dari ads.tiktok.com / byteoversea yg
+                # url-nya memuat kata kunci trending.
+                is_cand = ("ads.tiktok.com" in low or "byteoversea" in low) and any(
+                    k in low for k in CAND_KEYS
+                )
+                if API_MARK in low or is_cand:
+                    path = url.split("?")[0]
+                    seen_urls.append(path)
                     try:
-                        captured.append(resp.json())
+                        j = resp.json()
+                        captured.append(j)
+                        keys = list(j.keys())[:6] if isinstance(j, dict) else ["<non-dict>"]
+                        candidates.append((path, keys))
                     except Exception:
                         pass
 
@@ -143,6 +180,9 @@ def collect(limit: int = 20) -> list[Trend]:
     log.info("TikTok endpoint terpanggil (%d): %s", len(uniq), uniq[:8])
     top_hosts = sorted(all_hosts.items(), key=lambda x: -x[1])[:8]
     log.info("Host respons (total %d): %s", sum(all_hosts.values()), top_hosts)
+    log.info("Kandidat endpoint JSON (%d):", len(candidates))
+    for path, keys in candidates[:12]:
+        log.info("   %s  keys=%s", path, keys)
 
     for payload in captured:
         trends = _parse(payload, limit)
