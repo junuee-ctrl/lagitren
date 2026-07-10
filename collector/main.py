@@ -36,7 +36,8 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
         trends = module.collect()
         if not trends:
             log.info("%s: tidak ada item.", platform)
-            db.log_run(platform, "ok", 0, "kosong", started)
+            debug = getattr(module, "LAST_DEBUG", "") or "kosong"
+            db.log_run(platform, "ok", 0, str(debug)[:400], started)
             return 0
 
         if do_summary:

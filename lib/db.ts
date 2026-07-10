@@ -197,6 +197,23 @@ export async function getRelatedTrends(
   return all.filter((t) => t.id !== excludeId).slice(0, limit);
 }
 
+/** Riwayat pengumpulan terbaru (untuk debug/monitoring). */
+export async function getRecentRuns(limit = 20): Promise<unknown[]> {
+  const db = await getDB();
+  if (!db) return [];
+  try {
+    const { results } = await db
+      .prepare(
+        "SELECT platform, status, item_count, message, started_at, finished_at FROM collection_runs ORDER BY finished_at DESC LIMIT ?"
+      )
+      .bind(limit)
+      .all();
+    return results ?? [];
+  } catch (e) {
+    return [{ error: String(e) }];
+  }
+}
+
 /** Preview homepage: N teratas per platform. */
 export async function getHomepageTrends(perPlatform = 4): Promise<Trend[]> {
   const all = await getAllTrends();

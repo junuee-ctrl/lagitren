@@ -22,6 +22,9 @@ log = logging.getLogger("tiktok")
 
 API = "https://ads.tiktok.com/creative_radar_api/v1/popular_trend/hashtag/list"
 
+# Info debug ringkas dari percobaan terakhir (dibaca main.py untuk log_run).
+LAST_DEBUG: str = ""
+
 
 def _fmt(n: int) -> str:
     if n >= 1_000_000:
@@ -46,15 +49,20 @@ def collect(limit: int = 20) -> list[Trend]:
         "Origin": "https://ads.tiktok.com",
         "Accept-Language": "id-ID,id;q=0.9,en;q=0.8",
     }
+    global LAST_DEBUG
     try:
         resp = requests.get(API, params=params, headers=headers, timeout=30)
+        snippet = resp.text[:300].replace("\n", " ")
+        LAST_DEBUG = f"HTTP {resp.status_code}: {snippet}"
         resp.raise_for_status()
         data = resp.json()
     except Exception as exc:
+        LAST_DEBUG = f"{LAST_DEBUG} | EXC {type(exc).__name__}: {str(exc)[:150]}"
         log.warning("Creative Center gagal (mungkin butuh signature): %s", exc)
         return []
 
     if data.get("code") not in (0, None):
+        LAST_DEBUG = f"code={data.get('code')} msg={str(data.get('msg'))[:150]}"
         log.warning("Creative Center code=%s msg=%s", data.get("code"), data.get("msg"))
         return []
 
