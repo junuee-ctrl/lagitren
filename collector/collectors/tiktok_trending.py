@@ -87,21 +87,32 @@ def _parse(payload: dict, limit: int) -> list[Trend]:
         if not isinstance(item, dict):
             continue
         name = (
-            item.get("hashtag_name")
+            item.get("hashtagName")
+            or item.get("hashtag_name")
             or item.get("hashtag")
             or item.get("name")
             or item.get("title")
         )
         if not name:
             continue
-        views = _num(item, "video_views", "views", "play_count", "view_count")
-        publish = _num(item, "publish_cnt", "video_count", "post_count")
-        rank = _num(item, "rank") or i
+        views = _num(item, "videoViews", "video_views", "views", "viewCnt", "playCnt")
+        publish = _num(item, "publishCnt", "publish_cnt", "video_count", "postCnt")
+        rank = _num(item, "rankIndex", "rank") or i
         subtitle = metric = label = None
         if views:
             subtitle, metric, label = f"{_fmt(views)} views", views, "views"
         elif publish:
             subtitle, metric, label = f"{_fmt(publish)} video", publish, "video"
+
+        # popularityCurve -> interest (0-100) untuk grafik.
+        interest: list[int] = []
+        curve = item.get("popularityCurve") or item.get("trend")
+        if isinstance(curve, list):
+            for pt in curve:
+                v = pt.get("value") if isinstance(pt, dict) else None
+                if isinstance(v, (int, float)):
+                    interest.append(int(round(v)))
+
         out.append(
             Trend(
                 id=make_id("tiktok", name),
@@ -113,6 +124,7 @@ def _parse(payload: dict, limit: int) -> list[Trend]:
                 metric=metric,
                 metric_label=label,
                 hashtags=[name.lower()],
+                interest=interest,
             )
         )
         if len(out) >= limit:
@@ -166,6 +178,20 @@ def collect(limit: int = 20) -> list[Trend]:
                     except Exception:
                         pass
 
+            req_urls: list[str] = []
+
+            def on_request(req):
+                if "GetHashtagList" in req.url or "trendsTcc" in req.url:
+                    req_urls.append(req.url)
+                    body = ""
+                    try:
+                        body = (req.post_data or "")[:300]
+                    except Exception:
+                        pass
+                    if body:
+                        req_urls.append("POSTDATA:" + body)
+
+            page.on("request", on_request)
             page.on("response", on_response)
             page.goto(PAGE_URL, wait_until="load", timeout=60000)
             _browser.accept_cookies(page)
@@ -214,6 +240,8 @@ def collect(limit: int = 20) -> list[Trend]:
         if items:
             log.info("Contoh item: %s", _json.dumps(items[0], ensure_ascii=False)[:600])
             break
+    for ru in req_urls[:6]:
+        log.info("REQ: %s", ru[:400])
 
     for payload in captured:
         trends = _parse(payload, limit)
