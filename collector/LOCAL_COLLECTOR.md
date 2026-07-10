@@ -47,11 +47,27 @@ python main.py tiktok instagram
 Hashtag Instagram yang dipantau diatur lewat `IG_HASHTAGS` di `.env`
 (default: `viral,fyp,indonesia,beritaterkini,tiktok`).
 
-## 5. Otomatis berkala (opsional)
-- **Windows Task Scheduler**: buat task menjalankan
-  `...\.venv\Scripts\python.exe main.py tiktok instagram` tiap 3–6 jam.
-- Atau biarkan `python scheduler.py` berjalan (menjadwalkan semua platform;
-  di PC lokal ini termasuk tiktok & instagram).
+## 5. Otomatis berkala (Windows Task Scheduler)
+Gunakan `run_local.py` — ia membuka Chrome (profil yang sudah login) secara
+tersembunyi, mengumpulkan tiktok+instagram, lalu menutup Chrome. Jadi tidak
+perlu menjaga jendela Chrome tetap terbuka.
+
+Uji dulu manual:
+```powershell
+cd C:\lagitren\collector
+python run_local.py
+```
+
+Bila berhasil, jadwalkan tiap 3 jam (jalankan PowerShell sebagai biasa):
+```powershell
+schtasks /Create /SC HOURLY /MO 3 /TN "LagiTrenCollect" ^
+  /TR "cmd /c cd /d C:\lagitren\collector && python run_local.py >> collect.log 2>&1" /F
+```
+- Ubah `/MO 3` untuk interval jam yang berbeda.
+- Hapus/lihat: `schtasks /Delete /TN LagiTrenCollect /F` · `schtasks /Query /TN LagiTrenCollect`
+- PC harus menyala saat jadwal berjalan. Login TikTok/Instagram tersimpan di
+  profil `%USERPROFILE%\chrome-lagitren` (login sekali via `start_chrome.py`).
+- Log tiap run tersimpan di `collect.log`.
 
 ## Catatan
 - Ini metode tidak resmi & bisa berubah bila TikTok/Instagram mengubah situsnya.

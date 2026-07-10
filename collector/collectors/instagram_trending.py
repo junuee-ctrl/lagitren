@@ -169,20 +169,17 @@ def collect(limit: int = 15) -> list[Trend]:
         log.error("Instagram browser gagal: %s", exc)
         return []
 
-    # Diagnostik (berguna saat 0 hasil).
-    log.info("IG URL akhir: %s", last_url)
-    top_hosts = sorted(diag_hosts.items(), key=lambda x: -x[1])[:8]
-    log.info("IG host respons (total %d): %s", sum(diag_hosts.values()), top_hosts)
-    log.info("IG endpoint JSON kandidat (%d):", len(diag_paths))
-    for path, keys in diag_paths[:12]:
-        log.info("   %s  keys=%s", path, keys)
-
     if not all_trends:
+        # Diagnostik hanya saat gagal.
+        top_hosts = sorted(diag_hosts.items(), key=lambda x: -x[1])[:6]
+        log.warning("Instagram: 0 post. Cek apakah sudah login IG di Chrome.")
+        log.info("  IG URL akhir: %s", last_url)
+        log.info("  host respons: %s", top_hosts)
+        log.info("  endpoint JSON (%d): %s", len(diag_paths), [p for p, _ in diag_paths[:8]])
         LAST_DEBUG = (
             f"0 post. url={last_url} hosts={[h for h, _ in top_hosts[:4]]} "
             f"endpoints={[p for p, _ in diag_paths[:5]]}"
         )
-        log.warning("Instagram: 0 post. Cek apakah sudah login IG di Chrome.")
         return []
 
     # peringkat ulang & batasi

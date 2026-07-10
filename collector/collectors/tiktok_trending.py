@@ -230,27 +230,6 @@ def collect(limit: int = 20) -> list[Trend]:
         log.error("TikTok browser gagal: %s", exc)
         return []
 
-    # Log endpoint yang benar-benar terpanggil (untuk debugging).
-    uniq = sorted(set(seen_urls))
-    log.info("TikTok endpoint terpanggil (%d): %s", len(uniq), uniq[:8])
-    top_hosts = sorted(all_hosts.items(), key=lambda x: -x[1])[:8]
-    log.info("Host respons (total %d): %s", sum(all_hosts.values()), top_hosts)
-    log.info("Kandidat endpoint JSON (%d):", len(candidates))
-    for path, keys in candidates[:12]:
-        log.info("   %s  keys=%s", path, keys)
-    # Log contoh 1 item mentah agar tahu nama field sebenarnya.
-    import json as _json
-    for payload in captured:
-        items = payload.get("items") if isinstance(payload, dict) else None
-        if not items:
-            lst = _find_hashtag_list(payload)
-            items = lst if lst else None
-        if items:
-            log.info("Contoh item: %s", _json.dumps(items[0], ensure_ascii=False)[:600])
-            break
-    for ru in req_urls[:6]:
-        log.info("REQ: %s", ru[:400])
-
     # Prioritas: respons Indonesia dulu, baru sisanya.
     for payload in captured_id + captured:
         trends = _parse(payload, limit)
@@ -260,11 +239,22 @@ def collect(limit: int = 20) -> list[Trend]:
             log.info("TikTok: %d hashtag (%s).", len(trends), src)
             return trends
 
+    # --- Tidak ada data → keluarkan diagnostik lengkap ---
+    uniq = sorted(set(seen_urls))
+    log.warning("TikTok: tidak ada data. Cek tiktok_debug.png.")
+    log.info("  endpoint terpanggil (%d): %s", len(uniq), uniq[:8])
+    top_hosts = sorted(all_hosts.items(), key=lambda x: -x[1])[:6]
+    log.info("  host respons: %s", top_hosts)
+    log.info("  kandidat JSON (%d): %s", len(candidates), [c[0] for c in candidates[:6]])
+    import json as _json
+    for payload in captured:
+        items = payload.get("items") if isinstance(payload, dict) else None
+        if not items:
+            items = _find_hashtag_list(payload) or None
+        if items:
+            log.info("  contoh item: %s", _json.dumps(items[0], ensure_ascii=False)[:400])
+            break
+    for ru in req_urls[:6]:
+        log.info("  REQ: %s", ru[:300])
     LAST_DEBUG = f"0 data. endpoints={uniq[:6]}"
-    log.warning(
-        "TikTok: tidak ada data. Respons API: %d, endpoint unik: %s. "
-        "Cek tiktok_debug.png.",
-        len(captured),
-        uniq[:6],
-    )
     return []
