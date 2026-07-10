@@ -10,7 +10,7 @@ on:
     inputs:
       platforms:
         description: "Platform (pisah spasi), mis. 'google youtube'"
-        default: "google youtube twitter"
+        default: "google youtube twitter tiktok"
         required: false
 
 concurrency:
@@ -64,6 +64,6 @@ jobs:
           CLOUDFLARE_D1_DATABASE_ID: ${{ env.CLOUDFLARE_D1_DATABASE_ID }}
         run: |
           PLATFORMS="${{ github.event.inputs.platforms }}"
-          [ -z "$PLATFORMS" ] && PLATFORMS="google youtube twitter"
+          [ -z "$PLATFORMS" ] && PLATFORMS="google youtube twitter tiktok"
           echo "Mengumpulkan: $PLATFORMS"
           python main.py $PLATFORMS
