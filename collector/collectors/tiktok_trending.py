@@ -83,6 +83,7 @@ def collect(limit: int = 20) -> list[Trend]:
         return []
 
     captured: list[dict] = []
+    seen_urls: list[str] = []
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
@@ -97,19 +98,30 @@ def collect(limit: int = 20) -> list[Trend]:
 
             def on_response(resp):
                 url = resp.url
-                if API_MARK in url and LIST_MARK in url:
+                # Tangkap SEMUA respons Creative Center API (diagnostik luas).
+                if API_MARK in url:
+                    seen_urls.append(url.split("?")[0])
                     try:
                         captured.append(resp.json())
                     except Exception:
                         pass
 
             page.on("response", on_response)
-            page.goto(PAGE_URL, wait_until="domcontentloaded", timeout=60000)
-            # beri waktu API trending terpanggil & (jika perlu) scroll.
-            page.wait_for_timeout(6000)
-            try:
-                page.mouse.wheel(0, 2000)
+            page.goto(PAGE_URL, wait_until="load", timeout=60000)
+
+            # Poll sampai ~24 dtk: SPA butuh waktu memanggil API; scroll berkala.
+            for _ in range(8):
+                if any((c.get("data") or {}).get("list") for c in captured):
+                    break
                 page.wait_for_timeout(3000)
+                try:
+                    page.mouse.wheel(0, 1500)
+                except Exception:
+                    pass
+
+            # Screenshot untuk inspeksi manual (login wall? region?).
+            try:
+                page.screenshot(path="tiktok_debug.png", full_page=False)
             except Exception:
                 pass
             browser.close()
@@ -118,13 +130,22 @@ def collect(limit: int = 20) -> list[Trend]:
         log.error("TikTok browser gagal: %s", exc)
         return []
 
+    # Log endpoint yang benar-benar terpanggil (untuk debugging).
+    uniq = sorted(set(seen_urls))
+    log.info("TikTok endpoint terpanggil (%d): %s", len(uniq), uniq[:8])
+
     for payload in captured:
         trends = _parse(payload, limit)
         if trends:
-            LAST_DEBUG = f"ok: {len(trends)} dari {len(captured)} respons"
+            LAST_DEBUG = f"ok: {len(trends)} hashtag"
             log.info("TikTok: %d hashtag.", len(trends))
             return trends
 
-    LAST_DEBUG = f"tidak ada data (respons ditangkap: {len(captured)})"
-    log.warning("TikTok: tidak ada data trending tertangkap.")
+    LAST_DEBUG = f"0 data. endpoints={uniq[:6]}"
+    log.warning(
+        "TikTok: tidak ada data. Respons API: %d, endpoint unik: %s. "
+        "Cek tiktok_debug.png.",
+        len(captured),
+        uniq[:6],
+    )
     return []
