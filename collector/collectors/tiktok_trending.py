@@ -82,18 +82,13 @@ def collect(limit: int = 20) -> list[Trend]:
         log.info("Playwright tidak tersedia — TikTok hanya jalan di PC lokal.")
         return []
 
+    from . import _browser
+
     captured: list[dict] = []
     seen_urls: list[str] = []
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            ctx = browser.new_context(
-                user_agent=(
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-                    "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-                ),
-                locale="en-US",
-            )
+            ctx = _browser.persistent_context(p)
             page = ctx.new_page()
 
             def on_response(resp):
@@ -108,9 +103,10 @@ def collect(limit: int = 20) -> list[Trend]:
 
             page.on("response", on_response)
             page.goto(PAGE_URL, wait_until="load", timeout=60000)
+            _browser.accept_cookies(page)
 
-            # Poll sampai ~24 dtk: SPA butuh waktu memanggil API; scroll berkala.
-            for _ in range(8):
+            # Poll sampai ~30 dtk: SPA butuh waktu memanggil API; scroll berkala.
+            for _ in range(10):
                 if any((c.get("data") or {}).get("list") for c in captured):
                     break
                 page.wait_for_timeout(3000)
@@ -124,7 +120,7 @@ def collect(limit: int = 20) -> list[Trend]:
                 page.screenshot(path="tiktok_debug.png", full_page=False)
             except Exception:
                 pass
-            browser.close()
+            ctx.close()
     except Exception as exc:
         LAST_DEBUG = f"browser error: {type(exc).__name__}: {str(exc)[:160]}"
         log.error("TikTok browser gagal: %s", exc)

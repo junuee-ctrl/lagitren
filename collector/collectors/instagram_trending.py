@@ -29,35 +29,6 @@ log = logging.getLogger("instagram")
 LAST_DEBUG: str = ""
 
 
-def _ctx(p, headful: bool):
-    return p.chromium.launch_persistent_context(
-        config.IG_USER_DATA_DIR,
-        headless=not headful,
-        user_agent=(
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/124.0 Safari/537.36"
-        ),
-        locale="id-ID",
-        viewport={"width": 1280, "height": 900},
-    )
-
-
-def login() -> None:
-    """Buka browser untuk login manual sekali (sesi tersimpan)."""
-    from playwright.sync_api import sync_playwright  # type: ignore
-
-    with sync_playwright() as p:
-        ctx = _ctx(p, headful=True)
-        page = ctx.new_page()
-        page.goto("https://www.instagram.com/accounts/login/", timeout=60000)
-        print(">> Silakan login Instagram di jendela browser, lalu tekan Enter di sini.")
-        try:
-            input()
-        except EOFError:
-            page.wait_for_timeout(60000)
-        ctx.close()
-
-
 def _extract_posts(payload: dict) -> list[dict]:
     """Ambil daftar node post dari berbagai bentuk respons IG."""
     posts: list[dict] = []
@@ -121,11 +92,13 @@ def collect(limit: int = 15) -> list[Trend]:
         log.info("Playwright tidak tersedia — Instagram hanya jalan di PC lokal.")
         return []
 
+    from . import _browser
+
     all_trends: list[Trend] = []
     seen: set[str] = set()
     try:
         with sync_playwright() as p:
-            ctx = _ctx(p, headful=config.BROWSER_HEADFUL)
+            ctx = _browser.persistent_context(p)
             page = ctx.new_page()
             captured: list[dict] = []
 

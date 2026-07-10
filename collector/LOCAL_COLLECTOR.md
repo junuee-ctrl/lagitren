@@ -27,27 +27,24 @@ GEO=ID
 ```
 (ID database bisa dilihat: `npx wrangler d1 list`.)
 
-## 3. TikTok — langsung jalan
+## 3. Login sekali (TikTok & Instagram)
+Keduanya kini butuh sesi login. Login sekali, tersimpan di satu profil browser:
+```bash
+set BROWSER_HEADFUL=1            # Windows (Mac/Linux: export BROWSER_HEADFUL=1)
+python login_browser.py
+```
+→ Dua tab terbuka (TikTok Creative Center & Instagram). Login di **keduanya**,
+lalu tekan Enter di terminal. Sesi tersimpan di folder `.browser_profile`
+(jangan di-commit).
+
+## 4. Kumpulkan
 ```bash
 python main.py tiktok
-```
-Browser headless membuka TikTok Creative Center, menangkap data hashtag
-trending Indonesia, lalu menyimpannya ke D1.
-
-## 4. Instagram — login sekali dulu
-Instagram butuh sesi login. Jalankan sekali dengan jendela terlihat:
-```bash
-set BROWSER_HEADFUL=1                # Windows (Mac/Linux: export BROWSER_HEADFUL=1)
-python -c "from collectors import instagram_trending as ig; ig.login()"
-```
-→ Login Instagram di jendela yang terbuka, lalu tekan Enter di terminal.
-Sesi tersimpan di folder `.ig_profile` (jangan di-commit).
-
-Setelah itu:
-```bash
 python main.py instagram
+# atau sekaligus:
+python main.py tiktok instagram
 ```
-Hashtag yang dipantau diatur lewat `IG_HASHTAGS` di `.env`
+Hashtag Instagram yang dipantau diatur lewat `IG_HASHTAGS` di `.env`
 (default: `viral,fyp,indonesia,beritaterkini,tiktok`).
 
 ## 5. Otomatis berkala (opsional)
