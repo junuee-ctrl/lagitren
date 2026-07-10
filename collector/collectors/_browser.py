@@ -39,6 +39,33 @@ def persistent_context(p, headful: bool | None = None):
         return p.chromium.launch_persistent_context(user_agent=UA, **common)
 
 
+def is_cdp() -> bool:
+    return bool(config.BROWSER_CDP)
+
+
+def get_context(p):
+    """Context untuk collector.
+
+    - Jika BROWSER_CDP diset → sambungkan ke Chrome asli yang sudah login
+      (pakai sesi Anda; TIDAK menutup browser saat selesai).
+    - Selain itu → profil persisten sendiri.
+    """
+    if config.BROWSER_CDP:
+        browser = p.chromium.connect_over_cdp(config.BROWSER_CDP)
+        ctxs = browser.contexts
+        return ctxs[0] if ctxs else browser.new_context()
+    return persistent_context(p)
+
+
+def close_context(ctx) -> None:
+    """Tutup context hanya bila kita yang membuatnya (bukan CDP)."""
+    if not is_cdp():
+        try:
+            ctx.close()
+        except Exception:
+            pass
+
+
 def accept_cookies(page) -> None:
     """Klik tombol persetujuan cookie bila ada (berbagai variasi teks)."""
     labels = [

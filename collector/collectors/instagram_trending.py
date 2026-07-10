@@ -98,7 +98,7 @@ def collect(limit: int = 15) -> list[Trend]:
     seen: set[str] = set()
     try:
         with sync_playwright() as p:
-            ctx = _browser.persistent_context(p)
+            ctx = _browser.get_context(p)
             page = ctx.new_page()
             captured: list[dict] = []
 
@@ -143,7 +143,11 @@ def collect(limit: int = 15) -> list[Trend]:
                 if len(all_trends) >= limit:
                     break
 
-            ctx.close()
+            try:
+                page.close()
+            except Exception:
+                pass
+            _browser.close_context(ctx)
     except Exception as exc:
         LAST_DEBUG = f"browser error: {type(exc).__name__}: {str(exc)[:160]}"
         log.error("Instagram browser gagal: %s", exc)

@@ -50,6 +50,9 @@ IG_HASHTAGS = [
 BROWSER_PROFILE_DIR = _get("BROWSER_PROFILE_DIR", "./.browser_profile")
 # Jalankan browser tampak (headful) — untuk login pertama kali.
 BROWSER_HEADFUL = _get("BROWSER_HEADFUL", "0") in ("1", "true", "True", "yes")
+# Sambungkan ke Chrome ASLI yang sudah login (CDP), mis. "http://localhost:9222".
+# Ini cara paling andal: pakai sesi login Chrome Anda sendiri.
+BROWSER_CDP = _get("BROWSER_CDP", "")
 
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "

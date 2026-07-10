@@ -88,7 +88,7 @@ def collect(limit: int = 20) -> list[Trend]:
     seen_urls: list[str] = []
     try:
         with sync_playwright() as p:
-            ctx = _browser.persistent_context(p)
+            ctx = _browser.get_context(p)
             page = ctx.new_page()
 
             def on_response(resp):
@@ -120,7 +120,11 @@ def collect(limit: int = 20) -> list[Trend]:
                 page.screenshot(path="tiktok_debug.png", full_page=False)
             except Exception:
                 pass
-            ctx.close()
+            try:
+                page.close()
+            except Exception:
+                pass
+            _browser.close_context(ctx)
     except Exception as exc:
         LAST_DEBUG = f"browser error: {type(exc).__name__}: {str(exc)[:160]}"
         log.error("TikTok browser gagal: %s", exc)
