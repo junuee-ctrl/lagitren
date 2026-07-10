@@ -14,6 +14,16 @@ import GoogleTrendsWidget from "@/components/GoogleTrendsWidget";
 
 export const revalidate = 300;
 
+// Frasa sesuai cara orang mencari, per platform.
+const INTENT: Record<Platform, string> = {
+  google: "kenapa banyak dicari?",
+  youtube: "kenapa viral?",
+  tiktok: "kenapa viral?",
+  instagram: "kenapa viral?",
+  shopee: "kenapa banyak dicari?",
+  twitter: "kenapa jadi perbincangan?"
+};
+
 export async function generateMetadata({
   params
 }: {
@@ -23,16 +33,30 @@ export async function generateMetadata({
   if (!meta) return {};
   const trend = await getTrendById(meta.key as Platform, params.slug);
   if (!trend) return {};
-  const desc =
-    trend.aiSummary ??
-    `${trend.title} sedang tren di ${meta.name} Indonesia. Cari tahu kenapa.`;
+
+  const intent = INTENT[meta.key as Platform] ?? "kenapa lagi tren?";
+  const title = `${trend.title} — ${intent} | ${meta.name} Indonesia`;
+  const desc = (
+    trend.aiSummary
+      ? `${trend.title}: ${trend.aiSummary}`
+      : `Kenapa "${trend.title}" sedang tren di ${meta.name} Indonesia hari ini? Simak ringkasannya di Lagi Tren.`
+  ).slice(0, 160);
+
   return {
-    title: `${trend.title} — kenapa lagi tren?`,
-    description: desc.slice(0, 160),
+    title,
+    description: desc,
     alternates: { canonical: `/${meta.key}/${params.slug}` },
+    keywords: [
+      trend.title,
+      `${trend.title} ${meta.name}`,
+      `kenapa ${trend.title} viral`,
+      `${trend.title} indonesia`,
+      ...(trend.hashtags ?? [])
+    ],
     openGraph: {
-      title: `${trend.title} · ${meta.name}`,
-      description: desc.slice(0, 160),
+      type: "article",
+      title,
+      description: desc,
       images: trend.thumbnail ? [{ url: trend.thumbnail }] : undefined
     }
   };
