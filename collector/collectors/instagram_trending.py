@@ -96,6 +96,9 @@ def collect(limit: int = 15) -> list[Trend]:
 
     all_trends: list[Trend] = []
     seen: set[str] = set()
+    diag_paths: list[tuple[str, list]] = []
+    diag_hosts: dict[str, int] = {}
+    last_url = ""
     try:
         with sync_playwright() as p:
             ctx = _browser.get_context(p)
@@ -104,9 +107,18 @@ def collect(limit: int = 15) -> list[Trend]:
 
             def on_response(resp):
                 u = resp.url
-                if "/api/v1/tags/" in u or ("graphql" in u and "tag" in u.lower()):
+                try:
+                    host = u.split("/")[2]
+                    diag_hosts[host] = diag_hosts.get(host, 0) + 1
+                except Exception:
+                    pass
+                low = u.lower()
+                if "/api/v1/" in low or "graphql" in low:
                     try:
-                        captured.append(resp.json())
+                        j = resp.json()
+                        captured.append(j)
+                        keys = list(j.keys())[:6] if isinstance(j, dict) else ["<list>"]
+                        diag_paths.append((u.split("?")[0], keys))
                     except Exception:
                         pass
 
@@ -121,7 +133,11 @@ def collect(limit: int = 15) -> list[Trend]:
                         wait_until="domcontentloaded",
                         timeout=45000,
                     )
-                    page.wait_for_timeout(4000)
+                    _browser.accept_cookies(page)
+                    page.wait_for_timeout(5000)
+                    page.mouse.wheel(0, 2000)
+                    page.wait_for_timeout(2500)
+                    last_url = page.url
                 except Exception as exc:
                     log.info("IG tag %s gagal: %s", tag, exc)
                     continue
@@ -151,6 +167,22 @@ def collect(limit: int = 15) -> list[Trend]:
     except Exception as exc:
         LAST_DEBUG = f"browser error: {type(exc).__name__}: {str(exc)[:160]}"
         log.error("Instagram browser gagal: %s", exc)
+        return []
+
+    # Diagnostik (berguna saat 0 hasil).
+    log.info("IG URL akhir: %s", last_url)
+    top_hosts = sorted(diag_hosts.items(), key=lambda x: -x[1])[:8]
+    log.info("IG host respons (total %d): %s", sum(diag_hosts.values()), top_hosts)
+    log.info("IG endpoint JSON kandidat (%d):", len(diag_paths))
+    for path, keys in diag_paths[:12]:
+        log.info("   %s  keys=%s", path, keys)
+
+    if not all_trends:
+        LAST_DEBUG = (
+            f"0 post. url={last_url} hosts={[h for h, _ in top_hosts[:4]]} "
+            f"endpoints={[p for p, _ in diag_paths[:5]]}"
+        )
+        log.warning("Instagram: 0 post. Cek apakah sudah login IG di Chrome.")
         return []
 
     # peringkat ulang & batasi
