@@ -76,7 +76,29 @@ class D1Client:
             f"/d1/database/{self.database_id}/query"
         )
 
+    def _resolve_db_id(self) -> None:
+        """Cari database_id 'lagitren-db' otomatis via API (bila belum diisi)."""
+        if self.database_id or not (self.account_id and self.token):
+            return
+        try:
+            resp = self._session.get(
+                f"{_API_BASE}/accounts/{self.account_id}/d1/database",
+                timeout=20,
+            )
+            data = resp.json()
+            for db in data.get("result", []) or []:
+                if db.get("name") == "lagitren-db":
+                    self.database_id = db.get("uuid") or db.get("id") or ""
+                    if self.database_id:
+                        log.info("D1 database_id ditemukan otomatis.")
+                    return
+            log.warning("Database 'lagitren-db' tidak ditemukan via API.")
+        except Exception as exc:
+            log.warning("Gagal resolve database_id: %s", exc)
+
     def _configured(self) -> bool:
+        if not self.database_id:
+            self._resolve_db_id()
         return bool(self.account_id and self.database_id and self.token)
 
     def query(self, sql: str, params: Sequence[Any] | None = None) -> dict:
