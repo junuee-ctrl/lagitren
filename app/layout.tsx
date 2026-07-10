@@ -37,7 +37,10 @@ export const metadata: Metadata = {
       "Tren real-time dari Google, YouTube, TikTok, Instagram, Shopee, dan X."
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: SITE_URL }
+  alternates: { canonical: SITE_URL },
+  verification: {
+    google: "IOCf3HyY_9-5tLsVfZyMmgfgjVHqDKG2Kw1tKWSP_kw"
+  }
 };
 
 export default function RootLayout({
