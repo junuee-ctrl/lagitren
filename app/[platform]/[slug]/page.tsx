@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getTrendById, getRelatedTrends } from "@/lib/db";
 import { getPlatform } from "@/lib/platforms";
 import { SOURCE_LABEL, canEmbed } from "@/lib/embed";
+import { formatDateID } from "@/lib/format";
 import type { Platform } from "@/lib/types";
 import TrendMedia from "@/components/TrendMedia";
 import TrendListItem from "@/components/TrendListItem";
@@ -113,6 +114,23 @@ export default async function TrendDetailPage({
           {trend.source ? ` · ${trend.source}` : ""}
         </p>
       </header>
+
+      {/* Banner arsip: jujur bahwa tren ini sudah lewat (jaga kesegaran konten) */}
+      {trend.isCurrent === false && (
+        <div className="mb-5 flex flex-wrap items-center gap-x-2 gap-y-1 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800">
+          <span aria-hidden>🗂️</span>
+          <span>
+            Tren ini sudah tidak aktif — terakhir tren pada{" "}
+            <strong>{formatDateID(trend.collectedAt)}</strong>.
+          </span>
+          <Link
+            href={`/${platform}`}
+            className="font-semibold text-brand hover:underline"
+          >
+            Lihat yang lagi tren →
+          </Link>
+        </div>
+      )}
 
       {/* Grafik popularitas / minat pencarian */}
       {platform === "google" ? (

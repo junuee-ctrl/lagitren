@@ -2,6 +2,7 @@ import Link from "next/link";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
 
 const LEGAL = [
+  { href: "/arsip", label: "Arsip Tren" },
   { href: "/about", label: "Tentang Kami" },
   { href: "/contact", label: "Kontak" },
   { href: "/privacy", label: "Kebijakan Privasi" },

@@ -13,6 +13,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticPages: MetadataRoute.Sitemap = [
     "",
+    "/arsip",
     "/about",
     "/contact",
     "/privacy",
@@ -21,8 +22,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ].map((path) => ({
     url: `${SITE_URL}${path}`,
     lastModified: now,
-    changeFrequency: "weekly",
-    priority: path === "" ? 1 : 0.5
+    changeFrequency: path === "/arsip" ? "daily" : "weekly",
+    priority: path === "" ? 1 : path === "/arsip" ? 0.6 : 0.5
   }));
 
   const platformPages: MetadataRoute.Sitemap = PLATFORM_ORDER.map((p) => ({

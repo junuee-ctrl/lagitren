@@ -63,6 +63,7 @@ function rowToTrend(row: TrendRow): Trend {
     price: row.price ?? undefined,
     interest: parseInterest(row.interest),
     extra: parseExtra(row.extra),
+    isCurrent: row.is_current == null ? true : row.is_current === 1,
     collectedAt: row.collected_at
   };
 }
@@ -284,6 +285,32 @@ export async function getSitemapTrends(
     platform: t.platform,
     collectedAt: t.collectedAt
   }));
+}
+
+// Arsip: tren yang sudah TIDAK aktif (is_current=0), terbaru dulu.
+// Dipakai halaman /arsip untuk memberi jalur internal ke halaman lama
+// (menghindari "halaman yatim" & bagus untuk SEO).
+const ARCHIVED_TRENDS = `
+  SELECT * FROM trends
+  WHERE is_current = 0
+  ORDER BY collected_at DESC
+  LIMIT ?
+`;
+
+/** Ambil tren arsip (sudah tidak tren) untuk halaman /arsip. */
+export async function getArchivedTrends(limit = 300): Promise<Trend[]> {
+  const db = await getDB();
+  if (!db) return [];
+  try {
+    const { results } = await db
+      .prepare(ARCHIVED_TRENDS)
+      .bind(limit)
+      .all<TrendRow>();
+    if (results && results.length > 0) return results.map(rowToTrend);
+  } catch {
+    /* abaikan */
+  }
+  return [];
 }
 
 /** Riwayat pengumpulan terbaru (untuk debug/monitoring). */

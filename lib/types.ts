@@ -41,6 +41,8 @@ export interface Trend {
   interest?: number[];
   /** Konteks kaya per-platform (berita Google, komentar YouTube, dll.). */
   extra?: TrendExtra;
+  /** true = sedang tren; false = arsip (sudah tidak aktif). */
+  isCurrent?: boolean;
   /** Waktu pengumpulan (ISO string / epoch). */
   collectedAt: string;
 }
