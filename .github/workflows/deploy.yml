@@ -18,6 +18,8 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       # ID penerbit AdSense (mis. ca-pub-123...). Publik → pakai Variables.
       NEXT_PUBLIC_ADSENSE_CLIENT: ${{ vars.ADSENSE_CLIENT }}
+      # Token Cloudflare Web Analytics (publik). Isi via Variables → CF_ANALYTICS_TOKEN.
+      NEXT_PUBLIC_CF_ANALYTICS_TOKEN: ${{ vars.CF_ANALYTICS_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
