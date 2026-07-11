@@ -26,6 +26,23 @@ OLLAMA_MODEL = _get("OLLAMA_MODEL", "gemma2:9b")
 ANTHROPIC_API_KEY = _get("ANTHROPIC_API_KEY")
 ANTHROPIC_MODEL = _get("ANTHROPIC_MODEL", "claude-haiku-4-5")
 
+# Shopee Affiliate Open API (produk + tautan afiliasi resmi)
+SHOPEE_APP_ID = _get("SHOPEE_APP_ID")
+SHOPEE_APP_SECRET = _get("SHOPEE_APP_SECRET")
+SHOPEE_ENDPOINT = _get(
+    "SHOPEE_ENDPOINT", "https://open-api.affiliate.shopee.co.id/graphql"
+)
+# Kata kunci kategori populer yang dipantau produk terlarisnya.
+SHOPEE_KEYWORDS = [
+    k.strip()
+    for k in _get(
+        "SHOPEE_KEYWORDS",
+        "skincare,hp murah,fashion wanita,fashion pria,sepatu,"
+        "aksesoris hp,peralatan rumah,gaming",
+    ).split(",")
+    if k.strip()
+]
+
 # Telegram
 TELEGRAM_BOT_TOKEN = _get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = _get("TELEGRAM_CHAT_ID")

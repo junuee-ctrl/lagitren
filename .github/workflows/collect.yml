@@ -10,7 +10,7 @@ on:
     inputs:
       platforms:
         description: "Platform (pisah spasi), mis. 'google youtube'"
-        default: "google youtube twitter"
+        default: "google youtube twitter shopee"
         required: false
 
 concurrency:
@@ -25,6 +25,8 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
+      SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
       GEO: "ID"
       LANG: "id"
       USE_OLLAMA: "0" # tidak ada Ollama di cloud → pakai Claude/heuristik
@@ -64,6 +66,6 @@ jobs:
           CLOUDFLARE_D1_DATABASE_ID: ${{ env.CLOUDFLARE_D1_DATABASE_ID }}
         run: |
           PLATFORMS="${{ github.event.inputs.platforms }}"
-          [ -z "$PLATFORMS" ] && PLATFORMS="google youtube twitter"
+          [ -z "$PLATFORMS" ] && PLATFORMS="google youtube twitter shopee"
           echo "Mengumpulkan: $PLATFORMS"
           python main.py $PLATFORMS
