@@ -137,12 +137,22 @@ def collect() -> list[Trend]:
         pic_el = item.find("ht:picture", _NS)
         thumbnail = pic_el.text.strip() if pic_el is not None and pic_el.text else None
 
-        # Berita terkait sebagai konteks untuk ringkasan AI.
-        news_titles = [
-            (n.text or "").strip()
-            for n in item.findall("ht:news_item/ht:news_item_title", _NS)
-        ]
-        context = " | ".join(t for t in news_titles[:3] if t)
+        # Berita terkait: judul + tautan + sumber (untuk ditampilkan & konteks AI).
+        news_items: list[dict] = []
+        for n in item.findall("ht:news_item", _NS):
+            nt_el = n.find("ht:news_item_title", _NS)
+            nu_el = n.find("ht:news_item_url", _NS)
+            ns_el = n.find("ht:news_item_source", _NS)
+            nt = (nt_el.text or "").strip() if nt_el is not None else ""
+            nu = (nu_el.text or "").strip() if nu_el is not None else ""
+            ns = (ns_el.text or "").strip() if ns_el is not None else ""
+            if nt and nu:
+                entry = {"title": nt, "url": nu}
+                if ns:
+                    entry["source"] = ns
+                news_items.append(entry)
+        news_items = news_items[:3]
+        context = " | ".join(n["title"] for n in news_items)
 
         search_url = (
             f"https://trends.google.co.id/trends/explore"
@@ -161,7 +171,7 @@ def collect() -> list[Trend]:
                 metric_label="pencarian" if metric else None,
                 thumbnail=thumbnail,
                 source="Google Trends ID",
-                # Simpan konteks sementara di price? Tidak — kirim via return tuple.
+                extra={"news": news_items} if news_items else {},
             )
         )
         # Simpan konteks berita di atribut sementara (tidak masuk DB).

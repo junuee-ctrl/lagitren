@@ -1,4 +1,4 @@
-import type { Platform, Trend } from "./types";
+import type { Platform, Trend, TrendExtra } from "./types";
 import { MOCK_TRENDS, mockTrendsByPlatform } from "./mock";
 
 /**
@@ -28,6 +28,7 @@ interface TrendRow {
   affiliate_url: string | null;
   price: string | null;
   interest: string | null; // JSON array string, mis. "[10,20,100]"
+  extra: string | null; // JSON konteks kaya per-platform
   is_current: number | null; // 1 = sedang tren, 0 = arsip
   collected_at: string;
 }
@@ -61,8 +62,45 @@ function rowToTrend(row: TrendRow): Trend {
     affiliateUrl: row.affiliate_url ?? undefined,
     price: row.price ?? undefined,
     interest: parseInterest(row.interest),
+    extra: parseExtra(row.extra),
     collectedAt: row.collected_at
   };
+}
+
+function parseExtra(raw: string | null): TrendExtra | undefined {
+  if (!raw) return undefined;
+  try {
+    const obj = JSON.parse(raw);
+    if (obj && typeof obj === "object" && !Array.isArray(obj)) {
+      const extra: TrendExtra = {};
+      if (Array.isArray(obj.news) && obj.news.length > 0) {
+        extra.news = obj.news
+          .filter((n: unknown) => n && typeof n === "object")
+          .map((n: Record<string, unknown>) => ({
+            title: String(n.title ?? ""),
+            url: String(n.url ?? ""),
+            source: n.source ? String(n.source) : undefined
+          }))
+          .filter((n: { title: string; url: string }) => n.title && n.url);
+      }
+      if (Array.isArray(obj.comments) && obj.comments.length > 0) {
+        extra.comments = obj.comments
+          .filter((c: unknown) => c && typeof c === "object")
+          .map((c: Record<string, unknown>) => ({
+            author: c.author ? String(c.author) : undefined,
+            text: String(c.text ?? ""),
+            likes: typeof c.likes === "number" ? c.likes : undefined
+          }))
+          .filter((c: { text: string }) => c.text);
+      }
+      if ((extra.news && extra.news.length) || (extra.comments && extra.comments.length)) {
+        return extra;
+      }
+    }
+  } catch {
+    /* abaikan */
+  }
+  return undefined;
 }
 
 function parseInterest(raw: string | null): number[] | undefined {

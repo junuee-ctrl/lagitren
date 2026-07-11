@@ -16,6 +16,7 @@ from .base import make_id
 log = logging.getLogger("youtube")
 
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
+COMMENTS_URL = "https://www.googleapis.com/youtube/v3/commentThreads"
 
 
 def _fmt_views(n: int) -> str:
@@ -26,7 +27,56 @@ def _fmt_views(n: int) -> str:
     return f"{n} views"
 
 
-def collect(max_results: int = 15) -> list[Trend]:
+def _fetch_top_comments(video_id: str, max_comments: int = 3) -> list[dict]:
+    """Ambil komentar terbaik (paling relevan) satu video.
+
+    Best-effort: komentar bisa dinonaktifkan (403) → kembalikan list kosong.
+    Setiap komentar 1 unit kuota commentThreads, jadi hemat: hanya top-N video.
+    """
+    params = {
+        "part": "snippet",
+        "videoId": video_id,
+        "order": "relevance",
+        "maxResults": max_comments,
+        "textFormat": "plainText",
+        "key": config.YOUTUBE_API_KEY,
+    }
+    try:
+        resp = requests.get(COMMENTS_URL, params=params, timeout=20)
+        if resp.status_code == 403:
+            # Komentar dinonaktifkan / tidak diizinkan — normal, lewati.
+            return []
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as exc:
+        log.info("Komentar %s gagal: %s", video_id, exc)
+        return []
+
+    out: list[dict] = []
+    for item in data.get("items", []):
+        top = (
+            item.get("snippet", {})
+            .get("topLevelComment", {})
+            .get("snippet", {})
+        )
+        text = (top.get("textDisplay") or top.get("textOriginal") or "").strip()
+        if not text:
+            continue
+        # Ringkas komentar yang terlalu panjang.
+        if len(text) > 280:
+            text = text[:277].rstrip() + "…"
+        entry: dict = {"text": text}
+        author = (top.get("authorDisplayName") or "").strip()
+        if author:
+            entry["author"] = author
+        likes = top.get("likeCount")
+        if isinstance(likes, int) and likes > 0:
+            entry["likes"] = likes
+        out.append(entry)
+    return out
+
+
+def collect(max_results: int = 15, comment_top_n: int = 12) -> list[Trend]:
     if not config.YOUTUBE_API_KEY:
         log.warning("YOUTUBE_API_KEY kosong — lewati YouTube.")
         return []
@@ -82,6 +132,15 @@ def collect(max_results: int = 15) -> list[Trend]:
             hashtags=[t.lower() for t in tags[:3]],
         )
         t.__dict__["_context"] = (sn.get("description") or "")[:300]
+        # Komentar terbaik (hanya untuk video peringkat atas → hemat kuota).
+        if rank <= comment_top_n:
+            comments = _fetch_top_comments(vid, max_comments=3)
+            if comments:
+                t.extra = {**(t.extra or {}), "comments": comments}
+                # Perkaya konteks AI dengan cuplikan komentar teratas.
+                top_texts = " / ".join(c["text"] for c in comments[:2])
+                if top_texts:
+                    t.__dict__["_context"] += f"\n[Komentar teratas] {top_texts}"
         trends.append(t)
 
     log.info("YouTube: %d video.", len(trends))

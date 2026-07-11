@@ -21,6 +21,7 @@ CREATE TABLE IF NOT EXISTS trends (
   affiliate_url TEXT,                      -- tautan afiliasi (khusus produk)
   price         TEXT,                      -- rentang harga produk (opsional)
   interest      TEXT,                      -- JSON array minat pencarian (khusus Google), mis. '[10,20,100]'
+  extra         TEXT,                      -- JSON konteks kaya per-platform (google: berita; youtube: komentar)
   is_current    INTEGER NOT NULL DEFAULT 1, -- 1 = sedang tren; 0 = arsip (tetap disimpan utk SEO)
   collected_at  TEXT NOT NULL,             -- ISO 8601 waktu pengumpulan
   updated_at    TEXT NOT NULL DEFAULT (datetime('now'))

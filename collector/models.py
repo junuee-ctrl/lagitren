@@ -36,6 +36,8 @@ class Trend:
     price: Optional[str] = None
     # Deret minat pencarian (khusus Google) untuk grafik volume.
     interest: list[int] = field(default_factory=list)
+    # Konteks kaya per-platform (google: berita; youtube: komentar terbaik).
+    extra: dict = field(default_factory=dict)
     collected_at: str = field(default_factory=now_iso)
 
     def to_row(self) -> dict:
@@ -43,4 +45,5 @@ class Trend:
         d = asdict(self)
         d["hashtags"] = json.dumps(self.hashtags, ensure_ascii=False)
         d["interest"] = json.dumps(self.interest) if self.interest else None
+        d["extra"] = json.dumps(self.extra, ensure_ascii=False) if self.extra else None
         return d

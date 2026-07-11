@@ -84,6 +84,8 @@ jobs:
             --command "ALTER TABLE trends ADD COLUMN interest TEXT;" --yes || true
           npx --yes wrangler@4 d1 execute lagitren-db --remote \
             --command "ALTER TABLE trends ADD COLUMN is_current INTEGER NOT NULL DEFAULT 1;" --yes || true
+          npx --yes wrangler@4 d1 execute lagitren-db --remote \
+            --command "ALTER TABLE trends ADD COLUMN extra TEXT;" --yes || true
           # Indeks yang memakai is_current — dibuat setelah kolomnya pasti ada.
           npx --yes wrangler@4 d1 execute lagitren-db --remote \
             --command "CREATE INDEX IF NOT EXISTS idx_trends_current ON trends (platform, is_current, rank);" --yes || true

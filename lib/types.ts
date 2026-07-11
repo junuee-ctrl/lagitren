@@ -39,8 +39,32 @@ export interface Trend {
    * Nilai relatif 0–100 seperti Google Trends "interest over time".
    */
   interest?: number[];
+  /** Konteks kaya per-platform (berita Google, komentar YouTube, dll.). */
+  extra?: TrendExtra;
   /** Waktu pengumpulan (ISO string / epoch). */
   collectedAt: string;
+}
+
+/** Satu tautan berita terkait (khusus Google Trends). */
+export interface TrendNews {
+  title: string;
+  url: string;
+  source?: string;
+}
+
+/** Satu komentar unggulan (khusus YouTube). */
+export interface TrendComment {
+  author?: string;
+  text: string;
+  likes?: number;
+}
+
+/** Data konteks kaya yang disimpan di kolom `extra` (JSON). */
+export interface TrendExtra {
+  /** Berita terkait teratas (Google Trends). */
+  news?: TrendNews[];
+  /** Komentar terbaik (YouTube). */
+  comments?: TrendComment[];
 }
 
 export interface PlatformMeta {

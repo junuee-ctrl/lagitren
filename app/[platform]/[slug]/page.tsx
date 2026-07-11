@@ -11,6 +11,7 @@ import AdSlot from "@/components/AdSlot";
 import AffiliateBox from "@/components/AffiliateBox";
 import SearchVolumeChart from "@/components/SearchVolumeChart";
 import GoogleTrendsWidget from "@/components/GoogleTrendsWidget";
+import TrendContext from "@/components/TrendContext";
 
 export const revalidate = 300;
 
@@ -164,6 +165,9 @@ export default async function TrendDetailPage({
           </p>
         </section>
       )}
+
+      {/* Konteks kaya: berita terkait (Google) / komentar terbaik (YouTube) */}
+      <TrendContext trend={trend} />
 
       {/* Produk / afiliasi (sumber pendapatan) */}
       {trend.affiliateUrl && (

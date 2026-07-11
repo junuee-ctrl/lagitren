@@ -24,8 +24,8 @@ _API_BASE = "https://api.cloudflare.com/client/v4"
 UPSERT_SQL = """
 INSERT INTO trends
   (id, platform, rank, title, subtitle, metric, metric_label, ai_summary,
-   url, thumbnail, source, hashtags, affiliate_url, price, interest, is_current, collected_at, updated_at)
-VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, datetime('now'))
+   url, thumbnail, source, hashtags, affiliate_url, price, interest, extra, is_current, collected_at, updated_at)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 1, ?, datetime('now'))
 ON CONFLICT(id) DO UPDATE SET
   platform=excluded.platform,
   rank=excluded.rank,
@@ -41,6 +41,7 @@ ON CONFLICT(id) DO UPDATE SET
   affiliate_url=excluded.affiliate_url,
   price=excluded.price,
   interest=excluded.interest,
+  extra=excluded.extra,
   is_current=1,
   collected_at=excluded.collected_at,
   updated_at=datetime('now');
@@ -131,7 +132,7 @@ class D1Client:
                 r["id"], r["platform"], r["rank"], r["title"], r["subtitle"],
                 r["metric"], r["metric_label"], r["ai_summary"], r["url"],
                 r["thumbnail"], r["source"], r["hashtags"], r["affiliate_url"],
-                r["price"], r["interest"], r["collected_at"],
+                r["price"], r["interest"], r["extra"], r["collected_at"],
             ],
         )
 
@@ -141,6 +142,7 @@ class D1Client:
             return
         for stmt in (
             "ALTER TABLE trends ADD COLUMN interest TEXT",
+            "ALTER TABLE trends ADD COLUMN extra TEXT",
             "ALTER TABLE trends ADD COLUMN is_current INTEGER NOT NULL DEFAULT 1",
         ):
             try:
