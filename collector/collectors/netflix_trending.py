@@ -26,6 +26,7 @@ from .base import make_id
 log = logging.getLogger("netflix")
 
 LAST_DEBUG = ""
+_ENRICH_NOTE = ""  # diagnostik enrichment (status HTTP iTunes/TMDB pertama)
 
 _BROWSER_UA = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -153,6 +154,7 @@ def _itunes_enrich(title: str, is_tv: bool) -> dict:
     Cadangan bila TMDB tidak tersedia. Deskripsi iTunes sering berbahasa
     Inggris; poster tetap berguna sebagai thumbnail.
     """
+    global _ENRICH_NOTE
     media = "tvShow" if is_tv else "movie"
     for country in ("ID", "US"):
         try:
@@ -162,6 +164,8 @@ def _itunes_enrich(title: str, is_tv: bool) -> dict:
                 headers={"User-Agent": _BROWSER_UA},
                 timeout=20,
             )
+            if not _ENRICH_NOTE:
+                _ENRICH_NOTE = f"itunes {country} http={r.status_code}"
             if r.status_code != 200:
                 continue
             results = r.json().get("results") or []
@@ -180,6 +184,8 @@ def _itunes_enrich(title: str, is_tv: bool) -> dict:
             if out:
                 return out
         except Exception as exc:
+            if not _ENRICH_NOTE:
+                _ENRICH_NOTE = f"itunes err={type(exc).__name__}"
             log.info("iTunes '%s' gagal: %s", title, exc)
     return {}
 
@@ -263,6 +269,10 @@ def collect(limit: int = 20) -> list[Trend]:
         t.__dict__["_context"] = " ".join(ctx)[:500]
         trends.append(t)
 
-    LAST_DEBUG = f"{len(trends)} judul (minggu {rows[0]['week']})"
-    log.info("Netflix: %d judul.", len(trends))
+    posters = sum(1 for t in trends if t.thumbnail)
+    LAST_DEBUG = (
+        f"{len(trends)} judul (minggu {rows[0]['week']}), "
+        f"{posters} poster; {_ENRICH_NOTE or 'no-enrich'}"
+    )
+    log.info("Netflix: %d judul, %d poster. %s", len(trends), posters, _ENRICH_NOTE)
     return trends
