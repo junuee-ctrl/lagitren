@@ -38,6 +38,7 @@ _XLSX_URL = "https://www.netflix.com/tudum/top10/data/all-weeks-countries.xlsx"
 _SEARCH_URL = "https://www.netflix.com/id/search?q={q}"
 _TMDB_SEARCH = "https://api.themoviedb.org/3/search/{kind}"
 _TMDB_IMG = "https://image.tmdb.org/t/p/w500{path}"
+_ITUNES_URL = "https://itunes.apple.com/search"
 
 
 def _fetch_tsv() -> str | None:
@@ -146,6 +147,52 @@ def _tmdb_enrich(title: str, is_tv: bool) -> dict:
         return {}
 
 
+def _itunes_enrich(title: str, is_tv: bool) -> dict:
+    """Poster & deskripsi via iTunes Search API — TANPA kunci/pendaftaran.
+
+    Cadangan bila TMDB tidak tersedia. Deskripsi iTunes sering berbahasa
+    Inggris; poster tetap berguna sebagai thumbnail.
+    """
+    media = "tvShow" if is_tv else "movie"
+    for country in ("ID", "US"):
+        try:
+            r = requests.get(
+                _ITUNES_URL,
+                params={"term": title, "media": media, "limit": 1, "country": country},
+                headers={"User-Agent": _BROWSER_UA},
+                timeout=20,
+            )
+            if r.status_code != 200:
+                continue
+            results = r.json().get("results") or []
+            if not results:
+                continue
+            top = results[0]
+            out: dict = {}
+            art = top.get("artworkUrl100") or top.get("artworkUrl60") or ""
+            if art:
+                out["poster"] = art.replace("100x100bb", "600x600bb").replace(
+                    "60x60bb", "600x600bb"
+                )
+            desc = (top.get("longDescription") or top.get("shortDescription") or "").strip()
+            if desc:
+                out["synopsis"] = desc[:500]
+            if out:
+                return out
+        except Exception as exc:
+            log.info("iTunes '%s' gagal: %s", title, exc)
+    return {}
+
+
+def _enrich(title: str, is_tv: bool) -> dict:
+    """Perkaya poster/sinopsis: TMDB (bila ada kunci) → iTunes (tanpa kunci)."""
+    if config.TMDB_API_KEY:
+        info = _tmdb_enrich(title, is_tv)
+        if info.get("poster") or info.get("synopsis"):
+            return info
+    return _itunes_enrich(title, is_tv)
+
+
 def collect(limit: int = 20) -> list[Trend]:
     global LAST_DEBUG
     tsv = _fetch_tsv()
@@ -177,7 +224,7 @@ def collect(limit: int = 20) -> list[Trend]:
         title = r["title"].strip()
         kind_label = "Serial TV" if is_tv else "Film"
 
-        info = _tmdb_enrich(title, is_tv)
+        info = _enrich(title, is_tv)
 
         # Subtitle: jenis · rating · minggu di Top 10.
         bits = [kind_label]
