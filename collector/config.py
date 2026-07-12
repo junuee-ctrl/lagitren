@@ -67,6 +67,8 @@ IG_HASHTAGS = [
     for h in _get("IG_HASHTAGS", "viral,fyp,indonesia,beritaterkini,tiktok").split(",")
     if h.strip()
 ]
+# Ambang suka minimum agar sebuah post IG dianggap "hits" (buang post recehan).
+IG_MIN_LIKES = int(_get("IG_MIN_LIKES", "10000") or "10000")
 # Satu profil browser persisten dipakai bersama (login TikTok & Instagram sekali).
 BROWSER_PROFILE_DIR = _get("BROWSER_PROFILE_DIR", "./.browser_profile")
 # Jalankan browser tampak (headful) — untuk login pertama kali.

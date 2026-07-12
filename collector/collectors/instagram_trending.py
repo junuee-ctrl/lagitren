@@ -22,7 +22,7 @@ from urllib.parse import quote
 
 import config
 from models import Trend
-from .base import make_id
+from .base import make_id, clean_caption, acceptable_language
 
 log = logging.getLogger("instagram")
 
@@ -53,7 +53,7 @@ def _post_to_trend(node: dict, tag: str, rank: int) -> Trend | None:
     code = node.get("code") or node.get("shortcode")
     if not code:
         return None
-    # caption
+    # caption mentah
     caption = ""
     cap = node.get("caption")
     if isinstance(cap, dict):
@@ -61,21 +61,36 @@ def _post_to_trend(node: dict, tag: str, rank: int) -> Trend | None:
     elif isinstance(cap, str):
         caption = cap
     likes = int(node.get("like_count") or node.get("edge_liked_by", {}).get("count", 0) or 0)
-    # thumbnail
+
+    # ── FILTER KUALITAS ──────────────────────────────────────────────
+    # 1) Ambang suka minimum (buang post 3/49/822 suka).
+    if likes < config.IG_MIN_LIKES:
+        return None
+    # 2) Bahasa: tolak Korea/Hindi/Vietnam/dsb. (caption asing).
+    if not acceptable_language(caption):
+        return None
+
+    # thumbnail wajib (biar kartu tidak kosong).
     thumb = node.get("thumbnail_src") or node.get("display_url")
     if not thumb:
         iv = node.get("image_versions2", {}).get("candidates") or []
         if iv:
             thumb = iv[0].get("url")
+    if not thumb:
+        return None
 
-    title = (caption.strip().split("\n")[0] or f"Postingan #{tag}")[:90]
+    # Judul dirapikan (tidak terpotong di tengah kata, bukan "." saja).
+    title = clean_caption(caption, max_len=90)
+    if not title:
+        title = f"Postingan viral #{tag}"
+
     return Trend(
         id=make_id("instagram", code),
         platform="instagram",
         rank=rank,
         title=title,
         url=f"https://www.instagram.com/p/{code}/",
-        subtitle=f"{likes:,} suka" if likes else None,
+        subtitle=f"{likes:,} suka".replace(",", ".") if likes else None,
         metric=likes or None,
         metric_label="suka" if likes else None,
         thumbnail=thumb,
@@ -124,7 +139,10 @@ def collect(limit: int = 15) -> list[Trend]:
 
             page.on("response", on_response)
 
-            per_tag = max(2, limit // max(1, len(config.IG_HASHTAGS)))
+            # Kumpulkan kandidat lebih banyak dari limit (banyak yang tersaring),
+            # lalu urutkan berdasarkan suka di akhir.
+            gather_target = limit * 3
+            per_tag = max(4, gather_target // max(1, len(config.IG_HASHTAGS)))
             for tag in config.IG_HASHTAGS:
                 captured.clear()
                 try:
@@ -156,7 +174,7 @@ def collect(limit: int = 15) -> list[Trend]:
                         added += 1
                         if added >= per_tag:
                             break
-                if len(all_trends) >= limit:
+                if len(all_trends) >= gather_target:
                     break
 
             try:
@@ -182,10 +200,11 @@ def collect(limit: int = 15) -> list[Trend]:
         )
         return []
 
-    # peringkat ulang & batasi
-    for i, t in enumerate(all_trends[:limit], start=1):
-        t.rank = i
+    # Urutkan berdasarkan suka (paling banyak = paling atas), lalu batasi.
+    all_trends.sort(key=lambda t: (t.metric or 0), reverse=True)
     all_trends = all_trends[:limit]
-    LAST_DEBUG = f"ok: {len(all_trends)} post dari {len(config.IG_HASHTAGS)} hashtag"
+    for i, t in enumerate(all_trends, start=1):
+        t.rank = i
+    LAST_DEBUG = f"ok: {len(all_trends)} post (min {config.IG_MIN_LIKES} suka) dari {len(config.IG_HASHTAGS)} hashtag"
     log.info("Instagram: %d post.", len(all_trends))
     return all_trends
