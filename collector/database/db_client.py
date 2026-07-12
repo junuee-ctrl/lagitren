@@ -136,6 +136,36 @@ class D1Client:
             ],
         )
 
+    def fetch_existing_summaries(self, ids: list[str]) -> dict[str, dict]:
+        """Ambil (title, ai_summary) yang SUDAH ada untuk daftar id.
+
+        Dipakai sebagai cache: agar tren yang tidak berubah tidak diringkas
+        ulang setiap jam (menghemat biaya & waktu LLM).
+        """
+        if not ids or self.dry_run or not self._configured():
+            return {}
+        out: dict[str, dict] = {}
+        chunk = 50
+        for i in range(0, len(ids), chunk):
+            part = ids[i : i + chunk]
+            placeholders = ",".join(["?"] * len(part))
+            sql = (
+                "SELECT id, title, ai_summary FROM trends "
+                f"WHERE id IN ({placeholders})"
+            )
+            try:
+                data = self.query(sql, part)
+                res = data.get("result")
+                rows = res[0].get("results") if isinstance(res, list) and res else []
+                for r in rows or []:
+                    out[r["id"]] = {
+                        "title": r.get("title"),
+                        "ai_summary": r.get("ai_summary"),
+                    }
+            except Exception as exc:
+                log.warning("Gagal ambil cache ringkasan: %s", exc)
+        return out
+
     def _ensure_schema(self) -> None:
         """Pastikan kolom baru ada (aman dijalankan berkali-kali)."""
         if getattr(self, "_schema_ready", False):

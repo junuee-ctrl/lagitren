@@ -15,6 +15,7 @@ from __future__ import annotations
 import logging
 import sys
 
+import config
 from models import now_iso
 from collectors import REGISTRY
 from database import D1Client
@@ -41,10 +42,28 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
             return 0
 
         if do_summary:
+            # Cache: pakai ulang ringkasan tren yang tak berubah (judul sama),
+            # hanya panggil LLM untuk tren baru → hemat biaya Haiku.
+            cache = (
+                {}
+                if config.SUMMARY_FORCE_REFRESH
+                else db.fetch_existing_summaries([t.id for t in trends])
+            )
+            reused = 0
             for t in trends:
-                context = getattr(t, "_context", "") or ""
-                if not t.ai_summary:
+                if t.ai_summary:
+                    continue
+                prev = cache.get(t.id)
+                if prev and prev.get("ai_summary") and prev.get("title") == t.title:
+                    t.ai_summary = prev["ai_summary"]  # cache hit → tanpa LLM
+                    reused += 1
+                else:
+                    context = getattr(t, "_context", "") or ""
                     t.ai_summary = summarize(platform, t.title, context)
+            log.info(
+                "%s: ringkasan %d baru, %d dari cache.",
+                platform, len(trends) - reused, reused,
+            )
 
         count = db.save_trends(platform, trends)
         log.info("%s: %d item tersimpan.", platform, count)

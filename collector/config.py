@@ -56,6 +56,10 @@ FETCH_INTEREST = _get("FETCH_INTEREST", "1") in ("1", "true", "True", "yes")
 # Coba Ollama untuk ringkasan (matikan di cloud tanpa GPU untuk hindari log spam).
 USE_OLLAMA = _get("USE_OLLAMA", "1") in ("1", "true", "True", "yes")
 
+# Cache ringkasan: gunakan kembali ringkasan tren yang tak berubah (hemat biaya
+# LLM). Set SUMMARY_FORCE_REFRESH=1 untuk memaksa buat ulang semua ringkasan.
+SUMMARY_FORCE_REFRESH = _get("SUMMARY_FORCE_REFRESH", "0") in ("1", "true", "True", "yes")
+
 # ── Collector browser lokal (TikTok & Instagram) ────────────────
 # Hashtag Instagram yang dipantau (dipisah koma). Diambil post teratasnya.
 IG_HASHTAGS = [
