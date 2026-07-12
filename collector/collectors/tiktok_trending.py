@@ -228,6 +228,32 @@ def _fetch_top_video(page, hashtag: str) -> dict | None:
         v = _extract_top_video(payload)
         if v and (best is None or v["plays"] > best["plays"]):
             best = v
+
+    # Cadangan: JSON tertanam di HTML (SIGI_STATE / UNIVERSAL_DATA).
+    if best is None:
+        try:
+            import json as _json
+            import re as _re
+
+            html = page.content()
+            for marker in (
+                "__UNIVERSAL_DATA_FOR_REHYDRATION__",
+                "SIGI_STATE",
+            ):
+                m = _re.search(
+                    marker + r'"[^>]*>(.*?)</script>', html, _re.DOTALL
+                )
+                if not m:
+                    continue
+                try:
+                    v = _extract_top_video(_json.loads(m.group(1)))
+                except Exception:
+                    v = None
+                if v:
+                    best = v
+                    break
+        except Exception:
+            pass
     return best
 
 
@@ -351,9 +377,11 @@ def collect(limit: int = 20) -> list[Trend]:
             # Lampirkan video representatif (kalau berhasil dapat hashtag).
             if result:
                 try:
-                    _enrich_videos(page, result)
+                    vids = _enrich_videos(page, result)
+                    LAST_DEBUG = f"{LAST_DEBUG}, {vids} video"
                 except Exception as exc:
                     log.info("TikTok enrich video gagal (diabaikan): %s", exc)
+                    LAST_DEBUG = f"{LAST_DEBUG}, video err:{type(exc).__name__}"
 
             # Screenshot untuk inspeksi manual (login wall? region?).
             try:
