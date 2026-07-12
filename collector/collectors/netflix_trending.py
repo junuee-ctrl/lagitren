@@ -112,17 +112,22 @@ def _is_tv(category: str) -> bool:
 
 
 def _tmdb_enrich(title: str, is_tv: bool) -> dict:
-    """Cari poster, sinopsis (id-ID), rating, genre via TMDB. Best-effort."""
+    """Cari poster, sinopsis, rating via TMDB. Best-effort.
+
+    Sinopsis diambil id-ID; bila kosong (banyak film Indonesia belum punya
+    terjemahan) → fallback ke en-US supaya kolom sinopsis tetap terisi.
+    """
     if not config.TMDB_API_KEY:
         return {}
     kind = "tv" if is_tv else "movie"
-    try:
+
+    def _search(lang: str) -> dict | None:
         r = requests.get(
             _TMDB_SEARCH.format(kind=kind),
             params={
                 "api_key": config.TMDB_API_KEY,
                 "query": title,
-                "language": "id-ID",
+                "language": lang,
                 "include_adult": "false",
                 "region": "ID",
             },
@@ -130,15 +135,22 @@ def _tmdb_enrich(title: str, is_tv: bool) -> dict:
         )
         r.raise_for_status()
         results = r.json().get("results") or []
-        if not results:
+        return results[0] if results else None
+
+    try:
+        top = _search("id-ID")
+        if not top:
             return {}
-        top = results[0]
         out: dict = {}
         if top.get("poster_path"):
             out["poster"] = _TMDB_IMG.format(path=top["poster_path"])
         overview = (top.get("overview") or "").strip()
+        if not overview:
+            en = _search("en-US")
+            if en:
+                overview = (en.get("overview") or "").strip()
         if overview:
-            out["synopsis"] = overview
+            out["synopsis"] = overview[:500]
         va = top.get("vote_average")
         if isinstance(va, (int, float)) and va > 0:
             out["rating"] = round(float(va), 1)
