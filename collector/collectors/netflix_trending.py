@@ -190,17 +190,81 @@ def _itunes_enrich(title: str, is_tv: bool) -> dict:
     return {}
 
 
+def _wikipedia_enrich(title: str, is_tv: bool) -> dict:
+    """Poster + sinopsis Bahasa Indonesia via Wikipedia — TANPA kunci.
+
+    Pakai generator=search agar judul film/serial Indonesia lebih mudah cocok.
+    Cakupan konten Indonesia jauh lebih baik daripada iTunes.
+    """
+    global _ENRICH_NOTE
+    hint = "seri televisi" if is_tv else "film"
+    for lang in ("id", "en"):
+        try:
+            r = requests.get(
+                f"https://{lang}.wikipedia.org/w/api.php",
+                params={
+                    "action": "query",
+                    "format": "json",
+                    "generator": "search",
+                    "gsrsearch": f"{title} {hint}",
+                    "gsrlimit": 1,
+                    "prop": "pageimages|extracts",
+                    "piprop": "thumbnail",
+                    "pithumbsize": 500,
+                    "exintro": 1,
+                    "explaintext": 1,
+                    "redirects": 1,
+                },
+                headers={"User-Agent": _BROWSER_UA},
+                timeout=20,
+            )
+            if not _ENRICH_NOTE:
+                _ENRICH_NOTE = f"wiki {lang} http={r.status_code}"
+            if r.status_code != 200:
+                continue
+            pages = (r.json().get("query") or {}).get("pages") or {}
+            if not pages:
+                continue
+            page = next(iter(pages.values()))
+            out: dict = {}
+            thumb = (page.get("thumbnail") or {}).get("source")
+            if thumb:
+                out["poster"] = thumb
+            extract = (page.get("extract") or "").strip()
+            if extract:
+                out["synopsis"] = extract[:500]
+            if out.get("poster"):  # butuh poster; kalau cuma teks, coba sumber lain
+                return out
+        except Exception as exc:
+            if not _ENRICH_NOTE:
+                _ENRICH_NOTE = f"wiki err={type(exc).__name__}"
+            log.info("Wikipedia '%s' gagal: %s", title, exc)
+    return {}
+
+
 def _enrich(title: str, is_tv: bool) -> dict:
-    """Perkaya poster/sinopsis: TMDB (bila ada kunci) → iTunes (tanpa kunci)."""
+    """Perkaya poster/sinopsis, semua opsional & tanpa henti kalau gagal.
+
+    Urutan: TMDB (bila ada kunci; terbaik) → Wikipedia ID (tanpa kunci,
+    sinopsis Indonesia) → iTunes (tanpa kunci, cakupan internasional).
+    """
     if config.TMDB_API_KEY:
         info = _tmdb_enrich(title, is_tv)
         if info.get("poster") or info.get("synopsis"):
             return info
-    return _itunes_enrich(title, is_tv)
+    wiki = _wikipedia_enrich(title, is_tv)
+    if wiki.get("poster"):
+        return wiki
+    itunes = _itunes_enrich(title, is_tv)
+    merged = dict(itunes)
+    if wiki.get("synopsis") and not merged.get("synopsis"):
+        merged["synopsis"] = wiki["synopsis"]
+    return merged
 
 
 def collect(limit: int = 20) -> list[Trend]:
-    global LAST_DEBUG
+    global LAST_DEBUG, _ENRICH_NOTE
+    _ENRICH_NOTE = ""
     tsv = _fetch_tsv()
     if not tsv:
         LAST_DEBUG = "tidak bisa mengambil data Tudum (IP mungkin diblokir; coba lokal)"
