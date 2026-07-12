@@ -58,5 +58,6 @@ export const SOURCE_LABEL: Record<Platform, string> = {
   tiktok: "Buka di TikTok",
   instagram: "Buka di Instagram",
   shopee: "Buka di Shopee",
-  twitter: "Buka di X"
+  twitter: "Buka di X",
+  netflix: "Cari di Netflix"
 };

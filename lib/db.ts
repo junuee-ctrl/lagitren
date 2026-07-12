@@ -94,7 +94,21 @@ function parseExtra(raw: string | null): TrendExtra | undefined {
           }))
           .filter((c: { text: string }) => c.text);
       }
-      if ((extra.news && extra.news.length) || (extra.comments && extra.comments.length)) {
+      if (obj.ott && typeof obj.ott === "object") {
+        const o = obj.ott as Record<string, unknown>;
+        extra.ott = {
+          kind: o.kind ? String(o.kind) : undefined,
+          rating: typeof o.rating === "number" ? o.rating : undefined,
+          synopsis: o.synopsis ? String(o.synopsis) : undefined,
+          weeks: (o.weeks as string | number) ?? undefined,
+          rank: (o.rank as string | number) ?? undefined
+        };
+      }
+      if (
+        (extra.news && extra.news.length) ||
+        (extra.comments && extra.comments.length) ||
+        extra.ott
+      ) {
         return extra;
       }
     }

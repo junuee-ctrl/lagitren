@@ -9,6 +9,7 @@ from . import (
     instagram_trending,
     shopee_trending,
     twitter_trending,
+    netflix_trending,
 )
 
 # platform -> (modul, jeda pembaruan dalam menit)
@@ -19,6 +20,7 @@ REGISTRY = {
     "instagram": (instagram_trending, 360),
     "shopee": (shopee_trending, 180),
     "twitter": (twitter_trending, 30),
+    "netflix": (netflix_trending, 1440),  # mingguan (Tudum rilis tiap Selasa)
 }
 
 __all__ = ["REGISTRY"]

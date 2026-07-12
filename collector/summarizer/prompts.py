@@ -44,6 +44,11 @@ _PLATFORM_HINT = {
         "Ini produk yang banyak dicari. Jelaskan kenapa diminati; ingatkan "
         "bahwa harga dapat berubah sewaktu-waktu."
     ),
+    "netflix": (
+        "Ini film/serial di Top 10 Netflix Indonesia. Berdasarkan sinopsis "
+        "pada konteks, jelaskan kira-kira kenapa banyak ditonton (genre, "
+        "premis, atau daya tariknya). Jangan spoiler."
+    ),
 }
 
 

@@ -43,6 +43,9 @@ SHOPEE_KEYWORDS = [
     if k.strip()
 ]
 
+# TMDB (poster/sinopsis/rating untuk Netflix Top 10). Gratis di themoviedb.org.
+TMDB_API_KEY = _get("TMDB_API_KEY")
+
 # Telegram
 TELEGRAM_BOT_TOKEN = _get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = _get("TELEGRAM_CHAT_ID")

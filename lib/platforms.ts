@@ -60,6 +60,16 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
     description:
       "Topik dan hashtag yang sedang trending di X (Twitter) Indonesia.",
     refresh: "Diperbarui tiap 30 menit"
+  },
+  netflix: {
+    key: "netflix",
+    name: "Netflix Top 10",
+    icon: "🍿",
+    color: "#E50914",
+    sectionTitle: "Netflix Top 10",
+    description:
+      "Film dan serial paling banyak ditonton di Netflix Indonesia minggu ini — daftar Top 10 resmi.",
+    refresh: "Diperbarui tiap minggu"
   }
 };
 
@@ -69,6 +79,7 @@ export const PLATFORM_ORDER: Platform[] = [
   "youtube",
   "tiktok",
   "instagram",
+  "netflix",
   "shopee",
   "twitter"
 ];

@@ -123,6 +123,18 @@ export default function TrendMedia({ trend }: { trend: Trend }) {
   if (trend.platform === "twitter" && canEmbed(trend)) {
     return <TwitterEmbed url={trend.url} />;
   }
+  // Netflix: poster potret → tampilkan terkontrol (tidak melebar penuh).
+  if (trend.platform === "netflix" && trend.thumbnail) {
+    return (
+      <div className="flex justify-center">
+        <img
+          src={trend.thumbnail}
+          alt={trend.title}
+          className="max-h-[420px] w-auto rounded-xl object-contain shadow-sm"
+        />
+      </div>
+    );
+  }
   if (trend.thumbnail) {
     return (
       <img

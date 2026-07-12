@@ -4,7 +4,8 @@ export type Platform =
   | "tiktok"
   | "instagram"
   | "shopee"
-  | "twitter";
+  | "twitter"
+  | "netflix";
 
 export interface Trend {
   /** ID unik stabil (platform + slug/source id) untuk upsert. */
@@ -61,12 +62,28 @@ export interface TrendComment {
   likes?: number;
 }
 
+/** Info OTT/streaming (khusus Netflix Top 10). */
+export interface TrendOtt {
+  /** "Film" atau "Serial TV". */
+  kind?: string;
+  /** Rating penonton (TMDB), 0–10. */
+  rating?: number;
+  /** Sinopsis singkat (Bahasa Indonesia bila tersedia). */
+  synopsis?: string;
+  /** Jumlah minggu berturut di Top 10. */
+  weeks?: string | number;
+  /** Peringkat mingguan di kategorinya. */
+  rank?: string | number;
+}
+
 /** Data konteks kaya yang disimpan di kolom `extra` (JSON). */
 export interface TrendExtra {
   /** Berita terkait teratas (Google Trends). */
   news?: TrendNews[];
   /** Komentar terbaik (YouTube). */
   comments?: TrendComment[];
+  /** Info OTT (Netflix Top 10). */
+  ott?: TrendOtt;
 }
 
 export interface PlatformMeta {

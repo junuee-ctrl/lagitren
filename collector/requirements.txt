@@ -5,5 +5,7 @@ APScheduler>=3.10.4
 beautifulsoup4>=4.12.0
 # Opsional: grafik minat pencarian Google Trends (best-effort).
 pytrends>=4.9.2
+# Cadangan parser XLSX untuk data Netflix Tudum (bila TSV tak tersedia).
+openpyxl>=3.1.0
 # pytrends memakai API urllib3 lama (method_whitelist) → butuh urllib3 < 2.
 urllib3<2
