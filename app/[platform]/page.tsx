@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getTrendsByPlatform } from "@/lib/db";
 import { PLATFORMS, PLATFORM_ORDER, getPlatform } from "@/lib/platforms";
 import PlatformSection from "@/components/PlatformSection";
+import NetflixSplit from "@/components/NetflixSplit";
 import AdSlot from "@/components/AdSlot";
 import type { Platform } from "@/lib/types";
 
@@ -76,7 +77,11 @@ export default async function PlatformPage({
       <AdSlot slot={`${platform}-top`} />
 
       {trends.length > 0 ? (
-        <PlatformSection platform={platform} trends={trends} showAll />
+        platform === "netflix" ? (
+          <NetflixSplit trends={trends} />
+        ) : (
+          <PlatformSection platform={platform} trends={trends} showAll />
+        )
       ) : (
         <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center">
           <p className="text-3xl" aria-hidden>
