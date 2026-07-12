@@ -72,6 +72,13 @@ IG_HASHTAGS = [
 ]
 # Ambang suka minimum agar sebuah post IG dianggap "hits" (buang post recehan).
 IG_MIN_LIKES = int(_get("IG_MIN_LIKES", "10000") or "10000")
+# Berapa hashtag TikTok teratas yang dicarikan video representatif (untuk embed).
+TIKTOK_VIDEO_TOPN = int(_get("TIKTOK_VIDEO_TOPN", "10") or "10")
+# Ambil tweet teratas per tren X (butuh browser login). Default off di cloud.
+TWITTER_WITH_TWEETS = _get("TWITTER_WITH_TWEETS", "0") in ("1", "true", "True", "yes")
+# Berapa tren X teratas yang dicarikan tweet, dan berapa tweet per tren.
+TWITTER_TWEET_TOPN = int(_get("TWITTER_TWEET_TOPN", "8") or "8")
+TWITTER_TWEETS_PER = int(_get("TWITTER_TWEETS_PER", "3") or "3")
 # Satu profil browser persisten dipakai bersama (login TikTok & Instagram sekali).
 BROWSER_PROFILE_DIR = _get("BROWSER_PROFILE_DIR", "./.browser_profile")
 # Jalankan browser tampak (headful) — untuk login pertama kali.

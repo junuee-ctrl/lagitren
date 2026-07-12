@@ -1,4 +1,5 @@
 import type { Trend } from "@/lib/types";
+import TweetEmbeds from "./TweetEmbeds";
 
 /**
  * Konteks kaya per-platform yang dibaca DI SITUS (menambah kedalaman konten
@@ -9,13 +10,32 @@ import type { Trend } from "@/lib/types";
 export default function TrendContext({ trend }: { trend: Trend }) {
   const news = trend.extra?.news ?? [];
   const comments = trend.extra?.comments ?? [];
+  const tweets = trend.extra?.tweets ?? [];
   const ott = trend.extra?.ott;
   const hasOtt = !!(ott && (ott.synopsis || ott.rating || ott.weeks));
 
-  if (news.length === 0 && comments.length === 0 && !hasOtt) return null;
+  if (
+    news.length === 0 &&
+    comments.length === 0 &&
+    tweets.length === 0 &&
+    !hasOtt
+  )
+    return null;
 
   return (
     <>
+      {tweets.length > 0 && (
+        <section className="my-5 rounded-2xl border border-gray-200 bg-white p-5">
+          <h2 className="mb-3 flex items-center gap-2 text-base font-bold text-ink">
+            <span aria-hidden>💬</span> Tweet teratas soal ini
+          </h2>
+          <TweetEmbeds urls={tweets.map((t) => t.url)} />
+          <p className="mt-2 text-xs text-gray-400">
+            Postingan paling banyak diteruskan seputar topik ini di X.
+          </p>
+        </section>
+      )}
+
       {hasOtt && (
         <section className="my-5 rounded-2xl border border-gray-200 bg-white p-5">
           <h2 className="flex items-center gap-2 text-base font-bold text-ink">

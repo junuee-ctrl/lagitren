@@ -150,18 +150,18 @@ export default async function TrendDetailPage({
             <GoogleTrendsWidget keyword={trend.title} />
           )}
         </section>
-      ) : (
+      ) : platform !== "tiktok" &&
         trend.interest &&
-        trend.interest.length > 1 && (
-          <section className="mb-5 rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
-            <h2 className="mb-2 text-sm font-semibold text-gray-500">
-              📈 Popularitas dari waktu ke waktu
-            </h2>
-            <SearchVolumeChart data={trend.interest} color={meta.color} />
-            <p className="mt-1 text-xs text-gray-400">Nilai relatif (0–100).</p>
-          </section>
-        )
-      )}
+        trend.interest.length > 1 ? (
+        // TikTok: grafik populer dilewati — utamakan embed video (di bawah).
+        <section className="mb-5 rounded-2xl border border-gray-200 bg-white p-4 sm:p-5">
+          <h2 className="mb-2 text-sm font-semibold text-gray-500">
+            📈 Popularitas dari waktu ke waktu
+          </h2>
+          <SearchVolumeChart data={trend.interest} color={meta.color} />
+          <p className="mt-1 text-xs text-gray-400">Nilai relatif (0–100).</p>
+        </section>
+      ) : null}
 
       {/* Media utama — diputar/ditampilkan DI SITUS kita */}
       {(embeddable || trend.thumbnail) && (

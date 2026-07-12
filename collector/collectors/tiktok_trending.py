@@ -14,6 +14,7 @@ Prasyarat lokal:
 from __future__ import annotations
 
 import logging
+from urllib.parse import quote
 
 import config
 from models import Trend
@@ -133,6 +134,127 @@ def _parse(payload: dict, limit: int) -> list[Trend]:
     return out
 
 
+def _extract_top_video(payload) -> dict | None:
+    """Cari video paling banyak diputar dalam respons item_list TikTok."""
+    best: dict | None = None
+    best_plays = -1
+
+    def walk(obj):
+        nonlocal best, best_plays
+        if isinstance(obj, dict):
+            vid = obj.get("id") or obj.get("aweme_id")
+            author = obj.get("author")
+            stats = obj.get("stats") or obj.get("statsV2") or obj.get("statistics")
+            if vid and isinstance(author, dict) and isinstance(stats, dict):
+                uid = author.get("uniqueId") or author.get("unique_id")
+                raw = (
+                    stats.get("playCount")
+                    or stats.get("play_count")
+                    or stats.get("playCountStr")
+                    or 0
+                )
+                try:
+                    plays = int(raw)
+                except (ValueError, TypeError):
+                    plays = 0
+                cover = None
+                video = obj.get("video")
+                if isinstance(video, dict):
+                    cover = (
+                        video.get("cover")
+                        or video.get("originCover")
+                        or video.get("dynamicCover")
+                    )
+                if uid and str(vid).isdigit() and plays > best_plays:
+                    best_plays = plays
+                    best = {
+                        "url": f"https://www.tiktok.com/@{uid}/video/{vid}",
+                        "author": uid,
+                        "cover": cover,
+                        "plays": plays,
+                    }
+            for v in obj.values():
+                walk(v)
+        elif isinstance(obj, list):
+            for v in obj:
+                walk(v)
+
+    walk(payload)
+    return best
+
+
+def _fetch_top_video(page, hashtag: str) -> dict | None:
+    """Buka halaman tag TikTok, intersep item_list, pilih video terlaris."""
+    from . import _browser
+
+    grabbed: list = []
+
+    def on_resp(resp):
+        low = resp.url.lower()
+        if (
+            "item_list" in low
+            or "/api/challenge/" in low
+            or "/api/search/general" in low
+        ):
+            try:
+                grabbed.append(resp.json())
+            except Exception:
+                pass
+
+    page.on("response", on_resp)
+    try:
+        page.goto(
+            f"https://www.tiktok.com/tag/{quote(hashtag)}",
+            wait_until="domcontentloaded",
+            timeout=40000,
+        )
+        _browser.accept_cookies(page)
+        page.wait_for_timeout(3500)
+        try:
+            page.mouse.wheel(0, 1600)
+        except Exception:
+            pass
+        page.wait_for_timeout(2500)
+    except Exception as exc:
+        log.info("TikTok tag '%s' gagal: %s", hashtag, exc)
+    finally:
+        try:
+            page.remove_listener("response", on_resp)
+        except Exception:
+            pass
+
+    best = None
+    for payload in grabbed:
+        v = _extract_top_video(payload)
+        if v and (best is None or v["plays"] > best["plays"]):
+            best = v
+    return best
+
+
+def _enrich_videos(page, trends: list[Trend]) -> int:
+    """Lampirkan video representatif ke hashtag teratas (untuk embed di situs)."""
+    top_n = min(config.TIKTOK_VIDEO_TOPN, len(trends))
+    enriched = 0
+    for t in trends[:top_n]:
+        tag = t.hashtags[0] if t.hashtags else t.title.lstrip("#")
+        v = _fetch_top_video(page, tag)
+        if v:
+            t.url = v["url"]  # jadi bisa di-embed (canEmbed cek pola /video/)
+            if v.get("cover"):
+                t.thumbnail = v["cover"]
+            t.extra = {
+                **(t.extra or {}),
+                "tiktok": {
+                    "videoUrl": v["url"],
+                    "author": v.get("author"),
+                    "plays": v.get("plays"),
+                },
+            }
+            enriched += 1
+    log.info("TikTok: %d/%d hashtag dapat video.", enriched, top_n)
+    return enriched
+
+
 def collect(limit: int = 20) -> list[Trend]:
     global LAST_DEBUG
     try:
@@ -146,6 +268,7 @@ def collect(limit: int = 20) -> list[Trend]:
 
     captured: list[dict] = []
     seen_urls: list[str] = []
+    result: list[Trend] = []
     try:
         with sync_playwright() as p:
             ctx = _browser.get_context(p)
@@ -215,6 +338,23 @@ def collect(limit: int = 20) -> list[Trend]:
                 except Exception:
                     pass
 
+            # Parse daftar hashtag (browser MASIH terbuka untuk enrich video).
+            for payload in captured_id + captured:
+                parsed = _parse(payload, limit)
+                if parsed:
+                    result = parsed
+                    src = "ID" if payload in captured_id else "non-ID"
+                    LAST_DEBUG = f"ok: {len(result)} hashtag ({src})"
+                    log.info("TikTok: %d hashtag (%s).", len(result), src)
+                    break
+
+            # Lampirkan video representatif (kalau berhasil dapat hashtag).
+            if result:
+                try:
+                    _enrich_videos(page, result)
+                except Exception as exc:
+                    log.info("TikTok enrich video gagal (diabaikan): %s", exc)
+
             # Screenshot untuk inspeksi manual (login wall? region?).
             try:
                 page.screenshot(path="tiktok_debug.png", full_page=False)
@@ -228,16 +368,10 @@ def collect(limit: int = 20) -> list[Trend]:
     except Exception as exc:
         LAST_DEBUG = f"browser error: {type(exc).__name__}: {str(exc)[:160]}"
         log.error("TikTok browser gagal: %s", exc)
-        return []
+        return result
 
-    # Prioritas: respons Indonesia dulu, baru sisanya.
-    for payload in captured_id + captured:
-        trends = _parse(payload, limit)
-        if trends:
-            src = "ID" if payload in captured_id else "non-ID"
-            LAST_DEBUG = f"ok: {len(trends)} hashtag ({src})"
-            log.info("TikTok: %d hashtag (%s).", len(trends), src)
-            return trends
+    if result:
+        return result
 
     # --- Tidak ada data → keluarkan diagnostik lengkap ---
     uniq = sorted(set(seen_urls))

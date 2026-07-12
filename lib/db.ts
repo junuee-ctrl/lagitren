@@ -104,10 +104,30 @@ function parseExtra(raw: string | null): TrendExtra | undefined {
           rank: (o.rank as string | number) ?? undefined
         };
       }
+      if (Array.isArray(obj.tweets) && obj.tweets.length > 0) {
+        extra.tweets = obj.tweets
+          .filter((t: unknown) => t && typeof t === "object")
+          .map((t: Record<string, unknown>) => ({
+            url: String(t.url ?? ""),
+            retweets: typeof t.retweets === "number" ? t.retweets : undefined,
+            likes: typeof t.likes === "number" ? t.likes : undefined
+          }))
+          .filter((t: { url: string }) => /\/status\/\d+/.test(t.url));
+      }
+      if (obj.tiktok && typeof obj.tiktok === "object") {
+        const tk = obj.tiktok as Record<string, unknown>;
+        extra.tiktok = {
+          videoUrl: tk.videoUrl ? String(tk.videoUrl) : undefined,
+          author: tk.author ? String(tk.author) : undefined,
+          plays: typeof tk.plays === "number" ? tk.plays : undefined
+        };
+      }
       if (
         (extra.news && extra.news.length) ||
         (extra.comments && extra.comments.length) ||
-        extra.ott
+        extra.ott ||
+        (extra.tweets && extra.tweets.length) ||
+        extra.tiktok
       ) {
         return extra;
       }

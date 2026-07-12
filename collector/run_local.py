@@ -18,6 +18,8 @@ import time
 
 # Pastikan collector memakai mode CDP.
 os.environ.setdefault("BROWSER_CDP", "http://localhost:9222")
+# Di lokal (browser login tersedia) → aktifkan pengambilan tweet teratas X.
+os.environ.setdefault("TWITTER_WITH_TWEETS", "1")
 
 from start_chrome import CANDIDATES  # noqa: E402
 
@@ -69,7 +71,8 @@ def main() -> None:
     try:
         from main import run
 
-        results = run(["tiktok", "instagram"])
+        # X (Twitter) ikut di lokal agar dapat "tweet teratas" (butuh login).
+        results = run(["tiktok", "instagram", "twitter"])
         print("Ringkasan:", results)
     finally:
         if proc:

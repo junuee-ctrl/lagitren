@@ -76,6 +76,20 @@ export interface TrendOtt {
   rank?: string | number;
 }
 
+/** Satu tweet teratas (khusus X/Twitter). */
+export interface TrendTweet {
+  url: string;
+  retweets?: number;
+  likes?: number;
+}
+
+/** Info video representatif (khusus TikTok). */
+export interface TrendTiktok {
+  videoUrl?: string;
+  author?: string;
+  plays?: number;
+}
+
 /** Data konteks kaya yang disimpan di kolom `extra` (JSON). */
 export interface TrendExtra {
   /** Berita terkait teratas (Google Trends). */
@@ -84,6 +98,10 @@ export interface TrendExtra {
   comments?: TrendComment[];
   /** Info OTT (Netflix Top 10). */
   ott?: TrendOtt;
+  /** Tweet teratas (X/Twitter). */
+  tweets?: TrendTweet[];
+  /** Video representatif (TikTok). */
+  tiktok?: TrendTiktok;
 }
 
 export interface PlatformMeta {
