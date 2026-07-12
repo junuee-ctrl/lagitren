@@ -28,7 +28,7 @@ export default function TrendListItem({
   return (
     <Link
       href={href}
-      className="group flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-3 transition hover:border-brand/50 hover:shadow-sm"
+      className="group flex min-w-0 items-center gap-3 rounded-xl border border-gray-200 bg-white p-3 transition hover:border-brand/50 hover:shadow-sm"
     >
       <span
         className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white"
