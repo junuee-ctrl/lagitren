@@ -67,7 +67,9 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
 
         count = db.save_trends(platform, trends)
         log.info("%s: %d item tersimpan.", platform, count)
-        db.log_run(platform, "ok", count, "sukses", started)
+        dbg = getattr(module, "LAST_DEBUG", "") or ""
+        msg = f"sukses · {dbg}" if dbg else "sukses"
+        db.log_run(platform, "ok", count, msg[:400], started)
         return count
     except Exception as exc:
         log.exception("%s gagal: %s", platform, exc)
