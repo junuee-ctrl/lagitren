@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
 import ThemeToggle from "./ThemeToggle";
+import PlatformIcon from "./PlatformIcon";
 
 export default function Header() {
   return (
@@ -31,11 +32,9 @@ export default function Header() {
               <Link
                 key={key}
                 href={`/${key}`}
-                className="rounded-full px-3 py-1.5 text-sm font-medium text-gray-600 transition hover:bg-gray-100 hover:text-ink dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
+                className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-gray-600 transition hover:bg-gray-100 hover:text-ink dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
               >
-                <span className="mr-1" aria-hidden>
-                  {p.icon}
-                </span>
+                <PlatformIcon platform={key} className="h-4 w-4" />
                 {p.name.split(" ")[0]}
               </Link>
             );

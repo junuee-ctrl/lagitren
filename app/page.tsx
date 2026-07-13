@@ -1,6 +1,7 @@
 import { getHomepageTrends } from "@/lib/db";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
 import PlatformSection from "@/components/PlatformSection";
+import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
 import type { Platform, Trend } from "@/lib/types";
 
@@ -59,7 +60,7 @@ export default async function HomePage() {
                 href={`#${key}`}
                 className="inline-flex items-center gap-1.5 rounded-full bg-white/15 px-3.5 py-1.5 text-sm font-semibold ring-1 ring-white/20 backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/25"
               >
-                <span aria-hidden>{PLATFORMS[key].icon}</span>
+                <PlatformIcon platform={key} className="h-4 w-4" mono />
                 {PLATFORMS[key].name.split(" ")[0]}
               </a>
             ))}

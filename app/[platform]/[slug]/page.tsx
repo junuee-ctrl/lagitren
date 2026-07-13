@@ -13,6 +13,7 @@ import AffiliateBox from "@/components/AffiliateBox";
 import SearchVolumeChart from "@/components/SearchVolumeChart";
 import GoogleTrendsWidget from "@/components/GoogleTrendsWidget";
 import TrendContext from "@/components/TrendContext";
+import PlatformIcon from "@/components/PlatformIcon";
 
 export const revalidate = 300;
 
@@ -98,10 +99,11 @@ export default async function TrendDetailPage({
       {/* Judul */}
       <header className="mb-4">
         <span
-          className="inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold text-white"
+          className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold text-white"
           style={{ backgroundColor: meta.color }}
         >
-          <span aria-hidden>{meta.icon}</span> {meta.name}
+          <PlatformIcon platform={platform} className="h-3 w-3" mono />
+          {meta.name}
         </span>
         <h1 className="mt-2 text-2xl font-extrabold leading-tight text-ink sm:text-3xl">
           {trend.title}

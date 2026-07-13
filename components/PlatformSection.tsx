@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Platform, Trend } from "@/lib/types";
 import { PLATFORMS } from "@/lib/platforms";
 import TrendListItem from "./TrendListItem";
+import PlatformIcon from "./PlatformIcon";
 
 /**
  * Section satu platform: judul + daftar ringkas.
@@ -25,15 +26,14 @@ export default function PlatformSection({
       <div className="mb-3.5 flex items-end justify-between gap-3">
         <div className="flex items-center gap-3">
           <span
-            className="grid h-11 w-11 place-items-center rounded-2xl text-xl shadow-sm ring-1 ring-inset"
+            className="grid h-11 w-11 place-items-center rounded-2xl shadow-sm ring-1 ring-inset"
             style={{
               backgroundColor: `${meta.color}1f`,
-              color: meta.color,
               boxShadow: `0 4px 14px ${meta.color}22`
             }}
             aria-hidden
           >
-            {meta.icon}
+            <PlatformIcon platform={platform} className="h-5 w-5" />
           </span>
           <div>
             <h2 className="text-lg font-extrabold tracking-tight text-ink dark:text-white sm:text-xl">

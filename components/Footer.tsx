@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
+import PlatformIcon from "./PlatformIcon";
 
 const LEGAL = [
   { href: "/arsip", label: "Arsip Tren" },
@@ -42,8 +43,12 @@ export default function Footer() {
           <ul className="mt-3 space-y-2 text-sm">
             {PLATFORM_ORDER.map((key) => (
               <li key={key}>
-                <Link href={`/${key}`} className="link-quiet">
-                  {PLATFORMS[key].icon} {PLATFORMS[key].name}
+                <Link
+                  href={`/${key}`}
+                  className="link-quiet inline-flex items-center gap-2"
+                >
+                  <PlatformIcon platform={key} className="h-3.5 w-3.5" />
+                  {PLATFORMS[key].name}
                 </Link>
               </li>
             ))}

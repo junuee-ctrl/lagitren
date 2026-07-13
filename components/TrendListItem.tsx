@@ -4,6 +4,7 @@ import type { Trend } from "@/lib/types";
 import { PLATFORMS } from "@/lib/platforms";
 import { slugFromId } from "@/lib/embed";
 import { formatMetric } from "@/lib/format";
+import PlatformIcon from "./PlatformIcon";
 
 /**
  * Baris list ringkas untuk homepage & halaman platform.
@@ -56,8 +57,12 @@ export default function TrendListItem({
         </h3>
         <p className="mt-0.5 truncate text-xs text-gray-500 dark:text-gray-400">
           {showPlatform && (
-            <span className="mr-1 font-medium" style={{ color: meta.color }}>
-              {meta.icon} {meta.name} ·
+            <span
+              className="mr-1 inline-flex items-center gap-1 align-middle font-medium"
+              style={{ color: meta.color }}
+            >
+              <PlatformIcon platform={trend.platform} className="h-3 w-3" />
+              {meta.name} ·
             </span>
           )}
           {metric}

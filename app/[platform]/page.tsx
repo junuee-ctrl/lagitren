@@ -4,6 +4,7 @@ import { getTrendsByPlatform } from "@/lib/db";
 import { PLATFORMS, PLATFORM_ORDER, getPlatform } from "@/lib/platforms";
 import PlatformSection from "@/components/PlatformSection";
 import NetflixSplit from "@/components/NetflixSplit";
+import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
 import type { Platform } from "@/lib/types";
 
@@ -62,9 +63,9 @@ export default async function PlatformPage({
         className="mb-6 rounded-2xl p-6 text-white"
         style={{ backgroundColor: meta.color }}
       >
-        <h1 className="text-2xl font-extrabold sm:text-3xl">
-          <span className="mr-2" aria-hidden>
-            {meta.icon}
+        <h1 className="flex items-center gap-2.5 text-2xl font-extrabold sm:text-3xl">
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur">
+            <PlatformIcon platform={platform} className="h-5 w-5" mono />
           </span>
           {meta.name} Indonesia
         </h1>
@@ -107,9 +108,10 @@ export default async function PlatformPage({
             <a
               key={k}
               href={`/${k}`}
-              className="rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-600 transition hover:border-brand hover:text-brand"
+              className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-600 transition hover:border-brand hover:text-brand dark:border-white/10 dark:bg-night-card dark:text-gray-300 dark:hover:border-brand"
             >
-              {PLATFORMS[k].icon} {PLATFORMS[k].name}
+              <PlatformIcon platform={k} className="h-4 w-4" />
+              {PLATFORMS[k].name}
             </a>
           ))}
         </div>
