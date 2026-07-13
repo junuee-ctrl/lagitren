@@ -60,19 +60,29 @@ export default async function PlatformPage({
       </nav>
 
       <header
-        className="mb-6 rounded-2xl p-6 text-white"
-        style={{ backgroundColor: meta.color }}
+        className="relative mb-6 overflow-hidden rounded-3xl p-6 text-white shadow-lg sm:p-8"
+        style={{
+          backgroundImage: `linear-gradient(135deg, ${meta.color} 0%, ${meta.color}cc 55%, ${meta.color}99 100%)`
+        }}
       >
-        <h1 className="flex items-center gap-2.5 text-2xl font-extrabold sm:text-3xl">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-white/20 backdrop-blur">
-            <PlatformIcon platform={platform} className="h-5 w-5" mono />
-          </span>
-          {meta.name} Indonesia
-        </h1>
-        <p className="mt-1 text-sm text-white/90">Hari ini · {today}</p>
-        <p className="mt-3 max-w-2xl text-sm text-white/90">
-          {meta.description}
-        </p>
+        <div
+          className="pointer-events-none absolute -right-12 -top-12 h-48 w-48 rounded-full bg-white/15 blur-2xl"
+          aria-hidden
+        />
+        <div className="relative">
+          <h1 className="flex items-center gap-3 text-2xl font-extrabold sm:text-3xl">
+            <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-white/20 backdrop-blur">
+              <PlatformIcon platform={platform} className="h-6 w-6" mono />
+            </span>
+            {meta.name} Indonesia
+          </h1>
+          <p className="mt-2 text-sm font-medium text-white/80">
+            Hari ini · {today}
+          </p>
+          <p className="mt-3 max-w-2xl text-sm text-white/90">
+            {meta.description}
+          </p>
+        </div>
       </header>
 
       <AdSlot slot={`${platform}-top`} />
@@ -84,14 +94,14 @@ export default async function PlatformPage({
           <PlatformSection platform={platform} trends={trends} showAll />
         )
       ) : (
-        <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center">
+        <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center dark:border-white/15 dark:bg-night-card">
           <p className="text-3xl" aria-hidden>
             ⏳
           </p>
-          <p className="mt-2 font-semibold text-ink">
+          <p className="mt-2 font-semibold text-ink dark:text-white">
             Data {meta.name} sedang dikumpulkan
           </p>
-          <p className="mt-1 text-sm text-gray-500">
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
             Tren untuk platform ini akan segera muncul di sini. Coba lagi
             beberapa saat lagi.
           </p>
@@ -99,8 +109,8 @@ export default async function PlatformPage({
       )}
 
       {/* Navigasi ke platform lain */}
-      <section className="mt-10 border-t border-gray-200 pt-6">
-        <h2 className="mb-3 text-sm font-semibold text-gray-500">
+      <section className="mt-10 border-t border-gray-200 pt-6 dark:border-white/10">
+        <h2 className="mb-3 text-sm font-semibold text-gray-500 dark:text-gray-400">
           Platform lainnya
         </h2>
         <div className="flex flex-wrap gap-2">

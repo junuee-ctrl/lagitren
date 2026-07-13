@@ -8,10 +8,12 @@ import type { Trend } from "@/lib/types";
 export default function AffiliateBox({ trend }: { trend: Trend }) {
   const href = trend.affiliateUrl ?? trend.url;
   return (
-    <div className="mt-3 rounded-xl border border-shopee/30 bg-shopee/5 p-3">
+    <div className="mt-3 rounded-xl border border-shopee/30 bg-shopee/5 p-3 dark:border-shopee/40 dark:bg-shopee/10">
       <p className="text-xs font-semibold text-shopee">🛒 Produk terkait</p>
       {trend.price && (
-        <p className="mt-1 text-sm font-semibold text-ink">{trend.price}</p>
+        <p className="mt-1 text-sm font-semibold text-ink dark:text-white">
+          {trend.price}
+        </p>
       )}
       <a
         href={href}

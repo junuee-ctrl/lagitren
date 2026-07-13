@@ -301,7 +301,39 @@ export const MOCK_TRENDS: Trend[] = [
     url: "https://twitter.com/search?q=konser",
     hashtags: ["konser", "tiket", "jakarta"],
     collectedAt: now
-  }
+  },
+
+  // ── Netflix Top 10 (contoh) ────────────────────────────────────
+  ...(
+    [
+      ["Film", "Kafir: The Spirit Gate", 6.4, 2],
+      ["Film", "Balas Budi", 6.0, 1],
+      ["Film", "Timur", 7.1, 3],
+      ["Film", "Agak Laen", 7.8, 5],
+      ["Film", "Ghost Island", 5.9, 1],
+      ["Serial TV", "Terikat Janji", 7.2, 4],
+      ["Serial TV", "Avatar: The Last Airbender", 8.1, 2],
+      ["Serial TV", "Juvenile Justice", 8.0, 3]
+    ] as [string, string, number, number][]
+  ).map(([kind, title, rating, weeks], i) => ({
+    id: `netflix:${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
+    platform: "netflix" as const,
+    rank: i + 1,
+    title,
+    subtitle: `${kind} · ⭐ ${rating} · ${weeks} mgg di Top 10`,
+    url: `https://www.netflix.com/id/search?q=${encodeURIComponent(title)}`,
+    source: "Netflix Indonesia",
+    aiSummary: `${title} sedang ramai ditonton di Netflix Indonesia minggu ini.`,
+    extra: {
+      ott: {
+        kind,
+        rating,
+        weeks,
+        synopsis: `Sinopsis singkat untuk ${title}. Konten ini masuk Top 10 Netflix Indonesia.`
+      }
+    },
+    collectedAt: now
+  }))
 ];
 
 export function mockTrendsByPlatform(platform: string): Trend[] {
