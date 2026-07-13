@@ -12,25 +12,33 @@ const LEGAL = [
 
 export default function Footer() {
   return (
-    <footer className="mt-12 border-t border-gray-200 bg-white">
+    <footer className="mt-14 border-t border-gray-200 bg-white dark:border-white/10 dark:bg-night-card">
       <div className="container-page grid gap-8 py-10 sm:grid-cols-3">
         <div>
           <div className="flex items-center gap-2">
-            <span className="text-xl" aria-hidden>
+            <span
+              className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-accent text-base"
+              aria-hidden
+            >
               🔥
             </span>
-            <span className="text-lg font-extrabold">
-              Lagi <span className="text-brand">Tren</span>
+            <span className="text-lg font-extrabold dark:text-white">
+              Lagi{" "}
+              <span className="bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent">
+                Tren
+              </span>
             </span>
           </div>
-          <p className="mt-3 max-w-xs text-sm text-gray-500">
+          <p className="mt-3 max-w-xs text-sm text-gray-500 dark:text-gray-400">
             Rekomendasi, review, dan info terbaru yang lagi tren di Indonesia —
             dari berbagai platform, dalam satu halaman.
           </p>
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-ink">Platform</h3>
+          <h3 className="text-sm font-semibold text-ink dark:text-white">
+            Platform
+          </h3>
           <ul className="mt-3 space-y-2 text-sm">
             {PLATFORM_ORDER.map((key) => (
               <li key={key}>
@@ -43,7 +51,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h3 className="text-sm font-semibold text-ink">Informasi</h3>
+          <h3 className="text-sm font-semibold text-ink dark:text-white">
+            Informasi
+          </h3>
           <ul className="mt-3 space-y-2 text-sm">
             {LEGAL.map((l) => (
               <li key={l.href}>
@@ -56,8 +66,8 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-gray-100">
-        <div className="container-page flex flex-col items-center justify-between gap-2 py-4 text-xs text-gray-400 sm:flex-row">
+      <div className="border-t border-gray-100 dark:border-white/10">
+        <div className="container-page flex flex-col items-center justify-between gap-2 py-4 text-xs text-gray-400 dark:text-gray-500 sm:flex-row">
           <p>© 2026 Lagi Tren. Semua tren milik platform masing-masing.</p>
           <p>lagitren.id</p>
         </div>

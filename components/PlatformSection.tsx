@@ -21,33 +21,49 @@ export default function PlatformSection({
   if (trends.length === 0) return null;
 
   return (
-    <section id={platform} className="scroll-mt-20 py-4">
-      <div className="mb-3 flex items-end justify-between gap-3">
-        <div>
-          <h2 className="flex items-center gap-2 text-lg font-extrabold text-ink sm:text-xl">
-            <span
-              className="inline-flex h-8 w-8 items-center justify-center rounded-lg text-lg"
-              style={{ backgroundColor: `${meta.color}1a`, color: meta.color }}
-              aria-hidden
-            >
-              {meta.icon}
-            </span>
-            {meta.sectionTitle}
-          </h2>
-          <p className="mt-0.5 text-xs text-gray-400">{meta.refresh}</p>
+    <section id={platform} className="scroll-mt-20 py-5">
+      <div className="mb-3.5 flex items-end justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <span
+            className="grid h-11 w-11 place-items-center rounded-2xl text-xl shadow-sm ring-1 ring-inset"
+            style={{
+              backgroundColor: `${meta.color}1f`,
+              color: meta.color,
+              boxShadow: `0 4px 14px ${meta.color}22`
+            }}
+            aria-hidden
+          >
+            {meta.icon}
+          </span>
+          <div>
+            <h2 className="text-lg font-extrabold tracking-tight text-ink dark:text-white sm:text-xl">
+              {meta.sectionTitle}
+            </h2>
+            <p className="mt-0.5 flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500">
+              <span
+                className="inline-block h-1.5 w-1.5 rounded-full"
+                style={{ backgroundColor: meta.color }}
+                aria-hidden
+              />
+              {meta.refresh}
+            </p>
+          </div>
         </div>
 
         {!showAll && (
           <Link
             href={`/${platform}`}
-            className="shrink-0 text-sm font-semibold text-brand hover:underline"
+            className="group shrink-0 rounded-full px-3 py-1.5 text-sm font-semibold text-brand transition hover:bg-brand/10 dark:hover:bg-brand/15"
           >
-            Lihat semua →
+            Lihat semua{" "}
+            <span className="inline-block transition group-hover:translate-x-0.5">
+              →
+            </span>
           </Link>
         )}
       </div>
 
-      <div className="grid gap-2 sm:grid-cols-2">
+      <div className="grid gap-2.5 sm:grid-cols-2">
         {trends.map((t) => (
           <TrendListItem key={t.id} trend={t} />
         ))}

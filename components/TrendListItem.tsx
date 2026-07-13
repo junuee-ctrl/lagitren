@@ -28,11 +28,14 @@ export default function TrendListItem({
   return (
     <Link
       href={href}
-      className="group flex min-w-0 items-center gap-3 rounded-xl border border-gray-200 bg-white p-3 transition hover:border-brand/50 hover:shadow-sm"
+      className="group flex min-w-0 items-center gap-3 rounded-2xl border border-gray-200 bg-white p-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand/40 hover:shadow-md hover:shadow-brand/5 dark:border-white/10 dark:bg-night-card dark:hover:border-brand/40"
     >
       <span
-        className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-bold text-white"
-        style={{ backgroundColor: meta.color }}
+        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl text-xs font-extrabold text-white shadow-sm"
+        style={{
+          backgroundColor: meta.color,
+          boxShadow: `0 3px 10px ${meta.color}40`
+        }}
         aria-hidden
       >
         {trend.rank}
@@ -43,17 +46,17 @@ export default function TrendListItem({
           src={trend.thumbnail}
           alt=""
           loading="lazy"
-          className="h-12 w-16 shrink-0 rounded-md object-cover"
+          className="h-12 w-16 shrink-0 rounded-lg object-cover ring-1 ring-black/5 dark:ring-white/10"
         />
       )}
 
       <div className="min-w-0 flex-1">
-        <h3 className="truncate text-sm font-semibold text-ink group-hover:text-brand">
+        <h3 className="truncate text-sm font-semibold text-ink transition-colors group-hover:text-brand dark:text-gray-100">
           {trend.title}
         </h3>
-        <p className="mt-0.5 truncate text-xs text-gray-500">
+        <p className="mt-0.5 truncate text-xs text-gray-500 dark:text-gray-400">
           {showPlatform && (
-            <span className="mr-1" style={{ color: meta.color }}>
+            <span className="mr-1 font-medium" style={{ color: meta.color }}>
               {meta.icon} {meta.name} ·
             </span>
           )}
@@ -63,7 +66,7 @@ export default function TrendListItem({
       </div>
 
       <span
-        className="shrink-0 text-gray-300 transition group-hover:translate-x-0.5 group-hover:text-brand"
+        className="shrink-0 text-gray-300 transition group-hover:translate-x-0.5 group-hover:text-brand dark:text-gray-600"
         aria-hidden
       >
         →
