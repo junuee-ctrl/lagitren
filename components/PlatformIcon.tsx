@@ -4,9 +4,9 @@ import {
   SiTiktok,
   SiInstagram,
   SiNetflix,
-  SiShopee,
   SiX
 } from "react-icons/si";
+import { HiShoppingBag } from "react-icons/hi2";
 import type { IconType } from "react-icons";
 import type { Platform } from "@/lib/types";
 import { PLATFORMS } from "@/lib/platforms";
@@ -17,7 +17,8 @@ const ICONS: Record<Platform, IconType> = {
   tiktok: SiTiktok,
   instagram: SiInstagram,
   netflix: SiNetflix,
-  shopee: SiShopee,
+  // Slot "shopee" kini = Produk Viral (TikTok Shop) → ikon tas belanja.
+  shopee: HiShoppingBag,
   twitter: SiX
 };
 

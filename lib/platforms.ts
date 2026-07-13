@@ -43,13 +43,13 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
   },
   shopee: {
     key: "shopee",
-    name: "Produk Lagi Dicari",
-    icon: "🛒",
-    color: "#EE4D2D",
-    sectionTitle: "Produk Lagi Dicari",
+    name: "Produk Viral",
+    icon: "🛍️",
+    color: "#FE2C55",
+    sectionTitle: "Produk Viral",
     description:
-      "Produk dan kata kunci yang paling banyak dicari di marketplace Indonesia — lengkap dengan tautan untuk cek harga.",
-    refresh: "Diperbarui tiap 3 jam"
+      "Produk terlaris & viral di TikTok Shop / Tokopedia Indonesia — pilihan editor, lengkap dengan tautan belanja.",
+    refresh: "Diperbarui berkala"
   },
   twitter: {
     key: "twitter",

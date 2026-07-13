@@ -46,6 +46,10 @@ SHOPEE_KEYWORDS = [
 # TMDB (poster/sinopsis/rating untuk Netflix Top 10). Gratis di themoviedb.org.
 TMDB_API_KEY = _get("TMDB_API_KEY")
 
+# Google Sheet (CSV publik) berisi produk afiliasi TikTok Shop/Tokopedia.
+# File → Publish to web → CSV → tempel URL-nya di sini.
+SHOPPING_SHEET_CSV = _get("SHOPPING_SHEET_CSV")
+
 # Telegram
 TELEGRAM_BOT_TOKEN = _get("TELEGRAM_BOT_TOKEN")
 TELEGRAM_CHAT_ID = _get("TELEGRAM_CHAT_ID")

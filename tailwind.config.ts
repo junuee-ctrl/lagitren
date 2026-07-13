@@ -32,7 +32,7 @@ const config: Config = {
         youtube: "#FF0000",
         tiktok: "#010101",
         instagram: "#E4405F",
-        shopee: "#EE4D2D",
+        shopee: "#FE2C55", // slot Produk Viral (TikTok Shop)
         twitter: "#000000",
         netflix: "#E50914"
       },

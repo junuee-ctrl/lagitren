@@ -27,6 +27,8 @@ jobs:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
       SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
+      # Link CSV Google Sheet berisi produk afiliasi TikTok Shop (publik).
+      SHOPPING_SHEET_CSV: ${{ vars.SHOPPING_SHEET_CSV }}
       GEO: "ID"
       LANG: "id"
       USE_OLLAMA: "0" # tidak ada Ollama di cloud → pakai Claude/heuristik
