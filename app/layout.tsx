@@ -68,8 +68,10 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
+        {/* Century Gothic itu font berbayar → tak bisa di-embed. Muat Jost
+            (geometrik, mirip) sebagai fallback untuk yang tak punya CG. */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap"
           rel="stylesheet"
         />
         {ADSENSE_CLIENT && (

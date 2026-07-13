@@ -37,7 +37,14 @@ const config: Config = {
         netflix: "#E50914"
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"]
+        // Century Gothic bila terpasang → jika tidak, fallback geometrik (Jost).
+        sans: [
+          "Century Gothic",
+          "Jost",
+          "URW Gothic",
+          "system-ui",
+          "sans-serif"
+        ]
       },
       maxWidth: {
         content: "1120px"

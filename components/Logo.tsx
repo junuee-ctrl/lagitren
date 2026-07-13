@@ -46,7 +46,9 @@ export default function Logo({
         className={`font-extrabold lowercase leading-none tracking-tight ${textClass}`}
       >
         <span className="text-ink dark:text-white">lagi </span>
-        <span className="text-brand">tren.id</span>
+        <span className="text-brand">tren</span>
+        <span className="text-ink dark:text-white">.</span>
+        <span className="text-brand">id</span>
       </span>
     </span>
   );
