@@ -2,24 +2,14 @@ import Link from "next/link";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
 import ThemeToggle from "./ThemeToggle";
 import PlatformIcon from "./PlatformIcon";
+import Logo from "./Logo";
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-gray-200/80 bg-white/80 backdrop-blur-md dark:border-white/10 dark:bg-night/80">
       <div className="container-page flex h-16 items-center justify-between gap-3">
-        <Link href="/" className="flex shrink-0 items-center gap-2">
-          <span
-            className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand to-accent text-lg shadow-sm shadow-brand/30"
-            aria-hidden
-          >
-            🔥
-          </span>
-          <span className="text-xl font-extrabold tracking-tight">
-            Lagi{" "}
-            <span className="bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent">
-              Tren
-            </span>
-          </span>
+        <Link href="/" className="shrink-0" aria-label="Lagi Tren — beranda">
+          <Logo textClass="text-lg sm:text-xl" />
         </Link>
 
         <nav

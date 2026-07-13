@@ -23,7 +23,7 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative mb-6 overflow-hidden rounded-[28px] bg-gradient-to-br from-brand via-accent to-accent-grape px-6 py-11 text-white shadow-xl shadow-brand/20 sm:px-10 sm:py-16">
+      <section className="relative mb-6 overflow-hidden rounded-[28px] bg-gradient-to-br from-brand via-accent-grape to-accent px-6 py-11 text-white shadow-xl shadow-brand/20 sm:px-10 sm:py-16">
         {/* Blob dekoratif */}
         <div
           className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/20 blur-3xl"

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
 import PlatformIcon from "./PlatformIcon";
+import Logo from "./Logo";
 
 const LEGAL = [
   { href: "/arsip", label: "Arsip Tren" },
@@ -16,20 +17,7 @@ export default function Footer() {
     <footer className="mt-14 border-t border-gray-200 bg-white dark:border-white/10 dark:bg-night-card">
       <div className="container-page grid gap-8 py-10 sm:grid-cols-3">
         <div>
-          <div className="flex items-center gap-2">
-            <span
-              className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-brand to-accent text-base"
-              aria-hidden
-            >
-              🔥
-            </span>
-            <span className="text-lg font-extrabold dark:text-white">
-              Lagi{" "}
-              <span className="bg-gradient-to-r from-brand to-accent bg-clip-text text-transparent">
-                Tren
-              </span>
-            </span>
-          </div>
+          <Logo textClass="text-lg" />
           <p className="mt-3 max-w-xs text-sm text-gray-500 dark:text-gray-400">
             Rekomendasi, review, dan info terbaru yang lagi tren di Indonesia —
             dari berbagai platform, dalam satu halaman.

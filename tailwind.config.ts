@@ -10,14 +10,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Warna brand mengikuti logo: magenta + teal.
         brand: {
-          DEFAULT: "#FF6B00",
-          dark: "#E85D00",
-          light: "#FF8A33"
+          DEFAULT: "#E6007A",
+          dark: "#C60068",
+          light: "#FF3DA6"
         },
         accent: {
-          DEFAULT: "#FF2E7E", // pink playful untuk gradasi & aksen
-          grape: "#7C5CFC"
+          DEFAULT: "#00C9B1", // teal dari logo
+          grape: "#8B3DD6" // ungu jembatan untuk gradasi
         },
         ink: "#111827",
         surface: "#F7F7FB",
