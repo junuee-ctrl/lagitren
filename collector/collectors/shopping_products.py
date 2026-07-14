@@ -17,6 +17,7 @@ from __future__ import annotations
 import csv
 import io
 import logging
+import os
 import re
 
 import requests
@@ -79,21 +80,34 @@ def _get(row: dict, *keys: str) -> str:
     return ""
 
 
+def _load_csv_text() -> tuple[str | None, str]:
+    """Sumber produk: Google Sheet (bila SHOPPING_SHEET_CSV diisi) → else file
+    lokal repo (collector/products.csv). Kembalikan (teks, sumber)."""
+    url = config.SHOPPING_SHEET_CSV
+    if url:
+        try:
+            r = requests.get(
+                url, timeout=30, headers={"User-Agent": config.USER_AGENT}
+            )
+            r.raise_for_status()
+            return r.text, "google-sheet"
+        except Exception as exc:
+            log.error("Shopping: gagal ambil sheet: %s", exc)
+            return None, f"gagal ambil sheet: {exc}"
+    # Fallback: file lokal yang di-commit di repo.
+    local = os.path.join(os.path.dirname(__file__), "..", "products.csv")
+    if os.path.exists(local):
+        with open(local, encoding="utf-8-sig") as f:
+            return f.read(), "products.csv lokal"
+    return None, "tidak ada sumber produk (SHOPPING_SHEET_CSV / products.csv)"
+
+
 def collect() -> list[Trend]:
     global LAST_DEBUG
-    url = config.SHOPPING_SHEET_CSV
-    if not url:
-        LAST_DEBUG = "SHOPPING_SHEET_CSV belum diisi (link CSV Google Sheet)"
+    text, source = _load_csv_text()
+    if not text:
+        LAST_DEBUG = source
         log.info("Shopping: %s — dilewati.", LAST_DEBUG)
-        return []
-
-    try:
-        r = requests.get(url, timeout=30, headers={"User-Agent": config.USER_AGENT})
-        r.raise_for_status()
-        text = r.text
-    except Exception as exc:
-        LAST_DEBUG = f"gagal ambil sheet: {exc}"
-        log.error("Shopping: %s", LAST_DEBUG)
         return []
 
     rows = list(csv.DictReader(io.StringIO(text)))
@@ -153,6 +167,6 @@ def collect() -> list[Trend]:
         return []
 
     trends.sort(key=lambda x: x.rank)
-    LAST_DEBUG = f"{len(trends)} produk dari Google Sheet"
-    log.info("Shopping (TikTok Shop): %d produk.", len(trends))
+    LAST_DEBUG = f"{len(trends)} produk ({source})"
+    log.info("Shopping (TikTok Shop): %d produk (%s).", len(trends), source)
     return trends
