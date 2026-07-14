@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import type { Trend } from "@/lib/types";
-import { PLATFORMS } from "@/lib/platforms";
+import { PLATFORMS, platformHref } from "@/lib/platforms";
 import { slugFromId } from "@/lib/embed";
 import { formatMetric } from "@/lib/format";
 import PlatformIcon from "./PlatformIcon";
@@ -19,7 +19,7 @@ export default function TrendListItem({
   showPlatform?: boolean;
 }) {
   const meta = PLATFORMS[trend.platform];
-  const href = `/${trend.platform}/${slugFromId(trend.id)}`;
+  const href = `${platformHref(trend.platform)}/${slugFromId(trend.id)}`;
   const metric =
     trend.subtitle ||
     (trend.metric != null

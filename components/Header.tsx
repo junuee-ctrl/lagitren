@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
+import { PLATFORM_ORDER, PLATFORMS, platformHref } from "@/lib/platforms";
 import ThemeToggle from "./ThemeToggle";
 import PlatformIcon from "./PlatformIcon";
 import Logo from "./Logo";
@@ -21,7 +21,7 @@ export default function Header() {
             return (
               <Link
                 key={key}
-                href={`/${key}`}
+                href={platformHref(key)}
                 className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-medium text-gray-600 transition hover:bg-gray-100 hover:text-ink dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-white"
               >
                 <PlatformIcon platform={key} className="h-4 w-4" />

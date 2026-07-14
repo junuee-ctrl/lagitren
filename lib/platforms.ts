@@ -84,6 +84,29 @@ export const PLATFORM_ORDER: Platform[] = [
   "shopee"
 ];
 
+/**
+ * Slug URL khusus yang berbeda dari key internal.
+ * Key internal "shopee" dipakai DB & collector, tapi URL publik = "/produk"
+ * supaya cocok dengan label menu "Produk".
+ */
+export const PLATFORM_SLUG: Partial<Record<Platform, string>> = {
+  shopee: "produk"
+};
+
+/** Href halaman platform untuk navigasi (pakai slug publik bila ada). */
+export function platformHref(key: Platform): string {
+  return `/${PLATFORM_SLUG[key] ?? key}`;
+}
+
+/** Key internal dari slug URL ("produk" -> "shopee"). Menerima juga key asli. */
+export function keyFromSlug(slug: string): Platform | undefined {
+  for (const k of Object.keys(PLATFORM_SLUG) as Platform[]) {
+    if (PLATFORM_SLUG[k] === slug) return k;
+  }
+  return slug in PLATFORMS ? (slug as Platform) : undefined;
+}
+
 export function getPlatform(key: string): PlatformMeta | undefined {
-  return PLATFORMS[key as Platform];
+  const k = keyFromSlug(key);
+  return k ? PLATFORMS[k] : undefined;
 }

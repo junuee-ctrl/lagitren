@@ -42,3 +42,12 @@ collector/.venv/
 collector/*.log
 collector/.browser_profile/
 collector/tiktok_debug.png
+
+# --- cowork cleanup ---
+collector/.ig_profile/
+.next/
+collector/.next/
+cloudflare_api.txt
+git-update.bat
+cleanup-all.bat
+*-log.txt

@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTrendsByPlatform } from "@/lib/db";
-import { PLATFORMS, PLATFORM_ORDER, getPlatform } from "@/lib/platforms";
+import {
+  PLATFORMS,
+  PLATFORM_ORDER,
+  PLATFORM_SLUG,
+  getPlatform,
+  platformHref
+} from "@/lib/platforms";
 import PlatformSection from "@/components/PlatformSection";
 import NetflixSplit from "@/components/NetflixSplit";
 import PlatformIcon from "@/components/PlatformIcon";
@@ -11,7 +17,9 @@ import type { Platform } from "@/lib/types";
 export const revalidate = 300; // 5 menit
 
 export function generateStaticParams() {
-  return PLATFORM_ORDER.map((platform) => ({ platform }));
+  return PLATFORM_ORDER.map((platform) => ({
+    platform: PLATFORM_SLUG[platform] ?? platform
+  }));
 }
 
 const DATE_ID = new Intl.DateTimeFormat("id-ID", {
@@ -33,7 +41,7 @@ export function generateMetadata({
   return {
     title,
     description: meta.description,
-    alternates: { canonical: `/${meta.key}` },
+    alternates: { canonical: platformHref(meta.key) },
     openGraph: { title: `${title} · Lagi Tren`, description: meta.description }
   };
 }
@@ -117,7 +125,7 @@ export default async function PlatformPage({
           {PLATFORM_ORDER.filter((k) => k !== platform).map((k) => (
             <a
               key={k}
-              href={`/${k}`}
+              href={platformHref(k)}
               className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-3 py-1.5 text-sm font-medium text-gray-600 transition hover:border-brand hover:text-brand dark:border-white/10 dark:bg-night-card dark:text-gray-300 dark:hover:border-brand"
             >
               <PlatformIcon platform={k} className="h-4 w-4" />

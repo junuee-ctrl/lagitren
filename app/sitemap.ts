@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { PLATFORM_ORDER } from "@/lib/platforms";
+import { PLATFORM_ORDER, platformHref } from "@/lib/platforms";
 import { getSitemapTrends } from "@/lib/db";
 import { slugFromId } from "@/lib/embed";
 
@@ -27,7 +27,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const platformPages: MetadataRoute.Sitemap = PLATFORM_ORDER.map((p) => ({
-    url: `${SITE_URL}/${p}`,
+    url: `${SITE_URL}${platformHref(p)}`,
     lastModified: now,
     changeFrequency: "hourly",
     priority: 0.8
@@ -40,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const seen = new Set<string>();
     detailPages = trends
       .map((t) => {
-        const url = `${SITE_URL}/${t.platform}/${slugFromId(t.id)}`;
+        const url = `${SITE_URL}${platformHref(t.platform)}/${slugFromId(t.id)}`;
         if (seen.has(url)) return null;
         seen.add(url);
         const lm = new Date(t.collectedAt);

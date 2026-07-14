@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
+import { PLATFORM_ORDER, PLATFORMS, platformHref } from "@/lib/platforms";
 import PlatformIcon from "./PlatformIcon";
 import Logo from "./Logo";
 
@@ -32,7 +32,7 @@ export default function Footer() {
             {PLATFORM_ORDER.map((key) => (
               <li key={key}>
                 <Link
-                  href={`/${key}`}
+                  href={platformHref(key)}
                   className="link-quiet inline-flex items-center gap-2"
                 >
                   <PlatformIcon platform={key} className="h-3.5 w-3.5" />

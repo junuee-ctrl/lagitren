@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTrendById, getRelatedTrends, getTrendsByPlatform } from "@/lib/db";
-import { getPlatform } from "@/lib/platforms";
+import { getPlatform, platformHref } from "@/lib/platforms";
 import { relatedProducts } from "@/lib/shopping";
 import RelatedProducts from "@/components/RelatedProducts";
 import { SOURCE_LABEL, canEmbed } from "@/lib/embed";
@@ -51,7 +51,7 @@ export async function generateMetadata({
   return {
     title,
     description: desc,
-    alternates: { canonical: `/${meta.key}/${params.slug}` },
+    alternates: { canonical: `${platformHref(meta.key)}/${params.slug}` },
     keywords: [
       trend.title,
       `${trend.title} ${meta.name}`,
@@ -96,7 +96,7 @@ export default async function TrendDetailPage({
           Beranda
         </Link>{" "}
         /{" "}
-        <Link href={`/${platform}`} className="hover:text-brand">
+        <Link href={platformHref(platform)} className="hover:text-brand">
           {meta.name}
         </Link>{" "}
         /{" "}
@@ -134,7 +134,7 @@ export default async function TrendDetailPage({
             <strong>{formatDateID(trend.collectedAt)}</strong>.
           </span>
           <Link
-            href={`/${platform}`}
+            href={platformHref(platform)}
             className="font-semibold text-brand hover:underline"
           >
             Lihat yang lagi tren →
@@ -239,7 +239,7 @@ export default async function TrendDetailPage({
           <h2 className="mb-3 flex items-center justify-between text-lg font-extrabold text-ink dark:text-white">
             <span>Lagi tren di {meta.name}</span>
             <Link
-              href={`/${platform}`}
+              href={platformHref(platform)}
               className="text-sm font-semibold text-brand hover:underline"
             >
               Lihat semua →
