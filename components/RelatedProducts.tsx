@@ -1,6 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Trend } from "@/lib/types";
 
+// Ubin cadangan saat gambar produk belum ada: emoji + gradien per kategori,
+// supaya kartu tetap terlihat rapi (bukan kotak abu-abu kosong).
+const CAT_TILE: Record<string, { emoji: string; from: string; to: string }> = {
+  beauty: { emoji: "💄", from: "#FF7AB6", to: "#E6007A" },
+  fashion: { emoji: "👗", from: "#8B3DD6", to: "#5B21B6" },
+  gadget: { emoji: "🎮", from: "#38BDF8", to: "#2563EB" },
+  food: { emoji: "🍜", from: "#FBBF24", to: "#EA580C" },
+  home: { emoji: "🏠", from: "#34D399", to: "#059669" },
+  health: { emoji: "🩺", from: "#2DD4BF", to: "#0D9488" },
+  mom_baby: { emoji: "🍼", from: "#FDA4AF", to: "#E11D48" }
+};
+
+function tileFor(trend: Trend) {
+  const key = (trend.hashtags?.[0] || "").toLowerCase();
+  return CAT_TILE[key] ?? { emoji: "🛍️", from: "#FE5C8D", to: "#FE2C55" };
+}
+
 /**
  * Produk afiliasi TikTok Shop yang relevan dengan tren (dicocokkan kategori).
  * Muncul di halaman detail non-produk → peluang belanja yang kontekstual.
@@ -30,9 +47,24 @@ export default function RelatedProducts({ products }: { products: Trend[] }) {
                   className="h-full w-full object-cover"
                 />
               ) : (
-                <div className="flex h-full w-full items-center justify-center p-2 text-center text-[11px] font-medium text-gray-400">
-                  {p.title}
-                </div>
+                (() => {
+                  const t = tileFor(p);
+                  return (
+                    <div
+                      className="flex h-full w-full flex-col items-center justify-center gap-1 p-2 text-center"
+                      style={{
+                        backgroundImage: `linear-gradient(135deg, ${t.from}, ${t.to})`
+                      }}
+                    >
+                      <span className="text-2xl drop-shadow-sm" aria-hidden>
+                        {t.emoji}
+                      </span>
+                      <span className="line-clamp-2 text-[10px] font-semibold leading-tight text-white/95">
+                        {p.title}
+                      </span>
+                    </div>
+                  );
+                })()
               )}
             </div>
             <div className="flex flex-1 flex-col p-2.5">

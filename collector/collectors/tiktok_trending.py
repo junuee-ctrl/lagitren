@@ -24,10 +24,14 @@ log = logging.getLogger("tiktok")
 
 LAST_DEBUG: str = ""
 
-PAGE_URL = (
+# Halaman "Trends" Creative Center (revamp baru). Coba berurutan; pakai yang
+# pertama menghasilkan daftar terpanjang. period=7 → 7 hari terakhir.
+PAGE_URLS = [
+    f"https://ads.tiktok.com/creative/creativeCenter/trends/hashtag?region={config.GEO}&period=7",
     "https://ads.tiktok.com/business/creativecenter/inspiration/popular/"
-    f"hashtag/pc/en?region={config.GEO}"
-)
+    f"hashtag/pc/en?region={config.GEO}",
+]
+PAGE_URL = PAGE_URLS[0]  # kompatibilitas mundur
 API_MARK = "creative_radar_api"
 LIST_MARK = "hashtag/list"
 # Kata kunci untuk mengenali endpoint data trending (struktur situs bisa berubah).
@@ -281,6 +285,23 @@ def _enrich_videos(page, trends: list[Trend]) -> int:
     return enriched
 
 
+def _click_view_more(page) -> None:
+    """Klik tombol 'View More'/'Lihat lebih banyak' bila ada (buka baris terkunci)."""
+    labels = (
+        "View more", "View More", "Load more", "Show more", "See more",
+        "Lihat lebih", "Lihat selengkapnya", "Selengkapnya",
+    )
+    for lbl in labels:
+        try:
+            btn = page.get_by_text(lbl, exact=False).first
+            if btn and btn.is_visible():
+                btn.click(timeout=2000)
+                page.wait_for_timeout(1500)
+                return
+        except Exception:
+            continue
+
+
 def collect(limit: int = 20) -> list[Trend]:
     global LAST_DEBUG
     try:
@@ -350,29 +371,48 @@ def collect(limit: int = 20) -> list[Trend]:
 
             page.on("request", on_request)
             page.on("response", on_response)
-            page.goto(PAGE_URL, wait_until="load", timeout=60000)
-            _browser.accept_cookies(page)
-            log.info("URL akhir halaman: %s", page.url)
 
-            # Poll sampai ~30 dtk: SPA butuh waktu memanggil API; scroll berkala.
-            for _ in range(10):
-                if any((c.get("data") or {}).get("list") for c in captured):
-                    break
-                page.wait_for_timeout(3000)
+            def _best_len() -> int:
+                return max(
+                    (len((c.get("data") or {}).get("list") or [])
+                     for c in captured if isinstance(c, dict)),
+                    default=0,
+                )
+
+            # Coba tiap halaman Trends; berhenti begitu daftar cukup panjang.
+            for url in PAGE_URLS:
                 try:
-                    page.mouse.wheel(0, 1500)
-                except Exception:
-                    pass
+                    page.goto(url, wait_until="load", timeout=60000)
+                except Exception as exc:
+                    log.info("TikTok goto gagal (%s): %s", url, exc)
+                    continue
+                _browser.accept_cookies(page)
+                log.info("URL akhir halaman: %s", page.url)
 
-            # Parse daftar hashtag (browser MASIH terbuka untuk enrich video).
+                # Poll ~45 dtk: SPA butuh waktu; scroll + klik "load more".
+                for _ in range(15):
+                    if _best_len() >= 10:
+                        break
+                    page.wait_for_timeout(3000)
+                    try:
+                        page.mouse.wheel(0, 1800)
+                    except Exception:
+                        pass
+                    _click_view_more(page)
+
+                if _best_len() >= 10:
+                    break
+
+            # Parse SEMUA payload; simpan daftar TERPANJANG (bukan yang pertama —
+            # respons awal sering hanya berisi 3 baris sebelum daftar penuh).
             for payload in captured_id + captured:
                 parsed = _parse(payload, limit)
-                if parsed:
+                if len(parsed) > len(result):
                     result = parsed
-                    src = "ID" if payload in captured_id else "non-ID"
+                    src = "ID" if payload in captured_id else "campuran"
                     LAST_DEBUG = f"ok: {len(result)} hashtag ({src})"
-                    log.info("TikTok: %d hashtag (%s).", len(result), src)
-                    break
+            if result:
+                log.info("TikTok: %s.", LAST_DEBUG)
 
             # Lampirkan video representatif (kalau berhasil dapat hashtag).
             if result:
