@@ -102,7 +102,7 @@ def _parse(payload: dict, limit: int) -> list[Trend]:
             continue
         views = _num(item, "videoViews", "video_views", "views", "viewCnt", "playCnt")
         publish = _num(item, "publishCnt", "publish_cnt", "video_count", "postCnt")
-        rank = _num(item, "rankIndex", "rank") or i
+        rank = i  # peringkat = urutan daftar (rapi 1..N, hindari nilai aneh)
         subtitle = metric = label = None
         if views:
             subtitle, metric, label = f"{_fmt(views)} views", views, "views"
