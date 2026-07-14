@@ -77,11 +77,11 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
 export const PLATFORM_ORDER: Platform[] = [
   "google",
   "youtube",
-  "tiktok",
-  "instagram",
   "netflix",
-  "shopee",
-  "twitter"
+  "instagram",
+  "tiktok",
+  "twitter",
+  "shopee"
 ];
 
 export function getPlatform(key: string): PlatformMeta | undefined {
