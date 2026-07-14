@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getTrendById, getRelatedTrends } from "@/lib/db";
+import { getTrendById, getRelatedTrends, getTrendsByPlatform } from "@/lib/db";
 import { getPlatform } from "@/lib/platforms";
+import { relatedProducts } from "@/lib/shopping";
+import RelatedProducts from "@/components/RelatedProducts";
 import { SOURCE_LABEL, canEmbed } from "@/lib/embed";
 import { formatDateID } from "@/lib/format";
 import type { Platform } from "@/lib/types";
@@ -81,6 +83,10 @@ export default async function TrendDetailPage({
   const related = await getRelatedTrends(platform, trend.id, 6);
   const isProduct = platform === "shopee";
   const embeddable = canEmbed(trend);
+
+  // Produk afiliasi TikTok Shop yang relevan (kecuali pada halaman produk).
+  const productPool = isProduct ? [] : await getTrendsByPlatform("shopee", 20);
+  const relProducts = relatedProducts(trend, productPool, 3);
 
   return (
     <article className="mx-auto max-w-3xl">
@@ -190,6 +196,9 @@ export default async function TrendDetailPage({
 
       {/* Konteks kaya: berita terkait (Google) / komentar terbaik (YouTube) */}
       <TrendContext trend={trend} />
+
+      {/* Produk TikTok Shop relevan (dicocokkan kategori) — monetisasi kontekstual */}
+      <RelatedProducts products={relProducts} />
 
       {/* Produk / afiliasi (sumber pendapatan) */}
       {trend.affiliateUrl && (
