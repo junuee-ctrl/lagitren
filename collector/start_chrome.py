@@ -28,13 +28,20 @@ def main() -> None:
     profile = os.path.expandvars(r"%USERPROFILE%\chrome-lagitren")
     if os.name != "nt":
         profile = os.path.expanduser("~/chrome-lagitren")
+    # Buka 3 tab login sekaligus (TikTok Trends, Instagram, X).
+    login_tabs = [
+        "https://ads.tiktok.com/creative/creativeCenter/trends/hashtag?region=ID&period=7",
+        "https://www.instagram.com/accounts/login/",
+        "https://x.com/login",
+    ]
     subprocess.Popen(
         [chrome, "--remote-debugging-port=9222", f"--user-data-dir={profile}"]
+        + login_tabs
     )
     print("Chrome debug berjalan di port 9222.")
     print("Profil:", profile)
-    print(">> Login TikTok (ads.tiktok.com/business/creativecenter) & Instagram di jendela ini.")
-    print(">> Biarkan jendela TERBUKA, lalu jalankan: python main.py tiktok instagram")
+    print(">> Login di KETIGA tab: 1) TikTok Trends  2) Instagram  3) X (Twitter).")
+    print(">> Biarkan jendela TERBUKA, lalu di terminal lain jalankan: python run_local.py")
 
 
 if __name__ == "__main__":

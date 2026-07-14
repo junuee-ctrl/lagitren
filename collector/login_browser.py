@@ -1,14 +1,15 @@
-"""Login sekali untuk TikTok & Instagram (sesi tersimpan di profil browser).
+"""Login sekali (TikTok Trends, Instagram, X) — profil 'chrome-lagitren'.
 
-Jalankan (Windows PowerShell/CMD):
-  set BROWSER_HEADFUL=1
-  python login_browser.py
+Ini hanyalah pintasan ke `start_chrome.py`, supaya login & crawl memakai
+PROFIL YANG SAMA (chrome-lagitren). Menjaga agar sesi login benar-benar
+terpakai saat `run_local.py` mengumpulkan data.
 
-Dua tab akan terbuka (TikTok Creative Center & Instagram). Login di keduanya,
-lalu tekan Enter di terminal. Setelah itu:
-  python main.py tiktok instagram
+Jalankan:
+  python login_browser.py     # buka 3 tab login → login di ketiganya
+  # biarkan jendela terbuka, di terminal lain:
+  python run_local.py
 """
-from collectors import _browser
+from start_chrome import main
 
 if __name__ == "__main__":
-    _browser.login()
+    main()

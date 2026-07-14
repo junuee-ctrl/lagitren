@@ -27,23 +27,21 @@ GEO=ID
 ```
 (ID database bisa dilihat: `npx wrangler d1 list`.)
 
-## 3. Login sekali (TikTok & Instagram)
-Keduanya kini butuh sesi login. Login sekali, tersimpan di satu profil browser:
+## 3. Login sekali (TikTok Trends, Instagram, X)
+Semua butuh sesi login. Login sekali; tersimpan di profil `chrome-lagitren`
+(PROFIL YANG SAMA dipakai saat crawl → login pasti terpakai):
 ```bash
-set BROWSER_HEADFUL=1            # Windows (Mac/Linux: export BROWSER_HEADFUL=1)
-python login_browser.py
+python start_chrome.py        # (sama: python login_browser.py)
 ```
-→ Dua tab terbuka (TikTok Creative Center & Instagram). Login di **keduanya**,
-lalu tekan Enter di terminal. Sesi tersimpan di folder `.browser_profile`
-(jangan di-commit).
+→ Tiga tab terbuka: **TikTok Trends**, **Instagram**, **X**. Login di ketiganya.
+Untuk TikTok, login penuh membuka daftar 20 hashtag (tanpa login hanya ~3).
+Biarkan jendela TERBUKA lalu lanjut ke langkah 4 (terminal lain).
 
-## 4. Kumpulkan
+## 4. Kumpulkan (satu perintah)
 ```bash
-python main.py tiktok
-python main.py instagram
-# atau sekaligus:
-python main.py tiktok instagram
+python run_local.py           # tiktok + instagram + x sekaligus, via profil login
 ```
+Atau per-platform: `python main.py tiktok` / `instagram` / `twitter`.
 Hashtag Instagram yang dipantau diatur lewat `IG_HASHTAGS` di `.env`
 (default: `viral,fyp,indonesia,beritaterkini,tiktok`).
 
