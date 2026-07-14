@@ -1,10 +1,12 @@
-name: Kumpulkan Netflix Top 10 (mingguan)
+name: Kumpulkan Netflix Top 10 (harian)
 
-# Netflix Tudum merilis Top 10 tiap Selasa. Kita ambil tiap Rabu pagi WIB.
+# Netflix Tudum merilis Top 10 tiap Selasa, tapi kita cek SETIAP HARI agar:
+#  - daftar minggu baru terpasang dalam ≤24 jam (bukan menunggu seminggu), dan
+#  - poster/sinopsis (TMDB) yang belum ada terus dicoba lengkapi.
 # Bila IP runner diblokir Netflix, jalankan `python main.py netflix` dari PC lokal.
 on:
   schedule:
-    - cron: "0 2 * * 3" # Rabu 02:00 UTC (09:00 WIB)
+    - cron: "0 2 * * *" # tiap hari 02:00 UTC (09:00 WIB)
   workflow_dispatch:
 
 concurrency:

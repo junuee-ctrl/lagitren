@@ -69,7 +69,7 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
     sectionTitle: "Netflix Top 10",
     description:
       "Film dan serial paling banyak ditonton di Netflix Indonesia minggu ini — daftar Top 10 resmi.",
-    refresh: "Diperbarui tiap minggu"
+    refresh: "Dicek tiap hari"
   }
 };
 
