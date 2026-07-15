@@ -70,16 +70,6 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
     description:
       "Film dan serial paling banyak ditonton di Netflix Indonesia minggu ini — daftar Top 10 resmi.",
     refresh: "Dicek tiap hari"
-  },
-  bioskop: {
-    key: "bioskop",
-    name: "Bioskop Indonesia",
-    icon: "🎦",
-    color: "#F5A623",
-    sectionTitle: "Lagi Tayang di Bioskop",
-    description:
-      "Film yang sedang populer di bioskop Indonesia — peringkat berdasarkan popularitas TMDB, lengkap dengan poster dan sinopsis.",
-    refresh: "Diperbarui tiap hari"
   }
 };
 
@@ -90,7 +80,6 @@ export const PLATFORM_ORDER: Platform[] = [
   "instagram",
   "tiktok",
   "netflix",
-  "bioskop",
   "twitter",
   "shopee"
 ];

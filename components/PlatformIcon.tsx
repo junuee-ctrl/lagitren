@@ -7,7 +7,6 @@ import {
   SiX
 } from "react-icons/si";
 import { HiShoppingBag } from "react-icons/hi2";
-import { FaFilm } from "react-icons/fa";
 import type { IconType } from "react-icons";
 import type { Platform } from "@/lib/types";
 import { PLATFORMS } from "@/lib/platforms";
@@ -20,8 +19,7 @@ const ICONS: Record<Platform, IconType> = {
   netflix: SiNetflix,
   // Slot "shopee" kini = Produk Viral (TikTok Shop) → ikon tas belanja.
   shopee: HiShoppingBag,
-  twitter: SiX,
-  bioskop: FaFilm
+  twitter: SiX
 };
 
 // Brand yang (nyaris) hitam → pakai warna adaptif tema agar tetap terlihat.

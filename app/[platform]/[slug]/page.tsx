@@ -27,8 +27,7 @@ const INTENT: Record<Platform, string> = {
   instagram: "kenapa viral?",
   shopee: "kenapa banyak dicari?",
   twitter: "kenapa jadi perbincangan?",
-  netflix: "kenapa ramai ditonton?",
-  bioskop: "kenapa ramai ditonton?"
+  netflix: "kenapa ramai ditonton?"
 };
 
 export async function generateMetadata({
