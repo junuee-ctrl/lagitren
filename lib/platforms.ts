@@ -73,7 +73,7 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
   },
   bioskop: {
     key: "bioskop",
-    name: "Bioskop",
+    name: "Bioskop Indonesia",
     icon: "🎦",
     color: "#F5A623",
     sectionTitle: "Lagi Tayang di Bioskop",
