@@ -111,6 +111,14 @@ def _is_tv(category: str) -> bool:
     return "tv" in (category or "").lower()
 
 
+_LANG_LABEL = {
+    "id": "Indonesia", "ko": "Korea", "th": "Thailand", "ja": "Jepang",
+    "zh": "Tiongkok", "cn": "Tiongkok", "en": "berbahasa Inggris (AS/Inggris)",
+    "es": "berbahasa Spanyol", "hi": "India", "tl": "Filipina", "fr": "Prancis",
+    "de": "Jerman", "tr": "Turki", "ar": "berbahasa Arab", "pt": "berbahasa Portugis",
+}
+
+
 def _tmdb_enrich(title: str, is_tv: bool) -> dict:
     """Cari poster, sinopsis, rating via TMDB. Best-effort.
 
@@ -154,6 +162,9 @@ def _tmdb_enrich(title: str, is_tv: bool) -> dict:
         va = top.get("vote_average")
         if isinstance(va, (int, float)) and va > 0:
             out["rating"] = round(float(va), 1)
+        lang = (top.get("original_language") or "").lower()
+        if lang:
+            out["origin"] = _LANG_LABEL.get(lang, lang.upper())
         return out
     except Exception as exc:
         log.info("TMDB '%s' gagal: %s", title, exc)
@@ -310,6 +321,8 @@ def collect(limit: int = 20) -> list[Trend]:
 
         # Subtitle: jenis · rating · minggu di Top 10.
         bits = [kind_label]
+        if info.get("origin"):
+            bits.append(info["origin"])
         if info.get("rating"):
             bits.append(f"⭐ {info['rating']}")
         try:
@@ -340,6 +353,8 @@ def collect(limit: int = 20) -> list[Trend]:
         )
         # Konteks AI: sinopsis + posisi → "kenapa rame di Netflix".
         ctx = [f"{kind_label} peringkat {r.get('rank')} Netflix Indonesia."]
+        if info.get("origin"):
+            ctx.append(f"Asal/bahasa: {info['origin']}.")
         if info.get("synopsis"):
             ctx.append(info["synopsis"])
         t.__dict__["_context"] = " ".join(ctx)[:500]

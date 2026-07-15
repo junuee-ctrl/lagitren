@@ -24,6 +24,7 @@ jobs:
       GEO: "ID"
       LANG: "id"
       USE_OLLAMA: "0"
+      SUMMARY_FORCE_REFRESH: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
