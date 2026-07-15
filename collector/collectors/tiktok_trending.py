@@ -118,20 +118,23 @@ def _parse(payload: dict, limit: int) -> list[Trend]:
                 if isinstance(v, (int, float)):
                     interest.append(int(round(v)))
 
-        out.append(
-            Trend(
-                id=make_id("tiktok", name),
-                platform="tiktok",
-                rank=rank,
-                title=f"#{name}",
-                url=f"https://www.tiktok.com/tag/{name}",
-                subtitle=subtitle,
-                metric=metric,
-                metric_label=label,
-                hashtags=[name.lower()],
-                interest=interest,
-            )
+        _t = Trend(
+            id=make_id("tiktok", name),
+            platform="tiktok",
+            rank=rank,
+            title=f"#{name}",
+            url=f"https://www.tiktok.com/tag/{name}",
+            subtitle=subtitle,
+            metric=metric,
+            metric_label=label,
+            hashtags=[name.lower()],
+            interest=interest,
         )
+        _t.__dict__["_context"] = (
+            f"Hashtag TikTok Indonesia: #{name}. Popularitas: {subtitle or 'sedang naik'}. "
+            "(Nama hashtag & angka penayangan, BUKAN isi video tertentu.)"
+        )
+        out.append(_t)
         if len(out) >= limit:
             break
     out.sort(key=lambda t: t.rank)

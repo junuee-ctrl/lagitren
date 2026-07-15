@@ -84,7 +84,7 @@ def _post_to_trend(node: dict, tag: str, rank: int) -> Trend | None:
     if not title:
         title = f"Postingan viral #{tag}"
 
-    return Trend(
+    _t = Trend(
         id=make_id("instagram", code),
         platform="instagram",
         rank=rank,
@@ -96,6 +96,11 @@ def _post_to_trend(node: dict, tag: str, rank: int) -> Trend | None:
         thumbnail=thumb,
         hashtags=[tag.lower()],
     )
+    _t.__dict__["_context"] = (
+        f"Caption unggahan: {caption[:280]} | Hashtag: #{tag} | {likes} suka. "
+        "(Metadata unggahan IG; ringkas dari caption & hashtag, bukan isi foto/video.)"
+    )
+    return _t
 
 
 def collect(limit: int = 15) -> list[Trend]:
