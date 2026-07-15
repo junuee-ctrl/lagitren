@@ -1,7 +1,7 @@
-"""Isi kolom image products.csv dari GOOGLE IMAGES (thumbnail gstatic).
-Buka Chrome login (hidden, CDP 9222), cari tiap judul produk di Google Images,
-ambil URL gambar pertama, tulis balik ke products.csv."""
-import csv, os, socket, subprocess, sys, time
+"""Isi kolom image products.csv dari GOOGLE IMAGES — pilih gambar ORIGINAL besar.
+Buka Chrome login (hidden, CDP 9222), cari tiap judul produk, ambil URL gambar
+resolusi tinggi dari data hasil (bukan thumbnail gstatic). Selalu menimpa."""
+import csv, os, re, socket, subprocess, sys, time
 from urllib.parse import quote
 os.environ.setdefault("BROWSER_CDP", "http://localhost:9222")
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -9,6 +9,9 @@ sys.path.insert(0, HERE)
 from start_chrome import CANDIDATES
 PORT = 9222
 CSV_PATH = os.path.join(HERE, "products.csv")
+
+# ["https://....jpg",H,W]  (format data hasil Google Images)
+TRIP = re.compile(r'\["(https?://[^"]+?\.(?:jpg|jpeg|png|webp)(?:\?[^"]*)?)",(\d+),(\d+)\]')
 
 def port_open():
     with socket.socket() as s:
@@ -43,16 +46,31 @@ def accept_consent(page):
         except Exception:
             continue
 
-def first_image(page, query):
-    q = quote(f"{query}")
-    page.goto(f"https://www.google.com/search?q={q}&tbm=isch&hl=id&gl=ID",
+BAD = ("gstatic.com", "google.com", "googleusercontent.com/a/", "sprite", "logo")
+
+def best_image(page, query):
+    page.goto(f"https://www.google.com/search?q={quote(query)}&tbm=isch&hl=id&gl=ID",
               wait_until="domcontentloaded", timeout=45000)
-    page.wait_for_timeout(2000)
-    accept_consent(page)
     page.wait_for_timeout(1800)
+    accept_consent(page)
+    page.wait_for_timeout(1200)
+    html = page.content()
+    fallback = None
+    for url, h, w in TRIP.findall(html):
+        lo = url.lower()
+        if any(b in lo for b in BAD):
+            continue
+        w, h = int(w), int(h)
+        if w >= 300 and h >= 300:
+            return url                      # gambar original besar pertama
+        if fallback is None and w >= 150:
+            fallback = url
+    if fallback:
+        return fallback
+    # cadangan terakhir: thumbnail gstatic
     for el in page.query_selector_all("img"):
         src = el.get_attribute("src") or ""
-        if src.startswith("https://") and ("encrypted-tbn" in src or "gstatic.com/images" in src):
+        if src.startswith("https://") and "encrypted-tbn" in src:
             return src
     return None
 
@@ -69,20 +87,19 @@ def main():
         with sync_playwright() as p:
             ctx = _browser.get_context(p); page = ctx.new_page()
             for r in rows:
-                if (r.get("image") or "").strip():
-                    continue
                 title = (r.get("title") or "").strip()
                 if not title:
                     continue
                 try:
-                    img = first_image(page, title)
+                    img = best_image(page, title)
                     if img:
                         r["image"] = img; filled += 1
-                        print(f"OK  {title[:32]:32} -> {img[:55]}")
+                        big = "BIG" if "gstatic" not in img else "thumb"
+                        print(f"{big:5} {title[:30]:30} -> {img[:60]}")
                     else:
-                        print(f"--  {title[:32]:32} (tak ada)")
+                        print(f"--    {title[:30]:30} (tak ada)")
                 except Exception as exc:
-                    print(f"ERR {title[:32]:32} {type(exc).__name__}")
+                    print(f"ERR   {title[:30]:30} {type(exc).__name__}")
             try: page.close()
             except Exception: pass
             _browser.close_context(ctx)
@@ -92,7 +109,7 @@ def main():
             except Exception: pass
     with open(CSV_PATH, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=fields); w.writeheader(); w.writerows(rows)
-    print(f"\nSelesai: {filled} gambar diisi ke products.csv")
+    print(f"\nSelesai: {filled} gambar diisi.")
 
 if __name__ == "__main__":
     main()
