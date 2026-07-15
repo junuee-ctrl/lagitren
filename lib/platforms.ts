@@ -77,9 +77,9 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
 export const PLATFORM_ORDER: Platform[] = [
   "google",
   "youtube",
-  "netflix",
   "instagram",
   "tiktok",
+  "netflix",
   "twitter",
   "shopee"
 ];

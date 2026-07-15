@@ -25,7 +25,7 @@
 
 - **제품**: Lagi Tren (lagitren.id) — 인도네시아 실시간 트렌드 애그리게이터.
 - **대상**: 인도네시아 18–40세. 사이트 언어 = **Bahasa Indonesia**.
-- **플랫폼 7개(표시 순서)**: Google → YouTube → Netflix → Instagram → TikTok → X(Twitter) → **Produk Viral**(TikTok Shop 제휴 상품).
+- **플랫폼 7개(표시 순서)**: Google → YouTube → Instagram → TikTok → Netflix → X(Twitter) → **Produk Viral**(TikTok Shop 제휴 상품).
 - **수익 모델**: Google AdSense + TikTok Shop/Tokopedia 제휴(affiliate). 목표: 월 $3,000.
 - **repo**: github.com/junuee-ctrl/lagitren (branch: `main`). **호스팅**: Cloudflare(GitHub 자동 배포).
 
