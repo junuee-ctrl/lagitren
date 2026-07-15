@@ -5,7 +5,8 @@ export type Platform =
   | "instagram"
   | "shopee"
   | "twitter"
-  | "netflix";
+  | "netflix"
+  | "bioskop";
 
 export interface Trend {
   /** ID unik stabil (platform + slug/source id) untuk upsert. */

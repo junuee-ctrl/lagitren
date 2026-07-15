@@ -70,6 +70,12 @@ _PLATFORM_HINT = {
         "Korea'). JANGAN berasumsi buatan Indonesia, jangan spoiler, jangan "
         "mengarang plot yang tidak ada di sinopsis."
     ),
+    "bioskop": (
+        "Ini film yang sedang TAYANG DI BIOSKOP Indonesia (peringkat populer, "
+        "metrik TMDB). Berdasarkan SINOPSIS, genre, dan asal film di Konteks, "
+        "sebutkan premis singkat dan asal negaranya bila diketahui. JANGAN "
+        "berasumsi buatan Indonesia, jangan mengarang plot."
+    ),
 }
 
 

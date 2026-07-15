@@ -11,6 +11,7 @@ import {
 import PlatformSection from "@/components/PlatformSection";
 import NetflixSplit from "@/components/NetflixSplit";
 import TikTokSplit from "@/components/TikTokSplit";
+import BioskopGrid from "@/components/BioskopGrid";
 import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
 import type { Platform } from "@/lib/types";
@@ -101,6 +102,8 @@ export default async function PlatformPage({
           <NetflixSplit trends={trends} />
         ) : platform === "tiktok" ? (
           <TikTokSplit trends={trends} />
+        ) : platform === "bioskop" ? (
+          <BioskopGrid trends={trends} />
         ) : (
           <PlatformSection platform={platform} trends={trends} showAll />
         )

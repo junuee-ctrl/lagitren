@@ -10,6 +10,7 @@ from . import (
     shopping_products,
     twitter_trending,
     netflix_trending,
+    bioskop_trending,
 )
 
 # platform -> (modul, jeda pembaruan dalam menit)
@@ -23,6 +24,7 @@ REGISTRY = {
     "shopee": (shopping_products, 360),
     "twitter": (twitter_trending, 30),
     "netflix": (netflix_trending, 1440),  # mingguan (Tudum rilis tiap Selasa)
+    "bioskop": (bioskop_trending, 720),  # 12 jam (film bioskop via TMDB)
 }
 
 __all__ = ["REGISTRY"]

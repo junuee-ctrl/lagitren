@@ -58,4 +58,4 @@ jobs:
         working-directory: collector
         env:
           CLOUDFLARE_D1_DATABASE_ID: ${{ env.CLOUDFLARE_D1_DATABASE_ID }}
-        run: python main.py netflix
+        run: python main.py netflix bioskop
