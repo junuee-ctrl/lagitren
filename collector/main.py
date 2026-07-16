@@ -41,7 +41,7 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
             db.log_run(platform, "ok", 0, str(debug)[:400], started)
             return 0
 
-        if do_summary:
+        if do_summary and platform != "youtube":
             # Cache: pakai ulang ringkasan tren yang tak berubah (judul sama),
             # hanya panggil LLM untuk tren baru → hemat biaya Haiku.
             cache = (

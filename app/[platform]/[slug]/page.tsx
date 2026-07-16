@@ -183,7 +183,7 @@ export default async function TrendDetailPage({
       <AdSlot slot={`detail-${platform}-top`} />
 
       {/* Penjelasan "kenapa tren" — bintang utama, khususnya Google */}
-      {trend.aiSummary && (
+      {trend.aiSummary && platform !== "youtube" && (
         <section className="my-5 rounded-2xl border border-brand/25 bg-gradient-to-br from-brand/10 to-accent/10 p-5 dark:border-brand/30 dark:from-brand/15 dark:to-accent/10">
           <h2 className="flex items-center gap-2 text-base font-bold text-brand dark:text-brand-light">
             <span aria-hidden>💡</span> Kenapa ini lagi tren?
