@@ -1,4 +1,5 @@
 import type { Trend } from "@/lib/types";
+import AffiliateLink from "./AffiliateLink";
 
 /**
  * Kotak afiliasi untuk produk (Shopee/Tokopedia) atau produk terkait
@@ -15,14 +16,15 @@ export default function AffiliateBox({ trend }: { trend: Trend }) {
           {trend.price}
         </p>
       )}
-      <a
+      <AffiliateLink
         href={href}
-        target="_blank"
-        rel="nofollow sponsored noopener noreferrer"
+        name={trend.title}
+        id={trend.id}
+        category={trend.hashtags?.[0]}
         className="mt-2 inline-flex items-center gap-1 rounded-full bg-shopee px-3.5 py-1.5 text-sm font-semibold text-white transition hover:opacity-90 active:scale-95"
       >
         Beli di TikTok Shop →
-      </a>
+      </AffiliateLink>
       <p className="mt-2 text-[11px] leading-snug text-gray-400">
         Tautan afiliasi. Harga dapat berubah sewaktu-waktu.
       </p>

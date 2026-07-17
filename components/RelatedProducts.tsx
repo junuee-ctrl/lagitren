@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Trend } from "@/lib/types";
+import AffiliateLink from "./AffiliateLink";
 
 // Ubin cadangan saat gambar produk belum ada: emoji + gradien per kategori,
 // supaya kartu tetap terlihat rapi (bukan kotak abu-abu kosong).
@@ -31,11 +32,12 @@ export default function RelatedProducts({ products }: { products: Trend[] }) {
       </h2>
       <div className="mt-3 grid gap-3 sm:grid-cols-3">
         {products.map((p) => (
-          <a
+          <AffiliateLink
             key={p.id}
             href={p.affiliateUrl ?? p.url}
-            target="_blank"
-            rel="nofollow sponsored noopener noreferrer"
+            name={p.title}
+            id={p.id}
+            category={p.hashtags?.[0]}
             className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-night-card"
           >
             <div className="aspect-square w-full overflow-hidden bg-gray-100 dark:bg-night-soft">
@@ -78,7 +80,7 @@ export default function RelatedProducts({ products }: { products: Trend[] }) {
                 Beli di TikTok Shop
               </span>
             </div>
-          </a>
+          </AffiliateLink>
         ))}
       </div>
       <p className="mt-3 text-[11px] text-gray-400">

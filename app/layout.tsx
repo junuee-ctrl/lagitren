@@ -9,6 +9,8 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
 // Token beacon Cloudflare Web Analytics (publik; bukan rahasia).
 // Diambil dari dashboard Cloudflare → Web Analytics. Kosong → nonaktif.
 const CF_ANALYTICS_TOKEN = process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN;
+// ID Pengukuran Google Analytics 4 (mis. "G-XXXXXXXXXX"). Kosong → nonaktif.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -87,6 +89,19 @@ export default function RootLayout({
             src="https://static.cloudflareinsights.com/beacon.min.js"
             data-cf-beacon={`{"token": "${CF_ANALYTICS_TOKEN}"}`}
           />
+        )}
+        {GA_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`
+              }}
+            />
+          </>
         )}
       </head>
       <body className="min-h-screen font-sans">
