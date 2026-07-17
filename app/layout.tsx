@@ -9,8 +9,9 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
 // Token beacon Cloudflare Web Analytics (publik; bukan rahasia).
 // Diambil dari dashboard Cloudflare → Web Analytics. Kosong → nonaktif.
 const CF_ANALYTICS_TOKEN = process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN;
-// ID Pengukuran Google Analytics 4 (mis. "G-XXXXXXXXXX"). Kosong → nonaktif.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+// ID Pengukuran Google Analytics 4. Default ke properti lagitren.id;
+// bisa ditimpa lewat env NEXT_PUBLIC_GA_ID bila perlu.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-CZCFHY3VWY";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
