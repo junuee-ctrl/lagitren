@@ -1,20 +1,13 @@
-name: Kumpulkan Tren (real-time)
+name: Kumpulkan YouTube Trending
 
-# Menjalankan collector di CLOUD secara berkala → tulis ke D1.
-# Google Trends (RSS, tanpa API key) selalu jalan.
-# YouTube ikut jalan bila secret YOUTUBE_API_KEY tersedia.
+# YouTube Trending Indonesia -> D1 (butuh secret YOUTUBE_API_KEY). Tiap jam.
 on:
   schedule:
-    - cron: "*/20 * * * *" # tiap 20 menit
+    - cron: "0 * * * *" # tiap jam
   workflow_dispatch:
-    inputs:
-      platforms:
-        description: "Platform (pisah spasi), mis. 'google youtube'"
-        default: "google"
-        required: false
 
 concurrency:
-  group: collect
+  group: collect-youtube
   cancel-in-progress: false
 
 jobs:
@@ -25,13 +18,9 @@ jobs:
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
-      SHOPEE_APP_SECRET: ${{ secrets.SHOPEE_APP_SECRET }}
-      # Link CSV Google Sheet berisi produk afiliasi TikTok Shop (publik).
-      SHOPPING_SHEET_CSV: ${{ vars.SHOPPING_SHEET_CSV }}
       GEO: "ID"
       LANG: "id"
-      USE_OLLAMA: "0" # tidak ada Ollama di cloud → pakai Claude/heuristik
+      USE_OLLAMA: "0"
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -60,14 +49,9 @@ jobs:
             exit 1
           fi
           echo "CLOUDFLARE_D1_DATABASE_ID=$DB_ID" >> "$GITHUB_ENV"
-          echo "Pakai D1: $DB_ID"
 
-      - name: Jalankan collector
+      - name: Jalankan collector YouTube
         working-directory: collector
         env:
           CLOUDFLARE_D1_DATABASE_ID: ${{ env.CLOUDFLARE_D1_DATABASE_ID }}
-        run: |
-          PLATFORMS="${{ github.event.inputs.platforms }}"
-          [ -z "$PLATFORMS" ] && PLATFORMS="google"
-          echo "Mengumpulkan: $PLATFORMS"
-          python main.py $PLATFORMS
+        run: python main.py youtube

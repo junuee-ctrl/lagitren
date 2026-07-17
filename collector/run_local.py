@@ -70,9 +70,21 @@ def main() -> None:
 
     try:
         from main import run
+        from datetime import datetime
 
-        # X (Twitter) ikut di lokal agar dapat "tweet teratas" (butuh login).
-        results = run(["tiktok", "instagram", "twitter"])
+        # Pilih platform per jam: X tiap jam (cepat berubah), TikTok tiap 2
+        # jam, Instagram tiap 4 jam. Argumen CLI menimpa pilihan otomatis.
+        cli = [a for a in sys.argv[1:] if not a.startswith("-")]
+        if cli:
+            platforms = cli
+        else:
+            h = datetime.now().hour
+            platforms = ["twitter"]
+            if h % 2 == 0:
+                platforms.append("tiktok")
+            if h % 4 == 0:
+                platforms.append("instagram")
+        results = run(platforms)
         print("Ringkasan:", results)
     finally:
         if proc:
