@@ -15,6 +15,8 @@ from .base import make_id
 
 log = logging.getLogger("youtube")
 
+LAST_DEBUG = ""
+
 API_URL = "https://www.googleapis.com/youtube/v3/videos"
 COMMENTS_URL = "https://www.googleapis.com/youtube/v3/commentThreads"
 
@@ -77,7 +79,9 @@ def _fetch_top_comments(video_id: str, max_comments: int = 3) -> list[dict]:
 
 
 def collect(max_results: int = 15, comment_top_n: int = 12) -> list[Trend]:
+    global LAST_DEBUG
     if not config.YOUTUBE_API_KEY:
+        LAST_DEBUG = "YOUTUBE_API_KEY kosong (secret tidak ada di env)"
         log.warning("YOUTUBE_API_KEY kosong — lewati YouTube.")
         return []
 
@@ -94,6 +98,7 @@ def collect(max_results: int = 15, comment_top_n: int = 12) -> list[Trend]:
         resp.raise_for_status()
         data = resp.json()
     except Exception as exc:
+        LAST_DEBUG = f"API gagal: {type(exc).__name__}: {str(exc)[:180]}"
         log.error("YouTube API gagal: %s", exc)
         return []
 
@@ -143,5 +148,6 @@ def collect(max_results: int = 15, comment_top_n: int = 12) -> list[Trend]:
                     t.__dict__["_context"] += f"\n[Komentar teratas] {top_texts}"
         trends.append(t)
 
+    LAST_DEBUG = f"{len(trends)} video"
     log.info("YouTube: %d video.", len(trends))
     return trends
