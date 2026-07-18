@@ -4,7 +4,6 @@ import { getTrendsByPlatform } from "@/lib/db";
 import {
   PLATFORMS,
   PLATFORM_ORDER,
-  PLATFORM_SLUG,
   getPlatform,
   platformHref
 } from "@/lib/platforms";
@@ -15,13 +14,7 @@ import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
 import type { Platform } from "@/lib/types";
 
-export const revalidate = 300; // 5 menit
-
-export function generateStaticParams() {
-  return PLATFORM_ORDER.map((platform) => ({
-    platform: PLATFORM_SLUG[platform] ?? platform
-  }));
-}
+export const dynamic = "force-dynamic";
 
 const DATE_ID = new Intl.DateTimeFormat("id-ID", {
   day: "numeric",

@@ -17,7 +17,7 @@ import GoogleTrendsWidget from "@/components/GoogleTrendsWidget";
 import TrendContext from "@/components/TrendContext";
 import PlatformIcon from "@/components/PlatformIcon";
 
-export const revalidate = 300;
+export const dynamic = "force-dynamic";
 
 // Frasa sesuai cara orang mencari, per platform.
 const INTENT: Record<Platform, string> = {

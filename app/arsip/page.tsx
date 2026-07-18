@@ -7,7 +7,7 @@ import TrendListItem from "@/components/TrendListItem";
 import AdSlot from "@/components/AdSlot";
 
 // Segarkan berkala; arsip berubah pelan (saat tren lama diarsipkan).
-export const revalidate = 1800; // 30 menit
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Arsip Tren — Yang Pernah Viral di Indonesia",
