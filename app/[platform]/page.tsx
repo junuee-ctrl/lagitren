@@ -12,6 +12,7 @@ import NetflixSplit from "@/components/NetflixSplit";
 import TikTokSplit from "@/components/TikTokSplit";
 import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
+import { AD_SLOTS } from "@/lib/adsense";
 import type { Platform } from "@/lib/types";
 
 export const dynamic = "force-dynamic";
@@ -87,7 +88,7 @@ export default async function PlatformPage({
         </div>
       </header>
 
-      <AdSlot slot={`${platform}-top`} />
+      <AdSlot slot={`${platform}-top`} adSlot={AD_SLOTS.atas} />
 
       {trends.length > 0 ? (
         platform === "netflix" ? (

@@ -11,6 +11,7 @@ import type { Platform } from "@/lib/types";
 import TrendMedia from "@/components/TrendMedia";
 import TrendListItem from "@/components/TrendListItem";
 import AdSlot from "@/components/AdSlot";
+import { AD_SLOTS } from "@/lib/adsense";
 import AffiliateBox from "@/components/AffiliateBox";
 import SearchVolumeChart from "@/components/SearchVolumeChart";
 import GoogleTrendsWidget from "@/components/GoogleTrendsWidget";
@@ -180,7 +181,7 @@ export default async function TrendDetailPage({
       )}
 
       {/* Iklan in-content (di atas lipatan konten) */}
-      <AdSlot slot={`detail-${platform}-top`} />
+      <AdSlot slot={`detail-${platform}-top`} adSlot={AD_SLOTS.atas} />
 
       {/* Penjelasan "kenapa tren" — bintang utama, khususnya Google */}
       {trend.aiSummary && platform !== "youtube" && (
@@ -231,7 +232,7 @@ export default async function TrendDetailPage({
       </div>
 
       {/* Iklan in-content kedua */}
-      <AdSlot slot={`detail-${platform}-bottom`} />
+      <AdSlot slot={`detail-${platform}-bottom`} adSlot={AD_SLOTS.bawah} />
 
       {/* Trend terkait — navigasi internal (menambah page view) */}
       {related.length > 0 && (

@@ -3,6 +3,7 @@ import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
 import PlatformSection from "@/components/PlatformSection";
 import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
+import { AD_SLOTS } from "@/lib/adsense";
 import type { Platform, Trend } from "@/lib/types";
 
 // ISR: halaman diregenerasi berkala agar tren selalu segar.
@@ -74,7 +75,9 @@ export default async function HomePage() {
             platform={platform}
             trends={byPlatform.get(platform) ?? []}
           />
-          {AD_AFTER.has(i) && <AdSlot slot={`home-${i}`} />}
+          {AD_AFTER.has(i) && (
+            <AdSlot slot={`home-${i}`} adSlot={AD_SLOTS.beranda} />
+          )}
         </div>
       ))}
 

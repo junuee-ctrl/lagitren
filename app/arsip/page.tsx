@@ -5,6 +5,7 @@ import { dateKey, formatDateID } from "@/lib/format";
 import type { Trend } from "@/lib/types";
 import TrendListItem from "@/components/TrendListItem";
 import AdSlot from "@/components/AdSlot";
+import { AD_SLOTS } from "@/lib/adsense";
 
 // Segarkan berkala; arsip berubah pelan (saat tren lama diarsipkan).
 export const dynamic = "force-dynamic";
@@ -55,7 +56,7 @@ export default async function ArchivePage() {
         </p>
       </header>
 
-      <AdSlot slot="arsip-top" />
+      <AdSlot slot="arsip-top" adSlot={AD_SLOTS.atas} />
 
       {groups.length === 0 ? (
         <div className="mt-6 rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center">
