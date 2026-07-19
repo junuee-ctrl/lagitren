@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
@@ -91,24 +92,12 @@ export default function RootLayout({
             data-cf-beacon={`{"token": "${CF_ANALYTICS_TOKEN}"}`}
           />
         )}
-        {GA_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${GA_ID}');`
-              }}
-            />
-          </>
-        )}
       </head>
       <body className="min-h-screen font-sans">
         <Header />
         <main className="container-page py-6">{children}</main>
         <Footer />
+        <GoogleAnalytics gaId={GA_ID} />
       </body>
     </html>
   );
