@@ -136,3 +136,15 @@ e372934 TikTok Shop 상품 products.csv 20개
 - 수집(수동): `collector\`에서 `python run_local.py` (tiktok/ig/x).
 - 상품 이미지 재수집: `collector\`에서 `python gimg_run.py` → `python -c "from main import run; run(['shopee'])"` 로 D1 반영.
 - **마운트 주의**: 큰 파일은 샌드박스 읽기/편집이 잘릴 수 있어, 파일 편집·git 커밋은 **네이티브(Windows)** 로 하는 게 안전.
+
+---
+
+## 애널리틱스/광고 최종 상태 (2026-07-19 확정 — 변경 금지)
+
+- **GA4 측정 ID: `G-CMQVHLJJTY`** (app/layout.tsx의 GA_ID 기본값). 실시간 수집 검증 완료.
+  - 이전 ID들(G-CZCFHY3VWY, GT-TWTPKF3C, G-H75SZLGOLP/G-H75SZLG0LP)은 폐기 — 절대 되돌리지 말 것.
+  - 교훈: 측정 ID는 심기 전에 `googletagmanager.com/gtag/js?id=...`가 200인지 검증할 것 (0/O 오독으로 하루 낭비했음).
+- **AdSense**: 게시자 ID `ca-pub-1581394816942984` (lib/adsense.ts). ads.txt 자동 생성 OK.
+  - 광고 단위 슬롯: atas=9914312757, bawah=4661986078, beranda=9618799281 (lib/adsense.ts AD_SLOTS).
+  - 사이트 심사 "준비 중" — 승인되면 광고 자동 게재.
+- 제품 클릭 추적: `affiliate_click` 이벤트 (components/AffiliateLink.tsx) → GA4로 전송.
