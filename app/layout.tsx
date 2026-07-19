@@ -11,7 +11,7 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
 const CF_ANALYTICS_TOKEN = process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN;
 // ID Pengukuran Google Analytics 4 (properti lagitren.id).
 // Bisa ditimpa lewat env NEXT_PUBLIC_GA_ID bila perlu.
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-H75SZLG0LP";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-CZCFHY3VWY";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
