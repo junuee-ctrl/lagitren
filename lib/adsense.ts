@@ -4,7 +4,7 @@
  * (ID penerbit bersifat publik — muncul di source halaman.)
  */
 export const ADSENSE_CLIENT =
-  process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-1581394816942984";
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-4312945092715398";
 
 /**
  * ID unit iklan (data-ad-slot) dari AdSense. Satu ID boleh dipakai ulang

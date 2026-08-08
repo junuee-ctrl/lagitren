@@ -144,7 +144,7 @@ e372934 TikTok Shop 상품 products.csv 20개
 - **GA4 측정 ID: `G-CMQVHLJJTY`** (app/layout.tsx의 GA_ID 기본값). 실시간 수집 검증 완료.
   - 이전 ID들(G-CZCFHY3VWY, GT-TWTPKF3C, G-H75SZLGOLP/G-H75SZLG0LP)은 폐기 — 절대 되돌리지 말 것.
   - 교훈: 측정 ID는 심기 전에 `googletagmanager.com/gtag/js?id=...`가 200인지 검증할 것 (0/O 오독으로 하루 낭비했음).
-- **AdSense**: 게시자 ID `ca-pub-1581394816942984` (lib/adsense.ts). ads.txt 자동 생성 OK.
-  - 광고 단위 슬롯: atas=9914312757, bawah=4661986078, beranda=9618799281 (lib/adsense.ts AD_SLOTS).
+- **AdSense**: 게시자 ID `ca-pub-4312945092715398` (lib/adsense.ts). ads.txt 자동 생성 OK.
+  - 광고 단위 슬롯: 슬롯 ID는 옛 계정 것 → 새 계정 승인 후 새 광고 단위 3개 만들어 교체 필요.
   - 사이트 심사 "준비 중" — 승인되면 광고 자동 게재.
 - 제품 클릭 추적: `affiliate_click` 이벤트 (components/AffiliateLink.tsx) → GA4로 전송.
