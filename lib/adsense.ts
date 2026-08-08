@@ -14,7 +14,7 @@ export const ADSENSE_CLIENT =
  * - beranda: sisipan di feed beranda
  */
 export const AD_SLOTS = {
-  atas: "9914312757",
-  bawah: "4661986078",
-  beranda: "9618799281"
+  atas: "8570552286",
+  bawah: "9799873479",
+  beranda: "3574476554"
 } as const;
