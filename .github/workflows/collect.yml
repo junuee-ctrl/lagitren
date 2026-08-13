@@ -5,7 +5,7 @@ name: Kumpulkan Tren (real-time)
 # YouTube ikut jalan bila secret YOUTUBE_API_KEY tersedia.
 on:
   schedule:
-    - cron: "*/20 * * * *" # tiap 20 menit
+    - cron: "*/10 * * * *" # tiap 10 menit (P2-1)
   workflow_dispatch:
     inputs:
       platforms:
