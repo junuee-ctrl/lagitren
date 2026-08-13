@@ -130,8 +130,9 @@ export async function GET(
 
   const thumb = await fetchThumb(trend?.thumbnail);
 
+  const footer = "Kenapa ini lagi tren? Baca ringkasannya »";
   // Font: subset persis karakter yang dipakai (kecil & cepat).
-  const allText = `${title} ${kicker} lagi tren.id #№0123456789`;
+  const allText = `${title} ${kicker} ${footer} lagi tren.id #0123456789 Trending`;
   const fonts: Array<{
     name: string;
     data: ArrayBuffer;
@@ -276,7 +277,7 @@ export async function GET(
               fontWeight: 400
             }}
           >
-            Kenapa ini lagi tren? Baca ringkasannya →
+            {footer}
           </div>
           <div
             style={{
