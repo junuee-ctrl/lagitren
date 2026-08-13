@@ -136,11 +136,13 @@ def _parse_article_json(raw: str) -> dict | None:
     """Ambil objek {"lead","apa","rame","penting"} dari keluaran LLM."""
     import json as _json
 
-    m = re.search(r"\{.*\}", raw or "", re.DOTALL)
+    txt = re.sub(r"```(?:json)?", "", raw or "")
+    m = re.search(r"\{.*\}", txt, re.DOTALL)
     if not m:
         return None
     try:
-        obj = _json.loads(m.group(0))
+        # strict=False: toleransi newline mentah di dalam string (khas LLM).
+        obj = _json.loads(m.group(0), strict=False)
     except Exception:
         return None
     if not isinstance(obj, dict):
@@ -198,11 +200,14 @@ def _article_claude(platform: str, title: str, context: str, news: str) -> str:
     return "".join(p.get("text", "") for p in parts if p.get("type") == "text")
 
 
+LAST_ARTICLE_ERR = ""
+
+
 def generate_article(
     platform: str, title: str, context: str = "", news: str = ""
 ) -> dict | None:
     """Artikel terstruktur utk tren teratas (P1-3). None bila gagal/di bawah mutu."""
-    global _ollama_down
+    global _ollama_down, LAST_ARTICLE_ERR
     if config.USE_OLLAMA and not _ollama_down:
         try:
             art = _parse_article_json(_article_ollama(platform, title, context, news))
@@ -211,7 +216,13 @@ def generate_article(
         except Exception:
             _ollama_down = True
     try:
-        return _parse_article_json(_article_claude(platform, title, context, news))
+        raw = _article_claude(platform, title, context, news)
+        art = _parse_article_json(raw)
+        if art:
+            return art
+        LAST_ARTICLE_ERR = f"parse/QC gagal (len={len(raw or '')})"
+        return None
     except Exception as exc:
+        LAST_ARTICLE_ERR = f"{type(exc).__name__}: {str(exc)[:90]}"
         log.info("Artikel gagal utk '%s': %s", title[:40], exc)
         return None

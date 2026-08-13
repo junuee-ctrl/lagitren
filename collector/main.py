@@ -107,8 +107,16 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
                 if art:
                     t.extra = {**(t.extra or {}), "article": art}
                     made += 1
-            if made or kept:
-                log.info("%s: artikel %d baru, %d dari cache.", platform, made, kept)
+            log.info("%s: artikel %d baru, %d dari cache.", platform, made, kept)
+            extra_dbg = f"art:{made}+{kept}"
+            if made == 0:
+                from summarizer import ai_summary as _aisum
+                err = getattr(_aisum, "LAST_ARTICLE_ERR", "")
+                if err:
+                    extra_dbg += f" ({err})"
+            module.LAST_DEBUG = (
+                f"{getattr(module, 'LAST_DEBUG', '') or ''} · {extra_dbg}"
+            ).strip(" ·")
 
         count = db.save_trends(platform, trends)
         db.prune_mojibake(platform)  # bersihkan sisa judul rusak (P0-1)
