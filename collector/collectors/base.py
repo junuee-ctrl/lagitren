@@ -1,17 +1,33 @@
 """Utilitas bersama untuk semua collector."""
 from __future__ import annotations
 
+import hashlib
 import re
 import unicodedata
 
 
 def slugify(text: str, max_len: int = 60) -> str:
-    """Ubah teks jadi slug aman untuk ID (huruf-kecil, tanda hubung)."""
-    text = unicodedata.normalize("NFKD", text)
-    text = text.encode("ascii", "ignore").decode("ascii")
-    text = text.lower()
-    text = re.sub(r"[^a-z0-9]+", "-", text).strip("-")
-    return text[:max_len] or "item"
+    """Ubah teks jadi slug aman untuk ID (huruf-kecil, tanda hubung).
+
+    Non-Latin (Korea/Jepang/Arab/Thai...) → transliterasi via unidecode
+    (mis. "사랑" → "salang"). Bila hasil < 3 huruf → slug hash stabil
+    ("t-a1b2c3d4") supaya URL tetap konsisten & tidak jadi sampah SEO.
+    """
+    src = text
+    norm = unicodedata.normalize("NFKD", text)
+    ascii_txt = norm.encode("ascii", "ignore").decode("ascii")
+    # Mayoritas karakter hilang saat di-ASCII-kan? → coba transliterasi.
+    if len(ascii_txt.strip()) < max(3, len(src.strip()) // 2):
+        try:
+            from unidecode import unidecode  # type: ignore
+
+            ascii_txt = unidecode(src)
+        except Exception:
+            pass
+    s = re.sub(r"[^a-z0-9]+", "-", ascii_txt.lower()).strip("-")
+    if len(s) < 3:
+        s = "t-" + hashlib.sha256(src.encode("utf-8")).hexdigest()[:8]
+    return s[:max_len]
 
 
 def make_id(platform: str, key: str) -> str:

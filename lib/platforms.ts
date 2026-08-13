@@ -74,6 +74,10 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
 };
 
 /** Urutan tampil platform di homepage. */
+/** Daftar platform untuk teks meta/deskripsi — SATU sumber kebenaran. */
+export const PLATFORM_LIST_STR =
+  "Google, YouTube, Instagram, TikTok, Netflix, dan X (Twitter)";
+
 export const PLATFORM_ORDER: Platform[] = [
   "google",
   "youtube",

@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from urllib.parse import quote
 
 import config
@@ -101,6 +102,25 @@ def _post_to_trend(node: dict, tag: str, rank: int) -> Trend | None:
         "(Metadata unggahan IG; ringkas dari caption & hashtag, bukan isi foto/video.)"
     )
     return _t
+
+
+# Sinyal "konten Indonesia": kata fungsi bhs Indonesia + istilah/tempat khas.
+_INDO_WORDS = {
+    "yang", "dan", "di", "ini", "itu", "untuk", "dengan", "tidak", "gak",
+    "nggak", "aku", "kamu", "kita", "kalian", "banget", "udah", "sudah",
+    "lagi", "aja", "saja", "bisa", "kalau", "kalo", "sama", "juga", "mau",
+    "ada", "dari", "ke", "pada", "hari", "orang", "indonesia", "jakarta",
+    "bandung", "surabaya", "medan", "bali", "jokowi", "prabowo", "rupiah",
+    "wib", "viral", "gemoy", "keren", "seru", "mantap",
+}
+
+
+def _indo_score(t) -> int:
+    """1 bila caption/judul mengandung sinyal bahasa/topik Indonesia."""
+    text = f"{t.title} {' '.join(t.hashtags or [])}".lower()
+    words = set(re.findall(r"[a-z]+", text))
+    hits = len(words & _INDO_WORDS)
+    return 1 if hits >= 2 or "indonesia" in text else 0
 
 
 def collect(limit: int = 15) -> list[Trend]:
@@ -205,8 +225,11 @@ def collect(limit: int = 15) -> list[Trend]:
         )
         return []
 
-    # Urutkan berdasarkan suka (paling banyak = paling atas), lalu batasi.
-    all_trends.sort(key=lambda t: (t.metric or 0), reverse=True)
+    # Urutkan: relevansi Indonesia DULU, baru jumlah suka (P0-6).
+    # Konten asing (mis. gosip transfer bola berbahasa Inggris) turun ke bawah.
+    all_trends.sort(
+        key=lambda t: (_indo_score(t), t.metric or 0), reverse=True
+    )
     all_trends = all_trends[:limit]
     for i, t in enumerate(all_trends, start=1):
         t.rank = i

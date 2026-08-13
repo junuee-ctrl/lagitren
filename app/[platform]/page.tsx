@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTrendsByPlatform } from "@/lib/db";
+import { formatWIB, latestCollectedAt } from "@/lib/format";
 import {
   PLATFORMS,
   PLATFORM_ORDER,
@@ -37,7 +38,8 @@ export function generateMetadata({
     title,
     description: meta.description,
     alternates: { canonical: platformHref(meta.key) },
-    openGraph: { title: `${title} · Lagi Tren`, description: meta.description }
+    openGraph: { title: `${title} · Lagi Tren`, description: meta.description },
+    twitter: { title: `${title} · Lagi Tren`, description: meta.description }
   };
 }
 
@@ -52,6 +54,7 @@ export default async function PlatformPage({
   const platform = meta.key as Platform;
   const trends = await getTrendsByPlatform(platform, 20);
   const today = DATE_ID.format(new Date());
+  const lastUpdated = latestCollectedAt(trends);
 
   return (
     <>
@@ -81,6 +84,7 @@ export default async function PlatformPage({
           </h1>
           <p className="mt-2 text-sm font-medium text-white/80">
             Hari ini · {today}
+            {lastUpdated && <> · diperbarui {formatWIB(lastUpdated)}</>}
           </p>
           <p className="mt-3 max-w-2xl text-sm text-white/90">
             {meta.description}

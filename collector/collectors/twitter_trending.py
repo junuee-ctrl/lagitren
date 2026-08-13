@@ -188,6 +188,9 @@ def collect(limit: int = 20) -> list[Trend]:
         log.error("Gagal ambil trends24: %s", exc)
         return []
 
+    # PENTING: trends24 kadang tanpa header charset → requests menebak Latin-1
+    # dan hashtag non-Latin (Korea/Jepang/Arab) jadi mojibake ("ì¬ë..").
+    resp.encoding = "utf-8"
     soup = BeautifulSoup(resp.text, "html.parser")
     # Kartu paling atas = paling baru.
     card = soup.select_one("ol.trend-card__list") or soup.select_one(".trend-card__list")

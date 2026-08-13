@@ -3,8 +3,11 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
+import { PLATFORM_LIST_STR } from "@/lib/platforms";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
+// Deskripsi situs — daftar platform dari satu konstanta (P0-4).
+const SITE_DESC = `Lagi Tren mengumpulkan tren real-time dari ${PLATFORM_LIST_STR} di Indonesia — plus produk viral TikTok Shop dan ringkasan AI kenapa sesuatu sedang viral.`;
 
 // Token beacon Cloudflare Web Analytics (publik; bukan rahasia).
 // Diambil dari dashboard Cloudflare → Web Analytics. Kosong → nonaktif.
@@ -19,29 +22,19 @@ export const metadata: Metadata = {
     default: "Lagi Tren — Apa yang Lagi Tren di Indonesia Hari Ini",
     template: "%s · Lagi Tren"
   },
-  description:
-    "Lagi Tren mengumpulkan tren real-time dari Google, YouTube, TikTok, Instagram, Shopee, dan X (Twitter) di Indonesia, lengkap dengan ringkasan AI kenapa sesuatu sedang viral.",
-  keywords: [
-    "trending di Indonesia hari ini",
-    "yang lagi viral di TikTok",
-    "produk paling dicari di Shopee",
-    "YouTube trending Indonesia",
-    "apa yang lagi tren"
-  ],
+  description: SITE_DESC,
   openGraph: {
     type: "website",
     locale: "id_ID",
     url: SITE_URL,
     siteName: "Lagi Tren",
     title: "Lagi Tren — Apa yang Lagi Tren di Indonesia",
-    description:
-      "Tren real-time dari berbagai platform Indonesia dalam satu halaman, dengan ringkasan AI."
+    description: SITE_DESC
   },
   twitter: {
     card: "summary_large_image",
     title: "Lagi Tren — Apa yang Lagi Tren di Indonesia",
-    description:
-      "Tren real-time dari Google, YouTube, TikTok, Instagram, Shopee, dan X."
+    description: SITE_DESC
   },
   robots: { index: true, follow: true },
   alternates: { canonical: SITE_URL },

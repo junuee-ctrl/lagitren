@@ -33,6 +33,14 @@ interface TrendRow {
   collected_at: string;
 }
 
+/**
+ * Deteksi judul mojibake (UTF-8 salah didekode sbg Latin-1, mis. "ì¬ë..").
+ * Karakter Ã/Â/ì/ë/í/î hampir tak pernah ada di judul sah → sembunyikan.
+ */
+function notMojibake(t: Trend): boolean {
+  return !/[ÃÂìëíî]/.test(t.title);
+}
+
 function rowToTrend(row: TrendRow): Trend {
   let hashtags: string[] | undefined;
   if (row.hashtags) {
@@ -223,7 +231,8 @@ export async function getTrendsByPlatform(
       .prepare(LATEST_BY_PLATFORM)
       .bind(platform, limit)
       .all<TrendRow>();
-    if (results && results.length > 0) return results.map(rowToTrend);
+    if (results && results.length > 0)
+      return results.map(rowToTrend).filter(notMojibake);
     // Kosong: bila DB sudah punya data nyata (platform lain), jangan palsukan.
     const total = await totalCount(db);
     if (total > 0) return [];
@@ -241,7 +250,7 @@ export async function getAllTrends(): Promise<Trend[]> {
   try {
     const { results } = await db.prepare(LATEST_ALL).all<TrendRow>();
     if (!results || results.length === 0) return MOCK_TRENDS;
-    return results.map(rowToTrend);
+    return results.map(rowToTrend).filter(notMojibake);
   } catch {
     return MOCK_TRENDS;
   }
@@ -340,7 +349,8 @@ export async function getArchivedTrends(limit = 300): Promise<Trend[]> {
       .prepare(ARCHIVED_TRENDS)
       .bind(limit)
       .all<TrendRow>();
-    if (results && results.length > 0) return results.map(rowToTrend);
+    if (results && results.length > 0)
+      return results.map(rowToTrend).filter(notMojibake);
   } catch {
     /* abaikan */
   }

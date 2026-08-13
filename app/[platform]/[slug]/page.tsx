@@ -65,7 +65,8 @@ export async function generateMetadata({
       title,
       description: desc,
       images: trend.thumbnail ? [{ url: trend.thumbnail }] : undefined
-    }
+    },
+    twitter: { title, description: desc }
   };
 }
 

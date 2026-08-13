@@ -181,6 +181,24 @@ class D1Client:
                 pass  # kolom sudah ada
         self._schema_ready = True
 
+    def prune_mojibake(self, platform: str) -> None:
+        """Hapus baris rusak hasil salah-dekode UTF-8→Latin-1 (mis. "ì¬ë..").
+
+        Karakter tanda (Ã, Â, ì, ë, í, î) hampir tak pernah muncul di judul
+        sah, tapi selalu muncul pada mojibake. Aman dihapus — tren aslinya
+        akan terkumpul ulang dengan judul benar."""
+        if self.dry_run or not self._configured():
+            return
+        try:
+            self.query(
+                "DELETE FROM trends WHERE platform = ? AND ("
+                "title LIKE '%Ã%' OR title LIKE '%Â%' OR title LIKE '%ì%' "
+                "OR title LIKE '%ë%' OR title LIKE '%í%' OR title LIKE '%î%')",
+                [platform],
+            )
+        except Exception:
+            pass  # pembersihan opsional — jangan gagalkan pipeline
+
     def save_trends(self, platform: str, trends: list[Trend], prune: bool = True) -> int:
         """Upsert tren satu platform, lalu ARSIPKAN (bukan hapus) yang usang."""
         live = not (self.dry_run or not self._configured())

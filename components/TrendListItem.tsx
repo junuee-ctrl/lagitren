@@ -13,10 +13,13 @@ import PlatformIcon from "./PlatformIcon";
  */
 export default function TrendListItem({
   trend,
-  showPlatform = false
+  showPlatform = false,
+  displayRank
 }: {
   trend: Trend;
   showPlatform?: boolean;
+  /** Nomor urut tampilan (pasca-filter). Bila kosong → pakai trend.rank. */
+  displayRank?: number;
 }) {
   const meta = PLATFORMS[trend.platform];
   const href = `${platformHref(trend.platform)}/${slugFromId(trend.id)}`;
@@ -39,7 +42,7 @@ export default function TrendListItem({
         }}
         aria-hidden
       >
-        {trend.rank}
+        {displayRank ?? trend.rank}
       </span>
 
       {trend.thumbnail && (

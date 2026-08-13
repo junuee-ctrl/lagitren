@@ -27,6 +27,31 @@ export function formatDateID(value: string): string {
 }
 
 /** Waktu relatif sederhana dalam Bahasa Indonesia. */
+/** "13 Agu 14.32 WIB" — waktu Jakarta (UTC+7) untuk label "terakhir diperbarui". */
+export function formatWIB(iso: string): string {
+  const d = new Date(iso.includes("T") ? iso : iso.replace(" ", "T") + "Z");
+  if (Number.isNaN(d.getTime())) return "";
+  const s = new Intl.DateTimeFormat("id-ID", {
+    day: "numeric",
+    month: "short",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Asia/Jakarta"
+  }).format(d);
+  return `${s} WIB`;
+}
+
+/** Waktu koleksi terbaru dari sekumpulan tren (untuk header seksi). */
+export function latestCollectedAt(
+  trends: { collectedAt?: string }[]
+): string | null {
+  let best: string | null = null;
+  for (const t of trends) {
+    if (t.collectedAt && (!best || t.collectedAt > best)) best = t.collectedAt;
+  }
+  return best;
+}
+
 export function timeAgo(iso: string, nowMs?: number): string {
   const then = new Date(iso).getTime();
   if (Number.isNaN(then)) return "";

@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      // URL publik produk = /produk (P0-3). /shopee lama → 301 permanen.
+      { source: "/shopee", destination: "/produk", permanent: true },
+      { source: "/shopee/:slug", destination: "/produk/:slug", permanent: true }
+    ];
+  },
   images: {
     // Cloudflare Pages tidak menjalankan Next.js image optimizer secara default.
     unoptimized: true,

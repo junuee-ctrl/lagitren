@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Platform, Trend } from "@/lib/types";
-import { PLATFORMS } from "@/lib/platforms";
+import { PLATFORMS, platformHref } from "@/lib/platforms";
+import { formatWIB, latestCollectedAt } from "@/lib/format";
 import TrendListItem from "./TrendListItem";
 import PlatformIcon from "./PlatformIcon";
 
@@ -20,6 +21,8 @@ export default function PlatformSection({
 }) {
   const meta = PLATFORMS[platform];
   if (trends.length === 0) return null;
+  // Waktu koleksi terakhir yang berhasil (P0-7) — kepercayaan pengunjung.
+  const lastUpdated = latestCollectedAt(trends);
 
   return (
     <section id={platform} className="scroll-mt-20 py-5">
@@ -46,13 +49,19 @@ export default function PlatformSection({
                 aria-hidden
               />
               {meta.refresh}
+              {lastUpdated && (
+                <span className="text-gray-400/80 dark:text-gray-500">
+                  {" "}
+                  · terakhir {formatWIB(lastUpdated)}
+                </span>
+              )}
             </p>
           </div>
         </div>
 
         {!showAll && (
           <Link
-            href={`/${platform}`}
+            href={platformHref(platform)}
             className="group shrink-0 rounded-full px-3 py-1.5 text-sm font-semibold text-brand transition hover:bg-brand/10 dark:hover:bg-brand/15"
           >
             Lihat semua{" "}
@@ -64,8 +73,9 @@ export default function PlatformSection({
       </div>
 
       <div className="grid gap-2.5 sm:grid-cols-2">
-        {trends.map((t) => (
-          <TrendListItem key={t.id} trend={t} />
+        {trends.map((t, i) => (
+          // Nomor urut = posisi SETELAH penyaringan (P0-5) — tanpa lubang.
+          <TrendListItem key={t.id} trend={t} displayRank={i + 1} />
         ))}
       </div>
     </section>

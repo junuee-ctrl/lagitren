@@ -66,6 +66,7 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
             )
 
         count = db.save_trends(platform, trends)
+        db.prune_mojibake(platform)  # bersihkan sisa judul rusak (P0-1)
         log.info("%s: %d item tersimpan.", platform, count)
         dbg = getattr(module, "LAST_DEBUG", "") or ""
         msg = f"sukses · {dbg}" if dbg else "sukses"
