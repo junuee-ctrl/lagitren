@@ -29,14 +29,30 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "Lagi Tren",
     title: "Lagi Tren — Apa yang Lagi Tren di Indonesia",
-    description: SITE_DESC
+    description: SITE_DESC,
+    images: [{ url: "/og/site", width: 1200, height: 630 }]
   },
   twitter: {
     card: "summary_large_image",
     title: "Lagi Tren — Apa yang Lagi Tren di Indonesia",
-    description: SITE_DESC
+    description: SITE_DESC,
+    images: ["/og/site"]
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    // Wajib untuk kartu besar Google Discover (P1-1).
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
+  },
   alternates: { canonical: SITE_URL },
   verification: {
     google: "IOCf3HyY_9-5tLsVfZyMmgfgjVHqDKG2Kw1tKWSP_kw"

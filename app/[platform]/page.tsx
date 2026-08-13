@@ -38,8 +38,16 @@ export function generateMetadata({
     title,
     description: meta.description,
     alternates: { canonical: platformHref(meta.key) },
-    openGraph: { title: `${title} · Lagi Tren`, description: meta.description },
-    twitter: { title: `${title} · Lagi Tren`, description: meta.description }
+    openGraph: {
+      title: `${title} · Lagi Tren`,
+      description: meta.description,
+      images: [{ url: `/og/${meta.key}`, width: 1200, height: 630 }]
+    },
+    twitter: {
+      title: `${title} · Lagi Tren`,
+      description: meta.description,
+      images: [`/og/${meta.key}`]
+    }
   };
 }
 

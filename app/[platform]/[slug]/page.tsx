@@ -64,9 +64,16 @@ export async function generateMetadata({
       type: "article",
       title,
       description: desc,
-      images: trend.thumbnail ? [{ url: trend.thumbnail }] : undefined
+      // Kartu OG 1200×630 buatan sendiri (P1-1) — syarat Discover/sosial.
+      images: [
+        { url: `/og/${meta.key}/${params.slug}`, width: 1200, height: 630 }
+      ]
     },
-    twitter: { title, description: desc }
+    twitter: {
+      title,
+      description: desc,
+      images: [`/og/${meta.key}/${params.slug}`]
+    }
   };
 }
 
