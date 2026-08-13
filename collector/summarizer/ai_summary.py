@@ -128,3 +128,90 @@ def summarize(platform: str, title: str, context: str = "") -> str:
         log.info("Claude fallback tidak tersedia: %s", exc)
 
     return _heuristic(platform, title, context)
+
+
+# ── Artikel terstruktur (P1-3) ───────────────────────────────────────
+
+def _parse_article_json(raw: str) -> dict | None:
+    """Ambil objek {"lead","apa","rame","penting"} dari keluaran LLM."""
+    import json as _json
+
+    m = re.search(r"\{.*\}", raw or "", re.DOTALL)
+    if not m:
+        return None
+    try:
+        obj = _json.loads(m.group(0))
+    except Exception:
+        return None
+    if not isinstance(obj, dict):
+        return None
+    art = {k: _clean(str(obj.get(k, ""))) for k in ("lead", "apa", "rame", "penting")}
+    total = sum(len(v) for v in art.values())
+    # Kendali mutu: terlalu pendek → tolak (halaman tipis lebih baik tanpa artikel).
+    if total < 450 or not art["lead"] or not art["apa"]:
+        return None
+    return art
+
+
+def _article_ollama(platform: str, title: str, context: str, news: str) -> str:
+    from .prompts import ARTICLE_SYSTEM, build_article_prompt
+
+    url = f"{config.OLLAMA_HOST.rstrip('/')}/api/chat"
+    payload = {
+        "model": config.OLLAMA_MODEL,
+        "messages": [
+            {"role": "system", "content": ARTICLE_SYSTEM},
+            {"role": "user", "content": build_article_prompt(platform, title, context, news)},
+        ],
+        "stream": False,
+        "options": {"temperature": 0.4, "num_predict": 800},
+    }
+    resp = requests.post(url, json=payload, timeout=(3, 180))
+    resp.raise_for_status()
+    return resp.json().get("message", {}).get("content", "")
+
+
+def _article_claude(platform: str, title: str, context: str, news: str) -> str:
+    from .prompts import ARTICLE_SYSTEM, build_article_prompt
+
+    if not config.ANTHROPIC_API_KEY:
+        return ""
+    resp = requests.post(
+        "https://api.anthropic.com/v1/messages",
+        headers={
+            "x-api-key": config.ANTHROPIC_API_KEY,
+            "anthropic-version": "2023-06-01",
+            "content-type": "application/json",
+        },
+        json={
+            "model": config.ANTHROPIC_MODEL,
+            "max_tokens": 900,
+            "system": ARTICLE_SYSTEM,
+            "messages": [
+                {"role": "user", "content": build_article_prompt(platform, title, context, news)}
+            ],
+        },
+        timeout=90,
+    )
+    resp.raise_for_status()
+    parts = resp.json().get("content", [])
+    return "".join(p.get("text", "") for p in parts if p.get("type") == "text")
+
+
+def generate_article(
+    platform: str, title: str, context: str = "", news: str = ""
+) -> dict | None:
+    """Artikel terstruktur utk tren teratas (P1-3). None bila gagal/di bawah mutu."""
+    global _ollama_down
+    if config.USE_OLLAMA and not _ollama_down:
+        try:
+            art = _parse_article_json(_article_ollama(platform, title, context, news))
+            if art:
+                return art
+        except Exception:
+            _ollama_down = True
+    try:
+        return _parse_article_json(_article_claude(platform, title, context, news))
+    except Exception as exc:
+        log.info("Artikel gagal utk '%s': %s", title[:40], exc)
+        return None

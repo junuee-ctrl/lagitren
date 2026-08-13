@@ -41,14 +41,13 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
             db.log_run(platform, "ok", 0, str(debug)[:400], started)
             return 0
 
+        # Cache ringkasan/artikel: pakai ulang bila judul tak berubah.
+        cache: dict = (
+            {}
+            if config.SUMMARY_FORCE_REFRESH
+            else db.fetch_existing_summaries([t.id for t in trends])
+        )
         if do_summary and platform != "youtube":
-            # Cache: pakai ulang ringkasan tren yang tak berubah (judul sama),
-            # hanya panggil LLM untuk tren baru → hemat biaya Haiku.
-            cache = (
-                {}
-                if config.SUMMARY_FORCE_REFRESH
-                else db.fetch_existing_summaries([t.id for t in trends])
-            )
             reused = 0
             for t in trends:
                 if t.ai_summary:
@@ -64,6 +63,52 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
                 "%s: ringkasan %d baru, %d dari cache.",
                 platform, len(trends) - reused, reused,
             )
+
+        # ── Artikel terstruktur utk tren teratas (P1-3, hibrida) ──
+        if do_summary and platform != "shopee" and config.ARTICLE_TOPN > 0:
+            import json as _json
+            from summarizer.ai_summary import generate_article
+            from summarizer.news_lookup import fetch_related_news
+
+            made = kept = 0
+            for t in trends:
+                if (t.rank or 99) > config.ARTICLE_TOPN:
+                    continue
+                prev = cache.get(t.id) or {}
+                prev_article = None
+                if prev.get("title") == t.title and prev.get("extra"):
+                    try:
+                        prev_article = (_json.loads(prev["extra"]) or {}).get(
+                            "article"
+                        )
+                    except Exception:
+                        prev_article = None
+                if prev_article:
+                    t.extra = {**(t.extra or {}), "article": prev_article}
+                    # Berita lama ikut dipertahankan bila run ini tak membawa baru.
+                    if not (t.extra or {}).get("news"):
+                        try:
+                            old_news = (_json.loads(prev["extra"]) or {}).get("news")
+                            if old_news:
+                                t.extra["news"] = old_news
+                        except Exception:
+                            pass
+                    kept += 1
+                    continue
+                # Berita terkait: pakai punya collector (Google) atau cari sendiri.
+                news_items = (t.extra or {}).get("news") or []
+                if not news_items:
+                    news_items = fetch_related_news(t.title)
+                    if news_items:
+                        t.extra = {**(t.extra or {}), "news": news_items}
+                news_txt = " | ".join(n["title"] for n in news_items[:4])
+                context = getattr(t, "_context", "") or ""
+                art = generate_article(platform, t.title, context, news_txt)
+                if art:
+                    t.extra = {**(t.extra or {}), "article": art}
+                    made += 1
+            if made or kept:
+                log.info("%s: artikel %d baru, %d dari cache.", platform, made, kept)
 
         count = db.save_trends(platform, trends)
         db.prune_mojibake(platform)  # bersihkan sisa judul rusak (P0-1)

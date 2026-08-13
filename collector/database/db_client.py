@@ -150,7 +150,7 @@ class D1Client:
             part = ids[i : i + chunk]
             placeholders = ",".join(["?"] * len(part))
             sql = (
-                "SELECT id, title, ai_summary FROM trends "
+                "SELECT id, title, ai_summary, extra FROM trends "
                 f"WHERE id IN ({placeholders})"
             )
             try:
@@ -161,6 +161,7 @@ class D1Client:
                     out[r["id"]] = {
                         "title": r.get("title"),
                         "ai_summary": r.get("ai_summary"),
+                        "extra": r.get("extra"),
                     }
             except Exception as exc:
                 log.warning("Gagal ambil cache ringkasan: %s", exc)

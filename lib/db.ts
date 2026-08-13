@@ -82,6 +82,16 @@ function parseExtra(raw: string | null): TrendExtra | undefined {
     const obj = JSON.parse(raw);
     if (obj && typeof obj === "object" && !Array.isArray(obj)) {
       const extra: TrendExtra = {};
+      if (obj.article && typeof obj.article === "object") {
+        const a = obj.article as Record<string, unknown>;
+        const art = {
+          lead: a.lead ? String(a.lead) : undefined,
+          apa: a.apa ? String(a.apa) : undefined,
+          rame: a.rame ? String(a.rame) : undefined,
+          penting: a.penting ? String(a.penting) : undefined
+        };
+        if (art.lead || art.apa) extra.article = art;
+      }
       if (Array.isArray(obj.news) && obj.news.length > 0) {
         extra.news = obj.news
           .filter((n: unknown) => n && typeof n === "object")
@@ -131,6 +141,7 @@ function parseExtra(raw: string | null): TrendExtra | undefined {
         };
       }
       if (
+        extra.article ||
         (extra.news && extra.news.length) ||
         (extra.comments && extra.comments.length) ||
         extra.ott ||

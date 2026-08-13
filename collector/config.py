@@ -95,3 +95,7 @@ USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36 LagiTrenBot/1.0"
 )
+
+# Artikel terstruktur (P1-3): dibuat utk tren peringkat <= N per platform.
+# 0 = nonaktif. Hemat biaya: hanya tren baru yang memicu LLM (sisanya cache).
+ARTICLE_TOPN = int(_get("ARTICLE_TOPN", "10") or "10")

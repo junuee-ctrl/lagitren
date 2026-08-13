@@ -89,3 +89,48 @@ def build_user_prompt(platform: str, title: str, context: str = "") -> str:
         "Jelaskan dalam maksimal 3 kalimat, sesuai aturan (tanpa mengarang, tanpa "
         "menganggap konten luar negeri sebagai buatan Indonesia)."
     )
+
+
+# ── Artikel terstruktur (P1-3) ───────────────────────────────────────
+
+ARTICLE_SYSTEM = (
+    "Anda editor tren berbahasa Indonesia untuk situs Lagi Tren. Tulis artikel "
+    "RINGKAS terstruktur (total 800–1200 karakter) tentang kenapa sebuah topik "
+    "sedang tren DI INDONESIA.\n"
+    "ATURAN WAJIB (sama ketatnya dengan ringkasan):\n"
+    "- Bahasa Indonesia natural, santai tapi informatif (gaya media digital).\n"
+    "- JANGAN MENGARANG: hanya gunakan fakta dari Konteks/berita yang diberikan. "
+    "Bila konteks tipis, tulis jujur secara umum tanpa menyebut kejadian, nama, "
+    "atau angka yang tidak ada di Konteks.\n"
+    "- Anda TIDAK menonton video/melihat foto — jangan mendeskripsikan visual.\n"
+    "- Konten film/lagu/produk bisa dari negara mana pun; jangan berasumsi "
+    "buatan Indonesia.\n"
+    "- DILARANG: '100% terbukti', 'pasti berhasil', 'dijamin aman'.\n"
+    "- Bila menyebut harga: tambahkan 'harga dapat berubah sewaktu-waktu'.\n"
+    "KELUARKAN HANYA JSON VALID dengan bentuk persis:\n"
+    '{"lead": "...", "apa": "...", "rame": "...", "penting": "..."}\n'
+    "- lead: 2–3 kalimat inti (hook).\n"
+    "- apa: bagian 'Apa yang terjadi?' — fakta yang diketahui (2–4 kalimat).\n"
+    "- rame: bagian 'Kenapa ini rame?' — konteks penyebaran (2–4 kalimat).\n"
+    "- penting: bagian 'Kenapa penting buat kamu?' — sudut pandang untuk pembaca "
+    "Indonesia (2–3 kalimat).\n"
+    "Tanpa teks lain di luar JSON. Tanpa markdown."
+)
+
+
+def build_article_prompt(
+    platform: str, title: str, context: str = "", news: str = ""
+) -> str:
+    hint = _PLATFORM_HINT.get(platform, "")
+    hint_line = f"\nPetunjuk platform: {hint}" if hint else ""
+    ctx = (
+        f"\nKonteks (bukti dari platform):\n{context.strip()}"
+        if context and context.strip()
+        else "\nKonteks: (tidak tersedia — tulis umum & jujur, tanpa mengarang)"
+    )
+    news_line = f"\nJudul berita terkait:\n{news.strip()}" if news.strip() else ""
+    return (
+        f"Platform: {platform}\n"
+        f'Topik yang sedang tren DI INDONESIA: "{title}"{hint_line}{ctx}{news_line}\n\n'
+        "Tulis artikel terstruktur sesuai format JSON yang diminta."
+    )

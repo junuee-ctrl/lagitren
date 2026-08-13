@@ -91,7 +91,17 @@ export interface TrendTiktok {
 }
 
 /** Data konteks kaya yang disimpan di kolom `extra` (JSON). */
+/** Artikel terstruktur hasil pipeline P1-3 (tren teratas). */
+export interface TrendArticle {
+  lead?: string;
+  apa?: string;
+  rame?: string;
+  penting?: string;
+}
+
 export interface TrendExtra {
+  /** Artikel terstruktur (tren teratas). */
+  article?: TrendArticle;
   /** Berita terkait teratas (Google Trends). */
   news?: TrendNews[];
   /** Komentar terbaik (YouTube). */

@@ -17,6 +17,7 @@ import AffiliateBox from "@/components/AffiliateBox";
 import SearchVolumeChart from "@/components/SearchVolumeChart";
 import GoogleTrendsWidget from "@/components/GoogleTrendsWidget";
 import TrendContext from "@/components/TrendContext";
+import TrendArticleBody from "@/components/TrendArticleBody";
 import PlatformIcon from "@/components/PlatformIcon";
 
 export const dynamic = "force-dynamic";
@@ -44,15 +45,21 @@ export async function generateMetadata({
 
   const intent = INTENT[meta.key as Platform] ?? "kenapa lagi tren?";
   const title = `${trend.title} — ${intent} | ${meta.name} Indonesia`;
+  const lead = trend.extra?.article?.lead;
   const desc = (
-    trend.aiSummary
+    lead ||
+    (trend.aiSummary
       ? `${trend.title}: ${trend.aiSummary}`
-      : `Kenapa "${trend.title}" sedang tren di ${meta.name} Indonesia hari ini? Simak ringkasannya di Lagi Tren.`
+      : `Kenapa "${trend.title}" sedang tren di ${meta.name} Indonesia hari ini? Simak ringkasannya di Lagi Tren.`)
   ).slice(0, 160);
+  // Halaman tipis (tanpa artikel & ringkasan) → jangan diindeks (anti
+  // "scaled content abuse"). Tetap follow agar tautan internal dirayapi.
+  const thin = !trend.aiSummary && !trend.extra?.article;
 
   return {
     title,
     description: desc,
+    ...(thin ? { robots: { index: false, follow: true } } : {}),
     alternates: { canonical: `${platformHref(meta.key)}/${params.slug}` },
     keywords: [
       trend.title,
@@ -200,8 +207,13 @@ export default async function TrendDetailPage({
       {/* Iklan in-content (di atas lipatan konten) */}
       <AdSlot slot={`detail-${platform}-top`} adSlot={AD_SLOTS.atas} />
 
-      {/* Penjelasan "kenapa tren" — bintang utama, khususnya Google */}
-      {trend.aiSummary && platform !== "youtube" && (
+      {/* Artikel terstruktur (P1-3) untuk tren teratas */}
+      {trend.extra?.article && (
+        <TrendArticleBody article={trend.extra.article} />
+      )}
+
+      {/* Penjelasan "kenapa tren" — dipakai bila belum ada artikel penuh */}
+      {!trend.extra?.article && trend.aiSummary && platform !== "youtube" && (
         <section className="my-5 rounded-2xl border border-brand/25 bg-gradient-to-br from-brand/10 to-accent/10 p-5 dark:border-brand/30 dark:from-brand/15 dark:to-accent/10">
           <h2 className="flex items-center gap-2 text-base font-bold text-brand dark:text-brand-light">
             <span aria-hidden>💡</span> Kenapa ini lagi tren?
@@ -279,7 +291,18 @@ export default async function TrendDetailPage({
             "@context": "https://schema.org",
             "@type": "NewsArticle",
             headline: trend.title.slice(0, 110),
-            description: trend.aiSummary ?? trend.title,
+            description:
+              trend.extra?.article?.lead ?? trend.aiSummary ?? trend.title,
+            articleBody: trend.extra?.article
+              ? [
+                  trend.extra.article.lead,
+                  trend.extra.article.apa,
+                  trend.extra.article.rame,
+                  trend.extra.article.penting
+                ]
+                  .filter(Boolean)
+                  .join(" ")
+              : trend.aiSummary,
             inLanguage: "id-ID",
             mainEntityOfPage: `${SITE_URL}/${platform}/${params.slug}`,
             image: [
