@@ -121,6 +121,24 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
         count = db.save_trends(platform, trends)
         db.prune_mojibake(platform)  # bersihkan sisa judul rusak (P0-1)
         log.info("%s: %d item tersimpan.", platform, count)
+
+        # Ping IndexNow utk URL BARU saja (id belum ada / judul berubah) — P2-1.
+        try:
+            import indexnow
+
+            fresh = [
+                indexnow.url_for(platform, t.id)
+                for t in trends
+                if t.id not in cache or (cache.get(t.id) or {}).get("title") != t.title
+            ]
+            if fresh:
+                sent = indexnow.ping(fresh)
+                if sent:
+                    module.LAST_DEBUG = (
+                        f"{getattr(module, 'LAST_DEBUG', '') or ''} · inow:{sent}"
+                    ).strip(" ·")
+        except Exception:
+            pass  # ping opsional — jangan ganggu pipeline
         dbg = getattr(module, "LAST_DEBUG", "") or ""
         msg = f"sukses · {dbg}" if dbg else "sukses"
         db.log_run(platform, "ok", count, msg[:400], started)

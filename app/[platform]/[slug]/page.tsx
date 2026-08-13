@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getTrendById, getRelatedTrends, getTrendsByPlatform } from "@/lib/db";
+import {
+  getTrendById,
+  getRelatedTrends,
+  getTrendsByPlatform,
+  getHomepageTrends
+} from "@/lib/db";
 import { getPlatform, platformHref } from "@/lib/platforms";
 import { relatedProducts } from "@/lib/shopping";
 import RelatedProducts from "@/components/RelatedProducts";
@@ -10,7 +15,7 @@ import { formatDateID, formatWIB } from "@/lib/format";
 import { AUTHOR_NAME, SITE_URL, authorRef, publisherRef, toIso } from "@/lib/site";
 import type { Platform } from "@/lib/types";
 import TrendMedia from "@/components/TrendMedia";
-import TrendListItem from "@/components/TrendListItem";
+import TrendCardMini from "@/components/TrendCardMini";
 import AdSlot from "@/components/AdSlot";
 import { AD_SLOTS } from "@/lib/adsense";
 import AffiliateBox from "@/components/AffiliateBox";
@@ -104,6 +109,12 @@ export default async function TrendDetailPage({
   // Produk afiliasi TikTok Shop yang relevan (kecuali pada halaman produk).
   const productPool = isProduct ? [] : await getTrendsByPlatform("shopee", 20);
   const relProducts = relatedProducts(trend, productPool, 3);
+
+  // Rekomendasi lintas platform (P2-2): topik ramai dari platform LAIN.
+  const crossPool = await getHomepageTrends(2);
+  const crossTrends = crossPool
+    .filter((t) => t.platform !== platform && t.platform !== "shopee")
+    .slice(0, 6);
 
   return (
     <article className="mx-auto max-w-3xl">
@@ -263,7 +274,7 @@ export default async function TrendDetailPage({
       {/* Iklan in-content kedua */}
       <AdSlot slot={`detail-${platform}-bottom`} adSlot={AD_SLOTS.bawah} />
 
-      {/* Trend terkait — navigasi internal (menambah page view) */}
+      {/* Trend terkait — kartu ber-thumbnail (P2-2, naikkan PV/sesi) */}
       {related.length > 0 && (
         <section className="mt-8">
           <h2 className="mb-3 flex items-center justify-between text-lg font-extrabold text-ink dark:text-white">
@@ -275,9 +286,23 @@ export default async function TrendDetailPage({
               Lihat semua →
             </Link>
           </h2>
-          <div className="grid gap-2 sm:grid-cols-2">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {related.map((t) => (
-              <TrendListItem key={t.id} trend={t} />
+              <TrendCardMini key={t.id} trend={t} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Rekomendasi lintas platform (P2-2) */}
+      {crossTrends.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 text-lg font-extrabold text-ink dark:text-white">
+            Tren lain hari ini
+          </h2>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {crossTrends.map((t) => (
+              <TrendCardMini key={t.id} trend={t} showPlatform />
             ))}
           </div>
         </section>

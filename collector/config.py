@@ -99,3 +99,6 @@ USER_AGENT = (
 # Artikel terstruktur (P1-3): dibuat utk tren peringkat <= N per platform.
 # 0 = nonaktif. Hemat biaya: hanya tren baru yang memicu LLM (sisanya cache).
 ARTICLE_TOPN = int(_get("ARTICLE_TOPN", "10") or "10")
+
+# Kunci IndexNow (P2-1) — file publik /{KEY}.txt harus berisi kunci yang sama.
+INDEXNOW_KEY = _get("INDEXNOW_KEY", "6ee673c93bccc64ef92db04fc4f12e05")
