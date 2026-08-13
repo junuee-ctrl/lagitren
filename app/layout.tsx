@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ADSENSE_CLIENT } from "@/lib/adsense";
 import { PLATFORM_LIST_STR } from "@/lib/platforms";
+import { organizationJsonLd } from "@/lib/site";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
 // Deskripsi situs — daftar platform dari satu konstanta (P0-4).
@@ -74,6 +75,12 @@ export default function RootLayout({
               "(function(){try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme:dark)').matches)){document.documentElement.classList.add('dark')}}catch(e){}})()"
           }}
         />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Lagi Tren — RSS"
+          href="/feed.xml"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -116,6 +123,11 @@ export default function RootLayout({
         )}
       </head>
       <body className="min-h-screen font-sans">
+        {/* JSON-LD Organization — identitas penerbit (E-E-A-T, P1-2). */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
+        />
         <Header />
         <main className="container-page py-6">{children}</main>
         <Footer />

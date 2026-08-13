@@ -41,8 +41,25 @@ export default function AboutPage() {
         berkala. Kami menghormati kebijakan dan batasan tiap platform, serta
         tidak menyalin konten berhak cipta — hanya menautkan dan meringkas.
       </p>
+      <h2 className="text-lg font-bold text-ink">Siapa kami</h2>
       <p>
-        Ada pertanyaan atau masukan? Hubungi kami melalui halaman{" "}
+        Lagi Tren dioperasikan secara independen dari <strong>Jakarta,
+        Indonesia</strong> oleh <strong>Arka Pradana</strong> (nama pena),
+        editor &amp; kurator tren kami. Kenali cara kerja redaksi di halaman{" "}
+        <a href="/redaksi" className="text-brand hover:underline">
+          Redaksi
+        </a>
+        .
+      </p>
+      <p>
+        Ada pertanyaan, masukan, atau koreksi? Hubungi kami di{" "}
+        <a
+          href="mailto:keyframe.jakarta@gmail.com"
+          className="text-brand hover:underline"
+        >
+          keyframe.jakarta@gmail.com
+        </a>{" "}
+        atau melalui halaman{" "}
         <a href="/contact" className="text-brand hover:underline">
           Kontak
         </a>

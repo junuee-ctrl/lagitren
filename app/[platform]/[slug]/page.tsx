@@ -6,7 +6,8 @@ import { getPlatform, platformHref } from "@/lib/platforms";
 import { relatedProducts } from "@/lib/shopping";
 import RelatedProducts from "@/components/RelatedProducts";
 import { SOURCE_LABEL, canEmbed } from "@/lib/embed";
-import { formatDateID } from "@/lib/format";
+import { formatDateID, formatWIB } from "@/lib/format";
+import { AUTHOR_NAME, SITE_URL, authorRef, publisherRef, toIso } from "@/lib/site";
 import type { Platform } from "@/lib/types";
 import TrendMedia from "@/components/TrendMedia";
 import TrendListItem from "@/components/TrendListItem";
@@ -131,6 +132,14 @@ export default async function TrendDetailPage({
             </span>
           )}
           {trend.source ? ` · ${trend.source}` : ""}
+        </p>
+        {/* Byline redaksi + waktu terbit (E-E-A-T, P1-2) */}
+        <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
+          Oleh{" "}
+          <Link href="/redaksi" className="font-semibold text-gray-500 hover:text-brand dark:text-gray-400">
+            {AUTHOR_NAME}
+          </Link>
+          {" · "}Diperbarui {formatWIB(trend.collectedAt)}
         </p>
       </header>
 
@@ -262,21 +271,48 @@ export default async function TrendDetailPage({
         </section>
       )}
 
-      {/* Structured data */}
+      {/* Structured data: NewsArticle + (untuk produk) Product/Offer — P1-2 */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            headline: trend.title,
+            "@type": "NewsArticle",
+            headline: trend.title.slice(0, 110),
             description: trend.aiSummary ?? trend.title,
             inLanguage: "id-ID",
-            image: trend.thumbnail ? [trend.thumbnail] : undefined,
-            about: meta.name
+            mainEntityOfPage: `${SITE_URL}/${platform}/${params.slug}`,
+            image: [
+              `${SITE_URL}/og/${platform}/${params.slug}`,
+              ...(trend.thumbnail ? [trend.thumbnail] : [])
+            ],
+            datePublished: toIso(trend.collectedAt),
+            dateModified: toIso(trend.collectedAt),
+            author: [authorRef()],
+            publisher: publisherRef()
           })
         }}
       />
+      {isProduct && trend.affiliateUrl && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: trend.title,
+              image: trend.thumbnail ? [trend.thumbnail] : undefined,
+              offers: {
+                "@type": "Offer",
+                url: trend.affiliateUrl,
+                priceCurrency: "IDR",
+                price: (trend.price ?? "").replace(/[^0-9]/g, "") || undefined,
+                availability: "https://schema.org/InStock"
+              }
+            })
+          }}
+        />
+      )}
     </article>
   );
 }

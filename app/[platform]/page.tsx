@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTrendsByPlatform } from "@/lib/db";
+import { slugFromId } from "@/lib/embed";
+import { SITE_URL } from "@/lib/site";
 import { formatWIB, latestCollectedAt } from "@/lib/format";
 import {
   PLATFORMS,
@@ -152,7 +154,16 @@ export default async function PlatformPage({
             "@type": "CollectionPage",
             name: `${meta.name} Indonesia Hari Ini`,
             inLanguage: "id-ID",
-            about: meta.name
+            about: meta.name,
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: trends.slice(0, 20).map((t, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                name: t.title,
+                url: `${SITE_URL}${platformHref(platform)}/${slugFromId(t.id)}`
+              }))
+            }
           })
         }}
       />

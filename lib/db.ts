@@ -196,7 +196,7 @@ const LATEST_ALL = `
 
 // Untuk sitemap: semua halaman (termasuk arsip) yang terbaru diperbarui.
 const SITEMAP_TRENDS = `
-  SELECT id, platform, collected_at, updated_at
+  SELECT id, platform, title, collected_at, updated_at
   FROM trends
   ORDER BY updated_at DESC
   LIMIT ?
@@ -292,6 +292,7 @@ export async function getRelatedTrends(
 interface SitemapRow {
   id: string;
   platform: string;
+  title: string | null;
   collected_at: string;
   updated_at: string;
 }
@@ -299,12 +300,15 @@ interface SitemapRow {
 /** Semua halaman tren (termasuk arsip) untuk sitemap SEO. */
 export async function getSitemapTrends(
   limit = 5000
-): Promise<{ id: string; platform: Platform; collectedAt: string }[]> {
+): Promise<
+  { id: string; platform: Platform; title: string; collectedAt: string }[]
+> {
   const db = await getDB();
   if (!db) {
     return MOCK_TRENDS.map((t) => ({
       id: t.id,
       platform: t.platform,
+      title: t.title,
       collectedAt: t.collectedAt
     }));
   }
@@ -317,6 +321,7 @@ export async function getSitemapTrends(
       return results.map((r) => ({
         id: r.id,
         platform: r.platform as Platform,
+        title: r.title ?? "",
         collectedAt: r.updated_at || r.collected_at
       }));
     }
@@ -326,6 +331,7 @@ export async function getSitemapTrends(
   return MOCK_TRENDS.map((t) => ({
     id: t.id,
     platform: t.platform,
+    title: t.title,
     collectedAt: t.collectedAt
   }));
 }
