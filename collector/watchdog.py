@@ -57,7 +57,7 @@ def _last_ok(db: D1Client, platform: str) -> datetime | None:
 
 def main() -> None:
     if "--test" in sys.argv:
-        ok = telegram_bot.send("🔔 Uji watchdog Lagi Tren — konfigurasi Telegram OK.")
+        ok = telegram_bot.send("🔔 라기트렌 알림 테스트 — 텔레그램 연결 정상! 앞으로 수집기 이상 시 이 채널로 경고가 와요.")
         print("terkirim" if ok else "GAGAL (cek TELEGRAM_BOT_TOKEN/CHAT_ID)")
         return
 
