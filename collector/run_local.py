@@ -72,18 +72,11 @@ def main() -> None:
         from main import run
         from datetime import datetime
 
-        # Pilih platform per jam: X tiap jam (cepat berubah), TikTok tiap 2
-        # jam, Instagram tiap 4 jam. Argumen CLI menimpa pilihan otomatis.
+        # SELALU jalankan ketiganya. (Rotasi per-jam sebelumnya membuat
+        # Instagram bisa terlewat berhari-hari bila jadwal 3-jam tak pernah
+        # jatuh di jam kelipatan 4 — sumber "instagram basi" kronis.)
         cli = [a for a in sys.argv[1:] if not a.startswith("-")]
-        if cli:
-            platforms = cli
-        else:
-            h = datetime.now().hour
-            platforms = ["twitter"]
-            if h % 2 == 0:
-                platforms.append("tiktok")
-            if h % 4 == 0:
-                platforms.append("instagram")
+        platforms = cli if cli else ["tiktok", "instagram", "twitter"]
         results = run(platforms)
         print("Ringkasan:", results)
     finally:
