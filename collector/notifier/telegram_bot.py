@@ -39,8 +39,8 @@ def send(text: str, silent: bool = False) -> bool:
 
 def notify_success(summary: dict[str, int]) -> None:
     parts = [f"{k.capitalize()} {v}" for k, v in summary.items()]
-    send("✅ Pengumpulan selesai: " + ", ".join(parts) + " item.")
+    send("✅ 수집 완료: " + ", ".join(parts) + " 건")
 
 
 def notify_error(platform: str, message: str) -> None:
-    send(f"❌ Gagal mengumpulkan <b>{platform}</b>: {message}")
+    send(f"❌ <b>{platform}</b> 수집 실패: {message}")

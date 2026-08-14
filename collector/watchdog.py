@@ -71,8 +71,8 @@ def main() -> None:
     for p in LOCAL_PLATFORMS:
         last = _last_ok(db, p)
         if last is None or (now - last) > timedelta(hours=STALE_HOURS):
-            ago = "belum pernah" if last is None else f"{(now - last).total_seconds() / 3600:.0f} jam lalu"
-            stale.append(f"{p} (terakhir sukses: {ago})")
+            ago = "기록 없음" if last is None else f"{(now - last).total_seconds() / 3600:.0f}시간 전"
+            stale.append(f"{p} (마지막 성공: {ago})")
 
     if not stale:
         log.info("Semua kolektor lokal segar (< %d jam).", STALE_HOURS)
@@ -91,11 +91,11 @@ def main() -> None:
         return
 
     msg = (
-        "⚠️ <b>Kolektor lokal macet</b> — "
+        "⚠️ <b>로컬 수집기 멈춤</b> — "
         + "; ".join(stale)
-        + f"\nAmbang: {STALE_HOURS} jam. Cek PC Jakarta: jalankan "
-        "<code>py run_local.py</code> di C:\\lagitren\\collector "
-        "(pastikan Chrome login & jadwal LagiTrenCollect aktif)."
+        + f"\n기준: {STALE_HOURS}시간 초과. 자카르타 PC에서 "
+        "<code>py run_local.py</code> 실행해줘 (C:\\lagitren\\collector, "
+        "크롬 로그인·LagiTrenCollect 스케줄 확인)."
     )
     sent = telegram_bot.send(msg)
     db.log_run("watchdog", "alert" if sent else "alert-gagal", len(stale), "; ".join(stale)[:400], now_iso())
