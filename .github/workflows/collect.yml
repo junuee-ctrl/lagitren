@@ -71,3 +71,12 @@ jobs:
           [ -z "$PLATFORMS" ] && PLATFORMS="google"
           echo "Mengumpulkan: $PLATFORMS"
           python main.py $PLATFORMS
+
+      - name: Watchdog kolektor lokal (alert Telegram bila macet)
+        if: always()
+        working-directory: collector
+        env:
+          CLOUDFLARE_D1_DATABASE_ID: ${{ env.CLOUDFLARE_D1_DATABASE_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python watchdog.py
