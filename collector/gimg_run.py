@@ -48,6 +48,17 @@ def accept_consent(page):
 
 BAD = ("gstatic.com", "google.com", "googleusercontent.com/a/", "sprite", "logo")
 
+def _clean_url(u):
+    """URL dari HTML Google berisi escape JSON (\u003d, \u0026) — pulihkan.
+    Juga paksa https (mixed content di situs)."""
+    if not u:
+        return u
+    u = u.replace("\\u003d", "=").replace("\\u0026", "&").replace("\\/", "/")
+    if u.startswith("http://"):
+        u = "https://" + u[len("http://"):]
+    return u
+
+
 def best_image(page, query):
     page.goto(f"https://www.google.com/search?q={quote(query)}&tbm=isch&hl=id&gl=ID",
               wait_until="domcontentloaded", timeout=45000)
@@ -62,11 +73,11 @@ def best_image(page, query):
             continue
         w, h = int(w), int(h)
         if w >= 300 and h >= 300:
-            return url                      # gambar original besar pertama
+            return _clean_url(url)          # gambar original besar pertama
         if fallback is None and w >= 150:
             fallback = url
     if fallback:
-        return fallback
+        return _clean_url(fallback)
     # cadangan terakhir: thumbnail gstatic
     for el in page.query_selector_all("img"):
         src = el.get_attribute("src") or ""
