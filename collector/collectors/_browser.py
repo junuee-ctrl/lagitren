@@ -43,6 +43,22 @@ def is_cdp() -> bool:
     return bool(config.BROWSER_CDP)
 
 
+# F1 (insiden 2026-08-18): timeout default WAJIB di semua context supaya
+# tidak ada operasi Playwright yang bisa menunggu tanpa batas.
+DEFAULT_TIMEOUT_MS = 30_000
+NAV_TIMEOUT_MS = 45_000
+CDP_CONNECT_TIMEOUT_MS = 20_000
+
+
+def _apply_timeouts(ctx):
+    try:
+        ctx.set_default_timeout(DEFAULT_TIMEOUT_MS)
+        ctx.set_default_navigation_timeout(NAV_TIMEOUT_MS)
+    except Exception:
+        pass
+    return ctx
+
+
 def get_context(p):
     """Context untuk collector.
 
@@ -51,10 +67,12 @@ def get_context(p):
     - Selain itu → profil persisten sendiri.
     """
     if config.BROWSER_CDP:
-        browser = p.chromium.connect_over_cdp(config.BROWSER_CDP)
+        browser = p.chromium.connect_over_cdp(
+            config.BROWSER_CDP, timeout=CDP_CONNECT_TIMEOUT_MS
+        )
         ctxs = browser.contexts
-        return ctxs[0] if ctxs else browser.new_context()
-    return persistent_context(p)
+        return _apply_timeouts(ctxs[0] if ctxs else browser.new_context())
+    return _apply_timeouts(persistent_context(p))
 
 
 def close_context(ctx) -> None:

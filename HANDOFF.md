@@ -148,3 +148,22 @@ e372934 TikTok Shop 상품 products.csv 20개
   - 광고 단위 슬롯: 슬롯 ID는 옛 계정 것 → 새 계정 승인 후 새 광고 단위 3개 만들어 교체 필요.
   - 사이트 심사 "준비 중" — 승인되면 광고 자동 게재.
 - 제품 클릭 추적: `affiliate_click` 이벤트 (components/AffiliateLink.tsx) → GA4로 전송.
+
+---
+
+## 세션 3 추가 (2026-08-18) — 수집기 장애(Playwright 행) 대응
+
+**장애**: 08-18 04:17 로컬 run_local이 Playwright 무한대기로 13h40m 정지, 스케줄러가 후속 트리거 4회 스킵. Produk은 08-14부터 정지(원인: shopee 크론 자체가 없었음). Google/YouTube 클라우드 수집은 정상이었음(Actions 히스토리 전부 success — 리포트의 "그룹 B 정지"는 캐시된 페이지를 본 것으로 추정).
+
+**적용한 수정 (커밋 참조)**:
+- F1: `_browser.py` — context 기본 타임아웃 30s/내비 45s, CDP connect 20s. HTTP 호출은 전부 timeout 있음(검증 완료). networkidle 사용처 없음.
+- F2: `run_local.py` — 소스별 **multiprocessing 격리** + 하드 타임아웃(tiktok 600s, ig/x 420s), 초과 시 taskkill /T /F로 트리째 종료. 한 소스가 행 걸려도 나머지 계속.
+- F4: PID 락파일(`run_local.lock`, 40분 스테일 인수) + 28분 자체 종료 타이머.
+- F5: `run_local_task.bat` — `py -u`, `logs\YYYYMMDD.log` 날짜별 로그, 30일 보존(forfiles).
+- F3(사용자 완료): LagiTrenCollect ExecutionTimeLimit=PT30M, MultipleInstances=StopExisting(COM 값 3 — PowerShell 표시는 공란), StartWhenAvailable 등 적용 확인.
+- F6a: `watchdog.py` 전 소스 확장 — 임계값=주기×3 (google/youtube 3h, 로컬 3종 9h, netflix/shopee 72h), 재알림 6h(새 소스 추가 시 즉시), **복구됨 알림** 추가. 상태는 collection_runs 'watchdog' 행 message의 `stale=` 프리픽스로 추적.
+- 신규 `/admin/status?key=<ADMIN_KEY>` — D1 기반 소스별 상태 JSON. **Cloudflare 대시보드에 ADMIN_KEY 환경변수 설정 필요**(미설정 시 503). robots /admin/ 차단.
+- `collect-shopee.yml` 신규 — 매일 05:30 UTC(12:30 WIB) Produk 수집 크론.
+- 표기 수정: X "tiap 30 menit"→"tiap 3 jam", IG "6 jam"→"3 jam", Produk "berkala"→"tiap hari".
+
+**미구현(후속)**: `/admin/refresh` 수동 실행 엔드포인트 — 클라우드 소스는 GH workflow_dispatch 프록시(Cloudflare에 GH 토큰 필요), 로컬 소스는 PC 폴링 큐 필요. 폰에서는 당장 GitHub 앱/웹의 Run workflow로 대체 가능.

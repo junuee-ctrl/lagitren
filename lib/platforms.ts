@@ -39,7 +39,7 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
     sectionTitle: "Instagram Hits",
     description:
       "Reels dan postingan yang sedang populer di Instagram Indonesia.",
-    refresh: "Diperbarui tiap 6 jam"
+    refresh: "Diperbarui tiap 3 jam"
   },
   shopee: {
     key: "shopee",
@@ -49,7 +49,7 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
     sectionTitle: "Produk Viral",
     description:
       "Produk terlaris & viral di TikTok Shop / Tokopedia Indonesia — pilihan editor, lengkap dengan tautan belanja.",
-    refresh: "Diperbarui berkala"
+    refresh: "Diperbarui tiap hari"
   },
   twitter: {
     key: "twitter",
@@ -59,7 +59,7 @@ export const PLATFORMS: Record<Platform, PlatformMeta> = {
     sectionTitle: "X (Twitter) Trending",
     description:
       "Topik dan hashtag yang sedang trending di X (Twitter) Indonesia.",
-    refresh: "Diperbarui tiap 30 menit"
+    refresh: "Diperbarui tiap 3 jam"
   },
   netflix: {
     key: "netflix",
