@@ -167,3 +167,19 @@ e372934 TikTok Shop 상품 products.csv 20개
 - 표기 수정: X "tiap 30 menit"→"tiap 3 jam", IG "6 jam"→"3 jam", Produk "berkala"→"tiap hari".
 
 **미구현(후속)**: `/admin/refresh` 수동 실행 엔드포인트 — 클라우드 소스는 GH workflow_dispatch 프록시(Cloudflare에 GH 토큰 필요), 로컬 소스는 PC 폴링 큐 필요. 폰에서는 당장 GitHub 앱/웹의 Run workflow로 대체 가능.
+
+---
+
+## 세션 3 추가 (2026-08-18/19) — AdSense 재심사 대응 1주차 (/artikel)
+
+**배경**: AdSense "가치가 별로 없는 콘텐츠" 판정 → 사용자 계획서(lagitrenadsenserecoveryplan.md) 기반 4주 플랜 착수. 결정사항: 저자 **Tim Redaksi Lagitren**으로 전환(필명 Arka Pradana 폐기 — 가짜 인물 리스크 제거, AI 활용 공개 방침), 기사 생성 엔진 **Claude Sonnet**(claude-sonnet-4-5, ARTIKEL_MODEL env), 요약은 기존 Haiku 유지.
+
+**구축 완료 (커밋 8dbccd9, 라이브 검증됨)**:
+- **trend_snapshots 테이블** — 매 수집 런마다 (trend_id, platform, rank, title, metric, snapshot_at) 배치 INSERT (db_client.save_snapshots, main.py 훅). 90일 보존(netflix 워크플로에서 일일 prune). **⚠️ 기존 trends는 upsert라 순위 이력이 없음 — 시계열은 08-18부터 축적 시작.** 주간 리뷰(유형 A)는 스냅샷 6일 이상부터 가능.
+- **articles 테이블** + `/artikel`(목록·ItemList JSON-LD), `/artikel/[slug]`(Article+BreadcrumbList JSON-LD, Tim Redaksi 바이라인, dataCard, 소스·관련 링크, 광고 슬롯), OG 카드 `/og/artikel/<slug>`, 헤더 네비 ✍️ Artikel, 홈 최신 3건 블록, 사이트맵(priority 0.9).
+- **필수 페이지**: /syarat, /kebijakan-editorial, /metodologi 신설, /redaksi·/about 전면 개편(AI 역할·한계 공개), 푸터 링크 추가. 홈 히어로 "Shopee" 문구 제거.
+- **유형 E 파운데이션 5편** 발행됨 (content/artikel/*.json, 각 2,600~3,100자·4섹션): cara-melihat-tren-indonesia-hari-ini, cara-membaca-google-trends, bagaimana-lagitren-mengumpulkan-data, beda-trending-tiap-platform, bagaimana-hashtag-menyebar.
+- **발행 경로**: content/artikel/*.json → publish_articles.py(QC: 1,200자·3섹션·금지어) → D1. `publish-artikel.yml`이 content 변경 push 시 자동 실행(또는 dispatch). **기사 추가/수정 = JSON 커밋만 하면 됨.**
+- **생성 파이프라인 골격**: factsheet.py(D1 집계 — weekly_facts/trend_facts, 숫자는 전부 코드가 계산), artikel_writer.py(Sonnet, 팩트시트 외 정보 금지 시스템프롬프트, QC 게이트, **draft로 저장만 — 검수 후 publish_articles로 발행**). 크론 아직 없음(의도적 — 스냅샷 축적 + 사람 검수 원칙).
+
+**다음 (2주차~)**: 스냅샷 6일 후(≈08-24) 첫 rekap 생성 → 검수 → 발행; 유형 B(analisis) 주 3편 — `python artikel_writer.py analisis <trend_id>`; 얇은 트렌드 페이지 noindex는 이미 적용돼 있음(aiSummary·article 없으면 noindex); 4주차 재심사 요청 전 체크리스트는 계획서 §8.
