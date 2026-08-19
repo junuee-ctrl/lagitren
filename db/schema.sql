@@ -53,3 +53,32 @@ CREATE TABLE IF NOT EXISTS collection_runs (
 
 CREATE INDEX IF NOT EXISTS idx_runs_platform_time
   ON collection_runs (platform, finished_at);
+
+-- Riwayat peringkat per run (untuk /artikel — jurnalisme data).
+-- Diisi otomatis oleh collector (db_client.save_snapshots); prune 90 hari.
+CREATE TABLE IF NOT EXISTS trend_snapshots (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  trend_id    TEXT NOT NULL,
+  platform    TEXT NOT NULL,
+  rank        INTEGER NOT NULL,
+  title       TEXT NOT NULL,
+  metric      INTEGER,
+  snapshot_at TEXT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_snap_platform_time ON trend_snapshots (platform, snapshot_at);
+CREATE INDEX IF NOT EXISTS idx_snap_trend ON trend_snapshots (trend_id, snapshot_at);
+
+-- Artikel orisinal /artikel (rekap mingguan, analisis viral, panduan, dll.)
+CREATE TABLE IF NOT EXISTS articles (
+  slug         TEXT PRIMARY KEY,
+  title        TEXT NOT NULL,
+  category     TEXT NOT NULL,          -- rekap|analisis|panduan|kurasi|bulanan
+  lead         TEXT NOT NULL,
+  body         TEXT NOT NULL,          -- JSON {sections:[{heading, paragraphs:[..]}], dataCard?, sources?, related?}
+  facts        TEXT,                   -- JSON factsheet sumber angka (audit trail)
+  hero_image   TEXT,
+  status       TEXT NOT NULL DEFAULT 'published',
+  published_at TEXT NOT NULL,
+  updated_at   TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_articles_pub ON articles (status, published_at);

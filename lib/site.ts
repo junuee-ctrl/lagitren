@@ -7,9 +7,9 @@ export const SITE_NAME = "Lagi Tren";
 export const CONTACT_EMAIL = "keyframe.jakarta@gmail.com";
 export const SITE_LOCATION = "Jakarta, Indonesia";
 
-/** Editor & kurator (nama pena redaksi). */
-export const AUTHOR_NAME = "Arka Pradana";
-export const AUTHOR_ROLE = "Editor & Kurator Tren";
+/** Penerbit konten — tim redaksi (bukan persona fiktif; transparan soal AI). */
+export const AUTHOR_NAME = "Tim Redaksi Lagitren";
+export const AUTHOR_ROLE = "Redaksi & Kurasi Data Tren";
 export const AUTHOR_URL = `${SITE_URL}/redaksi`;
 
 /** JSON-LD Organization — dipasang di seluruh situs (layout). */
@@ -51,7 +51,7 @@ export function publisherRef() {
 }
 
 export function authorRef() {
-  return { "@type": "Person", name: AUTHOR_NAME, url: AUTHOR_URL };
+  return { "@type": "Organization", name: AUTHOR_NAME, url: AUTHOR_URL };
 }
 
 /** ISO 8601 dari nilai collected_at D1 ("YYYY-MM-DD HH:MM:SS" UTC). */

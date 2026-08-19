@@ -1,0 +1,44 @@
+{
+  "slug": "cara-melihat-tren-indonesia-hari-ini",
+  "title": "Cara Melihat Apa yang Lagi Tren di Indonesia Hari Ini (7 Sumber Sekaligus)",
+  "category": "panduan",
+  "lead": "Mau tahu apa yang sedang ramai di Indonesia sekarang — bukan kemarin, bukan versi luar negeri? Panduan ini merangkum cara mengecek tren di tujuh sumber utama: Google, YouTube, Instagram, TikTok, Netflix, X, dan TikTok Shop, lengkap dengan kelebihan dan jebakannya masing-masing.",
+  "sections": [
+    {
+      "heading": "Kenapa harus cek lebih dari satu platform?",
+      "paragraphs": [
+        "Tiap platform mengukur hal yang berbeda. Google Trends menangkap apa yang orang cari (rasa penasaran), YouTube menangkap apa yang orang tonton, TikTok dan Instagram menangkap apa yang orang buat dan bagikan, X menangkap apa yang orang perdebatkan, sedangkan Netflix dan TikTok Shop menangkap apa yang orang konsumsi dan beli.",
+        "Karena itu sebuah topik bisa menjadi nomor satu di X tapi sama sekali tidak muncul di Google — dan sebaliknya. Kalau kamu hanya memantau satu platform, kamu hanya melihat satu sisi dari percakapan Indonesia. Dari pengamatan arsip kami, banyak tren besar justru terdeteksi lebih dulu di satu platform sebelum menyebar ke yang lain."
+      ]
+    },
+    {
+      "heading": "Cara resmi mengecek tren di tiap platform",
+      "paragraphs": [
+        "Google: buka trends.google.co.id, pilih wilayah Indonesia, lalu lihat tab \"Sedang tren\". Daftar ini diperbarui sepanjang hari dan menampilkan kata kunci yang lonjakan pencariannya paling tajam — bukan yang volumenya paling besar.",
+        "YouTube: tab \"Trending\" di aplikasi atau youtube.com/feed/trending. Perlu diingat, daftar ini dikurasi algoritma dari kombinasi penayangan, kecepatan pertumbuhan, dan usia video, jadi video dengan penonton terbanyak belum tentu ada di puncak.",
+        "TikTok: sumber paling andal justru bukan aplikasinya, melainkan TikTok Creative Center (ads.tiktok.com/business/creativecenter) — pilih wilayah Indonesia untuk melihat hashtag dan lagu yang sedang naik. X: tab \"Trending\" di aplikasi, atau agregator seperti trends24.in yang mengarsipkan daftar per jam. Netflix: daftar Top 10 resmi per negara ada di tudum.com/top10. Instagram paling tertutup — tidak ada halaman tren resmi, sehingga kamu harus memantau tagar dan akun tertentu secara manual."
+      ]
+    },
+    {
+      "heading": "Jebakan yang paling sering menjerat",
+      "paragraphs": [
+        "Pertama, salah wilayah: pengaturan bawaan banyak platform mengikuti bahasa perangkat, bukan lokasimu, jadi kamu bisa tanpa sadar melihat tren Amerika. Selalu pastikan wilayah tersetel ke Indonesia.",
+        "Kedua, salah membaca angka: \"tren\" hampir selalu berarti kecepatan naik, bukan ukuran. Kata kunci dengan 50 ribu pencarian yang melonjak 900% akan mengalahkan kata kunci sejuta pencarian yang stabil. Ketiga, tren palsu: sebagian topik di X didorong oleh akun terkoordinasi. Ciri yang bisa kamu periksa sendiri: topik besar sungguhan hampir selalu muncul di lebih dari satu platform dalam hitungan jam, sementara topik dorongan biasanya hidup di satu platform saja lalu hilang."
+      ]
+    },
+    {
+      "heading": "Atau: lihat semuanya dalam satu halaman",
+      "paragraphs": [
+        "Lagi Tren dibuat persis untuk menghilangkan ritual membuka tujuh tab itu. Sistem kami mengambil data dari sumber-sumber di atas secara berkala (10 menit sampai harian, tergantung platform), menyimpannya sebagai arsip, lalu menampilkan semuanya dalam satu halaman beserta ringkasan kenapa tiap topik sedang ramai.",
+        "Setiap kartu tren menautkan ke sumber aslinya, dan setiap bagian mencantumkan kapan datanya terakhir diperbarui — jadi kamu selalu tahu sedang melihat potret jam berapa. Detail cara kami mengumpulkan data ada di halaman Metodologi."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Google Trends Indonesia — Sedang tren", "url": "https://trends.google.co.id/trending?geo=ID" },
+    { "title": "TikTok Creative Center — Trends", "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/en" },
+    { "title": "Netflix Tudum — Top 10 Indonesia", "url": "https://www.netflix.com/tudum/top10/indonesia" }
+  ],
+  "related": ["/", "/metodologi", "/artikel/beda-trending-tiap-platform", "/artikel/cara-membaca-google-trends"],
+  "published_at": "2026-08-18 12:10:00"
+}

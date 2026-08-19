@@ -44,8 +44,9 @@ export default function AboutPage() {
       <h2 className="text-lg font-bold text-ink">Siapa kami</h2>
       <p>
         Lagi Tren dioperasikan secara independen dari <strong>Jakarta,
-        Indonesia</strong> oleh <strong>Arka Pradana</strong> (nama pena),
-        editor &amp; kurator tren kami. Kenali cara kerja redaksi di halaman{" "}
+        Indonesia</strong> oleh <strong>Tim Redaksi Lagitren</strong>. Kami
+        transparan soal cara kerja kami — termasuk peran AI dalam produksi
+        konten. Kenali cara kerja redaksi di halaman{" "}
         <a href="/redaksi" className="text-brand hover:underline">
           Redaksi
         </a>

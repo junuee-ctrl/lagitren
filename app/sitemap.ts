@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PLATFORM_ORDER, platformHref } from "@/lib/platforms";
-import { getSitemapTrends } from "@/lib/db";
+import { getArticles, getSitemapTrends } from "@/lib/db";
 import { slugFromId } from "@/lib/embed";
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
@@ -13,10 +13,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticPages: MetadataRoute.Sitemap = [
     "",
+    "/artikel",
     "/arsip",
     "/about",
+    "/redaksi",
+    "/metodologi",
+    "/kebijakan-editorial",
     "/contact",
     "/privacy",
+    "/syarat",
     "/disclaimer",
     "/affiliate"
   ].map((path) => ({
@@ -56,5 +61,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     /* abaikan bila DB tak tersedia */
   }
 
-  return [...staticPages, ...platformPages, ...detailPages];
+  // Artikel orisinal (/artikel/<slug>) — prioritas tinggi utk indexing.
+  let artikelPages: MetadataRoute.Sitemap = [];
+  try {
+    const articles = await getArticles(500);
+    artikelPages = articles.map((a) => {
+      const lm = new Date(
+        a.updatedAt.includes("T") ? a.updatedAt : a.updatedAt.replace(" ", "T") + "Z"
+      );
+      return {
+        url: `${SITE_URL}/artikel/${a.slug}`,
+        lastModified: Number.isNaN(lm.getTime()) ? now : lm,
+        changeFrequency: "weekly" as const,
+        priority: 0.9
+      };
+    });
+  } catch {
+    /* abaikan bila tabel belum ada */
+  }
+
+  return [...staticPages, ...platformPages, ...artikelPages, ...detailPages];
 }

@@ -1,0 +1,42 @@
+{
+  "slug": "cara-membaca-google-trends",
+  "title": "Cara Membaca Google Trends Tanpa Salah Tafsir: Panduan Praktis",
+  "category": "panduan",
+  "lead": "Google Trends adalah alat tren paling terbuka yang ada — tapi juga paling sering disalahartikan. Angka 100 di grafiknya bukan berarti 100 pencarian, dan kata kunci \"breakout\" bukan berarti paling populer. Panduan ini menjelaskan cara membaca angkanya dengan benar.",
+  "sections": [
+    {
+      "heading": "Angka Google Trends itu relatif, bukan jumlah",
+      "paragraphs": [
+        "Kesalahan paling umum: mengira grafik Google Trends menunjukkan jumlah pencarian. Padahal skala 0–100 itu relatif terhadap titik tertinggi pada rentang waktu dan wilayah yang kamu pilih. Nilai 100 artinya \"ini puncak minat pada periode ini\", bukan seratus, seribu, atau sejuta pencarian.",
+        "Konsekuensinya: dua kata kunci dengan grafik serupa bisa punya volume yang jauh berbeda. Untuk membandingkan, masukkan keduanya dalam satu perbandingan — barulah skalanya menjadi setara. Dan bila kamu mengubah rentang waktu, semua angka dihitung ulang terhadap puncak yang baru."
+      ]
+    },
+    {
+      "heading": "\"Sedang tren\" berarti melonjak, bukan terbesar",
+      "paragraphs": [
+        "Daftar \"Sedang tren\" (yang juga menjadi sumber bagian Google di Lagi Tren) menampilkan kata kunci dengan kenaikan pencarian paling tajam dalam beberapa jam terakhir — bukan yang volumenya terbesar hari itu. Kata kunci abadi seperti \"cuaca\" atau \"berita\" volumenya selalu besar tapi tidak pernah \"tren\" karena tidak melonjak.",
+        "Label \"breakout\" pada kueri terkait punya arti khusus: kenaikannya melebihi 5.000%, biasanya karena kata kunci itu nyaris tidak pernah dicari sebelumnya. Ini sinyal paling awal dari topik yang benar-benar baru — dan sekaligus paling berisiko salah tafsir, karena lonjakan dari basis kecil mudah terlihat dramatis."
+      ]
+    },
+    {
+      "heading": "Trik membaca yang dipakai praktisi",
+      "paragraphs": [
+        "Persempit wilayah: minat per provinsi sering lebih bercerita daripada angka nasional — topik yang meledak hanya di satu provinsi biasanya peristiwa lokal, bukan tren nasional. Bandingkan dengan pembanding tetap: praktisi sering menyandingkan kata kunci baru dengan kata kunci yang volumenya sudah mereka pahami, sebagai \"penggaris\" informal.",
+        "Perhatikan juga kategori: nama yang sama bisa merujuk hal berbeda (misalnya nama orang yang juga nama tempat), dan filter kategori membantu memisahkannya. Terakhir, jangan simpulkan sentimen dari volume — orang mencari sesuatu karena suka, benci, atau sekadar bingung; Google Trends tidak membedakannya."
+      ]
+    },
+    {
+      "heading": "Bagaimana Lagi Tren memakai data ini",
+      "paragraphs": [
+        "Bagian Google di situs kami mengambil daftar \"Sedang tren\" wilayah Indonesia setiap ±10 menit, lalu menyimpan potret peringkatnya ke arsip. Dari arsip itulah kami bisa melihat hal yang tidak ditampilkan Google Trends sendiri: kapan sebuah kata kunci pertama kali muncul, berapa lama bertahan di daftar, dan apakah ia juga ramai di platform lain.",
+        "Setiap kartu tren Google di situs kami menautkan langsung ke halaman pencariannya, jadi kamu bisa memeriksa konteksnya sendiri. Batasan datanya kami tulis terbuka di halaman Metodologi."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Google Trends — halaman resmi (Indonesia)", "url": "https://trends.google.co.id/" },
+    { "title": "Dokumentasi Google: data Trends", "url": "https://support.google.com/trends/answer/4365533" }
+  ],
+  "related": ["/google", "/metodologi", "/artikel/cara-melihat-tren-indonesia-hari-ini", "/artikel/beda-trending-tiap-platform"],
+  "published_at": "2026-08-18 12:20:00"
+}

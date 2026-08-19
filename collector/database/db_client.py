@@ -219,6 +219,61 @@ class D1Client:
             )
         return count
 
+    # ------------------------------------------------------------------
+    # Snapshot riwayat peringkat (untuk /artikel — jurnalisme data).
+    # Tabel trends adalah UPSERT (tanpa riwayat), jadi tiap run kita
+    # menyimpan potret (platform, rank, judul, metrik) di tabel terpisah.
+    # ------------------------------------------------------------------
+
+    def _ensure_snapshot_schema(self) -> None:
+        if getattr(self, "_snap_ready", False):
+            return
+        for stmt in (
+            "CREATE TABLE IF NOT EXISTS trend_snapshots ("
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, trend_id TEXT NOT NULL, "
+            "platform TEXT NOT NULL, rank INTEGER NOT NULL, title TEXT NOT NULL, "
+            "metric INTEGER, snapshot_at TEXT NOT NULL)",
+            "CREATE INDEX IF NOT EXISTS idx_snap_platform_time "
+            "ON trend_snapshots (platform, snapshot_at)",
+            "CREATE INDEX IF NOT EXISTS idx_snap_trend "
+            "ON trend_snapshots (trend_id, snapshot_at)",
+        ):
+            try:
+                self.query(stmt)
+            except Exception:
+                pass
+        self._snap_ready = True
+
+    def save_snapshots(self, platform: str, trends: list[Trend]) -> None:
+        """Simpan potret peringkat run ini (satu INSERT batch)."""
+        if self.dry_run or not self._configured() or not trends:
+            return
+        try:
+            self._ensure_snapshot_schema()
+            values = ",".join(["(?,?,?,?,?,datetime('now'))"] * len(trends))
+            params: list = []
+            for t in trends:
+                params.extend([t.id, platform, t.rank, t.title, t.metric])
+            self.query(
+                "INSERT INTO trend_snapshots (trend_id, platform, rank, title, metric, snapshot_at) "
+                f"VALUES {values}",
+                params,
+            )
+        except Exception as exc:
+            log.warning("Gagal simpan snapshot: %s", exc)
+
+    def prune_snapshots(self, days: int = 90) -> None:
+        """Hapus snapshot lebih tua dari N hari (jaga ukuran D1)."""
+        if self.dry_run or not self._configured():
+            return
+        try:
+            self.query(
+                "DELETE FROM trend_snapshots WHERE snapshot_at < datetime('now', ?)",
+                [f"-{int(days)} days"],
+            )
+        except Exception:
+            pass
+
     def log_run(
         self, platform: str, status: str, item_count: int, message: str, started_at: str
     ) -> None:

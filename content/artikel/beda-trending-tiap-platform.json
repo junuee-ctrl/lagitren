@@ -1,0 +1,43 @@
+{
+  "slug": "beda-trending-tiap-platform",
+  "title": "Trending di Google vs TikTok vs X: Kenapa Daftarnya Tidak Pernah Sama?",
+  "category": "panduan",
+  "lead": "Buka Google, TikTok, dan X pada jam yang sama, dan kamu akan menemukan tiga daftar tren yang hampir tidak bersinggungan. Itu bukan kebetulan atau kesalahan — tiap platform mendefinisikan \"tren\" secara berbeda. Memahami perbedaannya membuatmu jauh lebih sulit tertipu.",
+  "sections": [
+    {
+      "heading": "Tiga definisi \"tren\" yang berbeda",
+      "paragraphs": [
+        "Google mengukur pencarian: sesuatu tren bila banyak orang tiba-tiba penasaran dan mengetiknya. X mengukur percakapan: sesuatu tren bila banyak akun membicarakannya dalam waktu singkat. TikTok mengukur partisipasi: sesuatu tren bila banyak orang membuat video dengan hashtag atau lagu yang sama.",
+        "Ketiganya menangkap tahap yang berbeda dari perhatian publik. Orang bisa memperdebatkan sesuatu di X tanpa pernah mencarinya di Google, dan ikut challenge TikTok tanpa peduli beritanya. Karena itu membandingkan daftar lintas platform bukan soal mana yang \"benar\" — semuanya benar untuk pertanyaannya masing-masing."
+      ]
+    },
+    {
+      "heading": "Kecepatan dan umur tren juga berbeda",
+      "paragraphs": [
+        "Dari pengamatan arsip kami, daftar X adalah yang paling cepat berganti — topik bisa naik dan hilang dalam hitungan jam, terutama saat ada siaran langsung (pertandingan, konser, pengumuman). Google sedikit lebih lambat tapi lebih tahan lama; kata kunci peristiwa besar bisa bertahan seharian. TikTok paling lambat sekaligus paling awet: hashtag challenge yang sama bisa bertahan berminggu-minggu karena orang terus membuat video baru.",
+        "Netflix ada di ekstrem satunya — daftar Top 10 hanya berubah pelan, karena mengukur akumulasi jam tontonan, bukan lonjakan. Inilah kenapa tiap bagian di situs kami punya jadwal pembaruan berbeda: mengambil data TikTok tiap lima menit hanya akan menghasilkan daftar yang sama berulang-ulang."
+      ]
+    },
+    {
+      "heading": "Sinyal paling berharga: tren yang menyeberang",
+      "paragraphs": [
+        "Justru karena daftarnya jarang sama, kemunculan satu topik di beberapa platform sekaligus adalah sinyal kuat. Topik yang hanya ramai di X bisa jadi gorengan segelintir akun; topik yang serentak naik di X, Google, dan TikTok hampir pasti peristiwa nyata yang menyentuh banyak orang.",
+        "Arah penyeberangannya pun bercerita. Pola yang sering kami lihat di arsip: peristiwa berita pecah lebih dulu di X lalu menyusul di pencarian Google beberapa jam kemudian, sedangkan tren hiburan (lagu, challenge, gaya video) lahir di TikTok lalu merembes ke platform lain berhari-hari kemudian. Melacak penyeberangan semacam ini adalah salah satu hal utama yang kami bangun dari arsip Lagi Tren."
+      ]
+    },
+    {
+      "heading": "Cara praktis memakainya",
+      "paragraphs": [
+        "Kalau kamu pembuat konten: TikTok memberi sinyal paling awal untuk format dan lagu, tapi Google memberi tahu kapan penonton umum mulai penasaran — momen terbaik menerbitkan konten penjelas. Kalau kamu pedagang: perhatikan produk yang mulai dibicarakan di TikTok, karena lonjakan pencarian dan pembelian biasanya menyusul.",
+        "Dan kalau kamu sekadar tidak mau ketinggalan: halaman depan Lagi Tren menyandingkan ketujuh sumber sekaligus, jadi penyeberangan antar-platform terlihat dalam sekali gulir — lengkap dengan waktu pembaruan tiap bagian."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Google Trends Indonesia", "url": "https://trends.google.co.id/trending?geo=ID" },
+    { "title": "TikTok Creative Center", "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/en" },
+    { "title": "Netflix Tudum — metodologi Top 10", "url": "https://www.netflix.com/tudum/top10" }
+  ],
+  "related": ["/google", "/tiktok", "/twitter", "/artikel/bagaimana-hashtag-menyebar", "/artikel/cara-membaca-google-trends"],
+  "published_at": "2026-08-18 12:40:00"
+}

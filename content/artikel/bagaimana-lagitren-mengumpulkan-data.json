@@ -1,0 +1,43 @@
+{
+  "slug": "bagaimana-lagitren-mengumpulkan-data",
+  "title": "Bagaimana Lagi Tren Mengumpulkan Data? Dapur Kami, Dibuka",
+  "category": "panduan",
+  "lead": "Situs tren hanya berguna kalau kamu bisa memercayai angkanya. Artikel ini membuka dapur Lagi Tren: dari mana tiap angka berasal, seberapa sering diambil, apa peran AI (dan apa yang sengaja tidak kami serahkan ke AI), serta di mana batas data kami.",
+  "sections": [
+    {
+      "heading": "Tujuh sumber, satu arsip",
+      "paragraphs": [
+        "Sistem kami mengambil data dari sumber publik tujuh bagian situs: RSS resmi Google Trends Indonesia (±10 menit), YouTube Data API untuk daftar Trending Indonesia (±1 jam), TikTok Creative Center untuk hashtag populer wilayah Indonesia (±3 jam), unggahan populer pada tagar Indonesia terpilih di Instagram (±3 jam), daftar topik X Indonesia beserta tweet teratasnya (±3 jam), Top 10 resmi Netflix dari Tudum (harian), dan kurasi produk terlaris TikTok Shop (harian).",
+        "Yang membedakan kami dari sekadar menampilkan ulang: setiap pengambilan juga disimpan sebagai potret peringkat di arsip kami. Platform hanya menunjukkan \"apa yang tren sekarang\"; arsip kamilah yang bisa menjawab \"sejak kapan, berapa lama, dan ke mana menyebarnya\"."
+      ]
+    },
+    {
+      "heading": "Apa yang dikerjakan mesin, apa yang tidak",
+      "paragraphs": [
+        "Semua angka di situs ini — peringkat, jumlah penayangan, perubahan posisi — dihitung oleh kode dari data yang terkumpul. AI tidak pernah diminta menghasilkan angka. Peran AI hanya satu: menuliskan narasi (ringkasan \"kenapa ini ramai\" dan draf artikel) berdasarkan lembar fakta yang sudah disiapkan sistem, dengan instruksi tegas untuk tidak menambahkan informasi di luar lembar itu.",
+        "Sebelum terbit, hasilnya melewati pemeriksaan: panjang dan struktur diperiksa otomatis, angka dicocokkan dengan data, dan redaksi membaca draf artikel sebelum dipublikasikan. Draf yang gagal ya tidak terbit — sesederhana itu. Rincian kebijakan ini ada di halaman Kebijakan Editorial."
+      ]
+    },
+    {
+      "heading": "Menjaga kualitas data itu pekerjaan harian",
+      "paragraphs": [
+        "Data tren itu rapuh: sumber berubah struktur, koneksi putus, karakter non-Latin rusak bila salah dekode. Karena itu sistem kami menjalankan pemeriksaan otomatis — judul yang terdeteksi rusak dibuang dan dikumpulkan ulang, pengumpul yang macet dihentikan paksa dan dilaporkan, dan sebuah pengawas terpisah mengirim peringatan ke tim bila ada sumber yang berhenti diperbarui melebihi batas wajarnya.",
+        "Bila sebuah sumber sedang terganggu, situs menampilkan data terakhir yang berhasil beserta stempel waktunya — kamu bisa melihatnya di tulisan \"terakhir ...\" pada tiap bagian. Kami memilih menunjukkan data lama yang jujur ketimbang data kosong atau pura-pura segar."
+      ]
+    },
+    {
+      "heading": "Batas yang perlu kamu tahu",
+      "paragraphs": [
+        "Data kami adalah potret berkala, bukan siaran langsung — tren yang naik-turun di antara dua pengambilan bisa terlewat. Daftar Instagram bergantung pada tagar yang kami pantau, jadi tidak mewakili seluruh Instagram. Metrik adalah angka publik pada saat pengambilan dan bisa sudah berubah saat kamu membukanya. Harga produk dapat berubah sewaktu-waktu.",
+        "Kami menulis batasan ini bukan untuk merendahkan data sendiri, tapi karena pembaca yang tahu batas data justru bisa memakainya dengan lebih tepat. Pertanyaan atau koreksi selalu kami terima lewat halaman Kontak."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Google Trends RSS (Indonesia)", "url": "https://trends.google.co.id/trending/rss?geo=ID" },
+    { "title": "YouTube Data API — dokumentasi resmi", "url": "https://developers.google.com/youtube/v3" },
+    { "title": "Netflix Tudum Top 10", "url": "https://www.netflix.com/tudum/top10" }
+  ],
+  "related": ["/metodologi", "/kebijakan-editorial", "/redaksi", "/artikel/cara-melihat-tren-indonesia-hari-ini"],
+  "published_at": "2026-08-18 12:30:00"
+}

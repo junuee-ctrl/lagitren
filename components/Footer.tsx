@@ -4,11 +4,15 @@ import PlatformIcon from "./PlatformIcon";
 import Logo from "./Logo";
 
 const LEGAL = [
+  { href: "/artikel", label: "Artikel" },
   { href: "/arsip", label: "Arsip Tren" },
   { href: "/about", label: "Tentang Kami" },
   { href: "/redaksi", label: "Redaksi" },
+  { href: "/metodologi", label: "Metodologi" },
+  { href: "/kebijakan-editorial", label: "Kebijakan Editorial" },
   { href: "/contact", label: "Kontak" },
   { href: "/privacy", label: "Kebijakan Privasi" },
+  { href: "/syarat", label: "Syarat & Ketentuan" },
   { href: "/disclaimer", label: "Disclaimer" },
   { href: "/affiliate", label: "Afiliasi" }
 ];

@@ -120,6 +120,7 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
 
         count = db.save_trends(platform, trends)
         db.prune_mojibake(platform)  # bersihkan sisa judul rusak (P0-1)
+        db.save_snapshots(platform, trends)  # riwayat peringkat utk /artikel
         log.info("%s: %d item tersimpan.", platform, count)
 
         # Ping IndexNow utk URL BARU saja (id belum ada / judul berubah) — P2-1.

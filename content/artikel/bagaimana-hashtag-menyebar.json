@@ -1,0 +1,42 @@
+{
+  "slug": "bagaimana-hashtag-menyebar",
+  "title": "Anatomi Hashtag Viral: Bagaimana Sebuah Tagar Menyebar di Indonesia",
+  "category": "panduan",
+  "lead": "Hashtag yang pagi ini memenuhi timeline-mu tidak muncul begitu saja. Hampir semua tagar viral melewati tahapan yang sama — percikan, penguatan, penyeberangan, lalu kejenuhan. Mengenali tahapannya membantumu membedakan gelombang organik dari yang digoreng.",
+  "sections": [
+    {
+      "heading": "Tahap 1–2: percikan dan penguatan",
+      "paragraphs": [
+        "Setiap tagar viral berawal dari percikan: satu unggahan, satu klip siaran, satu peristiwa yang direkam banyak orang sekaligus. Pada tahap ini tagar belum masuk daftar tren mana pun — ia hanya beredar di lingkaran kecil yang terhubung langsung dengan peristiwanya.",
+        "Penguatan terjadi ketika akun-akun besar (fanbase, akun berita, akun humor) mengangkatnya. Di Indonesia, peran fanbase K-pop dan akun \"base\" sangat besar di tahap ini: mereka terorganisir, aktif hampir 24 jam, dan terbiasa menggerakkan tagar. Di sinilah tagar mulai menembus daftar tren X, karena algoritmanya menghargai kecepatan — banyak tweet dari banyak akun berbeda dalam waktu singkat."
+      ]
+    },
+    {
+      "heading": "Tahap 3: menyeberang platform — ujian sesungguhnya",
+      "paragraphs": [
+        "Sebagian besar tagar mati di platform kelahirannya. Yang lolos ke tahap berikutnya adalah yang berhasil menyeberang: dari X ke pencarian Google (orang awam mulai bertanya \"ini ada apa?\"), atau dari TikTok ke Instagram Reels (format videonya ditiru ulang).",
+        "Penyeberangan inilah pembeda utama tren sungguhan dari tren gorengan. Tagar yang didorong akun terkoordinasi bisa memuncaki daftar X, tapi hampir tidak pernah menghasilkan lonjakan pencarian Google — karena tidak ada orang sungguhan yang penasaran. Di arsip Lagi Tren, pola semacam ini terlihat sebagai topik yang tinggi di satu bagian tapi kosong di bagian lain."
+      ]
+    },
+    {
+      "heading": "Tahap 4: puncak dan kejenuhan",
+      "paragraphs": [
+        "Setelah menyeberang, tagar mencapai puncak: media memberitakannya, merek ikut menumpang, dan versi parodinya bermunculan. Ironisnya, saat sebuah tren terasa \"ada di mana-mana\", momentum pertumbuhannya biasanya sudah lewat — daftar tren mengukur percepatan, dan percepatan tertinggi terjadi sebelum semua orang tahu.",
+        "Kejenuhan datang cepat di X (hitungan jam sampai hari) dan lebih lambat di TikTok (challenge bisa bertahan berminggu-minggu). Sisa-sisanya tetap terekam: di arsip kami, tagar yang sudah turun dari daftar tetap tersimpan beserta tanggal kemunculannya — bahan baku untuk melihat pola jangka panjang."
+      ]
+    },
+    {
+      "heading": "Checklist cepat: organik atau gorengan?",
+      "paragraphs": [
+        "Sebelum ikut menyimpulkan \"seluruh Indonesia sedang membicarakan X\", cek empat hal. Satu: apakah tagar ini muncul di lebih dari satu platform? Dua: apakah akun-akun yang memakainya beragam (bukan akun baru bernama mirip dengan pola tweet seragam)? Tiga: apakah ada peristiwa nyata yang bisa dirujuk — berita, video, kejadian? Empat: apakah bertahan lebih dari beberapa jam?",
+        "Tagar organik biasanya lolos minimal tiga dari empat. Tagar dorongan biasanya gugur di pertanyaan pertama dan kedua. Dan kalau kamu ingin memeriksa cepat, halaman depan Lagi Tren menyandingkan daftar semua platform — bila sebuah topik hanya hidup di satu kolom, kamu sudah tahu harus curiga."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Trends24 — arsip trending X Indonesia", "url": "https://trends24.in/indonesia/" },
+    { "title": "TikTok Creative Center — hashtag Indonesia", "url": "https://ads.tiktok.com/business/creativecenter/inspiration/popular/hashtag/pc/en" }
+  ],
+  "related": ["/twitter", "/tiktok", "/artikel/beda-trending-tiap-platform", "/artikel/cara-melihat-tren-indonesia-hari-ini"],
+  "published_at": "2026-08-18 12:50:00"
+}

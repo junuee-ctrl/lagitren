@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageShell from "@/components/PageShell";
 import {
   AUTHOR_NAME,
@@ -10,7 +11,7 @@ import {
 export const metadata: Metadata = {
   title: "Redaksi",
   description:
-    "Siapa di balik Lagi Tren — redaksi, metodologi kurasi tren, dan cara menghubungi kami.",
+    "Siapa di balik Lagi Tren — tim redaksi, peran AI dalam produksi konten, dan prosedur koreksi kami.",
   alternates: { canonical: "/redaksi" }
 };
 
@@ -20,13 +21,13 @@ export default function RedaksiPage() {
       title="Redaksi"
       subtitle="Siapa di balik Lagi Tren dan bagaimana kami bekerja."
     >
-      {/* Profil editor */}
+      {/* Identitas penerbit */}
       <section className="not-prose my-4 flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-5 dark:border-white/10 dark:bg-night-card">
         <span
           aria-hidden
           className="grid h-16 w-16 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-brand to-accent text-2xl font-extrabold text-white"
         >
-          {AUTHOR_NAME.split(" ").map((w) => w[0]).join("")}
+          LT
         </span>
         <div>
           <p className="text-lg font-extrabold text-ink dark:text-white">
@@ -48,40 +49,68 @@ export default function RedaksiPage() {
       </section>
 
       <p>
-        <strong>Arka Pradana</strong> (nama pena) adalah editor dan kurator di
-        balik Lagi Tren. Ia memantau tren lintas platform di Indonesia setiap
-        hari, menyetel sistem pengumpulan data kami, dan memeriksa kualitas
-        ringkasan sebelum tampil di situs.
+        Lagi Tren dikelola oleh <strong>{AUTHOR_NAME}</strong> — tim kecil yang
+        berbasis di Jakarta. Kami membangun dan mengoperasikan sistem
+        pengumpulan data tren lintas platform, menyusun analisis dari arsip
+        data kami sendiri, dan memeriksa kualitas setiap konten sebelum tampil
+        di situs. Kami sengaja tidak memakai nama pena atau profil fiktif:
+        seluruh konten diterbitkan atas nama tim redaksi.
       </p>
 
       <h2 className="text-lg font-bold text-ink dark:text-white">
-        Bagaimana konten kami dibuat
+        Peran AI — dan batasnya
+      </h2>
+      <p>
+        Kami terbuka soal ini: sebagian proses produksi konten Lagi Tren
+        dibantu kecerdasan buatan (AI). Pembagiannya jelas:
+      </p>
+      <p>
+        <strong>Angka dan fakta dihitung oleh sistem kami</strong> dari data
+        yang kami kumpulkan sendiri (peringkat, perubahan posisi, lama bertahan
+        di daftar tren) — AI tidak pernah diminta &ldquo;mengarang&rdquo;
+        angka. <strong>AI membantu menuliskan</strong> ringkasan dan draf
+        artikel berdasarkan fakta tersebut, lalu{" "}
+        <strong>redaksi memeriksa</strong> hasilnya sebelum terbit. Konten yang
+        tidak lolos pemeriksaan tidak diterbitkan. Rincian teknisnya kami
+        jelaskan di halaman{" "}
+        <Link href="/metodologi" className="text-brand hover:underline">
+          Metodologi
+        </Link>{" "}
+        dan{" "}
+        <Link
+          href="/kebijakan-editorial"
+          className="text-brand hover:underline"
+        >
+          Kebijakan Editorial
+        </Link>
+        .
+      </p>
+
+      <h2 className="text-lg font-bold text-ink dark:text-white">
+        Bagaimana data kami dikumpulkan
       </h2>
       <p>
         Data tren dikumpulkan otomatis dari sumber publik — Google Trends,
         YouTube Trending, TikTok Creative Center, Instagram, Netflix Top 10,
-        dan X (Twitter) — dengan jadwal berkala (15 menit hingga harian,
-        tergantung platform). Setiap tren kemudian diberi ringkasan berbahasa
-        Indonesia yang dibuat dengan bantuan AI dan difokuskan menjawab satu
-        hal: <em>kenapa ini sedang ramai?</em>
-      </p>
-      <p>
-        Kami tidak menyalin konten berhak cipta. Setiap kartu tren menautkan ke
-        sumber aslinya, dan angka (penayangan, suka, penjualan) berasal dari
-        data publik platform terkait pada saat pengumpulan.
+        dan X (Twitter) — dengan jadwal berkala (10 menit hingga harian,
+        tergantung platform). Kami tidak menyalin konten berhak cipta; setiap
+        kartu tren menautkan ke sumber aslinya, dan angka (penayangan, suka,
+        penjualan) berasal dari data publik platform terkait pada saat
+        pengumpulan.
       </p>
 
       <h2 className="text-lg font-bold text-ink dark:text-white">Koreksi</h2>
       <p>
-        Menemukan data yang keliru atau ringkasan yang tidak akurat? Kirim
-        email ke{" "}
+        Menemukan data yang keliru atau tulisan yang tidak akurat? Kirim email
+        ke{" "}
         <a
           href={`mailto:${CONTACT_EMAIL}`}
           className="text-brand hover:underline"
         >
           {CONTACT_EMAIL}
         </a>{" "}
-        — kami meninjau dan memperbaikinya secepat mungkin.
+        — kami meninjau dalam 2×24 jam dan mencantumkan catatan perbaikan pada
+        konten yang dikoreksi.
       </p>
 
       <script
@@ -89,14 +118,13 @@ export default function RedaksiPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProfilePage",
+            "@type": "AboutPage",
             mainEntity: {
-              "@type": "Person",
+              "@type": "Organization",
               name: AUTHOR_NAME,
-              jobTitle: AUTHOR_ROLE,
               email: CONTACT_EMAIL,
               url: `${SITE_URL}/redaksi`,
-              worksFor: { "@id": `${SITE_URL}/#organization` }
+              parentOrganization: { "@id": `${SITE_URL}/#organization` }
             }
           })
         }}

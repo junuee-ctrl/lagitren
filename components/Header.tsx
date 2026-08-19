@@ -29,6 +29,12 @@ export default function Header() {
               </Link>
             );
           })}
+          <Link
+            href="/artikel"
+            className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-sm font-semibold text-brand transition hover:bg-brand/10"
+          >
+            ✍️ Artikel
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">

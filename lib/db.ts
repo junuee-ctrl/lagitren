@@ -1,4 +1,4 @@
-import type { Platform, Trend, TrendExtra } from "./types";
+import type { Article, ArticleCategory, Platform, Trend, TrendExtra } from "./types";
 import { MOCK_TRENDS, mockTrendsByPlatform } from "./mock";
 
 /**
@@ -404,4 +404,83 @@ export async function getHomepageTrends(perPlatform = 4): Promise<Trend[]> {
     }
   }
   return out;
+}
+
+/* ── Artikel orisinal (/artikel) ───────────────────────────────────── */
+
+interface ArticleRow {
+  slug: string;
+  title: string;
+  category: string;
+  lead: string;
+  body: string | null;
+  hero_image: string | null;
+  published_at: string;
+  updated_at: string;
+}
+
+function rowToArticle(r: ArticleRow): Article {
+  let body: {
+    sections?: Article["sections"];
+    sources?: Article["sources"];
+    related?: string[];
+    dataCard?: Record<string, string>;
+  } = {};
+  try {
+    body = r.body ? JSON.parse(r.body) : {};
+  } catch {
+    body = {};
+  }
+  return {
+    slug: r.slug,
+    title: r.title,
+    category: (r.category as ArticleCategory) ?? "analisis",
+    lead: r.lead,
+    sections: Array.isArray(body.sections) ? body.sections : [],
+    sources: Array.isArray(body.sources) ? body.sources : [],
+    related: Array.isArray(body.related) ? body.related : [],
+    dataCard: body.dataCard,
+    heroImage: r.hero_image,
+    publishedAt: r.published_at,
+    updatedAt: r.updated_at
+  };
+}
+
+const ARTICLES_LIST = `
+  SELECT slug, title, category, lead, body, hero_image, published_at, updated_at
+  FROM articles WHERE status = 'published'
+  ORDER BY published_at DESC LIMIT ?
+`;
+
+/** Daftar artikel terbit, terbaru dulu. Aman bila tabel belum ada ([]). */
+export async function getArticles(limit = 50): Promise<Article[]> {
+  const db = await getDB();
+  if (!db) return [];
+  try {
+    const { results } = await db
+      .prepare(ARTICLES_LIST)
+      .bind(limit)
+      .all<ArticleRow>();
+    return (results ?? []).map(rowToArticle);
+  } catch {
+    return [];
+  }
+}
+
+/** Satu artikel berdasarkan slug (null bila tidak ada). */
+export async function getArticle(slug: string): Promise<Article | null> {
+  const db = await getDB();
+  if (!db) return null;
+  try {
+    const { results } = await db
+      .prepare(
+        "SELECT slug, title, category, lead, body, hero_image, published_at, updated_at " +
+          "FROM articles WHERE slug = ? AND status = 'published' LIMIT 1"
+      )
+      .bind(slug)
+      .all<ArticleRow>();
+    return results && results.length > 0 ? rowToArticle(results[0]) : null;
+  } catch {
+    return null;
+  }
 }

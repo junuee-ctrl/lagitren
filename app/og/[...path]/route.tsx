@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getTrendById } from "@/lib/db";
+import { getArticle, getTrendById } from "@/lib/db";
 import { getPlatform } from "@/lib/platforms";
 import type { Platform, Trend } from "@/lib/types";
 
@@ -114,17 +114,34 @@ export async function GET(
     }
   }
 
+  // Kartu artikel (/og/artikel[/<slug>]) — analisis orisinal.
+  let artikelTitle: string | null = null;
+  if (platformSlug === "artikel") {
+    if (slug) {
+      try {
+        artikelTitle = (await getArticle(slug))?.title ?? null;
+      } catch {
+        artikelTitle = null;
+      }
+    }
+    artikelTitle = artikelTitle ?? "Artikel & Analisis Tren Indonesia";
+  }
+
   const rawTitle = trend
     ? trend.title
-    : meta
-      ? `${meta.name} Indonesia Hari Ini`
-      : "Apa yang lagi tren di Indonesia hari ini?";
+    : artikelTitle
+      ? artikelTitle
+      : meta
+        ? `${meta.name} Indonesia Hari Ini`
+        : "Apa yang lagi tren di Indonesia hari ini?";
   const title = truncate(stripUnrenderable(rawTitle) || "Lagi Tren", 95);
   const kicker = trend
     ? meta
       ? `Lagi tren di ${meta.name} Indonesia`
       : "Lagi tren di Indonesia"
-    : "Tren real-time · diperbarui otomatis";
+    : artikelTitle
+      ? "Analisis dari arsip data Lagi Tren"
+      : "Tren real-time · diperbarui otomatis";
   const rank = trend?.rank && trend.rank <= 50 ? trend.rank : null;
   const accentColor = meta?.color ?? BRAND;
 

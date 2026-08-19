@@ -129,3 +129,39 @@ export interface PlatformMeta {
   /** Frekuensi pembaruan untuk ditampilkan. */
   refresh: string;
 }
+
+/* ── Artikel orisinal (/artikel) ─────────────────────────────────── */
+
+export type ArticleCategory =
+  | "panduan"
+  | "analisis"
+  | "rekap"
+  | "kurasi"
+  | "bulanan";
+
+export interface ArticleSection {
+  heading: string;
+  paragraphs: string[];
+}
+
+export interface ArticleSource {
+  title: string;
+  url: string;
+}
+
+export interface Article {
+  slug: string;
+  title: string;
+  category: ArticleCategory;
+  lead: string;
+  sections: ArticleSection[];
+  /** Sumber eksternal yang dirujuk. */
+  sources: ArticleSource[];
+  /** Path internal terkait, mis. "/google/badai" atau "/artikel/xxx". */
+  related: string[];
+  /** Kartu data ringkas (label → nilai) untuk artikel berbasis angka. */
+  dataCard?: Record<string, string>;
+  heroImage: string | null;
+  publishedAt: string;
+  updatedAt: string;
+}

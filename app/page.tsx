@@ -1,5 +1,7 @@
-import { getHomepageTrends } from "@/lib/db";
+import Link from "next/link";
+import { getArticles, getHomepageTrends } from "@/lib/db";
 import { PLATFORM_ORDER, PLATFORMS } from "@/lib/platforms";
+import { KATEGORI_LABEL, formatTanggal } from "@/lib/artikel";
 import PlatformSection from "@/components/PlatformSection";
 import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
@@ -13,7 +15,10 @@ export const dynamic = "force-dynamic";
 const AD_AFTER = new Set<number>([1, 3]);
 
 export default async function HomePage() {
-  const trends = await getHomepageTrends(4);
+  const [trends, artikel] = await Promise.all([
+    getHomepageTrends(4),
+    getArticles(3)
+  ]);
   const byPlatform = new Map<Platform, Trend[]>();
   for (const t of trends) {
     const list = byPlatform.get(t.platform) ?? [];
@@ -50,9 +55,9 @@ export default async function HomePage() {
             ini? 🔥
           </h1>
           <p className="mt-4 max-w-xl text-sm text-white/90 sm:text-base">
-            Tren real-time dari Google, YouTube, TikTok, Instagram, Netflix,
-            Shopee, dan X — plus ringkasan AI kenapa sesuatu sedang viral. Satu
-            halaman, semua yang lagi ramai.
+            Tren real-time dari Google, YouTube, Instagram, TikTok, Netflix,
+            dan X — plus produk viral TikTok Shop dan ringkasan AI kenapa
+            sesuatu sedang ramai. Satu halaman, semua yang lagi ramai.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {PLATFORM_ORDER.map((key) => (
@@ -68,6 +73,42 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Artikel & analisis terbaru */}
+      {artikel.length > 0 && (
+        <section className="mb-8">
+          <div className="mb-3 flex items-center justify-between">
+            <h2 className="text-xl font-extrabold text-ink dark:text-white">
+              ✍️ Artikel & Analisis
+            </h2>
+            <Link
+              href="/artikel"
+              className="text-sm font-semibold text-brand hover:underline"
+            >
+              Lihat semua →
+            </Link>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {artikel.map((a) => (
+              <Link
+                key={a.slug}
+                href={`/artikel/${a.slug}`}
+                className="block rounded-2xl border border-gray-200 bg-white p-4 transition hover:border-brand/40 hover:shadow-sm dark:border-white/10 dark:bg-night-card"
+              >
+                <p className="text-xs font-semibold text-brand">
+                  {KATEGORI_LABEL[a.category]}
+                </p>
+                <p className="mt-1 line-clamp-2 font-bold leading-snug text-ink dark:text-white">
+                  {a.title}
+                </p>
+                <p className="mt-1 text-xs text-gray-400 dark:text-gray-500">
+                  {formatTanggal(a.publishedAt)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {PLATFORM_ORDER.map((platform, i) => (
         <div key={platform}>
