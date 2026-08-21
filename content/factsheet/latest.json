@@ -1,0 +1,528 @@
+{
+  "generated_at": "2026-08-21T07:15:46+00:00",
+  "window_days": 7,
+  "coverage": {
+    "first": "2026-08-19 07:13:40",
+    "last": "2026-08-21 07:06:22",
+    "rows": 1463,
+    "days": 2.0
+  },
+  "platforms": {
+    "google": {
+      "top_now": [
+        {
+          "title": "black myth zhong kui",
+          "rank": 1,
+          "metric": 100
+        },
+        {
+          "title": "hyundai ioniq aa juju",
+          "rank": 2,
+          "metric": 1000
+        },
+        {
+          "title": "peru",
+          "rank": 3,
+          "metric": 100
+        },
+        {
+          "title": "serie c",
+          "rank": 4,
+          "metric": 100
+        },
+        {
+          "title": "haji isam",
+          "rank": 5,
+          "metric": 100
+        }
+      ],
+      "newcomers_7d": [
+        {
+          "title": "21 agustus",
+          "first_seen": "2026-08-21 06:05:57",
+          "best_rank": 1
+        },
+        {
+          "title": "alvarez",
+          "first_seen": "2026-08-21 03:18:32",
+          "best_rank": 1
+        },
+        {
+          "title": "anderlecht",
+          "first_seen": "2026-08-20 17:21:00",
+          "best_rank": 1
+        },
+        {
+          "title": "andrea bocelli",
+          "first_seen": "2026-08-21 04:07:32",
+          "best_rank": 1
+        },
+        {
+          "title": "badan usaha milik negara",
+          "first_seen": "2026-08-20 07:15:36",
+          "best_rank": 1
+        },
+        {
+          "title": "baleba",
+          "first_seen": "2026-08-19 10:41:03",
+          "best_rank": 1
+        },
+        {
+          "title": "barcelona",
+          "first_seen": "2026-08-19 18:49:56",
+          "best_rank": 1
+        },
+        {
+          "title": "benfica vs agf",
+          "first_seen": "2026-08-20 18:54:21",
+          "best_rank": 1
+        },
+        {
+          "title": "bkn",
+          "first_seen": "2026-08-20 05:46:39",
+          "best_rank": 1
+        },
+        {
+          "title": "black myth zhong kui",
+          "first_seen": "2026-08-21 07:06:22",
+          "best_rank": 1
+        }
+      ],
+      "longest_running_7d": [
+        {
+          "title": "bpnt",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "cek bansos ktp",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "elena rybakina",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "olimpia vs vasco",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "orlando city vs chicago fire",
+          "days_on": 2,
+          "best_rank": 1
+        }
+      ]
+    },
+    "youtube": {
+      "top_now": [
+        {
+          "title": "JASUN MARJU - DEWASA (Official Music Video)",
+          "rank": 1,
+          "metric": 128625
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: DOA DAVINA BERHASIL MEMBAWA SENA KEMBALI‼️ HANS SPILL NAMA DIPA - Arya Saloka",
+          "rank": 2,
+          "metric": 131381
+        },
+        {
+          "title": "AKU NONTON \"IBU BILANG PAKAI INI DULU\" JAM 3 PAGI, DAN INI YANG TERJADI...",
+          "rank": 3,
+          "metric": 507882
+        },
+        {
+          "title": "BIGBANG - ‘BiiiG’ M/V",
+          "rank": 4,
+          "metric": 6600763
+        },
+        {
+          "title": "TRAILER TERIKAT JANJI HARI INI EPISODE 137 Alhamdulillah Sena Sudah Siuman",
+          "rank": 5,
+          "metric": 21660
+        }
+      ],
+      "newcomers_7d": [
+        {
+          "title": "JASUN MARJU - DEWASA (Official Music Video)",
+          "first_seen": "2026-08-20 13:49:11",
+          "best_rank": 1
+        },
+        {
+          "title": "Saat Bahagia",
+          "first_seen": "2026-08-19 07:40:04",
+          "best_rank": 1
+        },
+        {
+          "title": "BIGBANG - ‘BiiiG’ M/V",
+          "first_seen": "2026-08-19 14:36:36",
+          "best_rank": 1
+        },
+        {
+          "title": "Eby, Zahra DA7 - Saat Bahagia | Official Music Video",
+          "first_seen": "2026-08-19 15:33:49",
+          "best_rank": 1
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: DOA DAVINA BERHASIL MEMBAWA SENA KEMBALI‼️ HANS SPILL NAMA DIPA - Arya Saloka",
+          "first_seen": "2026-08-20 06:49:52",
+          "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: SENA TERLUKA PARAH DEMI SELAMATKAN HANS! APA YANG TERJADI? - Arya Saloka",
+          "first_seen": "2026-08-19 10:31:17",
+          "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: APA DOA DAVINA DAPAT MENYELAMATKAN SENA⁉️ - Arya Saloka, Asha Assuncao",
+          "first_seen": "2026-08-19 07:40:04",
+          "best_rank": 2
+        },
+        {
+          "title": "AKU BEKERJA SEBAGAI PENYELAMAT PINGUIN DI ANTARTIKA NAMUN HAL ANEH TERJADI.... Penguin Lifter",
+          "first_seen": "2026-08-19 20:30:28",
+          "best_rank": 3
+        },
+        {
+          "title": "AKU NONTON \"IBU BILANG PAKAI INI DULU\" JAM 3 PAGI, DAN INI YANG TERJADI...",
+          "first_seen": "2026-08-20 07:42:21",
+          "best_rank": 3
+        },
+        {
+          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
+          "first_seen": "2026-08-19 07:40:04",
+          "best_rank": 3
+        }
+      ],
+      "longest_running_7d": [
+        {
+          "title": "Saat Bahagia",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "BIGBANG - ‘BiiiG’ M/V",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "eńau feat. Ari Lesmana - Sesi Potret (LIRIK LAGU)",
+          "days_on": 3,
+          "best_rank": 10
+        },
+        {
+          "title": "JASUN MARJU - DEWASA (Official Music Video)",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "Eby, Zahra DA7 - Saat Bahagia | Official Music Video",
+          "days_on": 2,
+          "best_rank": 1
+        }
+      ]
+    },
+    "instagram": {
+      "top_now": [
+        {
+          "title": "Terimakasih org baik🙏#fyp…",
+          "rank": 1,
+          "metric": 1803121
+        },
+        {
+          "title": "Menuju Indonesia Bangkrut 12.06.2026 Bundaran HI",
+          "rank": 2,
+          "metric": 1008141
+        },
+        {
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "rank": 3,
+          "metric": 778563
+        },
+        {
+          "title": "Marimar mengambil telur dan beras milik majikan dan aksinya terekam CCTV hingga…",
+          "rank": 4,
+          "metric": 749906
+        },
+        {
+          "title": "Ga akan pernah kulupa, yang bikin makben banyak dikenal orang orang. Diajak kerjasama…",
+          "rank": 5,
+          "metric": 680157
+        }
+      ],
+      "newcomers_7d": [],
+      "longest_running_7d": []
+    },
+    "tiktok": {
+      "top_now": [
+        {
+          "title": "#pestakulinermerdeka",
+          "rank": 1,
+          "metric": 1496156
+        },
+        {
+          "title": "#haripramuka",
+          "rank": 2,
+          "metric": 25345
+        },
+        {
+          "title": "#prayforntt",
+          "rank": 3,
+          "metric": 14120
+        }
+      ],
+      "newcomers_7d": [],
+      "longest_running_7d": []
+    },
+    "twitter": {
+      "top_now": [
+        {
+          "title": "#THE_SIN_BLISS_OutNow",
+          "rank": 1,
+          "metric": null
+        },
+        {
+          "title": "#BloodyParadise",
+          "rank": 2,
+          "metric": null
+        },
+        {
+          "title": "#ENHYPEN",
+          "rank": 3,
+          "metric": null
+        },
+        {
+          "title": "#PondPhuwinConcertD1",
+          "rank": 4,
+          "metric": null
+        },
+        {
+          "title": "PONDPHUWIN STAR VOYAGE",
+          "rank": 5,
+          "metric": null
+        }
+      ],
+      "newcomers_7d": [],
+      "longest_running_7d": []
+    },
+    "netflix": {
+      "top_now": [
+        {
+          "title": "Wait for Me To Be Successful Later",
+          "rank": 1,
+          "metric": null
+        },
+        {
+          "title": "The Last House",
+          "rank": 2,
+          "metric": null
+        },
+        {
+          "title": "Na Willa",
+          "rank": 3,
+          "metric": null
+        },
+        {
+          "title": "Extinction",
+          "rank": 4,
+          "metric": null
+        },
+        {
+          "title": "The Suicide Squad",
+          "rank": 5,
+          "metric": null
+        }
+      ],
+      "newcomers_7d": [
+        {
+          "title": "Wait for Me To Be Successful Later",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 1
+        },
+        {
+          "title": "The Last House",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 2
+        },
+        {
+          "title": "Na Willa",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 3
+        },
+        {
+          "title": "Extinction",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 4
+        },
+        {
+          "title": "The Suicide Squad",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 5
+        },
+        {
+          "title": "Danur: The Last Chapter",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 6
+        },
+        {
+          "title": "Last Chance To Save",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 7
+        },
+        {
+          "title": "Suzzanna: Witchcraft",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 8
+        },
+        {
+          "title": "Suicide Squad",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 9
+        },
+        {
+          "title": "Edge of Tomorrow",
+          "first_seen": "2026-08-20 02:56:17",
+          "best_rank": 10
+        }
+      ],
+      "longest_running_7d": [
+        {
+          "title": "Wait for Me To Be Successful Later",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "The Last House",
+          "days_on": 2,
+          "best_rank": 2
+        },
+        {
+          "title": "Na Willa",
+          "days_on": 2,
+          "best_rank": 3
+        },
+        {
+          "title": "Extinction",
+          "days_on": 2,
+          "best_rank": 4
+        },
+        {
+          "title": "The Suicide Squad",
+          "days_on": 2,
+          "best_rank": 5
+        }
+      ]
+    },
+    "shopee": {
+      "top_now": [
+        {
+          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
+          "rank": 1,
+          "metric": 365700
+        },
+        {
+          "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
+          "rank": 2,
+          "metric": 303800
+        },
+        {
+          "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
+          "rank": 3,
+          "metric": 266700
+        },
+        {
+          "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
+          "rank": 4,
+          "metric": 244200
+        },
+        {
+          "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
+          "rank": 5,
+          "metric": 233700
+        }
+      ],
+      "newcomers_7d": [
+        {
+          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 1
+        },
+        {
+          "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 2
+        },
+        {
+          "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 3
+        },
+        {
+          "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 4
+        },
+        {
+          "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 5
+        },
+        {
+          "title": "ELDORE Beauty Masker Facial Sheet Mask 30g",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 6
+        },
+        {
+          "title": "Maybelline Superstay Matte Ink Liquid Lipstick Tahan 16 Jam",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 7
+        },
+        {
+          "title": "ITS ME Paket Day Cream + Night Cream Premium",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 8
+        },
+        {
+          "title": "KIME Luminizing Jeju Brightening Soap 100gr (Buy 1 Box Get 2)",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 9
+        },
+        {
+          "title": "SCARLETT Eau De Parfum & Extrait 30ml",
+          "first_seen": "2026-08-20 05:58:29",
+          "best_rank": 10
+        }
+      ],
+      "longest_running_7d": [
+        {
+          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
+          "days_on": 2,
+          "best_rank": 2
+        },
+        {
+          "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
+          "days_on": 2,
+          "best_rank": 3
+        },
+        {
+          "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
+          "days_on": 2,
+          "best_rank": 4
+        },
+        {
+          "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
+          "days_on": 2,
+          "best_rank": 5
+        }
+      ]
+    }
+  },
+  "cross_platform_7d": []
+}
