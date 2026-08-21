@@ -1,0 +1,57 @@
+{
+  "slug": "kenapa-cek-bansos-puncaki-google-trends",
+  "title": "Kenapa \"Cek Bansos\" Selalu Balik ke Puncak Google Trends?",
+  "category": "analisis",
+  "lead": "Dua hari berturut-turut (19–20 Agustus), kata kunci \"bpnt\" dan \"cek bansos ktp\" menduduki posisi #1 pencarian Google Indonesia di arsip Lagi Tren — lalu menghilang dari daftar pada 21 Agustus. Polanya bukan kebetulan: lonjakan pencarian bansos bergerak mengikuti kalender pencairan, dan Agustus ini pemicunya adalah pencairan BPNT tahap 3.",
+  "sections": [
+    {
+      "heading": "Apa yang terekam di arsip kami",
+      "paragraphs": [
+        "Di arsip Lagi Tren, \"bpnt\" dan \"cek bansos ktp\" sama-sama muncul di puncak daftar tren Google Indonesia dan bertahan dua hari penuh — durasi yang panjang untuk daftar yang biasanya berganti tiap beberapa jam. Pada 21 Agustus keduanya sudah keluar dari 10 besar, digantikan topik hiburan dan olahraga.",
+        "Kurva seperti ini — naik tajam, bertahan singkat, lalu hilang — adalah tanda pencarian kebutuhan, bukan rasa penasaran. Orang tidak mencari \"bpnt\" karena penasaran apa itu; mereka mencari karena sedang menunggu sesuatu yang menyangkut dapur rumahnya."
+      ]
+    },
+    {
+      "heading": "Pemicunya: pencairan tahap 3",
+      "paragraphs": [
+        "Pemberitaan pada pekan yang sama menjelaskan pemicunya: Kementerian Sosial mulai menyalurkan bansos Agustus 2026, termasuk BPNT (Bantuan Pangan Non Tunai) tahap 3 dengan nominal yang diberitakan Rp600.000 per penerima, bersamaan dengan pencairan PKH.",
+        "Setiap kali jadwal pencairan tiba, jutaan penerima manfaat serentak membuka ponsel untuk satu pertanyaan yang sama: \"punyaku sudah cair belum?\" Itulah kenapa kata kunci yang menempel pada program bansos hampir selalu kembali ke daftar tren setiap awal tahap penyaluran — pola yang akan terus kami pantau lewat arsip peringkat Lagi Tren."
+      ]
+    },
+    {
+      "heading": "Cara cek status bansos yang aman",
+      "paragraphs": [
+        "Kanal resminya satu: situs cekbansos.kemensos.go.id milik Kementerian Sosial. Kamu cukup memasukkan wilayah tempat tinggal dan nama sesuai KTP, lalu sistem menampilkan status kepesertaan untuk program seperti BPNT dan PKH. Tidak perlu aplikasi tambahan, tidak perlu membayar.",
+        "Justru karena jutaan orang mencarinya serentak, momen pencairan juga jadi musim panen bagi penipu. Waspadai situs tiruan dengan nama mirip, tautan \"percepatan pencairan\" yang diedarkan lewat pesan berantai, dan siapa pun yang meminta OTP, PIN, atau sejumlah uang untuk \"memproses\" bantuan — kanal resmi tidak pernah meminta itu."
+      ]
+    },
+    {
+      "heading": "Apa artinya buat pembaca tren",
+      "paragraphs": [
+        "Buat yang memantau tren Indonesia, kata kunci bansos adalah contoh terbaik dari \"tren berulang berbasis kalender\": ia bukan peristiwa baru, melainkan jadwal yang bertemu kebutuhan. Kalau kamu melihatnya naik lagi bulan depan, kemungkinan besar tahap penyaluran berikutnya baru dimulai.",
+        "Ini juga pengingat bahwa daftar tren Google bukan cuma soal selebriti dan bola — sebagian lonjakan terbesar justru datang dari urusan paling sehari-hari. Penjelasan cara membaca angka Google Trends ada di panduan kami."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Kabar24 (Bisnis.com) — Kemensos Salurkan Bansos, Ini Cara Cek BPNT Agustus 2026", "url": "https://kabar24.bisnis.com/read/20260819/243/1997405/kemensos-salurkan-bansos-ini-cara-cek-bpnt-agustus-2026" },
+    { "title": "Serambinews — Bansos PKH Agustus 2026 Resmi Dicairkan", "url": "https://aceh.tribunnews.com/news/1039563/bansos-pkh-agustus-2026-resmi-dicairkan-cek-rincian-nominal-dan-cara-verifikasi-penerimanya" },
+    { "title": "Cek Bansos Kemensos (situs resmi)", "url": "https://cekbansos.kemensos.go.id/" }
+  ],
+  "related": ["/google/bpnt", "/google", "/artikel/cara-membaca-google-trends"],
+  "dataCard": {
+    "Peringkat puncak": "#1 Google Trends ID",
+    "Bertahan": "2 hari (19–20 Agu)",
+    "Pemicu": "Pencairan BPNT tahap 3",
+    "Nominal diberitakan": "Rp600.000"
+  },
+  "facts": {
+    "archive": {
+      "bpnt": { "best_rank": 1, "days_on": 2, "window": "2026-08-19..2026-08-20" },
+      "cek bansos ktp": { "best_rank": 1, "days_on": 2, "window": "2026-08-19..2026-08-20" },
+      "dropped_from_top10": "2026-08-21"
+    },
+    "news": "BPNT tahap 3 Agustus 2026, Rp600.000/penerima; PKH cair bersamaan (Kabar24, Serambinews, 19 Agu 2026)"
+  },
+  "published_at": "2026-08-21 07:40:00"
+}
