@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-08-22T06:01:45+00:00",
+  "generated_at": "2026-08-23T06:01:55+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-08-22 06:00:23",
-    "rows": 2172,
-    "days": 2.9
+    "last": "2026-08-23 05:57:03",
+    "rows": 2951,
+    "days": 3.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "amri syahnawi",
+          "title": "india",
           "rank": 1,
-          "metric": 1000
+          "metric": 100
         },
         {
-          "title": "deddy corbuzier",
+          "title": "adhi karya",
           "rank": 2,
           "metric": 100
         },
         {
-          "title": "video game",
+          "title": "judol",
           "rank": 3,
-          "metric": 200
-        },
-        {
-          "title": "perlinsos",
-          "rank": 4,
-          "metric": 500
-        },
-        {
-          "title": "minteh",
-          "rank": 5,
           "metric": 100
+        },
+        {
+          "title": "psps",
+          "rank": 4,
+          "metric": 100
+        },
+        {
+          "title": "kebakaran hutan way kambas",
+          "rank": 5,
+          "metric": 1000
         }
       ],
       "newcomers_7d": [
@@ -50,6 +50,11 @@
         {
           "title": "al-riyadh vs al-nassr standings",
           "first_seen": "2026-08-21 19:30:45",
+          "best_rank": 1
+        },
+        {
+          "title": "alejandro balde",
+          "first_seen": "2026-08-22 22:14:49",
           "best_rank": 1
         },
         {
@@ -81,11 +86,6 @@
           "title": "arsenal",
           "first_seen": "2026-08-21 18:51:43",
           "best_rank": 1
-        },
-        {
-          "title": "ayyoub bouaddi",
-          "first_seen": "2026-08-21 07:56:25",
-          "best_rank": 1
         }
       ],
       "longest_running_7d": [
@@ -100,54 +100,59 @@
           "best_rank": 2
         },
         {
+          "title": "cincinnati open",
+          "days_on": 3,
+          "best_rank": 2
+        },
+        {
+          "title": "ti 2026",
+          "days_on": 3,
+          "best_rank": 2
+        },
+        {
           "title": "liga italia",
           "days_on": 3,
           "best_rank": 4
-        },
-        {
-          "title": "bpnt",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "elena rybakina",
-          "days_on": 2,
-          "best_rank": 1
         }
       ]
     },
     "youtube": {
       "top_now": [
         {
-          "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
+          "title": "Dirantai Digelangi Rindu",
           "rank": 1,
-          "metric": 4316782
+          "metric": 114335
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA MAKIN JAGO GOMBAL⁉️ REZA MAU JADIIN JIHAN IBU BHAYANGKARI? - Arya Saloka",
+          "title": "TERIKAT JANJI TRAILER: REZA NEKAT‼️ APA SENA & DAVINA BISA TENANGKAN KECURIGAAN NOVAN❓ - Arya Saloka",
           "rank": 2,
-          "metric": 83347
+          "metric": 56674
         },
         {
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 2 Hari 2 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 1293492
+          "metric": 4447305
         },
         {
-          "title": "JASUN MARJU - DEWASA (Official Music Video)",
+          "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
           "rank": 4,
-          "metric": 198728
+          "metric": 12025298
         },
         {
-          "title": "KRITISS!! ARINA KENA TEM BAKAN DEMI LINDUNGI FICO! FICO SHOCK PANIK TRAILER FULL BIARKAN HATI BICARA",
+          "title": "TRAILER FULL BIARKAN HATI BICARA SABTU! FICO GA MAU KEHILANGAN ARINA! ARINA KEKEH DONORKAN SUMSUM!",
           "rank": 5,
-          "metric": 15880
+          "metric": 23892
         }
       ],
       "newcomers_7d": [
         {
           "title": "JASUN MARJU - DEWASA (Official Music Video)",
           "first_seen": "2026-08-20 13:49:11",
+          "best_rank": 1
+        },
+        {
+          "title": "Dirantai Digelangi Rindu",
+          "first_seen": "2026-08-22 08:32:55",
           "best_rank": 1
         },
         {
@@ -186,14 +191,9 @@
           "best_rank": 2
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA DOA DAVINA DAPAT MENYELAMATKAN SENA⁉️ - Arya Saloka, Asha Assuncao",
-          "first_seen": "2026-08-19 07:40:04",
+          "title": "TERIKAT JANJI TRAILER: REZA NEKAT‼️ APA SENA & DAVINA BISA TENANGKAN KECURIGAAN NOVAN❓ - Arya Saloka",
+          "first_seen": "2026-08-22 07:33:30",
           "best_rank": 2
-        },
-        {
-          "title": "Mode Hardcore Tamat di Rumah Raksasa!",
-          "first_seen": "2026-08-21 10:33:01",
-          "best_rank": 3
         }
       ],
       "longest_running_7d": [
@@ -213,43 +213,43 @@
           "best_rank": 1
         },
         {
-          "title": "eńau feat. Ari Lesmana - Sesi Potret (LIRIK LAGU)",
+          "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
           "days_on": 3,
-          "best_rank": 10
+          "best_rank": 1
         },
         {
-          "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
-          "days_on": 2,
-          "best_rank": 1
+          "title": "BCL & Josh Flo - Terpesona (Official Lyric Video)",
+          "days_on": 3,
+          "best_rank": 7
         }
       ]
     },
     "instagram": {
       "top_now": [
         {
-          "title": "Kejadian di Malaysia ini terekam CCTV halte bus. Seorang perempuan berdiri di pinggir…",
+          "title": "İylik iydiir 🐣❤️ #keşfet #fallowme #viral #reklamdeğil #farm",
           "rank": 1,
-          "metric": 1462873
+          "metric": 22893198
+        },
+        {
+          "title": "MENUJU INDONESIA BANGKRUT",
+          "rank": 2,
+          "metric": 1775014
         },
         {
           "title": "Wajib masuk bucket list liburan kalian si ini…😍😍",
-          "rank": 2,
-          "metric": 1427445
-        },
-        {
-          "title": "Menuju Indonesia Bangkrut 12.06.2026 Bundaran HI",
           "rank": 3,
-          "metric": 1012121
+          "metric": 1427415
         },
         {
           "title": "Marimar mengambil telur dan beras milik majikan dan aksinya terekam CCTV hingga…",
           "rank": 4,
-          "metric": 754873
+          "metric": 759840
         },
         {
-          "title": "Ga akan pernah kulupa, yang bikin makben banyak dikenal orang orang. Diajak kerjasama…",
+          "title": "Indonesia has made great advances in the past quarter-century.",
           "rank": 5,
-          "metric": 680140
+          "metric": 398604
         }
       ],
       "newcomers_7d": [],
@@ -260,17 +260,17 @@
         {
           "title": "#prayforntt",
           "rank": 1,
-          "metric": 15258
+          "metric": 16976
         },
         {
-          "title": "#mlbbchaosclash",
+          "title": "#gempantt",
           "rank": 2,
-          "metric": 21015
+          "metric": 15282
         },
         {
-          "title": "#mlbbnewmode",
+          "title": "#gangstarmiragecity",
           "rank": 3,
-          "metric": 20989
+          "metric": 26103
         }
       ],
       "newcomers_7d": [],
@@ -279,22 +279,22 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#KUOTASERBA8RIBU",
+          "title": "#TOKENPLN81RIBU",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "GoPay",
+          "title": "#PondPhuwinConcertD2",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#PondPhuwinConcertD1",
+          "title": "GoPay",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#PRAYFORKALIMANTAN",
+          "title": "PLN 100rb",
           "rank": 4,
           "metric": null
         },
@@ -390,27 +390,27 @@
       "longest_running_7d": [
         {
           "title": "Wait for Me To Be Successful Later",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 1
         },
         {
           "title": "The Last House",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 2
         },
         {
           "title": "Na Willa",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 3
         },
         {
           "title": "Extinction",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 4
         },
         {
           "title": "The Suicide Squad",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 5
         }
       ]
@@ -498,27 +498,27 @@
       "longest_running_7d": [
         {
           "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 1
         },
         {
           "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 2
         },
         {
           "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 3
         },
         {
           "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 4
         },
         {
           "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 5
         }
       ]
