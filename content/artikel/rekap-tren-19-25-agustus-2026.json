@@ -1,0 +1,58 @@
+{
+  "slug": "rekap-tren-19-25-agustus-2026",
+  "title": "Rekap Tren Sepekan (19–25 Agustus): Karhutla, Parade K-pop, dan Netflix yang Membeku",
+  "category": "rekap",
+  "lead": "Ini rekap mingguan pertama dari arsip peringkat Lagi Tren — hasil merekam daftar tren tujuh sumber setiap hari selama sepekan penuh. Tiga cerita menonjol: krisis karhutla yang menyalakan tiga platform sekaligus, daftar trending YouTube yang berganti #1 lima kali dan semuanya video musik, serta Top 10 Netflix yang nyaris tidak bergerak enam hari penuh.",
+  "sections": [
+    {
+      "heading": "Cerita terbesar: karhutla menyeberangi platform",
+      "paragraphs": [
+        "Tidak ada topik lain pekan ini yang jejaknya selebar kebakaran hutan dan lahan Kalimantan. Arsip kami mencatat evolusinya: tagar doa (#PRAYFORKALIMANTAN) masuk lima besar X pada 22 Agustus, konten \"Pray for Borneo\" mendominasi unggahan teratas Instagram, #prayforkalimantan bertahan di daftar TikTok, lalu pada 24 Agustus puncak X berganti menjadi tagar koordinasi penanganan seperti #SinergiAtasiAsap.",
+        "Hari ini tagar-tagar itu sudah turun dari puncak X — digantikan topik korporasi dan perayaan fandom — meski operasi pemadaman masih berjalan menurut pemberitaan. Pola \"perhatian memudar lebih cepat dari krisisnya\" ini adalah salah satu hal yang paling jelas terlihat ketika daftar tren direkam harian, bukan dilihat sekilas."
+      ]
+    },
+    {
+      "heading": "YouTube: lima #1 dalam sepekan, semuanya musik",
+      "paragraphs": [
+        "Trending YouTube Indonesia pekan ini praktis menjadi kalender rilis musik: lima video berbeda tercatat menyentuh posisi #1 — \"DEWASA\" Jasun Marju, \"Saat Bahagia\", \"BiiiG\" BIGBANG, \"Bloody Paradise\" ENHYPEN, dan hari ini \"Blingy\" NCT 127. Comeback K-pop dan rilisan lokal bergantian saling menggeser hampir tiap dua hari.",
+        "Kasus ENHYPEN paling rapi terekam: tiga tagar fandom menguasai posisi 1–3 X pada hari rilis, lalu 24 jam kemudian video musiknya memuncaki YouTube — anatomi \"ledakan fandom\" yang kami bedah di artikel terpisah pekan ini."
+      ]
+    },
+    {
+      "heading": "Netflix dan Produk: daftar yang menolak berubah",
+      "paragraphs": [
+        "Kebalikan dari YouTube, Top 10 Netflix Indonesia nyaris membeku: \"Tunggu Aku Sukses Nanti\" (Wait for Me To Be Successful Later) tercatat di posisi #1 enam hari penuh tanpa jeda, dengan \"The Last House\", \"Na Willa\", dan \"Extinction\" mengunci posisi 2–4 sepanjang pekan yang sama. Untuk daftar yang diukur dari jam tontonan, kestabilan sepanjang ini artinya penontonnya masih terus bertambah.",
+        "Daftar Produk Viral juga stabil — JJ Glow, SYB Forte, dan UNIQSOO mengunci tiga besar enam hari berturut-turut — wajar untuk daftar berbasis akumulasi penjualan. Sedangkan di Google, pencarian paling awet pekan ini adalah urusan sehari-hari dan olahraga: \"cek bansos ktp\" (tiga hari, sempat #1), Cincinnati Open, jadwal F1, dan FC Mobile."
+      ]
+    },
+    {
+      "heading": "Yang sedang naik menjelang pekan depan",
+      "paragraphs": [
+        "Di TikTok, tiga hari terakhir daftar hashtag dikuasai kampanye satu game — #gangstarmiragecity beserta variannya — contoh bagaimana anggaran pemasaran bisa menduduki daftar tren partisipasi; kami berencana membedahnya terpisah. Di X hari ini, nama \"Danantara Indonesia\" naik ke posisi teratas, dan perayaan 10 tahun NCT Dream menyusul di belakangnya.",
+        "Catatan metode: ini rekap pertama kami, dari arsip yang mulai merekam 19 Agustus (4.374 potret peringkat dalam sepekan). Untuk Instagram, TikTok, dan X, sebagian riwayat masih berasal dari pantauan harian redaksi karena perekam otomatisnya baru menyala belakangan — kesenjangan ini akan hilang di rekap pekan depan."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Kementerian Kehutanan — operasi terpadu karhutla Kalimantan", "url": "https://www.kehutanan.go.id/news/pemerintah-perkuat-operasi-terpadu-karhutla-di-kalimantan-tambah-dukungan-udara-dan-pemadaman-darat" }
+  ],
+  "related": ["/artikel/karhutla-kalimantan-tiga-platform", "/artikel/enhypen-bloody-paradise-dari-x-ke-youtube", "/artikel/tunggu-aku-sukses-nanti-nomor-satu-netflix", "/netflix", "/youtube"],
+  "dataCard": {
+    "Periode": "19–25 Agu 2026",
+    "#1 terlama": "Netflix · 6 hari",
+    "YouTube #1 berbeda": "5 video (semua musik)",
+    "Potret peringkat": "4.374"
+  },
+  "facts": {
+    "archive": {
+      "coverage": "2026-08-19 .. 2026-08-25, 4374 snapshot",
+      "netflix": "Wait for Me 6d #1; The Last House 6d #2; Na Willa 6d #3; Extinction 6d #4",
+      "shopee": "JJ Glow 6d #1, SYB 6d #2, UNIQSOO 6d #3",
+      "google_awet": "cincinnati open 4d b2; cek bansos ktp 3d b1; fc mobile 3d b1; jadwal f1 3d b1",
+      "youtube_no1s": ["JASUN MARJU DEWASA", "Saat Bahagia", "BIGBANG BiiiG", "ENHYPEN Bloody Paradise", "NCT 127 Blingy"],
+      "x_daily": "21/8 ENHYPEN tags 1-3; 22/8 PRAYFORKALIMANTAN 4-6; 24/8 SinergiAtasiAsap dkk 2-4; 25/8 Danantara #1, NCT Dream 10th #2-3",
+      "tiktok_daily": "22-23/8 prayforntt #1; 23-25/8 gangstarmiragecity #1"
+    }
+  },
+  "published_at": "2026-08-25 06:30:00"
+}
