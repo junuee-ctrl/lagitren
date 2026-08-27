@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-08-26T06:05:22+00:00",
+  "generated_at": "2026-08-27T06:02:52+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-08-26 06:01:49",
-    "rows": 5063,
-    "days": 7.0
+    "last": "2026-08-27 04:22:43",
+    "rows": 5408,
+    "days": 7.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "nicolo tresoldi",
+          "title": "club america",
           "rank": 1,
           "metric": 100
         },
         {
-          "title": "muktamar nu 2026",
+          "title": "club américa vs columbus crew",
           "rank": 2,
-          "metric": 100
+          "metric": 500
         },
         {
-          "title": "alibaba",
+          "title": "siasn bkn",
           "rank": 3,
           "metric": 100
         },
         {
-          "title": "cek desil kemensos go id 2026",
+          "title": "toluca",
           "rank": 4,
-          "metric": 200
+          "metric": 100
         },
         {
-          "title": "sic",
+          "title": "detikcom",
           "rank": 5,
-          "metric": 1000
+          "metric": 500
         }
       ],
       "newcomers_7d": [
@@ -90,9 +90,9 @@
       ],
       "longest_running_7d": [
         {
-          "title": "cincinnati open",
+          "title": "mariano díaz",
           "days_on": 4,
-          "best_rank": 2
+          "best_rank": 1
         },
         {
           "title": "cek bansos ktp",
@@ -119,35 +119,40 @@
     "youtube": {
       "top_now": [
         {
-          "title": "HAPPY ASMARA - DIRANTAI DIGELANGI RINDU ( Official Live Video Royal Music )",
+          "title": "D4rA Muda - Alasan | Official Music Video",
           "rank": 1,
-          "metric": 58993
+          "metric": 56230
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA SENA & TEAM AKAN BERHASIL MENANGKAP DIPA⁉️ - Arya Saloka,Asha Ass",
+          "title": "TERIKAT JANJI TRAILER: SELANGKAH LAGI‼️ SENA & REZA TAU APA RENCANA DIPA? -Arya Saloka,Asha Assuncao",
           "rank": 2,
-          "metric": 63474
+          "metric": 68515
         },
         {
           "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
           "rank": 3,
-          "metric": 811622
+          "metric": 808306
         },
         {
           "title": "Shawn Mendes - Treat You Better (Lyrics)",
           "rank": 4,
-          "metric": 155927
+          "metric": 511379
         },
         {
           "title": "Avengers Endgame: Encore | Official Trailer | In Theaters Sep 25",
           "rank": 5,
-          "metric": 4977413
+          "metric": 8967120
         }
       ],
       "newcomers_7d": [
         {
           "title": "HAPPY ASMARA - DIRANTAI DIGELANGI RINDU ( Official Live Video Royal Music )",
           "first_seen": "2026-08-25 15:43:53",
+          "best_rank": 1
+        },
+        {
+          "title": "D4rA Muda - Alasan | Official Music Video",
+          "first_seen": "2026-08-26 14:50:10",
           "best_rank": 1
         },
         {
@@ -166,16 +171,6 @@
           "best_rank": 1
         },
         {
-          "title": "Saat Bahagia",
-          "first_seen": "2026-08-19 07:40:04",
-          "best_rank": 1
-        },
-        {
-          "title": "BIGBANG - ‘BiiiG’ M/V",
-          "first_seen": "2026-08-19 14:36:36",
-          "best_rank": 1
-        },
-        {
           "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
           "first_seen": "2026-08-21 18:38:54",
           "best_rank": 1
@@ -186,13 +181,18 @@
           "best_rank": 1
         },
         {
-          "title": "Eby, Zahra DA7 - Saat Bahagia | Official Music Video",
-          "first_seen": "2026-08-19 15:33:49",
+          "title": "Shawn Mendes - Treat You Better (Lyrics)",
+          "first_seen": "2026-08-26 03:07:24",
           "best_rank": 1
         },
         {
           "title": "TERIKAT JANJI TRAILER: SENA MAKIN JAGO GOMBAL⁉️ REZA MAU JADIIN JIHAN IBU BHAYANGKARI? - Arya Saloka",
           "first_seen": "2026-08-21 10:33:01",
+          "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: SELANGKAH LAGI‼️ SENA & REZA TAU APA RENCANA DIPA? -Arya Saloka,Asha Assuncao",
+          "first_seen": "2026-08-26 07:49:02",
           "best_rank": 2
         }
       ],
@@ -213,12 +213,12 @@
           "best_rank": 1
         },
         {
-          "title": "Saat Bahagia",
+          "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
           "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "BIGBANG - ‘BiiiG’ M/V",
+          "title": "CORTIS (코르티스) ‘MONEYMONEYMONEY’ Official Visualizer",
           "days_on": 3,
           "best_rank": 1
         }
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "İylik iydiir 🐣❤️ #keşfet #fallowme #viral #reklamdeğil #farm",
+          "title": "Indonesia dengan pemandangan 5 waktunya (part4)",
           "rank": 1,
-          "metric": 22984429
+          "metric": 1469292
         },
         {
-          "title": "Tak perlu tahu aslinya pun kita sudah tau gambaran ayahnya seperti apa 🤣🤣",
+          "title": "Dampak gempa kuat M7,7 yang mengguncang wilayah NTT pagi ini mulai menjadi perhatian…",
           "rank": 2,
-          "metric": 566445
+          "metric": 196880
         },
         {
-          "title": "Indonesia has made great advances in the past quarter-century.",
+          "title": "WNI yang ingin melepas status kewarganegaraan Indonesia atas permohonan sendiri kini akan…",
           "rank": 3,
-          "metric": 398641
+          "metric": 73367
         },
         {
-          "title": "kalau hewan dan tumbuhan bisa bikin status, mereka mungkin akan bilang : \"manusia itu…",
+          "title": "Viral asisten rumah tangga Cristiano Ronaldo, Pipit Sriati asal Indonesia membagikan…",
           "rank": 4,
-          "metric": 374582
+          "metric": 32746
         },
         {
-          "title": "Selamat Ulang Tahun kepada Capt. Sigit Hani Hadiyanto, Direktur Keamanan Penerbangan. ✨",
+          "title": "Kita sudah terlalu lama diam",
           "rank": 5,
-          "metric": 333971
+          "metric": 28282
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#ShopeeNaykillaTenxi",
+          "title": "#PresidenPrabowoDiNTT",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#MrKillSeriesEP8",
+          "title": "#GrabFoodถูกกว่าชัวร์TRIP",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#PondPhuwinSIXbySide",
+          "title": "GRABFOOD TRIP X GFSNPP",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "PONDPHUWIN 6 YEARS OF BLOOMING",
+          "title": "#MoonshadowSeriesEP3",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#NCT127_BLINGY",
+          "title": "#MrKillSeriesEP8",
           "rank": 5,
           "metric": null
         }
@@ -342,75 +342,40 @@
           "best_rank": 1
         },
         {
-          "title": "Wait for Me To Be Successful Later",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 1
-        },
-        {
-          "title": "The Last House",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 2
-        },
-        {
-          "title": "Na Willa",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 3
-        },
-        {
-          "title": "Extinction",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 4
-        },
-        {
-          "title": "Last Chance To Save",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 5
-        },
-        {
-          "title": "The Suicide Squad",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 5
-        },
-        {
-          "title": "Danur: The Last Chapter",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 6
-        },
-        {
-          "title": "Suicide Squad",
-          "first_seen": "2026-08-20 02:56:17",
-          "best_rank": 7
-        },
-        {
           "title": "Facing El Chapo",
           "first_seen": "2026-08-26 03:03:45",
           "best_rank": 8
+        },
+        {
+          "title": "S&X",
+          "first_seen": "2026-08-26 03:03:45",
+          "best_rank": 20
         }
       ],
       "longest_running_7d": [
         {
           "title": "Wait for Me To Be Successful Later",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 1
         },
         {
           "title": "The Last House",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 2
         },
         {
           "title": "Na Willa",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 3
         },
         {
           "title": "Last Chance To Save",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 5
         },
         {
           "title": "The Suicide Squad",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 5
         }
       ]
@@ -443,82 +408,31 @@
           "metric": 233700
         }
       ],
-      "newcomers_7d": [
-        {
-          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 1
-        },
-        {
-          "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 2
-        },
-        {
-          "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 3
-        },
-        {
-          "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 4
-        },
-        {
-          "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 5
-        },
-        {
-          "title": "ELDORE Beauty Masker Facial Sheet Mask 30g",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 6
-        },
-        {
-          "title": "Maybelline Superstay Matte Ink Liquid Lipstick Tahan 16 Jam",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 7
-        },
-        {
-          "title": "ITS ME Paket Day Cream + Night Cream Premium",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 8
-        },
-        {
-          "title": "KIME Luminizing Jeju Brightening Soap 100gr (Buy 1 Box Get 2)",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 9
-        },
-        {
-          "title": "SCARLETT Eau De Parfum & Extrait 30ml",
-          "first_seen": "2026-08-20 05:58:29",
-          "best_rank": 10
-        }
-      ],
+      "newcomers_7d": [],
       "longest_running_7d": [
         {
           "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 1
         },
         {
           "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 2
         },
         {
           "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 3
         },
         {
           "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 4
         },
         {
           "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
-          "days_on": 7,
+          "days_on": 6,
           "best_rank": 5
         }
       ]
