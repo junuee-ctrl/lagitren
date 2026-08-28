@@ -1,0 +1,56 @@
+{
+  "slug": "kualitas-udara-pekanbaru-tiga-hari-dicari",
+  "title": "\"Kualitas Udara Pekanbaru\": Ketika Krisis Asap Pindah ke Kolom Pencarian",
+  "category": "analisis",
+  "lead": "Tiga hari berturut-turut, \"kualitas udara pekanbaru\" tercatat di puncak pencarian Google Indonesia dalam arsip Lagi Tren. Ini babak baru dari krisis asap yang pekan lalu kami tulis dari sisi Kalimantan: tagar solidaritasnya sudah surut dari media sosial, tapi di Riau krisisnya justru memuncak — kota Pekanbaru menetapkan tanggap darurat dan mencatat 177 kasus ISPA dalam sehari.",
+  "sections": [
+    {
+      "heading": "Apa yang terekam di arsip kami",
+      "paragraphs": [
+        "Sejak 25 Agustus, \"kualitas udara pekanbaru\" bertahan tiga hari di daftar tren Google Indonesia dengan posisi terbaik #1 — pola \"pencarian kebutuhan\" yang sama dengan \"cek bansos\" pekan lalu: orang tidak penasaran, orang perlu tahu apakah aman keluar rumah hari ini.",
+        "Perbandingannya dengan media sosial mencolok. Tagar #PRAYFORKALIMANTAN dan kawan-kawannya sudah turun dari puncak X sejak 25 Agustus, tapi pencarian praktis justru baru naik — di arsip kami hari ini bahkan muncul kata kunci \"suhu\" di sepuluh besar Google. Perhatian sosial bergerak seperti gelombang; kebutuhan informasi bergerak seperti pasang: lebih lambat, lebih lama."
+      ]
+    },
+    {
+      "heading": "Yang terjadi di Pekanbaru",
+      "paragraphs": [
+        "Pada 26 Agustus, Wali Kota Pekanbaru Agung Nugroho menaikkan status kota dari siaga menjadi tanggap darurat karhutla selama 14 hari (hingga 7 September). Alasannya: 150 titik kebakaran dengan total sekitar 85 hektare lahan terbakar di dalam kota, kemarau 22 hari tanpa hujan, dan indeks kualitas udara (ISPU) yang pada 25 Agustus menyentuh kategori Berbahaya.",
+        "Dampak kesehatannya langsung terlihat di data Dinas Kesehatan: 177 kasus infeksi saluran pernapasan akut (ISPA) tercatat dalam satu hari pada 26 Agustus, ditambah kasus asma, iritasi kulit, konjungtivitis, dan satu pneumonia. Pemerintah kota meminta warga memakai masker dan membatasi aktivitas luar ruang."
+      ]
+    },
+    {
+      "heading": "Cara memeriksa kualitas udara yang benar",
+      "paragraphs": [
+        "Rujukan resminya adalah ISPU (Indeks Standar Pencemar Udara) milik Kementerian Lingkungan Hidup, yang membagi udara ke dalam kategori dari Baik sampai Berbahaya. Nilainya bisa berbeda antar-aplikasi karena tiap layanan memakai sensor dan metode berbeda — jadi jangan panik karena satu angka, dan jangan tenang karena satu angka juga.",
+        "Prinsip praktisnya: pada kategori Tidak Sehat ke atas, kelompok sensitif (anak, lansia, ibu hamil, penderita asma) sebaiknya di dalam ruangan; pada Sangat Tidak Sehat dan Berbahaya, semua orang membatasi aktivitas luar dan memakai masker yang mampu menyaring partikel halus bila harus keluar."
+      ]
+    },
+    {
+      "heading": "Yang kami pantau berikutnya",
+      "paragraphs": [
+        "Masa tanggap darurat Pekanbaru berjalan sampai 7 September, dan pengalaman tahun-tahun karhutla sebelumnya menunjukkan pencarian kualitas udara akan tetap tinggi selama asapnya belum hilang — bukan selama beritanya masih ramai. Arsip kami akan mencatat berapa lama kata kunci ini bertahan, sebagai pembanding untuk episode asap berikutnya.",
+        "Kronologi sisi Kalimantan dari krisis yang sama bisa dibaca di analisis kami sebelumnya, dan pergerakan harian kata kunci ini ada di bagian Google Lagi Tren."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "PotretNews — Pemkot Pekanbaru Naikkan Status Jadi Tanggap Darurat (26 Agu)", "url": "https://www.potretnews.com/berita/baca/2026/08/26/bkarhutla-meluas-pemkot-pekanbaru-naikkan-status-jadi-tanggap-daruratb" },
+    { "title": "PotretNews — Kasus ISPA di Pekanbaru Tercatat 177 Imbas Kabut Asap (28 Agu)", "url": "https://www.potretnews.com/berita/baca/2026/08/28/bkasus-ispa-di-pekanbaru-tercatat-177-imbas-kabut-asap-akibat-karhutlab" },
+    { "title": "Media Indonesia — Kualitas Udara Pekanbaru Level Berbahaya, Kasus ISPA Meningkat", "url": "https://mediaindonesia.com/nusantara/925590/kualitas-udara-pekanbaru-level-berbahaya-akibat-karhutla-riau-kasus-ispa-meningkat" }
+  ],
+  "related": ["/google", "/artikel/karhutla-kalimantan-tiga-platform", "/artikel/kenapa-cek-bansos-puncaki-google-trends"],
+  "dataCard": {
+    "Tren Google": "3 hari (best #1)",
+    "Status kota": "Tanggap darurat 14 hari",
+    "ISPA sehari": "177 kasus (26 Agu)",
+    "Kemarau": "22 hari tanpa hujan"
+  },
+  "facts": {
+    "archive": {
+      "google": "kualitas udara pekanbaru 3d best#1 (25-27 Agu); 'suhu' masuk top10 28 Agu",
+      "x": "tagar PRAYFORKALIMANTAN dkk keluar dari puncak X sejak 25 Agu"
+    },
+    "external": "Tanggap darurat 26 Agu-7 Sep, Wali Kota Agung Nugroho, 150 titik/85,09 ha, 22 hari tanpa hujan, ISPU Berbahaya 25 Agu (PotretNews); ISPA 177/hari + asma 5, iritasi kulit 7, konjungtivitis 3, pneumonia 1 (Dinkes via PotretNews)"
+  },
+  "published_at": "2026-08-28 06:30:00"
+}
