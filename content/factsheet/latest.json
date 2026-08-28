@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-08-27T06:02:52+00:00",
+  "generated_at": "2026-08-28T06:01:59+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-08-27 04:22:43",
-    "rows": 5408,
-    "days": 7.9
+    "last": "2026-08-28 01:20:54",
+    "rows": 5497,
+    "days": 8.8
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "club america",
+          "title": "internacional vs grêmio",
           "rank": 1,
           "metric": 100
         },
         {
-          "title": "club américa vs columbus crew",
+          "title": "militer",
           "rank": 2,
-          "metric": 500
+          "metric": 200
         },
         {
-          "title": "siasn bkn",
+          "title": "como 1907",
           "rank": 3,
-          "metric": 100
+          "metric": 200
         },
         {
-          "title": "toluca",
+          "title": "suhu",
           "rank": 4,
           "metric": 100
         },
         {
-          "title": "detikcom",
+          "title": "liam delap",
           "rank": 5,
-          "metric": 500
+          "metric": 100
         }
       ],
       "newcomers_7d": [
@@ -78,27 +78,17 @@
           "best_rank": 1
         },
         {
-          "title": "alvarez",
-          "first_seen": "2026-08-21 03:18:32",
+          "title": "amri syahnawi",
+          "first_seen": "2026-08-22 05:33:15",
           "best_rank": 1
         },
         {
-          "title": "amri syahnawi",
-          "first_seen": "2026-08-22 05:33:15",
+          "title": "anang supriatna",
+          "first_seen": "2026-08-25 08:54:20",
           "best_rank": 1
         }
       ],
       "longest_running_7d": [
-        {
-          "title": "mariano díaz",
-          "days_on": 4,
-          "best_rank": 1
-        },
-        {
-          "title": "cek bansos ktp",
-          "days_on": 3,
-          "best_rank": 1
-        },
         {
           "title": "fc mobile",
           "days_on": 3,
@@ -113,35 +103,45 @@
           "title": "janice tjen",
           "days_on": 3,
           "best_rank": 1
+        },
+        {
+          "title": "kualitas udara pekanbaru",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "mariano díaz",
+          "days_on": 3,
+          "best_rank": 1
         }
       ]
     },
     "youtube": {
       "top_now": [
         {
-          "title": "D4rA Muda - Alasan | Official Music Video",
+          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
           "rank": 1,
-          "metric": 56230
+          "metric": 931130
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SELANGKAH LAGI‼️ SENA & REZA TAU APA RENCANA DIPA? -Arya Saloka,Asha Assuncao",
+          "title": "GTA 6 TRAILER EXTENDED LOOK REACTION - DEANKT",
           "rank": 2,
-          "metric": 68515
+          "metric": 60804
         },
         {
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
+          "title": "AKU MENYESAL PINDAH KE APARTEMEN KOREA INI.... AFTERLIGHT: The Apartment",
           "rank": 3,
-          "metric": 808306
+          "metric": 365084
         },
         {
-          "title": "Shawn Mendes - Treat You Better (Lyrics)",
+          "title": "Percuma",
           "rank": 4,
-          "metric": 511379
+          "metric": 17316
         },
         {
-          "title": "Avengers Endgame: Encore | Official Trailer | In Theaters Sep 25",
+          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
           "rank": 5,
-          "metric": 8967120
+          "metric": 72592
         }
       ],
       "newcomers_7d": [
@@ -153,11 +153,6 @@
         {
           "title": "D4rA Muda - Alasan | Official Music Video",
           "first_seen": "2026-08-26 14:50:10",
-          "best_rank": 1
-        },
-        {
-          "title": "JASUN MARJU - DEWASA (Official Music Video)",
-          "first_seen": "2026-08-20 13:49:11",
           "best_rank": 1
         },
         {
@@ -186,19 +181,29 @@
           "best_rank": 1
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA MAKIN JAGO GOMBAL⁉️ REZA MAU JADIIN JIHAN IBU BHAYANGKARI? - Arya Saloka",
-          "first_seen": "2026-08-21 10:33:01",
+          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
+          "first_seen": "2026-08-26 19:05:07",
+          "best_rank": 1
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
+          "first_seen": "2026-08-27 16:12:30",
           "best_rank": 2
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SELANGKAH LAGI‼️ SENA & REZA TAU APA RENCANA DIPA? -Arya Saloka,Asha Assuncao",
-          "first_seen": "2026-08-26 07:49:02",
+          "title": "TERIKAT JANJI TRAILER: SENA MAKIN JAGO GOMBAL⁉️ REZA MAU JADIIN JIHAN IBU BHAYANGKARI? - Arya Saloka",
+          "first_seen": "2026-08-21 10:33:01",
           "best_rank": 2
         }
       ],
       "longest_running_7d": [
         {
-          "title": "JASUN MARJU - DEWASA (Official Music Video)",
+          "title": "Avengers Endgame: Encore | Official Trailer | In Theaters Sep 25",
+          "days_on": 4,
+          "best_rank": 5
+        },
+        {
+          "title": "D4rA Muda - Alasan | Official Music Video",
           "days_on": 3,
           "best_rank": 1
         },
@@ -216,40 +221,35 @@
           "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
           "days_on": 3,
           "best_rank": 1
-        },
-        {
-          "title": "CORTIS (코르티스) ‘MONEYMONEYMONEY’ Official Visualizer",
-          "days_on": 3,
-          "best_rank": 1
         }
       ]
     },
     "instagram": {
       "top_now": [
         {
-          "title": "Indonesia dengan pemandangan 5 waktunya (part4)",
+          "title": "Negara Kesatuan Republik Indonesia.",
           "rank": 1,
-          "metric": 1469292
+          "metric": 2747209
         },
         {
-          "title": "Dampak gempa kuat M7,7 yang mengguncang wilayah NTT pagi ini mulai menjadi perhatian…",
+          "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
           "rank": 2,
-          "metric": 196880
+          "metric": 249069
         },
         {
-          "title": "WNI yang ingin melepas status kewarganegaraan Indonesia atas permohonan sendiri kini akan…",
+          "title": "ternyata yang kita butuhin cuma sedikit keberanian buat pergi lebih jauh,",
           "rank": 3,
-          "metric": 73367
+          "metric": 177867
         },
         {
-          "title": "Viral asisten rumah tangga Cristiano Ronaldo, Pipit Sriati asal Indonesia membagikan…",
+          "title": "Bersandar di bahumu adalah kekuatan bagiku..",
           "rank": 4,
-          "metric": 32746
+          "metric": 162802
         },
         {
-          "title": "Kita sudah terlalu lama diam",
+          "title": "INDONESIA IN DARKNESS",
           "rank": 5,
-          "metric": 28282
+          "metric": 153321
         }
       ],
       "newcomers_7d": [],
@@ -260,17 +260,17 @@
         {
           "title": "#gangstarmiragecity",
           "rank": 1,
-          "metric": 32914
+          "metric": 37093
         },
         {
           "title": "#prayforkalimantan",
           "rank": 2,
-          "metric": 16471
+          "metric": 19351
         },
         {
-          "title": "#gstm",
+          "title": "#gangstar",
           "rank": 3,
-          "metric": 29818
+          "metric": 32274
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#PresidenPrabowoDiNTT",
+          "title": "#BabyUdon",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#GrabFoodถูกกว่าชัวร์TRIP",
+          "title": "#AsetKembaliKeRakyat",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "GRABFOOD TRIP X GFSNPP",
+          "title": "Modal Lawan Kemiskinan",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#MoonshadowSeriesEP3",
+          "title": "Budiman Sudjatmiko",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#MrKillSeriesEP8",
+          "title": "#SFxPerthSantaDomiia",
           "rank": 5,
           "metric": null
         }
