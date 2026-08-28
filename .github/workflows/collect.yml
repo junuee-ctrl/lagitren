@@ -68,7 +68,12 @@ jobs:
           CLOUDFLARE_D1_DATABASE_ID: ${{ env.CLOUDFLARE_D1_DATABASE_ID }}
         run: |
           PLATFORMS="${{ github.event.inputs.platforms }}"
-          [ -z "$PLATFORMS" ] && PLATFORMS="google"
+          if [ -z "$PLATFORMS" ]; then
+            # Self-healing: cron GitHub bisa terlewat berjam-jam saat insiden.
+            # Ikutkan sumber cloud lain yang sudah basi di run ini.
+            PLATFORMS="$(python pick_platforms.py 2>/dev/null || echo google)"
+            [ -z "$PLATFORMS" ] && PLATFORMS="google"
+          fi
           echo "Mengumpulkan: $PLATFORMS"
           python main.py $PLATFORMS
 
