@@ -1,47 +1,42 @@
 {
-  "generated_at": "2026-08-28T06:01:59+00:00",
+  "generated_at": "2026-08-29T06:01:00+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-08-28 01:20:54",
-    "rows": 5497,
-    "days": 8.8
+    "last": "2026-08-29 03:19:11",
+    "rows": 5641,
+    "days": 9.8
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "internacional vs grêmio",
+          "title": "pramono anung",
           "rank": 1,
-          "metric": 100
+          "metric": 200
         },
         {
-          "title": "militer",
+          "title": "tijuana vs pumas unam",
           "rank": 2,
           "metric": 200
         },
         {
-          "title": "como 1907",
+          "title": "alex eala",
           "rank": 3,
-          "metric": 200
+          "metric": 100
         },
         {
-          "title": "suhu",
+          "title": "al nassr vs al taawon",
           "rank": 4,
           "metric": 100
         },
         {
-          "title": "liam delap",
+          "title": "blood moon",
           "rank": 5,
-          "metric": 100
+          "metric": 200
         }
       ],
       "newcomers_7d": [
-        {
-          "title": "21 agustus",
-          "first_seen": "2026-08-21 06:05:57",
-          "best_rank": 1
-        },
         {
           "title": "ahmad sahroni",
           "first_seen": "2026-08-25 12:02:28",
@@ -50,16 +45,6 @@
         {
           "title": "al-ettifaq vs al-nassr",
           "first_seen": "2026-08-25 17:59:07",
-          "best_rank": 1
-        },
-        {
-          "title": "al riyadh vs al-nassr",
-          "first_seen": "2026-08-21 15:40:07",
-          "best_rank": 1
-        },
-        {
-          "title": "al-riyadh vs al-nassr standings",
-          "first_seen": "2026-08-21 19:30:45",
           "best_rank": 1
         },
         {
@@ -73,29 +58,44 @@
           "best_rank": 1
         },
         {
-          "title": "alnasr",
-          "first_seen": "2026-08-21 17:58:43",
-          "best_rank": 1
-        },
-        {
-          "title": "amri syahnawi",
-          "first_seen": "2026-08-22 05:33:15",
-          "best_rank": 1
-        },
-        {
           "title": "anang supriatna",
           "first_seen": "2026-08-25 08:54:20",
+          "best_rank": 1
+        },
+        {
+          "title": "ashton jeanty",
+          "first_seen": "2026-08-25 07:07:38",
+          "best_rank": 1
+        },
+        {
+          "title": "bbca",
+          "first_seen": "2026-08-24 02:57:27",
+          "best_rank": 1
+        },
+        {
+          "title": "benjamin netanyahu",
+          "first_seen": "2026-08-22 10:10:04",
+          "best_rank": 1
+        },
+        {
+          "title": "berita",
+          "first_seen": "2026-08-23 22:43:42",
+          "best_rank": 1
+        },
+        {
+          "title": "bilbao vs sevilla",
+          "first_seen": "2026-08-22 14:31:48",
           "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
-          "title": "fc mobile",
+          "title": "binance buy crypto",
           "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "jadwal f1",
+          "title": "fc mobile",
           "days_on": 3,
           "best_rank": 1
         },
@@ -119,29 +119,29 @@
     "youtube": {
       "top_now": [
         {
-          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
+          "title": "JENNIE - FALLEN ANGEL (Official Video)",
           "rank": 1,
-          "metric": 931130
+          "metric": 7959352
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
+          "rank": 2,
+          "metric": 98213
+        },
+        {
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 3 Hari 1 | Bahasa Indonesia",
+          "rank": 3,
+          "metric": 2479931
+        },
+        {
+          "title": "MAHALINI - PERCUMA (OFFICIAL MUSIC VIDEO)",
+          "rank": 4,
+          "metric": 244266
         },
         {
           "title": "GTA 6 TRAILER EXTENDED LOOK REACTION - DEANKT",
-          "rank": 2,
-          "metric": 60804
-        },
-        {
-          "title": "AKU MENYESAL PINDAH KE APARTEMEN KOREA INI.... AFTERLIGHT: The Apartment",
-          "rank": 3,
-          "metric": 365084
-        },
-        {
-          "title": "Percuma",
-          "rank": 4,
-          "metric": 17316
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
           "rank": 5,
-          "metric": 72592
+          "metric": 134899
         }
       ],
       "newcomers_7d": [
@@ -166,8 +166,8 @@
           "best_rank": 1
         },
         {
-          "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
-          "first_seen": "2026-08-21 18:38:54",
+          "title": "Percuma",
+          "first_seen": "2026-08-28 01:20:54",
           "best_rank": 1
         },
         {
@@ -186,13 +186,13 @@
           "best_rank": 1
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
-          "first_seen": "2026-08-27 16:12:30",
-          "best_rank": 2
+          "title": "JENNIE - FALLEN ANGEL (Official Video)",
+          "first_seen": "2026-08-28 21:22:15",
+          "best_rank": 1
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA MAKIN JAGO GOMBAL⁉️ REZA MAU JADIIN JIHAN IBU BHAYANGKARI? - Arya Saloka",
-          "first_seen": "2026-08-21 10:33:01",
+          "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
+          "first_seen": "2026-08-28 11:00:04",
           "best_rank": 2
         }
       ],
@@ -218,7 +218,7 @@
           "best_rank": 1
         },
         {
-          "title": "ENHYPEN (엔하이픈) 'Bloody Paradise' Official MV",
+          "title": "CORTIS (코르티스) ‘MONEYMONEYMONEY’ Official Visualizer",
           "days_on": 3,
           "best_rank": 1
         }
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "Negara Kesatuan Republik Indonesia.",
-          "rank": 1,
-          "metric": 2747209
-        },
-        {
           "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
-          "rank": 2,
-          "metric": 249069
+          "rank": 1,
+          "metric": 395344
         },
         {
           "title": "ternyata yang kita butuhin cuma sedikit keberanian buat pergi lebih jauh,",
+          "rank": 2,
+          "metric": 183293
+        },
+        {
+          "title": "selamat ulang tahun, republik indonesia 🇮🇩",
           "rank": 3,
-          "metric": 177867
+          "metric": 173705
         },
         {
-          "title": "Bersandar di bahumu adalah kekuatan bagiku..",
+          "title": "sialnya aku kembali jatuh cinta setelah tidak sengaja bertemu dengannya",
           "rank": 4,
-          "metric": 162802
+          "metric": 103085
         },
         {
-          "title": "INDONESIA IN DARKNESS",
+          "title": "Kementerian Perhubungan telah menerbitkan 35 izin penggunaan pesawat udara dengan…",
           "rank": 5,
-          "metric": 153321
+          "metric": 81562
         }
       ],
       "newcomers_7d": [],
@@ -258,19 +258,19 @@
     "tiktok": {
       "top_now": [
         {
-          "title": "#gangstarmiragecity",
+          "title": "#promomakangajian",
           "rank": 1,
-          "metric": 37093
+          "metric": 837718
+        },
+        {
+          "title": "#timeline",
+          "rank": 2,
+          "metric": 12287
         },
         {
           "title": "#prayforkalimantan",
-          "rank": 2,
-          "metric": 19351
-        },
-        {
-          "title": "#gangstar",
           "rank": 3,
-          "metric": 32274
+          "metric": 19410
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#BabyUdon",
+          "title": "#RedFlagMV",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#AsetKembaliKeRakyat",
+          "title": "WILLIAMEST REDFLAG",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "Modal Lawan Kemiskinan",
+          "title": "#รสดีเมนูพริกแกงxPerthSanta",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "Budiman Sudjatmiko",
+          "title": "PERTHSANTA HEART MADE",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#SFxPerthSantaDomiia",
+          "title": "#BabyUdon",
           "rank": 5,
           "metric": null
         }
