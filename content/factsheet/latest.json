@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-08-29T06:01:00+00:00",
+  "generated_at": "2026-08-30T06:01:18+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-08-29 03:19:11",
-    "rows": 5641,
-    "days": 9.8
+    "last": "2026-08-30 04:19:02",
+    "rows": 5875,
+    "days": 10.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "pramono anung",
+          "title": "inter miami",
           "rank": 1,
-          "metric": 200
+          "metric": 2000
         },
         {
-          "title": "tijuana vs pumas unam",
+          "title": "internacional club de futbol miami",
           "rank": 2,
+          "metric": 100
+        },
+        {
+          "title": "vasco vs cruzeiro",
+          "rank": 3,
           "metric": 200
         },
         {
-          "title": "alex eala",
-          "rank": 3,
-          "metric": 100
-        },
-        {
-          "title": "al nassr vs al taawon",
+          "title": "gta 6",
           "rank": 4,
-          "metric": 100
+          "metric": 500
         },
         {
-          "title": "blood moon",
+          "title": "berikutnya",
           "rank": 5,
           "metric": 200
         }
@@ -45,11 +45,6 @@
         {
           "title": "al-ettifaq vs al-nassr",
           "first_seen": "2026-08-25 17:59:07",
-          "best_rank": 1
-        },
-        {
-          "title": "alejandro balde",
-          "first_seen": "2026-08-22 22:14:49",
           "best_rank": 1
         },
         {
@@ -73,29 +68,29 @@
           "best_rank": 1
         },
         {
-          "title": "benjamin netanyahu",
-          "first_seen": "2026-08-22 10:10:04",
-          "best_rank": 1
-        },
-        {
           "title": "berita",
           "first_seen": "2026-08-23 22:43:42",
           "best_rank": 1
         },
         {
-          "title": "bilbao vs sevilla",
-          "first_seen": "2026-08-22 14:31:48",
+          "title": "binance buy crypto",
+          "first_seen": "2026-08-25 22:14:30",
+          "best_rank": 1
+        },
+        {
+          "title": "birmingham vs brentford",
+          "first_seen": "2026-08-25 19:37:59",
+          "best_rank": 1
+        },
+        {
+          "title": "bps dtsen",
+          "first_seen": "2026-08-23 10:10:24",
           "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
           "title": "binance buy crypto",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
-          "title": "fc mobile",
           "days_on": 3,
           "best_rank": 1
         },
@@ -110,7 +105,12 @@
           "best_rank": 1
         },
         {
-          "title": "mariano díaz",
+          "title": "persib vs manila digger",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "subuh hari ini",
           "days_on": 3,
           "best_rank": 1
         }
@@ -121,27 +121,27 @@
         {
           "title": "JENNIE - FALLEN ANGEL (Official Video)",
           "rank": 1,
-          "metric": 7959352
+          "metric": 11466356
         },
         {
-          "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
+          "title": "TERIKAT JANJI TRAILER: SENA & DAVINA KEPERGOK VERONICA PEGANGAN TANGAN‼️ TAU PACARAN? - Arya Saloka",
           "rank": 2,
-          "metric": 98213
+          "metric": 79601
         },
         {
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 3 Hari 1 | Bahasa Indonesia",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 3 Hari 2 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 2479931
+          "metric": 7184956
         },
         {
-          "title": "MAHALINI - PERCUMA (OFFICIAL MUSIC VIDEO)",
+          "title": "Lagu Santai Viral Tiktok 2026 — Lagu Pop Indonesia Terbaru 2026 | Top Hits Indonesia 2026",
           "rank": 4,
-          "metric": 244266
+          "metric": 150708
         },
         {
-          "title": "GTA 6 TRAILER EXTENDED LOOK REACTION - DEANKT",
+          "title": "Latinos react to Indonesian Movie Trailers for the first time",
           "rank": 5,
-          "metric": 134899
+          "metric": 58952
         }
       ],
       "newcomers_7d": [
@@ -158,11 +158,6 @@
         {
           "title": "NCT 127 엔시티 127 'Blingy' MV",
           "first_seen": "2026-08-24 12:54:11",
-          "best_rank": 1
-        },
-        {
-          "title": "Dirantai Digelangi Rindu",
-          "first_seen": "2026-08-22 08:32:55",
           "best_rank": 1
         },
         {
@@ -194,6 +189,11 @@
           "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
           "first_seen": "2026-08-28 11:00:04",
           "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
+          "first_seen": "2026-08-27 16:12:30",
+          "best_rank": 2
         }
       ],
       "longest_running_7d": [
@@ -213,12 +213,12 @@
           "best_rank": 1
         },
         {
-          "title": "Dirantai Digelangi Rindu",
+          "title": "CORTIS (코르티스) ‘MONEYMONEYMONEY’ Official Visualizer",
           "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "CORTIS (코르티스) ‘MONEYMONEYMONEY’ Official Visualizer",
+          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
           "days_on": 3,
           "best_rank": 1
         }
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
+          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
           "rank": 1,
-          "metric": 395344
+          "metric": 1833282
         },
         {
-          "title": "ternyata yang kita butuhin cuma sedikit keberanian buat pergi lebih jauh,",
+          "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
           "rank": 2,
-          "metric": 183293
-        },
-        {
-          "title": "selamat ulang tahun, republik indonesia 🇮🇩",
-          "rank": 3,
-          "metric": 173705
+          "metric": 430024
         },
         {
           "title": "sialnya aku kembali jatuh cinta setelah tidak sengaja bertemu dengannya",
-          "rank": 4,
-          "metric": 103085
+          "rank": 3,
+          "metric": 111133
         },
         {
-          "title": "Kementerian Perhubungan telah menerbitkan 35 izin penggunaan pesawat udara dengan…",
+          "title": "Situasi sore ini 27 Agustus 2026, massa masih terus memadati area depan Gedung DPR…",
+          "rank": 4,
+          "metric": 108260
+        },
+        {
+          "title": "Matching dengan langit🩵☁️✨ Kalau nanti di #Inggris aku rindu langit biru #Indonesia…",
           "rank": 5,
-          "metric": 81562
+          "metric": 26574
         }
       ],
       "newcomers_7d": [],
@@ -260,17 +260,17 @@
         {
           "title": "#promomakangajian",
           "rank": 1,
-          "metric": 837718
+          "metric": 1088055
         },
         {
-          "title": "#timeline",
+          "title": "#linimasa",
           "rank": 2,
-          "metric": 12287
+          "metric": 9543
         },
         {
-          "title": "#prayforkalimantan",
+          "title": "#ibubagaimanaakutanpamu",
           "rank": 3,
-          "metric": 19410
+          "metric": 12960
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#RedFlagMV",
+          "title": "#YouManiacSeriesEP1",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "WILLIAMEST REDFLAG",
+          "title": "MANIAC OPENING NITE",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#รสดีเมนูพริกแกงxPerthSanta",
+          "title": "#MamixJossGawinInKanchanaburi",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "PERTHSANTA HEART MADE",
+          "title": "JOSSGAWIN IN KAN DAY1",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#BabyUdon",
+          "title": "#MrFanboyEP1",
           "rank": 5,
           "metric": null
         }
