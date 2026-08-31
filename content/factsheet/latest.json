@@ -1,42 +1,47 @@
 {
-  "generated_at": "2026-08-30T06:01:18+00:00",
+  "generated_at": "2026-08-31T06:01:54+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-08-30 04:19:02",
-    "rows": 5875,
-    "days": 10.9
+    "last": "2026-08-31 01:10:25",
+    "rows": 6109,
+    "days": 11.7
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "inter miami",
+          "title": "31 agustus 2026 hari apa",
           "rank": 1,
-          "metric": 2000
+          "metric": 100
         },
         {
-          "title": "internacional club de futbol miami",
+          "title": "meet",
           "rank": 2,
           "metric": 100
         },
         {
-          "title": "vasco vs cruzeiro",
+          "title": "toluca vs juárez",
           "rank": 3,
           "metric": 200
         },
         {
-          "title": "gta 6",
+          "title": "mees hilgers",
           "rank": 4,
-          "metric": 500
+          "metric": 200
         },
         {
-          "title": "berikutnya",
+          "title": "arti desil",
           "rank": 5,
-          "metric": 200
+          "metric": 100
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "31 agustus 2026 hari apa",
+          "first_seen": "2026-08-31 00:56:48",
+          "best_rank": 1
+        },
         {
           "title": "ahmad sahroni",
           "first_seen": "2026-08-25 12:02:28",
@@ -63,16 +68,6 @@
           "best_rank": 1
         },
         {
-          "title": "bbca",
-          "first_seen": "2026-08-24 02:57:27",
-          "best_rank": 1
-        },
-        {
-          "title": "berita",
-          "first_seen": "2026-08-23 22:43:42",
-          "best_rank": 1
-        },
-        {
           "title": "binance buy crypto",
           "first_seen": "2026-08-25 22:14:30",
           "best_rank": 1
@@ -83,8 +78,13 @@
           "best_rank": 1
         },
         {
-          "title": "bps dtsen",
-          "first_seen": "2026-08-23 10:10:24",
+          "title": "budi arie setiadi",
+          "first_seen": "2026-08-24 14:21:33",
+          "best_rank": 1
+        },
+        {
+          "title": "bulu tangkis",
+          "first_seen": "2026-08-25 15:04:24",
           "best_rank": 1
         }
       ],
@@ -100,51 +100,56 @@
           "best_rank": 1
         },
         {
-          "title": "kualitas udara pekanbaru",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
           "title": "persib vs manila digger",
           "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "subuh hari ini",
+          "title": "video",
           "days_on": 3,
-          "best_rank": 1
+          "best_rank": 3
+        },
+        {
+          "title": "jadwal sholat hari ini",
+          "days_on": 3,
+          "best_rank": 4
         }
       ]
     },
     "youtube": {
       "top_now": [
         {
-          "title": "JENNIE - FALLEN ANGEL (Official Video)",
+          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
           "rank": 1,
-          "metric": 11466356
+          "metric": 252489
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA & DAVINA KEPERGOK VERONICA PEGANGAN TANGAN‼️ TAU PACARAN? - Arya Saloka",
+          "title": "TERIKAT JANJI TRAILER: APA SENA BERHASIL MENYELAMATKAN ANAKNYA HANS⁉️ DIPA GAK JADI KE PARIS? - Arya",
           "rank": 2,
-          "metric": 79601
+          "metric": 92591
         },
         {
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 3 Hari 2 | Bahasa Indonesia",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 3 Hari 3 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 7184956
+          "metric": 5976742
         },
         {
-          "title": "Lagu Santai Viral Tiktok 2026 — Lagu Pop Indonesia Terbaru 2026 | Top Hits Indonesia 2026",
+          "title": "On Bended Knee - Boyz II Men (Lyrics)",
           "rank": 4,
-          "metric": 150708
+          "metric": 180345
         },
         {
-          "title": "Latinos react to Indonesian Movie Trailers for the first time",
+          "title": "TRAILER TERIKAT JANJI NANTI MALAM 30 AGUSTUS 2026",
           "rank": 5,
-          "metric": 58952
+          "metric": 49099
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
+          "first_seen": "2026-08-30 15:13:13",
+          "best_rank": 1
+        },
         {
           "title": "HAPPY ASMARA - DIRANTAI DIGELANGI RINDU ( Official Live Video Royal Music )",
           "first_seen": "2026-08-25 15:43:53",
@@ -166,13 +171,13 @@
           "best_rank": 1
         },
         {
-          "title": "CORTIS (코르티스) ‘MONEYMONEYMONEY’ Official Visualizer",
-          "first_seen": "2026-08-23 17:22:34",
+          "title": "Shawn Mendes - Treat You Better (Lyrics)",
+          "first_seen": "2026-08-26 03:07:24",
           "best_rank": 1
         },
         {
-          "title": "Shawn Mendes - Treat You Better (Lyrics)",
-          "first_seen": "2026-08-26 03:07:24",
+          "title": "On Bended Knee - Boyz II Men (Lyrics)",
+          "first_seen": "2026-08-30 07:25:18",
           "best_rank": 1
         },
         {
@@ -189,14 +194,14 @@
           "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
           "first_seen": "2026-08-28 11:00:04",
           "best_rank": 2
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
-          "first_seen": "2026-08-27 16:12:30",
-          "best_rank": 2
         }
       ],
       "longest_running_7d": [
+        {
+          "title": "JENNIE - FALLEN ANGEL (Official Video)",
+          "days_on": 4,
+          "best_rank": 1
+        },
         {
           "title": "Avengers Endgame: Encore | Official Trailer | In Theaters Sep 25",
           "days_on": 4,
@@ -213,11 +218,6 @@
           "best_rank": 1
         },
         {
-          "title": "CORTIS (코르티스) ‘MONEYMONEYMONEY’ Official Visualizer",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
           "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
           "days_on": 3,
           "best_rank": 1
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
+          "title": "Wajib masuk bucket list liburan kalian si ini…😍😍",
           "rank": 1,
-          "metric": 1833282
+          "metric": 1427221
+        },
+        {
+          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
+          "rank": 2,
+          "metric": 906938
+        },
+        {
+          "title": "Marimar mengambil telur dan beras milik majikan dan aksinya terekam CCTV hingga…",
+          "rank": 3,
+          "metric": 785495
         },
         {
           "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
-          "rank": 2,
-          "metric": 430024
-        },
-        {
-          "title": "sialnya aku kembali jatuh cinta setelah tidak sengaja bertemu dengannya",
-          "rank": 3,
-          "metric": 111133
-        },
-        {
-          "title": "Situasi sore ini 27 Agustus 2026, massa masih terus memadati area depan Gedung DPR…",
           "rank": 4,
-          "metric": 108260
+          "metric": 443017
         },
         {
-          "title": "Matching dengan langit🩵☁️✨ Kalau nanti di #Inggris aku rindu langit biru #Indonesia…",
+          "title": "Warga Aceh Injak Lambang Garuda!",
           "rank": 5,
-          "metric": 26574
+          "metric": 190971
         }
       ],
       "newcomers_7d": [],
@@ -260,17 +260,17 @@
         {
           "title": "#promomakangajian",
           "rank": 1,
-          "metric": 1088055
-        },
-        {
-          "title": "#linimasa",
-          "rank": 2,
-          "metric": 9543
+          "metric": 1349437
         },
         {
           "title": "#ibubagaimanaakutanpamu",
+          "rank": 2,
+          "metric": 14798
+        },
+        {
+          "title": "#maulidnabimuhamammadsaw",
           "rank": 3,
-          "metric": 12960
+          "metric": 80063
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#YouManiacSeriesEP1",
+          "title": "#DICEGOAT",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "MANIAC OPENING NITE",
+          "title": "#YouManiacSeriesEP1",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#MamixJossGawinInKanchanaburi",
+          "title": "Senin",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "JOSSGAWIN IN KAN DAY1",
+          "title": "MANIAC OPENING NITE",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#MrFanboyEP1",
+          "title": "#EOMStrikesFirstPitch",
           "rank": 5,
           "metric": null
         }
@@ -412,27 +412,27 @@
       "longest_running_7d": [
         {
           "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 1
         },
         {
           "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 2
         },
         {
           "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 3
         },
         {
           "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 4
         },
         {
           "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 5
         }
       ]
