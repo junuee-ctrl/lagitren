@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-09-01T06:03:02+00:00",
+  "generated_at": "2026-09-02T06:01:17+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-01 05:10:09",
-    "rows": 6333,
-    "days": 12.9
+    "last": "2026-09-02 05:53:23",
+    "rows": 6577,
+    "days": 13.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "terikat janji",
+          "title": "cek desil lewat hp",
           "rank": 1,
-          "metric": 500
+          "metric": 100
         },
         {
-          "title": "kabinet bayangan",
+          "title": "berita",
           "rank": 2,
-          "metric": 500
+          "metric": 200
         },
         {
-          "title": "naomi osaka",
+          "title": "mnc bank",
           "rank": 3,
           "metric": 200
         },
         {
-          "title": "gubernur kalteng",
+          "title": "donald trump",
           "rank": 4,
-          "metric": 500
+          "metric": 100
         },
         {
-          "title": "avengers endgame",
+          "title": "binance exchange",
           "rank": 5,
-          "metric": 200
+          "metric": 100
         }
       ],
       "newcomers_7d": [
@@ -43,116 +43,111 @@
           "best_rank": 1
         },
         {
-          "title": "ahmad sahroni",
-          "first_seen": "2026-08-25 12:02:28",
-          "best_rank": 1
-        },
-        {
-          "title": "al-ettifaq vs al-nassr",
-          "first_seen": "2026-08-25 17:59:07",
-          "best_rank": 1
-        },
-        {
-          "title": "alibaba",
-          "first_seen": "2026-08-26 04:20:31",
-          "best_rank": 1
-        },
-        {
-          "title": "anang supriatna",
-          "first_seen": "2026-08-25 08:54:20",
-          "best_rank": 1
-        },
-        {
-          "title": "ashton jeanty",
-          "first_seen": "2026-08-25 07:07:38",
-          "best_rank": 1
-        },
-        {
-          "title": "binance buy crypto",
-          "first_seen": "2026-08-25 22:14:30",
-          "best_rank": 1
-        },
-        {
-          "title": "birmingham vs brentford",
-          "first_seen": "2026-08-25 19:37:59",
-          "best_rank": 1
-        },
-        {
-          "title": "bulu tangkis",
-          "first_seen": "2026-08-25 15:04:24",
-          "best_rank": 1
-        },
-        {
           "title": "cambuur vs twente",
           "first_seen": "2026-08-30 17:37:45",
+          "best_rank": 1
+        },
+        {
+          "title": "cek desil lewat hp",
+          "first_seen": "2026-09-02 05:53:00",
+          "best_rank": 1
+        },
+        {
+          "title": "celine dion",
+          "first_seen": "2026-08-30 01:35:04",
+          "best_rank": 1
+        },
+        {
+          "title": "club america",
+          "first_seen": "2026-08-27 03:20:58",
+          "best_rank": 1
+        },
+        {
+          "title": "dalian yingbo",
+          "first_seen": "2026-09-01 14:54:09",
+          "best_rank": 1
+        },
+        {
+          "title": "dana",
+          "first_seen": "2026-09-01 10:08:29",
+          "best_rank": 1
+        },
+        {
+          "title": "deddy mahendra desta",
+          "first_seen": "2026-08-26 16:53:25",
+          "best_rank": 1
+        },
+        {
+          "title": "fc dallas",
+          "first_seen": "2026-08-30 22:44:09",
+          "best_rank": 1
+        },
+        {
+          "title": "gabriel jesus",
+          "first_seen": "2026-08-30 13:12:36",
           "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
           "title": "binance buy crypto",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
-          "title": "chicago fire fc",
           "days_on": 2,
           "best_rank": 1
         },
         {
-          "title": "kualitas udara pekanbaru",
+          "title": "celine dion",
           "days_on": 2,
           "best_rank": 1
         },
         {
-          "title": "michele di gregorio",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "janice tjen",
+          "title": "enzo",
           "days_on": 2,
           "best_rank": 2
+        },
+        {
+          "title": "suhu",
+          "days_on": 2,
+          "best_rank": 3
+        },
+        {
+          "title": "liam delap",
+          "days_on": 2,
+          "best_rank": 4
         }
       ]
     },
     "youtube": {
       "top_now": [
         {
-          "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
+          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
           "rank": 1,
-          "metric": 3460563
+          "metric": 105584
         },
         {
           "title": "TERIKAT JANJI TRAILER: APA VERONIKA AKAN MERESTUI HUBUNGAN SENA & DAVINA⁉️ -Arya Saloka,Asha Assunca",
           "rank": 2,
-          "metric": 14904
+          "metric": 134381
         },
         {
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 3 Hari 3 | Bahasa Indonesia",
+          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
           "rank": 3,
-          "metric": 6079250
+          "metric": 1928243
         },
         {
-          "title": "Tajamnya Karang",
+          "title": "Mutiara",
           "rank": 4,
-          "metric": 43768
+          "metric": 9291
         },
         {
           "title": "TRAILER TERIKAT JANJI NANTI MALAM 1 SEPTEMBER 2026",
           "rank": 5,
-          "metric": 8311
+          "metric": 85849
         }
       ],
       "newcomers_7d": [
         {
           "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
           "first_seen": "2026-08-30 15:13:13",
-          "best_rank": 1
-        },
-        {
-          "title": "HAPPY ASMARA - DIRANTAI DIGELANGI RINDU ( Official Live Video Royal Music )",
-          "first_seen": "2026-08-25 15:43:53",
           "best_rank": 1
         },
         {
@@ -166,8 +161,8 @@
           "best_rank": 1
         },
         {
-          "title": "Shawn Mendes - Treat You Better (Lyrics)",
-          "first_seen": "2026-08-26 03:07:24",
+          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
+          "first_seen": "2026-09-01 23:07:06",
           "best_rank": 1
         },
         {
@@ -194,6 +189,11 @@
           "title": "Tajamnya Karang",
           "first_seen": "2026-08-31 06:54:51",
           "best_rank": 1
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
+          "first_seen": "2026-08-28 11:00:04",
+          "best_rank": 2
         }
       ],
       "longest_running_7d": [
@@ -201,11 +201,6 @@
           "title": "JENNIE - FALLEN ANGEL (Official Video)",
           "days_on": 4,
           "best_rank": 1
-        },
-        {
-          "title": "Avengers Endgame: Encore | Official Trailer | In Theaters Sep 25",
-          "days_on": 4,
-          "best_rank": 5
         },
         {
           "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
@@ -221,35 +216,40 @@
           "title": "On Bended Knee - Boyz II Men (Lyrics)",
           "days_on": 3,
           "best_rank": 1
+        },
+        {
+          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
+          "days_on": 3,
+          "best_rank": 1
         }
       ]
     },
     "instagram": {
       "top_now": [
         {
-          "title": "Negara Kesatuan Republik Indonesia.",
+          "title": "Selamat Tahun Baru Islam 🖤 #fyp #vesmet #vespamatic",
           "rank": 1,
-          "metric": 2746936
+          "metric": 2657330
         },
         {
           "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
           "rank": 2,
-          "metric": 452200
+          "metric": 458856
         },
         {
-          "title": "kapan lagi naik gaji jalur kurs? 🤭😞walaupun memang sedih banget karena berarti sejelek…",
+          "title": "- Baim Wong dan Paula Verhoeven resmi bercerai. Dalam persidangan, majelis hakim menyebut…",
           "rank": 3,
-          "metric": 379721
+          "metric": 358336
         },
         {
-          "title": "ternyata yang kita butuhin cuma sedikit keberanian buat pergi lebih jauh,",
+          "title": "#inthiseconomy #indonesia #inflasi #mahal #keinginan",
           "rank": 4,
-          "metric": 196653
+          "metric": 140488
         },
         {
-          "title": "Warga Aceh Injak Lambang Garuda!",
+          "title": "Dua pelatih Timnas Indonesia yang berhasil mengalahkan negara ranking 84 FIFA dan ranking…",
           "rank": 5,
-          "metric": 191159
+          "metric": 108488
         }
       ],
       "newcomers_7d": [],
@@ -260,17 +260,17 @@
         {
           "title": "#promomakangajian",
           "rank": 1,
-          "metric": 1617600
+          "metric": 1824025
         },
         {
-          "title": "#ibubagaimanaakutanpamu",
+          "title": "#september",
           "rank": 2,
-          "metric": 16365
+          "metric": 14204
         },
         {
           "title": "#andicobra",
           "rank": 3,
-          "metric": 12122
+          "metric": 13217
         }
       ],
       "newcomers_7d": [],
@@ -284,22 +284,22 @@
           "metric": null
         },
         {
-          "title": "#64TahunZulkifliHasan",
+          "title": "Checkout Ditraktir Tokopedia",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#MiladKetumPAN",
+          "title": "#MrKillSeriesEP9",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#UltahMenkoPangan",
+          "title": "Kasih Aba-Aba 2.0",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#MengabdiUntukNegeri",
+          "title": "#OurNameMV",
           "rank": 5,
           "metric": null
         }
@@ -335,23 +335,7 @@
           "metric": null
         }
       ],
-      "newcomers_7d": [
-        {
-          "title": "Ghost in the Cell",
-          "first_seen": "2026-08-26 03:03:45",
-          "best_rank": 1
-        },
-        {
-          "title": "Facing El Chapo",
-          "first_seen": "2026-08-26 03:03:45",
-          "best_rank": 8
-        },
-        {
-          "title": "S&X",
-          "first_seen": "2026-08-26 03:03:45",
-          "best_rank": 20
-        }
-      ],
+      "newcomers_7d": [],
       "longest_running_7d": [
         {
           "title": "Ghost in the Cell",
@@ -412,27 +396,27 @@
       "longest_running_7d": [
         {
           "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 1
         },
         {
           "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 2
         },
         {
           "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 3
         },
         {
           "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 4
         },
         {
           "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 5
         }
       ]
