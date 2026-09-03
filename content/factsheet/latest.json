@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-09-02T06:01:17+00:00",
+  "generated_at": "2026-09-03T06:01:43+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-02 05:53:23",
-    "rows": 6577,
-    "days": 13.9
+    "last": "2026-09-03 03:31:05",
+    "rows": 6796,
+    "days": 14.8
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "cek desil lewat hp",
+          "title": "carlos alcaraz",
           "rank": 1,
-          "metric": 100
+          "metric": 200
         },
         {
-          "title": "berita",
+          "title": "toluca vs león",
           "rank": 2,
           "metric": 200
         },
         {
-          "title": "mnc bank",
+          "title": "vitória vs vasco",
           "rank": 3,
-          "metric": 200
-        },
-        {
-          "title": "donald trump",
-          "rank": 4,
           "metric": 100
         },
         {
-          "title": "binance exchange",
+          "title": "velez sarsfield vs boca juniors",
+          "rank": 4,
+          "metric": 200
+        },
+        {
+          "title": "xabi alonso",
           "rank": 5,
           "metric": 100
         }
@@ -48,6 +48,11 @@
           "best_rank": 1
         },
         {
+          "title": "carlos alcaraz",
+          "first_seen": "2026-09-03 01:27:59",
+          "best_rank": 1
+        },
+        {
           "title": "cek desil lewat hp",
           "first_seen": "2026-09-02 05:53:00",
           "best_rank": 1
@@ -58,8 +63,8 @@
           "best_rank": 1
         },
         {
-          "title": "club america",
-          "first_seen": "2026-08-27 03:20:58",
+          "title": "cerezo osaka vs kashiwa reysol",
+          "first_seen": "2026-09-02 11:03:35",
           "best_rank": 1
         },
         {
@@ -70,11 +75,6 @@
         {
           "title": "dana",
           "first_seen": "2026-09-01 10:08:29",
-          "best_rank": 1
-        },
-        {
-          "title": "deddy mahendra desta",
-          "first_seen": "2026-08-26 16:53:25",
           "best_rank": 1
         },
         {
@@ -90,11 +90,6 @@
       ],
       "longest_running_7d": [
         {
-          "title": "binance buy crypto",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
           "title": "celine dion",
           "days_on": 2,
           "best_rank": 1
@@ -105,54 +100,54 @@
           "best_rank": 2
         },
         {
+          "title": "piala dfb",
+          "days_on": 2,
+          "best_rank": 2
+        },
+        {
           "title": "suhu",
           "days_on": 2,
           "best_rank": 3
         },
         {
-          "title": "liam delap",
+          "title": "xabi alonso",
           "days_on": 2,
-          "best_rank": 4
+          "best_rank": 5
         }
       ]
     },
     "youtube": {
       "top_now": [
         {
-          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
+          "title": "Yura Yunita - Pertiwi (Official Music Video)",
           "rank": 1,
-          "metric": 105584
+          "metric": 99661
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA VERONIKA AKAN MERESTUI HUBUNGAN SENA & DAVINA⁉️ -Arya Saloka,Asha Assunca",
+          "title": "TERIKAT JANJI TRAILER: DAVINA GAK AKAN TERIMA KALO TAU LATAR BELAKANG SENA⁉️ - Arya Saloka,Asha As",
           "rank": 2,
-          "metric": 134381
+          "metric": 97945
         },
         {
           "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
           "rank": 3,
-          "metric": 1928243
+          "metric": 1077537
         },
         {
-          "title": "Mutiara",
+          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
           "rank": 4,
-          "metric": 9291
+          "metric": 228824
         },
         {
-          "title": "TRAILER TERIKAT JANJI NANTI MALAM 1 SEPTEMBER 2026",
+          "title": "Street Fighter | New Trailer (2026 Movie)",
           "rank": 5,
-          "metric": 85849
+          "metric": 13356756
         }
       ],
       "newcomers_7d": [
         {
           "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
           "first_seen": "2026-08-30 15:13:13",
-          "best_rank": 1
-        },
-        {
-          "title": "D4rA Muda - Alasan | Official Music Video",
-          "first_seen": "2026-08-26 14:50:10",
           "best_rank": 1
         },
         {
@@ -171,13 +166,13 @@
           "best_rank": 1
         },
         {
-          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
-          "first_seen": "2026-08-26 19:05:07",
+          "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
+          "first_seen": "2026-08-31 16:49:56",
           "best_rank": 1
         },
         {
-          "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
-          "first_seen": "2026-08-31 16:49:56",
+          "title": "Yura Yunita - Pertiwi (Official Music Video)",
+          "first_seen": "2026-09-02 17:42:22",
           "best_rank": 1
         },
         {
@@ -194,6 +189,11 @@
           "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
           "first_seen": "2026-08-28 11:00:04",
           "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
+          "first_seen": "2026-08-27 16:12:30",
+          "best_rank": 2
         }
       ],
       "longest_running_7d": [
@@ -208,7 +208,7 @@
           "best_rank": 1
         },
         {
-          "title": "D4rA Muda - Alasan | Official Music Video",
+          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
           "days_on": 3,
           "best_rank": 1
         },
@@ -218,7 +218,7 @@
           "best_rank": 1
         },
         {
-          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE'｜On the Spot｜온더스팟",
+          "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
           "days_on": 3,
           "best_rank": 1
         }
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "Selamat Tahun Baru Islam 🖤 #fyp #vesmet #vespamatic",
-          "rank": 1,
-          "metric": 2657330
-        },
-        {
           "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
+          "rank": 1,
+          "metric": 462651
+        },
+        {
+          "title": "sanrais cenah",
           "rank": 2,
-          "metric": 458856
+          "metric": 169296
         },
         {
-          "title": "- Baim Wong dan Paula Verhoeven resmi bercerai. Dalam persidangan, majelis hakim menyebut…",
+          "title": "Maaf yang Vreaa.. dolan kali ini gak pake cepool dulu.. Hehehe..",
           "rank": 3,
-          "metric": 358336
+          "metric": 94763
         },
         {
-          "title": "#inthiseconomy #indonesia #inflasi #mahal #keinginan",
+          "title": "Yang kayak gini sudah membudaya kan? atau kita masih bisa merubahnya guys? Gimana menurut…",
           "rank": 4,
-          "metric": 140488
+          "metric": 45731
         },
         {
-          "title": "Dua pelatih Timnas Indonesia yang berhasil mengalahkan negara ranking 84 FIFA dan ranking…",
+          "title": "Viral asisten rumah tangga Cristiano Ronaldo, Pipit Sriati asal Indonesia membagikan…",
           "rank": 5,
-          "metric": 108488
+          "metric": 32759
         }
       ],
       "newcomers_7d": [],
@@ -258,19 +258,19 @@
     "tiktok": {
       "top_now": [
         {
-          "title": "#promomakangajian",
-          "rank": 1,
-          "metric": 1824025
-        },
-        {
           "title": "#september",
-          "rank": 2,
-          "metric": 14204
+          "rank": 1,
+          "metric": 34241
         },
         {
-          "title": "#andicobra",
+          "title": "#stillprabowo",
+          "rank": 2,
+          "metric": 8854
+        },
+        {
+          "title": "#nepal",
           "rank": 3,
-          "metric": 13217
+          "metric": 8435
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#NaykillaTenxiDiShopee",
+          "title": "#KawalRUUPerampasanAset",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "Checkout Ditraktir Tokopedia",
+          "title": "checkout ditraktir tokopedia",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#MrKillSeriesEP9",
+          "title": "Lawan Mafia Politik",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "Kasih Aba-Aba 2.0",
+          "title": "#TRUSTMEPP",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#OurNameMV",
+          "title": "#MrKillSeriesEP9",
           "rank": 5,
           "metric": null
         }
@@ -339,27 +339,27 @@
       "longest_running_7d": [
         {
           "title": "Ghost in the Cell",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 1
         },
         {
           "title": "Wait for Me To Be Successful Later",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 2
         },
         {
           "title": "Na Willa",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 3
         },
         {
           "title": "The Last House",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 4
         },
         {
           "title": "Last Chance To Save",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 5
         }
       ]
