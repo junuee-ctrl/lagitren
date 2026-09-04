@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-09-03T06:01:43+00:00",
+  "generated_at": "2026-09-04T06:01:39+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-03 03:31:05",
-    "rows": 6796,
-    "days": 14.8
+    "last": "2026-09-04 03:36:20",
+    "rows": 7040,
+    "days": 15.8
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "carlos alcaraz",
+          "title": "kawhi leonard",
           "rank": 1,
-          "metric": 200
+          "metric": 100
         },
         {
-          "title": "toluca vs león",
+          "title": "omi kemenag",
           "rank": 2,
           "metric": 200
         },
         {
-          "title": "vitória vs vasco",
+          "title": "alex eala",
           "rank": 3,
-          "metric": 100
+          "metric": 500
         },
         {
-          "title": "velez sarsfield vs boca juniors",
+          "title": "martinelli",
           "rank": 4,
-          "metric": 200
+          "metric": 100
         },
         {
-          "title": "xabi alonso",
+          "title": "wakil menteri",
           "rank": 5,
-          "metric": 100
+          "metric": 500
         }
       ],
       "newcomers_7d": [
@@ -91,6 +91,11 @@
       "longest_running_7d": [
         {
           "title": "celine dion",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "grêmio vs internacional",
           "days_on": 2,
           "best_rank": 1
         },
@@ -105,43 +110,38 @@
           "best_rank": 2
         },
         {
-          "title": "suhu",
+          "title": "wakil menteri",
           "days_on": 2,
-          "best_rank": 3
-        },
-        {
-          "title": "xabi alonso",
-          "days_on": 2,
-          "best_rank": 5
+          "best_rank": 2
         }
       ]
     },
     "youtube": {
       "top_now": [
         {
-          "title": "Yura Yunita - Pertiwi (Official Music Video)",
+          "title": "for Revenge, YB, Tepe - Museum Duka (Official Music Video)",
           "rank": 1,
-          "metric": 99661
+          "metric": 183979
         },
         {
-          "title": "TERIKAT JANJI TRAILER: DAVINA GAK AKAN TERIMA KALO TAU LATAR BELAKANG SENA⁉️ - Arya Saloka,Asha As",
+          "title": "TERIKAT JANJI TRAILER: SENA MALAH MAKIN RAGU UNTUK MENIKAHI DAVINA⁉️ - Arya Saloka, Asha Assuncao",
           "rank": 2,
-          "metric": 97945
+          "metric": 116491
         },
         {
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
+          "title": "Hantu Ibu Bilang Pakai Ini Dulu Ajak Yuta Main 😱| Celine Hara Sembunyi Ketakutan | Dunia Hara",
           "rank": 3,
-          "metric": 1077537
+          "metric": 329762
         },
         {
-          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
+          "title": "Lagu Santai Viral Tiktok 2026 — Lagu Pop Indonesia Terbaru 2026 | Top Hits Indonesia 2026",
           "rank": 4,
-          "metric": 228824
+          "metric": 129760
         },
         {
-          "title": "Street Fighter | New Trailer (2026 Movie)",
+          "title": "Film Ramah Anak | Official Teaser Trailer GJLS Berapi-Api",
           "rank": 5,
-          "metric": 13356756
+          "metric": 55922
         }
       ],
       "newcomers_7d": [
@@ -151,8 +151,8 @@
           "best_rank": 1
         },
         {
-          "title": "Percuma",
-          "first_seen": "2026-08-28 01:20:54",
+          "title": "for Revenge, YB, Tepe - Museum Duka (Official Music Video)",
+          "first_seen": "2026-09-03 20:41:37",
           "best_rank": 1
         },
         {
@@ -191,12 +191,17 @@
           "best_rank": 2
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA DAVINA AKAN BAIK-BAIK AJA⁉️ GIMANA REAKSI SENA? - Arya Saloka,Asha Assunc",
-          "first_seen": "2026-08-27 16:12:30",
+          "title": "TERIKAT JANJI TRAILER: SENA & DAVINA KEPERGOK VERONICA PEGANGAN TANGAN‼️ TAU PACARAN? - Arya Saloka",
+          "first_seen": "2026-08-29 10:15:56",
           "best_rank": 2
         }
       ],
       "longest_running_7d": [
+        {
+          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
+          "days_on": 4,
+          "best_rank": 1
+        },
         {
           "title": "JENNIE - FALLEN ANGEL (Official Video)",
           "days_on": 4,
@@ -204,11 +209,6 @@
         },
         {
           "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
-          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
           "days_on": 3,
           "best_rank": 1
         },
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "Rocky Gerung melontarkan kritik terhadap besarnya penghasilan dan fasilitas yang diterima…",
+          "title": "İylik iydiir 🐣❤️ #keşfet #fallowme #viral #reklamdeğil #farm",
           "rank": 1,
-          "metric": 462651
+          "metric": 23272211
         },
         {
-          "title": "sanrais cenah",
+          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
           "rank": 2,
-          "metric": 169296
+          "metric": 1948312
         },
         {
-          "title": "Maaf yang Vreaa.. dolan kali ini gak pake cepool dulu.. Hehehe..",
+          "title": "Kejadian di Malaysia ini terekam CCTV halte bus. Seorang perempuan berdiri di pinggir…",
           "rank": 3,
-          "metric": 94763
+          "metric": 1462126
         },
         {
-          "title": "Yang kayak gini sudah membudaya kan? atau kita masih bisa merubahnya guys? Gimana menurut…",
+          "title": "See u later❤️ To you❤️",
           "rank": 4,
-          "metric": 45731
+          "metric": 1019486
         },
         {
-          "title": "Viral asisten rumah tangga Cristiano Ronaldo, Pipit Sriati asal Indonesia membagikan…",
+          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
           "rank": 5,
-          "metric": 32759
+          "metric": 943726
         }
       ],
       "newcomers_7d": [],
@@ -260,17 +260,17 @@
         {
           "title": "#september",
           "rank": 1,
-          "metric": 34241
+          "metric": 42317
         },
         {
           "title": "#stillprabowo",
           "rank": 2,
-          "metric": 8854
+          "metric": 9727
         },
         {
-          "title": "#nepal",
+          "title": "#plantsonfire",
           "rank": 3,
-          "metric": 8435
+          "metric": 23712
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#KawalRUUPerampasanAset",
+          "title": "GoPay Transfer Luar Negeri",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "checkout ditraktir tokopedia",
+          "title": "tangkap segera brian yunendar",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "Lawan Mafia Politik",
+          "title": "#LISA_SaWaDiKa",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#TRUSTMEPP",
+          "title": "#WENMONTHLY",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#MrKillSeriesEP9",
+          "title": "NASA",
           "rank": 5,
           "metric": null
         }
