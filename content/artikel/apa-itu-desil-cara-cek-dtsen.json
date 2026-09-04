@@ -1,0 +1,55 @@
+{
+  "slug": "apa-itu-desil-cara-cek-dtsen",
+  "title": "Apa Itu Desil di DTSEN — dan Kenapa Semua Orang Mencarinya?",
+  "category": "panduan",
+  "lead": "Selama dua pekan terakhir, arsip Lagi Tren terus menangkap satu keluarga kata kunci yang sama di daftar tren Google: \"arti desil\", \"cek desil online\", \"cek desil lewat hp\", sampai \"cek desil kemensos go id 2026\" — beberapa di antaranya sempat #1. Jutaan orang sedang mencari tahu satu hal: mereka masuk kelompok kesejahteraan yang mana, dan apakah itu berarti dapat bansos. Ini penjelasannya, dari definisi sampai cara cek resmi.",
+  "sections": [
+    {
+      "heading": "Desil itu apa, sebenarnya?",
+      "paragraphs": [
+        "Desil adalah cara pemerintah mengelompokkan tingkat kesejahteraan keluarga dalam DTSEN (Data Tunggal Sosial Ekonomi Nasional). Seluruh keluarga dibagi sepuluh kelompok: Desil 1 berarti masuk 10% dengan kesejahteraan terendah, Desil 10 berarti 10% teratas.",
+        "Yang sering disalahpahami: penempatan desil tidak hanya melihat penghasilan. Menurut penjelasan yang dirangkum Detik, faktornya mencakup kepemilikan aset, kondisi tempat tinggal, pendidikan dan pekerjaan anggota keluarga, sampai jumlah tanggungan — jadi dua keluarga bergaji sama bisa berada di desil berbeda."
+      ]
+    },
+    {
+      "heading": "Hubungannya dengan bansos",
+      "paragraphs": [
+        "Di sinilah alasan pencariannya meledak: desil dipakai sebagai dasar prioritas bantuan sosial. Kelompok Desil 1–4 menjadi prioritas program seperti PKH dan BPNT serta bantuan iuran JKN; Desil 5 umumnya masih tercakup BPNT dan JKN; sedangkan Desil 6–10 pada dasarnya tidak masuk sasaran bansos reguler.",
+        "Karena penyaluran bansos tahap ketiga baru berjalan — periode yang sama ketika \"cek bansos\" memuncaki pencarian di arsip kami bulan lalu — wajar banyak keluarga ingin tahu posisi desilnya: angka satu digit ini yang menentukan masuk-tidaknya mereka dalam daftar penerima."
+      ]
+    },
+    {
+      "heading": "Cara cek desil yang resmi (dan gratis)",
+      "paragraphs": [
+        "Kanalnya sama dengan cek bansos: situs cekbansos.kemensos.go.id atau aplikasi resmi Cek Bansos. Langkahnya: buka situs/aplikasi, masukkan wilayah dan nama sesuai KTP (atau NIK pada fitur pengecekan mandiri), ketik kode verifikasi, lalu cari — sistem menampilkan status kepesertaan beserta kelompok desil bila datamu terdaftar di DTSEN.",
+        "Tidak ada biaya, tidak perlu aplikasi pihak ketiga, dan tidak ada \"jalur cepat\". Seperti selalu kami ingatkan di topik bansos: siapa pun yang meminta uang, OTP, atau data pribadi untuk \"menaikkan\" atau \"memperbaiki\" desil adalah penipu — perubahan data hanya bisa diusulkan lewat mekanisme resmi seperti musyawarah desa/kelurahan dan pendamping sosial."
+      ]
+    },
+    {
+      "heading": "Yang terlihat dari data tren",
+      "paragraphs": [
+        "Keluarga kata kunci \"desil\" adalah lapisan kedua dari pola yang kami sebut tren kalender bansos: gelombang pertama orang mengecek apakah dananya cair (\"cek bansos\"), gelombang kedua orang mencari tahu kenapa dapat atau tidak dapat (\"arti desil\", \"cek desil\"). Gelombang kedua ini lebih awet — di arsip kami ia bertahan dua pekan, jauh melampaui umur kata kunci pencairannya.",
+        "Artinya sederhana: kebutuhan informasinya belum terjawab tuntas oleh sumber yang ada. Semoga panduan ini membantu — dan posisi harian kata kuncinya selalu bisa dipantau di bagian Google Lagi Tren."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Detik — Cek Desil Kemensos 2026 di Laman Resmi, Cara Tahu Status DTSEN", "url": "https://www.detik.com/sulsel/berita/d-8615712/cek-desil-kemensos-2026-di-laman-resmi-begini-cara-tahu-status-dtsen" },
+    { "title": "Kompas Money — Cek Desil Bansos 2026 Lewat HP, Cukup Pakai NIK KTP", "url": "https://money.kompas.com/read/2026/08/31/153321226/cek-desil-bansos-2026-lewat-hp-cukup-pakai-nik-ktp" },
+    { "title": "Cek Bansos Kemensos (situs resmi)", "url": "https://cekbansos.kemensos.go.id/" }
+  ],
+  "related": ["/google", "/artikel/kenapa-cek-bansos-puncaki-google-trends", "/artikel/cara-membaca-google-trends"],
+  "dataCard": {
+    "Kata kunci di arsip": "4 varian, 2 pekan",
+    "Posisi terbaik": "#1 Google",
+    "Kelompok": "Desil 1–10",
+    "Prioritas bansos": "Desil 1–4 (+5 sebagian)"
+  },
+  "facts": {
+    "archive": {
+      "google": "cek desil online top 23 Agu; cek desil kemensos go id 2026 #4 26 Agu; arti desil top5 2 Sep; cek desil lewat hp #1 2 Sep; keluarga kata kunci hadir berulang 19 Agu-4 Sep"
+    },
+    "external": "Desil = 10 kelompok kesejahteraan DTSEN, faktor aset/rumah/pendidikan/tanggungan; Desil 1-4 prioritas PKH/BPNT/JKN, Desil 5 BPNT+JKN, 6-10 non-prioritas; cek via cekbansos.kemensos.go.id / app Cek Bansos dengan NIK (Detik, Kompas Money)"
+  },
+  "published_at": "2026-09-04 06:30:00"
+}
