@@ -6,7 +6,7 @@ import { slugFromId } from "@/lib/embed";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lagitren.id";
 
 // Segarkan sitemap berkala agar halaman tren baru cepat ditemukan Google.
-export const revalidate = 600; // 10 menit
+export const revalidate = 3600; // 1 jam (memindai 5rb baris tiap regen)
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();

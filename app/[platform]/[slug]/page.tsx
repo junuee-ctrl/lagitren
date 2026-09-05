@@ -25,7 +25,7 @@ import TrendContext from "@/components/TrendContext";
 import TrendArticleBody from "@/components/TrendArticleBody";
 import PlatformIcon from "@/components/PlatformIcon";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 1800; // ISR 30 mnt — 5rb+ URL di-crawl Google
 
 // Frasa sesuai cara orang mencari, per platform.
 const INTENT: Record<Platform, string> = {

@@ -65,4 +65,4 @@ jobs:
         working-directory: collector
         env:
           CLOUDFLARE_D1_DATABASE_ID: ${{ env.CLOUDFLARE_D1_DATABASE_ID }}
-        run: python -c "from database import D1Client; D1Client().prune_snapshots(90)"
+        run: python -c "from database import D1Client; c=D1Client(); c.prune_snapshots(90); c.prune_runs(60)"

@@ -82,3 +82,7 @@ CREATE TABLE IF NOT EXISTS articles (
   updated_at   TEXT NOT NULL DEFAULT (datetime('now'))
 );
 CREATE INDEX IF NOT EXISTS idx_articles_pub ON articles (status, published_at);
+
+-- Indeks hemat rows_read (insiden limit D1 free, 4 Sep 2026).
+CREATE INDEX IF NOT EXISTS idx_trends_current ON trends (is_current, platform, rank);
+CREATE INDEX IF NOT EXISTS idx_runs_platform_ok ON collection_runs (platform, status, started_at);

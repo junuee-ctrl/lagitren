@@ -8,8 +8,10 @@ import AdSlot from "@/components/AdSlot";
 import { AD_SLOTS } from "@/lib/adsense";
 import type { Platform, Trend } from "@/lib/types";
 
-// ISR: halaman diregenerasi berkala agar tren selalu segar.
-export const dynamic = "force-dynamic";
+// ISR 5 menit: cukup segar utk tren, dan memangkas rows_read D1 drastis
+// (force-dynamic membuat TIAP request bot/crawler memindai tabel — pemicu
+// limit D1 free tier 4 Sep 2026).
+export const revalidate = 300;
 
 // Sisipkan iklan setelah platform ke-2 dan ke-4.
 const AD_AFTER = new Set<number>([1, 3]);

@@ -8,7 +8,7 @@ import { SITE_NAME, SITE_URL, toIso } from "@/lib/site";
  * Syarat pendaftaran Publisher Center / peluang Discover.
  */
 
-export const revalidate = 600;
+export const revalidate = 1800;
 
 export async function GET() {
   const trends = await getSitemapTrends(2000);

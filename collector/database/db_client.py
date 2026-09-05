@@ -175,11 +175,19 @@ class D1Client:
             "ALTER TABLE trends ADD COLUMN interest TEXT",
             "ALTER TABLE trends ADD COLUMN extra TEXT",
             "ALTER TABLE trends ADD COLUMN is_current INTEGER NOT NULL DEFAULT 1",
+            # Indeks hemat rows_read (insiden limit D1 free 4 Sep 2026):
+            # query situs LATEST_* menyaring is_current — tanpa indeks ini
+            # tiap page view memindai SELURUH tabel trends (arsip terus tumbuh).
+            "CREATE INDEX IF NOT EXISTS idx_trends_current "
+            "ON trends (is_current, platform, rank)",
+            # watchdog/pick_platforms menyaring platform+status per run.
+            "CREATE INDEX IF NOT EXISTS idx_runs_platform_ok "
+            "ON collection_runs (platform, status, started_at)",
         ):
             try:
                 self.query(stmt)
             except Exception:
-                pass  # kolom sudah ada
+                pass  # kolom/indeks sudah ada
         self._schema_ready = True
 
     def prune_mojibake(self, platform: str) -> None:
@@ -269,6 +277,18 @@ class D1Client:
         try:
             self.query(
                 "DELETE FROM trend_snapshots WHERE snapshot_at < datetime('now', ?)",
+                [f"-{int(days)} days"],
+            )
+        except Exception:
+            pass
+
+    def prune_runs(self, days: int = 60) -> None:
+        """Hapus log collection_runs lama (tabel tumbuh tiap run + watchdog)."""
+        if self.dry_run or not self._configured():
+            return
+        try:
+            self.query(
+                "DELETE FROM collection_runs WHERE started_at < datetime('now', ?)",
                 [f"-{int(days)} days"],
             )
         except Exception:

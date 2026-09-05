@@ -8,7 +8,7 @@ import AdSlot from "@/components/AdSlot";
 import { AD_SLOTS } from "@/lib/adsense";
 
 // Segarkan berkala; arsip berubah pelan (saat tren lama diarsipkan).
-export const dynamic = "force-dynamic";
+export const revalidate = 3600; // ISR 1 jam — arsip berubah pelan
 
 export const metadata: Metadata = {
   title: "Arsip Tren — Yang Pernah Viral di Indonesia",

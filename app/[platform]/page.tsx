@@ -18,7 +18,7 @@ import AdSlot from "@/components/AdSlot";
 import { AD_SLOTS } from "@/lib/adsense";
 import type { Platform } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+export const revalidate = 300; // ISR 5 mnt — hemat rows_read D1
 
 const DATE_ID = new Intl.DateTimeFormat("id-ID", {
   day: "numeric",
