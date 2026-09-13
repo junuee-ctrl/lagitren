@@ -8,7 +8,7 @@ import {
   getHomepageTrends
 } from "@/lib/db";
 import { getPlatform, platformHref } from "@/lib/platforms";
-import { relatedProducts } from "@/lib/shopping";
+import { matchProducts } from "@/lib/shopping";
 import RelatedProducts from "@/components/RelatedProducts";
 import { SOURCE_LABEL, canEmbed } from "@/lib/embed";
 import { formatDateID, formatWIB } from "@/lib/format";
@@ -108,7 +108,11 @@ export default async function TrendDetailPage({
 
   // Produk afiliasi TikTok Shop yang relevan (kecuali pada halaman produk).
   const productPool = isProduct ? [] : await getTrendsByPlatform("shopee", 20);
-  const relProducts = relatedProducts(trend, productPool, 3);
+  const relProducts = matchProducts(
+    [trend.title, ...(trend.hashtags ?? [])].join(" "),
+    productPool,
+    3
+  );
 
   // Rekomendasi lintas platform (P2-2): topik ramai dari platform LAIN.
   const crossPool = await getHomepageTrends(2);
@@ -239,7 +243,10 @@ export default async function TrendDetailPage({
       <TrendContext trend={trend} />
 
       {/* Produk TikTok Shop relevan (dicocokkan kategori) — monetisasi kontekstual */}
-      <RelatedProducts products={relProducts} />
+      <RelatedProducts
+        products={relProducts.products}
+        contextual={relProducts.contextual}
+      />
 
       {/* Produk / afiliasi (sumber pendapatan) */}
       {trend.affiliateUrl && (

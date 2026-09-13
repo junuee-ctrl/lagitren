@@ -23,12 +23,22 @@ function tileFor(trend: Trend) {
  * Produk afiliasi TikTok Shop yang relevan dengan tren (dicocokkan kategori).
  * Muncul di halaman detail non-produk → peluang belanja yang kontekstual.
  */
-export default function RelatedProducts({ products }: { products: Trend[] }) {
+export default function RelatedProducts({
+  products,
+  contextual = true
+}: {
+  products: Trend[];
+  /** false = daftar terlaris (bukan hasil pencocokan kategori). */
+  contextual?: boolean;
+}) {
   if (!products || products.length === 0) return null;
   return (
     <section className="my-5 rounded-2xl border border-shopee/25 bg-shopee/5 p-5 dark:border-shopee/30 dark:bg-shopee/10">
       <h2 className="flex items-center gap-2 text-base font-bold text-ink dark:text-white">
-        <span aria-hidden>🛍️</span> Produk terkait di TikTok Shop
+        <span aria-hidden>🛍️</span>{" "}
+        {contextual
+          ? "Produk terkait di TikTok Shop"
+          : "Lagi laris di TikTok Shop"}
       </h2>
       <div className="mt-3 grid gap-3 sm:grid-cols-3">
         {products.map((p) => (

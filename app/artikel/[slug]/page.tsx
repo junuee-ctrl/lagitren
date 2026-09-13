@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getArticle, getArticles } from "@/lib/db";
+import { getArticle, getArticles, getTrendsByPlatform } from "@/lib/db";
+import { matchProducts } from "@/lib/shopping";
+import RelatedProducts from "@/components/RelatedProducts";
 import { KATEGORI_COLOR, KATEGORI_LABEL, formatTanggal } from "@/lib/artikel";
 import {
   AUTHOR_NAME,
@@ -46,6 +48,13 @@ export default async function ArtikelDetailPage({ params }: Props) {
   if (!a) notFound();
 
   const others = (await getArticles(7)).filter((x) => x.slug !== a.slug).slice(0, 3);
+
+  // Monetisasi: produk afiliasi TikTok Shop dicocokkan ke topik artikel.
+  const produk = matchProducts(
+    `${a.title} ${a.lead}`,
+    await getTrendsByPlatform("shopee", 20),
+    3
+  );
   const articleBody = [
     a.lead,
     ...a.sections.flatMap((s) => [s.heading, ...s.paragraphs])
@@ -165,6 +174,8 @@ export default async function ArtikelDetailPage({ params }: Props) {
           </ul>
         </section>
       )}
+
+      <RelatedProducts products={produk.products} contextual={produk.contextual} />
 
       <AdSlot slot="artikel-detail-bottom" adSlot={AD_SLOTS.bawah} />
 

@@ -56,21 +56,56 @@ export function detectCategory(text: string): string | null {
   return null;
 }
 
+/** Hasil pencocokan produk: cocok kategori, atau cadangan "lagi laris". */
+export interface ProductMatch {
+  products: Trend[];
+  /** true = benar-benar sekategori; false = daftar terlaris (label beda). */
+  contextual: boolean;
+}
+
 /** Produk yang relevan dengan sebuah tren (berdasarkan kategori). */
 export function relatedProducts(
   trend: Trend,
   products: Trend[],
   limit = 3
 ): Trend[] {
-  const cat = detectCategory(
-    [trend.title, ...(trend.hashtags ?? [])].join(" ")
-  );
-  if (!cat || products.length === 0) return [];
-  const matched = products.filter((p) => {
-    const pcat = detectCategory(
-      [(p.hashtags ?? []).join(" "), p.title].join(" ")
+  return matchProducts(
+    [trend.title, ...(trend.hashtags ?? [])].join(" "),
+    products,
+    limit
+  ).products;
+}
+
+/**
+ * Cocokkan produk afiliasi ke teks bebas (judul tren / judul+lead artikel).
+ *
+ * Sebelumnya produk HANYA muncul bila kategori tren terdeteksi — akibatnya
+ * mayoritas halaman (bola, K-pop, bansos) tidak punya satu pun tautan
+ * belanja. Sekarang: bila tak ada kecocokan kategori, tampilkan produk
+ * terlaris dengan label jujur ("lagi laris"), bukan mengaku relevan.
+ */
+export function matchProducts(
+  text: string,
+  products: Trend[],
+  limit = 3
+): ProductMatch {
+  if (!products || products.length === 0) {
+    return { products: [], contextual: false };
+  }
+  const cat = detectCategory(text);
+  if (cat) {
+    const matched = products.filter(
+      (p) =>
+        detectCategory([(p.hashtags ?? []).join(" "), p.title].join(" ")) === cat
     );
-    return pcat === cat;
-  });
-  return matched.slice(0, limit);
+    if (matched.length > 0) {
+      return { products: matched.slice(0, limit), contextual: true };
+    }
+  }
+  // Cadangan: produk peringkat teratas (paling laris) — tetap bertautan
+  // afiliasi, tapi diberi judul yang tidak mengklaim relevansi.
+  const top = [...products]
+    .sort((a, b) => (a.rank || 99) - (b.rank || 99))
+    .slice(0, limit);
+  return { products: top, contextual: false };
 }
