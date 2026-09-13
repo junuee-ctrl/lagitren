@@ -49,12 +49,21 @@ export default async function ArtikelDetailPage({ params }: Props) {
 
   const others = (await getArticles(7)).filter((x) => x.slug !== a.slug).slice(0, 3);
 
-  // Monetisasi: produk afiliasi TikTok Shop dicocokkan ke topik artikel.
-  const produk = matchProducts(
-    `${a.title} ${a.lead}`,
-    await getTrendsByPlatform("shopee", 20),
-    3
-  );
+  // Monetisasi: produk afiliasi TikTok Shop.
+  // Artikel kurasi boleh menunjuk produk spesifik lewat body.products;
+  // selain itu dicocokkan otomatis dari topik artikel.
+  const pool = await getTrendsByPlatform("shopee", 20);
+  const picks = a.products
+    .map((key) => {
+      const k = key.toLowerCase();
+      return pool.find(
+        (p) => p.id === key || p.title.toLowerCase().includes(k)
+      );
+    })
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  const produk = picks.length
+    ? { products: picks, contextual: true }
+    : matchProducts(`${a.title} ${a.lead}`, pool, 3);
   const articleBody = [
     a.lead,
     ...a.sections.flatMap((s) => [s.heading, ...s.paragraphs])
@@ -175,7 +184,14 @@ export default async function ArtikelDetailPage({ params }: Props) {
         </section>
       )}
 
-      <RelatedProducts products={produk.products} contextual={produk.contextual} />
+      <RelatedProducts
+        products={produk.products}
+        contextual={produk.contextual}
+        surface="artikel"
+        heading={
+          picks.length ? "Produk yang dibahas di artikel ini" : undefined
+        }
+      />
 
       <AdSlot slot="artikel-detail-bottom" adSlot={AD_SLOTS.bawah} />
 

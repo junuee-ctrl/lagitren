@@ -12,6 +12,7 @@ export default function AffiliateLink({
   name,
   id,
   category,
+  surface,
   className,
   children
 }: {
@@ -19,6 +20,8 @@ export default function AffiliateLink({
   name?: string;
   id?: string;
   category?: string;
+  /** Di mana tautan ini tampil: artikel | tren | produk | beranda. */
+  surface?: string;
   className?: string;
   children: ReactNode;
 }) {
@@ -31,7 +34,8 @@ export default function AffiliateLink({
         item_id: id,
         item_name: name,
         item_category: category,
-        item_list_name: "TikTok Shop",
+        item_list_name: surface ? `TikTok Shop / ${surface}` : "TikTok Shop",
+        surface,
         link_url: href
       });
     } catch {

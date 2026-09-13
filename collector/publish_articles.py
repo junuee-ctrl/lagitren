@@ -90,6 +90,7 @@ def publish(paths: list[Path]) -> None:
                 "sources": doc.get("sources") or [],
                 "related": doc.get("related") or [],
                 **({"dataCard": doc["dataCard"]} if doc.get("dataCard") else {}),
+                **({"products": doc["products"]} if doc.get("products") else {}),
             },
             ensure_ascii=False,
         )

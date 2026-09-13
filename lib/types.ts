@@ -161,6 +161,8 @@ export interface Article {
   related: string[];
   /** Kartu data ringkas (label → nilai) untuk artikel berbasis angka. */
   dataCard?: Record<string, string>;
+  /** Artikel kurasi produk: id/penggal judul produk yang direkomendasikan. */
+  products: string[];
   heroImage: string | null;
   publishedAt: string;
   updatedAt: string;

@@ -425,6 +425,7 @@ function rowToArticle(r: ArticleRow): Article {
     sources?: Article["sources"];
     related?: string[];
     dataCard?: Record<string, string>;
+    products?: string[];
   } = {};
   try {
     body = r.body ? JSON.parse(r.body) : {};
@@ -440,6 +441,7 @@ function rowToArticle(r: ArticleRow): Article {
     sources: Array.isArray(body.sources) ? body.sources : [],
     related: Array.isArray(body.related) ? body.related : [],
     dataCard: body.dataCard,
+    products: Array.isArray(body.products) ? body.products : [],
     heroImage: r.hero_image,
     publishedAt: r.published_at,
     updatedAt: r.updated_at

@@ -25,20 +25,27 @@ function tileFor(trend: Trend) {
  */
 export default function RelatedProducts({
   products,
-  contextual = true
+  contextual = true,
+  heading,
+  surface = "tren"
 }: {
   products: Trend[];
   /** false = daftar terlaris (bukan hasil pencocokan kategori). */
   contextual?: boolean;
+  /** Judul khusus (mis. untuk artikel kurasi produk). */
+  heading?: string;
+  /** Untuk analitik: di mana blok ini tampil. */
+  surface?: string;
 }) {
   if (!products || products.length === 0) return null;
   return (
     <section className="my-5 rounded-2xl border border-shopee/25 bg-shopee/5 p-5 dark:border-shopee/30 dark:bg-shopee/10">
       <h2 className="flex items-center gap-2 text-base font-bold text-ink dark:text-white">
         <span aria-hidden>🛍️</span>{" "}
-        {contextual
-          ? "Produk terkait di TikTok Shop"
-          : "Lagi laris di TikTok Shop"}
+        {heading ??
+          (contextual
+            ? "Produk terkait di TikTok Shop"
+            : "Lagi laris di TikTok Shop")}
       </h2>
       <div className="mt-3 grid gap-3 sm:grid-cols-3">
         {products.map((p) => (
@@ -48,6 +55,7 @@ export default function RelatedProducts({
             name={p.title}
             id={p.id}
             category={p.hashtags?.[0]}
+            surface={surface}
             className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:-translate-y-0.5 hover:shadow-md dark:border-white/10 dark:bg-night-card"
           >
             <div className="aspect-square w-full overflow-hidden bg-gray-100 dark:bg-night-soft">
