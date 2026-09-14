@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T13:15:31+00:00",
+  "generated_at": "2026-09-14T13:18:21+00:00",
   "window_days": 7,
   "scoring": {
     "velocity": "0-35 · perbaikan peringkat dalam jendela",
@@ -8,100 +8,6 @@
     "peak": "0-15 · peringkat terbaik yang dicapai"
   },
   "radar": [
-    {
-      "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
-      "platform": "shopee",
-      "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-      "daily": [
-        {
-          "day": "2026-09-08",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-09",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 4
-        }
-      ],
-      "first_seen": "2026-09-08",
-      "last_seen": "2026-09-14",
-      "days_on": 7,
-      "best_rank": 4,
-      "current_rank": 4,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 9,
-        "cross_platform": 16
-      },
-      "theme": null,
-      "score": 68
-    },
-    {
-      "trend_id": "netflix:jodoh-wasiat-bapak-reborn",
-      "platform": "netflix",
-      "title": "Jodoh Wasiat Bapak Reborn",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 16
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 16
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 16
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 16
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 16
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 16
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-14",
-      "days_on": 6,
-      "best_rank": 16,
-      "current_rank": 16,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 21,
-        "peak": 3,
-        "cross_platform": 16
-      },
-      "theme": null,
-      "score": 58
-    },
     {
       "trend_id": "shopee:jj-glow-sabun-gluta-pink-10x-brightening-niacinamide-kojic-a",
       "platform": "shopee",
@@ -263,55 +169,6 @@
       "score": 56
     },
     {
-      "trend_id": "netflix:our-sticky-love",
-      "platform": "netflix",
-      "title": "Our Sticky Love",
-      "daily": [
-        {
-          "day": "2026-09-08",
-          "best_rank": 11
-        },
-        {
-          "day": "2026-09-09",
-          "best_rank": 14
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 14
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 14
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 14
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 14
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 14
-        }
-      ],
-      "first_seen": "2026-09-08",
-      "last_seen": "2026-09-14",
-      "days_on": 7,
-      "best_rank": 11,
-      "current_rank": 14,
-      "stage": "turun",
-      "score_parts": {
-        "velocity": 11,
-        "persistence": 25,
-        "peak": 3,
-        "cross_platform": 16
-      },
-      "theme": null,
-      "score": 55
-    },
-    {
       "trend_id": "shopee:syb-forte-red-jelly-serum-20ml-niacinamide-10",
       "platform": "shopee",
       "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
@@ -455,35 +312,6 @@
       "score": 54
     },
     {
-      "trend_id": "youtube:kRoaxV_nazM",
-      "platform": "youtube",
-      "title": "TERIKAT JANJI TRAILER: DAVINA & SENA TEMUI SURAT WASIAT NOVAN⁉️ - Arya Saloka, Asha Assuncao",
-      "daily": [
-        {
-          "day": "2026-09-10",
-          "best_rank": 2
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 2
-        }
-      ],
-      "first_seen": "2026-09-10",
-      "last_seen": "2026-09-11",
-      "days_on": 2,
-      "best_rank": 2,
-      "current_rank": 2,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 7,
-        "peak": 12,
-        "cross_platform": 16
-      },
-      "theme": "Tontonan & sinetron",
-      "score": 53
-    },
-    {
       "trend_id": "shopee:azalea-smooth-foot-cream-zaitun-honey-35gr",
       "platform": "shopee",
       "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
@@ -522,6 +350,55 @@
       "days_on": 7,
       "best_rank": 5,
       "current_rank": 5,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 25,
+        "peak": 9,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 52
+    },
+    {
+      "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
+      "platform": "shopee",
+      "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
+      "daily": [
+        {
+          "day": "2026-09-08",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-09",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 4
+        }
+      ],
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-14",
+      "days_on": 7,
+      "best_rank": 4,
+      "current_rank": 4,
       "stage": "stabil",
       "score_parts": {
         "velocity": 18,
@@ -642,31 +519,6 @@
       },
       "theme": "Tontonan & sinetron",
       "score": 51
-    },
-    {
-      "trend_id": "google:harga-bbm-terbaru",
-      "platform": "google",
-      "title": "harga bbm terbaru",
-      "daily": [
-        {
-          "day": "2026-09-13",
-          "best_rank": 2
-        }
-      ],
-      "first_seen": "2026-09-13",
-      "last_seen": "2026-09-13",
-      "days_on": 1,
-      "best_rank": 2,
-      "current_rank": 2,
-      "stage": "baru",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 4,
-        "peak": 12,
-        "cross_platform": 16
-      },
-      "theme": null,
-      "score": 50
     },
     {
       "trend_id": "google:sporting",
@@ -1033,493 +885,212 @@
       "score": 48
     },
     {
-      "trend_id": "google:bantuan-langsung-tunai",
-      "platform": "google",
-      "title": "bantuan langsung tunai",
+      "trend_id": "youtube:J77i-E_0JWg",
+      "platform": "youtube",
+      "title": "LISA - SaWaDiKa (Dance Performance Video)",
       "daily": [
         {
-          "day": "2026-09-11",
+          "day": "2026-09-12",
           "best_rank": 4
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 1
         }
       ],
-      "first_seen": "2026-09-11",
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-13",
+      "days_on": 2,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 25,
+        "persistence": 7,
+        "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": "K-pop & idol",
+      "score": 47
+    },
+    {
+      "trend_id": "google:us-open-2026",
+      "platform": "google",
+      "title": "us open 2026",
+      "daily": [
+        {
+          "day": "2026-09-08",
+          "best_rank": 7
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 3
+        }
+      ],
+      "first_seen": "2026-09-08",
       "last_seen": "2026-09-11",
-      "days_on": 1,
-      "best_rank": 4,
-      "current_rank": 4,
-      "stage": "baru",
+      "days_on": 2,
+      "best_rank": 3,
+      "current_rank": 3,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 27,
+        "persistence": 7,
+        "peak": 12,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 46
+    },
+    {
+      "trend_id": "shopee:alsha-araya-bergo-instan-rayon-karet-dagu",
+      "platform": "shopee",
+      "title": "Alsha Araya Bergo Instan Rayon Karet Dagu",
+      "daily": [
+        {
+          "day": "2026-09-08",
+          "best_rank": 14
+        },
+        {
+          "day": "2026-09-09",
+          "best_rank": 14
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 14
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 14
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 14
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 14
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 14
+        }
+      ],
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-14",
+      "days_on": 7,
+      "best_rank": 14,
+      "current_rank": 14,
+      "stage": "stabil",
       "score_parts": {
         "velocity": 18,
-        "persistence": 4,
-        "peak": 9,
-        "cross_platform": 16
+        "persistence": 25,
+        "peak": 3,
+        "cross_platform": 0
       },
-      "theme": "Bantuan sosial",
-      "score": 47
+      "theme": null,
+      "score": 46
+    },
+    {
+      "trend_id": "shopee:animate-bubble-glow-pinkiss-lip-4ml",
+      "platform": "shopee",
+      "title": "Animate Bubble Glow Pinkiss Lip 4ml",
+      "daily": [
+        {
+          "day": "2026-09-08",
+          "best_rank": 12
+        },
+        {
+          "day": "2026-09-09",
+          "best_rank": 12
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 12
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 12
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 12
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 12
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 12
+        }
+      ],
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-14",
+      "days_on": 7,
+      "best_rank": 12,
+      "current_rank": 12,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 25,
+        "peak": 3,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 46
+    },
+    {
+      "trend_id": "shopee:beauty-talk-aha-collagen-body-booster-100ml-whitening-lotion",
+      "platform": "shopee",
+      "title": "BEAUTY TALK AHA Collagen Body Booster 100ml Whitening Lotion",
+      "daily": [
+        {
+          "day": "2026-09-08",
+          "best_rank": 16
+        },
+        {
+          "day": "2026-09-09",
+          "best_rank": 16
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 16
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 16
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 16
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 16
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 16
+        }
+      ],
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-14",
+      "days_on": 7,
+      "best_rank": 16,
+      "current_rank": 16,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 25,
+        "peak": 3,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 46
     }
   ],
-  "cross_platform": [
-    {
-      "label": "langsung",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "google:bantuan-langsung-tunai",
-          "platform": "google",
-          "title": "bantuan langsung tunai",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-11",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": "Bantuan sosial",
-          "score": 47
-        },
-        {
-          "trend_id": "youtube:wbABREwiG2w",
-          "platform": "youtube",
-          "title": "Rumah Yuta Mio Jadi Markas NAYKILLA! | Seneng Banget Mio Akhirnya Didandanin Langsung Sama Naykilla🥳",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 15
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-11",
-          "days_on": 1,
-          "best_rank": 15,
-          "current_rank": 15,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 41
-        }
-      ]
-    },
-    {
-      "label": "palace",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "netflix"
-      ],
-      "members": [
-        {
-          "trend_id": "google:crystal-palace-vs-middlesbrough",
-          "platform": "google",
-          "title": "crystal palace vs middlesbrough",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 6
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-08",
-          "days_on": 1,
-          "best_rank": 6,
-          "current_rank": 6,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": "Sepak bola",
-          "score": 44
-        },
-        {
-          "trend_id": "netflix:the-east-palace",
-          "platform": "netflix",
-          "title": "The East Palace",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 19
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-08",
-          "days_on": 1,
-          "best_rank": 19,
-          "current_rank": 19,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 41
-        }
-      ]
-    },
-    {
-      "label": "spiderman",
-      "method": "entitas",
-      "platforms": [
-        "shopee",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "youtube:0zCm8e-75_k",
-          "platform": "youtube",
-          "title": "KITA JADI SPIDERMAN ASLI DI WOBBLY LIFE!!!",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 12
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-10",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 12,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 35
-        },
-        {
-          "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
-          "platform": "shopee",
-          "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-14",
-          "days_on": 7,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 25,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 68
-        }
-      ]
-    },
-    {
-      "label": "sticky",
-      "method": "entitas",
-      "platforms": [
-        "netflix",
-        "shopee"
-      ],
-      "members": [
-        {
-          "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
-          "platform": "shopee",
-          "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-14",
-          "days_on": 7,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 25,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 68
-        },
-        {
-          "trend_id": "netflix:our-sticky-love",
-          "platform": "netflix",
-          "title": "Our Sticky Love",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 11
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 14
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 14
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 14
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 14
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 14
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 14
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-14",
-          "days_on": 7,
-          "best_rank": 11,
-          "current_rank": 14,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 25,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 55
-        }
-      ]
-    },
-    {
-      "label": "terbaru",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "google:harga-bbm-terbaru",
-          "platform": "google",
-          "title": "harga bbm terbaru",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 2
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-13",
-          "days_on": 1,
-          "best_rank": 2,
-          "current_rank": 2,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 50
-        },
-        {
-          "trend_id": "youtube:TH16eM58Tys",
-          "platform": "youtube",
-          "title": "DJ HELIKOPTER TURUN KE PADANG X AKU ANAK KAMPUNG STYLE KONDANG CANDU MENGKANE VIRAL TERBARU 2026",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-13",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 47
-        }
-      ]
-    },
-    {
-      "label": "wasiat",
-      "method": "entitas",
-      "platforms": [
-        "netflix",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "youtube:kRoaxV_nazM",
-          "platform": "youtube",
-          "title": "TERIKAT JANJI TRAILER: DAVINA & SENA TEMUI SURAT WASIAT NOVAN⁉️ - Arya Saloka, Asha Assuncao",
-          "daily": [
-            {
-              "day": "2026-09-10",
-              "best_rank": 2
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 2
-            }
-          ],
-          "first_seen": "2026-09-10",
-          "last_seen": "2026-09-11",
-          "days_on": 2,
-          "best_rank": 2,
-          "current_rank": 2,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": "Tontonan & sinetron",
-          "score": 53
-        },
-        {
-          "trend_id": "netflix:jodoh-wasiat-bapak-reborn",
-          "platform": "netflix",
-          "title": "Jodoh Wasiat Bapak Reborn",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 16
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 16
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 16
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 16
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 16
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 16
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-14",
-          "days_on": 6,
-          "best_rank": 16,
-          "current_rank": 16,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 21,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 58
-        }
-      ]
-    }
-  ],
+  "cross_platform": [],
   "categories": [
     {
       "label": "Sepak bola",
@@ -2586,10 +2157,10 @@
             "velocity": 18,
             "persistence": 4,
             "peak": 9,
-            "cross_platform": 16
+            "cross_platform": 0
           },
           "theme": "Bantuan sosial",
-          "score": 47
+          "score": 31
         },
         {
           "trend_id": "google:cek-desil-lewat-hp",
