@@ -1,42 +1,47 @@
 {
-  "generated_at": "2026-09-14T01:55:34+00:00",
+  "generated_at": "2026-09-14T13:09:29+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-14 00:56:08",
-    "rows": 9453,
-    "days": 25.7
+    "last": "2026-09-14 12:18:19",
+    "rows": 9572,
+    "days": 26.2
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "santos laguna",
+          "title": "andre taulany",
           "rank": 1,
-          "metric": 100
+          "metric": 500
         },
         {
-          "title": "indeks harga saham gabungan",
+          "title": "amanda rigby",
           "rank": 2,
-          "metric": 200
+          "metric": 2000
         },
         {
-          "title": "whitecaps vs austin fc",
+          "title": "ios 27",
           "rank": 3,
-          "metric": 200
+          "metric": 500
         },
         {
-          "title": "artis bp",
+          "title": "saham bbri",
           "rank": 4,
-          "metric": 200
+          "metric": 100
         },
         {
-          "title": "mrt jakarta",
+          "title": "rupiah hari ini",
           "rank": 5,
-          "metric": 100
+          "metric": 5000
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "andre taulany",
+          "first_seen": "2026-09-14 10:40:53",
+          "best_rank": 1
+        },
         {
           "title": "bansos pkh",
           "first_seen": "2026-09-08 15:11:37",
@@ -45,11 +50,6 @@
         {
           "title": "barito putera vs persipura jayapura",
           "first_seen": "2026-09-13 05:26:05",
-          "best_rank": 1
-        },
-        {
-          "title": "batam",
-          "first_seen": "2026-09-07 05:54:49",
           "best_rank": 1
         },
         {
@@ -121,27 +121,27 @@
         {
           "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
           "rank": 1,
-          "metric": 52128
+          "metric": 110557
         },
         {
-          "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
+          "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
           "rank": 2,
-          "metric": 112453
+          "metric": 75563
         },
         {
           "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 2910019
+          "metric": 2946896
         },
         {
-          "title": "Yeni Inka - TERBELAH JADI DUA (Official Music Yi Production)",
+          "title": "AJENG FEBRIA - SALAH APA (OFFICIAL MUSIC VIDEO AMBYAR EVERYWHERE) | SALAH APA YANG TAK KUMAAFKAN",
           "rank": 4,
-          "metric": 68814
+          "metric": 20630
         },
         {
           "title": "ROSE IN DURIAN VILLAGE PART 2 | OFFICIAL TRAILER | FAN MOVIE",
           "rank": 5,
-          "metric": 13244
+          "metric": 34240
         }
       ],
       "newcomers_7d": [
@@ -181,6 +181,11 @@
           "best_rank": 1
         },
         {
+          "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
+          "first_seen": "2026-09-14 05:56:25",
+          "best_rank": 2
+        },
+        {
           "title": "TERIKAT JANJI TRAILER: DAVINA GAK MAI MAAFKAN SENA GITU AJA⁉️ ADA SAYARATNYA?  - Arya Saloka",
           "first_seen": "2026-09-12 09:04:15",
           "best_rank": 2
@@ -188,11 +193,6 @@
         {
           "title": "TERIKAT JANJI TRAILER: SENA PANIK‼️ KO BISA KEBETULAN DAVINA KETEMU VERONIKA? - Arya Saloka",
           "first_seen": "2026-09-08 14:58:42",
-          "best_rank": 2
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
-          "first_seen": "2026-09-13 14:09:46",
           "best_rank": 2
         }
       ],
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
           "rank": 1,
-          "metric": 778041
+          "metric": 2006693
         },
         {
-          "title": "Jujur, film ini beneran jadi tamparan keras buat kita semua 🥺💔",
+          "title": "Kejadian di Malaysia ini terekam CCTV halte bus. Seorang perempuan berdiri di pinggir…",
           "rank": 2,
-          "metric": 591430
+          "metric": 1461524
         },
         {
-          "title": "Berada di kawasan Cincin Api Pasifik (Ring of Fire), Indonesia merupakan titik pertemuan…",
+          "title": "Sebuah video CCTV dari SPBU di China viral di media sosial. Dalam rekaman itu, terlihat…",
           "rank": 3,
-          "metric": 413783
+          "metric": 1415062
         },
         {
-          "title": "These places in 🇮🇩Indonesia🇮🇩 don’t feel real 😍✨",
+          "title": "@Prada #Prada #Paragon",
           "rank": 4,
-          "metric": 331903
+          "metric": 1207241
         },
         {
-          "title": "Seorang warga dengan gangguan jiwa melakukan interaksi tidak terduga dengan meminta…",
+          "title": "Viral di media sosial, video seorang bocah kecil yang sedang melaksanakan salat namun…",
           "rank": 5,
-          "metric": 298564
+          "metric": 810388
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#PenghuniRumahWarisan",
+          "title": "Purbaya",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#YouManiacSeriesEP3",
+          "title": "Suahasil Nazara",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "Senin",
+          "title": "Menteri Keuangan",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "PERTHSANTA AT MCHOICE",
+          "title": "#Levisxnamtanfilm",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#MchoiceMintAwards2026",
+          "title": "Bekerja Tanpa Lelah",
           "rank": 5,
           "metric": null
         }
