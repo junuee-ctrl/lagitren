@@ -5,6 +5,7 @@ import Logo from "./Logo";
 
 const LEGAL = [
   { href: "/artikel", label: "Artikel" },
+  { href: "/laporan", label: "Laporan Riset" },
   { href: "/arsip", label: "Arsip Tren" },
   { href: "/about", label: "Tentang Kami" },
   { href: "/redaksi", label: "Redaksi" },
