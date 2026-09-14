@@ -255,9 +255,10 @@ def build(db: D1Client, window: int = 7) -> dict:
             if b["trend_id"] == a["trend_id"] or b["platform"] == a["platform"]:
                 continue
             shared_ab = tok[a["trend_id"]] & tok[b["trend_id"]]
-            strong = len(shared_ab) >= 2 or any(
-                df[w] <= 2 and len(w) >= 6 for w in shared_ab
-            )
+            # Ambang ketat. Satu token bersama TIDAK cukup: "palace"
+            # menautkan klub bola dengan judul drama, "sticky" menautkan
+            # mainan dengan film. Butuh minimal dua token distingtif.
+            strong = len(shared_ab) >= 2
             if strong:
                 grp.append(b)
         plats = sorted({g["platform"] for g in grp})
