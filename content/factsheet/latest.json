@@ -1,116 +1,116 @@
 {
-  "generated_at": "2026-09-04T06:01:39+00:00",
+  "generated_at": "2026-09-14T01:55:34+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-04 03:36:20",
-    "rows": 7040,
-    "days": 15.8
+    "last": "2026-09-14 00:56:08",
+    "rows": 9453,
+    "days": 25.7
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "kawhi leonard",
+          "title": "santos laguna",
           "rank": 1,
           "metric": 100
         },
         {
-          "title": "omi kemenag",
+          "title": "indeks harga saham gabungan",
           "rank": 2,
           "metric": 200
         },
         {
-          "title": "alex eala",
+          "title": "whitecaps vs austin fc",
           "rank": 3,
-          "metric": 500
+          "metric": 200
         },
         {
-          "title": "martinelli",
+          "title": "artis bp",
           "rank": 4,
-          "metric": 100
+          "metric": 200
         },
         {
-          "title": "wakil menteri",
+          "title": "mrt jakarta",
           "rank": 5,
-          "metric": 500
+          "metric": 100
         }
       ],
       "newcomers_7d": [
         {
-          "title": "31 agustus 2026 hari apa",
-          "first_seen": "2026-08-31 00:56:48",
+          "title": "bansos pkh",
+          "first_seen": "2026-09-08 15:11:37",
           "best_rank": 1
         },
         {
-          "title": "cambuur vs twente",
-          "first_seen": "2026-08-30 17:37:45",
+          "title": "barito putera vs persipura jayapura",
+          "first_seen": "2026-09-13 05:26:05",
           "best_rank": 1
         },
         {
-          "title": "carlos alcaraz",
-          "first_seen": "2026-09-03 01:27:59",
+          "title": "batam",
+          "first_seen": "2026-09-07 05:54:49",
           "best_rank": 1
         },
         {
-          "title": "cek desil lewat hp",
-          "first_seen": "2026-09-02 05:53:00",
+          "title": "berita gempa hari ini",
+          "first_seen": "2026-09-11 22:24:11",
           "best_rank": 1
         },
         {
-          "title": "celine dion",
-          "first_seen": "2026-08-30 01:35:04",
+          "title": "boca juniors vs central córdoba sde",
+          "first_seen": "2026-09-12 00:31:40",
           "best_rank": 1
         },
         {
-          "title": "cerezo osaka vs kashiwa reysol",
-          "first_seen": "2026-09-02 11:03:35",
+          "title": "boeing",
+          "first_seen": "2026-09-08 11:14:37",
           "best_rank": 1
         },
         {
-          "title": "dalian yingbo",
-          "first_seen": "2026-09-01 14:54:09",
+          "title": "bupati",
+          "first_seen": "2026-09-10 22:07:33",
           "best_rank": 1
         },
         {
-          "title": "dana",
-          "first_seen": "2026-09-01 10:08:29",
+          "title": "classroom",
+          "first_seen": "2026-09-08 01:12:36",
           "best_rank": 1
         },
         {
-          "title": "fc dallas",
-          "first_seen": "2026-08-30 22:44:09",
+          "title": "copenhagen vs ac horsens",
+          "first_seen": "2026-09-11 17:16:47",
           "best_rank": 1
         },
         {
-          "title": "gabriel jesus",
-          "first_seen": "2026-08-30 13:12:36",
+          "title": "dortmund vs paderborn",
+          "first_seen": "2026-09-12 12:56:53",
           "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
-          "title": "celine dion",
+          "title": "morgan stanley",
           "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "grêmio vs internacional",
-          "days_on": 2,
-          "best_rank": 1
+          "title": "olahraga",
+          "days_on": 3,
+          "best_rank": 2
         },
         {
-          "title": "enzo",
+          "title": "daejeon citizen vs fc anyang",
           "days_on": 2,
           "best_rank": 2
         },
         {
-          "title": "piala dfb",
+          "title": "elena rybakina",
           "days_on": 2,
           "best_rank": 2
         },
         {
-          "title": "wakil menteri",
+          "title": "macau",
           "days_on": 2,
           "best_rank": 2
         }
@@ -119,106 +119,106 @@
     "youtube": {
       "top_now": [
         {
-          "title": "for Revenge, YB, Tepe - Museum Duka (Official Music Video)",
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
           "rank": 1,
-          "metric": 183979
+          "metric": 52128
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA MALAH MAKIN RAGU UNTUK MENIKAHI DAVINA⁉️ - Arya Saloka, Asha Assuncao",
+          "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
           "rank": 2,
-          "metric": 116491
+          "metric": 112453
         },
         {
-          "title": "Hantu Ibu Bilang Pakai Ini Dulu Ajak Yuta Main 😱| Celine Hara Sembunyi Ketakutan | Dunia Hara",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 329762
+          "metric": 2910019
         },
         {
-          "title": "Lagu Santai Viral Tiktok 2026 — Lagu Pop Indonesia Terbaru 2026 | Top Hits Indonesia 2026",
+          "title": "Yeni Inka - TERBELAH JADI DUA (Official Music Yi Production)",
           "rank": 4,
-          "metric": 129760
+          "metric": 68814
         },
         {
-          "title": "Film Ramah Anak | Official Teaser Trailer GJLS Berapi-Api",
+          "title": "ROSE IN DURIAN VILLAGE PART 2 | OFFICIAL TRAILER | FAN MOVIE",
           "rank": 5,
-          "metric": 55922
+          "metric": 13244
         }
       ],
       "newcomers_7d": [
         {
-          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
-          "first_seen": "2026-08-30 15:13:13",
+          "title": "Katy Perry - The One That Got Away (Lyrics)",
+          "first_seen": "2026-09-08 14:58:42",
           "best_rank": 1
         },
         {
-          "title": "for Revenge, YB, Tepe - Museum Duka (Official Music Video)",
-          "first_seen": "2026-09-03 20:41:37",
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "first_seen": "2026-09-13 20:40:59",
           "best_rank": 1
         },
         {
-          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
-          "first_seen": "2026-09-01 23:07:06",
+          "title": "LISA - SaWaDiKa (Dance Performance Video)",
+          "first_seen": "2026-09-12 04:11:53",
           "best_rank": 1
         },
         {
-          "title": "On Bended Knee - Boyz II Men (Lyrics)",
-          "first_seen": "2026-08-30 07:25:18",
+          "title": "no na - speaker freaker (the long song)",
+          "first_seen": "2026-09-11 09:12:01",
           "best_rank": 1
         },
         {
-          "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
-          "first_seen": "2026-08-31 16:49:56",
+          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
+          "first_seen": "2026-09-09 13:32:33",
           "best_rank": 1
         },
         {
-          "title": "Yura Yunita - Pertiwi (Official Music Video)",
-          "first_seen": "2026-09-02 17:42:22",
+          "title": "EVAN (에반) 'Death of Me' Official MV",
+          "first_seen": "2026-09-07 17:46:41",
           "best_rank": 1
         },
         {
-          "title": "JENNIE - FALLEN ANGEL (Official Video)",
-          "first_seen": "2026-08-28 21:22:15",
+          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV Teaser",
+          "first_seen": "2026-09-07 19:41:00",
           "best_rank": 1
         },
         {
-          "title": "Tajamnya Karang",
-          "first_seen": "2026-08-31 06:54:51",
-          "best_rank": 1
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: JIHAN AKAN TETAP MENIKAHI DIPA SETELAH MENDENGAR KEBENARANNYA⁉️ - Arya Saloka",
-          "first_seen": "2026-08-28 11:00:04",
+          "title": "TERIKAT JANJI TRAILER: DAVINA GAK MAI MAAFKAN SENA GITU AJA⁉️ ADA SAYARATNYA?  - Arya Saloka",
+          "first_seen": "2026-09-12 09:04:15",
           "best_rank": 2
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA & DAVINA KEPERGOK VERONICA PEGANGAN TANGAN‼️ TAU PACARAN? - Arya Saloka",
-          "first_seen": "2026-08-29 10:15:56",
+          "title": "TERIKAT JANJI TRAILER: SENA PANIK‼️ KO BISA KEBETULAN DAVINA KETEMU VERONIKA? - Arya Saloka",
+          "first_seen": "2026-09-08 14:58:42",
+          "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
+          "first_seen": "2026-09-13 14:09:46",
           "best_rank": 2
         }
       ],
       "longest_running_7d": [
         {
-          "title": "DIRANTAI DIGELANGI RINDU - LAILA AYU FT IRWAN KRISDIYANTO - SIMPATIK MUSIC",
+          "title": "AJENG FEBRIA - HELIKOPTER TURUN KE PADANG | IDOL IDOL (OFFICIAL MV AMBYAR EVERYWHERE)",
+          "days_on": 5,
+          "best_rank": 7
+        },
+        {
+          "title": "no na - speaker freaker (the long song)",
           "days_on": 4,
           "best_rank": 1
         },
         {
-          "title": "JENNIE - FALLEN ANGEL (Official Video)",
+          "title": "Nabila Taqiyyah - Tak Semudah Hompimpa (Official Music Video)",
           "days_on": 4,
-          "best_rank": 1
+          "best_rank": 4
         },
         {
-          "title": "Hearts2Hearts 하츠투하츠 '15-LOVE' Dance Practice",
+          "title": "Katy Perry - The One That Got Away (Lyrics)",
           "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "On Bended Knee - Boyz II Men (Lyrics)",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
-          "title": "Girls' Generation-HRS 소녀시대-효리수 'Skibidi' Performance Video",
+          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
           "days_on": 3,
           "best_rank": 1
         }
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "İylik iydiir 🐣❤️ #keşfet #fallowme #viral #reklamdeğil #farm",
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
           "rank": 1,
-          "metric": 23272211
+          "metric": 778041
         },
         {
-          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
+          "title": "Jujur, film ini beneran jadi tamparan keras buat kita semua 🥺💔",
           "rank": 2,
-          "metric": 1948312
+          "metric": 591430
         },
         {
-          "title": "Kejadian di Malaysia ini terekam CCTV halte bus. Seorang perempuan berdiri di pinggir…",
+          "title": "Berada di kawasan Cincin Api Pasifik (Ring of Fire), Indonesia merupakan titik pertemuan…",
           "rank": 3,
-          "metric": 1462126
+          "metric": 413783
         },
         {
-          "title": "See u later❤️ To you❤️",
+          "title": "These places in 🇮🇩Indonesia🇮🇩 don’t feel real 😍✨",
           "rank": 4,
-          "metric": 1019486
+          "metric": 331903
         },
         {
-          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
+          "title": "Seorang warga dengan gangguan jiwa melakukan interaksi tidak terduga dengan meminta…",
           "rank": 5,
-          "metric": 943726
+          "metric": 298564
         }
       ],
       "newcomers_7d": [],
@@ -258,19 +258,19 @@
     "tiktok": {
       "top_now": [
         {
-          "title": "#september",
+          "title": "#abuvulkanik",
           "rank": 1,
-          "metric": 42317
+          "metric": 89224
         },
         {
-          "title": "#stillprabowo",
+          "title": "#flowasone",
           "rank": 2,
-          "metric": 9727
+          "metric": 49012
         },
         {
-          "title": "#plantsonfire",
+          "title": "#80s",
           "rank": 3,
-          "metric": 23712
+          "metric": 29845
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "GoPay Transfer Luar Negeri",
+          "title": "#PenghuniRumahWarisan",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "tangkap segera brian yunendar",
+          "title": "#YouManiacSeriesEP3",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#LISA_SaWaDiKa",
+          "title": "Senin",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#WENMONTHLY",
+          "title": "PERTHSANTA AT MCHOICE",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "NASA",
+          "title": "#MchoiceMintAwards2026",
           "rank": 5,
           "metric": null
         }
@@ -310,32 +310,83 @@
     "netflix": {
       "top_now": [
         {
-          "title": "Ghost in the Cell",
+          "title": "Dilan ITB 1997",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "Wait for Me To Be Successful Later",
+          "title": "Ghost in the Cell",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "Na Willa",
+          "title": "Heaven is My Way",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "The Last House",
+          "title": "Levitating",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "Last Chance To Save",
+          "title": "The Thorn: One Sacred Light",
           "rank": 5,
           "metric": null
         }
       ],
-      "newcomers_7d": [],
+      "newcomers_7d": [
+        {
+          "title": "Dilan ITB 1997",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 1
+        },
+        {
+          "title": "Heaven is My Way",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 3
+        },
+        {
+          "title": "Levitating",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 4
+        },
+        {
+          "title": "The Thorn: One Sacred Light",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 5
+        },
+        {
+          "title": "The Whisper Man",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 6
+        },
+        {
+          "title": "Perjanjian Setan",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 9
+        },
+        {
+          "title": "Setan Botak di Jembatan Ancol",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 10
+        },
+        {
+          "title": "The Early Spring",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 11
+        },
+        {
+          "title": "Mousetrap",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 12
+        },
+        {
+          "title": "Four Hands, Two Sonatas",
+          "first_seen": "2026-09-09 07:03:10",
+          "best_rank": 13
+        }
+      ],
       "longest_running_7d": [
         {
           "title": "Ghost in the Cell",
@@ -353,14 +404,14 @@
           "best_rank": 3
         },
         {
-          "title": "The Last House",
+          "title": "Our Sticky Love",
           "days_on": 7,
-          "best_rank": 4
+          "best_rank": 11
         },
         {
-          "title": "Last Chance To Save",
+          "title": "Spooky in Love",
           "days_on": 7,
-          "best_rank": 5
+          "best_rank": 12
         }
       ]
     },
