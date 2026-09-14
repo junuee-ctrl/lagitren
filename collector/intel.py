@@ -211,17 +211,25 @@ def build(db: D1Client, window: int = 7) -> dict:
     clusters: list[dict] = []
     seen_keys: set[frozenset] = set()
 
+    # Kategori (tema) BUKAN sinyal lintas platform — ia menunjukkan bobot
+    # kategori dalam sepekan. Disimpan terpisah agar tidak disalahartikan
+    # sebagai "satu topik yang menyeberang platform".
     by_theme: dict[str, list[dict]] = defaultdict(list)
     for t in trends:
         if t["theme"]:
             by_theme[t["theme"]].append(t)
+    categories = []
     for name, group in by_theme.items():
-        plats = sorted({g["platform"] for g in group})
-        if len(plats) >= 2:
-            clusters.append({
-                "label": name, "method": "tema", "platforms": plats,
-                "members": sorted(group, key=lambda g: g["best_rank"] or 99)[:6],
-            })
+        per_plat: dict[str, int] = defaultdict(int)
+        for g in group:
+            per_plat[g["platform"]] += 1
+        categories.append({
+            "label": name,
+            "n_trends": len(group),
+            "platforms": dict(sorted(per_plat.items(), key=lambda kv: -kv[1])),
+            "top": sorted(group, key=lambda g: g["best_rank"] or 99)[:5],
+        })
+    categories.sort(key=lambda c: -c["n_trends"])
 
     # literal: hanya token DISTINGTIF yang boleh menautkan dua tren.
     # Token umum ("anak", "2026", "sticky") muncul di banyak judul tak
@@ -246,7 +254,11 @@ def build(db: D1Client, window: int = 7) -> dict:
         for b in trends:
             if b["trend_id"] == a["trend_id"] or b["platform"] == a["platform"]:
                 continue
-            if tok[a["trend_id"]] & tok[b["trend_id"]]:
+            shared_ab = tok[a["trend_id"]] & tok[b["trend_id"]]
+            strong = len(shared_ab) >= 2 or any(
+                df[w] <= 2 and len(w) >= 6 for w in shared_ab
+            )
+            if strong:
                 grp.append(b)
         plats = sorted({g["platform"] for g in grp})
         if len(plats) < 2:
@@ -260,7 +272,7 @@ def build(db: D1Client, window: int = 7) -> dict:
         shared = set.intersection(*[tok[g["trend_id"]] for g in grp]) or set()
         clusters.append({
             "label": " · ".join(sorted(shared)[:3]) or a["title"][:40],
-            "method": "literal", "platforms": plats,
+            "method": "entitas", "platforms": plats,
             "members": sorted(grp, key=lambda g: g["best_rank"] or 99)[:6],
         })
 
@@ -288,7 +300,8 @@ def build(db: D1Client, window: int = 7) -> dict:
             "peak": "0-15 · peringkat terbaik yang dicapai",
         },
         "radar": trends[:25],
-        "clusters": clusters[:12],
+        "cross_platform": clusters[:10],
+        "categories": categories[:10],
         "total_trends": len(trends),
     }
 
