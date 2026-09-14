@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T13:09:32+00:00",
+  "generated_at": "2026-09-14T13:12:38+00:00",
   "window_days": 7,
   "scoring": {
     "velocity": "0-35 · perbaikan peringkat dalam jendela",
@@ -8,55 +8,6 @@
     "peak": "0-15 · peringkat terbaik yang dicapai"
   },
   "radar": [
-    {
-      "trend_id": "shopee:jj-glow-sabun-gluta-pink-10x-brightening-niacinamide-kojic-a",
-      "platform": "shopee",
-      "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-      "daily": [
-        {
-          "day": "2026-09-08",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-09",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-08",
-      "last_seen": "2026-09-14",
-      "days_on": 7,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 15,
-        "cross_platform": 24
-      },
-      "theme": "Bencana alam",
-      "score": 82
-    },
     {
       "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
       "platform": "shopee",
@@ -107,33 +58,53 @@
       "score": 76
     },
     {
-      "trend_id": "youtube:EEevRrB3cuw",
-      "platform": "youtube",
-      "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+      "trend_id": "shopee:jj-glow-sabun-gluta-pink-10x-brightening-niacinamide-kojic-a",
+      "platform": "shopee",
+      "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
       "daily": [
         {
+          "day": "2026-09-08",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-09",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 1
+        },
+        {
           "day": "2026-09-13",
-          "best_rank": 10
+          "best_rank": 1
         },
         {
           "day": "2026-09-14",
           "best_rank": 1
         }
       ],
-      "first_seen": "2026-09-13",
+      "first_seen": "2026-09-08",
       "last_seen": "2026-09-14",
-      "days_on": 2,
+      "days_on": 7,
       "best_rank": 1,
       "current_rank": 1,
-      "stage": "puncak",
+      "stage": "stabil",
       "score_parts": {
-        "velocity": 35,
-        "persistence": 7,
+        "velocity": 18,
+        "persistence": 25,
         "peak": 15,
         "cross_platform": 16
       },
-      "theme": "Musik & lagu",
-      "score": 73
+      "theme": null,
+      "score": 74
     },
     {
       "trend_id": "shopee:kime-luminizing-jeju-brightening-soap-100gr-buy-1-box-get-2",
@@ -234,35 +205,6 @@
       "score": 63
     },
     {
-      "trend_id": "youtube:J77i-E_0JWg",
-      "platform": "youtube",
-      "title": "LISA - SaWaDiKa (Dance Performance Video)",
-      "daily": [
-        {
-          "day": "2026-09-12",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-12",
-      "last_seen": "2026-09-13",
-      "days_on": 2,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "puncak",
-      "score_parts": {
-        "velocity": 25,
-        "persistence": 7,
-        "peak": 15,
-        "cross_platform": 16
-      },
-      "theme": "K-pop & idol",
-      "score": 63
-    },
-    {
       "trend_id": "google:us-open-2026",
       "platform": "google",
       "title": "us open 2026",
@@ -341,205 +283,6 @@
       "score": 62
     },
     {
-      "trend_id": "google:berita-gempa-hari-ini",
-      "platform": "google",
-      "title": "berita gempa hari ini",
-      "daily": [
-        {
-          "day": "2026-09-11",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
-      "days_on": 1,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "baru",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 4,
-        "peak": 15,
-        "cross_platform": 24
-      },
-      "theme": "Bencana alam",
-      "score": 61
-    },
-    {
-      "trend_id": "google:gempa-hari-ini",
-      "platform": "google",
-      "title": "gempa hari ini",
-      "daily": [
-        {
-          "day": "2026-09-11",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-11",
-      "last_seen": "2026-09-11",
-      "days_on": 1,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "baru",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 4,
-        "peak": 15,
-        "cross_platform": 24
-      },
-      "theme": "Bencana alam",
-      "score": 61
-    },
-    {
-      "trend_id": "youtube:TeegcSSZJbI",
-      "platform": "youtube",
-      "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 1 | Bahasa Indonesia",
-      "daily": [
-        {
-          "day": "2026-09-11",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 3
-        }
-      ],
-      "first_seen": "2026-09-11",
-      "last_seen": "2026-09-12",
-      "days_on": 2,
-      "best_rank": 3,
-      "current_rank": 3,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 7,
-        "peak": 12,
-        "cross_platform": 24
-      },
-      "theme": "Game & esports",
-      "score": 61
-    },
-    {
-      "trend_id": "youtube:YPbOKyQltIo",
-      "platform": "youtube",
-      "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
-      "daily": [
-        {
-          "day": "2026-09-13",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 3
-        }
-      ],
-      "first_seen": "2026-09-13",
-      "last_seen": "2026-09-14",
-      "days_on": 2,
-      "best_rank": 3,
-      "current_rank": 3,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 7,
-        "peak": 12,
-        "cross_platform": 24
-      },
-      "theme": "Game & esports",
-      "score": 61
-    },
-    {
-      "trend_id": "youtube:nu3RfzQdsec",
-      "platform": "youtube",
-      "title": "🔴 LIVE | MPL ID S18 | Minggu 4 Hari 3 | Bahasa Indonesia",
-      "daily": [
-        {
-          "day": "2026-09-07",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-08",
-          "best_rank": 3
-        }
-      ],
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-08",
-      "days_on": 2,
-      "best_rank": 3,
-      "current_rank": 3,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 7,
-        "peak": 12,
-        "cross_platform": 24
-      },
-      "theme": "Game & esports",
-      "score": 61
-    },
-    {
-      "trend_id": "youtube:ykgecDVRvlI",
-      "platform": "youtube",
-      "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 2 | Bahasa Indonesia",
-      "daily": [
-        {
-          "day": "2026-09-12",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 3
-        }
-      ],
-      "first_seen": "2026-09-12",
-      "last_seen": "2026-09-13",
-      "days_on": 2,
-      "best_rank": 3,
-      "current_rank": 3,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 7,
-        "peak": 12,
-        "cross_platform": 24
-      },
-      "theme": "Game & esports",
-      "score": 61
-    },
-    {
-      "trend_id": "youtube:gNUMxMuxH20",
-      "platform": "youtube",
-      "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-11",
-      "days_on": 3,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 11,
-        "peak": 15,
-        "cross_platform": 16
-      },
-      "theme": "K-pop & idol",
-      "score": 60
-    },
-    {
       "trend_id": "youtube:qgTmLOW-coo",
       "platform": "youtube",
       "title": "AKU PERGI SHOLAT PADA MALAM HARI NAMUN SESUATU YANG MENGERIKAN MENIMPAKU....",
@@ -567,56 +310,6 @@
       },
       "theme": null,
       "score": 60
-    },
-    {
-      "trend_id": "google:gunung-cikuray-garut",
-      "platform": "google",
-      "title": "gunung cikuray garut",
-      "daily": [
-        {
-          "day": "2026-09-08",
-          "best_rank": 2
-        }
-      ],
-      "first_seen": "2026-09-08",
-      "last_seen": "2026-09-08",
-      "days_on": 1,
-      "best_rank": 2,
-      "current_rank": 2,
-      "stage": "baru",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 4,
-        "peak": 12,
-        "cross_platform": 24
-      },
-      "theme": "Bencana alam",
-      "score": 58
-    },
-    {
-      "trend_id": "google:indeks-harga-saham-gabungan",
-      "platform": "google",
-      "title": "indeks harga saham gabungan",
-      "daily": [
-        {
-          "day": "2026-09-14",
-          "best_rank": 2
-        }
-      ],
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "days_on": 1,
-      "best_rank": 2,
-      "current_rank": 2,
-      "stage": "baru",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 4,
-        "peak": 12,
-        "cross_platform": 24
-      },
-      "theme": "Bencana alam",
-      "score": 58
     },
     {
       "trend_id": "netflix:death-of-the-pastor-s-wife",
@@ -707,6 +400,35 @@
       },
       "theme": null,
       "score": 58
+    },
+    {
+      "trend_id": "youtube:EEevRrB3cuw",
+      "platform": "youtube",
+      "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+      "daily": [
+        {
+          "day": "2026-09-13",
+          "best_rank": 10
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-14",
+      "days_on": 2,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 35,
+        "persistence": 7,
+        "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": "Musik & lagu",
+      "score": 57
     },
     {
       "trend_id": "google:olahraga",
@@ -816,31 +538,6 @@
       "score": 55
     },
     {
-      "trend_id": "google:gempa-malang-hari-ini",
-      "platform": "google",
-      "title": "gempa malang hari ini",
-      "daily": [
-        {
-          "day": "2026-09-14",
-          "best_rank": 4
-        }
-      ],
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "days_on": 1,
-      "best_rank": 4,
-      "current_rank": 4,
-      "stage": "baru",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 4,
-        "peak": 9,
-        "cross_platform": 24
-      },
-      "theme": "Bencana alam",
-      "score": 55
-    },
-    {
       "trend_id": "netflix:spooky-in-love",
       "platform": "netflix",
       "title": "Spooky in Love",
@@ -888,194 +585,356 @@
       },
       "theme": null,
       "score": 55
+    },
+    {
+      "trend_id": "shopee:syb-forte-red-jelly-serum-20ml-niacinamide-10",
+      "platform": "shopee",
+      "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
+      "daily": [
+        {
+          "day": "2026-09-08",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-09",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 2
+        }
+      ],
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-14",
+      "days_on": 7,
+      "best_rank": 2,
+      "current_rank": 2,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 25,
+        "peak": 12,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 55
+    },
+    {
+      "trend_id": "shopee:uniqsoo-tas-serut-sepatu-anti-kuning-pouch-travel-multifungs",
+      "platform": "shopee",
+      "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
+      "daily": [
+        {
+          "day": "2026-09-08",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-09",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 3
+        }
+      ],
+      "first_seen": "2026-09-08",
+      "last_seen": "2026-09-14",
+      "days_on": 7,
+      "best_rank": 3,
+      "current_rank": 3,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 25,
+        "peak": 12,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 55
+    },
+    {
+      "trend_id": "youtube:TH16eM58Tys",
+      "platform": "youtube",
+      "title": "DJ HELIKOPTER TURUN KE PADANG X AKU ANAK KAMPUNG STYLE KONDANG CANDU MENGKANE VIRAL TERBARU 2026",
+      "daily": [
+        {
+          "day": "2026-09-13",
+          "best_rank": 4
+        }
+      ],
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "days_on": 1,
+      "best_rank": 4,
+      "current_rank": 4,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 9,
+        "cross_platform": 24
+      },
+      "theme": null,
+      "score": 55
+    },
+    {
+      "trend_id": "netflix:dilan-itb-1997",
+      "platform": "netflix",
+      "title": "Dilan ITB 1997",
+      "daily": [
+        {
+          "day": "2026-09-09",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-10",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-09",
+      "last_seen": "2026-09-14",
+      "days_on": 6,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 21,
+        "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 54
+    },
+    {
+      "trend_id": "youtube:6bVbyoVhDlE",
+      "platform": "youtube",
+      "title": "Laila Ayu - Idol Idol (Official Music Video) | Lila lali lali Lala Helikopter Turun Ke Padang",
+      "daily": [
+        {
+          "day": "2026-09-07",
+          "best_rank": 10
+        },
+        {
+          "day": "2026-09-08",
+          "best_rank": 7
+        }
+      ],
+      "first_seen": "2026-09-07",
+      "last_seen": "2026-09-08",
+      "days_on": 2,
+      "best_rank": 7,
+      "current_rank": 7,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 25,
+        "persistence": 7,
+        "peak": 6,
+        "cross_platform": 16
+      },
+      "theme": "K-pop & idol",
+      "score": 54
+    },
+    {
+      "trend_id": "google:barito-putera-vs-persipura-jayapura",
+      "platform": "google",
+      "title": "barito putera vs persipura jayapura",
+      "daily": [
+        {
+          "day": "2026-09-13",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-13",
+      "days_on": 1,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 15,
+        "cross_platform": 16
+      },
+      "theme": "Sepak bola",
+      "score": 53
+    },
+    {
+      "trend_id": "google:berita-gempa-hari-ini",
+      "platform": "google",
+      "title": "berita gempa hari ini",
+      "daily": [
+        {
+          "day": "2026-09-11",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "days_on": 1,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 15,
+        "cross_platform": 16
+      },
+      "theme": "Bencana alam",
+      "score": 53
+    },
+    {
+      "trend_id": "google:boca-juniors-vs-central-cordoba-sde",
+      "platform": "google",
+      "title": "boca juniors vs central córdoba sde",
+      "daily": [
+        {
+          "day": "2026-09-12",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "days_on": 1,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 15,
+        "cross_platform": 16
+      },
+      "theme": "Sepak bola",
+      "score": 53
+    },
+    {
+      "trend_id": "google:copenhagen-vs-ac-horsens",
+      "platform": "google",
+      "title": "copenhagen vs ac horsens",
+      "daily": [
+        {
+          "day": "2026-09-11",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "days_on": 1,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 15,
+        "cross_platform": 16
+      },
+      "theme": "Sepak bola",
+      "score": 53
+    },
+    {
+      "trend_id": "google:dortmund-vs-paderborn",
+      "platform": "google",
+      "title": "dortmund vs paderborn",
+      "daily": [
+        {
+          "day": "2026-09-12",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "days_on": 1,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 15,
+        "cross_platform": 16
+      },
+      "theme": "Sepak bola",
+      "score": 53
+    },
+    {
+      "trend_id": "google:gempa-hari-ini",
+      "platform": "google",
+      "title": "gempa hari ini",
+      "daily": [
+        {
+          "day": "2026-09-11",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-11",
+      "days_on": 1,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 15,
+        "cross_platform": 16
+      },
+      "theme": "Bencana alam",
+      "score": 53
     }
   ],
   "clusters": [
-    {
-      "label": "Bencana alam",
-      "method": "tema",
-      "platforms": [
-        "google",
-        "shopee",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "google:berita-gempa-hari-ini",
-          "platform": "google",
-          "title": "berita gempa hari ini",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-11",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 24
-          },
-          "theme": "Bencana alam",
-          "score": 61
-        },
-        {
-          "trend_id": "google:gempa-hari-ini",
-          "platform": "google",
-          "title": "gempa hari ini",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-11",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 24
-          },
-          "theme": "Bencana alam",
-          "score": 61
-        },
-        {
-          "trend_id": "shopee:jj-glow-sabun-gluta-pink-10x-brightening-niacinamide-kojic-a",
-          "platform": "shopee",
-          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-14",
-          "days_on": 7,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 25,
-            "peak": 15,
-            "cross_platform": 24
-          },
-          "theme": "Bencana alam",
-          "score": 82
-        },
-        {
-          "trend_id": "google:gunung-cikuray-garut",
-          "platform": "google",
-          "title": "gunung cikuray garut",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 2
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-08",
-          "days_on": 1,
-          "best_rank": 2,
-          "current_rank": 2,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Bencana alam",
-          "score": 58
-        },
-        {
-          "trend_id": "google:indeks-harga-saham-gabungan",
-          "platform": "google",
-          "title": "indeks harga saham gabungan",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 2
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 2,
-          "current_rank": 2,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Bencana alam",
-          "score": 58
-        },
-        {
-          "trend_id": "google:gempa-malang-hari-ini",
-          "platform": "google",
-          "title": "gempa malang hari ini",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 24
-          },
-          "theme": "Bencana alam",
-          "score": 55
-        }
-      ]
-    },
     {
       "label": "Our Sticky Love",
       "method": "literal",
@@ -1404,20 +1263,20 @@
           "score": 55
         },
         {
-          "trend_id": "google:pulau-anak-krakatau",
+          "trend_id": "google:indonesia-volcano-eruption-anak-krakatau",
           "platform": "google",
-          "title": "pulau anak krakatau",
+          "title": "indonesia volcano eruption anak krakatau",
           "daily": [
             {
-              "day": "2026-09-11",
-              "best_rank": 9
+              "day": "2026-09-07",
+              "best_rank": 6
             }
           ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-11",
+          "first_seen": "2026-09-07",
+          "last_seen": "2026-09-07",
           "days_on": 1,
-          "best_rank": 9,
-          "current_rank": 9,
+          "best_rank": 6,
+          "current_rank": 6,
           "stage": "baru",
           "score_parts": {
             "velocity": 18,
@@ -1431,7 +1290,7 @@
       ]
     },
     {
-      "label": "indonesia volcano eruption anak krakatau",
+      "label": "anak",
       "method": "literal",
       "platforms": [
         "google",
@@ -1439,122 +1298,6 @@
         "youtube"
       ],
       "members": [
-        {
-          "trend_id": "youtube:TeegcSSZJbI",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 1 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-12",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Game & esports",
-          "score": 61
-        },
-        {
-          "trend_id": "youtube:YPbOKyQltIo",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Game & esports",
-          "score": 61
-        },
-        {
-          "trend_id": "youtube:nu3RfzQdsec",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 4 Hari 3 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-08",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-08",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Game & esports",
-          "score": 61
-        },
-        {
-          "trend_id": "youtube:ykgecDVRvlI",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 2 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-12",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-12",
-          "last_seen": "2026-09-13",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Game & esports",
-          "score": 61
-        },
         {
           "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
           "platform": "shopee",
@@ -1628,29 +1371,129 @@
           },
           "theme": null,
           "score": 55
+        },
+        {
+          "trend_id": "google:pulau-anak-krakatau",
+          "platform": "google",
+          "title": "pulau anak krakatau",
+          "daily": [
+            {
+              "day": "2026-09-11",
+              "best_rank": 9
+            }
+          ],
+          "first_seen": "2026-09-11",
+          "last_seen": "2026-09-11",
+          "days_on": 1,
+          "best_rank": 9,
+          "current_rank": 9,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 24
+          },
+          "theme": null,
+          "score": 52
         }
       ]
     },
     {
-      "label": "2026",
-      "method": "literal",
+      "label": "Bencana alam",
+      "method": "tema",
       "platforms": [
         "google",
         "youtube"
       ],
       "members": [
         {
-          "trend_id": "youtube:7uiI56dES5M",
-          "platform": "youtube",
-          "title": "Pajama Drive - 09 September 2026",
+          "trend_id": "google:berita-gempa-hari-ini",
+          "platform": "google",
+          "title": "berita gempa hari ini",
           "daily": [
             {
-              "day": "2026-09-09",
+              "day": "2026-09-11",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-11",
+          "last_seen": "2026-09-11",
+          "days_on": 1,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 15,
+            "cross_platform": 16
+          },
+          "theme": "Bencana alam",
+          "score": 53
+        },
+        {
+          "trend_id": "google:gempa-hari-ini",
+          "platform": "google",
+          "title": "gempa hari ini",
+          "daily": [
+            {
+              "day": "2026-09-11",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-11",
+          "last_seen": "2026-09-11",
+          "days_on": 1,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 15,
+            "cross_platform": 16
+          },
+          "theme": "Bencana alam",
+          "score": 53
+        },
+        {
+          "trend_id": "google:gunung-cikuray-garut",
+          "platform": "google",
+          "title": "gunung cikuray garut",
+          "daily": [
+            {
+              "day": "2026-09-08",
+              "best_rank": 2
+            }
+          ],
+          "first_seen": "2026-09-08",
+          "last_seen": "2026-09-08",
+          "days_on": 1,
+          "best_rank": 2,
+          "current_rank": 2,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 12,
+            "cross_platform": 16
+          },
+          "theme": "Bencana alam",
+          "score": 50
+        },
+        {
+          "trend_id": "google:gempa-malang-hari-ini",
+          "platform": "google",
+          "title": "gempa malang hari ini",
+          "daily": [
+            {
+              "day": "2026-09-14",
               "best_rank": 4
             }
           ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-09",
+          "first_seen": "2026-09-14",
+          "last_seen": "2026-09-14",
           "days_on": 1,
           "best_rank": 4,
           "current_rank": 4,
@@ -1661,24 +1504,24 @@
             "peak": 9,
             "cross_platform": 16
           },
-          "theme": null,
+          "theme": "Bencana alam",
           "score": 47
         },
         {
-          "trend_id": "youtube:TH16eM58Tys",
-          "platform": "youtube",
-          "title": "DJ HELIKOPTER TURUN KE PADANG X AKU ANAK KAMPUNG STYLE KONDANG CANDU MENGKANE VIRAL TERBARU 2026",
+          "trend_id": "google:erupsi-gunung-anak-krakatau",
+          "platform": "google",
+          "title": "erupsi gunung anak krakatau",
           "daily": [
             {
-              "day": "2026-09-13",
-              "best_rank": 4
+              "day": "2026-09-10",
+              "best_rank": 5
             }
           ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-13",
+          "first_seen": "2026-09-10",
+          "last_seen": "2026-09-10",
           "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
+          "best_rank": 5,
+          "current_rank": 5,
           "stage": "baru",
           "score_parts": {
             "velocity": 18,
@@ -1686,7 +1529,7 @@
             "peak": 9,
             "cross_platform": 24
           },
-          "theme": null,
+          "theme": "Bencana alam",
           "score": 55
         },
         {
@@ -1713,809 +1556,6 @@
           },
           "theme": "Bencana alam",
           "score": 47
-        },
-        {
-          "trend_id": "youtube:N6JIfjt-grU",
-          "platform": "youtube",
-          "title": "[ID] 2026 PMGO S2 SEA Finals | Day 1| LANGKAH MENUJU KEJAYAAN DIMULAI SEKARANG",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 6
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 6
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-12",
-          "days_on": 2,
-          "best_rank": 6,
-          "current_rank": 6,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 47
-        },
-        {
-          "trend_id": "youtube:RY241PDJAIk",
-          "platform": "youtube",
-          "title": "[ID] 2026 PMGO S2 SEA Finals | Day 2 | POSISI TOP 5 KINI DI DEPAN MATA!",
-          "daily": [
-            {
-              "day": "2026-09-12",
-              "best_rank": 6
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 9
-            }
-          ],
-          "first_seen": "2026-09-12",
-          "last_seen": "2026-09-13",
-          "days_on": 2,
-          "best_rank": 6,
-          "current_rank": 9,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 40
-        },
-        {
-          "trend_id": "youtube:bDwgZyX8zzY",
-          "platform": "youtube",
-          "title": "[ID] 2026 PMGO S2 SEA Finals | Day 3 | PIALA KINI MENANTI SANG JUARA BARU!",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 6
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 9
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 6,
-          "current_rank": 9,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": "Sepak bola",
-          "score": 40
-        }
-      ]
-    },
-    {
-      "label": "2026",
-      "method": "literal",
-      "platforms": [
-        "google",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "youtube:7uiI56dES5M",
-          "platform": "youtube",
-          "title": "Pajama Drive - 09 September 2026",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-09",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 47
-        },
-        {
-          "trend_id": "youtube:TH16eM58Tys",
-          "platform": "youtube",
-          "title": "DJ HELIKOPTER TURUN KE PADANG X AKU ANAK KAMPUNG STYLE KONDANG CANDU MENGKANE VIRAL TERBARU 2026",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-13",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 24
-          },
-          "theme": null,
-          "score": 55
-        },
-        {
-          "trend_id": "youtube:N6JIfjt-grU",
-          "platform": "youtube",
-          "title": "[ID] 2026 PMGO S2 SEA Finals | Day 1| LANGKAH MENUJU KEJAYAAN DIMULAI SEKARANG",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 6
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 6
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-12",
-          "days_on": 2,
-          "best_rank": 6,
-          "current_rank": 6,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 47
-        },
-        {
-          "trend_id": "youtube:RY241PDJAIk",
-          "platform": "youtube",
-          "title": "[ID] 2026 PMGO S2 SEA Finals | Day 2 | POSISI TOP 5 KINI DI DEPAN MATA!",
-          "daily": [
-            {
-              "day": "2026-09-12",
-              "best_rank": 6
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 9
-            }
-          ],
-          "first_seen": "2026-09-12",
-          "last_seen": "2026-09-13",
-          "days_on": 2,
-          "best_rank": 6,
-          "current_rank": 9,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 40
-        },
-        {
-          "trend_id": "youtube:bDwgZyX8zzY",
-          "platform": "youtube",
-          "title": "[ID] 2026 PMGO S2 SEA Finals | Day 3 | PIALA KINI MENANTI SANG JUARA BARU!",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 6
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 9
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 6,
-          "current_rank": 9,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": "Sepak bola",
-          "score": 40
-        },
-        {
-          "trend_id": "google:tanggal-14-september-2026-hari-apa",
-          "platform": "google",
-          "title": "tanggal 14 september 2026 hari apa",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 8
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 8,
-          "current_rank": 8,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 44
-        }
-      ]
-    },
-    {
-      "label": "Game & esports",
-      "method": "tema",
-      "platforms": [
-        "google",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "youtube:AsndTp8kGuI",
-          "platform": "youtube",
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-08",
-          "days_on": 1,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": "Game & esports",
-          "score": 50
-        },
-        {
-          "trend_id": "youtube:FDcKtKZDwnA",
-          "platform": "youtube",
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
-          "daily": [
-            {
-              "day": "2026-09-10",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-10",
-          "last_seen": "2026-09-10",
-          "days_on": 1,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": "Game & esports",
-          "score": 50
-        },
-        {
-          "trend_id": "youtube:FIpU1W4WPdM",
-          "platform": "youtube",
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-11",
-          "days_on": 1,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": "Game & esports",
-          "score": 50
-        },
-        {
-          "trend_id": "youtube:G55FFZZFaPM",
-          "platform": "youtube",
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-09",
-          "days_on": 1,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": "Game & esports",
-          "score": 50
-        },
-        {
-          "trend_id": "youtube:TeegcSSZJbI",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 1 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-12",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Game & esports",
-          "score": 61
-        },
-        {
-          "trend_id": "youtube:YPbOKyQltIo",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 24
-          },
-          "theme": "Game & esports",
-          "score": 61
-        }
-      ]
-    },
-    {
-      "label": "K-pop & idol",
-      "method": "tema",
-      "platforms": [
-        "google",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "youtube:FyS5dAywkEo",
-          "platform": "youtube",
-          "title": "LISA - SaWaDiKa (Official Music Video)",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-07",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "K-pop & idol",
-          "score": 53
-        },
-        {
-          "trend_id": "youtube:J77i-E_0JWg",
-          "platform": "youtube",
-          "title": "LISA - SaWaDiKa (Dance Performance Video)",
-          "daily": [
-            {
-              "day": "2026-09-12",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-12",
-          "last_seen": "2026-09-13",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "puncak",
-          "score_parts": {
-            "velocity": 25,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "K-pop & idol",
-          "score": 63
-        },
-        {
-          "trend_id": "youtube:gNUMxMuxH20",
-          "platform": "youtube",
-          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-11",
-          "days_on": 3,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 11,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "K-pop & idol",
-          "score": 60
-        },
-        {
-          "trend_id": "youtube:iNMvUYjaieA",
-          "platform": "youtube",
-          "title": "EVAN (에반) 'Death of Me' Official MV",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-08",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-08",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 4,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "K-pop & idol",
-          "score": 49
-        },
-        {
-          "trend_id": "youtube:vAv7P8AEJPQ",
-          "platform": "youtube",
-          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV Teaser",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-08",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-09",
-          "days_on": 3,
-          "best_rank": 1,
-          "current_rank": 4,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 11,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "K-pop & idol",
-          "score": 53
-        },
-        {
-          "trend_id": "youtube:pgctulw9RQc",
-          "platform": "youtube",
-          "title": "[MV] Bagai Cinta Pertama - JKT48 Trainee",
-          "daily": [
-            {
-              "day": "2026-09-10",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 13
-            }
-          ],
-          "first_seen": "2026-09-10",
-          "last_seen": "2026-09-11",
-          "days_on": 2,
-          "best_rank": 4,
-          "current_rank": 13,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 7,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": "K-pop & idol",
-          "score": 32
-        }
-      ]
-    },
-    {
-      "label": "Musik & lagu",
-      "method": "tema",
-      "platforms": [
-        "google",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "google:santos-laguna",
-          "platform": "google",
-          "title": "santos laguna",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "Musik & lagu",
-          "score": 53
-        },
-        {
-          "trend_id": "youtube:238X2xUGxRM",
-          "platform": "youtube",
-          "title": "Katy Perry - The One That Got Away (Lyrics)",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 10
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-10",
-          "days_on": 3,
-          "best_rank": 1,
-          "current_rank": 10,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 11,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "Musik & lagu",
-          "score": 42
-        },
-        {
-          "trend_id": "youtube:EEevRrB3cuw",
-          "platform": "youtube",
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 10
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "puncak",
-          "score_parts": {
-            "velocity": 35,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": "Musik & lagu",
-          "score": 73
-        },
-        {
-          "trend_id": "youtube:Jn-uRyPZaJM",
-          "platform": "youtube",
-          "title": "Nabila Taqiyyah - Tak Semudah Hompimpa (Official Music Video)",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 10
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 12
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-14",
-          "days_on": 4,
-          "best_rank": 4,
-          "current_rank": 12,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 14,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": "Musik & lagu",
-          "score": 39
-        },
-        {
-          "trend_id": "youtube:QC24-9RBiVg",
-          "platform": "youtube",
-          "title": "Astrid - Terpukau (Lyrics)",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-07",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": "Musik & lagu",
-          "score": 47
-        },
-        {
-          "trend_id": "youtube:f2lD7clyD3E",
-          "platform": "youtube",
-          "title": "Yeni Inka - TERBELAH JADI DUA (Official Music Yi Production)",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": "Musik & lagu",
-          "score": 50
         }
       ]
     },
@@ -2742,6 +1782,35 @@
           "score": 53
         },
         {
+          "trend_id": "youtube:BwzcpZxkTYg",
+          "platform": "youtube",
+          "title": "TERIKAT JANJI TRAILER: SENA PANIK‼️ KO BISA KEBETULAN DAVINA KETEMU VERONIKA? - Arya Saloka",
+          "daily": [
+            {
+              "day": "2026-09-08",
+              "best_rank": 2
+            },
+            {
+              "day": "2026-09-09",
+              "best_rank": 2
+            }
+          ],
+          "first_seen": "2026-09-08",
+          "last_seen": "2026-09-09",
+          "days_on": 2,
+          "best_rank": 2,
+          "current_rank": 2,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 12,
+            "cross_platform": 16
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 53
+        },
+        {
           "trend_id": "youtube:IfFylvCxBSI",
           "platform": "youtube",
           "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
@@ -2827,35 +1896,403 @@
           },
           "theme": "Tontonan & sinetron",
           "score": 53
-        },
+        }
+      ]
+    },
+    {
+      "label": "asmara",
+      "method": "literal",
+      "platforms": [
+        "google",
+        "youtube"
+      ],
+      "members": [
         {
-          "trend_id": "youtube:bMx_wmlQ_WM",
-          "platform": "youtube",
-          "title": "TERIKAT JANJI TRAILER: REZA KECIDUK DIPA‼️ SENA NEKAT BAWA DAVINA KE MISI PENYELAMATAN? - rya Saloka",
+          "trend_id": "google:asmara-gen-z-hari-ini",
+          "platform": "google",
+          "title": "asmara gen z hari ini",
           "daily": [
             {
-              "day": "2026-09-11",
-              "best_rank": 2
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 2
+              "day": "2026-09-09",
+              "best_rank": 7
             }
           ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-12",
+          "first_seen": "2026-09-09",
+          "last_seen": "2026-09-09",
+          "days_on": 1,
+          "best_rank": 7,
+          "current_rank": 7,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 44
+        },
+        {
+          "trend_id": "youtube:bKe0ckmaHmY",
+          "platform": "youtube",
+          "title": "HAPPY ASMARA - PENGGANTINE (Official Music Video)",
+          "daily": [
+            {
+              "day": "2026-09-12",
+              "best_rank": 7
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 7
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 10
+            }
+          ],
+          "first_seen": "2026-09-12",
+          "last_seen": "2026-09-14",
+          "days_on": 3,
+          "best_rank": 7,
+          "current_rank": 10,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 11,
+            "persistence": 11,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Musik & lagu",
+          "score": 44
+        },
+        {
+          "trend_id": "youtube:WdKks44lOH0",
+          "platform": "youtube",
+          "title": "EPISODE TERAKHIR!! TRAILER FULL ASMARA GEN Z MINGGU! AQEELA FATTAH HARRY ROSE MOHAN RAISA TAMAT",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 8
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 8
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-14",
           "days_on": 2,
-          "best_rank": 2,
-          "current_rank": 2,
+          "best_rank": 8,
+          "current_rank": 8,
           "stage": "stabil",
           "score_parts": {
             "velocity": 18,
             "persistence": 7,
-            "peak": 12,
+            "peak": 6,
             "cross_platform": 16
           },
           "theme": "Tontonan & sinetron",
-          "score": 53
+          "score": 47
+        }
+      ]
+    },
+    {
+      "label": "basah",
+      "method": "literal",
+      "platforms": [
+        "shopee",
+        "youtube"
+      ],
+      "members": [
+        {
+          "trend_id": "youtube:RAUhzU7wk4w",
+          "platform": "youtube",
+          "title": "RIANTI HANCUR !! TANGKAP BASAH ADITYA DAN NADIA DI HOTEL - TRAILER MERANGKAI KISAH INDAH HARI INI",
+          "daily": [
+            {
+              "day": "2026-09-12",
+              "best_rank": 5
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 5
+            }
+          ],
+          "first_seen": "2026-09-12",
+          "last_seen": "2026-09-13",
+          "days_on": 2,
+          "best_rank": 5,
+          "current_rank": 5,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 9,
+            "cross_platform": 16
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 50
+        },
+        {
+          "trend_id": "shopee:daviena-perfect-powder-cream-bedak-basah-10gr",
+          "platform": "shopee",
+          "title": "Daviena Perfect Powder Cream Bedak Basah 10gr",
+          "daily": [
+            {
+              "day": "2026-09-08",
+              "best_rank": 18
+            },
+            {
+              "day": "2026-09-09",
+              "best_rank": 18
+            },
+            {
+              "day": "2026-09-10",
+              "best_rank": 18
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 18
+            },
+            {
+              "day": "2026-09-12",
+              "best_rank": 18
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 18
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 18
+            }
+          ],
+          "first_seen": "2026-09-08",
+          "last_seen": "2026-09-14",
+          "days_on": 7,
+          "best_rank": 18,
+          "current_rank": 18,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 25,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 62
+        }
+      ]
+    },
+    {
+      "label": "death",
+      "method": "literal",
+      "platforms": [
+        "netflix",
+        "youtube"
+      ],
+      "members": [
+        {
+          "trend_id": "youtube:iNMvUYjaieA",
+          "platform": "youtube",
+          "title": "EVAN (에반) 'Death of Me' Official MV",
+          "daily": [
+            {
+              "day": "2026-09-07",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-08",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-07",
+          "last_seen": "2026-09-08",
+          "days_on": 2,
+          "best_rank": 1,
+          "current_rank": 4,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 11,
+            "persistence": 7,
+            "peak": 15,
+            "cross_platform": 16
+          },
+          "theme": "K-pop & idol",
+          "score": 49
+        },
+        {
+          "trend_id": "netflix:death-of-the-pastor-s-wife",
+          "platform": "netflix",
+          "title": "Death of the Pastor's Wife",
+          "daily": [
+            {
+              "day": "2026-09-09",
+              "best_rank": 17
+            },
+            {
+              "day": "2026-09-10",
+              "best_rank": 17
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 17
+            },
+            {
+              "day": "2026-09-12",
+              "best_rank": 17
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 17
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 17
+            }
+          ],
+          "first_seen": "2026-09-09",
+          "last_seen": "2026-09-14",
+          "days_on": 6,
+          "best_rank": 17,
+          "current_rank": 17,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 21,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 58
+        }
+      ]
+    },
+    {
+      "label": "harry",
+      "method": "literal",
+      "platforms": [
+        "google",
+        "youtube"
+      ],
+      "members": [
+        {
+          "trend_id": "google:harry-kane",
+          "platform": "google",
+          "title": "harry kane",
+          "daily": [
+            {
+              "day": "2026-09-07",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-07",
+          "last_seen": "2026-09-07",
+          "days_on": 1,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 47
+        },
+        {
+          "trend_id": "youtube:WdKks44lOH0",
+          "platform": "youtube",
+          "title": "EPISODE TERAKHIR!! TRAILER FULL ASMARA GEN Z MINGGU! AQEELA FATTAH HARRY ROSE MOHAN RAISA TAMAT",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 8
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 8
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-14",
+          "days_on": 2,
+          "best_rank": 8,
+          "current_rank": 8,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 47
+        }
+      ]
+    },
+    {
+      "label": "harry",
+      "method": "literal",
+      "platforms": [
+        "google",
+        "youtube"
+      ],
+      "members": [
+        {
+          "trend_id": "google:harry-maguire",
+          "platform": "google",
+          "title": "harry maguire",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 2
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-13",
+          "days_on": 1,
+          "best_rank": 2,
+          "current_rank": 2,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 12,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 50
+        },
+        {
+          "trend_id": "youtube:WdKks44lOH0",
+          "platform": "youtube",
+          "title": "EPISODE TERAKHIR!! TRAILER FULL ASMARA GEN Z MINGGU! AQEELA FATTAH HARRY ROSE MOHAN RAISA TAMAT",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 8
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 8
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-14",
+          "days_on": 2,
+          "best_rank": 8,
+          "current_rank": 8,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 47
         }
       ]
     }
