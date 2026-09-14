@@ -99,13 +99,24 @@ def tokens(title: str) -> set[str]:
     return {w for w in t.split() if len(w) >= 4 and w not in STOP}
 
 
+_THEME_RE = {
+    name: re.compile(r"\b(?:" + "|".join(re.escape(k.strip()) for k in keys) + r")\b")
+    for name, keys in THEMES.items()
+}
+
+
 def theme_of(title: str) -> str | None:
-    """Tema dari kamus. Cocok bila kata kunci muncul sebagai substring."""
+    """Tema dari kamus, dicocokkan pada BATAS KATA.
+
+    Penting: pencocokan substring keliru ("sabun" mengandung "abu",
+    "mainan anak" mengandung "anak" seperti "anak krakatau"), sehingga
+    produk kecantikan sempat masuk klaster bencana. Batas kata mencegahnya.
+    """
     t = re.sub(r"[#_]", " ", (title or "").lower())
-    for name, keys in THEMES.items():
-        for k in keys:
-            if k in t:
-                return name
+    t = re.sub(r"[^a-z0-9\s]", " ", t)
+    for name, rx in _THEME_RE.items():
+        if rx.search(t):
+            return name
     return None
 
 
@@ -198,6 +209,7 @@ def build(db: D1Client, window: int = 7) -> dict:
 
     # ── klaster lintas platform ──────────────────────────────────────
     clusters: list[dict] = []
+    seen_keys: set[frozenset] = set()
 
     by_theme: dict[str, list[dict]] = defaultdict(list)
     for t in trends:
@@ -211,11 +223,24 @@ def build(db: D1Client, window: int = 7) -> dict:
                 "members": sorted(group, key=lambda g: g["best_rank"] or 99)[:6],
             })
 
-    # literal: irisan token antar platform (menangkap nama/tajuk berulang)
-    tok = {t["trend_id"]: tokens(t["title"]) for t in trends}
+    # literal: hanya token DISTINGTIF yang boleh menautkan dua tren.
+    # Token umum ("anak", "2026", "sticky") muncul di banyak judul tak
+    # berkaitan dan menghasilkan klaster palsu, jadi token yang dipakai di
+    # lebih dari MAX_DF tren dibuang lebih dulu.
+    MAX_DF = 6
+    tok_raw = {t["trend_id"]: tokens(t["title"]) for t in trends}
+    df: dict[str, int] = defaultdict(int)
+    for s_ in tok_raw.values():
+        for w in s_:
+            df[w] += 1
+    tok = {
+        tid: {w for w in ws if df[w] <= MAX_DF and not w.isdigit()}
+        for tid, ws in tok_raw.items()
+    }
+
     seen: set[str] = set()
     for a in trends:
-        if a["trend_id"] in seen:
+        if a["trend_id"] in seen or not tok[a["trend_id"]]:
             continue
         grp = [a]
         for b in trends:
@@ -224,15 +249,20 @@ def build(db: D1Client, window: int = 7) -> dict:
             if tok[a["trend_id"]] & tok[b["trend_id"]]:
                 grp.append(b)
         plats = sorted({g["platform"] for g in grp})
-        if len(plats) >= 2:
-            for g in grp:
-                seen.add(g["trend_id"])
-            shared = set.intersection(*[tok[g["trend_id"]] for g in grp]) or set()
-            clusters.append({
-                "label": ", ".join(sorted(shared)[:3]) or a["title"][:40],
-                "method": "literal", "platforms": plats,
-                "members": sorted(grp, key=lambda g: g["best_rank"] or 99)[:6],
-            })
+        if len(plats) < 2:
+            continue
+        key = frozenset(g["trend_id"] for g in grp)
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        for g in grp:
+            seen.add(g["trend_id"])
+        shared = set.intersection(*[tok[g["trend_id"]] for g in grp]) or set()
+        clusters.append({
+            "label": " · ".join(sorted(shared)[:3]) or a["title"][:40],
+            "method": "literal", "platforms": plats,
+            "members": sorted(grp, key=lambda g: g["best_rank"] or 99)[:6],
+        })
 
     # skor lintas platform (0–25) diberikan ke anggota klaster
     cross_of: dict[str, int] = {}
