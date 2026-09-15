@@ -51,3 +51,8 @@ cloudflare_api.txt
 git-update.bat
 cleanup-all.bat
 *-log.txt
+
+# hasil render laporan (berkas resmi ada di public/laporan-contoh.pdf)
+laporan-v2.html
+laporan-v2.pdf
+laporan*.html
