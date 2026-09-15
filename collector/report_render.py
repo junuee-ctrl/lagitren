@@ -5,7 +5,8 @@ disusun redaksi; struktur tiap temuan WAJIB: Fakta → Interpretasi → Rekomend
 supaya pembaca (dan klien mereka) bisa memisahkan data dari penilaian.
 
 Pemakaian:
-  python report_render.py > ../laporan.html
+  python report_render.py > ../laporan.html                 # edisi terkunci
+  python report_render.py ../content/intel/latest.json > x  # data terbaru
 """
 from __future__ import annotations
 
@@ -14,7 +15,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-INTEL = json.loads((ROOT / "content/intel/latest.json").read_text(encoding="utf-8"))
+
+# Naskah naratif (FINDINGS / AGENCY / ALERT) ditulis untuk satu edisi tertentu,
+# jadi berkas datanya ikut dikunci. Lewatkan path lain sbg argumen untuk edisi baru.
+_SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "content/intel/edisi-2026-09-14.json"
+INTEL = json.loads(_SRC.read_text(encoding="utf-8"))
 
 BRAND, GRAPE, ACCENT, AMBER = "#E6007A", "#8B3DD6", "#00C9B1", "#F59E0B"
 INK, MUTED, LINE = "#14121A", "#6B6878", "#E6E4EC"
