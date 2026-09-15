@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-14T13:18:21+00:00",
+  "generated_at": "2026-09-15T06:00:55+00:00",
   "window_days": 7,
   "scoring": {
     "velocity": "0-35 · perbaikan peringkat dalam jendela",
@@ -8,6 +8,39 @@
     "peak": "0-15 · peringkat terbaik yang dicapai"
   },
   "radar": [
+    {
+      "trend_id": "youtube:EEevRrB3cuw",
+      "platform": "youtube",
+      "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+      "daily": [
+        {
+          "day": "2026-09-13",
+          "best_rank": 10
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-15",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-13",
+      "last_seen": "2026-09-15",
+      "days_on": 3,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 35,
+        "persistence": 11,
+        "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": "Musik & lagu",
+      "score": 61
+    },
     {
       "trend_id": "shopee:jj-glow-sabun-gluta-pink-10x-brightening-niacinamide-kojic-a",
       "platform": "shopee",
@@ -56,35 +89,6 @@
       },
       "theme": null,
       "score": 58
-    },
-    {
-      "trend_id": "youtube:EEevRrB3cuw",
-      "platform": "youtube",
-      "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
-      "daily": [
-        {
-          "day": "2026-09-13",
-          "best_rank": 10
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-13",
-      "last_seen": "2026-09-14",
-      "days_on": 2,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "puncak",
-      "score_parts": {
-        "velocity": 35,
-        "persistence": 7,
-        "peak": 15,
-        "cross_platform": 0
-      },
-      "theme": "Musik & lagu",
-      "score": 57
     },
     {
       "trend_id": "google:olahraga",
@@ -1094,9 +1098,9 @@
   "categories": [
     {
       "label": "Sepak bola",
-      "n_trends": 130,
+      "n_trends": 137,
       "platforms": {
-        "google": 122,
+        "google": 129,
         "youtube": 8
       },
       "top": [
@@ -1137,6 +1141,31 @@
           ],
           "first_seen": "2026-09-12",
           "last_seen": "2026-09-12",
+          "days_on": 1,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "Sepak bola",
+          "score": 37
+        },
+        {
+          "trend_id": "google:braga-vs-estoril",
+          "platform": "google",
+          "title": "braga vs estoril",
+          "daily": [
+            {
+              "day": "2026-09-14",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-14",
+          "last_seen": "2026-09-14",
           "days_on": 1,
           "best_rank": 1,
           "current_rank": 1,
@@ -1199,39 +1228,14 @@
           },
           "theme": "Sepak bola",
           "score": 37
-        },
-        {
-          "trend_id": "google:inter-miami-vs-nashville",
-          "platform": "google",
-          "title": "inter miami vs nashville",
-          "daily": [
-            {
-              "day": "2026-09-12",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-12",
-          "last_seen": "2026-09-12",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "Sepak bola",
-          "score": 37
         }
       ]
     },
     {
       "label": "Tontonan & sinetron",
-      "n_trends": 38,
+      "n_trends": 37,
       "platforms": {
-        "youtube": 37,
+        "youtube": 36,
         "netflix": 1
       },
       "top": [
@@ -1243,22 +1247,26 @@
             {
               "day": "2026-09-14",
               "best_rank": 2
+            },
+            {
+              "day": "2026-09-15",
+              "best_rank": 2
             }
           ],
           "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
+          "last_seen": "2026-09-15",
+          "days_on": 2,
           "best_rank": 2,
           "current_rank": 2,
-          "stage": "baru",
+          "stage": "stabil",
           "score_parts": {
             "velocity": 18,
-            "persistence": 4,
+            "persistence": 7,
             "peak": 12,
             "cross_platform": 0
           },
           "theme": "Tontonan & sinetron",
-          "score": 34
+          "score": 37
         },
         {
           "trend_id": "youtube:BHVJcew0ERs",
@@ -1379,331 +1387,11 @@
       ]
     },
     {
-      "label": "Musik & lagu",
-      "n_trends": 15,
-      "platforms": {
-        "youtube": 15
-      },
-      "top": [
-        {
-          "trend_id": "youtube:238X2xUGxRM",
-          "platform": "youtube",
-          "title": "Katy Perry - The One That Got Away (Lyrics)",
-          "daily": [
-            {
-              "day": "2026-09-08",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 10
-            }
-          ],
-          "first_seen": "2026-09-08",
-          "last_seen": "2026-09-10",
-          "days_on": 3,
-          "best_rank": 1,
-          "current_rank": 10,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 11,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 26
-        },
-        {
-          "trend_id": "youtube:EEevRrB3cuw",
-          "platform": "youtube",
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 10
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "puncak",
-          "score_parts": {
-            "velocity": 35,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 57
-        },
-        {
-          "trend_id": "youtube:Jn-uRyPZaJM",
-          "platform": "youtube",
-          "title": "Nabila Taqiyyah - Tak Semudah Hompimpa (Official Music Video)",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 10
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 12
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-14",
-          "days_on": 4,
-          "best_rank": 4,
-          "current_rank": 12,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 14,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 23
-        },
-        {
-          "trend_id": "youtube:QC24-9RBiVg",
-          "platform": "youtube",
-          "title": "Astrid - Terpukau (Lyrics)",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-07",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 31
-        },
-        {
-          "trend_id": "youtube:f2lD7clyD3E",
-          "platform": "youtube",
-          "title": "Yeni Inka - TERBELAH JADI DUA (Official Music Yi Production)",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 34
-        }
-      ]
-    },
-    {
-      "label": "K-pop & idol",
-      "n_trends": 13,
-      "platforms": {
-        "youtube": 13
-      },
-      "top": [
-        {
-          "trend_id": "youtube:FyS5dAywkEo",
-          "platform": "youtube",
-          "title": "LISA - SaWaDiKa (Official Music Video)",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-07",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "K-pop & idol",
-          "score": 37
-        },
-        {
-          "trend_id": "youtube:J77i-E_0JWg",
-          "platform": "youtube",
-          "title": "LISA - SaWaDiKa (Dance Performance Video)",
-          "daily": [
-            {
-              "day": "2026-09-12",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-12",
-          "last_seen": "2026-09-13",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "puncak",
-          "score_parts": {
-            "velocity": 25,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "K-pop & idol",
-          "score": 47
-        },
-        {
-          "trend_id": "youtube:gNUMxMuxH20",
-          "platform": "youtube",
-          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-11",
-          "days_on": 3,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 11,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "K-pop & idol",
-          "score": 44
-        },
-        {
-          "trend_id": "youtube:iNMvUYjaieA",
-          "platform": "youtube",
-          "title": "EVAN (에반) 'Death of Me' Official MV",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-08",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-08",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 4,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "K-pop & idol",
-          "score": 33
-        },
-        {
-          "trend_id": "youtube:vAv7P8AEJPQ",
-          "platform": "youtube",
-          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV Teaser",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-08",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-09",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-09",
-          "days_on": 3,
-          "best_rank": 1,
-          "current_rank": 4,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 11,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "K-pop & idol",
-          "score": 37
-        }
-      ]
-    },
-    {
       "label": "Bencana alam",
-      "n_trends": 11,
+      "n_trends": 12,
       "platforms": {
         "google": 10,
-        "youtube": 1
+        "youtube": 2
       },
       "top": [
         {
@@ -1830,6 +1518,330 @@
           },
           "theme": "Bencana alam",
           "score": 31
+        }
+      ]
+    },
+    {
+      "label": "K-pop & idol",
+      "n_trends": 12,
+      "platforms": {
+        "youtube": 12
+      },
+      "top": [
+        {
+          "trend_id": "youtube:J77i-E_0JWg",
+          "platform": "youtube",
+          "title": "LISA - SaWaDiKa (Dance Performance Video)",
+          "daily": [
+            {
+              "day": "2026-09-12",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-12",
+          "last_seen": "2026-09-13",
+          "days_on": 2,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "puncak",
+          "score_parts": {
+            "velocity": 25,
+            "persistence": 7,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "K-pop & idol",
+          "score": 47
+        },
+        {
+          "trend_id": "youtube:gNUMxMuxH20",
+          "platform": "youtube",
+          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
+          "daily": [
+            {
+              "day": "2026-09-09",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-10",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-09",
+          "last_seen": "2026-09-11",
+          "days_on": 3,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 11,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "K-pop & idol",
+          "score": 44
+        },
+        {
+          "trend_id": "youtube:vAv7P8AEJPQ",
+          "platform": "youtube",
+          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV Teaser",
+          "daily": [
+            {
+              "day": "2026-09-08",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-09",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-08",
+          "last_seen": "2026-09-09",
+          "days_on": 2,
+          "best_rank": 1,
+          "current_rank": 4,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 11,
+            "persistence": 7,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "K-pop & idol",
+          "score": 33
+        },
+        {
+          "trend_id": "youtube:iNMvUYjaieA",
+          "platform": "youtube",
+          "title": "EVAN (에반) 'Death of Me' Official MV",
+          "daily": [
+            {
+              "day": "2026-09-08",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-08",
+          "last_seen": "2026-09-08",
+          "days_on": 1,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "K-pop & idol",
+          "score": 31
+        },
+        {
+          "trend_id": "youtube:pgctulw9RQc",
+          "platform": "youtube",
+          "title": "[MV] Bagai Cinta Pertama - JKT48 Trainee",
+          "daily": [
+            {
+              "day": "2026-09-10",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 13
+            }
+          ],
+          "first_seen": "2026-09-10",
+          "last_seen": "2026-09-11",
+          "days_on": 2,
+          "best_rank": 4,
+          "current_rank": 13,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 0,
+            "persistence": 7,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "K-pop & idol",
+          "score": 16
+        }
+      ]
+    },
+    {
+      "label": "Musik & lagu",
+      "n_trends": 11,
+      "platforms": {
+        "youtube": 11
+      },
+      "top": [
+        {
+          "trend_id": "youtube:238X2xUGxRM",
+          "platform": "youtube",
+          "title": "Katy Perry - The One That Got Away (Lyrics)",
+          "daily": [
+            {
+              "day": "2026-09-08",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-09",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-10",
+              "best_rank": 10
+            }
+          ],
+          "first_seen": "2026-09-08",
+          "last_seen": "2026-09-10",
+          "days_on": 3,
+          "best_rank": 1,
+          "current_rank": 10,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 0,
+            "persistence": 11,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 26
+        },
+        {
+          "trend_id": "youtube:EEevRrB3cuw",
+          "platform": "youtube",
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 10
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-15",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-15",
+          "days_on": 3,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "puncak",
+          "score_parts": {
+            "velocity": 35,
+            "persistence": 11,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 61
+        },
+        {
+          "trend_id": "youtube:Jn-uRyPZaJM",
+          "platform": "youtube",
+          "title": "Nabila Taqiyyah - Tak Semudah Hompimpa (Official Music Video)",
+          "daily": [
+            {
+              "day": "2026-09-11",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-12",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 10
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 12
+            }
+          ],
+          "first_seen": "2026-09-11",
+          "last_seen": "2026-09-14",
+          "days_on": 4,
+          "best_rank": 4,
+          "current_rank": 12,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 0,
+            "persistence": 14,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 23
+        },
+        {
+          "trend_id": "youtube:f2lD7clyD3E",
+          "platform": "youtube",
+          "title": "Yeni Inka - TERBELAH JADI DUA (Official Music Yi Production)",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-14",
+          "days_on": 2,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 34
+        },
+        {
+          "trend_id": "youtube:mZcr-ALcRmQ",
+          "platform": "youtube",
+          "title": "Mark Lee (마크리) - My Friend (Official Music Video)",
+          "daily": [
+            {
+              "day": "2026-09-10",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-10",
+          "last_seen": "2026-09-11",
+          "days_on": 2,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 34
         }
       ]
     },
@@ -2191,36 +2203,11 @@
     },
     {
       "label": "Politik & kebijakan",
-      "n_trends": 3,
+      "n_trends": 2,
       "platforms": {
-        "google": 3
+        "google": 2
       },
       "top": [
-        {
-          "trend_id": "google:prabowo-subianto",
-          "platform": "google",
-          "title": "prabowo subianto",
-          "daily": [
-            {
-              "day": "2026-09-07",
-              "best_rank": 5
-            }
-          ],
-          "first_seen": "2026-09-07",
-          "last_seen": "2026-09-07",
-          "days_on": 1,
-          "best_rank": 5,
-          "current_rank": 5,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Politik & kebijakan",
-          "score": 31
-        },
         {
           "trend_id": "google:listyo-sigit-prabowo",
           "platform": "google",
@@ -2308,5 +2295,5 @@
       ]
     }
   ],
-  "total_trends": 644
+  "total_trends": 633
 }

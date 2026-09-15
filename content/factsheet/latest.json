@@ -1,42 +1,47 @@
 {
-  "generated_at": "2026-09-14T13:18:18+00:00",
+  "generated_at": "2026-09-15T06:00:53+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-14 12:18:19",
-    "rows": 9572,
-    "days": 26.2
+    "last": "2026-09-15 01:52:15",
+    "rows": 9687,
+    "days": 26.8
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "andre taulany",
+          "title": "león vs atlético san luis",
           "rank": 1,
-          "metric": 500
+          "metric": 1000
         },
         {
-          "title": "amanda rigby",
+          "title": "bahan bakar",
           "rank": 2,
           "metric": 2000
         },
         {
-          "title": "ios 27",
+          "title": "minyak bumi",
           "rank": 3,
-          "metric": 500
-        },
-        {
-          "title": "saham bbri",
-          "rank": 4,
           "metric": 100
         },
         {
-          "title": "rupiah hari ini",
+          "title": "bahia vs remo",
+          "rank": 4,
+          "metric": 500
+        },
+        {
+          "title": "aqi",
           "rank": 5,
-          "metric": 5000
+          "metric": 100
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "al shamal",
+          "first_seen": "2026-09-14 16:39:35",
+          "best_rank": 1
+        },
         {
           "title": "andre taulany",
           "first_seen": "2026-09-14 10:40:53",
@@ -68,36 +73,36 @@
           "best_rank": 1
         },
         {
-          "title": "bupati",
-          "first_seen": "2026-09-10 22:07:33",
+          "title": "braga vs estoril",
+          "first_seen": "2026-09-14 20:37:10",
           "best_rank": 1
         },
         {
-          "title": "classroom",
-          "first_seen": "2026-09-08 01:12:36",
+          "title": "bupati",
+          "first_seen": "2026-09-10 22:07:33",
           "best_rank": 1
         },
         {
           "title": "copenhagen vs ac horsens",
           "first_seen": "2026-09-11 17:16:47",
           "best_rank": 1
-        },
-        {
-          "title": "dortmund vs paderborn",
-          "first_seen": "2026-09-12 12:56:53",
-          "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
-          "title": "morgan stanley",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
           "title": "olahraga",
           "days_on": 3,
           "best_rank": 2
+        },
+        {
+          "title": "morgan stanley",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "trader",
+          "days_on": 2,
+          "best_rank": 1
         },
         {
           "title": "daejeon citizen vs fc anyang",
@@ -108,11 +113,6 @@
           "title": "elena rybakina",
           "days_on": 2,
           "best_rank": 2
-        },
-        {
-          "title": "macau",
-          "days_on": 2,
-          "best_rank": 2
         }
       ]
     },
@@ -121,27 +121,27 @@
         {
           "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
           "rank": 1,
-          "metric": 110557
+          "metric": 185852
         },
         {
           "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
           "rank": 2,
-          "metric": 75563
+          "metric": 118331
         },
         {
           "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 2946896
+          "metric": 2978917
         },
         {
           "title": "AJENG FEBRIA - SALAH APA (OFFICIAL MUSIC VIDEO AMBYAR EVERYWHERE) | SALAH APA YANG TAK KUMAAFKAN",
           "rank": 4,
-          "metric": 20630
+          "metric": 80492
         },
         {
           "title": "ROSE IN DURIAN VILLAGE PART 2 | OFFICIAL TRAILER | FAN MOVIE",
           "rank": 5,
-          "metric": 34240
+          "metric": 42594
         }
       ],
       "newcomers_7d": [
@@ -171,16 +171,6 @@
           "best_rank": 1
         },
         {
-          "title": "EVAN (에반) 'Death of Me' Official MV",
-          "first_seen": "2026-09-07 17:46:41",
-          "best_rank": 1
-        },
-        {
-          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV Teaser",
-          "first_seen": "2026-09-07 19:41:00",
-          "best_rank": 1
-        },
-        {
           "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
           "first_seen": "2026-09-14 05:56:25",
           "best_rank": 2
@@ -193,6 +183,16 @@
         {
           "title": "TERIKAT JANJI TRAILER: SENA PANIK‼️ KO BISA KEBETULAN DAVINA KETEMU VERONIKA? - Arya Saloka",
           "first_seen": "2026-09-08 14:58:42",
+          "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
+          "first_seen": "2026-09-13 14:09:46",
+          "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: DAVINA BIKIN REZA & DION NYEBUR‼️ GIMANA REAKSI SENA? - Arya Saloka, Asha Ass",
+          "first_seen": "2026-09-09 06:42:04",
           "best_rank": 2
         }
       ],
@@ -218,7 +218,7 @@
           "best_rank": 1
         },
         {
-          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
           "days_on": 3,
           "best_rank": 1
         }
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
+          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
           "rank": 1,
-          "metric": 2006693
+          "metric": 995407
         },
         {
-          "title": "Kejadian di Malaysia ini terekam CCTV halte bus. Seorang perempuan berdiri di pinggir…",
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
           "rank": 2,
-          "metric": 1461524
+          "metric": 778003
         },
         {
-          "title": "Sebuah video CCTV dari SPBU di China viral di media sosial. Dalam rekaman itu, terlihat…",
+          "title": "“Tanah ini disiram oleh air mata dan darah para pahlawan; tugas kita merawatnya dengan…",
           "rank": 3,
-          "metric": 1415062
+          "metric": 368322
         },
         {
-          "title": "@Prada #Prada #Paragon",
+          "title": "Warga Aceh Injak Lambang Garuda!",
           "rank": 4,
-          "metric": 1207241
+          "metric": 193830
         },
         {
-          "title": "Viral di media sosial, video seorang bocah kecil yang sedang melaksanakan salat namun…",
+          "title": "Bersandar di bahumu adalah kekuatan bagiku..",
           "rank": 5,
-          "metric": 810388
+          "metric": 162699
         }
       ],
       "newcomers_7d": [],
@@ -258,19 +258,19 @@
     "tiktok": {
       "top_now": [
         {
-          "title": "#abuvulkanik",
+          "title": "#80s",
           "rank": 1,
-          "metric": 89224
+          "metric": 33110
         },
         {
           "title": "#flowasone",
           "rank": 2,
-          "metric": 49012
+          "metric": 49088
         },
         {
-          "title": "#80s",
+          "title": "#dirumahaja",
           "rank": 3,
-          "metric": 29845
+          "metric": 103637
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "Purbaya",
+          "title": "#OLFDreamOninSaoPaulo",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "Suahasil Nazara",
+          "title": "#AADCShortFilm",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "Menteri Keuangan",
+          "title": "Purbaya",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#Levisxnamtanfilm",
+          "title": "JOSSGAWIN OFDO IN BRAZIL",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "Bekerja Tanpa Lelah",
+          "title": "#MTQcabangTilawah",
           "rank": 5,
           "metric": null
         }
