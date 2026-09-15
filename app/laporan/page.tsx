@@ -5,14 +5,14 @@ import { CONTACT_EMAIL, SITE_URL } from "@/lib/site";
 export const revalidate = 86400;
 
 export const metadata: Metadata = {
-  title: "Laporan Tren Mingguan Indonesia — untuk Brand & Agensi",
+  title: "Indonesia Weekly Trend Intelligence — Laporan Tren untuk Brand & Agensi",
   description:
-    "Laporan mingguan berbasis arsip peringkat 7 platform (Google, YouTube, TikTok, Instagram, X, Netflix, TikTok Shop). Apa yang naik, apa yang mati, apa yang menyeberang platform — plus rekomendasi praktis. Unduh contoh gratis.",
+    "Laporan intelijen tren mingguan dari arsip peringkat 7 platform (Google, YouTube, TikTok, Instagram, X, Netflix, TikTok Shop). Trend Score, kurva daur hidup, dan rekomendasi Fakta → Interpretasi → Rekomendasi. Unduh contoh gratis.",
   alternates: { canonical: "/laporan" },
   openGraph: {
-    title: "Laporan Tren Mingguan Indonesia — Lagi Tren Riset",
+    title: "Indonesia Weekly Trend Intelligence — Lagi Tren Riset",
     description:
-      "Arsip peringkat 7 platform, dirangkum jadi laporan mingguan untuk brand & agensi. Unduh contoh gratis.",
+      "Arsip peringkat 7 platform, dirangkum jadi laporan intelijen mingguan untuk brand & agensi. Unduh contoh gratis.",
     url: `${SITE_URL}/laporan`,
     images: [{ url: "/og/site", width: 1200, height: 630 }]
   }
@@ -22,25 +22,30 @@ const ISI = [
   {
     n: "01",
     t: "Ringkasan eksekutif",
-    d: "Lima temuan pekan ini, masing-masing dengan satu baris implikasi untuk brand."
+    d: "Lima temuan pekan ini, masing-masing dipecah menjadi Fakta → Interpretasi → Rekomendasi, dengan label DO / DON'T / WATCH."
   },
   {
     n: "02",
-    t: "Sinyal lintas platform",
-    d: "Topik yang muncul serentak di beberapa papan tren — penanda peristiwa nyata, bukan dorongan segelintir akun."
+    t: "Trend Radar",
+    d: "Tabel skor 0–100 tiap topik (kecepatan, lintas platform, ketahanan, puncak) plus riwayat peringkat hariannya."
   },
   {
     n: "03",
-    t: "Papan tren per platform",
-    d: "Posisi teratas Google, YouTube, TikTok, X, Instagram, Netflix, dan produk TikTok Shop."
+    t: "Kurva daur hidup & kategori",
+    d: "Grafik pergerakan peringkat — naik, memuncak, bertahan, menurun — dan bobot tema pekan ini."
   },
   {
     n: "04",
-    t: "Hiburan & ritel",
-    d: "Pergerakan peringkat: berapa lama sebuah judul atau produk bertahan di puncak."
+    t: "Untuk agensi",
+    d: "5 tren yang perlu diketahui klien, 3 yang aman diaktifkan, 2 yang sudah jenuh, 1 yang layak dipantau."
   },
   {
     n: "05",
+    t: "Trend Alert siap kirim klien",
+    d: "Halaman berdiri sendiri berisi alasan, momentum, jendela waktu, dan tindakan — paket Agency bisa memasang logo sendiri."
+  },
+  {
+    n: "06",
     t: "Metodologi & batasan",
     d: "Sumber tiap platform, jadwal pengambilan, dan apa yang TIDAK bisa dijawab data kami."
   }
@@ -60,6 +65,7 @@ const TIERS = [
     unit: "/bulan",
     items: [
       "Laporan lengkap PDF tiap pekan",
+      "Trend Radar + kurva daur hidup",
       "Akses arsip peringkat 7 platform",
       "1 permintaan kata kunci / bulan",
       "Tahunan Rp2.990.000 (hemat 2 bulan)"
@@ -71,10 +77,11 @@ const TIERS = [
     price: "Rp1.490.000",
     unit: "/bulan",
     items: [
+      "White-label: logo & warna agensi Anda",
+      "Halaman Trend Alert siap kirim ke klien",
       "Semua fitur Pro, hingga 5 pengguna",
       "Pantauan 10 kata kunci / brand",
-      "Rekap bulanan",
-      "Sesi tanya-jawab 30 menit/bulan"
+      "Rekap bulanan + sesi tanya-jawab 30 menit"
     ],
     hi: false
   },
@@ -98,7 +105,11 @@ const FAQ = [
   },
   {
     q: "Apakah laporannya ditulis AI?",
-    a: "Seluruh angka dihitung sistem kami dari basis data sendiri — AI tidak pernah menghasilkan angka. AI membantu menuliskan narasi dari lembar fakta tersebut, lalu redaksi memeriksanya sebelum terbit. Kebijakan lengkap ada di halaman Kebijakan Editorial."
+    a: "Angka dihasilkan pipeline otomatis dari basis data kami sendiri — bukan dikarang model bahasa. Tim redaksi bertanggung jawab atas interpretasi dan rekomendasi, yang dibantu perangkat AI dalam penyusunan draf dan diperiksa sebelum terbit. Kebijakan lengkap ada di halaman Kebijakan Editorial."
+  },
+  {
+    q: "Bisa dikirim ke klien dengan identitas agensi kami?",
+    a: "Bisa, di paket Agency. Halaman Trend Alert dan sampul laporan dapat memakai logo dan warna agensi Anda, sehingga bisa diteruskan ke klien apa adanya. Kami sertakan satu edisi ber-logo sebagai contoh sebelum Anda memutuskan."
   },
   {
     q: "Bisa minta pantauan kata kunci khusus brand kami?",
@@ -125,13 +136,15 @@ export default function LaporanPage() {
             Lagi Tren · Riset
           </span>
           <h1 className="mt-4 text-3xl font-extrabold leading-[1.12] tracking-tight sm:text-4xl">
-            Apa yang naik, apa yang mati,
+            Apa yang naik, berapa lama bertahan,
             <br />
-            apa yang menyeberang platform.
+            dan apa yang harus dilakukan.
           </h1>
           <p className="mt-4 max-w-xl text-sm text-white/90 sm:text-base">
-            Laporan tren mingguan Indonesia untuk brand dan agensi — disusun dari
-            arsip peringkat tujuh platform yang kami rekam sendiri setiap hari.
+            <b>Indonesia Weekly Trend Intelligence</b> — laporan mingguan untuk brand
+            dan agensi, disusun dari arsip peringkat tujuh platform yang kami rekam
+            sendiri setiap hari. Tiap topik datang dengan skor, kurva peringkat, dan
+            tindakan yang disarankan.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
@@ -169,8 +182,8 @@ export default function LaporanPage() {
               d: "Pencarian, video, hashtag, percakapan, tontonan, dan belanja — dalam satu tabel yang bisa dibandingkan."
             },
             {
-              t: "Sampai ke tindakan",
-              d: "Tiap temuan disertai satu baris implikasi: apa yang sebaiknya Anda tunda, percepat, atau hindari."
+              t: "Skor, bukan kesan",
+              d: "Tiap topik diberi Trend Score 0–100 dari kecepatan, ketahanan, dan puncaknya — lalu satu rekomendasi DO / DON'T / WATCH."
             }
           ].map((c) => (
             <div
@@ -204,9 +217,24 @@ export default function LaporanPage() {
         <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
           Ingin melihat bentuk aslinya?{" "}
           <a href="/laporan-contoh.pdf" className="font-semibold text-brand hover:underline">
-            Unduh edisi contoh (PDF, 6 halaman)
+            Unduh edisi contoh (PDF, 7 halaman)
           </a>{" "}
           — tanpa perlu mendaftar.
+        </p>
+      </section>
+
+      {/* Berapa waktu yang dihemat */}
+      <section className="mt-10 rounded-2xl border border-gray-200 bg-gray-50 p-6 dark:border-white/10 dark:bg-white/5">
+        <h2 className="text-xl font-extrabold text-ink dark:text-white">
+          Berapa waktu yang dihemat
+        </h2>
+        <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+          Membuka tujuh papan tren satu per satu, mencatat peringkatnya, lalu
+          merapikannya menjadi materi rapat memakan beberapa jam kerja strategist
+          setiap pekan — dan hasilnya tetap tanpa riwayat, karena platform tidak
+          menyimpan peringkat kemarin. Paket Pro menggantikan pekerjaan itu dengan
+          satu berkas yang sudah berisi angka, grafik, dan rekomendasi; paket Agency
+          menambahkan halaman yang bisa langsung diteruskan ke klien dengan logo Anda.
         </p>
       </section>
 
