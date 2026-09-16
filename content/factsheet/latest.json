@@ -1,42 +1,47 @@
 {
-  "generated_at": "2026-09-15T06:00:53+00:00",
+  "generated_at": "2026-09-16T05:56:34+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-15 01:52:15",
-    "rows": 9687,
-    "days": 26.8
+    "last": "2026-09-16 05:43:32",
+    "rows": 9921,
+    "days": 27.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "león vs atlético san luis",
+          "title": "puebla vs toluca",
           "rank": 1,
-          "metric": 1000
+          "metric": 200
         },
         {
-          "title": "bahan bakar",
+          "title": "boyaca chico",
           "rank": 2,
-          "metric": 2000
+          "metric": 100
         },
         {
-          "title": "minyak bumi",
+          "title": "florian wirtz",
           "rank": 3,
           "metric": 100
         },
         {
-          "title": "bahia vs remo",
+          "title": "são paulo vs boca juniors",
           "rank": 4,
           "metric": 500
         },
         {
-          "title": "aqi",
+          "title": "kualitas udara padang hari ini",
           "rank": 5,
           "metric": 100
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "ajax vs willem ii",
+          "first_seen": "2026-09-15 17:36:58",
+          "best_rank": 1
+        },
         {
           "title": "al shamal",
           "first_seen": "2026-09-14 16:39:35",
@@ -45,11 +50,6 @@
         {
           "title": "andre taulany",
           "first_seen": "2026-09-14 10:40:53",
-          "best_rank": 1
-        },
-        {
-          "title": "bansos pkh",
-          "first_seen": "2026-09-08 15:11:37",
           "best_rank": 1
         },
         {
@@ -68,11 +68,6 @@
           "best_rank": 1
         },
         {
-          "title": "boeing",
-          "first_seen": "2026-09-08 11:14:37",
-          "best_rank": 1
-        },
-        {
           "title": "braga vs estoril",
           "first_seen": "2026-09-14 20:37:10",
           "best_rank": 1
@@ -86,16 +81,26 @@
           "title": "copenhagen vs ac horsens",
           "first_seen": "2026-09-11 17:16:47",
           "best_rank": 1
+        },
+        {
+          "title": "dortmund vs paderborn",
+          "first_seen": "2026-09-12 12:56:53",
+          "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
-          "title": "olahraga",
+          "title": "hk",
           "days_on": 3,
-          "best_rank": 2
+          "best_rank": 5
         },
         {
           "title": "morgan stanley",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "platense vs fluminense",
           "days_on": 2,
           "best_rank": 1
         },
@@ -105,12 +110,7 @@
           "best_rank": 1
         },
         {
-          "title": "daejeon citizen vs fc anyang",
-          "days_on": 2,
-          "best_rank": 2
-        },
-        {
-          "title": "elena rybakina",
+          "title": "arab saudi",
           "days_on": 2,
           "best_rank": 2
         }
@@ -119,37 +119,32 @@
     "youtube": {
       "top_now": [
         {
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "title": "Katy Perry - The One That Got Away ( Lyrics)",
           "rank": 1,
-          "metric": 185852
+          "metric": 206682
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
+          "title": "TERIKAT JANJI TRAILER: SENA & DAVINA HARUS BERSIAP MENGHADAPI ARMAN ANDIKA⁉️ - Arua Saloka, Asha As",
           "rank": 2,
-          "metric": 118331
+          "metric": 118650
         },
         {
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
+          "title": "Perjalanan Yuta Mio Dari Bayi Sampai Tua Dan Menjadi Hantu Menyeramkan | ROBLOX",
           "rank": 3,
-          "metric": 2978917
+          "metric": 77115
         },
         {
-          "title": "AJENG FEBRIA - SALAH APA (OFFICIAL MUSIC VIDEO AMBYAR EVERYWHERE) | SALAH APA YANG TAK KUMAAFKAN",
+          "title": "Kera Sakti - DJiamputh",
           "rank": 4,
-          "metric": 80492
+          "metric": 58482
         },
         {
-          "title": "ROSE IN DURIAN VILLAGE PART 2 | OFFICIAL TRAILER | FAN MOVIE",
+          "title": "Trailer part 3 - rose in durian village",
           "rank": 5,
-          "metric": 42594
+          "metric": 66962
         }
       ],
       "newcomers_7d": [
-        {
-          "title": "Katy Perry - The One That Got Away (Lyrics)",
-          "first_seen": "2026-09-08 14:58:42",
-          "best_rank": 1
-        },
         {
           "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
           "first_seen": "2026-09-13 20:40:59",
@@ -158,6 +153,11 @@
         {
           "title": "LISA - SaWaDiKa (Dance Performance Video)",
           "first_seen": "2026-09-12 04:11:53",
+          "best_rank": 1
+        },
+        {
+          "title": "Katy Perry - The One That Got Away ( Lyrics)",
+          "first_seen": "2026-09-15 21:57:16",
           "best_rank": 1
         },
         {
@@ -181,11 +181,6 @@
           "best_rank": 2
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA PANIK‼️ KO BISA KEBETULAN DAVINA KETEMU VERONIKA? - Arya Saloka",
-          "first_seen": "2026-09-08 14:58:42",
-          "best_rank": 2
-        },
-        {
           "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
           "first_seen": "2026-09-13 14:09:46",
           "best_rank": 2
@@ -194,6 +189,11 @@
           "title": "TERIKAT JANJI TRAILER: DAVINA BIKIN REZA & DION NYEBUR‼️ GIMANA REAKSI SENA? - Arya Saloka, Asha Ass",
           "first_seen": "2026-09-09 06:42:04",
           "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: REZA KECIDUK DIPA‼️ SENA NEKAT BAWA DAVINA KE MISI PENYELAMATAN? - rya Saloka",
+          "first_seen": "2026-09-11 09:12:01",
+          "best_rank": 2
         }
       ],
       "longest_running_7d": [
@@ -201,6 +201,11 @@
           "title": "AJENG FEBRIA - HELIKOPTER TURUN KE PADANG | IDOL IDOL (OFFICIAL MV AMBYAR EVERYWHERE)",
           "days_on": 5,
           "best_rank": 7
+        },
+        {
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "days_on": 4,
+          "best_rank": 1
         },
         {
           "title": "no na - speaker freaker (the long song)",
@@ -213,12 +218,7 @@
           "best_rank": 4
         },
         {
-          "title": "Katy Perry - The One That Got Away (Lyrics)",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
           "days_on": 3,
           "best_rank": 1
         }
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
-          "rank": 1,
-          "metric": 995407
-        },
-        {
           "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "rank": 1,
+          "metric": 777972
+        },
+        {
+          "title": "Jakarta dimata dunia 🇮🇩",
           "rank": 2,
-          "metric": 778003
+          "metric": 576122
         },
         {
-          "title": "“Tanah ini disiram oleh air mata dan darah para pahlawan; tugas kita merawatnya dengan…",
+          "title": "Situasi di Aceh kembali menjadi sorotan setelah beredar video yang memperlihatkan…",
           "rank": 3,
-          "metric": 368322
+          "metric": 469694
         },
         {
-          "title": "Warga Aceh Injak Lambang Garuda!",
+          "title": "Betapa muak, kesal, dan sedih, ngeliat berita akhir-akhir ini. Semoga semua ini cepat…",
           "rank": 4,
-          "metric": 193830
+          "metric": 367030
         },
         {
-          "title": "Bersandar di bahumu adalah kekuatan bagiku..",
+          "title": "SUMPAH BUANYAK BANGAT, Berapa nyamuk yang udah ketangkep dalem 1 Malem di bekasi?",
           "rank": 5,
-          "metric": 162699
+          "metric": 227190
         }
       ],
       "newcomers_7d": [],
@@ -260,17 +260,17 @@
         {
           "title": "#80s",
           "rank": 1,
-          "metric": 33110
+          "metric": 35029
         },
         {
           "title": "#flowasone",
           "rank": 2,
-          "metric": 49088
+          "metric": 49147
         },
         {
-          "title": "#dirumahaja",
+          "title": "#hypic",
           "rank": 3,
-          "metric": 103637
+          "metric": 43862
         }
       ],
       "newcomers_7d": [],
@@ -279,27 +279,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#OLFDreamOninSaoPaulo",
+          "title": "Purbaya",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#AADCShortFilm",
+          "title": "#SiagaHadapiBencana",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "Purbaya",
+          "title": "#mtqcabangsyarhilquran",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "JOSSGAWIN OFDO IN BRAZIL",
+          "title": "#บรีสซักด่วนxปอนด์เจมีไนน์",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#MTQcabangTilawah",
+          "title": "$PONS",
           "rank": 5,
           "metric": null
         }
@@ -389,29 +389,29 @@
       ],
       "longest_running_7d": [
         {
-          "title": "Ghost in the Cell",
+          "title": "Dilan ITB 1997",
           "days_on": 7,
           "best_rank": 1
         },
         {
-          "title": "Wait for Me To Be Successful Later",
+          "title": "Ghost in the Cell",
           "days_on": 7,
           "best_rank": 2
         },
         {
-          "title": "Na Willa",
+          "title": "Heaven is My Way",
           "days_on": 7,
           "best_rank": 3
         },
         {
-          "title": "Our Sticky Love",
+          "title": "Levitating",
           "days_on": 7,
-          "best_rank": 11
+          "best_rank": 4
         },
         {
-          "title": "Spooky in Love",
+          "title": "The Thorn: One Sacred Light",
           "days_on": 7,
-          "best_rank": 12
+          "best_rank": 5
         }
       ]
     },
