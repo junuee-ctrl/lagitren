@@ -43,6 +43,30 @@ def is_cdp() -> bool:
     return bool(config.BROWSER_CDP)
 
 
+def cdp_url() -> str:
+    """URL CDP yang sudah dinormalkan ke IPv4.
+
+    Chrome hanya mengikat --remote-debugging-port ke 127.0.0.1 (IPv4), sedangkan
+    "localhost" di Windows kerap diresolusi ke ::1 lebih dulu → ECONNREFUSED.
+    """
+    url = (config.BROWSER_CDP or "").strip()
+    return url.replace("//localhost:", "//127.0.0.1:")
+
+
+def cdp_alive(timeout: float = 2.0) -> bool:
+    """True bila ada yang mendengarkan di port CDP."""
+    import socket
+    from urllib.parse import urlparse
+
+    u = urlparse(cdp_url())
+    host, port = u.hostname or "127.0.0.1", u.port or 9222
+    try:
+        with socket.create_connection((host, port), timeout=timeout):
+            return True
+    except OSError:
+        return False
+
+
 # F1 (insiden 2026-08-18): timeout default WAJIB di semua context supaya
 # tidak ada operasi Playwright yang bisa menunggu tanpa batas.
 DEFAULT_TIMEOUT_MS = 30_000
@@ -68,7 +92,7 @@ def get_context(p):
     """
     if config.BROWSER_CDP:
         browser = p.chromium.connect_over_cdp(
-            config.BROWSER_CDP, timeout=CDP_CONNECT_TIMEOUT_MS
+            cdp_url(), timeout=CDP_CONNECT_TIMEOUT_MS
         )
         ctxs = browser.contexts
         return _apply_timeouts(ctxs[0] if ctxs else browser.new_context())

@@ -274,8 +274,18 @@ def main() -> None:
     a = ap.parse_args()
 
     if not config.BROWSER_CDP:
-        log.error("BROWSER_CDP belum diset — panel butuh Chrome yang sudah login.")
+        log.error("BROWSER_CDP belum diset di .env — panel butuh Chrome yang sudah login.")
+        log.error("Tambahkan baris:  BROWSER_CDP=http://127.0.0.1:9222")
         sys.exit(2)
+
+    if not _browser.cdp_alive():
+        log.error("=" * 66)
+        log.error("Chrome belum berjalan dengan port debug %s.", _browser.cdp_url())
+        log.error("Jalankan start_chrome_cdp.bat (di folder collector), tunggu")
+        log.error("jendela Chrome terbuka, pastikan partner.tiktokshop.com sudah")
+        log.error("login, lalu ulangi perintah ini. Chrome harus TETAP terbuka.")
+        log.error("=" * 66)
+        sys.exit(4)
 
     if a.discover:
         discover(a.discover)
