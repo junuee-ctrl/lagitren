@@ -205,15 +205,15 @@ def _count(payloads) -> int:
 
 
 def _items(payload) -> list[dict]:
-    """Cari list-of-dict terpanjang yang tiap elemennya punya judul produk."""
+    """응답에서 상품 배열을 찾는다 (data.products 등 위치가 바뀌어도 동작)."""
     best: list[dict] = []
 
     def walk(o, depth=0):
         nonlocal best
-        if depth > 6:
+        if depth > 7:
             return
         if isinstance(o, list) and o and isinstance(o[0], dict):
-            if any(k in o[0] for k in ("title", "product_name", "productName", "name")):
+            if "product_id" in o[0] or "title" in o[0]:
                 if len(o) > len(best):
                     best = o
         if isinstance(o, dict):
@@ -227,38 +227,107 @@ def _items(payload) -> list[dict]:
     return best
 
 
-def _pick(d: dict, *keys):
-    for k in keys:
-        if k in d and d[k] not in (None, ""):
-            return d[k]
-    return None
+def _price(v) -> str:
+    """price 는 {"format_price": "Rp10.999"} 또는 문자열로 온다."""
+    if isinstance(v, dict):
+        for k in ("format_price", "formatPrice", "price", "min_price"):
+            if v.get(k):
+                return str(v[k])
+        return ""
+    return str(v or "")
+
+
+def _rate(v) -> str:
+    """commission_rate 는 베이시스 단위 정수(600 = 6%)."""
+    try:
+        return f"{round(float(v) / 100)}%"
+    except Exception:
+        return str(v or "")
+
+
+# 패널이 카테고리를 주지 않으므로 제목 키워드로 추정한다.
+# 카테고리는 카드의 이모지 타일을 결정할 뿐, 수치가 아니다.
+CAT_RULES = [
+    ("health", r"\bteh\b|herbal|collagen drink|minuman|vitamin|suplemen|madu"),
+    ("home", r"gantungan|hook|tempel tembok|rak\b|wall|dapur|toples|keranjang"),
+    ("fashion", r"hijab|bergo|khimar|jilbab|kerudung|gamis|baju|kaos|tas\b|sepatu|pouch"),
+    ("mom_baby", r"\bbayi\b|baby|anak\b|mainan|popok"),
+    ("gadget", r"charger|kabel data|earphone|headset|powerbank|lampu led"),
+    ("food", r"keripik|snack|kopi\b|mie\b|sambal"),
+]
+
+
+def _category(title: str, fallback: str = "beauty") -> str:
+    low = title.lower()
+    for cat, pat in CAT_RULES:
+        if re.search(pat, low):
+            return cat
+    return fallback
+
+
+# 판매 홍보용 접두 라벨 제거 (단, 실제 정보인 것은 남긴다).
+_HYPE = re.compile(r"^\s*(?:\[[^\]]*\]|\u3010[^\u3011]*\u3011)\s*")
+_KEEP = re.compile(r"BPOM|BUY 1|GET \d|FREE\b", re.I)
+
+
+def _clean_title(t: str, limit: int = 92) -> str:
+    t = str(t or "").strip()
+    while True:
+        m = _HYPE.match(t)
+        if not m or _KEEP.search(m.group(0)):
+            break
+        t = t[m.end():]
+    t = re.sub(r"\s+", " ", t).strip(" -|")
+    if len(t) > limit:
+        t = t[:limit].rsplit(" ", 1)[0].rstrip(" ,-|")
+    return t
+
+
+def _affiliate_url(product_id: str) -> str:
+    """패널의 'Copy link' 와 동일한 형식으로 조립한다."""
+    return (f"https://shop-id.tokopedia.com/view/product/{product_id}"
+            "?region=ID&locale=en&source=agency")
+
+
+def _previous_categories() -> dict[str, str]:
+    """이전 CSV에서 product_id -> category 를 읽어 수동 분류를 보존한다."""
+    out: dict[str, str] = {}
+    if not CSV_PATH.exists():
+        return out
+    try:
+        with CSV_PATH.open(encoding="utf-8") as f:
+            for row in csv.DictReader(f):
+                m = re.search(r"/product/(\d+)", row.get("affiliate_url", ""))
+                if m and row.get("category"):
+                    out[m.group(1)] = row["category"]
+    except Exception:
+        pass
+    return out
 
 
 def _parse(payloads: list[dict], limit: int) -> list[dict]:
-    rows, seen = [], set()
+    prev = _previous_categories()
+    rows: list[dict] = []
+    seen: set[str] = set()
     for payload in payloads:
         for it in _items(payload):
-            title = str(_pick(it, "title", "product_name", "productName", "name") or "").strip()
-            url = str(_pick(it, "affiliate_url", "share_link", "shareLink", "url", "link") or "").strip()
-            if not title or title in seen:
+            pid = str(it.get("product_id") or "").strip()
+            title = _clean_title(it.get("title"))
+            if not pid or not title or pid in seen:
                 continue
-            seen.add(title)
-            rate = _pick(it, "commission_rate", "commissionRate", "rate")
-            try:
-                rate_pct = f"{round(float(rate) * (100 if float(rate) <= 1 else 1))}%"
-            except Exception:
-                rate_pct = str(rate or "")
+            seen.add(pid)
+            shop = it.get("shop_info") or {}
             rows.append({
                 "rank": len(rows) + 1,
-                "title": title[:92],
-                "image": str(_pick(it, "image", "cover", "coverUrl", "thumbnail") or ""),
-                "price": _rupiah(_pick(it, "price", "min_price", "sale_price")),
-                "sales": str(_pick(it, "sales", "sold_count", "soldCount", "sale_cnt") or ""),
-                "category": str(_pick(it, "category", "category_name", "categoryName") or "").lower(),
-                "shop": str(_pick(it, "shop", "shop_name", "shopName", "seller") or ""),
-                "commission": _rupiah(_pick(it, "commission", "commission_amount", "commissionAmount")),
-                "commission_rate": rate_pct,
-                "affiliate_url": url,
+                "title": title,
+                "image": str(it.get("cover_url") or ""),
+                "price": _price(it.get("price")),
+                "sales": str(it.get("metrics") or ""),
+                "category": prev.get(pid) or _category(title),
+                "shop": str(shop.get("shop_name") or "") if isinstance(shop, dict) else "",
+                "commission": str(it.get("earn_amount") or ""),
+                "commission_rate": _rate(it.get("commission_rate")),
+                "affiliate_url": _affiliate_url(pid),
             })
             if len(rows) >= limit:
                 return rows
