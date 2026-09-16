@@ -48,8 +48,10 @@ CSV_PATH = ROOT / "products.csv"
 LOG_DIR = ROOT / "logs"
 
 # Diisi setelah mode --discover memastikan endpointnya.
-PANEL_URL = ""
-PANEL_ENDPOINT = ""          # potongan URL XHR yang memuat daftar produk
+PANEL_URL = ("https://partner.tiktokshop.com/affiliate-product-management/"
+             "affiliate-product-pool/ranking?tab=0&market=4&prePage=product_ranking")
+# discover(2026-09-16)로 확인된 엔드포인트
+PANEL_ENDPOINT = "/affiliate/partner/product/ranking/list"
 MAX_PRODUCTS = 20
 
 FIELDS = ["rank", "title", "image", "price", "sales", "category",
