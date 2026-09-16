@@ -37,11 +37,12 @@
       ]
     },
     {
-      "heading": "Papan produk yang tidak bergerak tujuh hari",
+      "heading": "Papan produk kami: daftar kurasi, bukan peringkat pasar",
       "paragraphs": [
-        "Sepuluh produk teratas kurasi TikTok Shop yang kami pantau menempati posisi yang sama persis selama tujuh hari berturut-turut — #1 sampai #10 tanpa satu pun pertukaran. JJ Glow Sabun Gluta Pink bertahan di #1, SYB Forte Red Jelly Serum di #2, UNIQSOO Tas Serut Sepatu di #3, dan seterusnya sampai SCARLETT Eau De Parfum di #10.",
-        "Papan yang beku seperti ini menahan pendatang baru. Bila Anda menjual di kategori kecantikan atau perawatan diri, menargetkan \"masuk lima besar\" dalam satu bulan adalah target yang tidak didukung data pekan ini. Ukuran yang lebih jujur adalah volume penjualan dan jumlah ulasan, bukan posisi papan.",
-        "Bagi pembeli, sisi baiknya: daftar yang stabil lebih mudah dibandingkan. Kami sudah merangkum isi papan ini di dua panduan belanja — satu untuk produk pencerah, satu untuk barang viral di bawah Rp50 ribu. Harga dapat berubah sewaktu-waktu."
+        "Di versi pertama rekap ini kami menulis bahwa papan produk TikTok Shop \"tidak bergerak selama tujuh hari\" dan menyimpulkan bahwa papan tersebut sedang menahan pendatang baru. Kesimpulan itu keliru, dan kami mencabutnya.",
+        "Penyebabnya ada di sisi kami. Berbeda dengan enam papan lainnya — Google, YouTube, TikTok, Instagram, X, dan Netflix — yang kami ambil langsung dari sumber publik tiap platform secara terjadwal, daftar produk di halaman Produk berasal dari lembar kurasi yang diperbarui secara manual. Ketika lembar itu tidak diperbarui, peringkatnya memang tidak berubah. Yang membeku adalah daftar kami, bukan pasarnya.",
+        "Karena itu daftar produk di situs ini sebaiknya dibaca sebagai pilihan redaksi yang kami kurasi, bukan sebagai papan peringkat penjualan yang bergerak real-time. Kami tidak punya dasar untuk menyimpulkan apa pun tentang seberapa mudah atau sulit sebuah produk baru menembus lima besar, dan kalimat mengenai hal itu sudah kami hapus.",
+        "Kami sedang memperbaiki dua hal: memperjelas label di halaman Produk agar sifat kurasinya terbaca, dan memperpendek jarak pembaruan daftarnya. Sampai itu beres, angka penjualan pada kartu produk kami perlakukan sebagai data per tanggal pengambilan, bukan angka berjalan."
       ]
     },
     {
@@ -51,14 +52,36 @@
         "Papan pencarian Google sendiri pekan ini didominasi jadwal pertandingan: 129 dari tren Google yang kami rekam masuk kategori sepak bola. Kata kunci \"olahraga\" naik dari #9 ke #2 dalam tiga hari. Bagi perencana kata kunci, artinya daftar tren Google Indonesia pekan ini lebih berguna dibaca sebagai papan jadwal olahraga ketimbang sebagai cermin minat belanja.",
         "Rekap ini disusun dari 9.687 potret peringkat yang kami rekam sejak 19 Agustus 2026. Rincian metode, jadwal pengambilan, dan batasannya kami tulis terbuka di halaman Metodologi."
       ]
+    },
+    {
+      "heading": "Koreksi",
+      "paragraphs": [
+        "16 September 2026 — Bagian tentang papan produk TikTok Shop kami tulis ulang. Versi pertama menyebut papan tersebut \"tidak bergerak tujuh hari\" dan menyimpulkan bahwa menargetkan posisi lima besar dalam sebulan adalah target yang tidak realistis. Kesimpulan itu ditarik dari daftar kurasi yang diperbarui manual, bukan dari papan peringkat pasar, sehingga tidak sah. Kalimat tersebut telah dihapus dan diganti penjelasan mengenai sifat data kami. Isi bagian lain — Google, Instagram, Netflix, dan YouTube — tidak berubah karena ketiganya berasal dari pengambilan terjadwal ke sumber publik masing-masing platform."
+      ]
     }
   ],
-  "products": ["JJ Glow", "SYB Forte", "SCARLETT Eau De Parfum"],
+  "products": [
+    "JJ Glow",
+    "SYB Forte",
+    "SCARLETT Eau De Parfum"
+  ],
   "sources": [
-    { "title": "Praying for rain as fires, haze plague Indonesian Borneo — The Star (8 Sep 2026)", "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/08/praying-for-rain-as-fires-haze-plague-indonesian-borneo" },
-    { "title": "Gempa Bumi M5,2 — 142 km Tenggara Kab. Malang, Jatim (BMKG)", "url": "https://www.bmkg.go.id/gempabumi/20260914084458" },
-    { "title": "The One That Got Away (Katy Perry) — data rilis singel", "url": "https://en.wikipedia.org/wiki/The_One_That_Got_Away_(Katy_Perry_song)" },
-    { "title": "Locked Away — R. City feat. Adam Levine (2015)", "url": "https://en.wikipedia.org/wiki/Locked_Away" }
+    {
+      "title": "Praying for rain as fires, haze plague Indonesian Borneo — The Star (8 Sep 2026)",
+      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/09/08/praying-for-rain-as-fires-haze-plague-indonesian-borneo"
+    },
+    {
+      "title": "Gempa Bumi M5,2 — 142 km Tenggara Kab. Malang, Jatim (BMKG)",
+      "url": "https://www.bmkg.go.id/gempabumi/20260914084458"
+    },
+    {
+      "title": "The One That Got Away (Katy Perry) — data rilis singel",
+      "url": "https://en.wikipedia.org/wiki/The_One_That_Got_Away_(Katy_Perry_song)"
+    },
+    {
+      "title": "Locked Away — R. City feat. Adam Levine (2015)",
+      "url": "https://en.wikipedia.org/wiki/Locked_Away"
+    }
   ],
   "related": [
     "/artikel/rekap-tren-26-agustus-1-september-2026",
