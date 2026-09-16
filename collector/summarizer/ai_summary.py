@@ -51,6 +51,10 @@ def _summarize_ollama(platform: str, title: str, context: str) -> str:
     return _clean(data.get("message", {}).get("content", ""))
 
 
+# Galat Claude yang berulang cukup dicatat sekali per run.
+_LAST_CLAUDE_ERR: dict[str, object] = {}
+
+
 def _summarize_claude(platform: str, title: str, context: str) -> str:
     if not config.ANTHROPIC_API_KEY:
         return ""
@@ -74,7 +78,16 @@ def _summarize_claude(platform: str, title: str, context: str) -> str:
         },
         timeout=60,
     )
-    resp.raise_for_status()
+    if not resp.ok:
+        # Pesan asli dari API (mis. "model: ... not found") jauh lebih berguna
+        # daripada sekadar "400 Bad Request".
+        detail = ""
+        try:
+            err = resp.json().get("error", {})
+            detail = f'{err.get("type", "")}: {err.get("message", "")}'.strip(": ")
+        except Exception:
+            detail = resp.text[:200]
+        raise RuntimeError(f"HTTP {resp.status_code} — {detail} (model={config.ANTHROPIC_MODEL})")
     data = resp.json()
     parts = data.get("content", [])
     text = "".join(p.get("text", "") for p in parts if p.get("type") == "text")
@@ -125,7 +138,13 @@ def summarize(platform: str, title: str, context: str = "") -> str:
         if out:
             return out
     except Exception as exc:
-        log.info("Claude fallback tidak tersedia: %s", exc)
+        msg = str(exc)
+        if msg != _LAST_CLAUDE_ERR.get("msg"):
+            _LAST_CLAUDE_ERR["msg"] = msg
+            log.warning("Claude fallback tidak tersedia: %s", msg)
+        elif not _LAST_CLAUDE_ERR.get("noted"):
+            _LAST_CLAUDE_ERR["noted"] = True
+            log.info("(galat Claude yang sama diredam untuk sisa run ini)")
 
     return _heuristic(platform, title, context)
 
