@@ -54,7 +54,9 @@ PANEL_URL = ("https://partner.tiktokshop.com/affiliate-product-management/"
 PANEL_ENDPOINT = "/affiliate/partner/product/ranking/list"
 MAX_PRODUCTS = 20
 
-FIELDS = ["rank", "title", "image", "price", "sales", "category",
+# id = product_id 패널 값. 이것을 넣어야 상품 ID가 제목에 의존하지 않아
+# 제목이 조금 바뀌어도 D1 행과 AI 요약 캐시가 유지된다.
+FIELDS = ["id", "rank", "title", "image", "price", "sales", "category",
           "shop", "commission", "commission_rate", "affiliate_url"]
 
 # Kata kunci yang menandai sebuah respons JSON kemungkinan berisi daftar produk.
@@ -299,9 +301,12 @@ def _previous_categories() -> dict[str, str]:
     try:
         with CSV_PATH.open(encoding="utf-8") as f:
             for row in csv.DictReader(f):
-                m = re.search(r"/product/(\d+)", row.get("affiliate_url", ""))
-                if m and row.get("category"):
-                    out[m.group(1)] = row["category"]
+                pid = (row.get("id") or "").strip()
+                if not pid:
+                    m = re.search(r"/product/(\d+)", row.get("affiliate_url", ""))
+                    pid = m.group(1) if m else ""
+                if pid and row.get("category"):
+                    out[pid] = row["category"]
     except Exception:
         pass
     return out
@@ -336,6 +341,7 @@ def _parse(payloads: list[dict], limit: int) -> list[dict]:
             seen.add(pid)
             shop = it.get("shop_info") or {}
             rows.append({
+                "id": pid,
                 "rank": len(rows) + 1,
                 "title": title,
                 "image": str(it.get("cover_url") or ""),
