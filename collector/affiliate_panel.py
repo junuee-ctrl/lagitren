@@ -278,6 +278,8 @@ def _clean_title(t: str, limit: int = 92) -> str:
             break
         t = t[m.end():]
     t = re.sub(r"\s+", " ", t).strip(" -|")
+    # 패널 원문에 붙어버린 낱말 분리 (대문자 연속 뒤 대문자+소문자).
+    t = re.sub(r"([A-Z]{2,})([A-Z][a-z])", r"\1 \2", t)
     if len(t) > limit:
         t = t[:limit].rsplit(" ", 1)[0].rstrip(" ,-|")
     return t
@@ -305,16 +307,32 @@ def _previous_categories() -> dict[str, str]:
     return out
 
 
+def _dedup_key(title: str, n: int = 34) -> str:
+    """같은 상품의 다른 캠페인을 묶기 위한 키.
+
+    패널에는 동일 상품이 캠페인별로 따로 올라오며 product_id 도 다르다
+    (예: [BEST SELLER] / [SPECIAL MEGA LIVE] 같은 JJ Glow 비누).
+    영숫자만 남긴 앞부분이 같으면 같은 상품으로 본다.
+    """
+    return re.sub(r"[^a-z0-9]", "", title.lower())[:n]
+
+
 def _parse(payloads: list[dict], limit: int) -> list[dict]:
     prev = _previous_categories()
     rows: list[dict] = []
     seen: set[str] = set()
+    seen_key: dict[str, int] = {}
     for payload in payloads:
         for it in _items(payload):
             pid = str(it.get("product_id") or "").strip()
             title = _clean_title(it.get("title"))
             if not pid or not title or pid in seen:
                 continue
+            key = _dedup_key(title)
+            if key in seen_key:
+                log.info("중복 제외: %s (이미 %d번으로 등록)", title[:46], seen_key[key])
+                continue
+            seen_key[key] = len(rows) + 1
             seen.add(pid)
             shop = it.get("shop_info") or {}
             rows.append({
