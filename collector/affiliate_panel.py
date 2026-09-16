@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import json
 import logging
 import re
@@ -276,6 +277,12 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=MAX_PRODUCTS)
     ap.add_argument("--dry-run", action="store_true", help="결과만 출력하고 CSV는 쓰지 않음")
     a = ap.parse_args()
+
+    # 패널 전용 브라우저를 별도 포트로 띄운 경우 PANEL_CDP 가 우선한다.
+    panel_cdp = os.environ.get("PANEL_CDP", "").strip()
+    if panel_cdp:
+        config.BROWSER_CDP = panel_cdp
+        log.info("PANEL_CDP 사용: %s", panel_cdp)
 
     if not config.BROWSER_CDP:
         log.error("BROWSER_CDP가 .env에 없음 — 패널은 로그인된 Chrome이 필요합니다.")
