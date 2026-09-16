@@ -1,23 +1,27 @@
-"""Ambil daftar produk dari panel afiliasi TikTok Shop (Chrome yang sudah login).
+"""틱톡샵 어필리에이트 패널에서 상품 목록을 가져온다 (로그인된 Chrome 사용).
 
-Dijalankan di PC lokal, memakai Chrome asli lewat CDP — sama seperti collector
-TikTok/Instagram/X. Hasilnya ditulis ke `collector/products.csv`, yang kemudian
-dibaca collector `shopping_products` dan dikirim ke D1 pada run yang sama.
+운영자 PC에서 실행되며, TikTok/Instagram/X 수집기와 동일하게 CDP로 실제
+Chrome에 붙는다. 결과는 `collector/products.csv`에 기록되고, 같은 실행 안에서
+`shopping_products` 수집기가 그 파일을 읽어 D1로 보낸다.
 
-Dua mode:
+주: 이 파일은 운영자(한국어)만 읽는 도구라 메시지를 한국어로 쓴다.
+사이트에 노출되는 문구는 기존대로 인도네시아어를 유지한다.
 
-  python affiliate_panel.py --discover "<URL panel>"
-      Buka panel, rekam SEMUA respons JSON, lalu tulis laporan ke
-      logs/panel_discovery.json + logs/panel_dump/*.json.
-      Jalankan ini SEKALI dan kirimkan laporannya — dari situ endpoint
-      produk bisa dipastikan, tanpa menebak selector.
+두 가지 모드:
+
+  python affiliate_panel.py --discover "<패널 URL>"
+      패널을 열고 오가는 JSON 응답을 전부 녹화한 뒤
+      logs/panel_discovery.json + logs/panel_dump/*.json 에 저장한다.
+      한 번만 실행해서 보고서를 넘기면, 셀렉터를 추측하지 않고
+      상품 목록 엔드포인트를 확정할 수 있다.
 
   python affiliate_panel.py [--limit 20] [--dry-run]
-      Mode normal (butuh PANEL_URL + PANEL_ENDPOINT terisi di bawah).
+      일반 모드 (아래 PANEL_URL + PANEL_ENDPOINT가 채워져 있어야 함).
 
-Prasyarat (sama dgn collector lokal lain):
-  BROWSER_CDP=http://127.0.0.1:9222   dan Chrome dijalankan dengan
-  --remote-debugging-port=9222 --profile-directory=chrome-lagitren
+사전 조건 (다른 로컬 수집기와 동일):
+  .env 에 BROWSER_CDP=http://127.0.0.1:9222
+  그리고 Chrome이 --remote-debugging-port=9222 로 실행 중일 것
+  (start_chrome_cdp.bat 실행하면 자동 처리)
 """
 from __future__ import annotations
 
@@ -107,7 +111,7 @@ def discover(url: str, wait_s: int = 25) -> None:
             })
 
         page.on("response", on_response)
-        log.info("Membuka %s ...", url)
+        log.info("패널 여는 중: %s", url)
         page.goto(url, wait_until="load", timeout=60_000)
         # Panel memuat daftar lewat XHR & lazy-scroll — gulirkan beberapa kali.
         for _ in range(6):
@@ -118,18 +122,18 @@ def discover(url: str, wait_s: int = 25) -> None:
             page.remove_listener("response", on_response)
         except Exception:
             pass
-        log.info("URL akhir: %s", page.url)
+        log.info("최종 URL: %s", page.url)
         _browser.close_context(ctx)
 
     seen.sort(key=lambda r: (-r["hint_score"], -r["bytes"]))
     report = {"opened": url, "captured": len(seen), "responses": seen[:40]}
     out = LOG_DIR / "panel_discovery.json"
     out.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
-    log.info("Selesai. %d respons JSON tersimpan.", len(seen))
-    log.info("Laporan : %s", out)
-    log.info("Isi dump: %s", dump_dir)
+    log.info("완료. JSON 응답 %d건 저장됨.", len(seen))
+    log.info("보고서  : %s  ← 이 파일을 보내주세요", out)
+    log.info("원본 덤프: %s  ← 계정 정보가 섞일 수 있으니 보내지도, 커밋하지도 마세요", dump_dir)
     for r in seen[:8]:
-        log.info("  skor %d  %7d B  %s", r["hint_score"], r["bytes"], r["url"])
+        log.info("  점수 %d  %7d B  %s", r["hint_score"], r["bytes"], r["url"])
 
 
 def _top_keys(body: str, limit: int = 14) -> list[str]:
@@ -158,7 +162,7 @@ def _top_keys(body: str, limit: int = 14) -> list[str]:
 
 def scrape(limit: int = MAX_PRODUCTS) -> list[dict]:
     if not PANEL_URL or not PANEL_ENDPOINT:
-        log.error("PANEL_URL/PANEL_ENDPOINT belum diisi — jalankan --discover dulu.")
+        log.error("PANEL_URL/PANEL_ENDPOINT가 비어 있음 — 먼저 --discover 를 실행하세요.")
         sys.exit(2)
 
     payloads: list[dict] = []
@@ -188,7 +192,7 @@ def scrape(limit: int = MAX_PRODUCTS) -> list[dict]:
 
     rows = _parse(payloads, limit)
     if not rows:
-        log.error("0 produk terbaca — struktur panel mungkin berubah; jalankan --discover lagi.")
+        log.error("상품을 0개 읽음 — 패널 구조가 바뀌었을 수 있음. --discover 를 다시 실행하세요.")
         sys.exit(3)
     return rows
 
@@ -263,27 +267,27 @@ def write_csv(rows: list[dict]) -> None:
         w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()
         w.writerows(rows)
-    log.info("Ditulis %d produk ke %s", len(rows), CSV_PATH)
+    log.info("상품 %d개를 %s 에 기록함", len(rows), CSV_PATH)
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--discover", metavar="URL", help="rekam respons JSON panel, lalu berhenti")
+    ap.add_argument("--discover", metavar="URL", help="패널 JSON 응답을 녹화하고 종료")
     ap.add_argument("--limit", type=int, default=MAX_PRODUCTS)
-    ap.add_argument("--dry-run", action="store_true", help="tampilkan hasil, jangan tulis CSV")
+    ap.add_argument("--dry-run", action="store_true", help="결과만 출력하고 CSV는 쓰지 않음")
     a = ap.parse_args()
 
     if not config.BROWSER_CDP:
-        log.error("BROWSER_CDP belum diset di .env — panel butuh Chrome yang sudah login.")
-        log.error("Tambahkan baris:  BROWSER_CDP=http://127.0.0.1:9222")
+        log.error("BROWSER_CDP가 .env에 없음 — 패널은 로그인된 Chrome이 필요합니다.")
+        log.error("다음 줄을 추가하세요:  BROWSER_CDP=http://127.0.0.1:9222")
         sys.exit(2)
 
     if not _browser.cdp_alive():
         log.error("=" * 66)
-        log.error("Chrome belum berjalan dengan port debug %s.", _browser.cdp_url())
-        log.error("Jalankan start_chrome_cdp.bat (di folder collector), tunggu")
-        log.error("jendela Chrome terbuka, pastikan partner.tiktokshop.com sudah")
-        log.error("login, lalu ulangi perintah ini. Chrome harus TETAP terbuka.")
+        log.error("Chrome이 디버깅 포트(%s)로 실행되어 있지 않습니다.", _browser.cdp_url())
+        log.error("collector 폴더의 start_chrome_cdp.bat 를 먼저 실행하고,")
+        log.error("Chrome 창이 열리면 partner.tiktokshop.com 로그인 상태를 확인한 뒤")
+        log.error("이 명령을 다시 실행하세요. Chrome은 계속 열어두어야 합니다.")
         log.error("=" * 66)
         sys.exit(4)
 
@@ -297,9 +301,9 @@ def main() -> None:
                  r["commission"], r["commission_rate"], r["title"][:50])
     missing = [r["rank"] for r in rows if not r["affiliate_url"]]
     if missing:
-        log.warning("Baris tanpa tautan afiliasi: %s", missing)
+        log.warning("어필리에이트 링크가 비어 있는 행: %s", missing)
     if a.dry_run:
-        log.info("--dry-run: CSV tidak ditulis.")
+        log.info("--dry-run: CSV를 쓰지 않았습니다.")
         return
     write_csv(rows)
 
