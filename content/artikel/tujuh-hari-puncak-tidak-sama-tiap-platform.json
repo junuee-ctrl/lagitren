@@ -1,0 +1,69 @@
+{
+  "slug": "tujuh-hari-puncak-tidak-sama-tiap-platform",
+  "title": "Tujuh Hari di Puncak Netflix Tidak Sama dengan Tujuh Hari di Puncak Google",
+  "category": "analisis",
+  "published_at": "2026-09-17 07:30:00",
+  "lead": "Selama tujuh potret berturut-turut, lima besar Netflix Indonesia di arsip kami tidak bergeser satu peringkat pun. Lalu pada 16 September, tujuh judul baru masuk sekaligus dalam satu hari. Terdengar seperti perubahan selera penonton yang mendadak — padahal bukan. Penyebabnya ada pada seberapa sering tiap platform menerbitkan datanya, dan itu punya akibat langsung pada cara Anda membaca angka \"bertahan sekian hari\" di situs ini, termasuk angka yang kami tulis sendiri pekan lalu.",
+  "dataCard": {
+    "Netflix": "5 besar identik selama 7 potret",
+    "Pendatang 16 Sep": "7 judul sekaligus",
+    "Google": "tren bencana, tak ada yang >1 hari",
+    "Arsip": "10.374 baris · 28,9 hari"
+  },
+  "sections": [
+    {
+      "heading": "Apa yang terekam: papan yang diam, lalu berubah sekaligus",
+      "paragraphs": [
+        "Kami memotret Top 10 Netflix Indonesia setiap hari. Antara 10 dan 16 September, hasil potretnya nyaris identik: \"Ghost in the Cell\" di posisi #2 pada tujuh potret berturut-turut, \"Heaven is My Way\" di #3 pada tujuh potret, \"Levitating\" di #4 pada enam potret. \"Dilan ITB 1997\" menempati #1 di setiap potret sejak masuk.",
+        "Lalu pada 16 September semuanya berubah sekaligus. Tujuh judul baru muncul di papan pada hari yang sama: \"Semua Akan Baik Baik Saja\" langsung di #1, \"Shaka Oh Shaka\" di #4, \"Project Sacrifice\" di #5, \"Ayah, Ini Arahnya ke Mana, Ya?\" di #8, \"Crocodile Tears\" di #10, \"Istri Satu-Satunya\" di #15, dan \"The Gentlemen\" di #16. \"Dilan ITB 1997\" keluar dari lima besar.",
+        "Papan yang tidak bergerak selama seminggu, lalu berganti sepertiga isinya dalam sehari. Bila dibaca mentah, ini seperti penonton Indonesia serentak berpindah tontonan pada satu hari yang sama."
+      ]
+    },
+    {
+      "heading": "Kenapa: Netflix menerbitkan mingguan, kami memotret harian",
+      "paragraphs": [
+        "Penjelasannya jauh lebih sederhana, dan letaknya bukan pada penonton. Netflix menerbitkan daftar Top 10 per negara di Tudum dalam satuan minggu — tiap daftar diberi rentang tanggal seperti 7–13 September 2026, satu daftar untuk satu minggu penuh. Kami mengambilnya setiap hari.",
+        "Artinya tujuh potret harian yang identik itu bukan tujuh hari data. Itu satu daftar mingguan yang kami baca tujuh kali. Kestabilan yang terlihat di papan Netflix adalah kestabilan berkas sumbernya, bukan kestabilan minat penonton. Dan lonjakan serentak pada 16 September adalah momen daftar minggu berikutnya terbit, bukan momen selera berubah.",
+        "Konsekuensinya tegas: untuk Netflix, \"bertahan tujuh hari di #1\" sebenarnya berarti \"menang pada satu daftar mingguan\". Itu tetap prestasi — tapi prestasinya berukuran satu minggu, bukan tujuh hari terpisah."
+      ]
+    },
+    {
+      "heading": "Bandingkan dengan Google: hidup dan mati dalam sehari",
+      "paragraphs": [
+        "Di ujung yang berlawanan ada Google. Google menyatakan Trending Now kini menyegarkan datanya rata-rata setiap 10 menit. Arsip kami memperlihatkan akibatnya dengan jelas: pekan ini kategori bencana alam mengisi 14 tren di papan Google, dan hampir tak ada yang bertahan lebih dari satu hari. \"gempa malang hari ini\" naik ke posisi teratas pada 14 September lalu hilang. \"kualitas udara padang hari ini\" melompat dari #5 ke #1 hanya dalam satu hari.",
+        "Jadi di Google, bertahan tiga hari sudah tergolong lama. Di Netflix, tujuh hari adalah nilai minimum yang bisa muncul untuk judul apa pun yang masuk daftar. Dua angka \"hari\" ini memakai satuan yang sama sekali berbeda meski tertulis sama.",
+        "Papan lain berada di antaranya. X dan Google kami ambil paling sering; TikTok, Instagram, dan YouTube lebih jarang; daftar produk TikTok Shop adalah kurasi yang diperbarui terpisah. Rincian jadwal tiap platform kami tulis terbuka di halaman Metodologi."
+      ]
+    },
+    {
+      "heading": "Cara membaca angka ketahanan di situs ini",
+      "paragraphs": [
+        "Aturannya satu kalimat: angka ketahanan bisa dibandingkan di dalam satu platform, tidak pernah antar platform. Membandingkan \"7 hari di Netflix\" dengan \"3 hari di Google\" sama dengan membandingkan jarak yang satu diukur meter dan yang lain diukur langkah kaki.",
+        "Hal yang sama berlaku untuk Trend Score di laporan mingguan kami, yang salah satu komponennya adalah ketahanan. Skor itu berguna untuk mengurutkan topik di dalam satu papan — mana yang lebih tahan di Google, mana yang lebih tahan di TikTok Shop — dan tidak dirancang untuk menyatakan bahwa topik Netflix \"lebih kuat\" daripada topik Google karena angkanya lebih besar.",
+        "Untuk brand yang memakai data ini menyusun rencana konten, implikasinya praktis. Jendela aksi di Google diukur dalam jam: bila sebuah kata kunci sudah masuk papan, Anda kemungkinan sudah terlambat satu siklus. Jendela aksi di Netflix diukur dalam minggu: ada waktu menyiapkan materi setelah sebuah judul naik, karena daftarnya tidak akan berubah sampai daftar berikutnya terbit."
+      ]
+    },
+    {
+      "heading": "Koreksi untuk rekap 15 September",
+      "paragraphs": [
+        "Prinsip di atas berlaku juga untuk tulisan kami sendiri, dan pekan ini kami melanggarnya. Dalam rekap 15 September kami menulis bahwa \"Dilan ITB 1997\" masuk pada 9 September lalu \"tidak bergeser selama enam hari berturut-turut\", dan bahwa lima besar Netflix \"praktis membeku\". Kalimat itu memberi kesan adanya enam hari dominasi yang terukur terpisah, padahal yang kami punya adalah satu daftar mingguan yang terbaca berulang.",
+        "Fakta yang benar: judul tersebut memenangi daftar mingguan Netflix Indonesia yang sedang berlaku pada periode itu, dan keluar dari lima besar ketika daftar berikutnya terbit pada 16 September. Kami telah menambahkan catatan koreksi pada rekap tersebut.",
+        "Ini kesalahan kedua dari jenis yang sama dalam sepekan — sebelumnya kami menarik kesimpulan pasar dari daftar produk yang ternyata diperbarui manual. Keduanya berasal dari satu kebiasaan buruk yang sama: membaca angka tanpa lebih dulu memeriksa seberapa sering sumbernya berubah. Kami mencatatnya di sini supaya pembaca bisa menilai sendiri, dan supaya kami tidak mengulanginya."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "Netflix Tudum — Top 10 per negara, disusun dalam rentang mingguan", "url": "https://www.netflix.com/tudum/top10" },
+    { "title": "Google — \"refreshes every 10 minutes on average\" (pembaruan Trending Now)", "url": "https://blog.google/products-and-platforms/products/search/google-trends-trending-now-update/" },
+    { "title": "Explore the searches that are Trending now — Google Trends Help", "url": "https://support.google.com/trends/answer/3076011?hl=en" }
+  ],
+  "related": [
+    "/artikel/rekap-tren-8-15-september-2026",
+    "/artikel/beda-trending-tiap-platform",
+    "/artikel/bagaimana-lagitren-mengumpulkan-data",
+    "/metodologi",
+    "/laporan",
+    "/netflix",
+    "/google"
+  ]
+}
