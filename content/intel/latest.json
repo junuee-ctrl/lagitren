@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T05:56:36+00:00",
+  "generated_at": "2026-09-17T05:59:53+00:00",
   "window_days": 7,
   "scoring": {
     "velocity": "0-35 · perbaikan peringkat dalam jendela",
@@ -9,102 +9,57 @@
   },
   "radar": [
     {
-      "trend_id": "netflix:dilan-itb-1997",
-      "platform": "netflix",
-      "title": "Dilan ITB 1997",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 15,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 58
-    },
-    {
-      "trend_id": "shopee:jj-glow-sabun-gluta-pink-10x-brightening-niacinamide-kojic-a",
+      "trend_id": "shopee:beauty-talk-aha-collagen-body-booster-100ml-whitening-lotion",
       "platform": "shopee",
-      "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
+      "title": "BEAUTY TALK AHA Collagen Body Booster 100ml Whitening Lotion",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 1
-        },
-        {
           "day": "2026-09-10",
-          "best_rank": 1
+          "best_rank": 16
         },
         {
           "day": "2026-09-11",
-          "best_rank": 1
+          "best_rank": 16
         },
         {
           "day": "2026-09-12",
-          "best_rank": 1
+          "best_rank": 16
         },
         {
           "day": "2026-09-13",
-          "best_rank": 1
+          "best_rank": 16
         },
         {
           "day": "2026-09-14",
-          "best_rank": 1
+          "best_rank": 16
         },
         {
           "day": "2026-09-15",
-          "best_rank": 1
+          "best_rank": 16
+        },
+        {
+          "day": "2026-09-16",
+          "best_rank": 7
+        },
+        {
+          "day": "2026-09-17",
+          "best_rank": 7
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "stabil",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-17",
+      "days_on": 8,
+      "best_rank": 7,
+      "current_rank": 7,
+      "stage": "puncak",
       "score_parts": {
-        "velocity": 18,
+        "velocity": 35,
         "persistence": 25,
-        "peak": 15,
+        "peak": 6,
         "cross_platform": 0
       },
       "theme": null,
-      "score": 58
+      "score": 66
     },
     {
       "trend_id": "netflix:ghost-in-the-cell",
@@ -112,10 +67,6 @@
       "title": "Ghost in the Cell",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 2
-        },
-        {
           "day": "2026-09-10",
           "best_rank": 2
         },
@@ -138,10 +89,14 @@
         {
           "day": "2026-09-15",
           "best_rank": 2
+        },
+        {
+          "day": "2026-09-16",
+          "best_rank": 2
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-16",
       "days_on": 7,
       "best_rank": 2,
       "current_rank": 2,
@@ -161,10 +116,6 @@
       "title": "Heaven is My Way",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 3
-        },
-        {
           "day": "2026-09-10",
           "best_rank": 3
         },
@@ -187,10 +138,14 @@
         {
           "day": "2026-09-15",
           "best_rank": 3
+        },
+        {
+          "day": "2026-09-16",
+          "best_rank": 3
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-16",
       "days_on": 7,
       "best_rank": 3,
       "current_rank": 3,
@@ -205,102 +160,78 @@
       "score": 55
     },
     {
-      "trend_id": "shopee:syb-forte-red-jelly-serum-20ml-niacinamide-10",
+      "trend_id": "shopee:jj-glow-sabun-gluta-pink-10x-brightening-niacinamide-kojic-a",
       "platform": "shopee",
-      "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
+      "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 2
-        },
-        {
           "day": "2026-09-10",
-          "best_rank": 2
+          "best_rank": 1
         },
         {
           "day": "2026-09-11",
-          "best_rank": 2
+          "best_rank": 1
         },
         {
           "day": "2026-09-12",
-          "best_rank": 2
+          "best_rank": 1
         },
         {
           "day": "2026-09-13",
-          "best_rank": 2
+          "best_rank": 1
         },
         {
           "day": "2026-09-14",
-          "best_rank": 2
+          "best_rank": 1
         },
         {
           "day": "2026-09-15",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-15",
+      "days_on": 6,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 21,
+        "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 54
+    },
+    {
+      "trend_id": "twitter:shr",
+      "platform": "twitter",
+      "title": "$SHR",
+      "daily": [
+        {
+          "day": "2026-09-16",
+          "best_rank": 14
+        },
+        {
+          "day": "2026-09-17",
           "best_rank": 2
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-17",
+      "days_on": 2,
       "best_rank": 2,
       "current_rank": 2,
-      "stage": "stabil",
+      "stage": "puncak",
       "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
+        "velocity": 35,
+        "persistence": 7,
         "peak": 12,
         "cross_platform": 0
       },
       "theme": null,
-      "score": 55
-    },
-    {
-      "trend_id": "shopee:uniqsoo-tas-serut-sepatu-anti-kuning-pouch-travel-multifungs",
-      "platform": "shopee",
-      "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 3
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 3,
-      "current_rank": 3,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 12,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 55
+      "score": 54
     },
     {
       "trend_id": "youtube:EEevRrB3cuw",
@@ -340,6 +271,31 @@
       "score": 54
     },
     {
+      "trend_id": "google:inter-miami-vs-nashville",
+      "platform": "google",
+      "title": "inter miami vs nashville",
+      "daily": [
+        {
+          "day": "2026-09-12",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-12",
+      "last_seen": "2026-09-12",
+      "days_on": 1,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "baru",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 15,
+        "cross_platform": 16
+      },
+      "theme": "Sepak bola",
+      "score": 53
+    },
+    {
       "trend_id": "google:fiorentina",
       "platform": "google",
       "title": "fiorentina",
@@ -369,200 +325,123 @@
       "score": 52
     },
     {
-      "trend_id": "netflix:levitating",
-      "platform": "netflix",
-      "title": "Levitating",
+      "trend_id": "google:rennes",
+      "platform": "google",
+      "title": "rennes",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 4
-        },
-        {
           "day": "2026-09-11",
-          "best_rank": 4
+          "best_rank": 10
         },
         {
-          "day": "2026-09-12",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 4
+          "day": "2026-09-16",
+          "best_rank": 3
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 4,
-      "current_rank": 4,
-      "stage": "stabil",
+      "first_seen": "2026-09-11",
+      "last_seen": "2026-09-16",
+      "days_on": 2,
+      "best_rank": 3,
+      "current_rank": 3,
+      "stage": "puncak",
       "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 9,
+        "velocity": 33,
+        "persistence": 7,
+        "peak": 12,
         "cross_platform": 0
       },
       "theme": null,
       "score": 52
     },
     {
-      "trend_id": "netflix:the-thorn-one-sacred-light",
-      "platform": "netflix",
-      "title": "The Thorn: One Sacred Light",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 5
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 5,
-      "current_rank": 5,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 9,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 52
-    },
-    {
-      "trend_id": "shopee:azalea-smooth-foot-cream-zaitun-honey-35gr",
+      "trend_id": "shopee:syb-forte-red-jelly-serum-20ml-niacinamide-10",
       "platform": "shopee",
-      "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
+      "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 5
-        },
-        {
           "day": "2026-09-10",
-          "best_rank": 5
+          "best_rank": 2
         },
         {
           "day": "2026-09-11",
-          "best_rank": 5
+          "best_rank": 2
         },
         {
           "day": "2026-09-12",
-          "best_rank": 5
+          "best_rank": 2
         },
         {
           "day": "2026-09-13",
-          "best_rank": 5
+          "best_rank": 2
         },
         {
           "day": "2026-09-14",
-          "best_rank": 5
+          "best_rank": 2
         },
         {
           "day": "2026-09-15",
-          "best_rank": 5
+          "best_rank": 2
         }
       ],
-      "first_seen": "2026-09-09",
+      "first_seen": "2026-09-10",
       "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 5,
-      "current_rank": 5,
+      "days_on": 6,
+      "best_rank": 2,
+      "current_rank": 2,
       "stage": "stabil",
       "score_parts": {
         "velocity": 18,
-        "persistence": 25,
-        "peak": 9,
+        "persistence": 21,
+        "peak": 12,
         "cross_platform": 0
       },
       "theme": null,
-      "score": 52
+      "score": 51
     },
     {
-      "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
+      "trend_id": "shopee:uniqsoo-tas-serut-sepatu-anti-kuning-pouch-travel-multifungs",
       "platform": "shopee",
-      "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
+      "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 4
-        },
-        {
           "day": "2026-09-10",
-          "best_rank": 4
+          "best_rank": 3
         },
         {
           "day": "2026-09-11",
-          "best_rank": 4
+          "best_rank": 3
         },
         {
           "day": "2026-09-12",
-          "best_rank": 4
+          "best_rank": 3
         },
         {
           "day": "2026-09-13",
-          "best_rank": 4
+          "best_rank": 3
         },
         {
           "day": "2026-09-14",
-          "best_rank": 4
+          "best_rank": 3
         },
         {
           "day": "2026-09-15",
-          "best_rank": 4
+          "best_rank": 3
         }
       ],
-      "first_seen": "2026-09-09",
+      "first_seen": "2026-09-10",
       "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 4,
-      "current_rank": 4,
+      "days_on": 6,
+      "best_rank": 3,
+      "current_rank": 3,
       "stage": "stabil",
       "score_parts": {
         "velocity": 18,
-        "persistence": 25,
-        "peak": 9,
+        "persistence": 21,
+        "peak": 12,
         "cross_platform": 0
       },
       "theme": null,
-      "score": 52
+      "score": 51
     },
     {
       "trend_id": "youtube:6_5SMFPHdmc",
@@ -598,66 +477,29 @@
       "score": 51
     },
     {
-      "trend_id": "youtube:8-D_a62AWtc",
-      "platform": "youtube",
-      "title": "YES !! RIANTI DAN KENZO SYOK NADIA YANG ANGKAT VIDEO CALL - TRAILER MERANGKAI KISAH INDAH HARI INI",
+      "trend_id": "google:inter-miami-vs-cruz-azul",
+      "platform": "google",
+      "title": "inter miami vs cruz azul",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 14
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 8
+          "day": "2026-09-17",
+          "best_rank": 3
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-11",
-      "days_on": 3,
-      "best_rank": 5,
-      "current_rank": 8,
-      "stage": "naik",
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-17",
+      "days_on": 1,
+      "best_rank": 3,
+      "current_rank": 3,
+      "stage": "baru",
       "score_parts": {
-        "velocity": 31,
-        "persistence": 11,
-        "peak": 9,
-        "cross_platform": 0
+        "velocity": 18,
+        "persistence": 4,
+        "peak": 12,
+        "cross_platform": 16
       },
-      "theme": "Tontonan & sinetron",
-      "score": 51
-    },
-    {
-      "trend_id": "youtube:YR7uaElbnDw",
-      "platform": "youtube",
-      "title": "Kera Sakti - DJiamputh",
-      "daily": [
-        {
-          "day": "2026-09-15",
-          "best_rank": 12
-        },
-        {
-          "day": "2026-09-16",
-          "best_rank": 4
-        }
-      ],
-      "first_seen": "2026-09-15",
-      "last_seen": "2026-09-16",
-      "days_on": 2,
-      "best_rank": 4,
-      "current_rank": 4,
-      "stage": "puncak",
-      "score_parts": {
-        "velocity": 35,
-        "persistence": 7,
-        "peak": 9,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 51
+      "theme": "Sepak bola",
+      "score": 50
     },
     {
       "trend_id": "google:olahraga",
@@ -689,435 +531,957 @@
       "score": 50
     },
     {
-      "trend_id": "google:sporting",
+      "trend_id": "google:resident-evil-2026",
       "platform": "google",
-      "title": "sporting",
+      "title": "resident evil 2026",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-13",
+          "day": "2026-09-16",
           "best_rank": 2
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-13",
-      "days_on": 2,
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-16",
+      "days_on": 1,
       "best_rank": 2,
       "current_rank": 2,
-      "stage": "puncak",
+      "stage": "baru",
       "score_parts": {
-        "velocity": 31,
-        "persistence": 7,
+        "velocity": 18,
+        "persistence": 4,
         "peak": 12,
-        "cross_platform": 0
+        "cross_platform": 16
       },
       "theme": null,
       "score": 50
     },
     {
-      "trend_id": "netflix:na-willa",
-      "platform": "netflix",
-      "title": "Na Willa",
+      "trend_id": "google:kualitas-udara-padang-hari-ini",
+      "platform": "google",
+      "title": "kualitas udara padang hari ini",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 8
+          "day": "2026-09-16",
+          "best_rank": 5
         },
         {
-          "day": "2026-09-10",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 8
+          "day": "2026-09-17",
+          "best_rank": 1
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 8,
-      "current_rank": 8,
-      "stage": "stabil",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-17",
+      "days_on": 2,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "puncak",
       "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 6,
+        "velocity": 27,
+        "persistence": 7,
+        "peak": 15,
         "cross_platform": 0
       },
       "theme": null,
       "score": 49
     },
     {
-      "trend_id": "netflix:perjanjian-setan",
-      "platform": "netflix",
-      "title": "Perjanjian Setan",
+      "trend_id": "instagram:docaz5perze",
+      "platform": "instagram",
+      "title": "Di hari pertamanya rapat dengan Komisi XI DPR RI, Rabu (10/9), Menteri Keuangan Purbaya…",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 9
+          "day": "2026-09-16",
+          "best_rank": 13
         },
         {
+          "day": "2026-09-17",
+          "best_rank": 11
+        }
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-17",
+      "days_on": 2,
+      "best_rank": 11,
+      "current_rank": 11,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 22,
+        "persistence": 7,
+        "peak": 3,
+        "cross_platform": 16
+      },
+      "theme": "Politik & kebijakan",
+      "score": 48
+    },
+    {
+      "trend_id": "netflix:four-hands-two-sonatas",
+      "platform": "netflix",
+      "title": "Four Hands, Two Sonatas",
+      "daily": [
+        {
           "day": "2026-09-10",
-          "best_rank": 9
+          "best_rank": 13
         },
         {
           "day": "2026-09-11",
-          "best_rank": 9
+          "best_rank": 13
         },
         {
           "day": "2026-09-12",
-          "best_rank": 9
+          "best_rank": 13
         },
         {
           "day": "2026-09-13",
-          "best_rank": 9
+          "best_rank": 13
         },
         {
           "day": "2026-09-14",
-          "best_rank": 9
+          "best_rank": 13
         },
         {
           "day": "2026-09-15",
-          "best_rank": 9
+          "best_rank": 13
+        },
+        {
+          "day": "2026-09-16",
+          "best_rank": 12
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-16",
       "days_on": 7,
-      "best_rank": 9,
-      "current_rank": 9,
-      "stage": "stabil",
+      "best_rank": 12,
+      "current_rank": 12,
+      "stage": "puncak",
       "score_parts": {
-        "velocity": 18,
+        "velocity": 20,
         "persistence": 25,
-        "peak": 6,
+        "peak": 3,
         "cross_platform": 0
       },
       "theme": null,
-      "score": 49
+      "score": 48
     },
     {
-      "trend_id": "netflix:setan-botak-di-jembatan-ancol",
+      "trend_id": "netflix:levitating",
       "platform": "netflix",
-      "title": "Setan Botak di Jembatan Ancol",
+      "title": "Levitating",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 10
-        },
-        {
           "day": "2026-09-10",
-          "best_rank": 10
+          "best_rank": 4
         },
         {
           "day": "2026-09-11",
-          "best_rank": 10
+          "best_rank": 4
         },
         {
           "day": "2026-09-12",
-          "best_rank": 10
+          "best_rank": 4
         },
         {
           "day": "2026-09-13",
-          "best_rank": 10
+          "best_rank": 4
         },
         {
           "day": "2026-09-14",
-          "best_rank": 10
+          "best_rank": 4
         },
         {
           "day": "2026-09-15",
-          "best_rank": 10
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 10,
-      "current_rank": 10,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 6,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 49
-    },
-    {
-      "trend_id": "netflix:the-whisper-man",
-      "platform": "netflix",
-      "title": "The Whisper Man",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 6
+          "best_rank": 4
         },
         {
-          "day": "2026-09-10",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-15",
+          "day": "2026-09-16",
           "best_rank": 6
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-16",
       "days_on": 7,
-      "best_rank": 6,
+      "best_rank": 4,
       "current_rank": 6,
       "stage": "stabil",
       "score_parts": {
-        "velocity": 18,
+        "velocity": 14,
         "persistence": 25,
-        "peak": 6,
+        "peak": 9,
         "cross_platform": 0
       },
       "theme": null,
-      "score": 49
+      "score": 48
     },
     {
-      "trend_id": "netflix:wait-for-me-to-be-successful-later",
+      "trend_id": "netflix:my-chef-in-crime",
       "platform": "netflix",
-      "title": "Wait for Me To Be Successful Later",
+      "title": "My Chef In Crime",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 7
-        },
-        {
           "day": "2026-09-10",
-          "best_rank": 7
+          "best_rank": 18
         },
         {
           "day": "2026-09-11",
-          "best_rank": 7
+          "best_rank": 18
         },
         {
           "day": "2026-09-12",
-          "best_rank": 7
+          "best_rank": 18
         },
         {
           "day": "2026-09-13",
-          "best_rank": 7
+          "best_rank": 18
         },
         {
           "day": "2026-09-14",
-          "best_rank": 7
+          "best_rank": 18
         },
         {
           "day": "2026-09-15",
+          "best_rank": 18
+        },
+        {
+          "day": "2026-09-16",
+          "best_rank": 17
+        }
+      ],
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-16",
+      "days_on": 7,
+      "best_rank": 17,
+      "current_rank": 17,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 20,
+        "persistence": 25,
+        "peak": 3,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 48
+    },
+    {
+      "trend_id": "netflix:the-thorn-one-sacred-light",
+      "platform": "netflix",
+      "title": "The Thorn: One Sacred Light",
+      "daily": [
+        {
+          "day": "2026-09-10",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-15",
+          "best_rank": 5
+        }
+      ],
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-15",
+      "days_on": 6,
+      "best_rank": 5,
+      "current_rank": 5,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 21,
+        "peak": 9,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 48
+    },
+    {
+      "trend_id": "shopee:azalea-smooth-foot-cream-zaitun-honey-35gr",
+      "platform": "shopee",
+      "title": "Azalea Smooth Foot Cream Zaitun & Honey 35gr",
+      "daily": [
+        {
+          "day": "2026-09-10",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-15",
+          "best_rank": 5
+        }
+      ],
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-15",
+      "days_on": 6,
+      "best_rank": 5,
+      "current_rank": 5,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 21,
+        "peak": 9,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 48
+    },
+    {
+      "trend_id": "shopee:taiyo-sticky-spiderman-tempel-kaca-mainan-anak",
+      "platform": "shopee",
+      "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
+      "daily": [
+        {
+          "day": "2026-09-10",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-11",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-12",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-13",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-14",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-15",
+          "best_rank": 4
+        }
+      ],
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-15",
+      "days_on": 6,
+      "best_rank": 4,
+      "current_rank": 4,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 21,
+        "peak": 9,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 48
+    },
+    {
+      "trend_id": "youtube:1ZYqsf-UDTU",
+      "platform": "youtube",
+      "title": "Silvy Kumalasari Ft Sadewok - Dirantai Digelangi Rindu (Official Music Video) | Asal Sembuh Lukamu",
+      "daily": [
+        {
+          "day": "2026-09-15",
+          "best_rank": 15
+        },
+        {
+          "day": "2026-09-16",
           "best_rank": 7
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-16",
+      "days_on": 2,
       "best_rank": 7,
       "current_rank": 7,
-      "stage": "stabil",
+      "stage": "puncak",
       "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
+        "velocity": 35,
+        "persistence": 7,
         "peak": 6,
         "cross_platform": 0
       },
-      "theme": null,
-      "score": 49
+      "theme": "Musik & lagu",
+      "score": 48
     },
     {
-      "trend_id": "shopee:eldore-beauty-masker-facial-sheet-mask-30g",
-      "platform": "shopee",
-      "title": "ELDORE Beauty Masker Facial Sheet Mask 30g",
+      "trend_id": "google:erupsi-gunung-anak-krakatau",
+      "platform": "google",
+      "title": "erupsi gunung anak krakatau",
       "daily": [
         {
-          "day": "2026-09-09",
-          "best_rank": 6
-        },
-        {
           "day": "2026-09-10",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 6
+          "best_rank": 5
         }
       ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 6,
-      "current_rank": 6,
-      "stage": "stabil",
+      "first_seen": "2026-09-10",
+      "last_seen": "2026-09-10",
+      "days_on": 1,
+      "best_rank": 5,
+      "current_rank": 5,
+      "stage": "baru",
       "score_parts": {
         "velocity": 18,
-        "persistence": 25,
-        "peak": 6,
-        "cross_platform": 0
+        "persistence": 4,
+        "peak": 9,
+        "cross_platform": 16
       },
-      "theme": null,
-      "score": 49
-    },
-    {
-      "trend_id": "shopee:its-me-paket-day-cream-night-cream-premium",
-      "platform": "shopee",
-      "title": "ITS ME Paket Day Cream + Night Cream Premium",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 8
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 8,
-      "current_rank": 8,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 6,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 49
-    },
-    {
-      "trend_id": "shopee:kime-luminizing-jeju-brightening-soap-100gr-buy-1-box-get-2",
-      "platform": "shopee",
-      "title": "KIME Luminizing Jeju Brightening Soap 100gr (Buy 1 Box Get 2)",
-      "daily": [
-        {
-          "day": "2026-09-09",
-          "best_rank": 9
-        },
-        {
-          "day": "2026-09-10",
-          "best_rank": 9
-        },
-        {
-          "day": "2026-09-11",
-          "best_rank": 9
-        },
-        {
-          "day": "2026-09-12",
-          "best_rank": 9
-        },
-        {
-          "day": "2026-09-13",
-          "best_rank": 9
-        },
-        {
-          "day": "2026-09-14",
-          "best_rank": 9
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 9
-        }
-      ],
-      "first_seen": "2026-09-09",
-      "last_seen": "2026-09-15",
-      "days_on": 7,
-      "best_rank": 9,
-      "current_rank": 9,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 25,
-        "peak": 6,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 49
+      "theme": "Bencana alam",
+      "score": 47
     }
   ],
-  "cross_platform": [],
+  "cross_platform": [
+    {
+      "label": "buat · tanpa",
+      "method": "entitas",
+      "platforms": [
+        "shopee",
+        "youtube"
+      ],
+      "members": [
+        {
+          "trend_id": "youtube:XS5Mp6Jfi90",
+          "platform": "youtube",
+          "title": "Yuta Mio Buat Penjara Rainbow Diatas Trailer | Keliling Tangkap NAYKILLA TANPA MULUT DiKota Sakura😱🚨",
+          "daily": [
+            {
+              "day": "2026-09-10",
+              "best_rank": 6
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 9
+            }
+          ],
+          "first_seen": "2026-09-10",
+          "last_seen": "2026-09-11",
+          "days_on": 2,
+          "best_rank": 6,
+          "current_rank": 9,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 11,
+            "persistence": 7,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 40
+        },
+        {
+          "trend_id": "shopee:bulu-mata-palsu-pemula-tanpa-lem-reusable-natural-banget-bua",
+          "platform": "shopee",
+          "title": "BULU MATA PALSU PEMULA Tanpa Lem Reusable! Natural Banget Buat Daily Look | Anti Alergi",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 14
+            },
+            {
+              "day": "2026-09-17",
+              "best_rank": 14
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-17",
+          "days_on": 2,
+          "best_rank": 14,
+          "current_rank": 14,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 44
+        }
+      ]
+    },
+    {
+      "label": "dulu · pake",
+      "method": "entitas",
+      "platforms": [
+        "instagram",
+        "youtube"
+      ],
+      "members": [
+        {
+          "trend_id": "youtube:PMBhqbLbWZk",
+          "platform": "youtube",
+          "title": "KISAH MASA LALU HANTU IBU BILANG PAKE INI DULU !! Feat @sapipurba  minecraft",
+          "daily": [
+            {
+              "day": "2026-09-15",
+              "best_rank": 6
+            },
+            {
+              "day": "2026-09-16",
+              "best_rank": 11
+            }
+          ],
+          "first_seen": "2026-09-15",
+          "last_seen": "2026-09-16",
+          "days_on": 2,
+          "best_rank": 6,
+          "current_rank": 11,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 7,
+            "persistence": 7,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 36
+        },
+        {
+          "trend_id": "instagram:dcscpjlcqdc",
+          "platform": "instagram",
+          "title": "Maaf yang Vreaa.. dolan kali ini gak pake cepool dulu.. Hehehe..",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 9
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-16",
+          "days_on": 1,
+          "best_rank": 9,
+          "current_rank": 9,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 44
+        }
+      ]
+    },
+    {
+      "label": "erupsi · gunung",
+      "method": "entitas",
+      "platforms": [
+        "google",
+        "instagram"
+      ],
+      "members": [
+        {
+          "trend_id": "google:erupsi-gunung-anak-krakatau",
+          "platform": "google",
+          "title": "erupsi gunung anak krakatau",
+          "daily": [
+            {
+              "day": "2026-09-10",
+              "best_rank": 5
+            }
+          ],
+          "first_seen": "2026-09-10",
+          "last_seen": "2026-09-10",
+          "days_on": 1,
+          "best_rank": 5,
+          "current_rank": 5,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 16
+          },
+          "theme": "Bencana alam",
+          "score": 47
+        },
+        {
+          "trend_id": "instagram:dc8jbi3mfsi",
+          "platform": "instagram",
+          "title": "Ya allah ternyata ada 10 gunung erupsi ada apakah INDONESIA kuuu🥹 Stay Safe,🤍",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 10
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-16",
+          "days_on": 1,
+          "best_rank": 10,
+          "current_rank": 10,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Bencana alam",
+          "score": 44
+        },
+        {
+          "trend_id": "instagram:ddbr0mwh8j9",
+          "platform": "instagram",
+          "title": "Di tengah erupsi sejumlah gunung api di Indonesia, pilihan Presiden Joko Widodo…",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 13
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 13,
+          "current_rank": 13,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": "Bencana alam",
+          "score": 41
+        }
+      ]
+    },
+    {
+      "label": "evil · resident",
+      "method": "entitas",
+      "platforms": [
+        "google",
+        "twitter"
+      ],
+      "members": [
+        {
+          "trend_id": "google:film-resident-evil-2026",
+          "platform": "google",
+          "title": "film resident evil 2026",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 10
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 10,
+          "current_rank": 10,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 44
+        },
+        {
+          "trend_id": "twitter:resident-evil",
+          "platform": "twitter",
+          "title": "Resident Evil",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 11
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-16",
+          "days_on": 1,
+          "best_rank": 11,
+          "current_rank": 11,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 41
+        }
+      ]
+    },
+    {
+      "label": "evil · resident",
+      "method": "entitas",
+      "platforms": [
+        "google",
+        "twitter"
+      ],
+      "members": [
+        {
+          "trend_id": "google:resident-evil-2026",
+          "platform": "google",
+          "title": "resident evil 2026",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 2
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-16",
+          "days_on": 1,
+          "best_rank": 2,
+          "current_rank": 2,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 12,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 50
+        },
+        {
+          "trend_id": "twitter:resident-evil",
+          "platform": "twitter",
+          "title": "Resident Evil",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 11
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-16",
+          "days_on": 1,
+          "best_rank": 11,
+          "current_rank": 11,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 41
+        }
+      ]
+    },
+    {
+      "label": "inter · miami",
+      "method": "entitas",
+      "platforms": [
+        "google",
+        "twitter"
+      ],
+      "members": [
+        {
+          "trend_id": "google:inter-miami-vs-cruz-azul",
+          "platform": "google",
+          "title": "inter miami vs cruz azul",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 3
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 3,
+          "current_rank": 3,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 12,
+            "cross_platform": 16
+          },
+          "theme": "Sepak bola",
+          "score": 50
+        },
+        {
+          "trend_id": "twitter:inter-miami",
+          "platform": "twitter",
+          "title": "Inter Miami",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 20
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 20,
+          "current_rank": 20,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 41
+        }
+      ]
+    },
+    {
+      "label": "inter · miami",
+      "method": "entitas",
+      "platforms": [
+        "google",
+        "twitter"
+      ],
+      "members": [
+        {
+          "trend_id": "google:inter-miami-vs-nashville",
+          "platform": "google",
+          "title": "inter miami vs nashville",
+          "daily": [
+            {
+              "day": "2026-09-12",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-12",
+          "last_seen": "2026-09-12",
+          "days_on": 1,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 15,
+            "cross_platform": 16
+          },
+          "theme": "Sepak bola",
+          "score": 53
+        },
+        {
+          "trend_id": "twitter:inter-miami",
+          "platform": "twitter",
+          "title": "Inter Miami",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 20
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 20,
+          "current_rank": 20,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 41
+        }
+      ]
+    },
+    {
+      "label": "keuangan · menteri",
+      "method": "entitas",
+      "platforms": [
+        "google",
+        "instagram"
+      ],
+      "members": [
+        {
+          "trend_id": "google:menteri-keuangan-indonesia",
+          "platform": "google",
+          "title": "menteri keuangan indonesia",
+          "daily": [
+            {
+              "day": "2026-09-15",
+              "best_rank": 5
+            }
+          ],
+          "first_seen": "2026-09-15",
+          "last_seen": "2026-09-15",
+          "days_on": 1,
+          "best_rank": 5,
+          "current_rank": 5,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 47
+        },
+        {
+          "trend_id": "instagram:docaz5perze",
+          "platform": "instagram",
+          "title": "Di hari pertamanya rapat dengan Komisi XI DPR RI, Rabu (10/9), Menteri Keuangan Purbaya…",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 13
+            },
+            {
+              "day": "2026-09-17",
+              "best_rank": 11
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-17",
+          "days_on": 2,
+          "best_rank": 11,
+          "current_rank": 11,
+          "stage": "puncak",
+          "score_parts": {
+            "velocity": 22,
+            "persistence": 7,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 48
+        }
+      ]
+    }
+  ],
   "categories": [
     {
       "label": "Sepak bola",
-      "n_trends": 133,
+      "n_trends": 136,
       "platforms": {
-        "google": 127,
-        "youtube": 6
+        "google": 123,
+        "youtube": 10,
+        "twitter": 2,
+        "instagram": 1
       },
       "top": [
         {
@@ -1249,9 +1613,10 @@
     },
     {
       "label": "Tontonan & sinetron",
-      "n_trends": 34,
+      "n_trends": 33,
       "platforms": {
-        "youtube": 33,
+        "youtube": 31,
+        "google": 1,
         "netflix": 1
       },
       "top": [
@@ -1343,21 +1708,21 @@
           "score": 37
         },
         {
-          "trend_id": "youtube:MlkrpVidLAQ",
+          "trend_id": "youtube:aWG3IsalrcA",
           "platform": "youtube",
-          "title": "TERIKAT JANJI TRAILER: DAVINA BIKIN REZA & DION NYEBUR‼️ GIMANA REAKSI SENA? - Arya Saloka, Asha Ass",
+          "title": "TERIKAT JANJI TRAILER: SENA AKHIRNYA JUJUR SIAPA ORANG TUANYA KE DAVINA⁉️ - Arya Saloka,Asha Assunca",
           "daily": [
             {
-              "day": "2026-09-09",
+              "day": "2026-09-16",
               "best_rank": 2
             },
             {
-              "day": "2026-09-10",
+              "day": "2026-09-17",
               "best_rank": 2
             }
           ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-10",
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-17",
           "days_on": 2,
           "best_rank": 2,
           "current_rank": 2,
@@ -1403,180 +1768,11 @@
       ]
     },
     {
-      "label": "Musik & lagu",
-      "n_trends": 13,
-      "platforms": {
-        "youtube": 13
-      },
-      "top": [
-        {
-          "trend_id": "youtube:238X2xUGxRM",
-          "platform": "youtube",
-          "title": "Katy Perry - The One That Got Away (Lyrics)",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 10
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-10",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 10,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 22
-        },
-        {
-          "trend_id": "youtube:EEevRrB3cuw",
-          "platform": "youtube",
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 10
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-15",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-16",
-              "best_rank": 7
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-16",
-          "days_on": 4,
-          "best_rank": 1,
-          "current_rank": 7,
-          "stage": "naik",
-          "score_parts": {
-            "velocity": 25,
-            "persistence": 14,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 54
-        },
-        {
-          "trend_id": "youtube:ZUJMk1U7yq8",
-          "platform": "youtube",
-          "title": "Katy Perry - The One That Got Away ( Lyrics)",
-          "daily": [
-            {
-              "day": "2026-09-15",
-              "best_rank": 1
-            },
-            {
-              "day": "2026-09-16",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-15",
-          "last_seen": "2026-09-16",
-          "days_on": 2,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 40
-        },
-        {
-          "trend_id": "youtube:Jn-uRyPZaJM",
-          "platform": "youtube",
-          "title": "Nabila Taqiyyah - Tak Semudah Hompimpa (Official Music Video)",
-          "daily": [
-            {
-              "day": "2026-09-11",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-12",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-13",
-              "best_rank": 10
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 12
-            }
-          ],
-          "first_seen": "2026-09-11",
-          "last_seen": "2026-09-14",
-          "days_on": 4,
-          "best_rank": 4,
-          "current_rank": 12,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 14,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 23
-        },
-        {
-          "trend_id": "youtube:f2lD7clyD3E",
-          "platform": "youtube",
-          "title": "Yeni Inka - TERBELAH JADI DUA (Official Music Yi Production)",
-          "daily": [
-            {
-              "day": "2026-09-13",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-14",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-13",
-          "last_seen": "2026-09-14",
-          "days_on": 2,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Musik & lagu",
-          "score": 34
-        }
-      ]
-    },
-    {
       "label": "Bencana alam",
-      "n_trends": 11,
+      "n_trends": 14,
       "platforms": {
         "google": 9,
+        "instagram": 3,
         "youtube": 2
       },
       "top": [
@@ -1675,10 +1871,10 @@
             "velocity": 18,
             "persistence": 4,
             "peak": 9,
-            "cross_platform": 0
+            "cross_platform": 16
           },
           "theme": "Bencana alam",
-          "score": 31
+          "score": 47
         },
         {
           "trend_id": "google:gempa-hari-ini-14-september-2026",
@@ -1708,10 +1904,184 @@
       ]
     },
     {
-      "label": "K-pop & idol",
-      "n_trends": 10,
+      "label": "Musik & lagu",
+      "n_trends": 13,
       "platforms": {
-        "youtube": 10
+        "youtube": 13
+      },
+      "top": [
+        {
+          "trend_id": "youtube:EEevRrB3cuw",
+          "platform": "youtube",
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 10
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-15",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-16",
+              "best_rank": 7
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-16",
+          "days_on": 4,
+          "best_rank": 1,
+          "current_rank": 7,
+          "stage": "naik",
+          "score_parts": {
+            "velocity": 25,
+            "persistence": 14,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 54
+        },
+        {
+          "trend_id": "youtube:ZUJMk1U7yq8",
+          "platform": "youtube",
+          "title": "Katy Perry - The One That Got Away ( Lyrics)",
+          "daily": [
+            {
+              "day": "2026-09-15",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-16",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-17",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-15",
+          "last_seen": "2026-09-17",
+          "days_on": 3,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 11,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 44
+        },
+        {
+          "trend_id": "youtube:Jn-uRyPZaJM",
+          "platform": "youtube",
+          "title": "Nabila Taqiyyah - Tak Semudah Hompimpa (Official Music Video)",
+          "daily": [
+            {
+              "day": "2026-09-11",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-12",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 10
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 12
+            }
+          ],
+          "first_seen": "2026-09-11",
+          "last_seen": "2026-09-14",
+          "days_on": 4,
+          "best_rank": 4,
+          "current_rank": 12,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 0,
+            "persistence": 14,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 23
+        },
+        {
+          "trend_id": "youtube:f2lD7clyD3E",
+          "platform": "youtube",
+          "title": "Yeni Inka - TERBELAH JADI DUA (Official Music Yi Production)",
+          "daily": [
+            {
+              "day": "2026-09-13",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-14",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-13",
+          "last_seen": "2026-09-14",
+          "days_on": 2,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 34
+        },
+        {
+          "trend_id": "youtube:mZcr-ALcRmQ",
+          "platform": "youtube",
+          "title": "Mark Lee (마크리) - My Friend (Official Music Video)",
+          "daily": [
+            {
+              "day": "2026-09-10",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-10",
+          "last_seen": "2026-09-11",
+          "days_on": 2,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Musik & lagu",
+          "score": 34
+        }
+      ]
+    },
+    {
+      "label": "K-pop & idol",
+      "n_trends": 8,
+      "platforms": {
+        "youtube": 8
       },
       "top": [
         {
@@ -1749,10 +2119,6 @@
           "title": "Hearts2Hearts 하츠투하츠 'Moonride' MV",
           "daily": [
             {
-              "day": "2026-09-09",
-              "best_rank": 1
-            },
-            {
               "day": "2026-09-10",
               "best_rank": 1
             },
@@ -1761,20 +2127,20 @@
               "best_rank": 1
             }
           ],
-          "first_seen": "2026-09-09",
+          "first_seen": "2026-09-10",
           "last_seen": "2026-09-11",
-          "days_on": 3,
+          "days_on": 2,
           "best_rank": 1,
           "current_rank": 1,
           "stage": "stabil",
           "score_parts": {
             "velocity": 18,
-            "persistence": 11,
+            "persistence": 7,
             "peak": 15,
             "cross_platform": 0
           },
           "theme": "K-pop & idol",
-          "score": 44
+          "score": 40
         },
         {
           "trend_id": "youtube:pgctulw9RQc",
@@ -1804,39 +2170,6 @@
           },
           "theme": "K-pop & idol",
           "score": 16
-        },
-        {
-          "trend_id": "youtube:s6NUEu1x64I",
-          "platform": "youtube",
-          "title": "LISA - Always Lalisa (Official Trailer)",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 8
-            },
-            {
-              "day": "2026-09-10",
-              "best_rank": 5
-            },
-            {
-              "day": "2026-09-11",
-              "best_rank": 14
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-11",
-          "days_on": 3,
-          "best_rank": 5,
-          "current_rank": 14,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 5,
-            "persistence": 11,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "K-pop & idol",
-          "score": 25
         },
         {
           "trend_id": "youtube:3Mk0shfP1Qw",
@@ -1878,41 +2211,45 @@
           },
           "theme": "K-pop & idol",
           "score": 27
+        },
+        {
+          "trend_id": "youtube:s6NUEu1x64I",
+          "platform": "youtube",
+          "title": "LISA - Always Lalisa (Official Trailer)",
+          "daily": [
+            {
+              "day": "2026-09-10",
+              "best_rank": 8
+            },
+            {
+              "day": "2026-09-11",
+              "best_rank": 14
+            }
+          ],
+          "first_seen": "2026-09-10",
+          "last_seen": "2026-09-11",
+          "days_on": 2,
+          "best_rank": 8,
+          "current_rank": 14,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 5,
+            "persistence": 7,
+            "peak": 6,
+            "cross_platform": 0
+          },
+          "theme": "K-pop & idol",
+          "score": 18
         }
       ]
     },
     {
       "label": "Keuangan & kripto",
-      "n_trends": 8,
+      "n_trends": 6,
       "platforms": {
-        "google": 8
+        "google": 6
       },
       "top": [
-        {
-          "trend_id": "google:binance-exchange",
-          "platform": "google",
-          "title": "binance exchange",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-09",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 0
-          },
-          "theme": "Keuangan & kripto",
-          "score": 37
-        },
         {
           "trend_id": "google:indeks-harga-saham-gabungan",
           "platform": "google",
@@ -2016,6 +2353,31 @@
           },
           "theme": "Keuangan & kripto",
           "score": 38
+        },
+        {
+          "trend_id": "google:mnc-bank",
+          "platform": "google",
+          "title": "mnc bank",
+          "daily": [
+            {
+              "day": "2026-09-14",
+              "best_rank": 6
+            }
+          ],
+          "first_seen": "2026-09-14",
+          "last_seen": "2026-09-14",
+          "days_on": 1,
+          "best_rank": 6,
+          "current_rank": 6,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 0
+          },
+          "theme": "Keuangan & kripto",
+          "score": 28
         }
       ]
     },
@@ -2063,31 +2425,6 @@
           ],
           "first_seen": "2026-09-11",
           "last_seen": "2026-09-11",
-          "days_on": 1,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 0
-          },
-          "theme": "Game & esports",
-          "score": 34
-        },
-        {
-          "trend_id": "youtube:G55FFZZFaPM",
-          "platform": "youtube",
-          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
-          "daily": [
-            {
-              "day": "2026-09-09",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-09",
           "days_on": 1,
           "best_rank": 3,
           "current_rank": 3,
@@ -2162,6 +2499,149 @@
           },
           "theme": "Game & esports",
           "score": 41
+        },
+        {
+          "trend_id": "youtube:ykgecDVRvlI",
+          "platform": "youtube",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 2 | Bahasa Indonesia",
+          "daily": [
+            {
+              "day": "2026-09-12",
+              "best_rank": 3
+            },
+            {
+              "day": "2026-09-13",
+              "best_rank": 3
+            }
+          ],
+          "first_seen": "2026-09-12",
+          "last_seen": "2026-09-13",
+          "days_on": 2,
+          "best_rank": 3,
+          "current_rank": 3,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 12,
+            "cross_platform": 0
+          },
+          "theme": "Game & esports",
+          "score": 37
+        }
+      ]
+    },
+    {
+      "label": "Politik & kebijakan",
+      "n_trends": 4,
+      "platforms": {
+        "google": 3,
+        "instagram": 1
+      },
+      "top": [
+        {
+          "trend_id": "google:prabowo-subianto",
+          "platform": "google",
+          "title": "prabowo subianto",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-16",
+          "days_on": 1,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Politik & kebijakan",
+          "score": 31
+        },
+        {
+          "trend_id": "google:menteri-keuangan-indonesia",
+          "platform": "google",
+          "title": "menteri keuangan indonesia",
+          "daily": [
+            {
+              "day": "2026-09-15",
+              "best_rank": 5
+            }
+          ],
+          "first_seen": "2026-09-15",
+          "last_seen": "2026-09-15",
+          "days_on": 1,
+          "best_rank": 5,
+          "current_rank": 5,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 47
+        },
+        {
+          "trend_id": "google:listyo-sigit-prabowo",
+          "platform": "google",
+          "title": "listyo sigit prabowo",
+          "daily": [
+            {
+              "day": "2026-09-12",
+              "best_rank": 6
+            }
+          ],
+          "first_seen": "2026-09-12",
+          "last_seen": "2026-09-12",
+          "days_on": 1,
+          "best_rank": 6,
+          "current_rank": 6,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 0
+          },
+          "theme": "Politik & kebijakan",
+          "score": 28
+        },
+        {
+          "trend_id": "instagram:docaz5perze",
+          "platform": "instagram",
+          "title": "Di hari pertamanya rapat dengan Komisi XI DPR RI, Rabu (10/9), Menteri Keuangan Purbaya…",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 13
+            },
+            {
+              "day": "2026-09-17",
+              "best_rank": 11
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-17",
+          "days_on": 2,
+          "best_rank": 11,
+          "current_rank": 11,
+          "stage": "puncak",
+          "score_parts": {
+            "velocity": 22,
+            "persistence": 7,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 48
         }
       ]
     },
@@ -2198,76 +2678,17 @@
           "score": 31
         },
         {
-          "trend_id": "google:cek-desil-lewat-hp",
+          "trend_id": "google:cek-bansos-ktp",
           "platform": "google",
-          "title": "cek desil lewat hp",
+          "title": "cek bansos ktp",
           "daily": [
             {
-              "day": "2026-09-09",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-09",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Bantuan sosial",
-          "score": 31
-        }
-      ]
-    },
-    {
-      "label": "Politik & kebijakan",
-      "n_trends": 2,
-      "platforms": {
-        "google": 2
-      },
-      "top": [
-        {
-          "trend_id": "google:menteri-keuangan-indonesia",
-          "platform": "google",
-          "title": "menteri keuangan indonesia",
-          "daily": [
-            {
-              "day": "2026-09-15",
-              "best_rank": 5
-            }
-          ],
-          "first_seen": "2026-09-15",
-          "last_seen": "2026-09-15",
-          "days_on": 1,
-          "best_rank": 5,
-          "current_rank": 5,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Politik & kebijakan",
-          "score": 31
-        },
-        {
-          "trend_id": "google:listyo-sigit-prabowo",
-          "platform": "google",
-          "title": "listyo sigit prabowo",
-          "daily": [
-            {
-              "day": "2026-09-12",
+              "day": "2026-09-16",
               "best_rank": 6
             }
           ],
-          "first_seen": "2026-09-12",
-          "last_seen": "2026-09-12",
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-16",
           "days_on": 1,
           "best_rank": 6,
           "current_rank": 6,
@@ -2278,7 +2699,7 @@
             "peak": 6,
             "cross_platform": 0
           },
-          "theme": "Politik & kebijakan",
+          "theme": "Bantuan sosial",
           "score": 28
         }
       ]
@@ -2287,29 +2708,33 @@
       "label": "Belanja & promo",
       "n_trends": 1,
       "platforms": {
-        "google": 1
+        "shopee": 1
       },
       "top": [
         {
-          "trend_id": "google:promo-9-9",
-          "platform": "google",
-          "title": "promo 9.9",
+          "trend_id": "shopee:tsa-cod-gantungan-hook-bulat-polos-tempel-tembok-l13-r223-wa",
+          "platform": "shopee",
+          "title": "TSA (COD) Gantungan Hook Bulat Polos Tempel Tembok L13-R223 Wall Hook Stiker Dinding Kail",
           "daily": [
             {
-              "day": "2026-09-09",
-              "best_rank": 10
+              "day": "2026-09-16",
+              "best_rank": 16
+            },
+            {
+              "day": "2026-09-17",
+              "best_rank": 16
             }
           ],
-          "first_seen": "2026-09-09",
-          "last_seen": "2026-09-09",
-          "days_on": 1,
-          "best_rank": 10,
-          "current_rank": 10,
-          "stage": "baru",
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-17",
+          "days_on": 2,
+          "best_rank": 16,
+          "current_rank": 16,
+          "stage": "stabil",
           "score_parts": {
             "velocity": 18,
-            "persistence": 4,
-            "peak": 6,
+            "persistence": 7,
+            "peak": 3,
             "cross_platform": 0
           },
           "theme": "Belanja & promo",
@@ -2318,5 +2743,5 @@
       ]
     }
   ],
-  "total_trends": 606
+  "total_trends": 721
 }
