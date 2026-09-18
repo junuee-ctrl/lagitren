@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-09-17T05:59:50+00:00",
+  "generated_at": "2026-09-18T06:05:12+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-17 05:00:30",
-    "rows": 10374,
-    "days": 28.9
+    "last": "2026-09-18 05:27:05",
+    "rows": 10901,
+    "days": 29.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "kualitas udara padang hari ini",
+          "title": "alejandro garnacho",
           "rank": 1,
           "metric": 100
         },
         {
-          "title": "antonio conte",
+          "title": "wulan guritno",
           "rank": 2,
           "metric": 200
         },
         {
-          "title": "inter miami vs cruz azul",
+          "title": "hujan deras",
           "rank": 3,
-          "metric": 20000
+          "metric": 500
         },
         {
-          "title": "kualitas udara hari ini",
+          "title": "perserikatan bangsa-bangsa",
           "rank": 4,
           "metric": 500
         },
         {
-          "title": "corinthians",
+          "title": "time is",
           "rank": 5,
-          "metric": 200
+          "metric": 500
         }
       ],
       "newcomers_7d": [
@@ -63,8 +63,18 @@
           "best_rank": 1
         },
         {
+          "title": "betis vs getafe",
+          "first_seen": "2026-09-17 16:43:57",
+          "best_rank": 1
+        },
+        {
           "title": "boca juniors vs central córdoba sde",
           "first_seen": "2026-09-12 00:31:40",
+          "best_rank": 1
+        },
+        {
+          "title": "boyaca chico",
+          "first_seen": "2026-09-16 01:25:11",
           "best_rank": 1
         },
         {
@@ -73,26 +83,21 @@
           "best_rank": 1
         },
         {
-          "title": "bupati",
-          "first_seen": "2026-09-10 22:07:33",
-          "best_rank": 1
-        },
-        {
           "title": "copenhagen vs ac horsens",
           "first_seen": "2026-09-11 17:16:47",
-          "best_rank": 1
-        },
-        {
-          "title": "dortmund vs paderborn",
-          "first_seen": "2026-09-12 12:56:53",
           "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
-          "title": "hk",
-          "days_on": 3,
-          "best_rank": 5
+          "title": "boyaca chico",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "juventus",
+          "days_on": 2,
+          "best_rank": 1
         },
         {
           "title": "kualitas udara padang hari ini",
@@ -108,11 +113,6 @@
           "title": "trader",
           "days_on": 2,
           "best_rank": 1
-        },
-        {
-          "title": "video viral",
-          "days_on": 2,
-          "best_rank": 1
         }
       ]
     },
@@ -121,27 +121,27 @@
         {
           "title": "Katy Perry - The One That Got Away ( Lyrics)",
           "rank": 1,
-          "metric": 685719
+          "metric": 1163897
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA AKHIRNYA JUJUR SIAPA ORANG TUANYA KE DAVINA⁉️ - Arya Saloka,Asha Assunca",
+          "title": "TERIKAT JANJI TRAILER: DAVINA KETAUAN SENA MENYEMBUNYIKAN SESUATU⁉️ - Arya Saloka, Asha Assuncao",
           "rank": 2,
-          "metric": 122041
+          "metric": 134840
         },
         {
           "title": "ZAMAN BILE vs ZAMAN NOW - STM by OURASTORE #CHARITYMATCH",
           "rank": 3,
-          "metric": 1063604
+          "metric": 1141776
         },
         {
-          "title": "Cinta Ini Membunuhku",
+          "title": "adriAND 39: Adrian Khalif & Top 5 Indonesian Idol 14 - 2001x",
           "rank": 4,
-          "metric": 43935
+          "metric": 159861
         },
         {
-          "title": "Trailer part 3 - rose in durian village",
+          "title": "MUTIARA HANCUR ! OMA ATU SURUH IKHLASKAN KENZO BERSAMA ALEA - TRAILER MERANGKAI KISAH INDAH HARI INI",
           "rank": 5,
-          "metric": 103031
+          "metric": 36327
         }
       ],
       "newcomers_7d": [
@@ -181,6 +181,11 @@
           "best_rank": 2
         },
         {
+          "title": "TERIKAT JANJI TRAILER: DAVINA KETAUAN SENA MENYEMBUNYIKAN SESUATU⁉️ - Arya Saloka, Asha Assuncao",
+          "first_seen": "2026-09-17 07:19:39",
+          "best_rank": 2
+        },
+        {
           "title": "TERIKAT JANJI TRAILER: SENA AKHIRNYA JUJUR SIAPA ORANG TUANYA KE DAVINA⁉️ - Arya Saloka,Asha Assunca",
           "first_seen": "2026-09-16 11:03:44",
           "best_rank": 2
@@ -189,21 +194,16 @@
           "title": "TERIKAT JANJI TRAILER: REZA KECIDUK DIPA‼️ SENA NEKAT BAWA DAVINA KE MISI PENYELAMATAN? - rya Saloka",
           "first_seen": "2026-09-11 09:12:01",
           "best_rank": 2
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: SENA & DAVINA HARUS BERSIAP MENGHADAPI ARMAN ANDIKA⁉️ - Arua Saloka, Asha As",
-          "first_seen": "2026-09-15 07:23:16",
-          "best_rank": 2
         }
       ],
       "longest_running_7d": [
         {
-          "title": "AJENG FEBRIA - HELIKOPTER TURUN KE PADANG | IDOL IDOL (OFFICIAL MV AMBYAR EVERYWHERE)",
-          "days_on": 5,
-          "best_rank": 7
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "days_on": 4,
+          "best_rank": 1
         },
         {
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "title": "Katy Perry - The One That Got Away ( Lyrics)",
           "days_on": 4,
           "best_rank": 1
         },
@@ -218,44 +218,49 @@
           "best_rank": 4
         },
         {
-          "title": "Katy Perry - The One That Got Away ( Lyrics)",
-          "days_on": 3,
-          "best_rank": 1
+          "title": "Trailer part 3 - rose in durian village",
+          "days_on": 4,
+          "best_rank": 5
         }
       ]
     },
     "instagram": {
       "top_now": [
         {
-          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
+          "title": "Indonesia menyerukan pentingnya tata kelola global yang lebih inklusif untuk memastikan…",
           "rank": 1,
-          "metric": 2011443
-        },
-        {
-          "title": "Wah don’t try try deh kalau ketemu",
-          "rank": 2,
-          "metric": 1489934
-        },
-        {
-          "title": "@Prada #Prada #Paragon",
-          "rank": 3,
-          "metric": 1221583
+          "metric": 1077012
         },
         {
           "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "rank": 4,
-          "metric": 777964
+          "rank": 2,
+          "metric": 777950
         },
         {
           "title": "Tak perlu tahu aslinya pun kita sudah tau gambaran ayahnya seperti apa 🤣🤣",
+          "rank": 3,
+          "metric": 567129
+        },
+        {
+          "title": "Terima Kasih Indonesia🇮🇩",
+          "rank": 4,
+          "metric": 195242
+        },
+        {
+          "title": "“sesuatu yang hilang darimu, kalau kamu ikhlaskan maka akan Allah ganti lebih dari pada…",
           "rank": 5,
-          "metric": 567083
+          "metric": 189181
         }
       ],
       "newcomers_7d": [
         {
           "title": "Negara Kesatuan Republik Indonesia.",
           "first_seen": "2026-09-16 18:22:31",
+          "best_rank": 1
+        },
+        {
+          "title": "Wah don’t try try deh kalau ketemu",
+          "first_seen": "2026-09-16 12:22:45",
           "best_rank": 1
         },
         {
@@ -269,7 +274,22 @@
           "best_rank": 1
         },
         {
-          "title": "Wah don’t try try deh kalau ketemu",
+          "title": "HARI KE 175 MOBIL MAKAN MAKAN",
+          "first_seen": "2026-09-17 06:22:18",
+          "best_rank": 1
+        },
+        {
+          "title": "Indonesia menyerukan pentingnya tata kelola global yang lebih inklusif untuk memastikan…",
+          "first_seen": "2026-09-16 15:22:52",
+          "best_rank": 1
+        },
+        {
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "first_seen": "2026-09-16 15:22:52",
+          "best_rank": 2
+        },
+        {
+          "title": "@Prada #Prada #Paragon",
           "first_seen": "2026-09-16 12:22:45",
           "best_rank": 2
         },
@@ -279,81 +299,71 @@
           "best_rank": 2
         },
         {
-          "title": "@Prada #Prada #Paragon",
-          "first_seen": "2026-09-16 12:22:45",
-          "best_rank": 3
-        },
-        {
           "title": "Ikut terharu melihat momen ini sebagai seorang laki-laki sekaligus Bapak dengan keadaan…",
           "first_seen": "2026-09-16 15:22:52",
           "best_rank": 3
-        },
-        {
-          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
-          "first_seen": "2026-09-16 18:22:31",
-          "best_rank": 3
-        },
-        {
-          "title": "Sebuah video CCTV dari SPBU di China viral di media sosial. Dalam rekaman itu, terlihat…",
-          "first_seen": "2026-09-16 12:22:45",
-          "best_rank": 3
-        },
-        {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "first_seen": "2026-09-16 15:22:52",
-          "best_rank": 4
         }
       ],
       "longest_running_7d": [
         {
-          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
-          "days_on": 2,
+          "title": "Wah don’t try try deh kalau ketemu",
+          "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "Wah don’t try try deh kalau ketemu",
-          "days_on": 2,
+          "title": "Indonesia menyerukan pentingnya tata kelola global yang lebih inklusif untuk memastikan…",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "days_on": 3,
           "best_rank": 2
         },
         {
           "title": "@Prada #Prada #Paragon",
-          "days_on": 2,
+          "days_on": 3,
+          "best_rank": 2
+        },
+        {
+          "title": "Tak perlu tahu aslinya pun kita sudah tau gambaran ayahnya seperti apa 🤣🤣",
+          "days_on": 3,
           "best_rank": 3
-        },
-        {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "days_on": 2,
-          "best_rank": 4
-        },
-        {
-          "title": "“Tanah ini disiram oleh air mata dan darah para pahlawan; tugas kita merawatnya dengan…",
-          "days_on": 2,
-          "best_rank": 5
         }
       ]
     },
     "tiktok": {
       "top_now": [
         {
-          "title": "#80s",
+          "title": "#mlbbs42",
           "rank": 1,
-          "metric": 35895
+          "metric": 40274
         },
         {
-          "title": "#hypic",
+          "title": "#s42revampedheroes",
           "rank": 2,
-          "metric": 47879
+          "metric": 39377
         },
         {
-          "title": "#flowasone",
+          "title": "#purbaya",
           "rank": 3,
-          "metric": 48162
+          "metric": 15566
         }
       ],
       "newcomers_7d": [
         {
           "title": "#80s",
           "first_seen": "2026-09-16 12:21:29",
+          "best_rank": 1
+        },
+        {
+          "title": "#mlbbs42",
+          "first_seen": "2026-09-18 00:21:33",
+          "best_rank": 1
+        },
+        {
+          "title": "#momoyomilkteabattle",
+          "first_seen": "2026-09-18 00:21:33",
           "best_rank": 1
         },
         {
@@ -365,6 +375,16 @@
           "title": "#hypic",
           "first_seen": "2026-09-16 12:21:29",
           "best_rank": 2
+        },
+        {
+          "title": "#s42revampedheroes",
+          "first_seen": "2026-09-18 00:21:33",
+          "best_rank": 2
+        },
+        {
+          "title": "#purbaya",
+          "first_seen": "2026-09-18 03:21:21",
+          "best_rank": 3
         }
       ],
       "longest_running_7d": [
@@ -382,38 +402,53 @@
           "title": "#hypic",
           "days_on": 2,
           "best_rank": 2
+        },
+        {
+          "title": "#mlbbs42",
+          "days_on": 1,
+          "best_rank": 1
+        },
+        {
+          "title": "#momoyomilkteabattle",
+          "days_on": 1,
+          "best_rank": 1
         }
       ]
     },
     "twitter": {
       "top_now": [
         {
-          "title": "#FLAZZ1RUPIAH",
+          "title": "#GoFoodmulaidari5000diGoPay",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "$SHR",
+          "title": "#20thRyulStyle",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#GMMTVStarlympics2026",
+          "title": "$SHR",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#KementerianDesaPDT",
+          "title": "#JembatanAksesRakyat",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "Bubarkan KKB",
+          "title": "#PelayananInvestasiIndonesia",
           "rank": 5,
           "metric": null
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "#20thRyulStyle",
+          "first_seen": "2026-09-17 15:24:48",
+          "best_rank": 1
+        },
         {
           "title": "Adeyemi",
           "first_seen": "2026-09-17 00:24:26",
@@ -430,8 +465,18 @@
           "best_rank": 1
         },
         {
+          "title": "#GoFoodmulaidari5000diGoPay",
+          "first_seen": "2026-09-18 03:24:51",
+          "best_rank": 1
+        },
+        {
           "title": "#KKBPenjahatPerang",
           "first_seen": "2026-09-16 15:25:41",
+          "best_rank": 1
+        },
+        {
+          "title": "#LOEWExPhuwin",
+          "first_seen": "2026-09-17 09:24:09",
           "best_rank": 1
         },
         {
@@ -445,51 +490,36 @@
           "best_rank": 2
         },
         {
-          "title": "Carrick",
-          "first_seen": "2026-09-17 00:24:26",
-          "best_rank": 2
-        },
-        {
-          "title": "#IWillAlwaysSaveYou",
-          "first_seen": "2026-09-16 12:25:29",
-          "best_rank": 2
-        },
-        {
-          "title": "$SHR",
-          "first_seen": "2026-09-16 15:25:41",
-          "best_rank": 2
-        },
-        {
-          "title": "THE MOON GOT ITS KEY",
-          "first_seen": "2026-09-16 15:25:41",
+          "title": "Cabut Izin Korporasi",
+          "first_seen": "2026-09-17 06:24:12",
           "best_rank": 2
         }
       ],
       "longest_running_7d": [
         {
+          "title": "$SHR",
+          "days_on": 3,
+          "best_rank": 2
+        },
+        {
+          "title": "$HOOD",
+          "days_on": 3,
+          "best_rank": 8
+        },
+        {
+          "title": "#20thRyulStyle",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "#FLAZZ1RUPIAH",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
           "title": "#GMMTVStarlympics2026",
           "days_on": 2,
           "best_rank": 1
-        },
-        {
-          "title": "#KKBPenjahatPerang",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "#MoonshadowSeriesEP6",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "Bubarkan KKB",
-          "days_on": 2,
-          "best_rank": 2
-        },
-        {
-          "title": "#IWillAlwaysSaveYou",
-          "days_on": 2,
-          "best_rank": 2
         }
       ]
     },
@@ -591,34 +621,44 @@
         {
           "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
           "rank": 1,
-          "metric": 367300
+          "metric": 377900
         },
         {
           "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
           "rank": 2,
-          "metric": 338700
+          "metric": 352300
         },
         {
           "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
           "rank": 3,
-          "metric": 249800
+          "metric": 260399
         },
         {
           "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
           "rank": 4,
-          "metric": 233300
+          "metric": 228000
         },
         {
           "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
           "rank": 5,
-          "metric": 199700
+          "metric": 202100
         }
       ],
       "newcomers_7d": [
         {
           "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 1
+        },
+        {
+          "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
           "first_seen": "2026-09-16 08:27:11",
           "best_rank": 1
+        },
+        {
+          "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 2
         },
         {
           "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
@@ -627,8 +667,18 @@
         },
         {
           "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 3
+        },
+        {
+          "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
           "first_seen": "2026-09-16 08:27:11",
           "best_rank": 3
+        },
+        {
+          "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 4
         },
         {
           "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
@@ -637,59 +687,39 @@
         },
         {
           "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
-          "first_seen": "2026-09-16 08:27:11",
+          "first_seen": "2026-09-18 05:01:38",
           "best_rank": 5
         },
         {
-          "title": "Moicare Brightening Underarm Pencerah Ketiak With Niacinamide & Collagen Mencerahkan",
+          "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
           "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 6
-        },
-        {
-          "title": "sf hijab - hijab airee sport sekolah ped tebal Jersey spandek premium",
-          "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 8
-        },
-        {
-          "title": "Azalea Smooth Foot Cream - Melembabkan & Menghaluskan Kulit Kaki Pecah-Pecah dengan Zaitun",
-          "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 9
-        },
-        {
-          "title": "Bedak Basah | Perfect Powder Cream 10gr Daviena Skincare",
-          "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 10
-        },
-        {
-          "title": "[BUY 1 BOX GET 2 SABUN] KIME Luminizing Jeju Brightening Soap 100GR | Sabun Mandi Batang",
-          "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 11
+          "best_rank": 5
         }
       ],
       "longest_running_7d": [
         {
           "title": "BEAUTY TALK AHA Collagen Body Booster - 100ML Whitening Lotion dengan AHA Collagen untuk",
-          "days_on": 8,
+          "days_on": 7,
           "best_rank": 7
         },
         {
           "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "days_on": 6,
+          "days_on": 5,
           "best_rank": 1
         },
         {
           "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "days_on": 6,
+          "days_on": 5,
           "best_rank": 2
         },
         {
           "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-          "days_on": 6,
+          "days_on": 5,
           "best_rank": 3
         },
         {
           "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "days_on": 6,
+          "days_on": 5,
           "best_rank": 4
         }
       ]
@@ -701,6 +731,12 @@
       "n_platform": 2,
       "platforms": "google,twitter",
       "best_rank": 1
+    },
+    {
+      "t": "purbaya",
+      "n_platform": 2,
+      "platforms": "twitter,tiktok",
+      "best_rank": 3
     },
     {
       "t": "persib",
