@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-09-19T06:08:14+00:00",
+  "generated_at": "2026-09-20T06:10:10+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-19 05:12:26",
-    "rows": 11413,
-    "days": 30.9
+    "last": "2026-09-20 05:50:39",
+    "rows": 11940,
+    "days": 31.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "detik",
+          "title": "ufc",
           "rank": 1,
-          "metric": 1000
-        },
-        {
-          "title": "wa",
-          "rank": 2,
-          "metric": 1000
-        },
-        {
-          "title": "a",
-          "rank": 3,
-          "metric": 100
-        },
-        {
-          "title": "harga emas hari ini",
-          "rank": 4,
-          "metric": 100
-        },
-        {
-          "title": "game",
-          "rank": 5,
           "metric": 200
+        },
+        {
+          "title": "raphinha",
+          "rank": 2,
+          "metric": 200
+        },
+        {
+          "title": "barcelona vs sevilla",
+          "rank": 3,
+          "metric": 200
+        },
+        {
+          "title": "barca vs",
+          "rank": 4,
+          "metric": 200
+        },
+        {
+          "title": "artificial intelligence news",
+          "rank": 5,
+          "metric": 100
         }
       ],
       "newcomers_7d": [
@@ -53,8 +53,8 @@
           "best_rank": 1
         },
         {
-          "title": "barito putera vs persipura jayapura",
-          "first_seen": "2026-09-13 05:26:05",
+          "title": "barca vs",
+          "first_seen": "2026-09-19 21:26:55",
           "best_rank": 1
         },
         {
@@ -90,7 +90,7 @@
       ],
       "longest_running_7d": [
         {
-          "title": "as monaco",
+          "title": "barca vs",
           "days_on": 2,
           "best_rank": 1
         },
@@ -100,17 +100,17 @@
           "best_rank": 1
         },
         {
+          "title": "dortmund",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
+          "title": "everton",
+          "days_on": 2,
+          "best_rank": 1
+        },
+        {
           "title": "juventus",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "kangen band",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "kualitas udara padang hari ini",
           "days_on": 2,
           "best_rank": 1
         }
@@ -119,29 +119,29 @@
     "youtube": {
       "top_now": [
         {
-          "title": "ROSÉ - new trick (OFFICIAL MUSIC VIDEO)",
+          "title": "Yeni Inka, Seto Rawon Gank, Yesa Oktavia - HELIKOPTER TURUN KE PADANG (Official Music Yi Production)",
           "rank": 1,
-          "metric": 12617984
+          "metric": 129325
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA KHAWATIR‼️DAVINA JADI TERSANGKA? - Arya Saloka, Asha Assuncao",
+          "title": "TERIKAT JANJI TRAILER: DAVINA KESEL SENA BIARIN POLISI MENYERETNYA KE PENJARA⁉️ - Arya Saloka",
           "rank": 2,
-          "metric": 123741
+          "metric": 123074
         },
         {
-          "title": "Yuta Mio ASMR Mukbang Semua Makanan Sesuai Warna Karakter | ROBLOX",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 2 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 329993
+          "metric": 6293483
         },
         {
-          "title": "no na - star (Official Music Video)",
+          "title": "ROSÉ - new trick (OFFICIAL MUSIC VIDEO)",
           "rank": 4,
-          "metric": 604692
+          "metric": 22589208
         },
         {
-          "title": "LICIK !! KAYLA JUAL SEMUA ASET MARVEL DAN FITNAH NADYA YANG JUAL DENGAN BUKTI CCTV",
+          "title": "KENZO TEGAS !! BILANG KE OMA TIDAK MAU DIJODOHKAN SAMA ALEA - TRAILER MERANGKAI KISAH INDAH HARI INI",
           "rank": 5,
-          "metric": 39203
+          "metric": 27047
         }
       ],
       "newcomers_7d": [
@@ -161,13 +161,13 @@
           "best_rank": 1
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
-          "first_seen": "2026-09-14 05:56:25",
-          "best_rank": 2
+          "title": "Yeni Inka, Seto Rawon Gank, Yesa Oktavia - HELIKOPTER TURUN KE PADANG (Official Music Yi Production)",
+          "first_seen": "2026-09-19 22:44:05",
+          "best_rank": 1
         },
         {
-          "title": "TERIKAT JANJI TRAILER: DAVINA GAK MAI MAAFKAN SENA GITU AJA⁉️ ADA SAYARATNYA?  - Arya Saloka",
-          "first_seen": "2026-09-12 09:04:15",
+          "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
+          "first_seen": "2026-09-14 05:56:25",
           "best_rank": 2
         },
         {
@@ -213,7 +213,7 @@
           "best_rank": 5
         },
         {
-          "title": "no na - speaker freaker (the long song)",
+          "title": "ROSÉ - new trick (OFFICIAL MUSIC VIDEO)",
           "days_on": 3,
           "best_rank": 1
         },
@@ -227,29 +227,29 @@
     "instagram": {
       "top_now": [
         {
-          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
+          "title": "Postingan viral #indonesia",
           "rank": 1,
-          "metric": 1004997
+          "metric": 1748900
         },
         {
           "title": "Postingan viral #indonesia",
           "rank": 2,
-          "metric": 855132
+          "metric": 873960
         },
         {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "title": "Viral beredar di media sosial video mobil Presiden RI Joko Widodo yang ikut macet-macetan…",
           "rank": 3,
-          "metric": 777931
+          "metric": 378143
         },
         {
-          "title": "Kasus dugaan tindakan tidak pantas yang melibatkan dua mahasiswa di selasar perpustakaan…",
+          "title": "Ya allah ternyata ada 10 gunung erupsi ada apakah INDONESIA kuuu🥹 Stay Safe,🤍",
           "rank": 4,
-          "metric": 479570
+          "metric": 339436
         },
         {
-          "title": "“Tanah ini disiram oleh air mata dan darah para pahlawan; tugas kita merawatnya dengan…",
+          "title": "Berlari untuk apa dan berlari karena apa?😅",
           "rank": 5,
-          "metric": 368679
+          "metric": 117774
         }
       ],
       "newcomers_7d": [
@@ -264,8 +264,18 @@
           "best_rank": 1
         },
         {
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "first_seen": "2026-09-16 15:22:52",
+          "best_rank": 1
+        },
+        {
           "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
           "first_seen": "2026-09-16 12:22:45",
+          "best_rank": 1
+        },
+        {
+          "title": "Postingan viral #indonesia",
+          "first_seen": "2026-09-18 09:22:26",
           "best_rank": 1
         },
         {
@@ -289,71 +299,66 @@
           "best_rank": 1
         },
         {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "first_seen": "2026-09-16 15:22:52",
-          "best_rank": 2
-        },
-        {
           "title": "@Prada #Prada #Paragon",
           "first_seen": "2026-09-16 12:22:45",
-          "best_rank": 2
-        },
-        {
-          "title": "Postingan viral #indonesia",
-          "first_seen": "2026-09-18 09:22:26",
           "best_rank": 2
         }
       ],
       "longest_running_7d": [
         {
-          "title": "Negara Kesatuan Republik Indonesia.",
-          "days_on": 4,
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "days_on": 5,
           "best_rank": 1
         },
         {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "days_on": 4,
+          "title": "Jakarta dimata dunia 🇮🇩",
+          "days_on": 5,
           "best_rank": 2
         },
         {
           "title": "“Tanah ini disiram oleh air mata dan darah para pahlawan; tugas kita merawatnya dengan…",
-          "days_on": 4,
-          "best_rank": 4
+          "days_on": 5,
+          "best_rank": 3
         },
         {
-          "title": "Sudah tau @indonesiajuaratrip belum? 👀",
-          "days_on": 4,
-          "best_rank": 7
-        },
-        {
-          "title": "Doa untuk damai selalu di Indonesia. Keterangan: kunjungan ke pesantren wajib pakai…",
-          "days_on": 4,
+          "title": "👉Ikuti ig @bang.tawa banyak postingan viral & ngakak setiap hari 😂.",
+          "days_on": 5,
           "best_rank": 10
+        },
+        {
+          "title": "Negara Kesatuan Republik Indonesia.",
+          "days_on": 4,
+          "best_rank": 1
         }
       ]
     },
     "tiktok": {
       "top_now": [
         {
-          "title": "#momoyomilkteabattle",
+          "title": "#ciciprasakuliner",
           "rank": 1,
-          "metric": 252203
+          "metric": 284376
         },
         {
           "title": "#mlbbs42",
           "rank": 2,
-          "metric": 40274
+          "metric": 75883
         },
         {
           "title": "#s42revampedheroes",
           "rank": 3,
-          "metric": 39377
+          "metric": 73914
         }
       ],
       "newcomers_7d": [
         {
           "title": "#80s",
           "first_seen": "2026-09-16 12:21:29",
+          "best_rank": 1
+        },
+        {
+          "title": "#ciciprasakuliner",
+          "first_seen": "2026-09-19 09:21:23",
           "best_rank": 1
         },
         {
@@ -389,12 +394,22 @@
       ],
       "longest_running_7d": [
         {
+          "title": "#mlbbs42",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "#s42revampedheroes",
+          "days_on": 3,
+          "best_rank": 2
+        },
+        {
           "title": "#80s",
           "days_on": 2,
           "best_rank": 1
         },
         {
-          "title": "#mlbbs42",
+          "title": "#ciciprasakuliner",
           "days_on": 2,
           "best_rank": 1
         },
@@ -402,23 +417,13 @@
           "title": "#momoyomilkteabattle",
           "days_on": 2,
           "best_rank": 1
-        },
-        {
-          "title": "#flowasone",
-          "days_on": 2,
-          "best_rank": 2
-        },
-        {
-          "title": "#hypic",
-          "days_on": 2,
-          "best_rank": 2
         }
       ]
     },
     "twitter": {
       "top_now": [
         {
-          "title": "#GoFoodmulaidari5000diGoPay",
+          "title": "#YouManiacSeriesEP4",
           "rank": 1,
           "metric": null
         },
@@ -428,17 +433,17 @@
           "metric": null
         },
         {
-          "title": "#miladpan",
+          "title": "#CORTIS_2ND_DAESANG",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#gerakcepatbanturakyat",
+          "title": "#코르티스_두번째_대상",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#28tahunpanmengabdi",
+          "title": "Brighton",
           "rank": 5,
           "metric": null
         }
@@ -507,19 +512,19 @@
           "best_rank": 8
         },
         {
-          "title": "PERTH MY LA ROCHE",
+          "title": "Zcash",
+          "days_on": 4,
+          "best_rank": 14
+        },
+        {
+          "title": "Berantas Tindak Kriminal",
           "days_on": 3,
           "best_rank": 2
         },
         {
-          "title": "Musabaqoh Tilawatil Quran",
+          "title": "Brighton",
           "days_on": 3,
-          "best_rank": 5
-        },
-        {
-          "title": "#20thRyulStyle",
-          "days_on": 2,
-          "best_rank": 1
+          "best_rank": 2
         }
       ]
     },
@@ -699,28 +704,28 @@
       "longest_running_7d": [
         {
           "title": "BEAUTY TALK AHA Collagen Body Booster - 100ML Whitening Lotion dengan AHA Collagen untuk",
-          "days_on": 6,
+          "days_on": 5,
           "best_rank": 7
         },
         {
-          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "days_on": 4,
+          "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
+          "days_on": 3,
           "best_rank": 1
         },
         {
-          "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "days_on": 4,
+          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
+          "days_on": 3,
           "best_rank": 2
         },
         {
-          "title": "UNIQSOO Tas Serut Sepatu Anti Kuning Pouch Travel Multifungsi",
-          "days_on": 4,
-          "best_rank": 3
-        },
-        {
-          "title": "TAIYO Sticky Spiderman Tempel Kaca Mainan Anak",
-          "days_on": 4,
-          "best_rank": 4
+          "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
+          "days_on": 3,
+          "best_rank": 2
         }
       ]
     }
@@ -733,6 +738,18 @@
       "best_rank": 1
     },
     {
+      "t": "arsenal",
+      "n_platform": 2,
+      "platforms": "google,twitter",
+      "best_rank": 3
+    },
+    {
+      "t": "jule",
+      "n_platform": 2,
+      "platforms": "twitter,google",
+      "best_rank": 3
+    },
+    {
       "t": "purbaya",
       "n_platform": 2,
       "platforms": "twitter,tiktok",
@@ -743,12 +760,6 @@
       "n_platform": 2,
       "platforms": "twitter,google",
       "best_rank": 4
-    },
-    {
-      "t": "persib",
-      "n_platform": 2,
-      "platforms": "google,twitter",
-      "best_rank": 5
     },
     {
       "t": "hujan",
