@@ -1,0 +1,68 @@
+{
+  "slug": "papan-tren-google-adalah-papan-jadwal-bola",
+  "title": "Papan Tren Google Indonesia Sebagian Besar Adalah Papan Jadwal Pertandingan",
+  "category": "analisis",
+  "published_at": "2026-09-20 07:30:00",
+  "lead": "Pekan ini arsip kami mencatat 122 tren bertema sepak bola, dan 104 di antaranya datang dari satu papan saja: Google. Itu menjadikannya tema terbesar minggu ini, jauh melampaui tontonan, musik, maupun politik. Tapi yang lebih menarik bukan jumlahnya — melainkan pertandingan mana saja yang muncul. Liga Belanda, Jerman, Spanyol, Portugal, bahkan Kolombia, semuanya sempat menempati posisi teratas pencarian di Indonesia, masing-masing selama kurang dari sehari.",
+  "dataCard": {
+    "Tema terbesar": "Sepak bola · 122 tren",
+    "Dari Google": "104 dari 122",
+    "Umur khasnya": "1–2 hari",
+    "Arsip": "11.940 baris · 31,9 hari"
+  },
+  "sections": [
+    {
+      "heading": "Yang terekam pekan ini",
+      "paragraphs": [
+        "Dari 967 tren yang kami rekam sepanjang jendela tujuh hari terakhir, kategori sepak bola mengisi 122 — terbesar di antara semua tema. Sebarannya timpang: 104 dari Google, 13 dari YouTube, sisanya sedikit di X dan Instagram. Tidak ada tema lain yang mendekati.",
+        "Saat tulisan ini disusun, papan Google menampilkan \"ufc\" di posisi teratas, disusul \"raphinha\", \"barcelona vs sevilla\", dan \"barca vs\". Tiga dari lima teratas adalah kueri olahraga. Dan bila kita lihat tren Google yang paling lama bertahan pekan ini, daftarnya pun seragam: \"barca vs\", \"boyaca chico\", \"dortmund\", \"everton\", \"juventus\" — semuanya sepak bola, dan semuanya hanya bertahan dua hari.",
+        "Dua hari adalah rekor ketahanan di papan itu. Mayoritas lainnya hidup kurang dari sehari."
+      ]
+    },
+    {
+      "heading": "Pertandingan yang dicari bukan pertandingan Indonesia",
+      "paragraphs": [
+        "Bagian ini yang paling sering luput. Kueri yang naik ke posisi teratas di Indonesia pekan ini antara lain \"ajax vs willem ii\" (Liga Belanda), \"bayern vs union berlin\" (Jerman), \"betis vs getafe\" (Spanyol), \"braga vs estoril\" (Portugal), \"inter miami vs cruz azul\", dan \"boyaca chico\" — klub asal Kolombia.",
+        "Masing-masing menyentuh peringkat #1 di papan Indonesia, lalu hilang dalam hitungan jam. Bila seseorang membaca papan ini tanpa konteks, kesimpulan yang mungkin ia tarik adalah bahwa publik Indonesia sedang menaruh perhatian besar pada sepak bola divisi Kolombia. Itu jelas bukan kesimpulan yang masuk akal.",
+        "Yang sebenarnya terjadi lebih sederhana: pertandingan punya jam mulai. Orang mencari skor, susunan pemain, atau tautan siaran dalam jendela waktu yang sangat sempit dan hampir bersamaan. Lonjakan setajam itulah yang paling mudah terdeteksi sebagai \"sedang tren\"."
+      ]
+    },
+    {
+      "heading": "Apa yang sebenarnya diukur papan tren",
+      "paragraphs": [
+        "Google menjelaskan sendiri bahwa datanya adalah minat pencarian relatif, bukan jumlah pencarian. Tiap titik data dibagi dengan total pencarian pada wilayah dan rentang waktunya, lalu diskalakan 0–100 berdasarkan proporsinya terhadap seluruh pencarian. Artinya papan tren menjawab pertanyaan \"apa yang naik paling tajam dibanding biasanya\", bukan \"apa yang paling banyak dicari\".",
+        "Google juga memberi peringatan yang layak dikutip utuh: data Trends sebaiknya selalu diperlakukan sebagai satu titik data di antara data lain sebelum menarik kesimpulan, dan datanya bukan cermin sempurna dari aktivitas pencarian.",
+        "Konsekuensinya, papan tren secara struktural memihak peristiwa berjadwal. Pertandingan, pengumuman, tayangan perdana, dan pembagian bantuan punya bentuk lonjakan yang ideal untuk algoritma semacam ini. Sementara kebutuhan yang dicari terus-menerus sepanjang tahun — misalnya \"sabun cuci muka\" — nyaris tidak pernah muncul, justru karena permintaannya stabil."
+      ]
+    },
+    {
+      "heading": "Akibatnya bagi yang memakai data ini untuk brand",
+      "paragraphs": [
+        "Kesalahan paling mahal adalah membaca \"tren Google Indonesia\" sebagai daftar minat konsumen. Untuk perencanaan kata kunci produk, papan mentah ini justru menyesatkan: isinya didominasi jadwal olahraga, dan kata kunci komersial yang stabil tidak akan pernah muncul di sana betapapun besar permintaannya.",
+        "Cara memakainya yang wajar ada dua. Pertama, saring kategorinya lebih dulu — pisahkan olahraga dan peristiwa berjadwal dari sisanya, lalu baca sisanya. Itu yang kami lakukan sebelum menyusun laporan mingguan. Kedua, perlakukan papan ini sebagai kalender perhatian, bukan kalender minat. Ia memberi tahu kapan orang sedang menatap layar bersama-sama — dan untuk penempatan media di sekitar jam tayang pertandingan, informasi itu berharga.",
+        "Perbedaannya tipis tapi menentukan: papan tren memberi tahu Anda kapan perhatian terkumpul, bukan apa yang orang ingin beli."
+      ]
+    },
+    {
+      "heading": "Catatan metode",
+      "paragraphs": [
+        "Angka kategori di atas dihitung dari seluruh tren dalam jendela tujuh hari, memakai kamus kata kunci yang kami kelola dan dapat diaudit. Nama pertandingan yang kami sebut diambil dari daftar tren yang tercatat di arsip kami, bukan dari klaim pihak lain.",
+        "Satu batasan yang perlu disampaikan: kategori adalah pengelompokan tema, bukan sinyal lintas platform. Bahwa sepak bola muncul di Google dan YouTube pada pekan yang sama tidak berarti keduanya membicarakan pertandingan yang sama.",
+        "Jadwal pengambilan tiap platform dan batasan metodenya kami tulis terbuka di halaman Metodologi. Soal mengapa angka \"bertahan sekian hari\" punya arti berbeda di tiap platform, kami bahas terpisah."
+      ]
+    }
+  ],
+  "sources": [
+    { "title": "FAQ about Google Trends data — minat pencarian relatif & peringatan interpretasi", "url": "https://support.google.com/trends/answer/4365533?hl=en" },
+    { "title": "Google — Trending Now menyegarkan data rata-rata tiap 10 menit", "url": "https://blog.google/products-and-platforms/products/search/google-trends-trending-now-update/" },
+    { "title": "Boyacá Chicó F.C. — klub sepak bola Kolombia", "url": "https://en.wikipedia.org/wiki/Boyac%C3%A1_Chic%C3%B3_F.C." }
+  ],
+  "related": [
+    "/artikel/tujuh-hari-puncak-tidak-sama-tiap-platform",
+    "/artikel/cara-membaca-google-trends",
+    "/artikel/beda-trending-tiap-platform",
+    "/metodologi",
+    "/laporan",
+    "/google"
+  ]
+}
