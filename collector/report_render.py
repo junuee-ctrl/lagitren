@@ -153,10 +153,10 @@ FINDINGS = [
     ),
     dict(
         tag="DO", t="Netflix berganti takhta tanpa melepas juara lama",
-        f="“Dilan ITB 1997” tercatat di posisi #1 selama 6 hari berturut. "
-          "“Ghost in the Cell” turun dari #1 ke #2 lalu bertahan di #2 selama 6 hari.",
-        i="Pergantian puncak kali ini tidak diikuti keluarnya judul lama dari papan "
-          "atas — keduanya menyerap perhatian pada waktu yang sama.",
+        f="Di daftar Top 10 mingguan Netflix Indonesia yang berlaku, “Dilan ITB 1997” "
+          "di #1; “Ghost in the Cell”, juara minggu sebelumnya, turun ke #2.",
+        i="Juara lama tidak keluar dari papan atas — keduanya menyerap perhatian pada "
+          "minggu yang sama. Daftar ini berlaku seminggu penuh, bukan diukur harian.",
         r="Jendela menumpang percakapan film masih terbuka untuk KEDUA judul, bukan "
           "hanya yang di puncak. Untuk brand hiburan/FMCG, ini pekan dengan dua "
           "kaitan sekaligus.",
@@ -171,13 +171,13 @@ FINDINGS = [
           "baru — biaya lisensinya umumnya lebih rendah dengan daya tarik setara.",
     ),
     dict(
-        tag="DON'T", t="Papan ritel praktis beku selama tujuh hari",
-        f="Lima produk teratas TikTok Shop menempati posisi yang sama persis (#1–#5) "
-          "selama tujuh hari berturut-turut tanpa satu pun perubahan.",
-        i="Pada jendela ini tidak ada pendatang yang mampu menembus lima besar. "
-          "Papan digerakkan akumulasi penjualan, bukan kebaruan.",
-        r="Jangan menargetkan peringkat organik jangka pendek sebagai KPI peluncuran "
-          "di kategori ini. Ukur lewat volume penjualan dan ulasan, bukan posisi papan.",
+        tag="DON'T", t="“Bertahan N hari” tidak bisa dibandingkan antar platform",
+        f="Tren Google paling tahan di jendela ini hanya 3 hari (“olahraga”, #9 → #2); "
+          "tiap judul Netflix tampil di semua potret harian. Google menyegarkan data "
+          "±10 menit; Netflix terbit mingguan.",
+        i="Tiga hari di Google sudah luar biasa; tujuh hari di Netflix adalah nilai minimum.",
+        r="Bandingkan ketahanan hanya di dalam satu platform, dan sesuaikan jendela aksi: "
+          "jam untuk Google, minggu untuk Netflix.",
     ),
     dict(
         tag="WATCH", t="Tidak ada sinyal lintas platform yang lolos ambang bukti",
@@ -194,22 +194,22 @@ FINDINGS = [
 AGENCY = {
     "know": [
         ("Dominasi sepak bola di papan Google", "122 tren · kategori terbesar pekan ini"),
-        ("Dilan ITB 1997 memuncaki Netflix", "6 hari berturut di #1"),
-        ("Ghost in the Cell bertahan di #2", "6 hari setelah turun dari puncak"),
+        ("Dilan ITB 1997 memuncaki Netflix", "#1 di daftar mingguan yang berlaku"),
+        ("Ghost in the Cell turun ke #2", "juara minggu lalu, turun satu tingkat"),
         ("Lagu katalog lama naik cepat di YouTube", "#10 → #1 dalam satu hari"),
-        ("Papan TikTok Shop tidak bergerak", "lima besar sama selama 7 hari"),
+        ("Durasi tren beda satuan per platform", "Google ±10 menit · Netflix mingguan"),
     ],
     "safe": [
         ("Dua judul Netflix teratas", "keduanya masih di papan atas — kaitan ganda"),
         ("Audio katalog lama", "biaya lisensi umumnya lebih rendah"),
-        ("Kategori pencerah di TikTok Shop", "permintaan stabil, bukan musiman"),
+        ("Penempatan media di jam pertandingan", "perhatian terkumpul — bukan untuk materi skor"),
     ],
     "saturated": [
         ("Konten jadwal/skor sepak bola", "papan Google sudah penuh; sulit menonjol"),
-        ("Produk pencerah di bawah Rp25 ribu", "lima besar terkunci, ulasan menentukan"),
+        ("Menumpang kata kunci bencana", "umurnya < 1 hari; sudah lewat saat materi siap"),
     ],
     "watch": [
-        ("Pendatang baru di papan Netflix", "papan baru saja berganti — pekan depan menentukan apakah ini siklus cepat"),
+        ("Daftar mingguan Netflix berikutnya", "terbit sekali seminggu — satu-satunya titik perubahan"),
     ],
 }
 
@@ -226,16 +226,16 @@ ALERT = dict(
 )
 
 ALERT2 = dict(
-    topic="Papan ritel praktis beku — jangan pakai peringkat sebagai KPI",
-    why="Lima produk teratas TikTok Shop menempati posisi yang sama persis selama 7 hari",
-    platforms="TikTok Shop (kurasi produk)",
-    momentum="Nol pergerakan; skor ketahanan penuh, kecepatan nol",
-    window="Berlaku sepanjang jendela 7 hari — tidak ada pendatang baru",
-    fit="Kecantikan · Perawatan diri · Aksesori",
-    do="Ukur peluncuran lewat volume penjualan & ulasan, bukan posisi papan.",
-    dont="Jangan menjanjikan klien \u201cmasuk 5 besar\u201d dalam sprint sebulan.",
-    watch="Baris pertama yang bergeser — itu sinyal papan mulai cair.",
-    evidence="JJ Glow Sabun Gluta Pink 10X Brightening",
+    topic="Lagu katalog lama melompat ke puncak YouTube dalam sehari",
+    why="R. City \u201cLocked Away\u201d (rilis 2015) naik dari #10 ke #1 dalam kurang dari 24 jam",
+    platforms="YouTube",
+    momentum="Sangat tinggi \u2014 komponen kecepatan penuh (35 dari 35)",
+    window="Pendek: papan YouTube kami ambil tiap jam dan bergerak setiap hari",
+    fit="Minuman \u00b7 FMCG \u00b7 Fesyen \u2014 untuk konten pendek bersuara",
+    do="Periksa hak pakai audio katalog lama sebelum melisensikan rilisan baru.",
+    dont="Jangan anggap populer di papan berarti bebas dipakai \u2014 lisensi tetap wajib.",
+    watch="Apakah lagu lama lain ikut naik \u2014 itu menandai pola, bukan kebetulan.",
+    evidence="R. City - Locked Away",
 )
 
 
@@ -345,8 +345,17 @@ def radar_rows(n=11):
     return "".join(out)
 
 
+# Kurva daur hidup hanya bermakna bila sumbernya berubah lebih sering daripada
+# kami memotretnya. Netflix terbit mingguan dan daftar produk edisi ini
+# diperbarui manual — garis datarnya adalah jejak jadwal sumber, bukan perilaku
+# pasar, jadi keduanya dikecualikan dari kartu kurva.
+CADENCE_ARTIFACT = {"netflix", "shopee"}
+
+
 def by_stage(stage):
     for t in INTEL["radar"]:
+        if t["platform"] in CADENCE_ARTIFACT:
+            continue
         if t["stage"] == stage and len(t["daily"]) >= 2:
             return t
     return None
@@ -492,7 +501,11 @@ def build() -> str:
   jumlah hari berbeda topik itu muncul. <b>Puncak</b> mencatat posisi terbaik yang pernah dicapai.
   <b>Lintas platform</b> hanya terisi bila topik yang sama terdeteksi di lebih dari satu platform
   menurut ambang bukti kami — pekan ini kosong untuk semua baris, dan kami membiarkannya nol
-  alih-alih melonggarkan ambang.</p></div>
+  alih-alih melonggarkan ambang.</p>
+  <p class="small" style="margin:2mm 0 0"><b>Penting:</b> ketahanan hanya sebanding di dalam
+  satu platform. Netflix menerbitkan daftar per minggu, dan daftar produk TikTok Shop pada edisi
+  ini diperbarui manual — sehingga skor ketahanan keduanya penuh karena jadwal sumbernya, bukan
+  karena perhatian pasar yang bertahan. Baca tabel ini per platform, bukan lintas platform.</p></div>
   <div class="pf"><div>Indonesia Weekly Trend Intelligence · Edisi contoh</div><div>lagitren.id · 2</div></div>
 </section>
 
