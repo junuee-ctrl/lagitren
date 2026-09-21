@@ -1,42 +1,47 @@
 {
-  "generated_at": "2026-09-20T06:10:10+00:00",
+  "generated_at": "2026-09-21T06:12:50+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-20 05:50:39",
-    "rows": 11940,
-    "days": 31.9
+    "last": "2026-09-21 05:00:33",
+    "rows": 12438,
+    "days": 32.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "ufc",
+          "title": "tes",
           "rank": 1,
-          "metric": 200
+          "metric": 100
         },
         {
-          "title": "raphinha",
+          "title": "inter miami",
           "rank": 2,
-          "metric": 200
+          "metric": 500
         },
         {
-          "title": "barcelona vs sevilla",
+          "title": "ufc 331",
           "rank": 3,
-          "metric": 200
+          "metric": 500
         },
         {
-          "title": "barca vs",
+          "title": "ac milan",
           "rank": 4,
           "metric": 200
         },
         {
-          "title": "artificial intelligence news",
+          "title": "hk",
           "rank": 5,
-          "metric": 100
+          "metric": 500
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "ac milan",
+          "first_seen": "2026-09-20 21:22:43",
+          "best_rank": 1
+        },
         {
           "title": "ajax vs willem ii",
           "first_seen": "2026-09-15 17:36:58",
@@ -81,14 +86,19 @@
           "title": "cuaca besok",
           "first_seen": "2026-09-18 14:30:51",
           "best_rank": 1
-        },
-        {
-          "title": "detik",
-          "first_seen": "2026-09-19 05:12:26",
-          "best_rank": 1
         }
       ],
       "longest_running_7d": [
+        {
+          "title": "hk",
+          "days_on": 3,
+          "best_rank": 2
+        },
+        {
+          "title": "ac milan",
+          "days_on": 2,
+          "best_rank": 1
+        },
         {
           "title": "barca vs",
           "days_on": 2,
@@ -103,51 +113,41 @@
           "title": "dortmund",
           "days_on": 2,
           "best_rank": 1
-        },
-        {
-          "title": "everton",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "juventus",
-          "days_on": 2,
-          "best_rank": 1
         }
       ]
     },
     "youtube": {
       "top_now": [
         {
-          "title": "Yeni Inka, Seto Rawon Gank, Yesa Oktavia - HELIKOPTER TURUN KE PADANG (Official Music Yi Production)",
+          "title": "🔴 LIVE MAHESA MUSIC PRIVATE PARTY WEDDING IKMAL & FIRDA - SUNGLEBAK LAMONGAN",
           "rank": 1,
-          "metric": 129325
+          "metric": 293210
         },
         {
-          "title": "TERIKAT JANJI TRAILER: DAVINA KESEL SENA BIARIN POLISI MENYERETNYA KE PENJARA⁉️ - Arya Saloka",
+          "title": "TERIKAT JANJI TRAILER: SENA GAK BISA TEPATI JANJINYA⁉️BIARIN DAVINA JADI TERSANGKA? - Arya Saloka",
           "rank": 2,
-          "metric": 123074
+          "metric": 101184
         },
         {
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 2 | Bahasa Indonesia",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 3 | Bahasa Indonesia",
           "rank": 3,
-          "metric": 6293483
+          "metric": 5128351
         },
         {
-          "title": "ROSÉ - new trick (OFFICIAL MUSIC VIDEO)",
+          "title": "Yeni Inka, Seto Rawon Gank, Yesa Oktavia - HELIKOPTER TURUN KE PADANG (Official Music Yi Production)",
           "rank": 4,
-          "metric": 22589208
+          "metric": 279078
         },
         {
-          "title": "KENZO TEGAS !! BILANG KE OMA TIDAK MAU DIJODOHKAN SAMA ALEA - TRAILER MERANGKAI KISAH INDAH HARI INI",
+          "title": "ROSE DI KAMPUNG DURIAN RUNTUH — PART 5 | OFFICIAL TEASER TRAILER",
           "rank": 5,
-          "metric": 27047
+          "metric": 51714
         }
       ],
       "newcomers_7d": [
         {
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
-          "first_seen": "2026-09-13 20:40:59",
+          "title": "🔴 LIVE MAHESA MUSIC PRIVATE PARTY WEDDING IKMAL & FIRDA - SUNGLEBAK LAMONGAN",
+          "first_seen": "2026-09-20 21:15:04",
           "best_rank": 1
         },
         {
@@ -166,13 +166,8 @@
           "best_rank": 1
         },
         {
-          "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
-          "first_seen": "2026-09-14 05:56:25",
-          "best_rank": 2
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: MISINYA MAKIN BAHAYA‼️ SENA PUTUSIN DAVINA? - Arya Saloka, Asha Assuncao",
-          "first_seen": "2026-09-13 14:09:46",
+          "title": "TERIKAT JANJI TRAILER: SENA GAK BISA TEPATI JANJINYA⁉️BIARIN DAVINA JADI TERSANGKA? - Arya Saloka",
+          "first_seen": "2026-09-20 10:52:51",
           "best_rank": 2
         },
         {
@@ -194,11 +189,16 @@
           "title": "TERIKAT JANJI TRAILER: SENA KHAWATIR‼️DAVINA JADI TERSANGKA? - Arya Saloka, Asha Assuncao",
           "first_seen": "2026-09-18 09:28:16",
           "best_rank": 2
+        },
+        {
+          "title": "TERIKAT JANJI TRAILER: DAVINA KESEL SENA BIARIN POLISI MENYERETNYA KE PENJARA⁉️ - Arya Saloka",
+          "first_seen": "2026-09-19 09:15:15",
+          "best_rank": 2
         }
       ],
       "longest_running_7d": [
         {
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
+          "title": "ROSÉ - new trick (OFFICIAL MUSIC VIDEO)",
           "days_on": 4,
           "best_rank": 1
         },
@@ -208,48 +208,48 @@
           "best_rank": 1
         },
         {
+          "title": "no na - star (Official Music Video)",
+          "days_on": 4,
+          "best_rank": 4
+        },
+        {
           "title": "Trailer part 3 - rose in durian village",
           "days_on": 4,
           "best_rank": 5
         },
         {
-          "title": "ROSÉ - new trick (OFFICIAL MUSIC VIDEO)",
+          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
           "days_on": 3,
           "best_rank": 1
-        },
-        {
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
-          "days_on": 3,
-          "best_rank": 3
         }
       ]
     },
     "instagram": {
       "top_now": [
         {
-          "title": "Postingan viral #indonesia",
+          "title": "Negara Kesatuan Republik Indonesia.",
           "rank": 1,
-          "metric": 1748900
+          "metric": 2744983
         },
         {
-          "title": "Postingan viral #indonesia",
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
           "rank": 2,
-          "metric": 873960
+          "metric": 777880
         },
         {
           "title": "Viral beredar di media sosial video mobil Presiden RI Joko Widodo yang ikut macet-macetan…",
           "rank": 3,
-          "metric": 378143
+          "metric": 378116
         },
         {
-          "title": "Ya allah ternyata ada 10 gunung erupsi ada apakah INDONESIA kuuu🥹 Stay Safe,🤍",
+          "title": "Tag teman kalian Yang suka lagu ini✨akhirnya gua tau vid aslinya😂",
           "rank": 4,
-          "metric": 339436
+          "metric": 212857
         },
         {
-          "title": "Berlari untuk apa dan berlari karena apa?😅",
+          "title": "Pembangunan tanggul laut di Indonesia dan Jepang memiliki perbedaan mendasar pada tujuan…",
           "rank": 5,
-          "metric": 117774
+          "metric": 67111
         }
       ],
       "newcomers_7d": [
@@ -299,35 +299,35 @@
           "best_rank": 1
         },
         {
-          "title": "@Prada #Prada #Paragon",
-          "first_seen": "2026-09-16 12:22:45",
-          "best_rank": 2
+          "title": "Momen mengharukan terekam saat beberapa bocah penjual tisu bergegas bersembunyi di balik…",
+          "first_seen": "2026-09-17 00:22:24",
+          "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "days_on": 5,
+          "title": "Negara Kesatuan Republik Indonesia.",
+          "days_on": 6,
           "best_rank": 1
         },
         {
-          "title": "Jakarta dimata dunia 🇮🇩",
-          "days_on": 5,
-          "best_rank": 2
+          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "days_on": 6,
+          "best_rank": 1
         },
         {
-          "title": "“Tanah ini disiram oleh air mata dan darah para pahlawan; tugas kita merawatnya dengan…",
-          "days_on": 5,
-          "best_rank": 3
+          "title": "Doa untuk damai selalu di Indonesia. Keterangan: kunjungan ke pesantren wajib pakai…",
+          "days_on": 6,
+          "best_rank": 6
         },
         {
-          "title": "👉Ikuti ig @bang.tawa banyak postingan viral & ngakak setiap hari 😂.",
-          "days_on": 5,
-          "best_rank": 10
+          "title": "Sudah tau @indonesiajuaratrip belum? 👀",
+          "days_on": 6,
+          "best_rank": 6
         },
         {
-          "title": "Negara Kesatuan Republik Indonesia.",
-          "days_on": 4,
+          "title": "Demi langit biru kaltara",
+          "days_on": 5,
           "best_rank": 1
         }
       ]
@@ -335,19 +335,19 @@
     "tiktok": {
       "top_now": [
         {
-          "title": "#ciciprasakuliner",
+          "title": "#momoyomilkteabattle",
           "rank": 1,
-          "metric": 284376
+          "metric": 409984
+        },
+        {
+          "title": "#ciciprasakuliner",
+          "rank": 2,
+          "metric": 361130
         },
         {
           "title": "#mlbbs42",
-          "rank": 2,
-          "metric": 75883
-        },
-        {
-          "title": "#s42revampedheroes",
           "rank": 3,
-          "metric": 73914
+          "metric": 83323
         }
       ],
       "newcomers_7d": [
@@ -395,26 +395,26 @@
       "longest_running_7d": [
         {
           "title": "#mlbbs42",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
-          "title": "#s42revampedheroes",
-          "days_on": 3,
-          "best_rank": 2
-        },
-        {
-          "title": "#80s",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "#ciciprasakuliner",
-          "days_on": 2,
+          "days_on": 4,
           "best_rank": 1
         },
         {
           "title": "#momoyomilkteabattle",
+          "days_on": 4,
+          "best_rank": 1
+        },
+        {
+          "title": "#s42revampedheroes",
+          "days_on": 4,
+          "best_rank": 2
+        },
+        {
+          "title": "#ciciprasakuliner",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "#80s",
           "days_on": 2,
           "best_rank": 1
         }
@@ -423,27 +423,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#YouManiacSeriesEP4",
+          "title": "#OperasiBNPB",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#SkyNaniSToTheNFanconD1",
+          "title": "#IndonesiaLevelUp",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#CORTIS_2ND_DAESANG",
+          "title": "#SinergiPadamkanKarhutla",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#코르티스_두번째_대상",
+          "title": "Water Bombing",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "Brighton",
+          "title": "#SkyNaniSToTheNFanconD2",
           "rank": 5,
           "metric": null
         }
@@ -480,6 +480,11 @@
           "best_rank": 1
         },
         {
+          "title": "Gojek Di GoPay 1000",
+          "first_seen": "2026-09-20 06:25:25",
+          "best_rank": 1
+        },
+        {
           "title": "#GrabFoodถูกกว่าชัวร์xPPW",
           "first_seen": "2026-09-18 12:24:59",
           "best_rank": 1
@@ -493,14 +498,14 @@
           "title": "#LOEWExPhuwin",
           "first_seen": "2026-09-17 09:24:09",
           "best_rank": 1
-        },
-        {
-          "title": "#MiladPAN",
-          "first_seen": "2026-09-18 15:24:36",
-          "best_rank": 1
         }
       ],
       "longest_running_7d": [
+        {
+          "title": "Brighton",
+          "days_on": 4,
+          "best_rank": 2
+        },
         {
           "title": "$SHR",
           "days_on": 4,
@@ -517,14 +522,9 @@
           "best_rank": 14
         },
         {
-          "title": "Berantas Tindak Kriminal",
+          "title": "PERTHSANTA NIHON ICHINICHI",
           "days_on": 3,
-          "best_rank": 2
-        },
-        {
-          "title": "Brighton",
-          "days_on": 3,
-          "best_rank": 2
+          "best_rank": 1
         }
       ]
     },
@@ -626,27 +626,27 @@
         {
           "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
           "rank": 1,
-          "metric": 388300
+          "metric": 399900
         },
         {
           "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
           "rank": 2,
-          "metric": 366700
+          "metric": 375300
         },
         {
           "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
           "rank": 3,
-          "metric": 265000
+          "metric": 273500
+        },
+        {
+          "title": "MAYBELLINE Superstay Matte Ink Liquid Long Lasting Waterproof Matte Lipstick Lipcream Make",
+          "rank": 4,
+          "metric": 254600
         },
         {
           "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
-          "rank": 4,
-          "metric": 219800
-        },
-        {
-          "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
           "rank": 5,
-          "metric": 205800
+          "metric": 214100
         }
       ],
       "newcomers_7d": [
@@ -681,6 +681,11 @@
           "best_rank": 3
         },
         {
+          "title": "MAYBELLINE Superstay Matte Ink Liquid Long Lasting Waterproof Matte Lipstick Lipcream Make",
+          "first_seen": "2026-09-21 05:00:33",
+          "best_rank": 4
+        },
+        {
           "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
           "first_seen": "2026-09-18 05:01:38",
           "best_rank": 4
@@ -693,49 +698,56 @@
         {
           "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
           "first_seen": "2026-09-18 05:01:38",
-          "best_rank": 5
-        },
-        {
-          "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
-          "first_seen": "2026-09-16 08:27:11",
           "best_rank": 5
         }
       ],
       "longest_running_7d": [
         {
-          "title": "BEAUTY TALK AHA Collagen Body Booster - 100ML Whitening Lotion dengan AHA Collagen untuk",
-          "days_on": 5,
-          "best_rank": 7
-        },
-        {
           "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
-          "days_on": 3,
-          "best_rank": 1
-        },
-        {
-          "title": "JJ Glow Sabun Gluta Pink 10X Brightening Niacinamide Kojic Acid",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 1
         },
         {
           "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 2
         },
         {
-          "title": "SYB Forte Red Jelly Serum 20ml Niacinamide 10%",
-          "days_on": 3,
-          "best_rank": 2
+          "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
+          "days_on": 4,
+          "best_rank": 3
+        },
+        {
+          "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
+          "days_on": 4,
+          "best_rank": 4
+        },
+        {
+          "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
+          "days_on": 4,
+          "best_rank": 5
         }
       ]
     }
   },
   "cross_platform_7d": [
     {
-      "t": "barca",
+      "t": "andre taulany",
       "n_platform": 2,
       "platforms": "google,twitter",
       "best_rank": 1
+    },
+    {
+      "t": "amanda rigby",
+      "n_platform": 2,
+      "platforms": "google,twitter",
+      "best_rank": 2
+    },
+    {
+      "t": "inter miami",
+      "n_platform": 2,
+      "platforms": "twitter,google",
+      "best_rank": 2
     },
     {
       "t": "arsenal",
@@ -766,6 +778,12 @@
       "n_platform": 2,
       "platforms": "google,twitter",
       "best_rank": 9
+    },
+    {
+      "t": "liverpool",
+      "n_platform": 2,
+      "platforms": "twitter,google",
+      "best_rank": 10
     }
   ]
 }
