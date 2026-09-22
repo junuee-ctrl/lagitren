@@ -1,0 +1,79 @@
+{
+  "slug": "rekap-tren-15-21-september-2026",
+  "title": "Rekap Tren Sepekan (15–21 Sep): Reshuffle Menkeu di Dua Platform, Papan Produk yang Akhirnya Bergerak",
+  "category": "rekap",
+  "published_at": "2026-09-22 07:30:00",
+  "lead": "Pekan ini detektor lintas platform kami menautkan topik yang benar-benar sama di dua papan berbeda — dan yang paling jelas di antaranya adalah pergantian Menteri Keuangan. Tapi sebelum sampai ke sana, kami harus lebih dulu memeriksa detektor itu sendiri, dan menemukan bahwa sebagian hasilnya keliru. Pekan ini juga pekan pertama daftar produk kami diperbarui otomatis setiap hari, sehingga pergerakan harga dan peringkat bisa ditulis dengan tanggalnya.",
+  "dataCard": {
+    "Periode": "15–21 Sep 2026",
+    "Topik lintas platform": "5 (setelah perbaikan)",
+    "Produk baru masuk": "2 · harga berubah 6 produk",
+    "Arsip": "12.913 baris · 33,9 hari"
+  },
+  "sections": [
+    {
+      "heading": "Topik yang sama di dua platform — setelah detektornya diperiksa",
+      "paragraphs": [
+        "Laporan contoh kami, yang memakai data 14 September, mencatat angka nol untuk sinyal lintas platform: aturan kami menuntut minimal dua kata khas yang sama, muncul di minimal dua papan berbeda, dan kami lebih memilih nol daripada menautkan topik yang kebetulan berbagi satu kata. Sejak 17 September, detektor itu mulai menghasilkan klaster — delapan hingga sepuluh per hari. Kami baru memeriksanya satu per satu saat menyusun rekap ini, dan itu seharusnya kami lakukan lebih awal.",
+        "Hasil pemeriksaannya: sebagian klaster asli, sebagian palsu. Tiga klaster palsu menautkan konten yang sama sekali tak berhubungan hanya karena sama-sama memuat dua kata sehari-hari — \"dulu\" dan \"pake\", \"jadi\" dan \"sound\", \"buat\" dan \"tanpa\". Beberapa klaster lain adalah satu topik yang terhitung berulang. Kami memperbaiki daftar kata umum dan cara penggabungannya, lalu mengujinya pada delapan kasus nyata dari arsip: empat tautan asli tetap tersambung, empat tautan palsu terputus. Pada jendela tujuh hari terakhir, yang tersisa adalah lima topik.",
+        "Yang paling jelas adalah pergantian Menteri Keuangan. Presiden Prabowo Subianto mengganti Purbaya Yudhi Sadewa dengan Suahasil Nazara — sebelumnya Wakil Menteri Keuangan — pada Senin, 14 September 2026, setelah Purbaya menjabat sekitar satu tahun. Di arsip kami, kueri \"menteri keuangan indonesia\" naik ke #5 papan Google pada 15 September dan hanya muncul hari itu. Di Instagram, unggahan tentang pergantian tersebut terus tercatat dari 16 hingga 21 September — Google menangkap lonjakan rasa ingin tahu dalam sehari, Instagram menangkap percakapan yang berlanjut.",
+        "Empat topik lainnya lebih ringan: pernikahan Andre Taulany (Google dan X pada 20 September), film Resident Evil (Google dan X), sinetron \"Cinta Seluas Samudra\" (Google dan YouTube), serta klub Inter Miami (Google dan X). Di awal pekan, pencarian dan unggahan tentang erupsi gunung — termasuk Anak Krakatau — juga sempat tertaut antara Google dan Instagram, sebelum keluar dari jendela tujuh hari."
+      ]
+    },
+    {
+      "heading": "Papan produk: pekan pertama dengan data harian",
+      "paragraphs": [
+        "Sejak 16 September daftar kurasi produk kami diperbarui otomatis setiap hari dari panel afiliasi TikTok Shop. Sebelumnya daftar itu diperbarui manual, dan kesimpulan yang kami tarik darinya pada rekap pekan lalu sudah kami koreksi. Satu hal perlu dibaca dengan benar: lonjakan sembilan nama baru pada 16 September adalah pergantian sumber data kami, bukan pergerakan pasar.",
+        "Setelah itu, perubahan yang tercatat bersifat nyata. Pada 18 September sebuah kacamata pelindung anti debu masuk di #7 dan teh rimpang Detoplus keluar dari daftar. Pada 21 September lipstik cair Maybelline Superstay Matte Ink masuk langsung di #4. Di posisi teratas, bulu mata palsu MLAN bertahan sepanjang pekan, dengan angka terjual di panel naik dari sekitar 354,5 ribu (16 September) menjadi sekitar 399,9 ribu (21 September).",
+        "Angka terjual itu ditampilkan panel dalam satuan ribu yang dibulatkan, jadi selisihnya sebaiknya dibaca sebagai perkiraan kasar, bukan angka penjualan pasti. Posisi di daftar kami mencerminkan penjualan yang tercatat, bukan penilaian kualitas."
+      ]
+    },
+    {
+      "heading": "Harga bergerak hampir setiap hari",
+      "paragraphs": [
+        "Dengan potret harian, kalimat \"harga dapat berubah sewaktu-waktu\" berhenti menjadi formalitas. Enam produk di daftar kami berganti harga setidaknya sekali dalam enam hari.",
+        "Beberapa contohnya: sabun KIME tercatat Rp24.220, turun menjadi Rp21.314 pada 19 September, lalu kembali ke Rp24.220 pada 21 September — pola yang mirip promo satu-dua hari. Minyak zaitun Azalea tercatat di empat harga berbeda dalam lima hari: Rp32.838, Rp34.996, Rp30.838, dan Rp33.999. Bedak basah Daviena turun dari Rp54.900 menjadi Rp45.900 sejak 20 September dan belum kembali.",
+        "Bagi pembeli, pelajarannya sederhana: bila selisihnya berarti bagi Anda, menunggu satu-dua hari bisa mengubah harga. Kami tidak tahu penyebab tiap perubahan — promo toko, kupon, atau penyesuaian varian — dan tidak akan menebaknya."
+      ]
+    },
+    {
+      "heading": "Google, YouTube, dan Netflix",
+      "paragraphs": [
+        "Sepak bola tetap tema terbesar, tetapi porsinya di Google menyusut sepanjang pekan: dari 128 tren dalam jendela tujuh hari pada data 19 September menjadi 89 hari ini. Papan Google hari ini justru dibuka kueri non-olahraga seperti \"asn digital\" dan \"simulasi tka\". Alasan mengapa papan Google cenderung dipenuhi jadwal pertandingan kami bahas terpisah.",
+        "Di YouTube, satu lagu muncul dua kali di empat besar: \"Helikopter Turun ke Padang\" dalam versi Laila Ayu di #1 dan versi Shinta Gisul bersama Maulana Ardiansyah di #4 — dua unggahan berbeda dari lagu yang sama.",
+        "Netflix menerbitkan Top 10 per minggu, jadi yang relevan di sini adalah daftar yang terbit pada 16 September: \"Semua Akan Baik Baik Saja\" menempati #1, dengan \"Ghost in the Cell\" dan \"Heaven is My Way\" di #2 dan #3. Posisi itu berlaku sampai daftar berikutnya terbit, bukan diukur harian."
+      ]
+    },
+    {
+      "heading": "Catatan redaksi: koreksi pekan ini",
+      "paragraphs": [
+        "Pekan ini kami memuat tiga koreksi, semuanya dari jenis yang sama — membaca angka tanpa lebih dulu memeriksa seberapa sering sumbernya berubah. Rekap pekan lalu menarik kesimpulan pasar dari daftar produk yang ternyata diperbarui manual, dan menulis peringkat Netflix seolah-olah diukur harian. Panduan barang praktis memuat angka penjualan lama. Ketiganya telah dikoreksi dengan catatan bertanggal di masing-masing artikel.",
+        "Laporan contoh untuk brand dan agensi kami juga memuat dua kesalahan yang sama, dan telah kami perbarui. Hari ini kami menambahkan perbaikan pada detektor lintas platform seperti dijelaskan di atas — termasuk satu koreksi atas perbaikan kami sendiri: kata \"anak\" sempat kami masukkan ke daftar kata umum, lalu kami keluarkan lagi setelah terlihat bahwa itu akan memutus topik Anak Krakatau yang asli. Kami memilih mencatat perbaikan ini secara terbuka, karena nilai data kami bergantung pada pembaca bisa memeriksa bagaimana angka itu dihasilkan.",
+        "Rekap ini disusun dari 12.913 potret peringkat yang kami rekam sejak 19 Agustus 2026."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "IKPI — Suahasil Nazara resmi gantikan Purbaya sebagai Menteri Keuangan (14 September 2026)",
+      "url": "https://ikpi.or.id/articles/prabowo-reshuffle-kabinet-suahasil-nazara-resmi-gantikan-purbaya-sebagai-menteri-keuangan"
+    },
+    {
+      "title": "Bloomberg — Prabowo Removes Finance Minister Purbaya in Cabinet Reshuffle (14 Sep 2026)",
+      "url": "https://www.bloomberg.com/news/articles/2026-09-14/prabowo-removes-finance-minister-purbaya-in-cabinet-reshuffle"
+    },
+    {
+      "title": "Netflix Tudum — Top 10 per negara (daftar mingguan)",
+      "url": "https://www.netflix.com/tudum/top10"
+    }
+  ],
+  "related": [
+    "/artikel/rekap-tren-8-15-september-2026",
+    "/artikel/tujuh-hari-puncak-tidak-sama-tiap-platform",
+    "/artikel/papan-tren-google-adalah-papan-jadwal-bola",
+    "/artikel/makeup-laris-bedak-foundation-lipstik-cek-bpom",
+    "/artikel/kacamata-pelindung-debu-apa-yang-dilindungi",
+    "/laporan",
+    "/produk"
+  ]
+}
