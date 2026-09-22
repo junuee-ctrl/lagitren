@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-09-21T06:12:50+00:00",
+  "generated_at": "2026-09-22T06:13:32+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-21 05:00:33",
-    "rows": 12438,
-    "days": 32.9
+    "last": "2026-09-22 03:53:46",
+    "rows": 12913,
+    "days": 33.9
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "tes",
+          "title": "asn digital",
           "rank": 1,
-          "metric": 100
+          "metric": 500
         },
         {
-          "title": "inter miami",
+          "title": "simulasi tka",
           "rank": 2,
-          "metric": 500
-        },
-        {
-          "title": "ufc 331",
-          "rank": 3,
-          "metric": 500
-        },
-        {
-          "title": "ac milan",
-          "rank": 4,
           "metric": 200
         },
         {
-          "title": "hk",
-          "rank": 5,
+          "title": "babysitter",
+          "rank": 3,
+          "metric": 200
+        },
+        {
+          "title": "21 september",
+          "rank": 4,
           "metric": 500
+        },
+        {
+          "title": "claude ai",
+          "rank": 5,
+          "metric": 1000
         }
       ],
       "newcomers_7d": [
@@ -48,13 +48,8 @@
           "best_rank": 1
         },
         {
-          "title": "al shamal",
-          "first_seen": "2026-09-14 16:39:35",
-          "best_rank": 1
-        },
-        {
-          "title": "andre taulany",
-          "first_seen": "2026-09-14 10:40:53",
+          "title": "asn digital",
+          "first_seen": "2026-09-21 07:02:41",
           "best_rank": 1
         },
         {
@@ -78,21 +73,36 @@
           "best_rank": 1
         },
         {
-          "title": "braga vs estoril",
-          "first_seen": "2026-09-14 20:37:10",
+          "title": "claude ai",
+          "first_seen": "2026-09-21 14:05:43",
           "best_rank": 1
         },
         {
           "title": "cuaca besok",
           "first_seen": "2026-09-18 14:30:51",
           "best_rank": 1
+        },
+        {
+          "title": "detik",
+          "first_seen": "2026-09-19 05:12:26",
+          "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
           "title": "hk",
-          "days_on": 3,
+          "days_on": 4,
           "best_rank": 2
+        },
+        {
+          "title": "babysitter",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "sgp",
+          "days_on": 3,
+          "best_rank": 4
         },
         {
           "title": "ac milan",
@@ -100,17 +110,7 @@
           "best_rank": 1
         },
         {
-          "title": "barca vs",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "boyaca chico",
-          "days_on": 2,
-          "best_rank": 1
-        },
-        {
-          "title": "dortmund",
+          "title": "asn digital",
           "days_on": 2,
           "best_rank": 1
         }
@@ -119,32 +119,37 @@
     "youtube": {
       "top_now": [
         {
-          "title": "🔴 LIVE MAHESA MUSIC PRIVATE PARTY WEDDING IKMAL & FIRDA - SUNGLEBAK LAMONGAN",
+          "title": "Helikopter turun ke padang - IDOL IDOL - LAILA AYU - SIMPATIK MUSIC",
           "rank": 1,
-          "metric": 293210
+          "metric": 84079
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA GAK BISA TEPATI JANJINYA⁉️BIARIN DAVINA JADI TERSANGKA? - Arya Saloka",
+          "title": "TERIKAT JANJI TRAILER: DAVINA BIKIN SENA MUNDUR DARI KASUS DIPA⁉️ - Arya Saloka, Asha Assuncao",
           "rank": 2,
-          "metric": 101184
+          "metric": 145232
         },
         {
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 3 | Bahasa Indonesia",
+          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
           "rank": 3,
-          "metric": 5128351
+          "metric": 1905392
         },
         {
-          "title": "Yeni Inka, Seto Rawon Gank, Yesa Oktavia - HELIKOPTER TURUN KE PADANG (Official Music Yi Production)",
+          "title": "Shinta Gisul Ft. Maulana Ardiansyah - HELIKOPTER TURUN KE PADANG (LIVE JAMMING SESSION LEMBAYUNG)",
           "rank": 4,
-          "metric": 279078
+          "metric": 48543
         },
         {
-          "title": "ROSE DI KAMPUNG DURIAN RUNTUH — PART 5 | OFFICIAL TEASER TRAILER",
+          "title": "TRAILER TERIKAT JANJI HARI INI EPISODE 168 Ancaman Mundur Sena Demi Membela Davina Dari Fitnah Dipa",
           "rank": 5,
-          "metric": 51714
+          "metric": 16658
         }
       ],
       "newcomers_7d": [
+        {
+          "title": "ALLDAY PROJECT - ‘TALK’ M/V",
+          "first_seen": "2026-09-21 14:05:54",
+          "best_rank": 1
+        },
         {
           "title": "🔴 LIVE MAHESA MUSIC PRIVATE PARTY WEDDING IKMAL & FIRDA - SUNGLEBAK LAMONGAN",
           "first_seen": "2026-09-20 21:15:04",
@@ -166,6 +171,11 @@
           "best_rank": 1
         },
         {
+          "title": "Helikopter turun ke padang - IDOL IDOL - LAILA AYU - SIMPATIK MUSIC",
+          "first_seen": "2026-09-21 19:25:46",
+          "best_rank": 1
+        },
+        {
           "title": "TERIKAT JANJI TRAILER: SENA GAK BISA TEPATI JANJINYA⁉️BIARIN DAVINA JADI TERSANGKA? - Arya Saloka",
           "first_seen": "2026-09-20 10:52:51",
           "best_rank": 2
@@ -181,18 +191,8 @@
           "best_rank": 2
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA & DAVINA HARUS BERSIAP MENGHADAPI ARMAN ANDIKA⁉️ - Arua Saloka, Asha As",
-          "first_seen": "2026-09-15 07:23:16",
-          "best_rank": 2
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: SENA KHAWATIR‼️DAVINA JADI TERSANGKA? - Arya Saloka, Asha Assuncao",
-          "first_seen": "2026-09-18 09:28:16",
-          "best_rank": 2
-        },
-        {
-          "title": "TERIKAT JANJI TRAILER: DAVINA KESEL SENA BIARIN POLISI MENYERETNYA KE PENJARA⁉️ - Arya Saloka",
-          "first_seen": "2026-09-19 09:15:15",
+          "title": "TERIKAT JANJI TRAILER: DAVINA BIKIN SENA MUNDUR DARI KASUS DIPA⁉️ - Arya Saloka, Asha Assuncao",
+          "first_seen": "2026-09-21 07:03:02",
           "best_rank": 2
         }
       ],
@@ -208,6 +208,11 @@
           "best_rank": 1
         },
         {
+          "title": "Yeni Inka, Seto Rawon Gank, Yesa Oktavia - HELIKOPTER TURUN KE PADANG (Official Music Yi Production)",
+          "days_on": 4,
+          "best_rank": 1
+        },
+        {
           "title": "no na - star (Official Music Video)",
           "days_on": 4,
           "best_rank": 4
@@ -216,11 +221,6 @@
           "title": "Trailer part 3 - rose in durian village",
           "days_on": 4,
           "best_rank": 5
-        },
-        {
-          "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
-          "days_on": 3,
-          "best_rank": 1
         }
       ]
     },
@@ -229,33 +229,38 @@
         {
           "title": "Negara Kesatuan Republik Indonesia.",
           "rank": 1,
-          "metric": 2744983
+          "metric": 2744882
         },
         {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
+          "title": "Saya sudah sampai di Indonesia😆🇮🇩",
           "rank": 2,
-          "metric": 777880
+          "metric": 189010
         },
         {
-          "title": "Viral beredar di media sosial video mobil Presiden RI Joko Widodo yang ikut macet-macetan…",
+          "title": "Berlari untuk apa dan berlari karena apa?😅",
           "rank": 3,
-          "metric": 378116
+          "metric": 117778
         },
         {
-          "title": "Tag teman kalian Yang suka lagu ini✨akhirnya gua tau vid aslinya😂",
+          "title": "Sudah tau @indonesiajuaratrip belum? 👀",
           "rank": 4,
-          "metric": 212857
+          "metric": 98551
         },
         {
-          "title": "Pembangunan tanggul laut di Indonesia dan Jepang memiliki perbedaan mendasar pada tujuan…",
+          "title": "Durian😫 Thank you my sisters for this unforgettable SMELL😂 Taste? Speechless..🤦🏻‍♀️ Yes…",
           "rank": 5,
-          "metric": 67111
+          "metric": 86346
         }
       ],
       "newcomers_7d": [
         {
           "title": "Negara Kesatuan Republik Indonesia.",
           "first_seen": "2026-09-16 18:22:31",
+          "best_rank": 1
+        },
+        {
+          "title": "Indonesia dengan pemandangan 5 waktunya (part4)",
+          "first_seen": "2026-09-18 12:22:30",
           "best_rank": 1
         },
         {
@@ -289,26 +294,31 @@
           "best_rank": 1
         },
         {
+          "title": "🚨 𝐁𝐑𝐄𝐀𝐊𝐈𝐍𝐆: 𝐌𝐀𝐍𝐂𝐇𝐄𝐒𝐓𝐄𝐑 𝐂𝐈𝐓𝐘 𝐁𝐈𝐃 𝐎𝐕𝐄𝐑 £𝟏𝟐𝟎𝐌 𝐅𝐎𝐑 𝐄𝐍𝐙𝐎 𝐅𝐄𝐑𝐍𝐀𝐍𝐃𝐄𝐙, 𝐔𝐏 𝐓𝐎 𝐂𝐇𝐄𝐋𝐒𝐄𝐀 💣🇦🇷",
+          "first_seen": "2026-09-21 18:22:40",
+          "best_rank": 1
+        },
+        {
           "title": "HARI KE 175 MOBIL MAKAN MAKAN",
           "first_seen": "2026-09-17 06:22:18",
-          "best_rank": 1
-        },
-        {
-          "title": "Indonesia menyerukan pentingnya tata kelola global yang lebih inklusif untuk memastikan…",
-          "first_seen": "2026-09-16 15:22:52",
-          "best_rank": 1
-        },
-        {
-          "title": "Momen mengharukan terekam saat beberapa bocah penjual tisu bergegas bersembunyi di balik…",
-          "first_seen": "2026-09-17 00:22:24",
           "best_rank": 1
         }
       ],
       "longest_running_7d": [
         {
           "title": "Negara Kesatuan Republik Indonesia.",
-          "days_on": 6,
+          "days_on": 7,
           "best_rank": 1
+        },
+        {
+          "title": "Sudah tau @indonesiajuaratrip belum? 👀",
+          "days_on": 7,
+          "best_rank": 2
+        },
+        {
+          "title": "Doa untuk damai selalu di Indonesia. Keterangan: kunjungan ke pesantren wajib pakai…",
+          "days_on": 7,
+          "best_rank": 4
         },
         {
           "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
@@ -316,38 +326,28 @@
           "best_rank": 1
         },
         {
-          "title": "Doa untuk damai selalu di Indonesia. Keterangan: kunjungan ke pesantren wajib pakai…",
+          "title": "Tak perlu tahu aslinya pun kita sudah tau gambaran ayahnya seperti apa 🤣🤣",
           "days_on": 6,
-          "best_rank": 6
-        },
-        {
-          "title": "Sudah tau @indonesiajuaratrip belum? 👀",
-          "days_on": 6,
-          "best_rank": 6
-        },
-        {
-          "title": "Demi langit biru kaltara",
-          "days_on": 5,
-          "best_rank": 1
+          "best_rank": 3
         }
       ]
     },
     "tiktok": {
       "top_now": [
         {
-          "title": "#momoyomilkteabattle",
-          "rank": 1,
-          "metric": 409984
-        },
-        {
           "title": "#ciciprasakuliner",
-          "rank": 2,
-          "metric": 361130
+          "rank": 1,
+          "metric": 438773
         },
         {
           "title": "#mlbbs42",
+          "rank": 2,
+          "metric": 89954
+        },
+        {
+          "title": "#s42revampedheroes",
           "rank": 3,
-          "metric": 83323
+          "metric": 86923
         }
       ],
       "newcomers_7d": [
@@ -395,22 +395,22 @@
       "longest_running_7d": [
         {
           "title": "#mlbbs42",
+          "days_on": 5,
+          "best_rank": 1
+        },
+        {
+          "title": "#s42revampedheroes",
+          "days_on": 5,
+          "best_rank": 2
+        },
+        {
+          "title": "#ciciprasakuliner",
           "days_on": 4,
           "best_rank": 1
         },
         {
           "title": "#momoyomilkteabattle",
           "days_on": 4,
-          "best_rank": 1
-        },
-        {
-          "title": "#s42revampedheroes",
-          "days_on": 4,
-          "best_rank": 2
-        },
-        {
-          "title": "#ciciprasakuliner",
-          "days_on": 3,
           "best_rank": 1
         },
         {
@@ -423,27 +423,27 @@
     "twitter": {
       "top_now": [
         {
-          "title": "#OperasiBNPB",
+          "title": "#KonserBebasDrama",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#IndonesiaLevelUp",
+          "title": "Bareng Naavagreen",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "#SinergiPadamkanKarhutla",
+          "title": "#KonserBebasKusam",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "Water Bombing",
+          "title": "gopay later lebih murah",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "#SkyNaniSToTheNFanconD2",
+          "title": "PPXPD WITH HENRY SF",
           "rank": 5,
           "metric": null
         }
@@ -462,6 +462,11 @@
         {
           "title": "Adeyemi",
           "first_seen": "2026-09-17 00:24:26",
+          "best_rank": 1
+        },
+        {
+          "title": "#destinyclinicxJossGawin",
+          "first_seen": "2026-09-21 12:25:17",
           "best_rank": 1
         },
         {
@@ -485,18 +490,13 @@
           "best_rank": 1
         },
         {
+          "title": "GoPay Later Lebih Murah",
+          "first_seen": "2026-09-21 12:25:17",
+          "best_rank": 1
+        },
+        {
           "title": "#GrabFoodถูกกว่าชัวร์xPPW",
           "first_seen": "2026-09-18 12:24:59",
-          "best_rank": 1
-        },
-        {
-          "title": "#KKBPenjahatPerang",
-          "first_seen": "2026-09-16 15:25:41",
-          "best_rank": 1
-        },
-        {
-          "title": "#LOEWExPhuwin",
-          "first_seen": "2026-09-17 09:24:09",
           "best_rank": 1
         }
       ],
@@ -731,18 +731,6 @@
     }
   },
   "cross_platform_7d": [
-    {
-      "t": "andre taulany",
-      "n_platform": 2,
-      "platforms": "google,twitter",
-      "best_rank": 1
-    },
-    {
-      "t": "amanda rigby",
-      "n_platform": 2,
-      "platforms": "google,twitter",
-      "best_rank": 2
-    },
     {
       "t": "inter miami",
       "n_platform": 2,

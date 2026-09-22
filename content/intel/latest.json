@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-21T06:12:56+00:00",
+  "generated_at": "2026-09-22T06:13:35+00:00",
   "window_days": 7,
   "scoring": {
     "velocity": "0-35 · perbaikan peringkat dalam jendela",
@@ -8,6 +8,227 @@
     "peak": "0-15 · peringkat terbaik yang dicapai"
   },
   "radar": [
+    {
+      "trend_id": "instagram:dgdd10etehd",
+      "platform": "instagram",
+      "title": "Sudah tau @indonesiajuaratrip belum? 👀",
+      "daily": [
+        {
+          "day": "2026-09-16",
+          "best_rank": 11
+        },
+        {
+          "day": "2026-09-17",
+          "best_rank": 8
+        },
+        {
+          "day": "2026-09-18",
+          "best_rank": 7
+        },
+        {
+          "day": "2026-09-19",
+          "best_rank": 7
+        },
+        {
+          "day": "2026-09-20",
+          "best_rank": 8
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 4
+        }
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-22",
+      "days_on": 7,
+      "best_rank": 2,
+      "current_rank": 4,
+      "stage": "naik",
+      "score_parts": {
+        "velocity": 33,
+        "persistence": 25,
+        "peak": 12,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 70
+    },
+    {
+      "trend_id": "instagram:dqg-rm-ekbv",
+      "platform": "instagram",
+      "title": "Berlari untuk apa dan berlari karena apa?😅",
+      "daily": [
+        {
+          "day": "2026-09-17",
+          "best_rank": 9
+        },
+        {
+          "day": "2026-09-18",
+          "best_rank": 9
+        },
+        {
+          "day": "2026-09-20",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 2
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 3
+        }
+      ],
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-22",
+      "days_on": 5,
+      "best_rank": 2,
+      "current_rank": 3,
+      "stage": "naik",
+      "score_parts": {
+        "velocity": 31,
+        "persistence": 18,
+        "peak": 12,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 61
+    },
+    {
+      "trend_id": "google:babysitter",
+      "platform": "google",
+      "title": "babysitter",
+      "daily": [
+        {
+          "day": "2026-09-19",
+          "best_rank": 10
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 3
+        }
+      ],
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-22",
+      "days_on": 3,
+      "best_rank": 1,
+      "current_rank": 3,
+      "stage": "naik",
+      "score_parts": {
+        "velocity": 33,
+        "persistence": 11,
+        "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 59
+    },
+    {
+      "trend_id": "instagram:dcn0ov9vzw5",
+      "platform": "instagram",
+      "title": "Doa untuk damai selalu di Indonesia. Keterangan: kunjungan ke pesantren wajib pakai…",
+      "daily": [
+        {
+          "day": "2026-09-16",
+          "best_rank": 12
+        },
+        {
+          "day": "2026-09-17",
+          "best_rank": 10
+        },
+        {
+          "day": "2026-09-18",
+          "best_rank": 10
+        },
+        {
+          "day": "2026-09-19",
+          "best_rank": 9
+        },
+        {
+          "day": "2026-09-20",
+          "best_rank": 8
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 9
+        }
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-22",
+      "days_on": 7,
+      "best_rank": 4,
+      "current_rank": 9,
+      "stage": "naik",
+      "score_parts": {
+        "velocity": 25,
+        "persistence": 25,
+        "peak": 9,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 59
+    },
+    {
+      "trend_id": "instagram:dbqbfllj92m",
+      "platform": "instagram",
+      "title": "Negara Kesatuan Republik Indonesia.",
+      "daily": [
+        {
+          "day": "2026-09-16",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-17",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-18",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-19",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-20",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 1
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 1
+        }
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-22",
+      "days_on": 7,
+      "best_rank": 1,
+      "current_rank": 1,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 18,
+        "persistence": 25,
+        "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 58
+    },
     {
       "trend_id": "instagram:dcd13ybg9hm",
       "platform": "instagram",
@@ -48,51 +269,6 @@
         "velocity": 22,
         "persistence": 21,
         "peak": 15,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 58
-    },
-    {
-      "trend_id": "instagram:dcn0ov9vzw5",
-      "platform": "instagram",
-      "title": "Doa untuk damai selalu di Indonesia. Keterangan: kunjungan ke pesantren wajib pakai…",
-      "daily": [
-        {
-          "day": "2026-09-16",
-          "best_rank": 12
-        },
-        {
-          "day": "2026-09-17",
-          "best_rank": 10
-        },
-        {
-          "day": "2026-09-18",
-          "best_rank": 10
-        },
-        {
-          "day": "2026-09-19",
-          "best_rank": 9
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-21",
-          "best_rank": 6
-        }
-      ],
-      "first_seen": "2026-09-16",
-      "last_seen": "2026-09-21",
-      "days_on": 6,
-      "best_rank": 6,
-      "current_rank": 6,
-      "stage": "puncak",
-      "score_parts": {
-        "velocity": 31,
-        "persistence": 21,
-        "peak": 6,
         "cross_platform": 0
       },
       "theme": null,
@@ -140,107 +316,74 @@
       "score": 57
     },
     {
-      "trend_id": "youtube:hCJszO-qe1o",
-      "platform": "youtube",
-      "title": "Yeni Inka, Seto Rawon Gank, Yesa Oktavia - HELIKOPTER TURUN KE PADANG (Official Music Yi Production)",
-      "daily": [
-        {
-          "day": "2026-09-19",
-          "best_rank": 10
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-21",
-          "best_rank": 4
-        }
-      ],
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-09-21",
-      "days_on": 3,
-      "best_rank": 1,
-      "current_rank": 4,
-      "stage": "naik",
-      "score_parts": {
-        "velocity": 31,
-        "persistence": 11,
-        "peak": 15,
-        "cross_platform": 0
-      },
-      "theme": "Musik & lagu",
-      "score": 57
-    },
-    {
-      "trend_id": "instagram:dgdd10etehd",
+      "trend_id": "instagram:dv9dhnge0ew",
       "platform": "instagram",
-      "title": "Sudah tau @indonesiajuaratrip belum? 👀",
+      "title": "Ini bukan kain batik yang ditempel, tapi mahakarya alam! 🦋✨",
       "daily": [
-        {
-          "day": "2026-09-16",
-          "best_rank": 11
-        },
         {
           "day": "2026-09-17",
-          "best_rank": 8
+          "best_rank": 12
         },
         {
           "day": "2026-09-18",
-          "best_rank": 7
-        },
-        {
-          "day": "2026-09-19",
-          "best_rank": 7
-        },
-        {
-          "day": "2026-09-20",
           "best_rank": 8
         },
         {
-          "day": "2026-09-21",
+          "day": "2026-09-20",
           "best_rank": 6
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 5
         }
       ],
-      "first_seen": "2026-09-16",
+      "first_seen": "2026-09-17",
       "last_seen": "2026-09-21",
-      "days_on": 6,
-      "best_rank": 6,
-      "current_rank": 6,
+      "days_on": 4,
+      "best_rank": 5,
+      "current_rank": 5,
       "stage": "puncak",
       "score_parts": {
-        "velocity": 29,
-        "persistence": 21,
-        "peak": 6,
+        "velocity": 33,
+        "persistence": 14,
+        "peak": 9,
         "cross_platform": 0
       },
       "theme": null,
       "score": 56
     },
     {
-      "trend_id": "google:kangen-band",
-      "platform": "google",
-      "title": "kangen band",
+      "trend_id": "instagram:ddxt-fihc8h",
+      "platform": "instagram",
+      "title": "Pembangunan tanggul laut di Indonesia dan Jepang memiliki perbedaan mendasar pada tujuan…",
       "daily": [
         {
-          "day": "2026-09-14",
-          "best_rank": 8
+          "day": "2026-09-19",
+          "best_rank": 12
         },
         {
-          "day": "2026-09-19",
-          "best_rank": 1
+          "day": "2026-09-20",
+          "best_rank": 7
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 7
         }
       ],
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-19",
-      "days_on": 2,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "puncak",
+      "first_seen": "2026-09-19",
+      "last_seen": "2026-09-22",
+      "days_on": 4,
+      "best_rank": 3,
+      "current_rank": 7,
+      "stage": "naik",
       "score_parts": {
-        "velocity": 33,
-        "persistence": 7,
-        "peak": 15,
+        "velocity": 29,
+        "persistence": 14,
+        "peak": 12,
         "cross_platform": 0
       },
       "theme": null,
@@ -288,14 +431,55 @@
       "score": 55
     },
     {
+      "trend_id": "instagram:dusrpv7ie9u",
+      "platform": "instagram",
+      "title": "Tak perlu tahu aslinya pun kita sudah tau gambaran ayahnya seperti apa 🤣🤣",
+      "daily": [
+        {
+          "day": "2026-09-16",
+          "best_rank": 6
+        },
+        {
+          "day": "2026-09-17",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-18",
+          "best_rank": 3
+        },
+        {
+          "day": "2026-09-19",
+          "best_rank": 6
+        },
+        {
+          "day": "2026-09-20",
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 4
+        }
+      ],
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-21",
+      "days_on": 6,
+      "best_rank": 3,
+      "current_rank": 4,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 22,
+        "persistence": 21,
+        "peak": 12,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 55
+    },
+    {
       "trend_id": "netflix:ghost-in-the-cell",
       "platform": "netflix",
       "title": "Ghost in the Cell",
       "daily": [
-        {
-          "day": "2026-09-14",
-          "best_rank": 2
-        },
         {
           "day": "2026-09-15",
           "best_rank": 2
@@ -319,10 +503,14 @@
         {
           "day": "2026-09-20",
           "best_rank": 2
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 2
         }
       ],
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-20",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-21",
       "days_on": 7,
       "best_rank": 2,
       "current_rank": 2,
@@ -342,10 +530,6 @@
       "title": "Heaven is My Way",
       "daily": [
         {
-          "day": "2026-09-14",
-          "best_rank": 3
-        },
-        {
           "day": "2026-09-15",
           "best_rank": 3
         },
@@ -368,10 +552,14 @@
         {
           "day": "2026-09-20",
           "best_rank": 3
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 3
         }
       ],
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-20",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-21",
       "days_on": 7,
       "best_rank": 3,
       "current_rank": 3,
@@ -386,46 +574,46 @@
       "score": 55
     },
     {
-      "trend_id": "shopee:beauty-talk-aha-collagen-body-booster-100ml-whitening-lotion",
-      "platform": "shopee",
-      "title": "BEAUTY TALK AHA Collagen Body Booster 100ml Whitening Lotion",
+      "trend_id": "instagram:dc8jbi3mfsi",
+      "platform": "instagram",
+      "title": "Ya allah ternyata ada 10 gunung erupsi ada apakah INDONESIA kuuu🥹 Stay Safe,🤍",
       "daily": [
         {
-          "day": "2026-09-14",
-          "best_rank": 16
-        },
-        {
-          "day": "2026-09-15",
-          "best_rank": 16
-        },
-        {
           "day": "2026-09-16",
-          "best_rank": 7
+          "best_rank": 10
         },
         {
-          "day": "2026-09-17",
-          "best_rank": 7
+          "day": "2026-09-18",
+          "best_rank": 8
+        },
+        {
+          "day": "2026-09-19",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-20",
+          "best_rank": 4
         }
       ],
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-17",
+      "first_seen": "2026-09-16",
+      "last_seen": "2026-09-20",
       "days_on": 4,
-      "best_rank": 7,
-      "current_rank": 7,
+      "best_rank": 4,
+      "current_rank": 4,
       "stage": "puncak",
       "score_parts": {
-        "velocity": 35,
+        "velocity": 31,
         "persistence": 14,
-        "peak": 6,
+        "peak": 9,
         "cross_platform": 0
       },
-      "theme": null,
-      "score": 55
+      "theme": "Bencana alam",
+      "score": 54
     },
     {
-      "trend_id": "instagram:dbqbfllj92m",
-      "platform": "instagram",
-      "title": "Negara Kesatuan Republik Indonesia.",
+      "trend_id": "netflix:semua-akan-baik-baik-saja",
+      "platform": "netflix",
+      "title": "Semua Akan Baik Baik Saja",
       "daily": [
         {
           "day": "2026-09-16",
@@ -468,68 +656,6 @@
       "score": 54
     },
     {
-      "trend_id": "instagram:dc8jbi3mfsi",
-      "platform": "instagram",
-      "title": "Ya allah ternyata ada 10 gunung erupsi ada apakah INDONESIA kuuu🥹 Stay Safe,🤍",
-      "daily": [
-        {
-          "day": "2026-09-16",
-          "best_rank": 10
-        },
-        {
-          "day": "2026-09-18",
-          "best_rank": 8
-        },
-        {
-          "day": "2026-09-19",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 4
-        }
-      ],
-      "first_seen": "2026-09-16",
-      "last_seen": "2026-09-20",
-      "days_on": 4,
-      "best_rank": 4,
-      "current_rank": 4,
-      "stage": "puncak",
-      "score_parts": {
-        "velocity": 31,
-        "persistence": 14,
-        "peak": 9,
-        "cross_platform": 0
-      },
-      "theme": "Bencana alam",
-      "score": 54
-    },
-    {
-      "trend_id": "google:andre-taulany",
-      "platform": "google",
-      "title": "andre taulany",
-      "daily": [
-        {
-          "day": "2026-09-14",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-14",
-      "days_on": 1,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "baru",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 4,
-        "peak": 15,
-        "cross_platform": 16
-      },
-      "theme": null,
-      "score": 53
-    },
-    {
       "trend_id": "google:tes",
       "platform": "google",
       "title": "tes",
@@ -559,33 +685,37 @@
       "score": 53
     },
     {
-      "trend_id": "instagram:ddxt-fihc8h",
+      "trend_id": "instagram:dcfpcpzz8re",
       "platform": "instagram",
-      "title": "Pembangunan tanggul laut di Indonesia dan Jepang memiliki perbedaan mendasar pada tujuan…",
+      "title": "Warga Aceh Injak Lambang Garuda!",
       "daily": [
         {
-          "day": "2026-09-19",
-          "best_rank": 12
-        },
-        {
-          "day": "2026-09-20",
+          "day": "2026-09-17",
           "best_rank": 7
         },
         {
+          "day": "2026-09-19",
+          "best_rank": 8
+        },
+        {
           "day": "2026-09-21",
-          "best_rank": 5
+          "best_rank": 4
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 3
         }
       ],
-      "first_seen": "2026-09-19",
-      "last_seen": "2026-09-21",
-      "days_on": 3,
-      "best_rank": 5,
-      "current_rank": 5,
+      "first_seen": "2026-09-17",
+      "last_seen": "2026-09-22",
+      "days_on": 4,
+      "best_rank": 3,
+      "current_rank": 3,
       "stage": "puncak",
       "score_parts": {
-        "velocity": 33,
-        "persistence": 11,
-        "peak": 9,
+        "velocity": 27,
+        "persistence": 14,
+        "peak": 12,
         "cross_platform": 0
       },
       "theme": null,
@@ -662,6 +792,43 @@
       "score": 52
     },
     {
+      "trend_id": "instagram:dmrpemttavv",
+      "platform": "instagram",
+      "title": "Di sejumlah film berlatar 20 atau 30 tahun yang lalu, kita bisa melihat kebanyakan remaja…",
+      "daily": [
+        {
+          "day": "2026-09-18",
+          "best_rank": 11
+        },
+        {
+          "day": "2026-09-19",
+          "best_rank": 5
+        },
+        {
+          "day": "2026-09-20",
+          "best_rank": 10
+        },
+        {
+          "day": "2026-09-22",
+          "best_rank": 6
+        }
+      ],
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-22",
+      "days_on": 4,
+      "best_rank": 5,
+      "current_rank": 6,
+      "stage": "stabil",
+      "score_parts": {
+        "velocity": 29,
+        "persistence": 14,
+        "peak": 9,
+        "cross_platform": 0
+      },
+      "theme": "Tontonan & sinetron",
+      "score": 52
+    },
+    {
       "trend_id": "instagram:dpz91nqkmww",
       "platform": "instagram",
       "title": "Bersandar di bahumu adalah kekuatan bagiku..",
@@ -703,41 +870,33 @@
       "score": 52
     },
     {
-      "trend_id": "instagram:dusrpv7ie9u",
-      "platform": "instagram",
-      "title": "Tak perlu tahu aslinya pun kita sudah tau gambaran ayahnya seperti apa 🤣🤣",
+      "trend_id": "shopee:beauty-talk-aha-collagen-body-booster-100ml-whitening-lotion",
+      "platform": "shopee",
+      "title": "BEAUTY TALK AHA Collagen Body Booster 100ml Whitening Lotion",
       "daily": [
         {
+          "day": "2026-09-15",
+          "best_rank": 16
+        },
+        {
           "day": "2026-09-16",
-          "best_rank": 6
+          "best_rank": 7
         },
         {
           "day": "2026-09-17",
-          "best_rank": 5
-        },
-        {
-          "day": "2026-09-18",
-          "best_rank": 3
-        },
-        {
-          "day": "2026-09-19",
-          "best_rank": 6
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 4
+          "best_rank": 7
         }
       ],
-      "first_seen": "2026-09-16",
-      "last_seen": "2026-09-20",
-      "days_on": 5,
-      "best_rank": 3,
-      "current_rank": 4,
-      "stage": "naik",
+      "first_seen": "2026-09-15",
+      "last_seen": "2026-09-17",
+      "days_on": 3,
+      "best_rank": 7,
+      "current_rank": 7,
+      "stage": "puncak",
       "score_parts": {
-        "velocity": 22,
-        "persistence": 18,
-        "peak": 12,
+        "velocity": 35,
+        "persistence": 11,
+        "peak": 6,
         "cross_platform": 0
       },
       "theme": null,
@@ -767,6 +926,35 @@
         "velocity": 29,
         "persistence": 7,
         "peak": 15,
+        "cross_platform": 0
+      },
+      "theme": null,
+      "score": 51
+    },
+    {
+      "trend_id": "instagram:bzk8ndth3ep",
+      "platform": "instagram",
+      "title": "#nomakeup",
+      "daily": [
+        {
+          "day": "2026-09-18",
+          "best_rank": 15
+        },
+        {
+          "day": "2026-09-21",
+          "best_rank": 5
+        }
+      ],
+      "first_seen": "2026-09-18",
+      "last_seen": "2026-09-21",
+      "days_on": 2,
+      "best_rank": 5,
+      "current_rank": 5,
+      "stage": "puncak",
+      "score_parts": {
+        "velocity": 35,
+        "persistence": 7,
+        "peak": 9,
         "cross_platform": 0
       },
       "theme": null,
@@ -804,293 +992,9 @@
       },
       "theme": "Musik & lagu",
       "score": 51
-    },
-    {
-      "trend_id": "instagram:czt5uqmlngj",
-      "platform": "instagram",
-      "title": "👉Ikuti ig @bang.tawa banyak postingan viral & ngakak setiap hari 😂.",
-      "daily": [
-        {
-          "day": "2026-09-16",
-          "best_rank": 14
-        },
-        {
-          "day": "2026-09-17",
-          "best_rank": 13
-        },
-        {
-          "day": "2026-09-18",
-          "best_rank": 13
-        },
-        {
-          "day": "2026-09-19",
-          "best_rank": 11
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 10
-        }
-      ],
-      "first_seen": "2026-09-16",
-      "last_seen": "2026-09-20",
-      "days_on": 5,
-      "best_rank": 10,
-      "current_rank": 10,
-      "stage": "puncak",
-      "score_parts": {
-        "velocity": 27,
-        "persistence": 18,
-        "peak": 6,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 51
-    },
-    {
-      "trend_id": "instagram:dcqkv7yzxwr",
-      "platform": "instagram",
-      "title": "Demi langit biru kaltara",
-      "daily": [
-        {
-          "day": "2026-09-16",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-17",
-          "best_rank": 2
-        },
-        {
-          "day": "2026-09-18",
-          "best_rank": 2
-        },
-        {
-          "day": "2026-09-19",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-16",
-      "last_seen": "2026-09-20",
-      "days_on": 5,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "puncak",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 18,
-        "peak": 15,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 51
-    },
-    {
-      "trend_id": "instagram:ddnsqcoti60",
-      "platform": "instagram",
-      "title": "Indonesia menyerukan pentingnya tata kelola global yang lebih inklusif untuk memastikan…",
-      "daily": [
-        {
-          "day": "2026-09-16",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-17",
-          "best_rank": 4
-        },
-        {
-          "day": "2026-09-18",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 2
-        }
-      ],
-      "first_seen": "2026-09-16",
-      "last_seen": "2026-09-20",
-      "days_on": 4,
-      "best_rank": 1,
-      "current_rank": 2,
-      "stage": "naik",
-      "score_parts": {
-        "velocity": 22,
-        "persistence": 14,
-        "peak": 15,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 51
-    },
-    {
-      "trend_id": "netflix:semua-akan-baik-baik-saja",
-      "platform": "netflix",
-      "title": "Semua Akan Baik Baik Saja",
-      "daily": [
-        {
-          "day": "2026-09-16",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-17",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-18",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-19",
-          "best_rank": 1
-        },
-        {
-          "day": "2026-09-20",
-          "best_rank": 1
-        }
-      ],
-      "first_seen": "2026-09-16",
-      "last_seen": "2026-09-20",
-      "days_on": 5,
-      "best_rank": 1,
-      "current_rank": 1,
-      "stage": "stabil",
-      "score_parts": {
-        "velocity": 18,
-        "persistence": 18,
-        "peak": 15,
-        "cross_platform": 0
-      },
-      "theme": null,
-      "score": 51
     }
   ],
   "cross_platform": [
-    {
-      "label": "amanda · rigby",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "twitter"
-      ],
-      "members": [
-        {
-          "trend_id": "google:amanda-rigby",
-          "platform": "google",
-          "title": "amanda rigby",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 2
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 2,
-          "current_rank": 2,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 12,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 50
-        },
-        {
-          "trend_id": "twitter:amanda-rigby",
-          "platform": "twitter",
-          "title": "Amanda Rigby",
-          "daily": [
-            {
-              "day": "2026-09-20",
-              "best_rank": 8
-            },
-            {
-              "day": "2026-09-21",
-              "best_rank": 20
-            }
-          ],
-          "first_seen": "2026-09-20",
-          "last_seen": "2026-09-21",
-          "days_on": 2,
-          "best_rank": 8,
-          "current_rank": 20,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 0,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 29
-        }
-      ]
-    },
-    {
-      "label": "andre · taulany",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "twitter"
-      ],
-      "members": [
-        {
-          "trend_id": "google:andre-taulany",
-          "platform": "google",
-          "title": "andre taulany",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 1
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 1,
-          "current_rank": 1,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 15,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 53
-        },
-        {
-          "trend_id": "twitter:andre-taulany",
-          "platform": "twitter",
-          "title": "Andre Taulany",
-          "daily": [
-            {
-              "day": "2026-09-20",
-              "best_rank": 11
-            }
-          ],
-          "first_seen": "2026-09-20",
-          "last_seen": "2026-09-20",
-          "days_on": 1,
-          "best_rank": 11,
-          "current_rank": 11,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 41
-        }
-      ]
-    },
     {
       "label": "andre · taulany",
       "method": "entitas",
@@ -1607,16 +1511,223 @@
           "score": 41
         }
       ]
+    },
+    {
+      "label": "jadi · sound",
+      "method": "entitas",
+      "platforms": [
+        "instagram",
+        "youtube"
+      ],
+      "members": [
+        {
+          "trend_id": "instagram:ce-kqdebtjc",
+          "platform": "instagram",
+          "title": "WKWKWKWKKW EMG COCOK NYA JADI ANAK ANAK🙃😂🤣🤣🤣 #tiktok #tiktokindonesia #sister sound…",
+          "daily": [
+            {
+              "day": "2026-09-19",
+              "best_rank": 6
+            }
+          ],
+          "first_seen": "2026-09-19",
+          "last_seen": "2026-09-19",
+          "days_on": 1,
+          "best_rank": 6,
+          "current_rank": 6,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 44
+        },
+        {
+          "trend_id": "youtube:2JvxJOz4YHA",
+          "platform": "youtube",
+          "title": "Lomba Jadi Pengisi Suara di Roblox! [Make That Sound]",
+          "daily": [
+            {
+              "day": "2026-09-21",
+              "best_rank": 12
+            }
+          ],
+          "first_seen": "2026-09-21",
+          "last_seen": "2026-09-21",
+          "days_on": 1,
+          "best_rank": 12,
+          "current_rank": 12,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": null,
+          "score": 41
+        }
+      ]
+    },
+    {
+      "label": "keuangan · menteri",
+      "method": "entitas",
+      "platforms": [
+        "google",
+        "instagram"
+      ],
+      "members": [
+        {
+          "trend_id": "google:menteri-keuangan-indonesia",
+          "platform": "google",
+          "title": "menteri keuangan indonesia",
+          "daily": [
+            {
+              "day": "2026-09-15",
+              "best_rank": 5
+            }
+          ],
+          "first_seen": "2026-09-15",
+          "last_seen": "2026-09-15",
+          "days_on": 1,
+          "best_rank": 5,
+          "current_rank": 5,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 47
+        },
+        {
+          "trend_id": "instagram:ddq05hrynor",
+          "platform": "instagram",
+          "title": "Purbaya (61) dicopot dari jabatan Menteri Keuangan oleh Presiden Prabowo Subianto…",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 9
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 9,
+          "current_rank": 9,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 44
+        },
+        {
+          "trend_id": "instagram:docaz5perze",
+          "platform": "instagram",
+          "title": "Di hari pertamanya rapat dengan Komisi XI DPR RI, Rabu (10/9), Menteri Keuangan Purbaya…",
+          "daily": [
+            {
+              "day": "2026-09-16",
+              "best_rank": 13
+            },
+            {
+              "day": "2026-09-17",
+              "best_rank": 11
+            },
+            {
+              "day": "2026-09-18",
+              "best_rank": 12
+            }
+          ],
+          "first_seen": "2026-09-16",
+          "last_seen": "2026-09-18",
+          "days_on": 3,
+          "best_rank": 11,
+          "current_rank": 12,
+          "stage": "naik",
+          "score_parts": {
+            "velocity": 20,
+            "persistence": 11,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 50
+        },
+        {
+          "trend_id": "instagram:ddq15actkbg",
+          "platform": "instagram",
+          "title": "Presiden Prabowo Subianto resmi mengganti Menteri Keuangan Purbaya Yudhi Sadewa pada…",
+          "daily": [
+            {
+              "day": "2026-09-21",
+              "best_rank": 12
+            },
+            {
+              "day": "2026-09-22",
+              "best_rank": 13
+            }
+          ],
+          "first_seen": "2026-09-21",
+          "last_seen": "2026-09-22",
+          "days_on": 2,
+          "best_rank": 12,
+          "current_rank": 13,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 16,
+            "persistence": 7,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 42
+        },
+        {
+          "trend_id": "instagram:ddu6y-kvpw",
+          "platform": "instagram",
+          "title": "Presiden mereshuffle posisi Menteri Keuangan dan mengganti Purbaya Yudhi Sadewa dengan…",
+          "daily": [
+            {
+              "day": "2026-09-20",
+              "best_rank": 12
+            }
+          ],
+          "first_seen": "2026-09-20",
+          "last_seen": "2026-09-20",
+          "days_on": 1,
+          "best_rank": 12,
+          "current_rank": 12,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 16
+          },
+          "theme": "Politik & kebijakan",
+          "score": 41
+        }
+      ]
     }
   ],
   "categories": [
     {
       "label": "Sepak bola",
-      "n_trends": 121,
+      "n_trends": 110,
       "platforms": {
-        "google": 100,
-        "youtube": 14,
-        "twitter": 4,
+        "google": 89,
+        "youtube": 12,
+        "twitter": 6,
         "instagram": 3
       },
       "top": [
@@ -1757,13 +1868,13 @@
     },
     {
       "label": "Tontonan & sinetron",
-      "n_trends": 33,
+      "n_trends": 34,
       "platforms": {
         "youtube": 27,
         "google": 3,
+        "twitter": 2,
         "instagram": 1,
-        "netflix": 1,
-        "twitter": 1
+        "netflix": 1
       },
       "top": [
         {
@@ -1782,35 +1893,6 @@
           ],
           "first_seen": "2026-09-20",
           "last_seen": "2026-09-21",
-          "days_on": 2,
-          "best_rank": 2,
-          "current_rank": 2,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 0
-          },
-          "theme": "Tontonan & sinetron",
-          "score": 37
-        },
-        {
-          "trend_id": "youtube:75xHhd-3bkM",
-          "platform": "youtube",
-          "title": "TERIKAT JANJI TRAILER: APA MISI SENA KALI INI AKAN BERHASIL⁉️ ATAU DAVINA KETAUAN? - Arya Saloka",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 2
-            },
-            {
-              "day": "2026-09-15",
-              "best_rank": 2
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-15",
           "days_on": 2,
           "best_rank": 2,
           "current_rank": 2,
@@ -1883,6 +1965,35 @@
           "score": 37
         },
         {
+          "trend_id": "youtube:fR_etoZN5Hs",
+          "platform": "youtube",
+          "title": "TERIKAT JANJI TRAILER: DAVINA BIKIN SENA MUNDUR DARI KASUS DIPA⁉️ - Arya Saloka, Asha Assuncao",
+          "daily": [
+            {
+              "day": "2026-09-21",
+              "best_rank": 2
+            },
+            {
+              "day": "2026-09-22",
+              "best_rank": 2
+            }
+          ],
+          "first_seen": "2026-09-21",
+          "last_seen": "2026-09-22",
+          "days_on": 2,
+          "best_rank": 2,
+          "current_rank": 2,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 12,
+            "cross_platform": 0
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 37
+        },
+        {
           "trend_id": "youtube:kLgeZJbhfK0",
           "platform": "youtube",
           "title": "TERIKAT JANJI TRAILER: SENA & DAVINA HARUS BERSIAP MENGHADAPI ARMAN ANDIKA⁉️ - Arua Saloka, Asha As",
@@ -1915,13 +2026,46 @@
     },
     {
       "label": "Politik & kebijakan",
-      "n_trends": 22,
+      "n_trends": 23,
       "platforms": {
-        "instagram": 16,
+        "instagram": 17,
         "google": 5,
         "twitter": 1
       },
       "top": [
+        {
+          "trend_id": "instagram:ddyvpvpyxli",
+          "platform": "instagram",
+          "title": "​🔥 SANGAT BERANI! DETIK-DETIK GEMA GOEYARDI BICARA JUJUR DI DEPAN PRABOWO 🔥",
+          "daily": [
+            {
+              "day": "2026-09-20",
+              "best_rank": 5
+            },
+            {
+              "day": "2026-09-21",
+              "best_rank": 3
+            },
+            {
+              "day": "2026-09-22",
+              "best_rank": 2
+            }
+          ],
+          "first_seen": "2026-09-20",
+          "last_seen": "2026-09-22",
+          "days_on": 3,
+          "best_rank": 2,
+          "current_rank": 2,
+          "stage": "puncak",
+          "score_parts": {
+            "velocity": 25,
+            "persistence": 11,
+            "peak": 12,
+            "cross_platform": 0
+          },
+          "theme": "Politik & kebijakan",
+          "score": 48
+        },
         {
           "trend_id": "google:nusron-wahid-kpk",
           "platform": "google",
@@ -2029,31 +2173,6 @@
           },
           "theme": "Politik & kebijakan",
           "score": 31
-        },
-        {
-          "trend_id": "google:menteri-keuangan-indonesia",
-          "platform": "google",
-          "title": "menteri keuangan indonesia",
-          "daily": [
-            {
-              "day": "2026-09-15",
-              "best_rank": 5
-            }
-          ],
-          "first_seen": "2026-09-15",
-          "last_seen": "2026-09-15",
-          "days_on": 1,
-          "best_rank": 5,
-          "current_rank": 5,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 16
-          },
-          "theme": "Politik & kebijakan",
-          "score": 47
         }
       ]
     },
@@ -2072,10 +2191,6 @@
           "title": "R. City - Locked Away (Lyrics) ft. Adam Levine",
           "daily": [
             {
-              "day": "2026-09-14",
-              "best_rank": 1
-            },
-            {
               "day": "2026-09-15",
               "best_rank": 1
             },
@@ -2084,20 +2199,20 @@
               "best_rank": 7
             }
           ],
-          "first_seen": "2026-09-14",
+          "first_seen": "2026-09-15",
           "last_seen": "2026-09-16",
-          "days_on": 3,
+          "days_on": 2,
           "best_rank": 1,
           "current_rank": 7,
           "stage": "turun",
           "score_parts": {
             "velocity": 5,
-            "persistence": 11,
+            "persistence": 7,
             "peak": 15,
             "cross_platform": 0
           },
           "theme": "Musik & lagu",
-          "score": 31
+          "score": 27
         },
         {
           "trend_id": "youtube:Lufa9QAFFeY",
@@ -2188,23 +2303,27 @@
             },
             {
               "day": "2026-09-21",
-              "best_rank": 4
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-22",
+              "best_rank": 11
             }
           ],
           "first_seen": "2026-09-19",
-          "last_seen": "2026-09-21",
-          "days_on": 3,
+          "last_seen": "2026-09-22",
+          "days_on": 4,
           "best_rank": 1,
-          "current_rank": 4,
-          "stage": "naik",
+          "current_rank": 11,
+          "stage": "stabil",
           "score_parts": {
-            "velocity": 31,
-            "persistence": 11,
+            "velocity": 16,
+            "persistence": 14,
             "peak": 15,
             "cross_platform": 0
           },
           "theme": "Musik & lagu",
-          "score": 57
+          "score": 45
         },
         {
           "trend_id": "instagram:cfwkk-njlwm",
@@ -2242,14 +2361,194 @@
       ]
     },
     {
+      "label": "Game & esports",
+      "n_trends": 11,
+      "platforms": {
+        "youtube": 8,
+        "google": 3
+      },
+      "top": [
+        {
+          "trend_id": "youtube:5aO1syq8trw",
+          "platform": "youtube",
+          "title": "LIVE GAMEPLAY PETUALANGAN UPIN IPIN - BANTU AKU TAMATIN GUYS #upinipin #shorts #horror #live",
+          "daily": [
+            {
+              "day": "2026-09-22",
+              "best_rank": 3
+            }
+          ],
+          "first_seen": "2026-09-22",
+          "last_seen": "2026-09-22",
+          "days_on": 1,
+          "best_rank": 3,
+          "current_rank": 3,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 12,
+            "cross_platform": 0
+          },
+          "theme": "Game & esports",
+          "score": 34
+        },
+        {
+          "trend_id": "youtube:5tOPeDiETK0",
+          "platform": "youtube",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 2 | Bahasa Indonesia",
+          "daily": [
+            {
+              "day": "2026-09-19",
+              "best_rank": 3
+            },
+            {
+              "day": "2026-09-20",
+              "best_rank": 3
+            }
+          ],
+          "first_seen": "2026-09-19",
+          "last_seen": "2026-09-20",
+          "days_on": 2,
+          "best_rank": 3,
+          "current_rank": 3,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 12,
+            "cross_platform": 0
+          },
+          "theme": "Game & esports",
+          "score": 37
+        },
+        {
+          "trend_id": "youtube:K30JsmMhQ4Q",
+          "platform": "youtube",
+          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 3 | Bahasa Indonesia",
+          "daily": [
+            {
+              "day": "2026-09-20",
+              "best_rank": 3
+            },
+            {
+              "day": "2026-09-21",
+              "best_rank": 3
+            },
+            {
+              "day": "2026-09-22",
+              "best_rank": 6
+            }
+          ],
+          "first_seen": "2026-09-20",
+          "last_seen": "2026-09-22",
+          "days_on": 3,
+          "best_rank": 3,
+          "current_rank": 6,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 11,
+            "persistence": 11,
+            "peak": 12,
+            "cross_platform": 0
+          },
+          "theme": "Game & esports",
+          "score": 34
+        },
+        {
+          "trend_id": "google:mpl-id",
+          "platform": "google",
+          "title": "mpl id",
+          "daily": [
+            {
+              "day": "2026-09-20",
+              "best_rank": 4
+            },
+            {
+              "day": "2026-09-21",
+              "best_rank": 10
+            }
+          ],
+          "first_seen": "2026-09-20",
+          "last_seen": "2026-09-21",
+          "days_on": 2,
+          "best_rank": 4,
+          "current_rank": 10,
+          "stage": "turun",
+          "score_parts": {
+            "velocity": 5,
+            "persistence": 7,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Game & esports",
+          "score": 21
+        },
+        {
+          "trend_id": "google:game",
+          "platform": "google",
+          "title": "game",
+          "daily": [
+            {
+              "day": "2026-09-19",
+              "best_rank": 5
+            }
+          ],
+          "first_seen": "2026-09-19",
+          "last_seen": "2026-09-19",
+          "days_on": 1,
+          "best_rank": 5,
+          "current_rank": 5,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Game & esports",
+          "score": 31
+        }
+      ]
+    },
+    {
       "label": "K-pop & idol",
-      "n_trends": 9,
+      "n_trends": 10,
       "platforms": {
         "twitter": 5,
-        "youtube": 3,
+        "youtube": 4,
         "google": 1
       },
       "top": [
+        {
+          "trend_id": "youtube:yQuKQo3YDmc",
+          "platform": "youtube",
+          "title": "Helikopter turun ke padang - IDOL IDOL - LAILA AYU - SIMPATIK MUSIC",
+          "daily": [
+            {
+              "day": "2026-09-21",
+              "best_rank": 1
+            },
+            {
+              "day": "2026-09-22",
+              "best_rank": 1
+            }
+          ],
+          "first_seen": "2026-09-21",
+          "last_seen": "2026-09-22",
+          "days_on": 2,
+          "best_rank": 1,
+          "current_rank": 1,
+          "stage": "stabil",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 7,
+            "peak": 15,
+            "cross_platform": 0
+          },
+          "theme": "K-pop & idol",
+          "score": 40
+        },
         {
           "trend_id": "twitter:cortis-2nd-daesang",
           "platform": "twitter",
@@ -2365,191 +2664,14 @@
           },
           "theme": "K-pop & idol",
           "score": 28
-        },
-        {
-          "trend_id": "twitter:bts-is-coming",
-          "platform": "twitter",
-          "title": "BTS IS COMING",
-          "daily": [
-            {
-              "day": "2026-09-19",
-              "best_rank": 10
-            }
-          ],
-          "first_seen": "2026-09-19",
-          "last_seen": "2026-09-19",
-          "days_on": 1,
-          "best_rank": 10,
-          "current_rank": 10,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 6,
-            "cross_platform": 0
-          },
-          "theme": "K-pop & idol",
-          "score": 28
-        }
-      ]
-    },
-    {
-      "label": "Game & esports",
-      "n_trends": 9,
-      "platforms": {
-        "youtube": 6,
-        "google": 3
-      },
-      "top": [
-        {
-          "trend_id": "youtube:5tOPeDiETK0",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 2 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-19",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-20",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-19",
-          "last_seen": "2026-09-20",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 0
-          },
-          "theme": "Game & esports",
-          "score": 37
-        },
-        {
-          "trend_id": "youtube:K30JsmMhQ4Q",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 6 Hari 3 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-20",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-21",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-20",
-          "last_seen": "2026-09-21",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 0
-          },
-          "theme": "Game & esports",
-          "score": 37
-        },
-        {
-          "trend_id": "youtube:YPbOKyQltIo",
-          "platform": "youtube",
-          "title": "🔴 LIVE | MPL ID S18 | Minggu 5 Hari 3 | Bahasa Indonesia",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 3
-            },
-            {
-              "day": "2026-09-15",
-              "best_rank": 3
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-15",
-          "days_on": 2,
-          "best_rank": 3,
-          "current_rank": 3,
-          "stage": "stabil",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 7,
-            "peak": 12,
-            "cross_platform": 0
-          },
-          "theme": "Game & esports",
-          "score": 37
-        },
-        {
-          "trend_id": "google:mpl-id",
-          "platform": "google",
-          "title": "mpl id",
-          "daily": [
-            {
-              "day": "2026-09-20",
-              "best_rank": 4
-            },
-            {
-              "day": "2026-09-21",
-              "best_rank": 10
-            }
-          ],
-          "first_seen": "2026-09-20",
-          "last_seen": "2026-09-21",
-          "days_on": 2,
-          "best_rank": 4,
-          "current_rank": 10,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 5,
-            "persistence": 7,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Game & esports",
-          "score": 21
-        },
-        {
-          "trend_id": "google:game",
-          "platform": "google",
-          "title": "game",
-          "daily": [
-            {
-              "day": "2026-09-19",
-              "best_rank": 5
-            }
-          ],
-          "first_seen": "2026-09-19",
-          "last_seen": "2026-09-19",
-          "days_on": 1,
-          "best_rank": 5,
-          "current_rank": 5,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Game & esports",
-          "score": 31
         }
       ]
     },
     {
       "label": "Bencana alam",
-      "n_trends": 7,
+      "n_trends": 6,
       "platforms": {
-        "instagram": 6,
-        "youtube": 1
+        "instagram": 6
       },
       "top": [
         {
@@ -2619,6 +2741,39 @@
           "score": 29
         },
         {
+          "trend_id": "instagram:dcqr8-lzpki",
+          "platform": "instagram",
+          "title": "Kebakaran hutan dan lahan masih melanda sejumlah wilayah Indonesia, terutama di Sumatra…",
+          "daily": [
+            {
+              "day": "2026-09-18",
+              "best_rank": 12
+            },
+            {
+              "day": "2026-09-19",
+              "best_rank": 10
+            },
+            {
+              "day": "2026-09-21",
+              "best_rank": 6
+            }
+          ],
+          "first_seen": "2026-09-18",
+          "last_seen": "2026-09-21",
+          "days_on": 3,
+          "best_rank": 6,
+          "current_rank": 6,
+          "stage": "puncak",
+          "score_parts": {
+            "velocity": 31,
+            "persistence": 11,
+            "peak": 6,
+            "cross_platform": 0
+          },
+          "theme": "Bencana alam",
+          "score": 48
+        },
+        {
           "trend_id": "instagram:dcs-nybzxss",
           "platform": "instagram",
           "title": "kebakaran hutan di Kalimantan secara fisika diakibatkan karena alam atau manusia? yuk…",
@@ -2644,172 +2799,33 @@
           "score": 28
         },
         {
-          "trend_id": "instagram:dcqr8-lzpki",
+          "trend_id": "instagram:ddbr0mwh8j9",
           "platform": "instagram",
-          "title": "Kebakaran hutan dan lahan masih melanda sejumlah wilayah Indonesia, terutama di Sumatra…",
+          "title": "Di tengah erupsi sejumlah gunung api di Indonesia, pilihan Presiden Joko Widodo…",
           "daily": [
             {
-              "day": "2026-09-18",
-              "best_rank": 12
+              "day": "2026-09-17",
+              "best_rank": 13
             },
             {
-              "day": "2026-09-19",
-              "best_rank": 10
+              "day": "2026-09-22",
+              "best_rank": 6
             }
           ],
-          "first_seen": "2026-09-18",
-          "last_seen": "2026-09-19",
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-22",
           "days_on": 2,
-          "best_rank": 10,
-          "current_rank": 10,
+          "best_rank": 6,
+          "current_rank": 6,
           "stage": "puncak",
           "score_parts": {
-            "velocity": 22,
+            "velocity": 33,
             "persistence": 7,
             "peak": 6,
             "cross_platform": 0
           },
           "theme": "Bencana alam",
-          "score": 35
-        },
-        {
-          "trend_id": "instagram:dcwvcs6p52i",
-          "platform": "instagram",
-          "title": "Indonesia sedang menghadapi musim kebakaran yang tidak bisa dianggap biasa.",
-          "daily": [
-            {
-              "day": "2026-09-18",
-              "best_rank": 12
-            },
-            {
-              "day": "2026-09-19",
-              "best_rank": 15
-            }
-          ],
-          "first_seen": "2026-09-18",
-          "last_seen": "2026-09-19",
-          "days_on": 2,
-          "best_rank": 12,
-          "current_rank": 15,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 11,
-            "persistence": 7,
-            "peak": 3,
-            "cross_platform": 0
-          },
-          "theme": "Bencana alam",
-          "score": 21
-        }
-      ]
-    },
-    {
-      "label": "Keuangan & kripto",
-      "n_trends": 4,
-      "platforms": {
-        "google": 3,
-        "instagram": 1
-      },
-      "top": [
-        {
-          "trend_id": "google:harga-emas-hari-ini",
-          "platform": "google",
-          "title": "harga emas hari ini",
-          "daily": [
-            {
-              "day": "2026-09-19",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-19",
-          "last_seen": "2026-09-19",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Keuangan & kripto",
-          "score": 31
-        },
-        {
-          "trend_id": "google:saham-bbri",
-          "platform": "google",
-          "title": "saham bbri",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 4
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 4,
-          "current_rank": 4,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Keuangan & kripto",
-          "score": 31
-        },
-        {
-          "trend_id": "google:rupiah-hari-ini",
-          "platform": "google",
-          "title": "rupiah hari ini",
-          "daily": [
-            {
-              "day": "2026-09-14",
-              "best_rank": 5
-            }
-          ],
-          "first_seen": "2026-09-14",
-          "last_seen": "2026-09-14",
-          "days_on": 1,
-          "best_rank": 5,
-          "current_rank": 5,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 9,
-            "cross_platform": 0
-          },
-          "theme": "Keuangan & kripto",
-          "score": 31
-        },
-        {
-          "trend_id": "instagram:dumlf8wkqb0",
-          "platform": "instagram",
-          "title": "Kira-kira kita mau investasi apa teman-teman? #sultansingapore #keegantengfyp #fyp",
-          "daily": [
-            {
-              "day": "2026-09-17",
-              "best_rank": 12
-            }
-          ],
-          "first_seen": "2026-09-17",
-          "last_seen": "2026-09-17",
-          "days_on": 1,
-          "best_rank": 12,
-          "current_rank": 12,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 0
-          },
-          "theme": "Keuangan & kripto",
-          "score": 25
+          "score": 46
         }
       ]
     },
@@ -2915,6 +2931,66 @@
       ]
     },
     {
+      "label": "Keuangan & kripto",
+      "n_trends": 2,
+      "platforms": {
+        "google": 1,
+        "instagram": 1
+      },
+      "top": [
+        {
+          "trend_id": "google:harga-emas-hari-ini",
+          "platform": "google",
+          "title": "harga emas hari ini",
+          "daily": [
+            {
+              "day": "2026-09-19",
+              "best_rank": 4
+            }
+          ],
+          "first_seen": "2026-09-19",
+          "last_seen": "2026-09-19",
+          "days_on": 1,
+          "best_rank": 4,
+          "current_rank": 4,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 9,
+            "cross_platform": 0
+          },
+          "theme": "Keuangan & kripto",
+          "score": 31
+        },
+        {
+          "trend_id": "instagram:dumlf8wkqb0",
+          "platform": "instagram",
+          "title": "Kira-kira kita mau investasi apa teman-teman? #sultansingapore #keegantengfyp #fyp",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 12
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 12,
+          "current_rank": 12,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 3,
+            "cross_platform": 0
+          },
+          "theme": "Keuangan & kripto",
+          "score": 25
+        }
+      ]
+    },
+    {
       "label": "Bantuan sosial",
       "n_trends": 1,
       "platforms": {
@@ -2949,5 +3025,5 @@
       ]
     }
   ],
-  "total_trends": 1009
+  "total_trends": 1057
 }
