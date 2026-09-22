@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-22T06:13:35+00:00",
+  "generated_at": "2026-09-22T06:17:19+00:00",
   "window_days": 7,
   "scoring": {
     "velocity": "0-35 · perbaikan peringkat dalam jendela",
@@ -1145,134 +1145,6 @@
       ]
     },
     {
-      "label": "dulu · pake",
-      "method": "entitas",
-      "platforms": [
-        "instagram",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "youtube:PMBhqbLbWZk",
-          "platform": "youtube",
-          "title": "KISAH MASA LALU HANTU IBU BILANG PAKE INI DULU !! Feat @sapipurba  minecraft",
-          "daily": [
-            {
-              "day": "2026-09-15",
-              "best_rank": 6
-            },
-            {
-              "day": "2026-09-16",
-              "best_rank": 11
-            }
-          ],
-          "first_seen": "2026-09-15",
-          "last_seen": "2026-09-16",
-          "days_on": 2,
-          "best_rank": 6,
-          "current_rank": 11,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 7,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 36
-        },
-        {
-          "trend_id": "instagram:dcscpjlcqdc",
-          "platform": "instagram",
-          "title": "Maaf yang Vreaa.. dolan kali ini gak pake cepool dulu.. Hehehe..",
-          "daily": [
-            {
-              "day": "2026-09-16",
-              "best_rank": 9
-            },
-            {
-              "day": "2026-09-17",
-              "best_rank": 10
-            }
-          ],
-          "first_seen": "2026-09-16",
-          "last_seen": "2026-09-17",
-          "days_on": 2,
-          "best_rank": 9,
-          "current_rank": 10,
-          "stage": "turun",
-          "score_parts": {
-            "velocity": 16,
-            "persistence": 7,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 45
-        }
-      ]
-    },
-    {
-      "label": "evil · resident",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "twitter"
-      ],
-      "members": [
-        {
-          "trend_id": "google:film-resident-evil-2026",
-          "platform": "google",
-          "title": "film resident evil 2026",
-          "daily": [
-            {
-              "day": "2026-09-17",
-              "best_rank": 10
-            }
-          ],
-          "first_seen": "2026-09-17",
-          "last_seen": "2026-09-17",
-          "days_on": 1,
-          "best_rank": 10,
-          "current_rank": 10,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": "Tontonan & sinetron",
-          "score": 44
-        },
-        {
-          "trend_id": "twitter:resident-evil",
-          "platform": "twitter",
-          "title": "Resident Evil",
-          "daily": [
-            {
-              "day": "2026-09-16",
-              "best_rank": 11
-            }
-          ],
-          "first_seen": "2026-09-16",
-          "last_seen": "2026-09-16",
-          "days_on": 1,
-          "best_rank": 11,
-          "current_rank": 11,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 41
-        }
-      ]
-    },
-    {
       "label": "evil · resident",
       "method": "entitas",
       "platforms": [
@@ -1306,41 +1178,6 @@
           "score": 50
         },
         {
-          "trend_id": "twitter:resident-evil",
-          "platform": "twitter",
-          "title": "Resident Evil",
-          "daily": [
-            {
-              "day": "2026-09-16",
-              "best_rank": 11
-            }
-          ],
-          "first_seen": "2026-09-16",
-          "last_seen": "2026-09-16",
-          "days_on": 1,
-          "best_rank": 11,
-          "current_rank": 11,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 41
-        }
-      ]
-    },
-    {
-      "label": "evil · resident",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "twitter"
-      ],
-      "members": [
-        {
           "trend_id": "google:resident-evil-movie",
           "platform": "google",
           "title": "resident evil movie",
@@ -1364,6 +1201,31 @@
           },
           "theme": null,
           "score": 50
+        },
+        {
+          "trend_id": "google:film-resident-evil-2026",
+          "platform": "google",
+          "title": "film resident evil 2026",
+          "daily": [
+            {
+              "day": "2026-09-17",
+              "best_rank": 10
+            }
+          ],
+          "first_seen": "2026-09-17",
+          "last_seen": "2026-09-17",
+          "days_on": 1,
+          "best_rank": 10,
+          "current_rank": 10,
+          "stage": "baru",
+          "score_parts": {
+            "velocity": 18,
+            "persistence": 4,
+            "peak": 6,
+            "cross_platform": 16
+          },
+          "theme": "Tontonan & sinetron",
+          "score": 44
         },
         {
           "trend_id": "twitter:resident-evil",
@@ -1426,41 +1288,6 @@
           "score": 50
         },
         {
-          "trend_id": "twitter:inter-miami",
-          "platform": "twitter",
-          "title": "Inter Miami",
-          "daily": [
-            {
-              "day": "2026-09-17",
-              "best_rank": 20
-            }
-          ],
-          "first_seen": "2026-09-17",
-          "last_seen": "2026-09-17",
-          "days_on": 1,
-          "best_rank": 20,
-          "current_rank": 20,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 41
-        }
-      ]
-    },
-    {
-      "label": "inter · miami",
-      "method": "entitas",
-      "platforms": [
-        "google",
-        "twitter"
-      ],
-      "members": [
-        {
           "trend_id": "google:inter-miami-vs-cruz-azul",
           "platform": "google",
           "title": "inter miami vs cruz azul",
@@ -1500,66 +1327,6 @@
           "days_on": 1,
           "best_rank": 20,
           "current_rank": 20,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 3,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 41
-        }
-      ]
-    },
-    {
-      "label": "jadi · sound",
-      "method": "entitas",
-      "platforms": [
-        "instagram",
-        "youtube"
-      ],
-      "members": [
-        {
-          "trend_id": "instagram:ce-kqdebtjc",
-          "platform": "instagram",
-          "title": "WKWKWKWKKW EMG COCOK NYA JADI ANAK ANAK🙃😂🤣🤣🤣 #tiktok #tiktokindonesia #sister sound…",
-          "daily": [
-            {
-              "day": "2026-09-19",
-              "best_rank": 6
-            }
-          ],
-          "first_seen": "2026-09-19",
-          "last_seen": "2026-09-19",
-          "days_on": 1,
-          "best_rank": 6,
-          "current_rank": 6,
-          "stage": "baru",
-          "score_parts": {
-            "velocity": 18,
-            "persistence": 4,
-            "peak": 6,
-            "cross_platform": 16
-          },
-          "theme": null,
-          "score": 44
-        },
-        {
-          "trend_id": "youtube:2JvxJOz4YHA",
-          "platform": "youtube",
-          "title": "Lomba Jadi Pengisi Suara di Roblox! [Make That Sound]",
-          "daily": [
-            {
-              "day": "2026-09-21",
-              "best_rank": 12
-            }
-          ],
-          "first_seen": "2026-09-21",
-          "last_seen": "2026-09-21",
-          "days_on": 1,
-          "best_rank": 12,
-          "current_rank": 12,
           "stage": "baru",
           "score_parts": {
             "velocity": 18,
