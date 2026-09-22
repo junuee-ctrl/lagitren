@@ -85,6 +85,20 @@ STOP = {
     "ada", "tidak", "bisa", "akan", "sudah", "saat", "hari", "baru", "lebih",
     "the", "of", "in", "to", "for", "and", "a", "is", "on", "official", "video",
     "full", "live", "new", "part", "feat", "ft", "mv", "vs",
+    # 2026-09-22: kata sehari-hari (>=4 huruf) yang lolos filter MAX_DF karena
+    # jarang dalam korpus sepekan, tapi bukan penanda topik. Dua di antaranya
+    # sekaligus menghasilkan klaster palsu: "dulu"+"pake" (video Minecraft vs
+    # unggahan jalan-jalan) dan "jadi"+"sound" (Roblox vs unggahan lucu).
+    "dulu", "pake", "pakai", "jadi", "lagi", "juga", "sama", "kalau", "kalo",
+    "bikin", "buat", "karena", "tapi", "atau", "udah", "masih", "cuma",
+    "kita", "kamu", "saya", "aku", "anak", "orang", "semua", "biar", "sampai",
+    "sini", "gitu", "kayak", "mana", "siapa", "kenapa", "gimana", "begini",
+    "begitu", "sekarang", "banyak", "banget", "emang", "nggak", "enggak",
+    "pertama", "terakhir", "besar", "kecil", "bareng", "bilang", "kali",
+    # label platform & format — bukan topik
+    "sound", "tiktok", "tiktokindonesia", "viral", "fyp", "foryou",
+    "foryoupage", "reels", "shorts", "trailer", "episode", "lyrics", "lirik",
+    "music", "musik", "cover", "remix", "version", "versi",
 }
 
 
@@ -275,6 +289,31 @@ def build(db: D1Client, window: int = 7) -> dict:
             "label": " · ".join(sorted(shared)[:3]) or a["title"][:40],
             "method": "entitas", "platforms": plats,
             "members": sorted(grp, key=lambda g: g["best_rank"] or 99)[:6],
+        })
+
+    # Gabungkan klaster yang berbagi anggota. Tanpa ini satu judul di X
+    # ("Resident Evil") ikut dipakai oleh tiap varian kueri Google
+    # ("resident evil 2026", "resident evil movie", ...) sehingga satu topik
+    # terhitung tiga kali.
+    merged: list[dict] = []
+    for c in clusters:
+        ids = {m["trend_id"] for m in c["members"]}
+        target = next((x for x in merged if x["_ids"] & ids), None)
+        if target is None:
+            merged.append({**c, "_ids": set(ids), "_all": list(c["members"])})
+        else:
+            target["_ids"] |= ids
+            target["_all"] += [m for m in c["members"]
+                               if m["trend_id"] not in {x["trend_id"] for x in target["_all"]}]
+    clusters = []
+    for c in merged:
+        allm = c["_all"]
+        shared = set.intersection(*[tok[m["trend_id"]] for m in allm]) or set()
+        clusters.append({
+            "label": " · ".join(sorted(shared)[:3]) or c["label"],
+            "method": "entitas",
+            "platforms": sorted({m["platform"] for m in allm}),
+            "members": sorted(allm, key=lambda g: g["best_rank"] or 99)[:6],
         })
 
     # skor lintas platform (0–25) diberikan ke anggota klaster
