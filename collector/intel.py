@@ -88,10 +88,14 @@ STOP = {
     # 2026-09-22: kata sehari-hari (>=4 huruf) yang lolos filter MAX_DF karena
     # jarang dalam korpus sepekan, tapi bukan penanda topik. Dua di antaranya
     # sekaligus menghasilkan klaster palsu: "dulu"+"pake" (video Minecraft vs
-    # unggahan jalan-jalan) dan "jadi"+"sound" (Roblox vs unggahan lucu).
+    # unggahan jalan-jalan), "jadi"+"sound" (Roblox vs unggahan lucu),
+    # "buat"+"tanpa" (trailer vs bulu mata palsu).
+    # SENGAJA tidak memasukkan "anak": ia bagian dari nama "Anak Krakatau",
+    # dan klaster erupsi 17–18 Sep yang asli akan hilang. Kasus lama
+    # "Mainan Anak" vs "Anak Krakatau" sudah diblok aturan minimal 2 token.
     "dulu", "pake", "pakai", "jadi", "lagi", "juga", "sama", "kalau", "kalo",
     "bikin", "buat", "karena", "tapi", "atau", "udah", "masih", "cuma",
-    "kita", "kamu", "saya", "aku", "anak", "orang", "semua", "biar", "sampai",
+    "kita", "kamu", "saya", "aku", "orang", "semua", "biar", "sampai", "tanpa",
     "sini", "gitu", "kayak", "mana", "siapa", "kenapa", "gimana", "begini",
     "begitu", "sekarang", "banyak", "banget", "emang", "nggak", "enggak",
     "pertama", "terakhir", "besar", "kecil", "bareng", "bilang", "kali",
