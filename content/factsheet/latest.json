@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-09-23T06:18:45+00:00",
+  "generated_at": "2026-09-23T18:42:15+00:00",
   "window_days": 7,
   "coverage": {
     "first": "2026-08-19 07:13:40",
-    "last": "2026-09-23 05:37:08",
-    "rows": 13413,
-    "days": 34.9
+    "last": "2026-09-23 18:24:48",
+    "rows": 13702,
+    "days": 35.5
   },
   "platforms": {
     "google": {
       "top_now": [
         {
-          "title": "jadwal salat",
+          "title": "irak vs oman",
           "rank": 1,
-          "metric": 200
+          "metric": 10000
         },
         {
-          "title": "jadwal sholat hari ini",
+          "title": "gibran rakabuming raka",
           "rank": 2,
-          "metric": 500
+          "metric": 1000
         },
         {
-          "title": "liga negara",
+          "title": "michael carrick",
           "rank": 3,
+          "metric": 100
+        },
+        {
+          "title": "jadwal salat",
+          "rank": 4,
           "metric": 2000
         },
         {
-          "title": "liga champions wanita uefa",
-          "rank": 4,
-          "metric": 500
-        },
-        {
-          "title": "leicester vs fulham u-21",
+          "title": "jadwal sholat hari ini",
           "rank": 5,
-          "metric": 500
+          "metric": 2000
         }
       ],
       "newcomers_7d": [
@@ -121,27 +121,27 @@
         {
           "title": "Maulana Ardiansyah Ft. Shinta Gisul - HELIKOPTER TURUN KE PADANG (Official Dangdut Live Session)",
           "rank": 1,
-          "metric": 157413
+          "metric": 202169
         },
         {
           "title": "TERIKAT JANJI TRAILER: DAVINA AKHIRNYA BEBAS‼️ TAPI MALAH DIBILANG BAU SAMA SENA? - Arya Saloka",
           "rank": 2,
-          "metric": 15061
+          "metric": 119423
         },
         {
           "title": "Yuta Mio Hidup Di Bus Selama 100 Hari Untuk Bertahan Dari Kiamat Zombie | ROBLOX",
           "rank": 3,
-          "metric": 86078
+          "metric": 256470
         },
         {
           "title": "Helikopter turun ke padang - IDOL IDOL - LAILA AYU - SIMPATIK MUSIC",
           "rank": 4,
-          "metric": 179821
+          "metric": 209933
         },
         {
-          "title": "ROSE DI KAMPUNG DURIAN – PART 6 | OFFICIAL TRAILER",
+          "title": "TRAILER TERIKAT JANJI HARI INI EPISODE 170 Alhamdulillah Davina Bebas Tapi Mandi Dulu",
           "rank": 5,
-          "metric": 72309
+          "metric": 24064
         }
       ],
       "newcomers_7d": [
@@ -191,8 +191,8 @@
           "best_rank": 2
         },
         {
-          "title": "TERIKAT JANJI TRAILER: SENA AKHIRNYA JUJUR SIAPA ORANG TUANYA KE DAVINA⁉️ - Arya Saloka,Asha Assunca",
-          "first_seen": "2026-09-16 11:03:44",
+          "title": "TERIKAT JANJI TRAILER: DAVINA BIKIN SENA MUNDUR DARI KASUS DIPA⁉️ - Arya Saloka, Asha Assuncao",
+          "first_seen": "2026-09-21 07:03:02",
           "best_rank": 2
         }
       ],
@@ -229,68 +229,38 @@
         {
           "title": "Negara Kesatuan Republik Indonesia.",
           "rank": 1,
-          "metric": 2744777
+          "metric": 2744711
         },
         {
-          "title": "Pembangunan tanggul laut di Indonesia dan Jepang memiliki perbedaan mendasar pada tujuan…",
+          "title": "Semoga teman-teman di Indonesia selamat dan aman. Mari kita doakan agar Indonesia…",
           "rank": 2,
-          "metric": 75270
+          "metric": 1197745
         },
         {
-          "title": "Di sejumlah film berlatar 20 atau 30 tahun yang lalu, kita bisa melihat kebanyakan remaja…",
+          "title": "Postingan viral #indonesia",
           "rank": 3,
-          "metric": 73628
+          "metric": 921439
         },
         {
-          "title": "Source: Kumparancom \"Apakah dengan pemindahan ibu kota negara ini akan maju? Kita tahu…",
+          "title": "Postingan viral #indonesia",
           "rank": 4,
-          "metric": 49164
+          "metric": 808027
         },
         {
-          "title": "Dirgahayu ke-80 Indonesia 🇮🇩",
+          "title": "Postingan viral #indonesia",
           "rank": 5,
-          "metric": 38755
+          "metric": 504508
         }
       ],
       "newcomers_7d": [
-        {
-          "title": "Negara Kesatuan Republik Indonesia.",
-          "first_seen": "2026-09-16 18:22:31",
-          "best_rank": 1
-        },
         {
           "title": "Indonesia dengan pemandangan 5 waktunya (part4)",
           "first_seen": "2026-09-18 12:22:30",
           "best_rank": 1
         },
         {
-          "title": "Wah don’t try try deh kalau ketemu",
-          "first_seen": "2026-09-16 12:22:45",
-          "best_rank": 1
-        },
-        {
-          "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "first_seen": "2026-09-16 15:22:52",
-          "best_rank": 1
-        },
-        {
-          "title": "🚨 𝐇𝐄𝐑𝐄 𝐖𝐄 𝐆𝐎! Real Madrid agree deal to sign 21 year old talented centre back Oscar…",
-          "first_seen": "2026-09-16 12:22:45",
-          "best_rank": 1
-        },
-        {
           "title": "Postingan viral #indonesia",
           "first_seen": "2026-09-18 09:22:26",
-          "best_rank": 1
-        },
-        {
-          "title": "Demi langit biru kaltara",
-          "first_seen": "2026-09-16 15:22:52",
-          "best_rank": 1
-        },
-        {
-          "title": "PRAY FOR BORNEO. PRAY FOR INDONESIA🇮🇩",
-          "first_seen": "2026-09-16 18:22:31",
           "best_rank": 1
         },
         {
@@ -302,22 +272,52 @@
           "title": "HARI KE 175 MOBIL MAKAN MAKAN",
           "first_seen": "2026-09-17 06:22:18",
           "best_rank": 1
+        },
+        {
+          "title": "Momen mengharukan terekam saat beberapa bocah penjual tisu bergegas bersembunyi di balik…",
+          "first_seen": "2026-09-17 00:22:24",
+          "best_rank": 1
+        },
+        {
+          "title": "Wakabayashi (43), suami dari aktris dewasa Kuraba Anumu, awalnya datang ke Indonesia demi…",
+          "first_seen": "2026-09-21 06:22:42",
+          "best_rank": 1
+        },
+        {
+          "title": "Indonesia Maju 🇮🇩",
+          "first_seen": "2026-09-22 09:22:39",
+          "best_rank": 2
+        },
+        {
+          "title": "Foto pertama itu 20 tahun silam dan foto terbaru",
+          "first_seen": "2026-09-22 06:22:54",
+          "best_rank": 2
+        },
+        {
+          "title": "Saya sudah sampai di Indonesia😆🇮🇩",
+          "first_seen": "2026-09-21 09:22:40",
+          "best_rank": 2
+        },
+        {
+          "title": "Komen yang cinta pada muhammad saw#musergeneration #tiktokgeneration #musik #tiktok",
+          "first_seen": "2026-09-18 12:22:30",
+          "best_rank": 2
         }
       ],
       "longest_running_7d": [
         {
           "title": "Negara Kesatuan Republik Indonesia.",
-          "days_on": 8,
+          "days_on": 7,
           "best_rank": 1
         },
         {
           "title": "Lagi kunjungan ke pesantren bareng teman Non Muslim, diwajibin pake hijab (peraturan…",
-          "days_on": 8,
+          "days_on": 7,
           "best_rank": 1
         },
         {
           "title": "Sudah tau @indonesiajuaratrip belum? 👀",
-          "days_on": 8,
+          "days_on": 7,
           "best_rank": 2
         },
         {
@@ -326,9 +326,9 @@
           "best_rank": 4
         },
         {
-          "title": "👉Ikuti ig @bang.tawa banyak postingan viral & ngakak setiap hari 😂.",
-          "days_on": 7,
-          "best_rank": 6
+          "title": "Postingan viral #indonesia",
+          "days_on": 6,
+          "best_rank": 2
         }
       ]
     },
@@ -352,11 +352,6 @@
       ],
       "newcomers_7d": [
         {
-          "title": "#80s",
-          "first_seen": "2026-09-16 12:21:29",
-          "best_rank": 1
-        },
-        {
           "title": "#ciciprasakuliner",
           "first_seen": "2026-09-19 09:21:23",
           "best_rank": 1
@@ -370,16 +365,6 @@
           "title": "#momoyomilkteabattle",
           "first_seen": "2026-09-18 00:21:33",
           "best_rank": 1
-        },
-        {
-          "title": "#flowasone",
-          "first_seen": "2026-09-16 12:21:29",
-          "best_rank": 2
-        },
-        {
-          "title": "#hypic",
-          "first_seen": "2026-09-16 12:21:29",
-          "best_rank": 2
         },
         {
           "title": "#s42revampedheroes",
@@ -414,36 +399,36 @@
           "best_rank": 1
         },
         {
-          "title": "#80s",
+          "title": "#purbaya",
           "days_on": 2,
-          "best_rank": 1
+          "best_rank": 3
         }
       ]
     },
     "twitter": {
       "top_now": [
         {
-          "title": "#GOJEKDIGOPAYMULAIDARI1000",
+          "title": "#S2USelcaDay",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "#PPxSHUFFLE",
+          "title": "#DreamWarden",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "GoRide",
+          "title": "#MoonshadowSeriesEP7",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "#PradaSS27",
+          "title": "THE MOON ALWAYS BESIDE KEY",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "bareng naavagreen",
+          "title": "#MM6XLyuSitong",
           "rank": 5,
           "metric": null
         }
@@ -475,13 +460,18 @@
           "best_rank": 1
         },
         {
-          "title": "#FLAZZ1RUPIAH",
-          "first_seen": "2026-09-17 03:24:29",
+          "title": "#DewTeeFancon",
+          "first_seen": "2026-09-23 12:25:03",
           "best_rank": 1
         },
         {
-          "title": "#GMMTVStarlympics2026",
-          "first_seen": "2026-09-16 12:25:29",
+          "title": "#DreamWarden",
+          "first_seen": "2026-09-22 18:24:05",
+          "best_rank": 1
+        },
+        {
+          "title": "#FLAZZ1RUPIAH",
+          "first_seen": "2026-09-17 03:24:29",
           "best_rank": 1
         },
         {
@@ -493,11 +483,6 @@
           "title": "Gojek Di GoPay 1000",
           "first_seen": "2026-09-20 06:25:25",
           "best_rank": 1
-        },
-        {
-          "title": "#GOJEKDIGOPAYMULAIDARI1000",
-          "first_seen": "2026-09-23 00:24:33",
-          "best_rank": 1
         }
       ],
       "longest_running_7d": [
@@ -507,22 +492,22 @@
           "best_rank": 2
         },
         {
-          "title": "$SHR",
-          "days_on": 4,
-          "best_rank": 2
-        },
-        {
-          "title": "$HOOD",
-          "days_on": 4,
-          "best_rank": 8
-        },
-        {
           "title": "Zcash",
           "days_on": 4,
           "best_rank": 14
         },
         {
-          "title": "#GMMTVStarlympics2026",
+          "title": "PERTHSANTA NIHON ICHINICHI",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "PPXPD WITH HENRY SF",
+          "days_on": 3,
+          "best_rank": 1
+        },
+        {
+          "title": "#SkyNaniSToTheNFanconD2",
           "days_on": 3,
           "best_rank": 1
         }
@@ -531,73 +516,88 @@
     "netflix": {
       "top_now": [
         {
-          "title": "Semua Akan Baik Baik Saja",
+          "title": "Project Sacrifice",
           "rank": 1,
           "metric": null
         },
         {
-          "title": "Ghost in the Cell",
+          "title": "Ayah, Ini Arahnya ke Mana, Ya?",
           "rank": 2,
           "metric": null
         },
         {
-          "title": "Heaven is My Way",
+          "title": "Sengkolo: The Catastrophe of One Suro",
           "rank": 3,
           "metric": null
         },
         {
-          "title": "Shaka Oh Shaka",
+          "title": "Semua Akan Baik Baik Saja",
           "rank": 4,
           "metric": null
         },
         {
-          "title": "Project Sacrifice",
+          "title": "Unanswered Prayers",
           "rank": 5,
           "metric": null
         }
       ],
       "newcomers_7d": [
         {
-          "title": "Semua Akan Baik Baik Saja",
-          "first_seen": "2026-09-16 07:12:21",
-          "best_rank": 1
+          "title": "Sengkolo: The Catastrophe of One Suro",
+          "first_seen": "2026-09-23 07:21:09",
+          "best_rank": 3
         },
         {
-          "title": "Shaka Oh Shaka",
-          "first_seen": "2026-09-16 07:12:21",
-          "best_rank": 4
-        },
-        {
-          "title": "Project Sacrifice",
-          "first_seen": "2026-09-16 07:12:21",
+          "title": "Unanswered Prayers",
+          "first_seen": "2026-09-23 07:21:09",
           "best_rank": 5
         },
         {
-          "title": "Ayah, Ini Arahnya ke Mana, Ya?",
-          "first_seen": "2026-09-16 07:12:21",
-          "best_rank": 8
+          "title": "Hercules",
+          "first_seen": "2026-09-23 07:21:09",
+          "best_rank": 7
         },
         {
-          "title": "Crocodile Tears",
-          "first_seen": "2026-09-16 07:12:21",
-          "best_rank": 10
+          "title": "Alpha",
+          "first_seen": "2026-09-23 07:21:09",
+          "best_rank": 9
         },
         {
-          "title": "Istri Satu-Satunya",
-          "first_seen": "2026-09-16 07:12:21",
-          "best_rank": 15
+          "title": "The Scandal",
+          "first_seen": "2026-09-23 07:21:09",
+          "best_rank": 12
         },
         {
-          "title": "The Gentlemen",
-          "first_seen": "2026-09-16 07:12:21",
+          "title": "Crew Girl",
+          "first_seen": "2026-09-23 07:21:09",
+          "best_rank": 13
+        },
+        {
+          "title": "Pote",
+          "first_seen": "2026-09-23 07:21:09",
           "best_rank": 16
+        },
+        {
+          "title": "Monster: The Lizzie Borden Story",
+          "first_seen": "2026-09-23 07:21:09",
+          "best_rank": 17
         }
       ],
       "longest_running_7d": [
         {
+          "title": "Project Sacrifice",
+          "days_on": 7,
+          "best_rank": 1
+        },
+        {
           "title": "Semua Akan Baik Baik Saja",
           "days_on": 7,
           "best_rank": 1
+        },
+        {
+          "title": "Ayah, Ini Arahnya ke Mana, Ya?",
+          "days_on": 7,
+          "best_rank": 2
         },
         {
           "title": "Ghost in the Cell",
@@ -605,19 +605,9 @@
           "best_rank": 2
         },
         {
-          "title": "Heaven is My Way",
+          "title": "Dilan ITB 1997",
           "days_on": 7,
-          "best_rank": 3
-        },
-        {
-          "title": "Shaka Oh Shaka",
-          "days_on": 7,
-          "best_rank": 4
-        },
-        {
-          "title": "Project Sacrifice",
-          "days_on": 7,
-          "best_rank": 5
+          "best_rank": 7
         }
       ]
     },
@@ -656,28 +646,13 @@
           "best_rank": 1
         },
         {
-          "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
-          "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 1
-        },
-        {
           "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
           "first_seen": "2026-09-18 05:01:38",
           "best_rank": 2
         },
         {
-          "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
-          "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 2
-        },
-        {
           "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
           "first_seen": "2026-09-18 05:01:38",
-          "best_rank": 3
-        },
-        {
-          "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
-          "first_seen": "2026-09-16 08:27:11",
           "best_rank": 3
         },
         {
@@ -691,46 +666,67 @@
           "best_rank": 4
         },
         {
-          "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
-          "first_seen": "2026-09-16 08:27:11",
-          "best_rank": 4
-        },
-        {
           "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
           "first_seen": "2026-09-18 05:01:38",
           "best_rank": 5
+        },
+        {
+          "title": "Moicare Brightening Underarm Pencerah Ketiak With Niacinamide & Collagen Mencerahkan",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 6
+        },
+        {
+          "title": "BEAUTY TALK AHA Collagen Body Booster - 100ML Whitening Lotion dengan AHA Collagen untuk",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 7
+        },
+        {
+          "title": "Kacamata Pelindung Anti Debu Anti Serbuk Sari Transparan Unisex Nyaman Dipakai 5062",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 7
+        },
+        {
+          "title": "Azalea Smooth Foot Cream - Melembabkan & Menghaluskan Kulit Kaki Pecah-Pecah dengan Zaitun",
+          "first_seen": "2026-09-18 05:01:38",
+          "best_rank": 9
         }
       ],
       "longest_running_7d": [
         {
           "title": "MLAN Bulu Mata Palsu C Curl Natural Bold Serat Kapas Hitam Pekat 14 Model Lengkap Lentik",
-          "days_on": 5,
+          "days_on": 6,
           "best_rank": 1
         },
         {
           "title": "JJ Glow Sabun Gluta Pink Barsoap Gluta Pink Soap With 10X Brightening Formula Glowing",
-          "days_on": 5,
+          "days_on": 6,
           "best_rank": 2
         },
         {
           "title": "Liora Perfect Glowing Powder Foundation 15g I 2in1 Foundation + Setting Powder Long Lasting",
-          "days_on": 5,
+          "days_on": 6,
           "best_rank": 3
         },
         {
           "title": "SCARLETT Eau De Parfum & Extrait De Parfum 30ml Wangi Tahan Lama - Wangi Mewah - Parfum",
-          "days_on": 5,
+          "days_on": 6,
           "best_rank": 4
         },
         {
           "title": "NEW SYB FORTE Red Jelly Serum 20ml with Niacinamide 10% untuk mencerahkan kulit wajah &",
-          "days_on": 5,
+          "days_on": 6,
           "best_rank": 5
         }
       ]
     }
   },
   "cross_platform_7d": [
+    {
+      "t": "persebaya",
+      "n_platform": 2,
+      "platforms": "google,twitter",
+      "best_rank": 1
+    },
     {
       "t": "inter miami",
       "n_platform": 2,
@@ -756,22 +752,16 @@
       "best_rank": 3
     },
     {
-      "t": "monaco",
-      "n_platform": 2,
-      "platforms": "twitter,google",
-      "best_rank": 4
-    },
-    {
       "t": "tentara nasional indonesia",
       "n_platform": 2,
       "platforms": "google,twitter",
       "best_rank": 7
     },
     {
-      "t": "hujan",
+      "t": "the scandal",
       "n_platform": 2,
-      "platforms": "google,twitter",
-      "best_rank": 9
+      "platforms": "google,netflix",
+      "best_rank": 8
     },
     {
       "t": "liverpool",
