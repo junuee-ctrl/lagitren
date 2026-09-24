@@ -281,12 +281,20 @@ export async function getTrendById(
       MOCK_TRENDS.find((t) => t.id === id && t.platform === platform) ?? null
     );
   }
+  // INSIDEN 5-9 September 2026: kuota baca D1 habis, setiap kueri gagal,
+  // fungsi ini mengembalikan null, dan halaman memanggil notFound(). Google
+  // menerima 404 pada ribuan URL tren dan membacanya sebagai "hapus URL ini"
+  // — tayangan di Search Console jatuh dari ~1.200/hari ke nol dan tidak
+  // pulih. Karena itu kegagalan DB TIDAK BOLEH menjadi 404: dilempar agar
+  // menjadi 5xx, yang dibaca mesin pencari sebagai "coba lagi nanti".
+  let rows: TrendRow[] | undefined;
   try {
-    const { results } = await db.prepare(BY_ID).bind(id).all<TrendRow>();
-    if (results && results.length > 0) return rowToTrend(results[0]);
-  } catch {
-    /* fallthrough ke mock */
+    ({ results: rows } = await db.prepare(BY_ID).bind(id).all<TrendRow>());
+  } catch (err) {
+    throw new Error(`D1 gagal membaca tren ${id}: ${String(err)}`);
   }
+  if (rows && rows.length > 0) return rowToTrend(rows[0]);
+  // Kueri berhasil tetapi barisnya memang tidak ada → 404 yang benar.
   return MOCK_TRENDS.find((t) => t.id === id) ?? null;
 }
 
@@ -473,16 +481,18 @@ export async function getArticles(limit = 50): Promise<Article[]> {
 export async function getArticle(slug: string): Promise<Article | null> {
   const db = await getDB();
   if (!db) return null;
+  // Sama seperti getTrendById: kegagalan D1 tidak boleh berubah menjadi 404.
+  let rows: ArticleRow[] | undefined;
   try {
-    const { results } = await db
+    ({ results: rows } = await db
       .prepare(
         "SELECT slug, title, category, lead, body, hero_image, published_at, updated_at " +
           "FROM articles WHERE slug = ? AND status = 'published' LIMIT 1"
       )
       .bind(slug)
-      .all<ArticleRow>();
-    return results && results.length > 0 ? rowToArticle(results[0]) : null;
-  } catch {
-    return null;
+      .all<ArticleRow>());
+  } catch (err) {
+    throw new Error(`D1 gagal membaca artikel ${slug}: ${String(err)}`);
   }
+  return rows && rows.length > 0 ? rowToArticle(rows[0]) : null;
 }
