@@ -1,5 +1,6 @@
 import type { Article, ArticleCategory, Platform, Trend, TrendExtra } from "./types";
 import { MOCK_TRENDS, mockTrendsByPlatform } from "./mock";
+import { ARTICLE_SQL_HINT, trendIsIndexable } from "./indexable";
 
 /**
  * Lapisan akses data.
@@ -206,9 +207,12 @@ const LATEST_ALL = `
 `;
 
 // Untuk sitemap: semua halaman (termasuk arsip) yang terbaru diperbarui.
+// Hanya tren yang punya naskah yang diajukan ke mesin pencari. Pra-saring di
+// SQL memakai petunjuk murah; keputusan akhir tetap di trendIsIndexable().
 const SITEMAP_TRENDS = `
-  SELECT id, platform, title, collected_at, updated_at
+  SELECT id, platform, title, collected_at, updated_at, extra
   FROM trends
+  WHERE extra LIKE ?
   ORDER BY updated_at DESC
   LIMIT ?
 `;
@@ -314,6 +318,7 @@ interface SitemapRow {
   title: string | null;
   collected_at: string;
   updated_at: string;
+  extra: string | null;
 }
 
 /** Semua halaman tren (termasuk arsip) untuk sitemap SEO. */
@@ -324,7 +329,7 @@ export async function getSitemapTrends(
 > {
   const db = await getDB();
   if (!db) {
-    return MOCK_TRENDS.map((t) => ({
+    return MOCK_TRENDS.filter((t) => trendIsIndexable(t.extra)).map((t) => ({
       id: t.id,
       platform: t.platform,
       title: t.title,
@@ -334,20 +339,22 @@ export async function getSitemapTrends(
   try {
     const { results } = await db
       .prepare(SITEMAP_TRENDS)
-      .bind(limit)
+      .bind(ARTICLE_SQL_HINT, limit)
       .all<SitemapRow>();
     if (results && results.length > 0) {
-      return results.map((r) => ({
-        id: r.id,
-        platform: r.platform as Platform,
-        title: r.title ?? "",
-        collectedAt: r.updated_at || r.collected_at
-      }));
+      return results
+        .filter((r) => trendIsIndexable(parseExtra(r.extra)))
+        .map((r) => ({
+          id: r.id,
+          platform: r.platform as Platform,
+          title: r.title ?? "",
+          collectedAt: r.updated_at || r.collected_at
+        }));
     }
   } catch {
     /* fallthrough */
   }
-  return MOCK_TRENDS.map((t) => ({
+  return MOCK_TRENDS.filter((t) => trendIsIndexable(t.extra)).map((t) => ({
     id: t.id,
     platform: t.platform,
     title: t.title,

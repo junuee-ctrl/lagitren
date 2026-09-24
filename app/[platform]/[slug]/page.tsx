@@ -9,6 +9,7 @@ import {
 } from "@/lib/db";
 import { getPlatform, platformHref } from "@/lib/platforms";
 import { matchProducts } from "@/lib/shopping";
+import { trendIsIndexable } from "@/lib/indexable";
 import RelatedProducts from "@/components/RelatedProducts";
 import { SOURCE_LABEL, canEmbed } from "@/lib/embed";
 import { formatDateID, formatWIB } from "@/lib/format";
@@ -59,7 +60,8 @@ export async function generateMetadata({
   ).slice(0, 160);
   // Halaman tipis (tanpa artikel & ringkasan) → jangan diindeks (anti
   // "scaled content abuse"). Tetap follow agar tautan internal dirayapi.
-  const thin = !trend.aiSummary && !trend.extra?.article;
+  // Aturan tunggal, dipakai juga oleh sitemap (lihat lib/indexable.ts).
+  const thin = !trendIsIndexable(trend.extra);
 
   return {
     title,
