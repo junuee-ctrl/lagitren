@@ -1,0 +1,96 @@
+{
+  "slug": "berapa-lama-topik-bertahan-di-tiap-papan",
+  "title": "Berapa Lama Sebuah Topik Bertahan di Puncak? Google Tiga Hari, Instagram Lebih dari Tujuh",
+  "category": "analisis",
+  "published_at": "2026-09-25 07:30:00",
+  "lead": "Kami menghitung berapa lama satu judul bertahan di daftar teratas tiap papan, memakai 13 potret arsip antara 2 dan 23 September. Hasilnya berbeda jauh: di Google umumnya dua sampai tiga hari dan tidak pernah lewat empat; di Instagram ada unggahan yang bertahan tujuh hari penuh — artinya mentok di batas jendela pengukuran kami, bukan berhenti di situ. Tapi tiga dari tujuh papan baru mulai kami ukur pada 16 September, dan dua papan lain angkanya tidak boleh dibaca apa adanya. Tulisan ini memuat keduanya.",
+  "dataCard": {
+    "Google": "2–3 hari (maks 4 dari 13 potret)",
+    "YouTube": "4–5 hari, paling stabil",
+    "Instagram": "≥7 hari (mentok jendela 7 hari)",
+    "X": "4 hari",
+    "Arsip": "13.702 baris · 19 Agu–23 Sep 2026"
+  },
+  "sections": [
+    {
+      "heading": "Pertanyaan yang sama, jawaban yang berbeda tiap papan",
+      "paragraphs": [
+        "Pertanyaan \"topik ini masih ramai tidak?\" terdengar seperti satu pertanyaan. Sebenarnya tujuh, karena tiap papan tren punya kecepatan sendiri. Sebuah lagu bisa bertahan berhari-hari di YouTube sementara kata kunci yang sama sudah hilang dari Google dalam sehari.",
+        "Untuk mengukurnya kami memakai satu angka sederhana: days_on — berapa hari berturut-turut sebuah judul muncul di daftar teratas papan yang sama, dihitung dalam jendela tujuh hari ke belakang. Angka ini kami ambil dari 13 potret harian arsip Lagi Tren antara 2 dan 23 September 2026. Potret itu tersimpan sebagai berkas berversi, jadi angkanya bisa ditelusuri ulang, bukan diingat-ingat.",
+        "Satu hal perlu disebut lebih dulu, karena memengaruhi cara membaca seluruh tabel di bawah: jendelanya tujuh hari. Judul yang tercatat \"7 hari\" berarti bertahan setidaknya tujuh hari. Kami tidak tahu berapa lamanya di atas itu."
+      ]
+    },
+    {
+      "heading": "Angka per papan, potret 23 September",
+      "paragraphs": [
+        "Pada potret 23 September, judul dengan masa bertahan terpanjang di tiap papan adalah: Instagram 7 hari, TikTok 6 hari, YouTube 4 hari, X 4 hari, Google 3 hari. Netflix dan papan produk juga menunjukkan angka tinggi (7 dan 6), tapi keduanya tidak sebanding — alasannya di bagian tersendiri di bawah.",
+        "Isinya sama menariknya dengan angkanya. Yang bertahan tujuh hari di Instagram adalah unggahan bertema kebangsaan — satu berjudul \"Negara Kesatuan Republik Indonesia.\", satu lagi rekaman kunjungan ke pesantren, keduanya di peringkat 1. Di TikTok, enam hari dipegang #mlbbs42 dan #s42revampedheroes, yaitu tagar musim baru Mobile Legends. Di X, empat hari dipegang \"Brighton\" dan \"Zcash\".",
+        "Kalau dibaca berdampingan, polanya masuk akal: papan yang isinya unggahan (Instagram) dan tagar kampanye berdurasi musim (TikTok) bergerak lebih lambat daripada papan yang isinya kata kunci pencarian (Google) atau percakapan (X)."
+      ]
+    },
+    {
+      "heading": "Tiga papan baru bisa dibandingkan secara adil sejak 23 September",
+      "paragraphs": [
+        "Ini bagian yang mudah membuat salah baca, jadi kami tulis terbuka. Pengukuran berkelanjutan untuk Instagram, TikTok, dan X di arsip kami baru dimulai 16 September malam WIB. Sebelum tanggal itu papannya tampil di situs, tapi arsipnya belum punya kedalaman untuk menghitung masa bertahan.",
+        "Akibatnya, angka days_on ketiga papan itu naik satu per satu mengikuti umur pengukuran, bukan mengikuti pasar. Untuk Instagram: 17 September 2 hari, lalu 3, 4, 5, 6, sampai 7 pada 22 September. Untuk TikTok: 2, 2, 2, 3, 4, 5, 6. Untuk X: 2, 3, 4, lalu berhenti di 4 dan tidak naik lagi.",
+        "Perhatikan perbedaannya. Instagram dan TikTok terus menanjak sampai mentok atau mendekati batas jendela; X berhenti di 4 dan bertahan di situ selama lima potret berturut-turut. Karena ketiganya mulai diukur pada hari yang sama, perbedaan itu bukan efek umur pengukuran — itu memang perilaku papannya.",
+        "Tanggal 23 September adalah hari pertama jendela tujuh hari terisi penuh untuk ketiganya. Jadi untuk ketiga papan ini, potret 23 September adalah perbandingan pertama yang adil, dan potret-potret sebelumnya sebaiknya tidak dikutip sebagai ukuran pasar."
+      ]
+    },
+    {
+      "heading": "Dua papan yang angkanya tidak boleh dibaca apa adanya",
+      "paragraphs": [
+        "Netflix mencatat 7 hari pada dua belas dari tiga belas potret — satu-satunya pengecualian 2 September, dan itu pun 6 hari. Itu bukan temuan tentang selera penonton. Netflix menerbitkan Top 10 per negara dalam rentang mingguan lewat Tudum; daftarnya memang tidak berubah di antara pembaruan mingguan. Memotretnya tiap hari akan selalu menghasilkan angka maksimum. Kami pernah salah membaca ini pada rekap 15 September dan sudah memuat koreksinya.",
+        "Papan produk juga menunjukkan angka tinggi, dan itu pun bukan temuan pasar: pengumpulan daftar produk afiliasi kami berhenti sejak 21 September pukul 12.00 WIB dan sampai tulisan ini terbit belum pulih — hari keempat. Daftar yang diam menghasilkan masa bertahan yang panjang secara otomatis. Kami sudah menyebut penghentian ini pada tulisan 24 September dan mengulanginya di sini.",
+        "Aturan yang kami pakai sendiri: masa bertahan hanya boleh dibandingkan antar papan yang frekuensi pembaruannya sebanding, dan hanya bila pengumpulannya sedang berjalan."
+      ]
+    },
+    {
+      "heading": "Yang bertahan paling lama di Google justru bukan berita",
+      "paragraphs": [
+        "Google adalah papan tercepat dalam arsip kami, dan ini yang paling konsisten: dari 13 potret antara 2 dan 23 September, masa bertahan terpanjangnya tidak pernah melewati 4 hari, dan paling sering 2 atau 3 hari. Padahal arsip Google kami paling dalam — 19 Agustus sampai 23 September, jadi keterbatasannya bukan soal umur pengukuran.",
+        "Yang menarik, tidak satu pun dari lima judul terlama di Google pada 23 September adalah peristiwa berita. Kelimanya bertahan tiga hari: \"jadwal salat\", \"hk\", \"sgp\", \"babysitter\", dan \"mom and son\". Yang pertama adalah jadwal ibadah harian, dua berikutnya kata kunci angka undian, dan dua terakhir pencarian dewasa yang memang muncul berulang. Semuanya kebiasaan pencarian, bukan berita yang sedang berkembang.",
+        "Artinya, kalaupun ada yang bertahan lama di papan Google, yang bertahan biasanya kebiasaan, bukan peristiwa. Peristiwa sungguhan di papan itu datang dan hilang dalam satu sampai dua hari. Pengamatan ini sejalan dengan temuan kami sebelumnya bahwa sebagian besar isi papan Google Indonesia adalah jadwal pertandingan."
+      ]
+    },
+    {
+      "heading": "Cara memakainya",
+      "paragraphs": [
+        "Kalau Anda mengejar momentum di Google, jendelanya sempit: satu sampai dua hari sejak sebuah peristiwa muncul. Menunggu sampai hari ketiga biasanya berarti menulis untuk kata kunci yang sudah turun.",
+        "Kalau Anda mengukur keberhasilan sebuah kampanye di Instagram, jangan memakai standar Google. Unggahan bisa bertahan di daftar teratas selama seminggu penuh, jadi menilainya setelah dua hari terlalu dini.",
+        "Dan bila Anda membandingkan dua papan sekaligus, pastikan keduanya diperbarui dengan frekuensi yang mirip dan keduanya sedang berjalan. Perbandingan Netflix dengan Google, atau papan produk yang sedang berhenti dengan papan mana pun, akan menghasilkan angka yang rapi tapi tidak berarti apa-apa."
+      ]
+    },
+    {
+      "heading": "Batasan tulisan ini",
+      "paragraphs": [
+        "Jendela pengukuran kami tujuh hari, jadi 7 berarti \"setidaknya 7\" — bukan angka akhir. Kami sedang mempertimbangkan jendela yang lebih panjang untuk papan yang lambat.",
+        "Potret terakhir yang dipakai tulisan ini bertanggal 23 September pukul 18.24 UTC. Data dua hari terakhir belum masuk hitungan, karena berkas potret berikutnya belum terbentuk saat tulisan ini disusun.",
+        "Angka days_on menghitung kemunculan di daftar teratas, bukan volume. Sebuah judul bisa bertahan lama dengan perhatian yang menurun, dan sebaliknya. Metode lengkap dan sumber tiap papan ada di halaman metodologi."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Netflix Tudum — Top 10 per negara, disusun dalam rentang mingguan",
+      "url": "https://www.netflix.com/tudum/top10"
+    },
+    {
+      "title": "Google Trends — Tren Terpopuler Indonesia (diperbarui berkala, menunjukkan minat relatif)",
+      "url": "https://trends.google.com/trending?geo=ID"
+    },
+    {
+      "title": "Lagi Tren — metodologi pengumpulan dan batasan tiap papan",
+      "url": "https://lagitren.id/metodologi"
+    }
+  ],
+  "related": [
+    "/artikel/papan-tren-google-adalah-papan-jadwal-bola",
+    "/artikel/posisi-teratas-papan-x-tagar-promo",
+    "/artikel/tujuh-hari-puncak-tidak-sama-tiap-platform",
+    "/artikel/rekap-tren-15-21-september-2026",
+    "/metodologi",
+    "/laporan",
+    "/instagram"
+  ]
+}
