@@ -12,6 +12,7 @@ Pemakaian:
 """
 from __future__ import annotations
 
+import hashlib
 import logging
 import sys
 
@@ -28,6 +29,17 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 log = logging.getLogger("main")
+
+
+def content_hash(trends) -> str:
+    """Isi kumpulan (id·peringkat·metrik·harga) → 8 hex. Dicatat di collection_runs
+    sebagai 'h=xxxxxxxx' agar watchdog bisa membedakan "run jalan" dari
+    "data benar-benar berubah"."""
+    key = "|".join(
+        f"{t.id}:{t.rank}:{t.metric}:{t.price}"
+        for t in sorted(trends, key=lambda x: (x.rank or 0, x.id))
+    )
+    return hashlib.sha1(key.encode("utf-8")).hexdigest()[:8]
 
 
 def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
@@ -141,7 +153,7 @@ def run_platform(platform: str, db: D1Client, do_summary: bool = True) -> int:
         except Exception:
             pass  # ping opsional — jangan ganggu pipeline
         dbg = getattr(module, "LAST_DEBUG", "") or ""
-        msg = f"sukses · {dbg}" if dbg else "sukses"
+        msg = f"h={content_hash(trends)} · " + (f"sukses · {dbg}" if dbg else "sukses")
         db.log_run(platform, "ok", count, msg[:400], started)
         return count
     except Exception as exc:

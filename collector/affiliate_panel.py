@@ -33,6 +33,7 @@ import logging
 import re
 import sys
 import time
+from datetime import datetime, timezone
 from pathlib import Path
 
 from playwright.sync_api import sync_playwright
@@ -56,8 +57,11 @@ MAX_PRODUCTS = 20
 
 # id = product_id 패널 값. 이것을 넣어야 상품 ID가 제목에 의존하지 않아
 # 제목이 조금 바뀌어도 D1 행과 AI 요약 캐시가 유지된다.
+# collected_at = 이 CSV를 패널에서 실제로 수집한 시각(UTC ISO). 클라우드는 이 값을
+# D1에 그대로 쓰고, 48시간을 넘으면 D1을 덮어쓰지 않는다 (같은 원본을 매번 다시
+# 읽어 '방금 수집'처럼 보이던 문제 방지 — 2026-09 상품판 정지 사건).
 FIELDS = ["id", "rank", "title", "image", "price", "sales", "category",
-          "shop", "commission", "commission_rate", "affiliate_url"]
+          "shop", "commission", "commission_rate", "affiliate_url", "collected_at"]
 
 # Kata kunci yang menandai sebuah respons JSON kemungkinan berisi daftar produk.
 HINTS = ("product", "item", "commission", "sold", "sale", "gmv", "title")
@@ -184,13 +188,44 @@ def scrape(limit: int = MAX_PRODUCTS) -> list[dict]:
                 pass
 
         page.on("response", on_response)
-        page.goto(PANEL_URL, wait_until="load", timeout=60_000)
-        deadline = time.time() + 45
-        while time.time() < deadline and _count(payloads) < limit:
-            page.mouse.wheel(0, 1800)
-            page.wait_for_timeout(1500)
+
+        def _load(attempt: int) -> None:
+            if attempt == 1:
+                page.goto(PANEL_URL, wait_until="load", timeout=60_000)
+            else:
+                page.reload(wait_until="load", timeout=60_000)
+            # 스케줄 실행 시 창이 최소화/잠금 상태면 크롬이 백그라운드 탭의
+            # 스크립트를 늦춰 목록 요청이 안 나갈 수 있음 -> 탭을 앞으로.
+            try:
+                page.bring_to_front()
+            except Exception:
+                pass
+            deadline = time.time() + 45
+            while time.time() < deadline and _count(payloads) < limit:
+                page.mouse.wheel(0, 1800)
+                page.wait_for_timeout(1500)
+
+        for attempt in (1, 2):
+            _load(attempt)
+            if payloads:
+                break
+            log.warning("시도 %d: 패널 응답 0건 (URL=%s) — 새로고침 후 재시도", attempt, page.url)
+
+        if not _parse(payloads, limit):
+            # 원인 파악용 흔적 (collector/logs 는 .gitignore 대상 — 커밋·외부 전송 금지)
+            try:
+                LOG_DIR.mkdir(exist_ok=True)
+                page.screenshot(path=str(LOG_DIR / "panel_fail.png"))
+                log.error("실패 시점 URL=%s 제목=%s 응답수=%d (화면: logs/panel_fail.png)",
+                          page.url, page.title(), len(payloads))
+            except Exception as e:
+                log.error("실패 화면 저장 못함: %s", e)
         try:
             page.remove_listener("response", on_response)
+        except Exception:
+            pass
+        try:
+            page.close()
         except Exception:
             pass
         _browser.close_context(ctx)
@@ -324,6 +359,7 @@ def _dedup_key(title: str, n: int = 34) -> str:
 
 def _parse(payloads: list[dict], limit: int) -> list[dict]:
     prev = _previous_categories()
+    collected_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     rows: list[dict] = []
     seen: set[str] = set()
     seen_key: dict[str, int] = {}
@@ -352,6 +388,7 @@ def _parse(payloads: list[dict], limit: int) -> list[dict]:
                 "commission": str(it.get("earn_amount") or ""),
                 "commission_rate": _rate(it.get("commission_rate")),
                 "affiliate_url": _affiliate_url(pid),
+                "collected_at": collected_at,
             })
             if len(rows) >= limit:
                 return rows

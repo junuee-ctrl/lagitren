@@ -19,6 +19,7 @@ import io
 import logging
 import os
 import re
+from datetime import datetime, timedelta, timezone
 
 import requests
 
@@ -29,6 +30,30 @@ from .base import make_id
 log = logging.getLogger("shopping")
 
 LAST_DEBUG = ""
+
+# products.csv 의 collected_at 이 이보다 오래되면 D1을 덮어쓰지 않는다.
+# (로컬 패널 수집이 멈춘 동안 같은 원본을 다시 읽어 '방금 수집'으로 기록하던
+#  문제 방지. 기록이 없으면 watchdog 이 _last_ok 로 정지를 감지한다.)
+MAX_AGE_HOURS = 48
+
+
+def _collected_at(rows: list[dict]) -> tuple[str | None, datetime | None]:
+    """CSV 의 collected_at (가장 최근 값). 컬럼이 없으면 (None, None)."""
+    best: datetime | None = None
+    raw: str | None = None
+    for row in rows:
+        v = _get(row, "collected_at")
+        if not v:
+            continue
+        try:
+            d = datetime.fromisoformat(v.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if d.tzinfo is None:
+            d = d.replace(tzinfo=timezone.utc)
+        if best is None or d > best:
+            best, raw = d, v
+    return raw, best
 
 
 def _num(text: str | None) -> int | None:
@@ -111,6 +136,22 @@ def collect() -> list[Trend]:
         return []
 
     rows = list(csv.DictReader(io.StringIO(text)))
+
+    ts_raw, ts = _collected_at(rows)
+    stamp = ""
+    if ts is not None:
+        age = datetime.now(timezone.utc) - ts
+        if age > timedelta(hours=MAX_AGE_HOURS):
+            LAST_DEBUG = (
+                f"basi: {source} dikumpulkan {ts.isoformat(timespec='minutes')} "
+                f"({age.total_seconds() / 3600:.0f} jam > {MAX_AGE_HOURS}) — D1 tidak ditimpa"
+            )
+            log.warning("Shopping: %s", LAST_DEBUG)
+            return []
+        stamp = ts.astimezone(timezone.utc).isoformat()
+    else:
+        log.warning("Shopping: kolom collected_at tidak ada (%s) — waktu sumber tak diketahui.", source)
+
     trends: list[Trend] = []
     for i, row in enumerate(rows, start=1):
         title = _get(row, "title", "nama", "product", "produk")
@@ -157,6 +198,9 @@ def collect() -> list[Trend]:
         if category:
             bits.append(f"kategori {category}")
         t.__dict__["_context"] = ", ".join(bits)
+        if stamp:
+            # Waktu ASLI pengumpulan, bukan waktu run cloud ini.
+            t.collected_at = stamp
         trends.append(t)
         if len(trends) >= 30:
             break
@@ -167,6 +211,6 @@ def collect() -> list[Trend]:
         return []
 
     trends.sort(key=lambda x: x.rank)
-    LAST_DEBUG = f"{len(trends)} produk ({source})"
+    LAST_DEBUG = f"{len(trends)} produk ({source}; sumber {ts_raw or 'tanpa collected_at'})"
     log.info("Shopping (TikTok Shop): %d produk (%s).", len(trends), source)
     return trends

@@ -106,6 +106,21 @@ export default async function TrendDetailPage({
 
   const related = await getRelatedTrends(platform, trend.id, 6);
   const isProduct = platform === "shopee";
+
+  // Structured data Product/Offer HANYA bila data produk masih segar.
+  // collected_at = waktu asli pengumpulan panel (bukan waktu run cloud).
+  // Saat pengumpulan macet, harga lama tidak boleh dinyatakan sebagai harga kini
+  // → seluruh blok Product dihilangkan (Product tanpa offers tidak valid di GSC).
+  // JANGAN tambahkan aggregateRating/review (kami tak mengumpulkan ulasan),
+  // shippingDetails/hasMerchantReturnPolicy (kami bukan penjual), atau gtin.
+  const collectedIso = toIso(trend.collectedAt);
+  const collectedMs = collectedIso ? Date.parse(collectedIso) : NaN;
+  const PRODUCT_FRESH_MS = 48 * 3600 * 1000;
+  const productPrice = (trend.price ?? "").replace(/[^0-9]/g, "");
+  const productFresh =
+    isProduct &&
+    Number.isFinite(collectedMs) &&
+    Date.now() - collectedMs < PRODUCT_FRESH_MS;
   const embeddable = canEmbed(trend);
 
   // Produk afiliasi TikTok Shop yang relevan (kecuali pada halaman produk).
@@ -350,7 +365,7 @@ export default async function TrendDetailPage({
           })
         }}
       />
-      {isProduct && trend.affiliateUrl && (
+      {productFresh && trend.affiliateUrl && productPrice && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -358,13 +373,18 @@ export default async function TrendDetailPage({
               "@context": "https://schema.org",
               "@type": "Product",
               name: trend.title,
+              description: (trend.aiSummary ?? trend.title).slice(0, 300),
               image: trend.thumbnail ? [trend.thumbnail] : undefined,
               offers: {
                 "@type": "Offer",
                 url: trend.affiliateUrl,
                 priceCurrency: "IDR",
-                price: (trend.price ?? "").replace(/[^0-9]/g, "") || undefined,
-                availability: "https://schema.org/InStock"
+                price: productPrice,
+                // Harga dari panel afiliasi saat collected_at; berlaku s/d
+                // batas kesegaran. Ketersediaan stok tidak kami ketahui.
+                priceValidUntil: new Date(collectedMs + PRODUCT_FRESH_MS)
+                  .toISOString()
+                  .slice(0, 10)
               }
             })
           }}

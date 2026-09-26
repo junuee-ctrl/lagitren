@@ -56,3 +56,6 @@ cleanup-all.bat
 laporan-v2.html
 laporan-v2.pdf
 laporan*.html
+
+# log lokal & dump panel (bisa berisi data akun) - jangan pernah di-commit
+collector/logs/
