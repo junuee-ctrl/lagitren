@@ -13,6 +13,14 @@ if %errorlevel%==0 (
 ) else (
   python -u run_local.py >> "logs\%TODAY%.log" 2>&1
 )
+REM Artikel baru (ditulis rutinitas Claude, belum di-commit) -> QC -> commit -> push.
+REM Hanya content/artikel/*.json yang belum dilacak; lihat publish_pending.py.
+where py >nul 2>nul
+if %errorlevel%==0 (
+  py -u publish_pending.py >> "logs\publish_%TODAY%.log" 2>&1
+) else (
+  python -u publish_pending.py >> "logs\publish_%TODAY%.log" 2>&1
+)
 REM Hapus log lebih tua dari 30 hari.
 forfiles /P logs /M *.log /D -30 /C "cmd /c del @path" >nul 2>nul
 exit /b 0
