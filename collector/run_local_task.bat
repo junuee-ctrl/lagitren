@@ -21,6 +21,13 @@ if %errorlevel%==0 (
 ) else (
   python -u publish_pending.py >> "logs\publish_%TODAY%.log" 2>&1
 )
+REM PanduHukum: antrean/artikel yang disiapkan Claude -> push (lihat push_panduhukum.py).
+where py >nul 2>nul
+if %errorlevel%==0 (
+  py -u push_panduhukum.py >> "logs\publish_%TODAY%.log" 2>&1
+) else (
+  python -u push_panduhukum.py >> "logs\publish_%TODAY%.log" 2>&1
+)
 REM Hapus log lebih tua dari 30 hari.
 forfiles /P logs /M *.log /D -30 /C "cmd /c del @path" >nul 2>nul
 exit /b 0

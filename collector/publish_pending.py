@@ -27,7 +27,8 @@ CATEGORIES = {"panduan", "analisis", "rekap", "kurasi", "bulanan"}
 MIN_CHARS, MIN_SECTIONS = 1200, 3
 # Berkas infrastruktur penerbit ini sendiri: bila berubah/baru, ikut di-commit
 # (daftar tetap, bukan pola) supaya perubahan skrip tidak membuat pull --rebase macet.
-INFRA = ["collector/publish_pending.py", "collector/run_local_task.bat"]
+INFRA = ["collector/publish_pending.py", "collector/run_local_task.bat",
+         "collector/push_panduhukum.py"]
 # Pola dirakit dari potongan supaya berkas ini sendiri tidak cocok dengan polanya.
 _SECRET_PARTS = ["git" + "hub_pat_", "gh" + "p_", "gh" + "o_", "sk" + "-ant-",
                  "AK" + "IA[0-9A-Z]{12}", "xo" + "x[bp]-", "-----" + "BEGIN"]
