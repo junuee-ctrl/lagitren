@@ -82,8 +82,12 @@ def main() -> int:
     for m in mdxs:
         dst = REPO / "content" / "pinjol" / m.name
         if dst.exists():
-            log(f"lewati {m.name}: sudah ada")
-            continue
+            # Boleh menimpa hanya DRAFT (published:false) — mis. draft Actions yang sudah
+            # diverifikasi & diterbitkan. Artikel yang sudah terbit tidak pernah ditimpa.
+            if not re.search(r'"published"\s*:\s*false', dst.read_text(encoding="utf-8", errors="replace")):
+                log(f"lewati {m.name}: sudah terbit")
+                continue
+            log(f"timpa draft {m.name}")
         dst.parent.mkdir(parents=True, exist_ok=True)
         dst.write_bytes(m.read_bytes())
         paths.append(f"content/pinjol/{m.name}"); pub.append(m.stem)
