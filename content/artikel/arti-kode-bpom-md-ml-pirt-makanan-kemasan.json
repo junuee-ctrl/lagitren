@@ -1,0 +1,66 @@
+{
+  "slug": "arti-kode-bpom-md-ml-pirt-makanan-kemasan",
+  "title": "BPOM RI MD, ML, atau P-IRT? Cara Membaca Kode Izin Edar di Makanan yang Dibeli Online",
+  "category": "panduan",
+  "published_at": "2026-10-02 07:30:00",
+  "lead": "Makanan kemasan makin sering dibeli lewat toko daring — di daftar produk kami pekan ini pun ada dimsum keju yang bertahan di 20 besar sejak 26 September. Masalahnya, saat membeli online Anda tidak bisa membalik kemasan di rak toko. Panduan ini menjelaskan arti tiga kode izin edar yang paling sering ditemui — BPOM RI MD, BPOM RI ML, dan P-IRT — serta cara memeriksanya sebelum checkout.",
+  "dataCard": {
+    "BPOM RI MD": "Pangan olahan produksi dalam negeri",
+    "BPOM RI ML": "Pangan olahan impor",
+    "P-IRT": "Pangan produksi industri rumah tangga",
+    "Cek MD/ML": "cekbpom.pom.go.id",
+    "Contoh di daftar kami": "Dimsum keju (kategori makanan), 26 Sep–1 Okt"
+  },
+  "sections": [
+    {
+      "heading": "Tiga kode, tiga jalur izin",
+      "paragraphs": [
+        "Kode BPOM RI MD menandakan pangan olahan yang diproduksi di dalam negeri dan terdaftar di Badan POM. Kode BPOM RI ML menandakan pangan olahan impor yang terdaftar di Badan POM. Keduanya diikuti deretan angka yang bisa Anda cocokkan di situs resmi cekbpom.pom.go.id.",
+        "P-IRT adalah izin untuk pangan olahan produksi industri rumah tangga — usaha skala kecil, sering kali UMKM. Izin ini tidak diterbitkan Badan POM pusat, melainkan oleh pemerintah kabupaten/kota setempat. Karena itu nomor P-IRT tidak bisa dicek di situs cekbpom seperti MD dan ML; bila ragu, tanyakan penjual dari daerah mana izinnya dan cocokkan dengan dinas terkait.",
+        "Tidak semua jenis pangan boleh memakai jalur P-IRT. Jenis pangan tertentu, misalnya yang memerlukan penanganan khusus, wajib terdaftar di Badan POM. Aturannya rinci dan bisa berubah, jadi bila Anda menemukan produk berisiko tinggi hanya mencantumkan P-IRT, itu alasan untuk bertanya lebih dulu."
+      ]
+    },
+    {
+      "heading": "Cara memeriksa sebelum membayar",
+      "paragraphs": [
+        "Pertama, cari nomor izin edar di foto kemasan pada halaman produk. Penjual yang serius biasanya memotret bagian belakang kemasan. Jika foto itu tidak ada, minta lewat chat sebelum membeli.",
+        "Kedua, ketik nomor MD atau ML di cekbpom.pom.go.id dan bandingkan hasilnya: nama produk, merek, dan nama perusahaan harus cocok dengan yang dijual. Nomor yang terdaftar untuk produk lain adalah tanda bahaya, sama seriusnya dengan nomor yang tidak ditemukan sama sekali.",
+        "Ketiga, periksa label lain yang wajib ada pada pangan kemasan: daftar komposisi, berat bersih, nama dan alamat produsen, serta tanggal kedaluwarsa. Untuk produk yang mengklaim halal, cari logo halal resmi."
+      ]
+    },
+    {
+      "heading": "Khusus makanan beku: perhatikan pengiriman",
+      "paragraphs": [
+        "Izin edar menjamin produk terdaftar, bukan bahwa produk itu tiba dalam kondisi baik. Untuk makanan beku seperti dimsum, nugget, atau sosis, rantai dingin selama pengiriman sama pentingnya. Periksa apakah penjual memakai kemasan berinsulasi atau es batu dan apakah menyarankan layanan pengiriman instan atau sameday.",
+        "Saat paket tiba, rasakan apakah produk masih beku atau setidaknya sangat dingin. Produk yang sudah lembek dan hangat sebaiknya tidak dibekukan ulang. Rekam video saat membuka paket supaya Anda punya bukti jika perlu mengajukan pengembalian."
+      ]
+    },
+    {
+      "heading": "Yang tidak dijamin oleh nomor izin",
+      "paragraphs": [
+        "Nomor izin edar adalah syarat minimum, bukan ulasan rasa atau jaminan mutu setiap kemasan. Tidak tercantumnya sebuah produk di daftar temuan BPOM juga tidak berarti produk itu sudah dinyatakan aman. Untuk pengguna dengan alergi, baca komposisi dengan teliti — nama bahan seperti susu, telur, kacang, atau udang harus tercantum.",
+        "Daftar produk kami berasal dari panel afiliasi TikTok Shop dan kami tidak menguji produk secara fisik. Harga dapat berubah sewaktu-waktu."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "BPOM — Cek Produk (cekbpom.pom.go.id)",
+      "url": "https://cekbpom.pom.go.id/"
+    },
+    {
+      "title": "GNFI — Label makanan olahan: arti BPOM RI MD, ML, dan P-IRT",
+      "url": "https://www.goodnewsfromindonesia.id/2024/02/13/label-makanan-olahan"
+    },
+    {
+      "title": "UKM Indonesia — Cara daftar izin edar BPOM makanan olahan dalam kemasan",
+      "url": "https://ukmindonesia.id/baca-deskripsi-posts/cara-daftar-izin-edar-bpom-makanan-olahan-dalam-kemasan-begini-syarat-ketentuan-dan-alurnya"
+    }
+  ],
+  "related": [
+    "/artikel/barang-online-rusak-tidak-sesuai-hak-konsumen",
+    "/artikel/makeup-laris-bedak-foundation-lipstik-cek-bpom",
+    "/artikel/angka-terjual-di-daftar-produk-bisa-turun",
+    "/produk"
+  ]
+}

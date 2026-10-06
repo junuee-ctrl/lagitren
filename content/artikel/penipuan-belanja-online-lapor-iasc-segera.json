@@ -1,0 +1,65 @@
+{
+  "slug": "penipuan-belanja-online-lapor-iasc-segera",
+  "title": "Tertipu Saat Belanja Online? Kecepatan Lapor Menentukan — Ini yang Perlu Dilakukan dalam Jam Pertama",
+  "category": "panduan",
+  "published_at": "2026-10-04 07:30:00",
+  "lead": "Indonesia Anti-Scam Centre (IASC) yang dijalankan OJK bersama industri keuangan menerima 668.441 laporan penipuan sejak 22 November 2024 hingga 31 Agustus 2026. Dana yang berhasil diblokir Rp771,2 miliar, dan Rp206 miliar sudah dikembalikan ke korban. Tetapi OJK berulang kali menyoroti satu masalah: kebanyakan korban baru melapor lebih dari 12 jam setelah kejadian, padahal dana penipuan biasanya sudah berpindah-pindah rekening dalam hitungan jam.",
+  "dataCard": {
+    "Laporan ke IASC": "668.441 (22 Nov 2024 – 31 Agu 2026)",
+    "Rekening diblokir": "659.419",
+    "Dana diblokir": "Rp771,2 miliar",
+    "Dikembalikan ke korban": "Rp206 miliar",
+    "Korban lapor >12 jam (Agu 2025)": "85%"
+  },
+  "sections": [
+    {
+      "heading": "Kenapa jam pertama paling penting",
+      "paragraphs": [
+        "Menurut OJK, pada Agustus 2025 sekitar 85% korban melapor ke IASC lebih dari 12 jam setelah kejadian. Pejabat OJK membandingkannya dengan negara lain yang rata-rata melapor dalam belasan menit. Semakin lama jeda, semakin sulit dana dilacak karena pelaku memindahkan uang berkali-kali ke rekening lain.",
+        "Pemblokiran hanya bisa menyelamatkan dana yang masih ada. Itu sebabnya urutan langkah di bawah dimulai dari bank, bukan dari media sosial."
+      ]
+    },
+    {
+      "heading": "Langkah darurat setelah sadar tertipu",
+      "paragraphs": [
+        "Pertama, hubungi bank atau penyedia dompet digital yang Anda pakai untuk mentransfer, lewat nomor resmi di aplikasi atau kartu Anda. Minta laporan penipuan dicatat dan tanyakan nomor laporannya. Laporan lewat lembaga keuangan termasuk jalur yang diteruskan ke IASC.",
+        "Kedua, laporkan langsung ke IASC melalui kanal resmi OJK (situs iasc.ojk.go.id). Siapkan bukti transfer, nomor rekening tujuan, nama akun toko atau penjual, tautan percakapan, dan kronologi singkat. Data yang lengkap mempercepat penelusuran.",
+        "Ketiga, simpan semua bukti dan jangan menghapus percakapan. Waspadai juga 'penipuan kedua': pihak yang mengaku petugas IASC, OJK, atau bank dan menjanjikan dana kembali asal Anda membayar biaya tertentu. OJK sudah memperingatkan modus yang mengatasnamakan IASC."
+      ]
+    },
+    {
+      "heading": "Tanda bahaya sebelum transfer",
+      "paragraphs": [
+        "Penjual meminta Anda bertransaksi di luar aplikasi — lewat WhatsApp, transfer ke rekening pribadi, atau tautan pembayaran yang dikirim lewat chat. Begitu keluar dari platform, perlindungan dana tertahan hilang.",
+        "Harga jauh di bawah pasar dengan alasan 'stok cuci gudang' atau 'promo terbatas hari ini', akun toko yang baru dibuat dengan ulasan sedikit, dan tekanan agar Anda segera membayar. Menjelang tanggal promo seperti 10.10, modus ini biasanya ikut meningkat karena pembeli sudah terbiasa dengan harga miring.",
+        "File berekstensi .apk yang dikirim sebagai 'resi' atau 'undangan'. Jangan dipasang; aplikasi semacam ini dapat membaca SMS, termasuk kode OTP."
+      ]
+    },
+    {
+      "heading": "Cek rekening dan akun sebelum membayar",
+      "paragraphs": [
+        "Bila terpaksa bertransaksi dengan penjual perorangan, ketik nomor rekening atau nomor ponselnya di mesin pencari dan di layanan pengecekan rekening yang dikelola pemerintah, seperti cekrekening.id. Hasil 'tidak ada laporan' bukan jaminan aman — rekening baru mungkin belum pernah dilaporkan.",
+        "Cara paling aman tetap sama: bayar di dalam aplikasi toko daring, dan jangan pernah memberikan kode OTP kepada siapa pun, termasuk yang mengaku dari platform atau bank."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Kontan — IASC terima 668.441 laporan kasus penipuan hingga Agustus 2026",
+      "url": "https://keuangan.kontan.co.id/news/iasc-terima-668441-laporan-kasus-penipuan-hingga-agustus-2026"
+    },
+    {
+      "title": "Kontan — OJK: 85% korban penipuan melapor ke IASC setelah 12 jam sejak kejadian (Agu 2025)",
+      "url": "https://keuangan.kontan.co.id/news/ojk-85-korban-penipuan-melapor-ke-iasc-setelah-12-jam-sejak-kejadian"
+    },
+    {
+      "title": "Infobank — Waspada modus penipuan mengatasnamakan Indonesia Anti-Scam Centre",
+      "url": "https://infobanknews.com/waspada-modus-penipuan-mengatasnamakan-indonesia-anti-scam-centre/"
+    }
+  ],
+  "related": [
+    "/artikel/barang-online-rusak-tidak-sesuai-hak-konsumen",
+    "/artikel/harga-coret-jelang-10-10-cara-cek-diskon-asli",
+    "/artikel/cara-cek-saldo-dan-klaim-jht-bpjs-ketenagakerjaan"
+  ]
+}

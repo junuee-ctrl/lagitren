@@ -1,0 +1,86 @@
+{
+  "slug": "cara-cek-peringatan-dini-cuaca-banjir-bmkg",
+  "title": "Cara Cek Peringatan Dini Cuaca dan Risiko Banjir Lewat Kanal Resmi",
+  "category": "panduan",
+  "published_at": "2026-10-07 07:30:00",
+  "lead": "Pada potret papan Google kami 6 Oktober pukul 22.31 WIB, kata kunci \"banjir\" berada di peringkat 2 dengan label 200+. Satu potret Google Trends hanya menunjukkan minat relatif pada saat itu, bukan jumlah orang, dan kami tidak tahu banjir di daerah mana yang memicunya. Namun pertanyaan di baliknya hampir selalu sama: bagaimana tahu lebih awal kalau hujan lebat akan datang, dan apakah lingkungan saya rawan tergenang. Panduan ini merangkum kanal resmi yang bisa dicek, ditambah prakiraan musim hujan terbaru dari BMKG.",
+  "dataCard": {
+    "Papan Google": "#2 · \"banjir\" · 200+",
+    "Potret": "6 Okt 2026, 22.31 WIB",
+    "Awal musim hujan (BMKG)": "November 2026: 185 ZOM (24,66% wilayah)",
+    "Lebih lambat dari normal": "529 ZOM (61,08% wilayah)",
+    "Kanal resmi": "bmkg.go.id · aplikasi InfoBMKG · inaRISK (BNPB)"
+  },
+  "sections": [
+    {
+      "heading": "Apa yang kami lihat di papan tren — dan batasnya",
+      "paragraphs": [
+        "Kata kunci \"banjir\" muncul di urutan kedua daftar tren Google Indonesia yang kami potret pada 6 Oktober pukul 22.31 WIB. Label 200+ adalah perkiraan volume dari Google Trends untuk potret itu, dan Google memperbarui daftarnya berkali-kali dalam sehari. Karena itu kami tidak menyebut kata kunci ini \"bertahan berhari-hari\" atau \"sedang meledak\": tulisan ini hanya bersandar pada satu potret.",
+        "Kami juga tidak menebak banjir mana yang sedang dicari. Yang bisa kami lakukan adalah menjawab pertanyaan praktis yang biasanya menyertai kata kunci ini — di mana mengecek peringatan cuaca, dan bagaimana mengetahui risiko banjir di sekitar rumah — dengan merujuk ke lembaga resmi."
+      ]
+    },
+    {
+      "heading": "Kapan musim hujan 2026/2027 datang, menurut BMKG",
+      "paragraphs": [
+        "Dalam prediksi yang disampaikan Kepala BMKG Teuku Faisal Fathani pada 22 September 2026, sebagaimana dikutip CNBC Indonesia, awal musim hujan diperkirakan jatuh pada November 2026 di 185 Zona Musim (ZOM), atau 24,66% wilayah daratan Indonesia, dan pada Desember 2026 di 266 ZOM (17,31% wilayah). Sebanyak 529 ZOM (61,08% wilayah) diperkirakan mengalami awal musim hujan lebih lambat dibanding rata-rata 1991–2020.",
+        "Puncak musim hujan diperkirakan tersebar: Desember 2026 untuk 155 ZOM (36,94% wilayah), Januari 2027 untuk 162 ZOM (25,68%), dan Februari 2027 untuk 190 ZOM (16,79%). Untuk curah hujan sepanjang musim, 510 ZOM (69,76% wilayah) diperkirakan berada pada kategori normal. Ini prediksi tingkat musim, bukan prakiraan harian; hujan lebat tetap bisa terjadi sebelum musim hujan resmi dimulai di daerah Anda, jadi tetap pantau peringatan harian.",
+        "Sebagai pegangan istilah, BMKG membagi intensitas hujan dalam 24 jam: hujan lebat 50–100 mm, sangat lebat 100–150 mm, dan ekstrem di atas 150 mm. Peringatan dini yang dirilis BMKG dan dikutip media biasanya memakai status waspada, siaga, dan awas untuk tiap wilayah."
+      ]
+    },
+    {
+      "heading": "Cara cek peringatan dini cuaca",
+      "paragraphs": [
+        "Kanal pertama adalah situs resmi bmkg.go.id dan aplikasi InfoBMKG, yang tersedia di toko aplikasi resmi. Di aplikasi, pilih lokasi Anda untuk melihat prakiraan cuaca per wilayah dan peringatan dini yang sedang berlaku. Periksa nama penerbit sebelum mengunduh, karena aplikasi tiruan yang memakai nama lembaga pemerintah bukan hal baru.",
+        "BMKG sendiri berulang kali meminta masyarakat hanya memercayai informasi dari situs, aplikasi InfoBMKG, dan akun media sosial resminya. Pesan berantai yang mengaku dari BMKG — misalnya prediksi badai dengan tanggal dan jam yang sangat spesifik tanpa tautan sumber — sebaiknya dicocokkan dulu di aplikasi sebelum diteruskan. Jika tidak ada di kanal resmi, jangan disebarkan.",
+        "Kebiasaan sederhana yang membantu: cek prakiraan sebelum berangkat, terutama untuk perjalanan jauh atau melewati daerah rendah, dan aktifkan notifikasi peringatan di aplikasi untuk lokasi yang sering Anda kunjungi."
+      ]
+    },
+    {
+      "heading": "Cara cek risiko banjir di sekitar rumah",
+      "paragraphs": [
+        "Untuk risiko jangka panjang, BNPB menyediakan inaRISK, berupa situs dan aplikasi yang menampilkan tingkat risiko berbagai bencana, termasuk banjir, untuk lokasi tertentu beserta saran mitigasinya. Ini berguna sebelum menyewa atau membeli rumah: masukkan lokasi dan lihat apakah area tersebut masuk kategori risiko banjir sedang atau tinggi. Perlu diingat, peta risiko menggambarkan potensi, bukan jaminan suatu titik akan atau tidak akan tergenang.",
+        "Saat hujan sedang turun, laporan lapangan lebih berguna. PetaBencana.id menampilkan laporan warga tentang genangan secara hampir waktu nyata, dan warga bisa melapor lewat Telegram, X, atau Facebook Messenger. Di Jakarta, aplikasi JAKI (fitur JakPantau) dan situs Pantau Banjir milik Dinas Sumber Daya Air menampilkan titik genangan serta tinggi muka air di pintu air. Peta navigasi seperti Google Maps dan Waze juga kerap menandai jalan yang ditutup karena banjir."
+      ]
+    },
+    {
+      "heading": "Saat peringatan sudah keluar",
+      "paragraphs": [
+        "Jika wilayah Anda masuk status siaga atau awas, siapkan dokumen penting dalam kantong kedap air, isi daya ponsel dan power bank, dan pindahkan barang berharga serta stopkontak yang rawan ke tempat lebih tinggi. Kenali rute ke tempat yang lebih tinggi dan ikuti arahan BPBD setempat. Bila keadaan darurat, hubungi layanan darurat 112 yang tersedia di banyak daerah.",
+        "Hindari berjalan atau berkendara menerobos arus air yang tidak Anda ketahui kedalamannya, dan matikan listrik dari panel jika air mulai masuk rumah. Informasi soal evakuasi, posko, dan bantuan sebaiknya diambil dari BPBD, BNPB, atau pemerintah daerah — bukan dari pesan berantai yang meminta transfer uang atas nama korban banjir."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "CNBC Indonesia — BMKG Ungkap Awal dan Puncak Musim Hujan di RI",
+      "url": "https://cnbcindonesia.com/tech/20260925201019-37-771072/bmkg-ungkap-awal-dan-puncak-musim-hujan-di-ri"
+    },
+    {
+      "title": "Metro TV — BMKG Minta Masyarakat Waspada Hoaks Cuaca di Tengah Musim Hujan",
+      "url": "https://www.metrotvnews.com/read/b7WCmlJr-bmkg-minta-masyarakat-waspada-hoaks-cuaca-di-tengah-musim-hujan"
+    },
+    {
+      "title": "IDX Channel — BMKG Jelaskan Perbedaan Hujan Lebat dan Ekstrem",
+      "url": "https://www.idxchannel.com/news/bmkg-jelaskan-perbedaan-hujan-lebat-dan-ekstrem-yang-akan-melanda-ri"
+    },
+    {
+      "title": "Katadata — 6 Aplikasi untuk Cek Lokasi Terdampak Banjir",
+      "url": "https://katadata.co.id/digital/teknologi/69ad93336b6af/banjir-jakarta-tangerang-jawa-timur-ini-6-aplikasi-untuk-cek-lokasi-terdampak"
+    },
+    {
+      "title": "BMKG — situs resmi",
+      "url": "https://www.bmkg.go.id/"
+    },
+    {
+      "title": "Lagi Tren — papan Google, potret 6 Oktober 2026",
+      "url": "https://lagitren.id/google"
+    }
+  ],
+  "related": [
+    "/artikel/kualitas-udara-pekanbaru-tiga-hari-dicari",
+    "/artikel/karhutla-kalimantan-tiga-platform",
+    "/artikel/cara-membaca-google-trends",
+    "/google",
+    "/metodologi"
+  ]
+}

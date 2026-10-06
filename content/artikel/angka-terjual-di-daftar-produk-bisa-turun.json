@@ -1,0 +1,71 @@
+{
+  "slug": "angka-terjual-di-daftar-produk-bisa-turun",
+  "title": "Angka 'Terjual' yang Bisa Turun: Apa yang Kami Pelajari dari Enam Potret Harian",
+  "category": "analisis",
+  "published_at": "2026-10-01 07:30:00",
+  "lead": "Di samping setiap produk di daftar kami ada angka penjualan dari panel afiliasi TikTok Shop, misalnya 430,1 ribu. Mudah mengira itu total produk yang pernah terjual. Enam potret harian 26 September–1 Oktober menunjukkan itu keliru: dari 17 produk yang ada di potret 27 September dan 1 Oktober, delapan angkanya justru turun. Total penjualan tidak mungkin berkurang. Ini yang bisa — dan tidak bisa — disimpulkan dari angka tersebut.",
+  "dataCard": {
+    "Periode potret": "26 Sep – 1 Okt 2026 (6 potret, ±12.00 WIB)",
+    "Produk di potret 27 Sep & 1 Okt": "17",
+    "Angkanya turun": "8 dari 17",
+    "Turun terbesar (MLAN)": "452,2 rb → 430,1 rb",
+    "Naik terbesar (UNIQSOO)": "320,0 rb → 436,2 rb"
+  },
+  "sections": [
+    {
+      "heading": "Angka yang tidak pernah boleh turun, ternyata turun",
+      "paragraphs": [
+        "Bulu mata palsu MLAN memimpin daftar kami hampir sepanjang pekan. Angka penjualannya: 451,2 ribu (26 September), 452,2 ribu (27), 451,9 ribu (28), 446,5 ribu (29), 437,4 ribu (30), dan 430,1 ribu (1 Oktober). Empat potret berturut-turut menurun. Kalau angka itu jumlah total sejak produk dijual, ia hanya bisa diam atau naik.",
+        "MLAN bukan satu-satunya. Membandingkan potret 27 September dan 1 Oktober, angka pencerah ketiak Moicare turun dari 215,2 ribu ke 207,3 ribu, serum SYB dari 196,3 ribu ke 187,1 ribu, losion Beauty Talk dari 182,8 ribu ke 170,6 ribu, krim kaki Azalea dari 157,2 ribu ke 144,7 ribu, dan dimsum Gudang Snack dari 157,3 ribu ke 144,6 ribu. Total ada delapan dari 17 produk yang angkanya menyusut."
+      ]
+    },
+    {
+      "heading": "Kemungkinan besar: angka dengan jendela waktu bergerak",
+      "paragraphs": [
+        "Penjelasan paling masuk akal adalah angka itu dihitung dalam jendela waktu tertentu — misalnya penjualan beberapa hari atau pekan terakhir — yang terus bergeser. Saat penjualan hari-hari lama keluar dari jendela dan penjualan baru lebih sedikit, angkanya turun. Panel tidak menjelaskan panjang jendelanya kepada kami, jadi kami tidak akan menebak angkanya.",
+        "Konsekuensinya bagi pembaca: angka 'terjual' di daftar kami berguna untuk membandingkan produk pada hari yang sama, tetapi bukan ukuran berapa orang yang pernah membeli. Kami sendiri sudah berhenti menyebutnya sebagai total penjualan dalam tulisan kami."
+      ]
+    },
+    {
+      "heading": "Yang naik: tas sepatu Rp690 menyalip ke posisi pertama",
+      "paragraphs": [
+        "Arah sebaliknya terlihat pada tas serut sepatu UNIQSOO, yang tercatat seharga Rp690. Angkanya naik di setiap potret: 288,3 ribu, 320,0 ribu, 334,2 ribu, 361,0 ribu, 392,4 ribu, lalu 436,2 ribu. Pada 1 Oktober ia untuk pertama kalinya dalam periode ini menempati posisi pertama, menggeser MLAN ke posisi kedua.",
+        "Produk lain yang konsisten naik antara 27 September dan 1 Oktober antara lain gantungan dinding TSA seharga Rp500 (170,9 ribu ke 185,9 ribu) dan losion HB Dosting dari Daviena (158,5 ribu ke 195,7 ribu, dari posisi 15 ke 7). Harga yang sangat rendah seperti Rp500 atau Rp690 umumnya harga satuan terkecil atau varian termurah; harga varian lain bisa jauh berbeda, jadi periksa varian sebelum membayar."
+      ]
+    },
+    {
+      "heading": "Yang tidak bisa kami simpulkan",
+      "paragraphs": [
+        "Kami tidak tahu berapa unit yang benar-benar terjual per hari, karena panjang jendela waktunya tidak diketahui. Kami juga tidak tahu apakah angka itu mencakup semua kanal penjualan atau hanya penjualan lewat afiliasi. Dan turunnya angka tidak berarti produk itu buruk; bisa saja promosi sebelumnya sudah berakhir.",
+        "Data kami juga punya batas: potret diambil sekali sehari sekitar pukul 12.00 WIB, dan daftar hanya memuat produk yang ikut program afiliasi. Ini potret, bukan sensus pasar."
+      ]
+    },
+    {
+      "heading": "Cara memeriksa sendiri",
+      "paragraphs": [
+        "Buka halaman /produk kami pada dua hari berbeda dan catat angka satu produk. Bila turun, Anda sedang melihat angka berjendela, bukan total. Di halaman toko, bandingkan juga jumlah ulasan dan tanggal ulasan terbaru — ulasan memberi gambaran yang lebih bisa diverifikasi tentang apakah orang benar-benar menerima barangnya.",
+        "Harga dapat berubah sewaktu-waktu. Untuk kosmetik dan makanan, cek nomor izin edarnya di cekbpom.pom.go.id; tidak tercantum di daftar temuan BPOM tidak sama dengan jaminan aman."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lagi Tren — Daftar produk (/produk)",
+      "url": "https://lagitren.id/produk"
+    },
+    {
+      "title": "Lagi Tren — Metodologi",
+      "url": "https://lagitren.id/metodologi"
+    },
+    {
+      "title": "BPOM — Cek Produk (cekbpom.pom.go.id)",
+      "url": "https://cekbpom.pom.go.id/"
+    }
+  ],
+  "related": [
+    "/artikel/daftar-produk-kembali-diperbarui-enam-hari",
+    "/artikel/harga-tiktok-shop-berubah-berapa-sering",
+    "/artikel/dari-mana-lagi-tren-mendapat-uang",
+    "/produk"
+  ]
+}

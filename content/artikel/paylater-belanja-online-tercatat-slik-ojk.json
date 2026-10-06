@@ -1,0 +1,64 @@
+{
+  "slug": "paylater-belanja-online-tercatat-slik-ojk",
+  "title": "Paylater untuk Belanja Online: Tercatat di SLIK, dan Telat Sedikit Pun Bisa Berbekas",
+  "category": "panduan",
+  "published_at": "2026-10-05 07:30:00",
+  "lead": "Tombol paylater di halaman pembayaran membuat belanja terasa ringan, apalagi menjelang tanggal promo. Datanya ikut tumbuh: menurut OJK, utang buy now pay later (BNPL) di perusahaan pembiayaan mencapai Rp12,18 triliun pada Januari 2026, naik 71,13% dibanding setahun sebelumnya. Yang sering terlupa, cicilan paylater bukan sekadar fitur aplikasi — riwayat pembayarannya tercatat di SLIK OJK dan dapat dilihat lembaga keuangan saat Anda mengajukan kredit lain.",
+  "dataCard": {
+    "Piutang BNPL perusahaan pembiayaan": "Rp12,18 triliun (Jan 2026)",
+    "Pertumbuhan tahunan": "+71,13%",
+    "NPF gross": "2,77%",
+    "Riwayat bayar tercatat di": "SLIK OJK",
+    "Rencana batas usia & penghasilan": "18 tahun & Rp3 juta/bulan (dirancang OJK)"
+  },
+  "sections": [
+    {
+      "heading": "Kenapa paylater berbeda dari 'bayar nanti' biasa",
+      "paragraphs": [
+        "Paylater adalah pembiayaan: penyedia (bank, perusahaan pembiayaan, atau penyelenggara lain yang berizin) membayar toko lebih dulu, lalu Anda mencicil kepada penyedia itu. Karena itu, riwayatnya masuk Sistem Layanan Informasi Keuangan (SLIK) OJK, sama seperti kartu kredit atau kredit kendaraan.",
+        "Lembaga keuangan memakai SLIK untuk menilai calon debitur. Media keuangan berulang kali melaporkan keluhan anak muda yang pengajuan KPR-nya terhambat karena tunggakan paylater bernilai kecil. Nominal yang kecil tidak menghapus catatan keterlambatan."
+      ]
+    },
+    {
+      "heading": "Aturan yang sedang disiapkan OJK",
+      "paragraphs": [
+        "Pada Januari 2025 OJK menyampaikan sedang merancang aturan yang membatasi pengguna paylater di perusahaan pembiayaan: usia minimal 18 tahun dan penghasilan minimal Rp3 juta per bulan, dengan rencana mulai berlaku pada 2027. Alasannya, OJK tidak ingin generasi muda terjerat utang di luar kemampuannya.",
+        "Karena aturan itu masih disiapkan saat diumumkan, periksa status terbarunya di kanal resmi OJK sebelum menjadikannya patokan. Yang sudah berlaku sekarang: penyedia harus berizin dan diawasi OJK, dan riwayat pembayaran Anda tercatat."
+      ]
+    },
+    {
+      "heading": "Sebelum menekan tombol paylater",
+      "paragraphs": [
+        "Baca total yang akan Anda bayar, bukan hanya cicilan per bulan. Biaya layanan, bunga, dan denda keterlambatan berbeda antar penyedia, dan semuanya wajib dicantumkan. Bandingkan dengan harga tunai — cicilan 'ringan' untuk barang diskon bisa menghapus keuntungan diskonnya.",
+        "Pastikan penyedianya berizin OJK. Gunakan paylater untuk kebutuhan, bukan untuk menutup cicilan lain; OJK sendiri menyarankan agar paylater tidak dipakai untuk membayar utang. Hitung semua cicilan berjalan Anda: jika totalnya mulai menekan gaji bulanan, tunda pembelian.",
+        "Atur pengingat tanggal jatuh tempo, atau gunakan pembayaran otomatis bila tersedia. Keterlambatan sering terjadi bukan karena tidak mampu, tetapi karena lupa."
+      ]
+    },
+    {
+      "heading": "Kalau sudah terlanjur menunggak",
+      "paragraphs": [
+        "Hubungi penyedia lewat kanal resmi di aplikasi sesegera mungkin dan tanyakan opsi restrukturisasi atau keringanan. Melunasi tunggakan menghentikan bertambahnya catatan keterlambatan, meskipun riwayat yang sudah tercatat tidak langsung hilang.",
+        "Anda dapat memeriksa laporan SLIK Anda sendiri melalui layanan resmi OJK. Bila ada data yang menurut Anda keliru, ajukan koreksi kepada lembaga yang melaporkannya. Waspadai pihak yang menawarkan jasa 'membersihkan' SLIK dengan bayaran — catatan SLIK tidak bisa dihapus lewat calo."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bisnis.com — Sering pakai paylater bisa pengaruhi SLIK OJK/BI checking (9 Apr 2026)",
+      "url": "https://finansial.bisnis.com/read/20260409/563/1965429/sering-pakai-paylater-bisa-pengaruhi-slik-ojkbi-checking-ini-tips-agar-tak-kebobolan"
+    },
+    {
+      "title": "Kontan — Ini alasan OJK batasi usia dan penghasilan minimum pengguna paylater (Jan 2025)",
+      "url": "https://keuangan.kontan.co.id/news/ini-alasan-ojk-batasi-usia-dan-penghasilan-minimum-pengguna-paylater"
+    },
+    {
+      "title": "Kompas TV — Banyak anak muda gagal ajukan KPR karena paylater",
+      "url": "https://www.kompas.tv/ekonomi/436641/banyak-anak-muda-gagal-ajukan-kpr-karena-paylater-simak-tips-ini-dari-ojk"
+    }
+  ],
+  "related": [
+    "/artikel/harga-coret-jelang-10-10-cara-cek-diskon-asli",
+    "/artikel/penipuan-belanja-online-lapor-iasc-segera",
+    "/artikel/cara-cek-saldo-dan-klaim-jht-bpjs-ketenagakerjaan"
+  ]
+}

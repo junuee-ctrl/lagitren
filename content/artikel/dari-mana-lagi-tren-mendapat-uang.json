@@ -1,0 +1,74 @@
+{
+  "slug": "dari-mana-lagi-tren-mendapat-uang",
+  "title": "Dari Mana Lagi Tren Mendapat Uang — dan Apa Artinya bagi Daftar Produk Kami",
+  "category": "panduan",
+  "published_at": "2026-09-29 07:30:00",
+  "lead": "Situs yang merekomendasikan produk sebaiknya terbuka soal siapa yang membayarnya. Lagi Tren gratis dibaca, tetapi tidak gratis dijalankan. Uang kami datang dari dua sumber: iklan dan komisi afiliasi. Tulisan ini menjelaskan keduanya, termasuk satu batasan penting yang jarang diakui situs sejenis: daftar produk kami hanya bisa berisi produk yang ikut program afiliasi. Pada potret 29 September, komisi untuk 19 produk di daftar kami berkisar dari 2% sampai 14% dari harga.",
+  "dataCard": {
+    "Sumber pendapatan": "Iklan + komisi afiliasi",
+    "Produk di daftar (29 Sep)": "19",
+    "Rentang komisi": "2% – 14%",
+    "Median komisi": "9%",
+    "Biaya tambahan bagi pembeli": "Tidak ada"
+  },
+  "sections": [
+    {
+      "heading": "Dua sumber: iklan dan komisi",
+      "paragraphs": [
+        "Sumber pertama adalah iklan yang tampil di halaman kami. Pengiklan membayar penyedia jaringan iklan, dan sebagian dibagikan ke situs yang menayangkannya. Kami tidak memilih iklan satu per satu, sehingga iklan yang Anda lihat bukan rekomendasi kami.",
+        "Sumber kedua adalah komisi afiliasi. Setiap produk di halaman /produk memiliki tombol menuju halaman produk di toko daring. Jika Anda membeli lewat tautan itu, toko dapat membayar komisi kepada kami. Harga yang Anda bayar sama dengan jika Anda membuka produk itu langsung — komisi diambil dari sisi penjual, bukan ditambahkan ke tagihan Anda."
+      ]
+    },
+    {
+      "heading": "Dari mana daftar produk kami berasal",
+      "paragraphs": [
+        "Daftar di /produk tidak kami susun dengan selera redaksi. Setiap hari sekitar pukul 12.00 WIB, sistem kami mencatat daftar peringkat produk yang disediakan TikTok Shop di panel afiliasinya, lalu menampilkannya dengan urutan yang sama. Kriteria persis peringkat itu ditentukan TikTok Shop dan tidak dipublikasikan kepada kami; kami tidak menaikkan atau menurunkan produk.",
+        "Ada konsekuensi yang perlu Anda ketahui: karena sumbernya panel afiliasi, hanya produk yang penjualnya ikut program afiliasi yang bisa muncul. Produk laris yang penjualnya tidak menawarkan komisi tidak akan pernah ada di daftar kami. Jadi daftar kami adalah potret produk afiliasi yang sedang laris, bukan daftar seluruh produk terlaris di Indonesia, dan bukan pula daftar produk terbaik.",
+        "Tautan produk saat ini mengarah ke halaman toko TikTok Shop (domain shop-id.tokopedia.com). Halaman pengungkapan afiliasi kami juga menyebut program lain seperti Shopee Affiliate; bila suatu saat sumber daftar berubah, kami akan menuliskannya."
+      ]
+    },
+    {
+      "heading": "Berapa besar komisinya",
+      "paragraphs": [
+        "Panel mencantumkan persentase komisi untuk tiap produk. Pada potret 29 September, dari 19 produk, komisi terendah 2% (dekorasi daun palsu dari MIUCO) dan tertinggi 14% (pencerah ketiak Moicare). Nilai tengahnya 9%, dan tujuh produk menawarkan tepat 10%. Sebagai gambaran, produk seharga Rp20.000 dengan komisi 10% menghasilkan sekitar Rp2.000 bila terjual lewat tautan kami.",
+        "Kami memperlihatkan angka ini karena komisi adalah potensi konflik kepentingan. Produk dengan komisi tinggi tidak kami tempatkan lebih atas; urutan tetap mengikuti panel. Dari 19 produk itu, 14 berkategori kecantikan, tiga fesyen, satu rumah tangga, dan satu makanan — komposisi yang mencerminkan isi panel, bukan pilihan kami."
+      ]
+    },
+    {
+      "heading": "Yang tidak dibeli oleh komisi",
+      "paragraphs": [
+        "Komisi tidak mengubah apa yang kami tulis tentang produk. Dalam artikel kurasi, kami hanya memakai angka dari data yang kami catat, menyebut bahwa harga dapat berubah sewaktu-waktu, dan mengingatkan pembaca memeriksa izin edar BPOM sebelum membeli kosmetik. Kami juga pernah menulis koreksi ketika data kami membalik kesimpulan sebelumnya, dan akan terus melakukannya.",
+        "Kami tidak menerima bayaran untuk menulis artikel tentang produk tertentu. Jika suatu hari ada kerja sama berbayar, artikel itu akan diberi label yang jelas."
+      ]
+    },
+    {
+      "heading": "Cara memakai daftar kami dengan bijak",
+      "paragraphs": [
+        "Anggap daftar produk kami sebagai titik awal, bukan keputusan akhir. Bandingkan harga di beberapa toko, baca ulasan pembeli di platform, dan untuk kosmetik atau makanan, cocokkan nomor izin edarnya di cekbpom.pom.go.id. Angka 'terjual' di panel adalah angka dari platform dengan periode yang tidak dijelaskan, jadi jangan membacanya sebagai total penjualan sepanjang masa.",
+        "Pertanyaan soal afiliasi atau kerja sama dapat dikirim ke halo@lagitren.id."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lagi Tren — Pengungkapan Afiliasi",
+      "url": "https://lagitren.id/affiliate"
+    },
+    {
+      "title": "Lagi Tren — Metodologi",
+      "url": "https://lagitren.id/metodologi"
+    },
+    {
+      "title": "BPOM — Cek Produk (cekbpom.pom.go.id)",
+      "url": "https://cekbpom.pom.go.id/"
+    }
+  ],
+  "related": [
+    "/artikel/daftar-produk-kembali-diperbarui-enam-hari",
+    "/artikel/harga-tiktok-shop-berubah-berapa-sering",
+    "/artikel/bagaimana-lagitren-mengumpulkan-data",
+    "/produk",
+    "/affiliate",
+    "/metodologi"
+  ]
+}
