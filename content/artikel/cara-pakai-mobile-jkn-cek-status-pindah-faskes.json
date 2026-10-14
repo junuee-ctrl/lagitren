@@ -1,0 +1,79 @@
+{
+  "slug": "cara-pakai-mobile-jkn-cek-status-pindah-faskes",
+  "title": "Cara Pakai Mobile JKN: Cek Status Kepesertaan, Tunggakan, dan Pindah Faskes",
+  "category": "panduan",
+  "published_at": "2026-10-11 07:30:00",
+  "lead": "Aplikasi Mobile JKN dari BPJS Kesehatan bisa dipakai untuk banyak urusan tanpa harus datang ke kantor cabang: melihat apakah kepesertaan masih aktif, mengecek tagihan iuran, mengganti fasilitas kesehatan tingkat pertama (FKTP), sampai mengambil nomor antrean. Panduan ini merangkum fitur-fitur utama tersebut berdasarkan panduan resmi BPJS Kesehatan, berikut aturan yang perlu diperhatikan dan cara menghindari aplikasi serta pesan palsu.",
+  "dataCard": {
+    "Aplikasi resmi": "Mobile JKN (BPJS Kesehatan)",
+    "Cek status": "Menu Info Peserta",
+    "Pindah FKTP": "Umumnya setelah minimal 3 bulan terdaftar",
+    "Cicilan tunggakan": "Program REHAB (4–24 bulan)",
+    "Kanal lain": "WA Pandawa 08118165165, Care Center 165"
+  },
+  "sections": [
+    {
+      "heading": "Cek status kepesertaan aktif atau tidak",
+      "paragraphs": [
+        "Unduh aplikasi Mobile JKN hanya dari Google Play Store atau App Store, lalu masuk dengan akun Anda atau daftar terlebih dahulu jika belum punya. Setelah login, buka menu Info Peserta di halaman utama. Status kepesertaan terlihat dari keterangan di bawah nama peserta, misalnya \"Aktif\".",
+        "Jika status tidak aktif, penyebabnya bisa beragam, misalnya ada tunggakan iuran atau perubahan data kepesertaan. Sebelum berobat, ada baiknya status dicek lebih dulu agar tidak ada kendala di fasilitas kesehatan. Bila keterangan di aplikasi membingungkan, tanyakan langsung melalui kanal resmi BPJS Kesehatan."
+      ]
+    },
+    {
+      "heading": "Cek tagihan, bayar, dan cicil tunggakan",
+      "paragraphs": [
+        "Menu Info Iuran menampilkan status iuran yang harus dibayar, sedangkan riwayat pembayaran dan nomor Virtual Account bisa dilihat lewat menu Lainnya. Menurut panduan resmi Mobile JKN, peserta juga bisa mendaftarkan auto debit iuran bulanan, baik melalui rekening bank tertentu (BRI, Mandiri, BCA, BTN) maupun beberapa dompet digital yang tercantum di aplikasi.",
+        "Bagi peserta mandiri (PBPU/BP) yang menunggak lebih dari 3 bulan, tersedia program REHAB (Rencana Pembayaran Bertahap) untuk mencicil tunggakan dengan jangka waktu 4 hingga 24 bulan. Di fitur ini peserta bisa melihat status pendaftaran dan besaran cicilan per bulan. Syarat dan ketentuan program dapat berubah, jadi periksa kembali di aplikasi sebelum mendaftar."
+      ]
+    },
+    {
+      "heading": "Pindah faskes tingkat pertama (FKTP)",
+      "paragraphs": [
+        "Perubahan FKTP seperti puskesmas, klinik, atau dokter praktik perorangan dapat diajukan melalui Mobile JKN. Menurut keterangan BPJS Kesehatan yang dikutip media pada Agustus 2026, perpindahan FKTP umumnya baru bisa dilakukan setelah peserta terdaftar minimal tiga bulan di FKTP sebelumnya, dengan tujuan menjaga kesinambungan pelayanan.",
+        "Ada pengecualian untuk kondisi tertentu, misalnya pindah domisili, mengikuti anggota keluarga yang pindah, mendapat tugas atau pekerjaan di luar wilayah, serta redistribusi peserta. Selain itu, peserta yang sedang berada di luar wilayah tetap bisa berobat di FKTP mitra lain hingga tiga kali kunjungan dalam satu bulan, dan dalam keadaan gawat darurat dapat langsung ke fasilitas kesehatan terdekat."
+      ]
+    },
+    {
+      "heading": "Ambil antrean online dan kanal bantuan resmi",
+      "paragraphs": [
+        "Mobile JKN menyediakan fitur pendaftaran dan pengambilan nomor antrean, baik di FKTP maupun di rumah sakit rujukan (FKRTL). Fitur ini membantu mengurangi waktu tunggu di lokasi, meskipun jam layanan dan ketersediaan kuota tetap mengikuti masing-masing fasilitas kesehatan.",
+        "Jika tidak bisa memakai aplikasi, BPJS Kesehatan juga menyebut kanal resmi lain, yaitu WhatsApp Pandawa di 08118165165, Care Center 165, dan situs resmi bpjs-kesehatan.go.id. Lewat Pandawa, peserta dapat memilih menu informasi lalu cek status kepesertaan dengan memasukkan NIK atau nomor kartu serta tanggal lahir."
+      ]
+    },
+    {
+      "heading": "Waspadai aplikasi dan pesan palsu",
+      "paragraphs": [
+        "BPJS Kesehatan pernah memperingatkan modus penipuan berupa pesan tagihan tunggakan iuran yang disertai file APK, aplikasi, atau tautan. Menurut BPJS Kesehatan, pengingat pembayaran resmi tidak disertai lampiran semacam itu, sehingga file tersebut sebaiknya tidak dibuka dan tidak dipasang.",
+        "Periksa bahwa aplikasi yang dipasang adalah Mobile JKN dari toko aplikasi resmi, jangan memasang aplikasi dari tautan di chat, dan jangan membagikan kode OTP kepada siapa pun. Artikel ini bersifat informasi umum; fitur dan aturan dapat berubah sewaktu-waktu, jadi selalu periksa di kanal resmi BPJS Kesehatan untuk ketentuan terbaru."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "BPJS Kesehatan – Panduan Iuran Kepesertaan JKN (Mobile JKN)",
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/iuran%20kepesertaan.html"
+    },
+    {
+      "title": "BPJS Kesehatan – Cara Mengubah FKTP melalui Mobile JKN",
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/mobilejkn/mengubahfaskes.html"
+    },
+    {
+      "title": "BPJS Kesehatan – Antrean FKTP melalui Mobile JKN",
+      "url": "https://bpjs-kesehatan.go.id/user-manual-mobile-jkn/mobilejkn/antreanfktp.html"
+    },
+    {
+      "title": "GEBRAK.ID – Penjelasan BPJS Kesehatan soal Pindah Faskes Harus Menunggu 3 Bulan",
+      "url": "https://www.gebrak.id/2026/08/penjelasan-bpjs-kesehatan-soal-pindah.html"
+    },
+    {
+      "title": "Bisnis.com – BPJS Kesehatan Wanti-wanti Modus Penipu Berkedok Tagihan Tunggakan Iuran",
+      "url": "https://finansial.bisnis.com/read/20230130/55/1622729/bpjs-kesehatan-wanti-wanti-modus-penipu-berkedok-tagihan-tunggakan-iuran"
+    }
+  ],
+  "related": [
+    "/artikel/cara-cek-saldo-dan-klaim-jht-bpjs-ketenagakerjaan",
+    "/artikel/apa-itu-desil-cara-cek-dtsen",
+    "/artikel/penipuan-belanja-online-lapor-iasc-segera",
+    "/artikel/cara-cek-nik-sebagai-npwp-dan-akun-coretax"
+  ]
+}

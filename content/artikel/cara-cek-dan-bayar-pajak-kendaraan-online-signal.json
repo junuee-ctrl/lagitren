@@ -1,0 +1,77 @@
+{
+  "slug": "cara-cek-dan-bayar-pajak-kendaraan-online-signal",
+  "title": "Cara Cek dan Bayar Pajak Kendaraan Online lewat SIGNAL dan Layanan Samsat Daerah",
+  "category": "panduan",
+  "published_at": "2026-10-08 07:30:00",
+  "lead": "Membayar pajak kendaraan bermotor (PKB) tahunan kini tidak selalu harus antre di kantor Samsat. Korlantas Polri menyediakan aplikasi SIGNAL (Samsat Digital Nasional) untuk pengesahan STNK tahunan, pembayaran PKB, dan SWDKLLJ, sementara sejumlah pemerintah provinsi juga punya kanal cek pajak sendiri. Panduan ini merangkum apa yang bisa dan tidak bisa dilakukan secara online, dokumen digital yang Anda terima, serta cara menghindari aplikasi palsu dan calo.",
+  "dataCard": {
+    "Aplikasi nasional": "SIGNAL (Samsat Digital Nasional), Korlantas Polri",
+    "Layanan online": "Pengesahan STNK tahunan, PKB, SWDKLLJ",
+    "Dokumen digital": "e-TBPKP dan e-Pengesahan STNK",
+    "Tidak bisa online": "Perpanjangan STNK 5 tahunan (wajib cek fisik)",
+    "Unduh dari": "Google Play / App Store resmi"
+  },
+  "sections": [
+    {
+      "heading": "Apa itu SIGNAL dan layanan apa saja yang tersedia",
+      "paragraphs": [
+        "SIGNAL adalah aplikasi Samsat Digital Nasional yang dikembangkan Korlantas Polri sebagai generasi penerus layanan Samsat Online Nasional (Samolnas). Melalui aplikasi ini, pemilik kendaraan dapat melakukan pengesahan STNK tahunan sekaligus membayar PKB dan Sumbangan Wajib Dana Kecelakaan Lalu Lintas Jalan (SWDKLLJ) tanpa datang ke loket.",
+        "Data tagihan PKB di SIGNAL terhubung dengan sistem pendapatan daerah di masing-masing provinsi, sehingga besaran pajak tetap mengikuti ketetapan Bapenda setempat. Aplikasi dapat diunduh dari Google Play Store maupun App Store. Ketersediaan layanan, kanal pembayaran, dan biaya tambahan dapat berbeda antardaerah, jadi periksa informasi terbaru di kanal resmi sebelum bertransaksi."
+      ]
+    },
+    {
+      "heading": "Langkah membayar PKB tahunan lewat SIGNAL",
+      "paragraphs": [
+        "Pertama, buat akun dengan NIK, nama sesuai KTP, email, dan nomor ponsel aktif. Pendaftaran meliputi verifikasi e-KTP berupa foto KTP dan swafoto (pencocokan wajah), lalu kode OTP dan aktivasi lewat email. Setelah akun aktif, tambahkan kendaraan dengan memasukkan nomor polisi dan lima digit terakhir nomor rangka yang tercantum di STNK.",
+        "Selanjutnya pilih menu pendaftaran pengesahan STNK, periksa rincian tagihan PKB dan SWDKLLJ, lalu tentukan apakah dokumen fisik TBPKP ingin dikirim ke alamat Anda (dengan ongkos kirim yang ditampilkan di aplikasi). Pembayaran dilakukan dengan kode bayar melalui bank atau kanal pembayaran digital yang tercantum di aplikasi. Status transaksi bisa dipantau di menu Transaksi."
+      ]
+    },
+    {
+      "heading": "e-TBPKP dan e-Pengesahan STNK",
+      "paragraphs": [
+        "Setelah pembayaran diterima dan status berubah menjadi penerbitan dokumen digital, Anda dapat melihat dan mengunduh e-TBPKP (Tanda Bukti Pelunasan Kewajiban Pembayaran) serta e-Pengesahan STNK langsung dari aplikasi. Simpan dokumen ini dengan baik sebagai bukti bahwa kewajiban tahunan sudah dilunasi.",
+        "Jika Anda memilih pengiriman dokumen fisik, pelacakannya juga tersedia di menu Transaksi hingga status menunjukkan pengiriman selesai. Bila terjadi kendala, misalnya tagihan sudah dibayar tetapi status tidak berubah, hubungi layanan Samsat atau kanal bantuan resmi di aplikasi, jangan melalui nomor yang tidak jelas asalnya."
+      ]
+    },
+    {
+      "heading": "Yang tidak bisa dilakukan secara online",
+      "paragraphs": [
+        "Perpanjangan STNK lima tahunan, yang disertai penggantian STNK dan pelat nomor (TNKB), tidak dapat diproses lewat SIGNAL. Korlantas Polri menjelaskan bahwa proses ini mensyaratkan cek fisik kendaraan di kantor Samsat untuk memastikan kendaraan dan spesifikasinya sesuai data. Jadi, bila tahun ini jatuh tempo lima tahunan, siapkan kunjungan langsung ke Samsat.",
+        "Selain SIGNAL, beberapa provinsi menyediakan kanal sendiri. Contohnya, Bapenda Jawa Barat menyediakan layanan cek info PKB di situs bapenda.jabarprov.go.id dan fitur Sambara di aplikasi Sapawarga. Persyaratan, jangkauan wilayah, dan cara bayarnya bisa berbeda, sehingga sebaiknya periksa di kanal resmi Bapenda atau Samsat provinsi Anda."
+      ]
+    },
+    {
+      "heading": "Hindari aplikasi palsu dan calo",
+      "paragraphs": [
+        "Unduh SIGNAL hanya dari toko aplikasi resmi dan perhatikan nama pengembangnya. Jangan memasang file APK yang dikirim lewat chat, karena modus aplikasi palsu kerap dipakai untuk mencuri data atau saldo. Petugas resmi tidak meminta PIN, kode OTP, atau kata sandi Anda.",
+        "Waspadai juga tawaran jasa yang menjanjikan pajak lebih murah atau proses lima tahunan tanpa cek fisik. Bayarlah hanya sesuai tagihan resmi yang tampil di aplikasi atau kanal Bapenda. Artikel ini bersifat informasi umum; aturan, tarif, dan fitur aplikasi dapat berubah sewaktu-waktu, jadi selalu periksa di kanal resmi Korlantas Polri, Samsat, atau Bapenda setempat."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "DDTCNews - Cara Bayar Pajak Kendaraan Bermotor lewat Aplikasi SIGNAL",
+      "url": "https://news.ddtc.co.id/literasi/tips-trik/1807527/cara-bayar-pajak-kendaraan-bermotor-lewat-aplikasi-signal"
+    },
+    {
+      "title": "detikOto - Perpanjang STNK 5 Tahunan Belum Bisa Online, Ini Alasannya",
+      "url": "https://oto.detik.com/berita/d-5695625/perpanjang-stnk-5-tahunan-belum-bisa-online-ini-alasannya"
+    },
+    {
+      "title": "detikOto - Mulai Agustus 2021 Bayar Pajak Kendaraan Bisa Digital",
+      "url": "https://oto.detik.com/berita/d-5690511/mulai-agustus-2021-bayar-pajak-kendaraan-bisa-digital-dan-gak-perlu-datang-ke-samsat"
+    },
+    {
+      "title": "Bisnis.com - Cara Mudah Cek Pajak Kendaraan Online Wilayah Jawa Barat",
+      "url": "https://ekonomi.bisnis.com/read/20250429/259/1872829/cara-mudah-cek-pajak-kendaraan-online-wilayah-jawa-barat"
+    },
+    {
+      "title": "CNN Indonesia - Cara Bayar Pajak Mobil Online Pakai Aplikasi SIGNAL",
+      "url": "https://www.cnnindonesia.com/otomotif/20230301131055-584-919309/cara-bayar-pajak-mobil-online-pakai-aplikasi-signal/amp"
+    }
+  ],
+  "related": [
+    "/artikel/cara-perpanjang-sim-online-aplikasi-sinar",
+    "/artikel/penipuan-belanja-online-lapor-iasc-segera"
+  ]
+}

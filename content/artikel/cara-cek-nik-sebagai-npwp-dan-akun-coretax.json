@@ -1,0 +1,79 @@
+{
+  "slug": "cara-cek-nik-sebagai-npwp-dan-akun-coretax",
+  "title": "NIK sebagai NPWP: Cara Aktivasi Akun Coretax DJP dan Hal yang Perlu Dicek",
+  "category": "panduan",
+  "published_at": "2026-10-13 07:30:00",
+  "lead": "Bagi wajib pajak orang pribadi penduduk Indonesia, Nomor Induk Kependudukan (NIK) kini berfungsi sebagai NPWP, dan administrasi pajak sudah berpindah ke sistem Coretax DJP. Perubahan ini membuat banyak orang bertanya: apakah NIK saya sudah valid sebagai NPWP, bagaimana cara masuk ke Coretax, dan kapan batas lapor SPT Tahunan? Panduan ini merangkum langkah-langkah dasarnya berdasarkan informasi resmi Direktorat Jenderal Pajak (DJP).",
+  "dataCard": {
+    "Situs resmi": "coretaxdjp.pajak.go.id",
+    "ID login": "NIK (orang pribadi penduduk)",
+    "Coretax berlaku": "Sejak masa Januari 2025",
+    "Batas SPT OP": "31 Maret (tahun pajak sebelumnya)",
+    "Kring Pajak": "1500200"
+  },
+  "sections": [
+    {
+      "heading": "Aturan NIK sebagai NPWP",
+      "paragraphs": [
+        "Ketentuan NIK sebagai NPWP bagi orang pribadi penduduk diatur dalam PMK 112/PMK.03/2022 yang diubah dengan PMK 136 Tahun 2023. Berdasarkan pengumuman DJP Nomor PENG-6/PJ.09/2024, sejak masa pajak Januari 2024 wajib pajak orang pribadi penduduk sudah dapat menggunakan NIK atau NPWP 15 digit. Wajib pajak badan, instansi pemerintah, dan orang pribadi bukan penduduk tetap menggunakan NPWP dengan format 16 digit.",
+        "Perlu dicatat, memiliki NIK tidak otomatis membuat setiap warga menjadi wajib pajak. Menurut DJP, NPWP diberikan melalui aktivasi NIK, baik atas permohonan maupun secara jabatan. Dalam artikel DJP awal 2026 disebutkan bahwa NIK kini berfungsi penuh sebagai NPWP, sementara Coretax mewajibkan transaksi menggunakan format 16 digit."
+      ]
+    },
+    {
+      "heading": "Apa yang berubah dengan Coretax",
+      "paragraphs": [
+        "Coretax DJP diluncurkan pada 31 Desember 2024 dan melayani administrasi perpajakan sejak masa Januari 2025, mencakup pendaftaran, pelaporan SPT, pembayaran, dan layanan lainnya. Mulai tahun pajak 2025, pelaporan SPT Tahunan dilakukan melalui Coretax dan tidak lagi melalui DJP Online.",
+        "Coretax juga menampilkan data yang sudah terisi otomatis (prepopulated), misalnya data penghasilan dari pemberi kerja. DJP mengingatkan bahwa data tersebut belum tentu mencakup seluruh penghasilan, seperti pekerjaan lepas atau sewa aset, sehingga wajib pajak tetap bertanggung jawab memeriksa dan melengkapinya."
+      ]
+    },
+    {
+      "heading": "Cara aktivasi akun Coretax",
+      "paragraphs": [
+        "Menurut panduan DJP, buka coretaxdjp.pajak.go.id lalu pilih menu Aktivasi Akun Wajib Pajak. Isi semua kolom wajib, termasuk NIK, alamat email, dan nomor HP. Jika muncul tanda silang pada kolom email atau nomor HP, artinya data tidak cocok dengan sistem dan perlu diperbarui di kantor pajak terdekat. Setelah itu, lakukan verifikasi foto wajah.",
+        "DJP kemudian mengirim email berisi Surat Penerbitan Akun Wajib Pajak yang memuat NIK sebagai user ID dan kata sandi untuk login. Pengguna lama DJP Online dapat memakai fitur Lupa Kata Sandi. Setelah masuk, ajukan Kode Otorisasi/Sertifikat Elektronik melalui menu Portal Saya, karena kode ini diperlukan untuk menandatangani SPT secara elektronik."
+      ]
+    },
+    {
+      "heading": "Cek validasi NIK dan batas lapor SPT",
+      "paragraphs": [
+        "Cara praktis untuk memastikan NIK sudah terhubung dengan data pajak adalah mencoba login ke Coretax menggunakan NIK, lalu memeriksa data profil di Portal Saya. Jika aktivasi gagal atau data tidak cocok, hubungi Kring Pajak 1500200 atau datangi KPP/KP2KP terdekat dengan membawa dokumen identitas.",
+        "Batas pelaporan SPT Tahunan orang pribadi adalah 31 Maret setelah tahun pajak berakhir; untuk tahun pajak 2025 batasnya 31 Maret 2026. Pada 2026, DJP memberikan relaksasi melalui KEP-55/PJ/2026 sehingga pelaporan dan pembayaran hingga 30 April 2026 tidak dikenai sanksi administrasi. Relaksasi semacam ini tidak selalu berlaku setiap tahun, jadi pantau pengumuman resmi DJP."
+      ]
+    },
+    {
+      "heading": "Waspada phishing yang mengatasnamakan DJP",
+      "paragraphs": [
+        "DJP mengingatkan modus penipuan lewat SMS, WhatsApp, dan email, misalnya ajakan \"pemadanan data\", tagihan pajak palsu, situs tiruan, hingga file APK. Menurut DJP, satu-satunya domain resmi adalah pajak.go.id, DJP tidak mengirim file APK, dan pembayaran pajak hanya dilakukan ke kas negara menggunakan kode billing, bukan ke rekening pribadi.",
+        "Jangan bagikan kata sandi, kode OTP, atau kode otorisasi kepada siapa pun, dan ketik alamat Coretax secara manual. Pengaduan dapat disampaikan melalui Kring Pajak 1500200 atau pengaduan@pajak.go.id. Artikel ini bersifat informasi umum dan bukan nasihat pajak; aturan dapat berubah, jadi selalu periksa di kanal resmi DJP."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "DJP – Aktivasi Akun dan Permintaan Kode Otorisasi Coretax",
+      "url": "https://www.pajak.go.id/id/artikel/aktivasi-akun-dan-permintaan-kode-otorisasi-coretax-langkah-awal-pelaporan-spt-tahunan"
+    },
+    {
+      "title": "DJP – PENG-6/PJ.09/2024 Penggunaan NPWP pada Sistem Administrasi Perpajakan",
+      "url": "https://www.pajak.go.id/sites/default/files/2024-02/PENG-6-2024%20PENGGUNAAN%20NOMOR%20POKOK%20WAJIB%20PAJAK%20PADA%20SISTEM%20ADMINISTRASI%20PERPAJAKAN.pdf"
+    },
+    {
+      "title": "DJP – Implementasi Coretax DJP",
+      "url": "https://www.pajak.go.id/en/node/113210"
+    },
+    {
+      "title": "DJP – Relaksasi Lapor Pajak hingga Akhir April 2026",
+      "url": "https://www.pajak.go.id/index.php/en/node/119473"
+    },
+    {
+      "title": "DJP – Waspada Penipuan, DJP Selalu Amankan Seluruh Data Wajib Pajak",
+      "url": "https://www.pajak.go.id/en/node/110506"
+    }
+  ],
+  "related": [
+    "/artikel/paylater-belanja-online-tercatat-slik-ojk",
+    "/artikel/penipuan-belanja-online-lapor-iasc-segera",
+    "/artikel/cara-pakai-mobile-jkn-cek-status-pindah-faskes",
+    "/artikel/cara-cek-tilang-elektronik-etle-dan-konfirmasi"
+  ]
+}

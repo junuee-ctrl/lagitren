@@ -93,7 +93,7 @@ def main() -> int:
         paths.append(f"content/pinjol/{m.name}"); pub.append(m.stem)
     if not paths:
         for f in ([q] if q.exists() else []) + mdxs:
-            f.rename(f.with_name(f.name + ".done"))
+            f.replace(f.with_name(f.name + ".done"))
         log("tidak ada perubahan (semua sudah ada)")
         return 0
     git("add", "--", *paths)
@@ -112,7 +112,7 @@ def main() -> int:
         log("push gagal (dicoba lagi run berikut): " + p.stderr[:300])
         return 1
     for f in ([q] if q.exists() else []) + mdxs:
-        f.rename(f.with_name(f.name + ".done"))
+        f.replace(f.with_name(f.name + ".done"))
     log("TERKIRIM: " + msg)
     return 0
 

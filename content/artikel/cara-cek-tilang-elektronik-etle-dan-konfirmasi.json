@@ -1,0 +1,78 @@
+{
+  "slug": "cara-cek-tilang-elektronik-etle-dan-konfirmasi",
+  "title": "Cara Cek Tilang Elektronik (ETLE), Konfirmasi, dan Menghindari Surat Tilang Palsu",
+  "category": "panduan",
+  "published_at": "2026-10-12 07:30:00",
+  "lead": "Kamera Electronic Traffic Law Enforcement (ETLE) merekam pelanggaran lalu lintas secara otomatis, lalu pemberitahuan dikirim ke pemilik kendaraan. Banyak orang baru sadar terkena tilang ketika STNK tidak bisa diperpanjang, sementara di sisi lain beredar pesan tilang palsu berisi file APK. Panduan ini menjelaskan cara mengecek data pelanggaran lewat situs resmi, alur konfirmasi dan pembayaran, serta ciri pemberitahuan resmi menurut Korlantas Polri.",
+  "dataCard": {
+    "Situs konfirmasi": "konfirmasi-etle.polri.go.id",
+    "Data yang disiapkan": "Nomor polisi, nomor rangka, nomor mesin",
+    "Batas konfirmasi": "8 hari sejak pelanggaran",
+    "Pembayaran": "Kode BRIVA setelah konfirmasi",
+    "Surat resmi": "Tidak pernah berbentuk file .apk"
+  },
+  "sections": [
+    {
+      "heading": "Cara mengecek apakah kendaraan terkena ETLE",
+      "paragraphs": [
+        "Menurut informasi Korlantas Polri yang dikutip detikOto pada Juli 2026, pengecekan dilakukan melalui situs resmi konfirmasi-etle.polri.go.id. Siapkan data STNK, yaitu nomor polisi, nomor rangka, dan nomor mesin, lalu masukkan persis seperti tertulis di dokumen dan klik Cek Data.",
+        "Jika tidak ada catatan, sistem akan menampilkan keterangan bahwa data tidak ditemukan. Jika ada pelanggaran, akan muncul waktu, lokasi, jenis pelanggaran, dan foto bukti dari kamera. Ketik alamat situs secara manual di peramban dan cek apakah alamatnya berakhiran .polri.go.id. Beberapa artikel lama masih mencantumkan alamat lain yang kini tidak lagi mengarah ke situs Polri, jadi jangan mengandalkan tautan dari artikel lama atau pesan berantai."
+      ]
+    },
+    {
+      "heading": "Alur konfirmasi dan batas waktunya",
+      "paragraphs": [
+        "Setelah kamera merekam pelanggaran, petugas mengidentifikasi kendaraan dan mengirim surat konfirmasi kepada pemilik kendaraan. Pemberitahuan dapat dikirim melalui pos maupun media elektronik resmi. Pemilik kendaraan diminta mengonfirmasi apakah kendaraan masih miliknya dan siapa pengemudi saat pelanggaran terjadi.",
+        "Batas waktu konfirmasi yang disebutkan ETLE Korlantas adalah 8 hari sejak terjadinya pelanggaran. Konfirmasi dapat dilakukan secara online atau dengan datang ke posko/kantor penegakan hukum lalu lintas setempat. Jika kendaraan sudah dijual atau bukan milik Anda lagi, hal ini perlu segera dilaporkan kepada kepolisian."
+      ]
+    },
+    {
+      "heading": "Cara pembayaran denda",
+      "paragraphs": [
+        "Setelah pelanggaran dikonfirmasi, tilang diterbitkan beserta kode pembayaran. Berdasarkan pemberitaan detikOto, pembayaran dilakukan melalui BRIVA (BRI Virtual Account) dengan nomor 15 digit, misalnya lewat mobile banking, ATM, internet banking, atau teller BRI, maupun transfer dari bank lain.",
+        "Nominal yang dibayarkan harus sesuai dengan jumlah denda yang tertera; transaksi bisa ditolak jika tidak sesuai. Besaran denda dan batas waktu pembayaran dapat berbeda per kasus, jadi ikuti informasi yang muncul di situs resmi atau surat konfirmasi Anda, dan jangan pernah mentransfer ke rekening pribadi."
+      ]
+    },
+    {
+      "heading": "Akibat jika diabaikan: STNK bisa diblokir",
+      "paragraphs": [
+        "Jika surat konfirmasi diabaikan dan tilang tidak diselesaikan, STNK kendaraan dapat diblokir. Dampaknya, pemilik tidak bisa memperpanjang STNK sampai denda diselesaikan. Menurut pemberitaan, blokir akan dibuka setelah denda dibayar.",
+        "Karena itu, ada baiknya mengecek data ETLE secara berkala, terutama setelah perjalanan jauh atau sebelum jadwal perpanjangan STNK. Bila menemukan data yang menurut Anda keliru, misalnya kendaraan yang tercatat bukan milik Anda, ajukan klarifikasi melalui kanal konfirmasi resmi atau datangi Satlantas terdekat."
+      ]
+    },
+    {
+      "heading": "Ciri surat tilang palsu di WhatsApp",
+      "paragraphs": [
+        "Modus penipuan yang masih sering ditemukan adalah pesan WhatsApp atau SMS berisi \"surat tilang\" dalam bentuk file APK atau tautan mencurigakan. Jika dipasang, aplikasi semacam ini dapat memberi pelaku akses ke data di ponsel, termasuk data perbankan. Korlantas Polri menegaskan bahwa surat konfirmasi tilang resmi tidak pernah berbentuk file .apk.",
+        "Menurut Korlantas Polri, pemberitahuan resmi lewat WhatsApp dikirim dari akun ETLE Nasional bernomor Indonesia (+62) dengan tanda centang biru, memuat foto, lokasi, dan waktu pelanggaran, serta mengarah ke situs resmi berakhiran .go.id. Jika ragu, jangan klik apa pun dan cek sendiri lewat situs resmi atau hubungi Polda/Polres terdekat. Artikel ini merupakan informasi umum; prosedur dapat berubah, jadi selalu periksa di kanal resmi Korlantas Polri."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "detikOto – Cara Cek Kena Tilang ETLE atau Tidak, Nggak Perlu ke Kantor Polisi",
+      "url": "https://oto.detik.com/berita/d-8587867/cara-cek-kena-tilang-etle-atau-tidak-nggak-perlu-ke-kantor-polisi"
+    },
+    {
+      "title": "detikOto – Awas Kena Tipu! Ini 3 Ciri Surat Konfirmasi Tilang Asli yang Dikirim ke WhatsApp",
+      "url": "https://oto.detik.com/berita/d-8586607/awas-kena-tipu-ini-3-ciri-surat-konfirmasi-tilang-asli-yang-dikirim-ke-whatsapp"
+    },
+    {
+      "title": "detikOto – Jangan Panik, Ini yang Harus Dilakukan Saat Kena Tilang Elektronik",
+      "url": "https://oto.detik.com/berita/d-7128477/jangan-panik-ini-yang-harus-dilakukan-saat-kena-tilang-elektronik"
+    },
+    {
+      "title": "detikOto – Dapat Surat Konfirmasi Tilang ke WhatsApp Jangan Diabaikan, STNK Bisa Diblokir",
+      "url": "https://oto.detik.com/berita/d-7322344/dapat-surat-konfirmasi-tilang-ke-whatsapp-jangan-diabaikan-stnk-bisa-diblokir"
+    },
+    {
+      "title": "detikOto – Masih Ada Penipuan Modus Tilang Elektronik di WhatsApp",
+      "url": "https://oto.detik.com/berita/d-8364091/masih-ada-penipuan-modus-tilang-elektronik-di-whatsapp-jangan-asal-klik-link"
+    }
+  ],
+  "related": [
+    "/artikel/penipuan-belanja-online-lapor-iasc-segera",
+    "/artikel/cara-pakai-mobile-jkn-cek-status-pindah-faskes",
+    "/artikel/cara-cek-nik-sebagai-npwp-dan-akun-coretax"
+  ]
+}
