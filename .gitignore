@@ -59,3 +59,5 @@ laporan*.html
 
 # log lokal & dump panel (bisa berisi data akun) - jangan pernah di-commit
 collector/logs/
+collector/inbox/
+automation/logs/
