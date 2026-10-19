@@ -1,0 +1,75 @@
+{
+  "slug": "cara-cek-ktp-elektronik-dan-ikd-identitas-kependudukan-digital",
+  "title": "Cara Aktivasi IKD (Identitas Kependudukan Digital) dan Menjaga Data KTP Tetap Aman",
+  "category": "panduan",
+  "published_at": "2026-10-17 07:30:00",
+  "lead": "Identitas Kependudukan Digital (IKD) adalah aplikasi resmi Direktorat Jenderal Kependudukan dan Pencatatan Sipil (Dukcapil) Kementerian Dalam Negeri yang menampilkan data KTP elektronik dan Kartu Keluarga di ponsel. Sejak 1 Januari 2026, Dukcapil juga menetapkan bahwa QR code pada dokumen kependudukan hanya dapat dipindai lewat aplikasi IKD. Panduan ini menjelaskan syarat dan langkah aktivasi, kegunaan IKD, serta kebiasaan sederhana untuk melindungi NIK dari penyalahgunaan.",
+  "dataCard": {
+    "Penyelenggara": "Ditjen Dukcapil Kemendagri",
+    "Dasar hukum": "Permendagri Nomor 72 Tahun 2022",
+    "Syarat usia": "17 tahun ke atas, sudah memiliki KTP-el atau sudah rekam biometrik",
+    "Aktivasi": "Lewat petugas Dukcapil (pindai QR code)",
+    "QR dokumen": "Sejak 1 Januari 2026 hanya bisa dipindai via IKD"
+  },
+  "sections": [
+    {
+      "heading": "Apa itu IKD dan dasar aturannya",
+      "paragraphs": [
+        "IKD merupakan identitas kependudukan dalam bentuk digital yang diatur dalam Peraturan Menteri Dalam Negeri Nomor 72 Tahun 2022. Aplikasinya tersedia di Google Play Store dan App Store dengan nama Identitas Kependudukan Digital. Di dalamnya, pengguna dapat melihat KTP digital, data Kartu Keluarga, dan sejumlah data terkait lainnya.",
+        "Dukcapil mendorong percepatan aktivasi IKD. Per 20 Januari 2026, situs Dukcapil mencatat 17.745.792 penduduk telah mengaktifkan IKD. Dirjen Dukcapil Teguh Setyabudi menyebut QR code pada dokumen kependudukan sebagai pintu verifikasi keabsahan dokumen, sehingga IKD makin berperan dalam layanan publik."
+      ]
+    },
+    {
+      "heading": "Syarat dan langkah aktivasi",
+      "paragraphs": [
+        "Menurut panduan Disdukcapil Gunungkidul, syaratnya adalah ponsel Android 5 ke atas atau iOS 11 ke atas dengan koneksi internet, berusia 17 tahun ke atas, serta sudah memiliki KTP-el atau sudah melakukan perekaman biometrik. Gunakan email dan nomor ponsel yang aktif dan bisa Anda akses sendiri, karena keduanya dipakai untuk verifikasi dan aktivasi.",
+        "Langkahnya: unduh aplikasi dari toko resmi, masukkan NIK, email, dan nomor ponsel, lalu lakukan swafoto untuk verifikasi wajah. Setelah itu pilih menu pindai QR code dan pindai QR code yang diberikan petugas Dukcapil. Kode dan tautan aktivasi akan dikirim ke email; klik tautan, masukkan kode aktivasi, lalu buka kembali aplikasi dan gunakan kode tersebut sebagai PIN awal sebelum menggantinya.",
+        "Dukcapil menegaskan bahwa aktivasi hanya dapat dilakukan oleh petugas Dukcapil. Karena itu, jika ada pihak yang menawarkan aktivasi IKD lewat pesan atau meminta data Anda secara daring, abaikan dan datangi kantor Disdukcapil terdekat."
+      ]
+    },
+    {
+      "heading": "Kegunaan IKD sehari-hari",
+      "paragraphs": [
+        "Panduan Disdukcapil Gunungkidul menyebut IKD dapat dipakai pada layanan publik yang sudah bekerja sama, sehingga instansi dapat memverifikasi data langsung tanpa meminta fotokopi KTP. Cara ini juga mengurangi risiko salinan dokumen Anda tercecer di banyak tempat.",
+        "Sejak 1 Januari 2026, QR code pada dokumen seperti Kartu Keluarga dan akta kelahiran tidak lagi bisa dibaca dengan Google Lens atau pemindai QR umum. Pemindaian hanya melalui aplikasi IKD, yang menurut Dukcapil bertujuan mencegah pemalsuan dan penyalahgunaan dokumen kependudukan."
+      ]
+    },
+    {
+      "heading": "Menjaga NIK dan foto KTP",
+      "paragraphs": [
+        "NIK dan foto KTP sering dipakai pelaku kejahatan untuk mendaftar layanan atas nama orang lain. Hindari mengunggah foto KTP atau swafoto dengan KTP ke media sosial, jangan mengirim foto KTP ke kontak yang tidak jelas, dan bila terpaksa mengirim salinan, beri tanda air berisi tujuan penggunaan dan tanggal.",
+        "Jangan bagikan kode OTP, kode aktivasi, atau PIN IKD kepada siapa pun, termasuk orang yang mengaku petugas. Unduh aplikasi IKD hanya dari Google Play Store atau App Store, bukan dari file APK yang dikirim lewat pesan."
+      ]
+    },
+    {
+      "heading": "Jika NIK Anda disalahgunakan",
+      "paragraphs": [
+        "Jika Anda mendapati tagihan, pinjaman, atau akun yang tidak pernah Anda buat, kumpulkan bukti seperti tangkapan layar, surat tagihan, dan riwayat komunikasi. Ajukan keberatan ke perusahaan terkait, dan bila menyangkut lembaga jasa keuangan, sampaikan pengaduan ke Otoritas Jasa Keuangan (OJK) melalui kanal resminya.",
+        "Ulasan Hukumonline menyebut korban juga dapat melapor ke kepolisian, misalnya bila ada dugaan penggunaan surat palsu, serta menempuh gugatan perdata atas perbuatan melawan hukum. Untuk memeriksa atau memperbaiki data kependudukan, datangi Disdukcapil setempat atau periksa di kanal resmi Dukcapil. Artikel ini merupakan informasi umum dan bukan nasihat hukum."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Dukcapil Kemendagri – QR Code Dokumen Kependudukan Hanya Bisa Dipindai Lewat IKD",
+      "url": "https://dukcapil.kemendagri.go.id/ikdnasional/read/dukcapil-perketat-keamanan-qr-code-dokumen-kependudukan-hanya-bisa-dipindai-lewat-ikd"
+    },
+    {
+      "title": "Dukcapil Kemendagri – 17,7 Juta Warga Sudah Aktivasi IKD, Kamu Kapan?",
+      "url": "https://dukcapil.kemendagri.go.id/blog/read/17-7-juta-warga-sudah-aktivasi-ikd-kamu-kapan"
+    },
+    {
+      "title": "Disdukcapil Gunungkidul – E-Book Identitas Kependudukan Digital",
+      "url": "https://dukcapil.gunungkidulkab.go.id/wp-content/uploads/2023/11/E-Book-Identitas-Kependudukan-Digital_compressed.pdf"
+    },
+    {
+      "title": "Hukumonline – Langkah Hukum Saat NIK Disalahgunakan Perusahaan Pembiayaan",
+      "url": "https://www.hukumonline.com/klinik/a/langkah-hukum-saat-nik-disalahgunakan-perusahaan-pembiayaan-lt5f3445638517c/"
+    }
+  ],
+  "related": [
+    "/artikel/cara-cek-nik-sebagai-npwp-dan-akun-coretax",
+    "/artikel/penipuan-belanja-online-lapor-iasc-segera",
+    "/artikel/cara-cek-dan-perpanjang-paspor-online-m-paspor"
+  ]
+}

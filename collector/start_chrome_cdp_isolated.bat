@@ -7,7 +7,7 @@ setlocal enabledelayedexpansion
 
 set "PORT=9223"
 set "DATADIR=%LocalAppData%\lagitren-chrome"
-set "PANEL=https://partner.tiktokshop.com/affiliate-product-management/affiliate-product-pool/ranking?tab=0&market=4&prePage=product_ranking"
+set "PANEL=https://partner.tiktokshop.com/affiliate-product-management/product-marketplace/ranking?tab=0&market=4&prePage=product_ranking"
 
 set "CHROME="
 for %%P in (

@@ -28,7 +28,9 @@ MIN_CHARS, MIN_SECTIONS = 1200, 3
 # Berkas infrastruktur penerbit ini sendiri: bila berubah/baru, ikut di-commit
 # (daftar tetap, bukan pola) supaya perubahan skrip tidak membuat pull --rebase macet.
 INFRA = ["collector/publish_pending.py", "collector/run_local_task.bat",
-         "collector/push_panduhukum.py"]
+         "collector/push_panduhukum.py", "collector/affiliate_panel.py",
+         "collector/run_panel_task.bat", "collector/start_chrome_cdp.bat",
+         "collector/start_chrome_cdp_isolated.bat"]
 # Pola dirakit dari potongan supaya berkas ini sendiri tidak cocok dengan polanya.
 _SECRET_PARTS = ["git" + "hub_pat_", "gh" + "p_", "gh" + "o_", "sk" + "-ant-",
                  "AK" + "IA[0-9A-Z]{12}", "xo" + "x[bp]-", "-----" + "BEGIN"]
@@ -101,6 +103,31 @@ def push_if_ahead() -> int:
     return 0
 
 
+# Berkas yang tidak boleh ada di repo PUBLIK tetapi pernah ter-commit
+# (profil browser berisi cookie, 2026-09-15). Dilepas dari index sekali saja;
+# berkas di disk tetap ada dan sudah tercantum di .gitignore.
+UNTRACK = ["collector/.ig_profile"]
+
+
+def untrack_private() -> str:
+    tracked = [p for p in UNTRACK if git("ls-files", "--", p).stdout.strip()]
+    if not tracked:
+        return ""
+    staged = git("diff", "--cached", "--name-only").stdout.split()
+    if any(not any(x.startswith(p) for p in tracked) for x in staged):
+        log("lewati untrack: ada perubahan lain di index")
+        return ""
+    git("rm", "-r", "--cached", "-q", "--", *tracked, check=False)
+    git("add", "--", ".gitignore", check=False)
+    c = git("-c", "user.name=junuee", "-c", "user.email=junuee@gmail.com",
+            "commit", "-m", "chore: keluarkan profil browser (cookie) dari repo publik", check=False)
+    if c.returncode != 0:
+        log("commit untrack gagal: " + (c.stderr or c.stdout).strip()[:300])
+        git("reset", "-q", check=False)
+        return ""
+    return "untrack " + ", ".join(tracked)
+
+
 def commit_pending() -> tuple[int, str]:
     new = [ROOT / f for f in git("ls-files", "--others", "--exclude-standard",
                                    "--", "content/artikel/*.json").stdout.split()]
@@ -138,6 +165,9 @@ def commit_pending() -> tuple[int, str]:
 
 
 def main() -> int:
+    u = untrack_private()
+    if u:
+        log(u)
     code, done = commit_pending()
     pcode = push_if_ahead()
     if done and pcode == 0:
