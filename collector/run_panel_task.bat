@@ -63,7 +63,7 @@ git add collector/products.csv >nul 2>&1
 git diff --cached --quiet
 if errorlevel 1 (
   git -c user.name="lagitren-local" -c user.email="noreply@lagitren.id" commit -m "produk: perbarui daftar dari panel afiliasi (otomatis)" >> "collector\%LOG%" 2>&1
-  git pull --rebase >> "collector\%LOG%" 2>&1
+  git pull --rebase --autostash >> "collector\%LOG%" 2>&1
   git push >> "collector\%LOG%" 2>&1
 ) else (
   echo [panel] 변경 없음, 커밋 생략 >> "collector\%LOG%"
