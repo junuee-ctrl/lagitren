@@ -54,7 +54,7 @@ CHANGE_HOURS: dict[str, int] = {
     "youtube": 12,
     "twitter": 12,
     "instagram": 36,
-    "tiktok": 36,
+    "tiktok": 96,  # daftar 3 tagar jendela 7 hari, wajar sama 2-3 hari (2026-10-20)
     "netflix": 192,
     "shopee": 48,
 }

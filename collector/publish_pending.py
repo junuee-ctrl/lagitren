@@ -30,7 +30,7 @@ MIN_CHARS, MIN_SECTIONS = 1200, 3
 INFRA = ["collector/publish_pending.py", "collector/run_local_task.bat",
          "collector/push_panduhukum.py", "collector/affiliate_panel.py",
          "collector/run_panel_task.bat", "collector/start_chrome_cdp.bat",
-         "collector/start_chrome_cdp_isolated.bat"]
+         "collector/start_chrome_cdp_isolated.bat", "collector/watchdog.py"]
 # Pola dirakit dari potongan supaya berkas ini sendiri tidak cocok dengan polanya.
 _SECRET_PARTS = ["git" + "hub_pat_", "gh" + "p_", "gh" + "o_", "sk" + "-ant-",
                  "AK" + "IA[0-9A-Z]{12}", "xo" + "x[bp]-", "-----" + "BEGIN"]
