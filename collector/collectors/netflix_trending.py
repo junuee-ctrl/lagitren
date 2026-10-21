@@ -15,6 +15,8 @@ jalankan collector ini dari PC lokal (IP rumah) bila perlu.
 from __future__ import annotations
 
 import io
+import json
+from pathlib import Path
 import logging
 
 import requests
@@ -129,21 +131,39 @@ def _tmdb_enrich(title: str, is_tv: bool) -> dict:
         return {}
     kind = "tv" if is_tv else "movie"
 
+    # Judul alternatif: judul utuh, lalu bagian sebelum ":" / " - "
+    # (mis. "Adili Idola Celebrity Roast: Reza Arap" -> "Adili Idola Celebrity Roast").
+    queries = [title]
+    for sep in (":", " - "):
+        if sep in title:
+            base = title.split(sep)[0].strip()
+            if base and base not in queries:
+                queries.append(base)
+
     def _search(lang: str) -> dict | None:
-        r = requests.get(
-            _TMDB_SEARCH.format(kind=kind),
-            params={
-                "api_key": config.TMDB_API_KEY,
-                "query": title,
-                "language": lang,
-                "include_adult": "false",
-                "region": "ID",
-            },
-            timeout=20,
-        )
-        r.raise_for_status()
-        results = r.json().get("results") or []
-        return results[0] if results else None
+        first = None
+        for q in queries:
+            for k in (kind, "movie" if kind == "tv" else "tv"):
+                r = requests.get(
+                    _TMDB_SEARCH.format(kind=k),
+                    params={
+                        "api_key": config.TMDB_API_KEY,
+                        "query": q,
+                        "language": lang,
+                        "include_adult": "false",
+                        "region": "ID",
+                    },
+                    timeout=20,
+                )
+                r.raise_for_status()
+                results = r.json().get("results") or []
+                if results and first is None:
+                    first = results[0]
+                # Utamakan hasil yang punya poster.
+                for res in results[:5]:
+                    if res.get("poster_path"):
+                        return res
+        return first
 
     try:
         top = _search("id-ID")
@@ -256,6 +276,12 @@ def _wikipedia_enrich(title: str, is_tv: bool) -> dict:
             extract = (page.get("extract") or "").strip()
             if extract:
                 out["synopsis"] = extract[:500]
+            # Tolak halaman yang bukan tentang film/serial (mis. foto aktris).
+            low = extract.lower()[:400]
+            if not any(w in low for w in ("film", "serial", "seri ", "series", "drama", "sinetron", "acara", "movie", "anime", "dokumenter", "documentary", "reality")):
+                log.info("Wikipedia '%s': halaman bukan film/serial, poster diabaikan", title)
+                out.pop("poster", None)
+                continue
             if out.get("poster"):  # butuh poster; kalau cuma teks, coba sumber lain
                 return out
         except Exception as exc:
@@ -265,12 +291,42 @@ def _wikipedia_enrich(title: str, is_tv: bool) -> dict:
     return {}
 
 
+_OVERRIDES_PATH = Path(__file__).resolve().parent.parent / "poster_overrides.json"
+
+
+def _poster_override(title: str) -> str | None:
+    """Poster manual (poster_overrides.json) — menang atas sumber otomatis."""
+    try:
+        data = json.loads(_OVERRIDES_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    t = (title or "").strip().lower()
+    best = None
+    for key, url in data.items():
+        if key.startswith("_") or not isinstance(url, str):
+            continue
+        if t == key or t.startswith(key):
+            if best is None or len(key) > len(best[0]):
+                best = (key, url)
+    return best[1] if best else None
+
+
 def _enrich(title: str, is_tv: bool) -> dict:
     """Perkaya poster/sinopsis, semua opsional & tanpa henti kalau gagal.
 
     Urutan: TMDB (bila ada kunci; terbaik) → Wikipedia ID (tanpa kunci,
     sinopsis Indonesia) → iTunes (tanpa kunci, cakupan internasional).
+    Poster manual (poster_overrides.json) selalu dipakai bila ada.
     """
+    manual = _poster_override(title)
+    if manual:
+        info = _enrich_auto(title, is_tv)
+        info["poster"] = manual
+        return info
+    return _enrich_auto(title, is_tv)
+
+
+def _enrich_auto(title: str, is_tv: bool) -> dict:
     if config.TMDB_API_KEY:
         info = _tmdb_enrich(title, is_tv)
         if info.get("poster") or info.get("synopsis"):
@@ -366,4 +422,7 @@ def collect(limit: int = 20) -> list[Trend]:
         f"{posters} poster; {_ENRICH_NOTE or 'no-enrich'}"
     )
     log.info("Netflix: %d judul, %d poster. %s", len(trends), posters, _ENRICH_NOTE)
+    missing = [t.title for t in trends if not t.thumbnail]
+    if missing:
+        log.warning("POSTER KOSONG (%d): %s -> tambahkan ke collector/poster_overrides.json", len(missing), " | ".join(missing))
     return trends
