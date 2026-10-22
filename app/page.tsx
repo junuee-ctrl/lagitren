@@ -120,7 +120,7 @@ export default async function HomePage() {
             trends={byPlatform.get(platform) ?? []}
           />
           {AD_AFTER.has(i) && (
-            <AdSlot slot={`home-${i}`} adSlot={AD_SLOTS.beranda} />
+            <AdSlot slot={`home-${i}`} adSlot={AD_SLOTS.beranda} format="horizontal" />
           )}
           {i === 2 && <RasiBanner />}
         </div>

@@ -24,13 +24,16 @@ declare global {
 export default function AdSlot({
   slot,
   adSlot,
-  label = "Iklan"
+  label = "Iklan",
+  format = "auto"
 }: {
   /** Nama internal slot (untuk debugging/analytics). */
   slot?: string;
   /** data-ad-slot dari AdSense (angka). Kosongkan bila pakai Auto Ads. */
   adSlot?: string;
   label?: string;
+  /** data-ad-format: "auto" (default) atau "horizontal" untuk sisipan feed agar tidak terlalu tinggi di ponsel. */
+  format?: "auto" | "horizontal" | "rectangle";
 }) {
   const ref = useRef<HTMLModElement>(null);
 
@@ -51,7 +54,7 @@ export default function AdSlot({
         style={{ display: "block" }}
         data-ad-client={ADSENSE_CLIENT}
         data-ad-slot={adSlot}
-        data-ad-format="auto"
+        data-ad-format={format}
         data-full-width-responsive="true"
         data-ad-region={slot}
         aria-label={label}

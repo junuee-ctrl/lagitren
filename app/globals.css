@@ -46,3 +46,8 @@ body {
            dark:text-gray-300;
   }
 }
+
+/* AdSense: sembunyikan unit yang tidak terisi supaya tidak meninggalkan ruang kosong besar (mis. di ponsel). */
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}
