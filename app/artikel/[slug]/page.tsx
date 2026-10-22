@@ -13,6 +13,7 @@ import {
   toIso
 } from "@/lib/site";
 import AdSlot from "@/components/AdSlot";
+import RasiBanner from "@/components/RasiBanner";
 import { AD_SLOTS } from "@/lib/adsense";
 
 export const revalidate = 1800;
@@ -139,6 +140,8 @@ export default async function ArtikelDetailPage({ params }: Props) {
           </section>
         ))}
       </div>
+
+      <RasiBanner />
 
       {/* sumber eksternal */}
       {a.sources.length > 0 && (

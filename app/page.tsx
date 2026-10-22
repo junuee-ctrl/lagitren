@@ -5,6 +5,7 @@ import { KATEGORI_LABEL, formatTanggal } from "@/lib/artikel";
 import PlatformSection from "@/components/PlatformSection";
 import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
+import RasiBanner from "@/components/RasiBanner";
 import { AD_SLOTS } from "@/lib/adsense";
 import type { Platform, Trend } from "@/lib/types";
 
@@ -121,6 +122,7 @@ export default async function HomePage() {
           {AD_AFTER.has(i) && (
             <AdSlot slot={`home-${i}`} adSlot={AD_SLOTS.beranda} />
           )}
+          {i === 2 && <RasiBanner />}
         </div>
       ))}
 
