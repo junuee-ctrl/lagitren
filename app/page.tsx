@@ -15,7 +15,7 @@ import type { Platform, Trend } from "@/lib/types";
 export const revalidate = 300;
 
 // Sisipkan iklan setelah platform ke-2 dan ke-4.
-const AD_AFTER = new Set<number>([1, 3]);
+// Iklan di bawah setiap bagian platform (permintaan pemilik, 2026-10-22).
 
 export default async function HomePage() {
   const [trends, artikel] = await Promise.all([
@@ -119,10 +119,8 @@ export default async function HomePage() {
             platform={platform}
             trends={byPlatform.get(platform) ?? []}
           />
-          {AD_AFTER.has(i) && (
-            <AdSlot slot={`home-${i}`} adSlot={AD_SLOTS.beranda} format="horizontal" />
-          )}
           {i === 2 && <RasiBanner />}
+          <AdSlot slot={`home-${i}`} adSlot={AD_SLOTS.beranda} format="horizontal" />
         </div>
       ))}
 

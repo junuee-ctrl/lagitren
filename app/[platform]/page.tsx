@@ -127,6 +127,8 @@ export default async function PlatformPage({
         </div>
       )}
 
+      <AdSlot slot={`${platform}-bottom`} adSlot={AD_SLOTS.bawah} format="horizontal" />
+
       {/* Navigasi ke platform lain */}
       <section className="mt-10 border-t border-gray-200 pt-6 dark:border-white/10">
         <h2 className="mb-3 text-sm font-semibold text-gray-500 dark:text-gray-400">

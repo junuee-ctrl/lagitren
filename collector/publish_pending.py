@@ -33,7 +33,9 @@ INFRA = ["collector/publish_pending.py", "collector/run_local_task.bat",
          "collector/start_chrome_cdp_isolated.bat", "collector/watchdog.py",
          "collector/collectors/netflix_trending.py", "collector/poster_overrides.json",
          "public/posters", "public/banners", "public/promo", "components/RasiBanner.tsx",
-         "app/page.tsx", "components/AdSlot.tsx", "app/globals.css", ":(literal)app/artikel/[slug]/page.tsx"]
+         "app/page.tsx", "components/AdSlot.tsx", "app/globals.css", ":(literal)app/artikel/[slug]/page.tsx",
+         "app/artikel/page.tsx", ":(literal)app/[platform]/page.tsx",
+         ":(literal)app/[platform]/[slug]/page.tsx"]
 # Pola dirakit dari potongan supaya berkas ini sendiri tidak cocok dengan polanya.
 _SECRET_PARTS = ["git" + "hub_pat_", "gh" + "p_", "gh" + "o_", "sk" + "-ant-",
                  "AK" + "IA[0-9A-Z]{12}", "xo" + "x[bp]-", "-----" + "BEGIN"]

@@ -18,6 +18,7 @@ import type { Platform } from "@/lib/types";
 import TrendMedia from "@/components/TrendMedia";
 import TrendCardMini from "@/components/TrendCardMini";
 import AdSlot from "@/components/AdSlot";
+import RasiBanner from "@/components/RasiBanner";
 import { AD_SLOTS } from "@/lib/adsense";
 import AffiliateBox from "@/components/AffiliateBox";
 import SearchVolumeChart from "@/components/SearchVolumeChart";
@@ -297,6 +298,8 @@ export default async function TrendDetailPage({
 
       {/* Iklan in-content kedua */}
       <AdSlot slot={`detail-${platform}-bottom`} adSlot={AD_SLOTS.bawah} />
+
+      <RasiBanner />
 
       {/* Trend terkait — kartu ber-thumbnail (P2-2, naikkan PV/sesi) */}
       {related.length > 0 && (

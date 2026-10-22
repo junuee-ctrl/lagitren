@@ -73,6 +73,8 @@ export default async function ArtikelPage() {
         </ul>
       )}
 
+      <AdSlot slot="artikel-bottom" adSlot={AD_SLOTS.bawah} format="horizontal" />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
