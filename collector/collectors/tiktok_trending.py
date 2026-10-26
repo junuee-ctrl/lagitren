@@ -288,6 +288,78 @@ def _enrich_videos(page, trends: list[Trend]) -> int:
     return enriched
 
 
+def _item_name(item: dict):
+    return (
+        item.get("hashtagName") or item.get("hashtag_name") or item.get("hashtag")
+        or item.get("name") or item.get("title")
+    )
+
+
+def _merge_lists(payloads: list) -> list[dict]:
+    """Gabungkan list hashtag dari beberapa respons (paging), urut & unik."""
+    out: list[dict] = []
+    seen: set[str] = set()
+    for pl in payloads:
+        if not isinstance(pl, dict):
+            continue
+        lst = (pl.get("data") or {}).get("list") or _find_hashtag_list(pl) or []
+        for it in lst:
+            if not isinstance(it, dict):
+                continue
+            n = _item_name(it)
+            if not n or str(n).lower() in seen:
+                continue
+            seen.add(str(n).lower())
+            out.append(it)
+    return out
+
+
+def _embedded_list(page) -> list[dict]:
+    """Cari list hashtag di JSON yang tertanam di HTML (__NEXT_DATA__ dll.)."""
+    import json as _j
+    blobs = page.evaluate(
+        """() => Array.from(document.querySelectorAll('script'))
+              .map(s => s.textContent || '')
+              .filter(t => t.length > 200 && /hashtag/i.test(t))
+              .slice(0, 20)"""
+    )
+    best: list[dict] = []
+    for b in blobs or []:
+        b = b.strip()
+        start = b.find("{")
+        if start < 0:
+            continue
+        try:
+            data = _j.loads(b[start:b.rfind("}") + 1])
+        except Exception:
+            continue
+        lst = _find_hashtag_list(data)
+        if len(lst) > len(best):
+            best = lst
+    return best
+
+
+def _dom_hashtags(page) -> list[str]:
+    """Ambil nama hashtag yang tampil di halaman (urutan dokumen)."""
+    names = page.evaluate(
+        r"""() => {
+          const out = [], seen = new Set();
+          const els = document.body.querySelectorAll('*');
+          for (const el of els) {
+            if (el.children.length > 3) continue;
+            const t = (el.innerText || '').trim();
+            const m = t.match(/^#\s?([\p{L}\p{N}_.]{2,60})$/u);
+            if (!m) continue;
+            const k = m[1].toLowerCase();
+            if (seen.has(k)) continue;
+            seen.add(k); out.push(m[1]);
+          }
+          return out;
+        }"""
+    )
+    return [n for n in (names or []) if isinstance(n, str)]
+
+
 def _click_view_more(page) -> None:
     """Klik tombol 'View More'/'Lihat lebih banyak' bila ada (buka baris terkunci)."""
     labels = (
@@ -376,11 +448,18 @@ def collect(limit: int = 20) -> list[Trend]:
             page.on("response", on_response)
 
             def _best_len() -> int:
-                return max(
+                single = max(
                     (len((c.get("data") or {}).get("list") or [])
                      for c in captured if isinstance(c, dict)),
                     default=0,
                 )
+                return max(single, len(_merge_lists(captured_id)))
+
+            def _dom_len() -> int:
+                try:
+                    return len(_dom_hashtags(page))
+                except Exception:
+                    return 0
 
             # Coba tiap halaman Trends; berhenti begitu daftar cukup panjang.
             for url in PAGE_URLS:
@@ -394,7 +473,7 @@ def collect(limit: int = 20) -> list[Trend]:
 
                 # Poll ~45 dtk: SPA butuh waktu; scroll + klik "load more".
                 for _ in range(15):
-                    if _best_len() >= 10:
+                    if _best_len() >= 10 or _dom_len() >= 10:
                         break
                     page.wait_for_timeout(3000)
                     try:
@@ -403,7 +482,8 @@ def collect(limit: int = 20) -> list[Trend]:
                         pass
                     _click_view_more(page)
 
-                if _best_len() >= 10:
+                if _best_len() >= 10 or _dom_len() >= 10:
+                    log.info("TikTok: daftar terbaca di %s", page.url)
                     break
 
             # Parse SEMUA payload; simpan daftar TERPANJANG (bukan yang pertama —
@@ -414,6 +494,53 @@ def collect(limit: int = 20) -> list[Trend]:
                     result = parsed
                     src = "ID" if payload in captured_id else "campuran"
                     LAST_DEBUG = f"ok: {len(result)} hashtag ({src})"
+
+            # Daftar berhalaman: gabungkan item dari semua respons ID (urut, unik).
+            merged = _merge_lists(captured_id) if captured_id else []
+            if len(merged) > len(result):
+                result = _parse({"data": {"list": merged}}, limit)
+                LAST_DEBUG = f"ok: {len(result)} hashtag (ID, gabungan halaman)"
+
+            # Fallback: data tertanam di HTML (SSR) atau langsung dari DOM.
+            if len(result) < 10:
+                try:
+                    emb = _embedded_list(page)
+                    if len(emb) > len(result):
+                        result = _parse({"data": {"list": emb}}, limit)
+                        LAST_DEBUG = f"ok: {len(result)} hashtag (SSR)"
+                except Exception as exc:
+                    log.info("TikTok SSR gagal: %s", exc)
+            if len(result) < 10:
+                try:
+                    names = _dom_hashtags(page)
+                    if len(names) > len(result):
+                        result = _parse(
+                            {"data": {"list": [{"hashtagName": n} for n in names]}}, limit
+                        )
+                        LAST_DEBUG = f"ok: {len(result)} hashtag (DOM)"
+                except Exception as exc:
+                    log.info("TikTok DOM gagal: %s", exc)
+
+            # Diagnostik: ukuran tiap respons + screenshot SEBELUM enrich video.
+            try:
+                import json as _j
+                diag = {
+                    "page_url": page.url,
+                    "responses": [
+                        {"path": c[0], "keys": c[1]} for c in candidates[:30]
+                    ],
+                    "list_lens": [
+                        len((c.get("data") or {}).get("list") or [])
+                        for c in captured if isinstance(c, dict)
+                    ][:30],
+                    "requests": req_urls[:20],
+                    "result": [t.title for t in result],
+                }
+                with open("logs/tiktok_diag.json", "w", encoding="utf-8") as f:
+                    _j.dump(diag, f, ensure_ascii=False, indent=1)
+                page.screenshot(path="logs/tiktok_list.png", full_page=False)
+            except Exception:
+                pass
             if result:
                 log.info("TikTok: %s.", LAST_DEBUG)
 
