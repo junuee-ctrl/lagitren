@@ -124,6 +124,8 @@ export default async function ArtikelDetailPage({ params }: Props) {
         </div>
       )}
 
+      <RasiBanner className="!my-4" />
+
       <AdSlot slot="artikel-detail-top" adSlot={AD_SLOTS.atas} />
 
       <div className="mt-6 space-y-7 text-[15px] leading-relaxed text-gray-700 dark:text-gray-200">

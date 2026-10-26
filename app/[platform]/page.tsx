@@ -15,6 +15,7 @@ import NetflixSplit from "@/components/NetflixSplit";
 import TikTokSplit from "@/components/TikTokSplit";
 import PlatformIcon from "@/components/PlatformIcon";
 import AdSlot from "@/components/AdSlot";
+import RasiBanner from "@/components/RasiBanner";
 import { AD_SLOTS } from "@/lib/adsense";
 import type { Platform } from "@/lib/types";
 
@@ -101,6 +102,8 @@ export default async function PlatformPage({
           </p>
         </div>
       </header>
+
+      <RasiBanner className="!my-4" />
 
       <AdSlot slot={`${platform}-top`} adSlot={AD_SLOTS.atas} />
 

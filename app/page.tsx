@@ -77,6 +77,8 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <RasiBanner className="!my-4" />
+
       {/* Artikel & analisis terbaru */}
       {artikel.length > 0 && (
         <section className="mb-8">
