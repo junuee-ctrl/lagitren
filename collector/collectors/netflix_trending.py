@@ -14,7 +14,9 @@ jalankan collector ini dari PC lokal (IP rumah) bila perlu.
 """
 from __future__ import annotations
 
+import html
 import io
+import re
 import json
 from pathlib import Path
 import logging
@@ -107,6 +109,85 @@ def parse_country_rows(tsv: str, iso2: str = "ID") -> list[dict]:
         return []
     latest = max(r["week"] for r in rows if r["week"])
     return [r for r in rows if r["week"] == latest and r["title"]]
+
+
+# --- Cadangan: halaman Tudum (HTML) -----------------------------------------
+# File TSV kadang terlambat diperbarui dibanding halaman Tudum (insiden
+# 2026-10-30: halaman sudah minggu 19–25 Okt, TSV masih minggu sebelumnya).
+_TUDUM_PAGES = (
+    ("Films", "https://www.netflix.com/tudum/top10/indonesia"),
+    ("TV", "https://www.netflix.com/tudum/top10/indonesia/tv"),
+)
+_SEASON_RE = re.compile(
+    r"\s*:\s*(Season\s+\d+|Limited Series|Part\s+\d+|Volume\s+\d+|"
+    r"Musim\s+\d+|Book\s+\d+|Chapter\s+\d+|Collection\s+\d+)\s*$",
+    re.I,
+)
+_WEEK_RE = re.compile(
+    r"(\d{1,2})/(\d{1,2})/(\d{2,4})\s*[-\u2013]\s*(\d{1,2})/(\d{1,2})/(\d{2,4})"
+)
+
+
+def _strip_tags(h: str) -> str:
+    return html.unescape(re.sub(r"<[^>]+>", " ", h)).replace("\xa0", " ").strip()
+
+
+def parse_tudum_html(page: str, category: str) -> tuple[str, list[dict]]:
+    """(week_end ISO, rows) dari HTML halaman Tudum. Murni (mudah diuji)."""
+    week = ""
+    m = _WEEK_RE.search(_strip_tags(page))
+    if m:
+        mo, d, y = int(m.group(4)), int(m.group(5)), int(m.group(6))
+        y = y + 2000 if y < 100 else y
+        week = f"{y:04d}-{mo:02d}-{d:02d}"
+    rows: list[dict] = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", page, re.S | re.I):
+        cells = [
+            re.sub(r"\s+", " ", _strip_tags(c))
+            for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S | re.I)
+        ]
+        cells = [c for c in cells if c]
+        if len(cells) < 2 or not re.fullmatch(r"\d{1,2}", cells[0]):
+            continue
+        rank = int(cells[0])
+        title = next((c for c in cells[1:] if re.search(r"[^\W\d_]", c)), "")
+        if not title:
+            continue
+        nums = [c for c in cells[1:] if re.fullmatch(r"\d{1,3}", c)]
+        season = ""
+        if category == "TV":
+            mm = _SEASON_RE.search(title)
+            if mm:
+                season = title
+                title = title[: mm.start()].strip()
+        rows.append({
+            "week": week, "category": category, "rank": str(rank),
+            "title": title, "season": season,
+            "weeks_in_top10": nums[-1] if nums else "",
+        })
+    rows = [r for r in rows if 1 <= int(r["rank"]) <= 10]
+    return week, rows
+
+
+def _fetch_tudum_rows() -> tuple[str, list[dict]]:
+    weeks, out = [], []
+    for cat, url in _TUDUM_PAGES:
+        try:
+            r = requests.get(url, headers={"User-Agent": _BROWSER_UA}, timeout=40)
+            if r.status_code != 200:
+                log.info("Tudum %s -> HTTP %s", cat, r.status_code)
+                continue
+            wk, rows = parse_tudum_html(r.text, cat)
+            log.info("Tudum %s: minggu %s, %d baris", cat, wk or "?", len(rows))
+            if wk and len(rows) >= 5:
+                weeks.append(wk)
+                out.extend(rows)
+        except Exception as exc:
+            log.info("Tudum %s gagal: %s", cat, exc)
+    if not out:
+        return "", []
+    latest = max(weeks)
+    return latest, [r for r in out if r["week"] == latest]
 
 
 def _is_tv(category: str) -> bool:
@@ -345,12 +426,16 @@ def collect(limit: int = 20) -> list[Trend]:
     global LAST_DEBUG, _ENRICH_NOTE
     _ENRICH_NOTE = ""
     tsv = _fetch_tsv()
-    if not tsv:
-        LAST_DEBUG = "tidak bisa mengambil data Tudum (IP mungkin diblokir; coba lokal)"
-        log.warning("Netflix: %s", LAST_DEBUG)
-        return []
+    rows = parse_country_rows(tsv, "ID") if tsv else []
+    tsv_week = max((r["week"] for r in rows), default="")
+    log.info("Netflix TSV: minggu %s, %d baris", tsv_week or "-", len(rows))
 
-    rows = parse_country_rows(tsv, "ID")
+    # Halaman Tudum sering lebih baru dari TSV → pakai bila minggunya lebih baru.
+    page_week, page_rows = _fetch_tudum_rows()
+    if page_rows and page_week > tsv_week:
+        log.info("Netflix: pakai halaman Tudum (minggu %s > TSV %s)", page_week, tsv_week or "-")
+        rows = page_rows
+
     if not rows:
         LAST_DEBUG = "tidak ada baris Indonesia pada data Tudum"
         log.warning("Netflix: %s", LAST_DEBUG)
