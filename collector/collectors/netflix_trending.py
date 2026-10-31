@@ -147,6 +147,12 @@ def parse_tudum_html(page: str, category: str) -> tuple[str, list[dict]]:
             for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", tr, re.S | re.I)
         ]
         cells = [c for c in cells if c]
+        # Tudum 2026: <td class="title"><span class="rank">01</span>...<button>Judul</button></td>
+        # → sel pertama "01 Judul"; pecah jadi peringkat + judul.
+        if cells:
+            m0 = re.fullmatch(r"(\d{1,2})\s+(.+)", cells[0])
+            if m0:
+                cells = [m0.group(1), m0.group(2)] + cells[1:]
         if len(cells) < 2 or not re.fullmatch(r"\d{1,2}", cells[0]):
             continue
         rank = int(cells[0])
