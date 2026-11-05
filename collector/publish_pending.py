@@ -27,7 +27,7 @@ CATEGORIES = {"panduan", "analisis", "rekap", "kurasi", "bulanan"}
 MIN_CHARS, MIN_SECTIONS = 1200, 3
 # Berkas infrastruktur penerbit ini sendiri: bila berubah/baru, ikut di-commit
 # (daftar tetap, bukan pola) supaya perubahan skrip tidak membuat pull --rebase macet.
-INFRA = ["collector/publish_pending.py", "collector/run_local_task.bat",
+INFRA = ["collector/publish_pending.py","cache-worker.mjs","wrangler.toml", "collector/run_local_task.bat",
          "collector/push_panduhukum.py", "collector/affiliate_panel.py",
          "collector/run_panel_task.bat", "collector/start_chrome_cdp.bat",
          "collector/start_chrome_cdp_isolated.bat", "collector/watchdog.py",
