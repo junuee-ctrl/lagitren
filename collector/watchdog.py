@@ -49,6 +49,8 @@ THRESHOLD_HOURS: dict[str, int] = {
 # products.csv yang sama tiap run → selalu 'ok', watchdog buta 5 hari).
 # Batas jam TANPA perubahan isi (hash 'h=' dari main.py) sebelum dianggap macet.
 # Disetel longgar sesuai ritme sumber: Netflix = chart MINGGUAN Tudum.
+MIN_ITEMS: dict[str, int] = {"tiktok": 10}
+
 CHANGE_HOURS: dict[str, int] = {
     "google": 6,
     "youtube": 12,
@@ -191,6 +193,19 @@ def main() -> int:
             ago = (now - since).total_seconds() / 3600
             stale[p] = (f"실행은 되지만 데이터 변화 없음 — {since.astimezone(KST):%d일 %H:%M} WIB 이후 "
                         f"{ago:.0f}시간째 같은 내용 (기준 {hours}h)")
+
+    # Jumlah item terlalu sedikit → biasanya login Creative Center lepas
+    # (insiden 30 Okt–5 Nov 2026: TikTok hanya 3 hashtag pratinjau).
+    for p, min_n in MIN_ITEMS.items():
+        if p in stale:
+            continue
+        rows = _rows(db.query(
+            "SELECT item_count FROM collection_runs WHERE platform = ? AND status = 'ok' "
+            "ORDER BY started_at DESC LIMIT 3", [p]))
+        counts = [int(r.get("item_count") or 0) for r in rows]
+        if len(counts) == 3 and max(counts) < min_n:
+            stale[p] = (f"최근 3회 수집이 {counts[0]}개뿐 (정상 20개) — 로그인 풀림 의심. "
+                        "수집 PC에서 <code>python start_chrome.py</code> → TikTok Creative Center 로그인")
 
     prev_stale, last_alert = _prev_state(db)
     cur = set(stale)
