@@ -14,6 +14,7 @@ Prasyarat lokal:
 from __future__ import annotations
 
 import logging
+import re
 from urllib.parse import quote
 
 import config
@@ -360,6 +361,165 @@ def _dom_hashtags(page) -> list[str]:
     return [n for n in (names or []) if isinstance(n, str)]
 
 
+_SSO_CONFIRM = re.compile(
+    r"^\s*(Authorize|Allow|Continue|Confirm|Izinkan|Lanjutkan|Konfirmasi|Setuju|허용|계속|확인)\s*$", re.I
+)
+
+
+def _try_tiktok_sso(page) -> bool:
+    """Klik 'Log in with TikTok' di Creative Center (pakai sesi tiktok.com yang
+    sudah ada; TIDAK mengetik kata sandi). Lalu tekan tombol izin bila muncul.
+    True bila alur sempat dijalankan (hasil dicek pemanggil)."""
+    try:
+        btn = page.get_by_text("Log in with TikTok", exact=False).first
+        if not btn.is_visible():
+            for lbl in ("Log in", "Masuk", "로그인"):
+                try:
+                    b = page.get_by_role("button", name=re.compile(rf"^{lbl}$", re.I)).first
+                    if b.is_visible():
+                        b.click(timeout=3000)
+                        page.wait_for_timeout(2000)
+                        break
+                except Exception:
+                    continue
+            btn = page.get_by_text("Log in with TikTok", exact=False).first
+        if not btn.is_visible():
+            log.info("TikTok SSO: tombol login tidak ditemukan.")
+            return False
+        ctx = page.context
+        before = list(ctx.pages)
+        btn.click(timeout=5000)
+        log.info("TikTok SSO: klik 'Log in with TikTok'.")
+        page.wait_for_timeout(6000)
+        targets = [pg for pg in ctx.pages if pg not in before] + [page]
+        for t in targets:
+            for _ in range(3):
+                clicked = False
+                try:
+                    for b in t.get_by_role("button").all()[:40]:
+                        try:
+                            txt = (b.inner_text(timeout=500) or "").strip()
+                        except Exception:
+                            continue
+                        if _SSO_CONFIRM.match(txt) and b.is_visible():
+                            b.click(timeout=3000)
+                            log.info("TikTok SSO: klik '%s' di %s", txt, t.url[:80])
+                            clicked = True
+                            t.wait_for_timeout(5000)
+                            break
+                except Exception:
+                    pass
+                if not clicked:
+                    break
+        page.wait_for_timeout(5000)
+        try:
+            page.screenshot(path="logs/tiktok_sso.png", full_page=False)
+        except Exception:
+            pass
+        for pg in ctx.pages:
+            if pg is not page and pg not in before:
+                try:
+                    pg.close()
+                except Exception:
+                    pass
+        return True
+    except Exception as exc:
+        log.info("TikTok SSO gagal: %s", exc)
+        return False
+
+
+_GENERIC_TAGS = {
+    "fyp", "foryou", "foryoupage", "fypシ", "fypシ゚viral", "viral", "trending", "xyzbca",
+    "fy", "fyppppppppppppppppppppppp", "capcut", "tiktok", "foryourpage", "masukberanda",
+    "berandafyp", "beranda", "fypage", "fypdong", "4u", "viralvideo", "trend",
+}
+
+
+def _explore_hashtags(page, limit: int) -> list[Trend]:
+    """Kumpulkan hashtag dari video di halaman Explore tiktok.com (cadangan)."""
+    import json as _j
+    counts: dict[str, int] = {}
+    names: dict[str, str] = {}
+    order: list[str] = []
+
+    def add(tag: str):
+        t = (tag or "").strip().lstrip("#")
+        if not t or len(t) < 2:
+            return
+        k = t.lower()
+        if k in _GENERIC_TAGS or k.startswith("fyp"):
+            return
+        if k not in counts:
+            counts[k] = 0
+            names[k] = t
+            order.append(k)
+        counts[k] += 1
+
+    def on_resp(resp):
+        u = resp.url
+        if "item_list" not in u and "explore" not in u:
+            return
+        try:
+            j = resp.json()
+        except Exception:
+            return
+        for it in (j.get("itemList") or j.get("items") or []) if isinstance(j, dict) else []:
+            if not isinstance(it, dict):
+                continue
+            for c in it.get("challenges") or []:
+                if isinstance(c, dict):
+                    add(c.get("title") or "")
+            for x in it.get("textExtra") or []:
+                if isinstance(x, dict) and x.get("hashtagName"):
+                    add(x["hashtagName"])
+
+    page.on("response", on_resp)
+    try:
+        page.goto("https://www.tiktok.com/explore", wait_until="load", timeout=60000)
+        for _ in range(8):
+            page.wait_for_timeout(3000)
+            try:
+                page.mouse.wheel(0, 2500)
+            except Exception:
+                pass
+        if len(counts) < 10:
+            for t in page.evaluate(
+                """() => Array.from(document.querySelectorAll('a[href*="/tag/"]'))
+                      .map(a => decodeURIComponent(a.getAttribute('href').split('/tag/')[1] || '').split('?')[0])"""
+            ) or []:
+                add(t)
+    finally:
+        try:
+            page.remove_listener("response", on_resp)
+        except Exception:
+            pass
+
+    ranked = sorted(order, key=lambda k: (-counts[k], order.index(k)))[:limit]
+    log.info("TikTok Explore: %d hashtag unik.", len(order))
+    out: list[Trend] = []
+    for i, k in enumerate(ranked, start=1):
+        name = names[k]
+        n = counts[k]
+        t = Trend(
+            id=make_id("tiktok", name),
+            platform="tiktok",
+            rank=i,
+            title=f"#{name}",
+            url=f"https://www.tiktok.com/tag/{quote(name)}",
+            subtitle=f"muncul di {n} video Explore",
+            metric=n,
+            metric_label="video",
+            hashtags=[k],
+        )
+        t.__dict__["_context"] = (
+            f"Hashtag TikTok #{name} sering muncul di halaman Explore TikTok Indonesia "
+            f"({n} video yang tampil). Ini BUKAN peringkat resmi Creative Center; "
+            "nama hashtag saja, bukan isi video tertentu."
+        )
+        out.append(t)
+    return out
+
+
 def _click_view_more(page) -> None:
     """Klik tombol 'View More'/'Lihat lebih banyak' bila ada (buka baris terkunci)."""
     labels = (
@@ -462,6 +622,7 @@ def collect(limit: int = 20) -> list[Trend]:
                     return 0
 
             # Coba tiap halaman Trends; berhenti begitu daftar cukup panjang.
+            sso_tried = False
             for url in PAGE_URLS:
                 try:
                     page.goto(url, wait_until="load", timeout=60000)
@@ -485,6 +646,27 @@ def collect(limit: int = 20) -> list[Trend]:
                 if _best_len() >= 10 or _dom_len() >= 10:
                     log.info("TikTok: daftar terbaca di %s", page.url)
                     break
+
+                # Daftar terpotong (login Creative Center lepas) → coba masuk ulang
+                # memakai sesi tiktok.com yang masih aktif ("Log in with TikTok").
+                if url == PAGE_URLS[0] and not sso_tried:
+                    sso_tried = True
+                    if _try_tiktok_sso(page):
+                        try:
+                            page.goto(url, wait_until="load", timeout=60000)
+                        except Exception:
+                            pass
+                        for _ in range(10):
+                            if _best_len() >= 10 or _dom_len() >= 10:
+                                break
+                            page.wait_for_timeout(3000)
+                            try:
+                                page.mouse.wheel(0, 1800)
+                            except Exception:
+                                pass
+                        if _best_len() >= 10 or _dom_len() >= 10:
+                            log.info("TikTok: SSO berhasil, daftar terbaca.")
+                            break
 
             # Parse SEMUA payload; simpan daftar TERPANJANG (bukan yang pertama —
             # respons awal sering hanya berisi 3 baris sebelum daftar penuh).
@@ -520,6 +702,17 @@ def collect(limit: int = 20) -> list[Trend]:
                         LAST_DEBUG = f"ok: {len(result)} hashtag (DOM)"
                 except Exception as exc:
                     log.info("TikTok DOM gagal: %s", exc)
+
+            # Cadangan terakhir: hashtag dari halaman Explore tiktok.com
+            # (bukan peringkat resmi 7 hari — ditandai di subtitle/konteks).
+            if len(result) < 10:
+                try:
+                    exp = _explore_hashtags(page, limit)
+                    if len(exp) > len(result):
+                        result = exp
+                        LAST_DEBUG = f"ok: {len(result)} hashtag (Explore, cadangan)"
+                except Exception as exc:
+                    log.info("TikTok Explore gagal: %s", exc)
 
             # Diagnostik: ukuran tiap respons + screenshot SEBELUM enrich video.
             try:
