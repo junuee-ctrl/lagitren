@@ -205,7 +205,7 @@ def main() -> int:
         counts = [int(r.get("item_count") or 0) for r in rows]
         if len(counts) == 3 and max(counts) < min_n:
             stale[p] = (f"최근 3회 수집이 {counts[0]}개뿐 (정상 20개) — 로그인 풀림 의심. "
-                        "수집 PC에서 <code>python start_chrome.py</code> → TikTok Creative Center 로그인")
+                        "수집 PC에서 <code>C:\\lagitren\\TikTok_재로그인.bat</code> 더블클릭 → 로그인")
 
     prev_stale, last_alert = _prev_state(db)
     cur = set(stale)
