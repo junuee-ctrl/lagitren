@@ -61,6 +61,10 @@ CHANGE_HOURS: dict[str, int] = {
     "shopee": 48,
 }
 REALERT_HOURS = 6
+# Sumber yang SENGAJA dijeda: tidak dicek dan tidak memicu alert.
+# shopee: panel TikTok Shop dijeda sejak 2026-11-22 (PC pindah ke Ilsan, akun panel belum siap).
+# Hapus dari set ini saat panel aktif lagi.
+PAUSED: set[str] = {"shopee"}
 KST = timezone(timedelta(hours=7))  # tampilkan waktu dalam WIB
 
 
@@ -207,7 +211,11 @@ def main() -> int:
             stale[p] = (f"최근 3회 수집이 {counts[0]}개뿐 (정상 20개) — 로그인 풀림 의심. "
                         "수집 PC에서 <code>C:\\lagitren\\TikTok_재로그인.bat</code> 더블클릭 → 로그인")
 
+    for p in PAUSED:
+        stale.pop(p, None)
+
     prev_stale, last_alert = _prev_state(db)
+    prev_stale -= PAUSED  # jangan kirim "복구됨" palsu untuk sumber yang dijeda
     cur = set(stale)
     state_tag = "stale=" + ",".join(sorted(cur))
 
@@ -238,7 +246,7 @@ def main() -> int:
     lines = [f"• <b>{p}</b>: {d}" for p, d in sorted(stale.items())]
     msg = (
         "⚠️ <b>수집기 멈춤 감지</b>\n" + "\n".join(lines) +
-        "\n\n로컬(instagram/tiktok/twitter)이면 자카르타 PC에서 "
+        "\n\n로컬(instagram/tiktok/twitter)이면 수집 PC(일산)에서 "
         "<code>py -u run_local.py</code> 실행 또는 LagiTrenCollect 작업 확인. "
         "shopee(상품판)는 PC의 틱톡샵 패널 수집 — "
         "<code>collector\\logs\\panel_날짜.log</code> 확인. "
