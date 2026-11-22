@@ -14,6 +14,7 @@ Prasyarat lokal:
 from __future__ import annotations
 
 import logging
+import os
 import re
 from urllib.parse import quote
 
@@ -705,7 +706,9 @@ def collect(limit: int = 20) -> list[Trend]:
 
             # Cadangan terakhir: hashtag dari halaman Explore tiktok.com
             # (bukan peringkat resmi 7 hari — ditandai di subtitle/konteks).
-            if len(result) < 10:
+            # TIKTOK_EXPLORE=0 di .env mematikannya: Explore mengikuti IP PC, jadi PC di
+            # luar Indonesia (mis. PC Ilsan, Korea) akan mengambil hashtag negara lain.
+            if len(result) < 10 and os.environ.get("TIKTOK_EXPLORE", "1") != "0":
                 try:
                     exp = _explore_hashtags(page, limit)
                     if len(exp) > len(result):
