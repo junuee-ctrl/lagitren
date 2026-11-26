@@ -2,6 +2,9 @@
 REM Dipanggil oleh Windows Task Scheduler (LagiTrenCollect) tiap 3 jam.
 REM F5 (insiden 2026-08-18): -u = tanpa buffer, log harian, simpan 30 hari.
 cd /d "%~dp0"
+REM Insiden 2026-11-26 (PC Ilsan, Windows Korea cp949): print tanda pisah panjang -> UnicodeEncodeError,
+REM run_local mati sebelum membunuh proses anak yang macet -> tugas tergantung 6 jam.
+set PYTHONIOENCODING=utf-8
 if not exist logs mkdir logs
 for /f %%i in ('powershell -NoProfile -Command "Get-Date -Format yyyyMMdd"') do set TODAY=%%i
 if "%TODAY%"=="" set TODAY=undated
